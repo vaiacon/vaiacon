@@ -1,0 +1,103 @@
+<!-- @dsCard group="Website" viewport="1440x900" name="vaiacon.ch — Erstanalyse" subtitle="Fragebogen mit KI-Ersteinschätzung des Sparpotenzials (Worker + Formspree, Formel-Fallback)" -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Kostenlose Erstanalyse — vaiacon</title>
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  html { scroll-behavior: smooth; }
+  a { color: var(--link); }
+  a:hover { color: var(--link-hover); }
+  a, button { -webkit-tap-highlight-color: transparent; }
+
+  body { background: var(--bg-page); }
+
+  /* Kopfzeile */
+  .ea-header { background: var(--cream-100); border-bottom: 1px solid var(--border-soft); }
+  .ea-header-inner { max-width: var(--header-max); margin: 0 auto; padding: 14px clamp(16px, 3vw, 40px); box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+  .ea-back { font-family: var(--font-sans); font-size: 15px; font-weight: 600; text-decoration: none; color: var(--text-strong); transition: color 0.3s ease; white-space: nowrap; }
+  .ea-back:hover { color: var(--terra-500); }
+
+  /* Fortschritt über die 8 Blöcke */
+  .ea-progress { position: sticky; top: 0; z-index: 20; background: var(--cream-100); border-bottom: 1px solid var(--border-soft); }
+  .ea-progress-inner { max-width: 860px; margin: 0 auto; padding: 11px clamp(18px, 4vw, 32px); box-sizing: border-box; display: flex; align-items: center; gap: 16px; }
+  .ea-progress-track { flex: 1; height: 6px; border-radius: var(--radius-pill); background: var(--sand-300); overflow: hidden; }
+  .ea-progress-fill { height: 100%; border-radius: var(--radius-pill); background: var(--terra-500); transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
+  .ea-progress-label { font-family: var(--font-mono); font-size: 13px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); white-space: nowrap; }
+
+  /* Layout */
+  .ea-wrap { max-width: 860px; margin: 0 auto; padding: clamp(40px, 6vw, 72px) clamp(18px, 4vw, 32px) clamp(56px, 8vw, 88px); box-sizing: border-box; display: flex; flex-direction: column; gap: clamp(20px, 3vw, 28px); }
+  .ea-intro { display: flex; flex-direction: column; gap: 16px; margin-bottom: clamp(4px, 1vw, 12px); }
+  .ea-h1 { margin: 0; font-size: clamp(34px, 6vw, 54px); font-weight: 600; letter-spacing: -0.03em; line-height: 1.06; color: var(--text-strong); overflow-wrap: break-word; hyphens: auto; }
+  .ea-lead { margin: 0; font-size: clamp(16px, 2vw, 17.5px); line-height: 1.7; color: var(--text-body); max-width: 58ch; }
+
+  /* Karten */
+  .ea-card { background: var(--surface-card); border: 1px solid var(--border-strong); border-radius: 22px; padding: clamp(22px, 4vw, 34px); box-sizing: border-box; display: flex; flex-direction: column; gap: 24px; }
+  .ea-card-head { display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+  .ea-card-done { font-family: var(--font-sans); font-size: 13px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--terra-500); white-space: nowrap; }
+
+  /* Hinweis: Was die Einschätzung leistet — und was nicht */
+  .ea-note { background: var(--surface-card-sand); border: 1px solid var(--border-strong); border-radius: 18px; padding: clamp(18px, 3vw, 24px); display: flex; flex-direction: column; gap: 8px; }
+  .ea-note-title { margin: 0; font-family: var(--font-sans); font-size: 15.5px; font-weight: 700; color: var(--text-strong); }
+  .ea-note-text { margin: 0; font-size: 15px; line-height: 1.65; color: var(--text-body); max-width: 62ch; }
+
+  /* Felder */
+  .ea-field { display: flex; flex-direction: column; gap: 9px; }
+  .ea-label { font-family: var(--font-sans); font-size: 16.5px; font-weight: 600; letter-spacing: -0.01em; color: var(--text-strong); }
+  .ea-required { font-size: 12.5px; font-weight: 700; color: var(--terra-500); letter-spacing: 0.04em; }
+  .ea-hint { margin: -4px 0 0; font-size: 13.5px; line-height: 1.5; color: var(--text-muted); }
+  .ea-msg { margin: 0; font-size: 13.5px; font-weight: 600; color: var(--terra-600); }
+
+  .ea-input { width: 100%; box-sizing: border-box; background: var(--surface-card); border: 1px solid var(--border-strong); border-radius: 12px; padding: 13px 14px; font-family: var(--font-sans); font-size: 16px; font-weight: 500; color: var(--text-strong); outline: none; transition: border-color 0.3s ease, box-shadow 0.3s ease; }
+  .ea-input::placeholder { color: var(--text-muted); opacity: 0.75; }
+  .ea-input:focus { border-color: var(--terra-500); box-shadow: 0 0 0 3px rgba(178, 82, 34, 0.14); }
+  .ea-textarea { resize: vertical; min-height: 84px; line-height: 1.55; }
+  .has-error .ea-input { border-color: var(--terra-600); box-shadow: 0 0 0 3px rgba(178, 82, 34, 0.14); }
+
+  /* Chips */
+  .ea-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .ea-chip { display: inline-flex; align-items: center; gap: 7px; border-radius: var(--radius-pill); border: 1px solid var(--border-strong); background: var(--surface-card); padding: 11px 17px; font-family: var(--font-sans); font-size: 14.5px; font-weight: 600; color: var(--text-body); cursor: pointer; transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease; text-align: left; }
+  .ea-chip:hover { background: var(--sand-300); }
+  .ea-chip.is-selected { background: var(--peach-150); border-color: var(--terra-500); color: var(--terra-600); }
+  .ea-chip-check { font-size: 12px; color: var(--terra-500); }
+
+  /* Honeypot */
+  .ea-gotcha { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+
+  /* Absenden */
+  .ea-submit { display: flex; flex-direction: column; align-items: center; gap: 14px; padding-top: 8px; text-align: center; }
+  .ea-busy-note, .ea-trust { margin: 0; font-size: 14px; font-weight: 600; color: var(--text-muted); }
+
+  /* Erfolgs-Screen */
+  .ea-success { display: flex; flex-direction: column; gap: 18px; }
+  .ea-result { margin-top: 10px; background: var(--surface-card-sand); border: 1px solid var(--border-strong); border-radius: 22px; padding: clamp(24px, 4vw, 36px); display: flex; flex-direction: column; gap: 12px; }
+  .ea-result-big { margin: 6px 0 0; font-size: clamp(28px, 5vw, 40px); font-weight: 600; letter-spacing: -0.025em; line-height: 1.1; color: var(--text-strong); }
+  .ea-result-chf { margin: 0; font-size: clamp(17px, 2.4vw, 20px); font-weight: 700; color: var(--terra-500); }
+  .ea-result-text { margin: 6px 0 0; font-size: 16px; line-height: 1.7; color: var(--text-body); max-width: 60ch; }
+  .ea-result-hebel { display: flex; flex-direction: column; gap: 10px; margin-top: 6px; }
+  .ea-result-hebel-label { margin: 0; font-size: 14.5px; font-weight: 700; color: var(--text-strong); }
+  .ea-result-hebel-list { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; margin: 0; padding: 0; }
+  .ea-result-vorbehalt { margin: 8px 0 0; font-size: 13px; line-height: 1.55; color: var(--text-muted); }
+  .ea-success-ctas { display: flex; align-items: center; gap: 20px; flex-wrap: wrap; margin-top: 8px; }
+
+  @media (max-width: 700px) {
+    html, body { overflow-x: hidden; }
+    .ea-header img { height: 38px !important; }
+    .ea-progress-label { font-size: 11.5px; letter-spacing: 0.06em; }
+    .ea-success-ctas { flex-direction: column; align-items: stretch; text-align: center; }
+    .ea-success-ctas .ea-back { text-align: center; }
+  }
+</style>
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<script src="erstanalyse-data.js"></script>
+</head>
+<body style="margin: 0;">
+<div id="root"></div>
+<script type="text/babel" src="erstanalyse-form.jsx"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!-- @dsCard group="Spacing" viewport="700x210" name="Motion" subtitle="breathe · twinkle · federnde Hover-Lifts (hover mich)" -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { padding: 24px 28px; box-sizing: border-box; display: flex; gap: 16px; background: var(--bg-page); }
+  .m { flex: 1; height: 140px; border-radius: 18px; display: flex; flex-direction: column; justify-content: flex-end; gap: 2px; padding: 12px 16px; box-sizing: border-box; position: relative; overflow: hidden; }
+  .n { font-size: 12.5px; font-weight: 700; color: var(--text-strong); }
+  .v { font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); }
+  .lift { background: var(--sand-200); border: 1px solid var(--border-strong); transition: transform 0.4s var(--ease-spring); cursor: pointer; }
+  .lift:hover { transform: translateY(-6px); }
+  .row-demo { background: var(--sand-200); border: 1px solid var(--border-strong); transition: background 0.35s ease, padding-left 0.35s ease; cursor: pointer; }
+  .row-demo:hover { background: var(--sand-300); padding-left: 30px; }
+  .tw { position: absolute; color: #fff; animation: twinkle 5s ease-in-out infinite; }
+</style>
+</head>
+<body>
+  <div class="m" style="background: var(--grad-terra-section); animation: breathe 6.5s ease-in-out infinite;">
+    <span class="tw" style="left: 16%; top: 20%; font-size: 12px;">✦</span>
+    <span class="tw" style="right: 14%; top: 42%; font-size: 9px; animation-delay: 2s;">✦</span>
+    <span class="n" style="color: #FFF3E8;">breathe + twinkle</span><span class="v" style="color: rgba(255,243,232,0.7);">6.5s / 5–6.5s loop</span>
+  </div>
+  <div class="m lift"><span class="n">Karten-Lift</span><span class="v">translateY(−6px) · spring 0.4s</span></div>
+  <div class="m row-demo"><span class="n">Zeilen-Hover</span><span class="v">bg + padding-left 0.35s</span></div>
+</body>
+</html>

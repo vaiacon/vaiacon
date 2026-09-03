@@ -1,0 +1,42 @@
+<!-- @dsCard group="Components" viewport="700x300" name="Chat — SpeechBubble, ChatMessage" subtitle="Comic-Blasen mit Tail · Bot/Nutzer-Nachrichten" -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body style="margin: 0;">
+<div id="root"></div>
+<script type="text/babel">
+const { SpeechBubble, ChatMessage } = window.vaiaconDesignSystem_5f353f;
+
+function Demo() {
+  return (
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.1fr', height: 300 }}>
+      <div style={{ background: 'var(--grad-terra-section)', display: 'flex', flexDirection: 'column', gap: 26, alignItems: 'center', justifyContent: 'center', padding: 20 }}>
+        <SpeechBubble onClick={() => {}} style={{ maxWidth: 230 }}>
+          Grüezi! Haben Sie Fragen?<br />
+          <span style={{ color: 'var(--terra-500)' }}>Chatten Sie direkt mit mir →</span>
+        </SpeechBubble>
+        <SpeechBubble comic tail="right" style={{ maxWidth: 230, fontSize: 14 }}>
+          <strong>Büro-Bot</strong> <span style={{ color: 'var(--terra-500)', fontSize: 12.5 }}>fragen Sie mich direkt!</span>
+        </SpeechBubble>
+      </div>
+      <div style={{ background: 'var(--bg-page)', display: 'flex', flexDirection: 'column', gap: 10, justifyContent: 'center', padding: '16px 18px' }}>
+        <ChatMessage>Grüezi! Ich beantworte gern Ihre Fragen zu vaiacon, unseren Paketen oder dem Büro-Bot.</ChatMessage>
+        <ChatMessage role="user">Was kostet der Büro-Bot?</ChatMessage>
+        <ChatMessage comic>Comic-Variante für den Hero-Chat.</ChatMessage>
+        <ChatMessage comic role="user">Alles klar!</ChatMessage>
+        <span style={{ fontSize: 12.5, fontWeight: 600, color: 'var(--text-muted)' }}>Büro-Bot tippt …</span>
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body>
+</html>

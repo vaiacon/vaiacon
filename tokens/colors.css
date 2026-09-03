@@ -1,0 +1,62 @@
+/* vaiacon — Farben. Quelle: index.dc.html (Referenz-Landingpage, massgeblich). */
+:root {
+  /* ---- Creme & Sand (Hintergründe, hell → dunkel) ---- */
+  --cream-card: #FFFDF8;   /* Karten, Sprechblasen, Inputs */
+  --cream-50:  #FBF4EE;    /* hellster Grund; Text auf Terracotta */
+  --cream-100: #F4EDE1;    /* Seitenhintergrund (Standard) */
+  --sand-200:  #EAE0CC;    /* alternierende Sektionen, Karten auf Creme */
+  --sand-300:  #E2D5BC;    /* Hover-Fläche auf Sand */
+
+  /* ---- Dunkel (Text & dunkle Sektionen) ---- */
+  --ink-900: #1C1613;      /* Primärtext, Comic-Ränder */
+  --ink-950: #171210;      /* dunkle Sektionen, dunkle Buttons */
+  --brown-600: #5A524B;    /* Sekundärtext / Fliesstext */
+  --brown-400: #8C8178;    /* Muted, Captions */
+  --brown-300: #C9BFB5;    /* dezente Pfeile/Glyphs */
+
+  /* ---- Terracotta (Markenakzent) ---- */
+  --terra-500: #B25222;    /* Standard-Akzent, Links, Kicker */
+  --terra-600: #9C4517;    /* Link-Hover, Text auf hellen CTAs */
+  --terra-700: #A83A08;    /* tiefes Terracotta: Gradient-Start, Chat-Header */
+  --orange-500: #E2652C;   /* heller CTA-Akzent (Nav-CTA, Akzent auf Dunkel) */
+  --orange-400: #F4793E;   /* CTA-Hover */
+  --orange-300: #E98C58;   /* helle Akzente auf dunklem Grund */
+
+  /* ---- Peach (zarte Flächen & Highlights) ---- */
+  --peach-100: #FFF3E8;    /* hellste Peach-Fläche, Text auf Terra */
+  --peach-150: #F5E3D7;    /* Badge-Hintergrund auf Sand */
+  --peach-200: #FFD9C2;    /* Highlight-Ziffern, Checks auf Terra */
+
+  /* ---- Verläufe ---- */
+  --grad-terra-section: linear-gradient(180deg, #A83A08 0%, #CA5019 100%); /* @kind color */
+  --grad-terra-finale: linear-gradient(178deg, #A83A08 0%, #B03E0B 35%, #BD4712 60%, #CA5019 82%, #D75A20 100%); /* @kind color */
+  --grad-package: linear-gradient(170deg, #C05D29 0%, #A54A1B 100%); /* @kind color */
+  --glow-peach: radial-gradient(62% 46% at 50% 104%, rgba(244, 158, 96, 0.5) 0%, rgba(244, 158, 96, 0) 70%); /* @kind color */
+  /* Radiale Terra-Bühnen (Hero-Stand / Footer) — eingefrorene Standardwerte der Landingpage (glow 90 %) */
+  --grad-terra-hero: radial-gradient(72% 52% at 50% 54%, #FA8C4A 0%, #EB702B 26%, #B24009 60%, #862A03 100%), #862A03; /* @kind color */
+  --grad-terra-footer: radial-gradient(80% 130% at 50% 14%, #FA8C4A 0%, #EB702B 28%, #B24009 62%, #862A03 100%), #862A03; /* @kind color */
+
+  /* ---- Ränder & Linien ---- */
+  --border-strong: rgba(28, 22, 19, 0.32);   /* Standard-Hairline (Karten, Trenner) */
+  --border-soft: rgba(28, 22, 19, 0.14);     /* Header-Unterkante, sehr dezent */
+  --border-ink: #1C1613;                     /* Comic-Rand (1.5–2px solid) */
+  --border-on-dark: rgba(255, 255, 255, 0.3);
+
+  /* ---- Semantische Aliase ---- */
+  --bg-page: var(--cream-100);
+  --bg-alt: var(--sand-200);
+  --bg-dark: var(--ink-950);
+  --surface-card: var(--cream-card);
+  --surface-card-sand: var(--sand-200);
+  --text-strong: var(--ink-900);
+  --text-body: var(--brown-600);
+  --text-muted: var(--brown-400);
+  --text-on-terra: var(--cream-50);
+  --text-on-terra-soft: rgba(255, 240, 230, 0.92);
+  --accent: var(--terra-500);
+  --link: var(--terra-500);
+  --link-hover: var(--terra-600);
+  --cta-bg: var(--orange-500);
+  --cta-bg-hover: var(--orange-400);
+  --selection: rgba(178, 82, 34, 0.22);
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>vaiaconAcademy · KI-Lernkurs — Übersicht</title>
+<link rel="stylesheet" href="vaiacon-kurs.css">
+<link rel="icon" href="assets/logo-mark-terra.png">
+<meta name="theme-color" content="#F4EDE1">
+<style>
+.hero{padding:56px 0 8px}
+.kicker{font-family:var(--font-mono);font-size:11px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--terra-500);display:flex;align-items:center;gap:10px}
+.kicker::after{content:'';flex:1;height:1px;background:var(--hair-soft);max-width:120px}
+.hero h1{font-size:clamp(34px,5vw,54px)!important;margin:18px 0 0!important}
+.lead{font-size:17.5px;line-height:1.7;color:var(--brown-600);max-width:56ch;margin:16px 0 0}
+.total{background:var(--cream-card);border:1px solid var(--hair);border-radius:24px;padding:26px 30px;margin:36px 0 0;display:flex;flex-direction:column;gap:12px}
+.total .row{display:flex;align-items:baseline;justify-content:space-between;gap:14px}
+.total .lbl{font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.2em;text-transform:uppercase;color:var(--brown-400)}
+.total .val{font-size:30px;font-weight:600;letter-spacing:-0.02em;color:var(--ink-900)}
+.total .track{height:10px;background:var(--sand-300);border:1px solid var(--hair-soft);border-radius:999px;overflow:hidden}
+.total .fill{height:100%;width:0%;background:var(--grad-progress);border-radius:999px;transition:width .7s var(--ease-spring)}
+.phase{margin-top:60px}
+.phase-head{display:flex;flex-direction:column;gap:8px;margin-bottom:22px}
+.phase-head h2{font-size:24px!important;margin:0}
+.phase-head p{margin:0;font-size:16px;color:var(--brown-600);max-width:60ch}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:20px}
+a.card{display:flex;flex-direction:column;gap:11px;background:var(--cream-card);border:1px solid var(--hair);border-radius:24px;padding:24px 26px;text-decoration:none;color:inherit;transition:transform .4s var(--ease-spring),background .3s ease}
+a.card:hover{transform:translateY(-5px);background:var(--cream-card)}
+a.card .top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+a.card .num{font-family:var(--font-mono);font-size:11px;font-weight:500;letter-spacing:0.2em;text-transform:uppercase;color:var(--terra-500)}
+a.card .title{font-size:21px;font-weight:600;letter-spacing:-0.02em;line-height:1.25;color:var(--ink-900)}
+a.card .hook{font-size:15px;line-height:1.6;color:var(--brown-600);flex:1}
+a.card .foot{display:flex;align-items:center;gap:12px;margin-top:8px;padding-top:16px;border-top:1px solid var(--hair-soft)}
+a.card .track{flex:1;height:8px;background:var(--sand-300);border:1px solid var(--hair-soft);border-radius:999px;overflow:hidden}
+a.card .fill{height:100%;width:0%;background:var(--grad-progress);border-radius:999px;transition:width .5s var(--ease-spring)}
+a.card .pct{font-family:var(--font-mono);font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;color:var(--brown-400);white-space:nowrap}
+a.card .go{font-size:14.5px;font-weight:700;color:var(--terra-500)}
+.hint{margin-top:52px;padding-top:26px;border-top:1px solid var(--hair);font-size:14.5px;line-height:1.65;color:var(--brown-400)}
+@media(max-width:700px){.hero{padding:36px 0 4px}a.card{padding:20px 22px}}
+</style>
+</head>
+<body>
+<div class="kursbar"><div class="kursbar-in"><a href="../index.html" aria-label="vaiaconAcademy"><img src="assets/logo-lockup-academy.png" alt="vaiaconAcademy"></a><span class="kursbar-meta">KI-LERNKURS · 11 MODULE</span></div></div>
+<div class="wrap">
+
+<header class="hero">
+  <div class="kicker">Von der Praxis zum Fundament</div>
+  <h1>Der KI-Lernkurs.</h1>
+  <p class="lead">Elf Module vom Fundament bis zur Beratungs-Expertise — interaktiv, praxisnah und in der empfohlenen Reihenfolge einfach von oben nach unten.</p>
+
+  <div class="total">
+    <div class="row"><span class="lbl">Gesamtfortschritt</span><span class="val" id="totalLabel">0 %</span></div>
+    <div class="track"><div class="fill" id="totalFill"></div></div>
+  </div>
+</header>
+
+<div class="phase">
+  <div class="phase-head">
+    <h2>01 — Fundament</h2>
+    <p>Alles andere baut darauf auf. Danach verstehst du, was bei jedem API-Call wirklich passiert.</p>
+  </div>
+  <div class="grid" id="phase1"></div>
+</div>
+
+<div class="phase">
+  <div class="phase-head">
+    <h2>02 — Praxis-Vertiefung</h2>
+    <p>Der grösste Hebel: die Technik hinter den Tools, die du täglich bedienst.</p>
+  </div>
+  <div class="grid" id="phase2"></div>
+</div>
+
+<div class="phase">
+  <div class="phase-head">
+    <h2>03 — Expertise &amp; Seriosität</h2>
+    <p>Macht dich zum Berater statt Anwender — für fundierte Kundengespräche.</p>
+  </div>
+  <div class="grid" id="phase3"></div>
+</div>
+
+<p class="hint">Dein Fortschritt wird lokal im Browser gespeichert (<code>localStorage</code>) — kein Server, keine Cloud. Anderer Browser = Fortschritt bei null.</p>
+
+</div>
+<script>
+const MODULES = [
+  { nn: '01', file: '01-wie-llms-funktionieren.html', title: 'Wie LLMs funktionieren', phase: 1,
+    hook: 'Token, Next-Token-Vorhersage, Gewichte vs. Kontext — warum Claude halluziniert und was ein Prompt wirklich tut.' },
+  { nn: '02', file: '02-training-pipeline.html', title: 'Die Training-Pipeline', phase: 1,
+    hook: 'Pretraining → Fine-Tuning → RLHF/Constitutional AI — warum Werte «in den Gewichten stecken».' },
+  { nn: '03', file: '03-api-konzepte.html', title: 'API-Konzepte', phase: 1,
+    hook: 'System-Prompt, Temperatur, Token-Kosten — Kosten und Qualität gezielt steuern statt raten.' },
+  { nn: '04', file: '04-embeddings-rag.html', title: 'Embeddings & RAG', phase: 2,
+    hook: 'Vektoren und semantische Suche — das Muster hinter «KI, die Firmendaten kennt». Direkt verkaufbar.' },
+  { nn: '05', file: '05-agenten-mcp.html', title: 'Agenten & MCP', phase: 2,
+    hook: 'Wie Tool-Aufrufe und MCP-Server wirklich funktionieren — und wie du eigene baust.' },
+  { nn: '06', file: '06-diffusion-verstehen.html', title: 'Diffusion verstehen', phase: 2,
+    hook: 'Was Sampler, Steps und CFG wirklich tun — die Mechanik hinter jedem KI-Bild- und Video-Generator.' },
+  { nn: '07', file: '07-lokale-modelle.html', title: 'Lokale Modelle vertieft', phase: 2,
+    hook: 'Quantisierung, Modellgrösse vs. RAM — welche Modelle auf eigener Hardware wirklich laufen.' },
+  { nn: '08', file: '08-evaluierung-grenzen.html', title: 'Evaluierung & Grenzen', phase: 3,
+    hook: 'Benchmarks lesen, Halluzinationen erkennen, wann KI das falsche Werkzeug ist — Berater statt Verkäufer.' },
+  { nn: '09', file: '09-sicherheit-alignment.html', title: 'KI-Sicherheit & Alignment', phase: 3,
+    hook: 'Interpretability und das Alignment-Problem — wie KI-Modelle Werte lernen, mit wissenschaftlichem Unterbau.' },
+  { nn: '10', file: '10-recht-datenschutz.html', title: 'Recht & Datenschutz', phase: 3,
+    hook: 'EU AI Act, CH-DSG, Kundendaten in der Cloud — die Antwort auf «wo landen unsere Daten?».' },
+  { nn: '11', file: '11-seo-geo.html', title: 'SEO & GEO', phase: 3,
+    hook: 'Gefunden werden — von Google UND von KI-Suchen. Für die eigene Website und als Kundenprodukt.' },
+];
+
+function readProgress(nn) {
+  let sections = [], total = 0, quiz = null;
+  try { sections = JSON.parse(localStorage.getItem('kikurs_' + nn + '_sections') || '[]'); } catch (e) {}
+  try { total = parseInt(localStorage.getItem('kikurs_' + nn + '_total_sections') || '0', 10) || 0; } catch (e) {}
+  try { quiz = JSON.parse(localStorage.getItem('kikurs_' + nn + '_quiz') || 'null'); } catch (e) {}
+  let pct = 0;
+  if (total > 0) pct = Math.min(sections.length / total, 1) * 80;
+  if (quiz && quiz.done) pct += 20;
+  return { pct: Math.round(pct), started: sections.length > 0 || (quiz && quiz.done), quiz: quiz };
+}
+
+function render() {
+  let sumPct = 0;
+  MODULES.forEach(function (m) {
+    const p = readProgress(m.nn);
+    sumPct += p.pct;
+    const card = document.createElement('a');
+    card.className = 'card';
+    card.href = m.file;
+    const status = p.pct >= 100 ? 'abgeschlossen' : (p.started ? p.pct + ' %' : 'noch offen');
+    const badge = (p.quiz && p.quiz.done) ? '<span class="badge">Quiz ' + p.quiz.score + '/' + p.quiz.total + ' ✓</span>' : '';
+    card.innerHTML =
+      '<div class="top"><span class="num">Modul ' + m.nn + '</span>' + badge + '</div>' +
+      '<div class="title">' + m.title + '</div>' +
+      '<p class="hook">' + m.hook + '</p>' +
+      '<div class="foot"><div class="track"><div class="fill" data-pct="' + p.pct + '"></div></div>' +
+      '<span class="pct">' + status + '</span><span class="go">→</span></div>';
+    document.getElementById('phase' + m.phase).appendChild(card);
+  });
+  const totalPct = Math.round(sumPct / MODULES.length);
+  document.getElementById('totalLabel').textContent = totalPct + ' %';
+  requestAnimationFrame(function () {
+    document.getElementById('totalFill').style.width = totalPct + '%';
+    document.querySelectorAll('a.card .fill').forEach(function (el) { el.style.width = el.dataset.pct + '%'; });
+  });
+}
+render();
+</script>
+</body>
+</html>

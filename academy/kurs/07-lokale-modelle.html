@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>vaiaconAcademy · Modul 07 – Lokale Modelle vertieft</title>
+<style>
+  :root {
+    --bg: #F4EDE1;
+    --bg-card: #FFFDF8;
+    --bg-code: #FFFDF8;
+    --border: #C9BFB5;
+    --text: #1C1613;
+    --muted: #8C8178;
+    --accent: #A9741E;
+    --accent-dim: rgba(169, 116, 30, 0.15);
+    --green: #4C7A3F;
+    --red: #A3311B;
+    --yellow: #A9741E;
+    --blue: #B25222;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Quicksand', -apple-system, system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+  .wrap { max-width: 800px; margin: 0 auto; padding: 32px 20px 80px; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code, pre {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 0.88em;
+  }
+  code {
+    background: var(--bg-code);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 6px;
+    white-space: nowrap;
+  }
+  pre {
+    background: var(--bg-code);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    overflow-x: auto;
+    line-height: 1.5;
+    margin: 14px 0;
+  }
+  pre code { background: none; border: none; padding: 0; white-space: pre; }
+  h1 { font-size: 1.9em; line-height: 1.25; margin-bottom: 6px; }
+  h2 { font-size: 1.4em; margin: 0 0 14px; }
+  h3 { font-size: 1.1em; margin: 20px 0 8px; }
+  p { margin: 12px 0; }
+  ul, ol { margin: 12px 0 12px 24px; }
+  li { margin: 5px 0; }
+  .modnum { color: var(--accent); font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.95em; letter-spacing: 1px; }
+  .backlink { display: inline-block; margin-bottom: 18px; color: var(--muted); font-size: 0.92em; }
+  .backlink:hover { color: var(--accent); }
+  .cando {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 18px 0;
+    font-size: 0.95em;
+  }
+  .cando strong { color: var(--accent); }
+  .progressbar-outer {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 99px;
+    height: 12px;
+    margin: 10px 0 4px;
+    overflow: hidden;
+  }
+  .progressbar-inner {
+    background: var(--accent);
+    height: 100%;
+    width: 0%;
+    border-radius: 99px;
+    transition: width 0.4s ease;
+  }
+  .progresstext { color: var(--muted); font-size: 0.88em; }
+  section.lern {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 26px 28px;
+    margin: 28px 0;
+  }
+  .secbadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 0.8em;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+  .secbadge .donemark { color: var(--green); display: none; }
+  section.done .secbadge .donemark { display: inline; }
+  .kasten {
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 0.95em;
+  }
+  .kasten .ktitle {
+    font-weight: 600;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 6px;
+    display: block;
+  }
+  .warum { background: rgba(178, 82, 34, 0.07); border: 1px solid rgba(178, 82, 34, 0.3); }
+  .warum .ktitle { color: var(--blue); }
+  .merksatz { background: var(--accent-dim); border: 1px solid rgba(169, 116, 30, 0.4); }
+  .merksatz .ktitle { color: var(--accent); }
+  .beispiel { background: rgba(76, 122, 63, 0.06); border: 1px solid rgba(76, 122, 63, 0.25); }
+  .beispiel .ktitle { color: var(--green); }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 14px 0;
+    font-size: 0.9em;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 7px 10px;
+    text-align: left;
+  }
+  th { background: var(--bg-code); color: var(--accent); font-weight: 600; }
+  td.num { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.95em; }
+  .fail { color: var(--red); }
+  .ok { color: var(--green); }
+  .knapp { color: var(--yellow); }
+  .aufgabe {
+    background: var(--bg-code);
+    border: 1px dashed var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-top: 22px;
+  }
+  .aufgabe .atitle {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    display: block;
+    margin-bottom: 10px;
+  }
+  button {
+    font-family: inherit;
+    font-size: 0.93em;
+    background: var(--bg-card);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 9px 14px;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+    text-align: left;
+  }
+  button:hover:not(:disabled) { border-color: var(--accent); }
+  button:disabled { cursor: default; opacity: 0.85; }
+  .optlist { display: flex; flex-direction: column; gap: 8px; margin: 10px 0; }
+  .optlist button { width: 100%; }
+  button.correct { border-color: var(--green); background: rgba(76, 122, 63, 0.12); }
+  button.wrong { border-color: var(--red); background: rgba(163, 49, 27, 0.1); }
+  button.selected { border-color: var(--accent); background: var(--accent-dim); }
+  button.matched { border-color: var(--green); background: rgba(76, 122, 63, 0.1); color: var(--muted); }
+  .feedback { font-size: 0.9em; margin-top: 8px; }
+  .feedback.good { color: var(--green); }
+  .feedback.bad { color: var(--red); }
+  .explain {
+    font-size: 0.88em;
+    color: var(--muted);
+    margin-top: 6px;
+    padding-left: 12px;
+    border-left: 2px solid var(--border);
+  }
+  .matchgrid { display: grid; grid-template-columns: 1fr 1.6fr; gap: 8px; margin: 10px 0; }
+  .matchgrid button { font-size: 0.88em; }
+  /* Rechner */
+  .rechner {
+    background: var(--bg-code);
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    padding: 20px 22px;
+    margin: 20px 0;
+  }
+  .rechner h3 { margin-top: 0; color: var(--accent); }
+  .rrow { display: flex; flex-wrap: wrap; gap: 16px; margin: 12px 0; align-items: flex-end; }
+  .rfield { display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 160px; }
+  .rfield label { font-size: 0.8em; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  select, input[type=range] {
+    font-family: inherit;
+    font-size: 0.95em;
+    background: var(--bg-card);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 10px;
+  }
+  input[type=range] { padding: 0; accent-color: var(--accent); height: 32px; }
+  .rambar {
+    position: relative;
+    background: #E2D5BC;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    height: 34px;
+    overflow: hidden;
+    margin: 14px 0 4px;
+    display: flex;
+  }
+  .rambar .seg { height: 100%; transition: width 0.3s ease; }
+  .seg-w { background: var(--accent); }
+  .seg-kv { background: var(--blue); }
+  .seg-ov { background: #C9BFB5; }
+  .ramlegend { display: flex; gap: 18px; flex-wrap: wrap; font-size: 0.82em; color: var(--muted); margin-bottom: 10px; }
+  .dot { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: baseline; }
+  .ampel {
+    font-size: 1.05em;
+    font-weight: 600;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-top: 10px;
+  }
+  .ampel.g { background: rgba(76, 122, 63, 0.12); color: var(--green); border: 1px solid rgba(76, 122, 63,0.4); }
+  .ampel.y { background: rgba(169, 116, 30, 0.12); color: var(--yellow); border: 1px solid rgba(169, 116, 30,0.4); }
+  .ampel.r { background: rgba(163, 49, 27, 0.12); color: var(--red); border: 1px solid rgba(163, 49, 27,0.4); }
+  .rstats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 12px; }
+  .rstat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; }
+  .rstat .v { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 1.15em; color: var(--text); }
+  .rstat .l { font-size: 0.75em; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  .hint { font-size: 0.84em; color: var(--muted); margin-top: 10px; }
+  /* Challenge + Quiz */
+  .challenge, .quizbox {
+    background: var(--bg-card);
+    border: 1px solid var(--accent);
+    border-radius: 12px;
+    padding: 26px 28px;
+    margin: 34px 0;
+  }
+  .checkrow { display: flex; align-items: center; gap: 10px; margin-top: 16px; font-weight: 600; }
+  .checkrow input { width: 20px; height: 20px; accent-color: var(--accent); }
+  .quizq { border-top: 1px solid var(--border); padding: 18px 0; }
+  .quizq .qnum { color: var(--accent); font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.85em; }
+  .quizresult {
+    font-size: 1.2em;
+    font-weight: 700;
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-top: 16px;
+    display: none;
+  }
+  .btnrow { display: flex; gap: 12px; margin-top: 18px; flex-wrap: wrap; }
+  .primary { background: var(--accent); color: #F4EDE1; font-weight: 600; border: none; }
+  .primary:hover:not(:disabled) { background: #F4793E; }
+  footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .svgbox { margin: 16px 0; text-align: center; }
+  .svgbox svg { max-width: 100%; height: auto; }
+</style>
+<link rel="stylesheet" href="vaiacon-kurs.css">
+<link rel="icon" href="assets/logo-mark-terra.png">
+<meta name="theme-color" content="#F4EDE1">
+</head>
+<body>
+<div class="kursbar"><div class="kursbar-in"><a href="index.html" aria-label="Kursübersicht"><img src="assets/logo-lockup-academy.png" alt="vaiaconAcademy"></a><span class="kursbar-meta">KI-LERNKURS · MODUL 07</span></div></div>
+<div class="wrap">
+
+  <a class="backlink" href="index.html">← Kursübersicht</a>
+  <div class="modnum">MODUL 07 / 10</div>
+  <h1>Lokale Modelle vertieft</h1>
+  <p style="color:var(--muted); margin-top:4px;">Ein Apple-Silicon-Mac mit viel RAM ist eine lokale KI-Workstation der Oberklasse — dieses Modul rechnet als Referenz mit 128 GB (z.B. ein M3 Max).</p>
+
+  <div class="cando">
+    <strong>Was du danach kannst:</strong>
+    <ul style="margin-bottom:0;">
+      <li>Für jedes Modell in Sekunden ausrechnen, ob es in einen gegebenen RAM-Ausbau (z.B. 128 GB) passt — inklusive KV-Cache und Overhead.</li>
+      <li>Quantisierungs-Stufen (Q4_K_M, Q8_0, FP16) einordnen und den richtigen Trade-off wählen.</li>
+      <li>Kunden fundiert beraten, wann lokal gewinnt («Ihre Daten verlassen das Haus nicht») und wann Cloud.</li>
+    </ul>
+  </div>
+
+  <div class="progressbar-outer"><div class="progressbar-inner" id="progressBar"></div></div>
+  <div class="progresstext" id="progressText">0 von 6 Abschnitten</div>
+
+  <!-- ================= S1 ================= -->
+  <section class="lern" id="sec-s1">
+    <div class="secbadge">ABSCHNITT 1<span class="donemark">✓ abgeschlossen</span></div>
+    <h2>Parameter, Bytes, RAM — die Grundrechnung</h2>
+
+    <p>Alles, was du über lokale Modelle wissen musst, beginnt mit einer Multiplikation:</p>
+    <pre><code>Modellgrösse ≈ Parameterzahl × Bytes pro Parameter</code></pre>
+    <p>Ein Parameter ist eine gelernte Zahl (ein Gewicht im Netz — Modul 01). Wie viel Platz eine Zahl braucht, hängt vom Zahlenformat ab:</p>
+    <ul>
+      <li><strong>FP16 / BF16</strong>: 2 Bytes pro Parameter (volle Präzision, so wird trainiert)</li>
+      <li><strong>Q8</strong>: ≈ 1 Byte (8-Bit-Quantisierung)</li>
+      <li><strong>Q4</strong>: ≈ 0.5–0.6 Bytes (4-Bit-Quantisierung — der Standard für lokale Inferenz)</li>
+    </ul>
+    <p>Damit rechnet sich alles im Kopf: Ein 70B-Modell (70 Milliarden Parameter) in Q4 ≈ 70 × 0.57 ≈ <strong>40 GB</strong>. In FP16 wären es 140 GB — passt nicht mal in 128 GB RAM.</p>
+
+    <table>
+      <tr><th>Modell</th><th>Q4 (~0.57 B/Param)</th><th>Q8 (~1.06 B/Param)</th><th>FP16 (2 B/Param)</th></tr>
+      <tr><td>7B</td><td class="num ok">~4 GB</td><td class="num ok">~7 GB</td><td class="num ok">~14 GB</td></tr>
+      <tr><td>9B (z.B. Gemma-2-Klasse)</td><td class="num ok">~5 GB</td><td class="num ok">~10 GB</td><td class="num ok">~18 GB</td></tr>
+      <tr><td>32B</td><td class="num ok">~19 GB</td><td class="num ok">~35 GB</td><td class="num ok">~66 GB</td></tr>
+      <tr><td>70B</td><td class="num ok">~40 GB</td><td class="num knapp">~75 GB</td><td class="num fail">~141 GB ✗</td></tr>
+      <tr><td>120B (MoE)</td><td class="num ok">~65 GB</td><td class="num fail">~124 GB ✗</td><td class="num fail">~234 GB ✗</td></tr>
+    </table>
+
+    <h3>Der versteckte Posten: KV-Cache</h3>
+    <p>Die Gewichte sind nicht alles. Beim Generieren merkt sich das Modell für <em>jedes Token im Kontext</em> Zwischenergebnisse (Keys und Values der Attention — Modul 01), damit es sie nicht ständig neu berechnen muss. Dieser <strong>KV-Cache wächst linear mit der Kontextlänge</strong>:</p>
+    <ul>
+      <li>Llama-70B-Klasse: ~0.3 MB pro Token → 8k Kontext ≈ 2.5 GB, aber <strong>128k Kontext ≈ 40 GB</strong> — so viel wie das Modell selbst!</li>
+      <li>Kleine Modelle (7–9B): ~0.1–0.15 MB pro Token — auch bei langem Kontext harmlos.</li>
+    </ul>
+    <p>Dazu kommen ein paar GB Laufzeit-Overhead (Aktivierungen, Compute-Buffer) plus das, was macOS selbst braucht. Faustregel: <strong>rechne ~10 GB vom RAM weg</strong>, bevor du Modelle stapelst.</p>
+
+    <div class="kasten beispiel">
+      <span class="ktitle">Aus der Praxis</span>
+      Wenn du in Ollama ein 32B-Modell mit 32k Kontext lädst: ~19 GB Gewichte (Q4) + ~8 GB KV-Cache + Overhead ≈ 30 GB — für eine 128-GB-Maschine ein Klacks. Genau derselbe Effekt beisst aber jeden, der auf einer gemieteten Cloud-GPU einfach «mehr Kontext» einstellt: Auf einer H100 (80 GB VRAM) läuft man damit schnell in ein Out-of-Memory — der KV-Cache ist der Täter, nicht das Modell.
+    </div>
+
+    <div class="kasten warum">
+      <span class="ktitle">Wozu brauchst du das</span>
+      Damit du vor dem <code>ollama pull</code> weisst, ob ein Modell läuft — statt 60 GB zu laden und dann zu raten. Und beim Kunden kannst du in 10 Sekunden überschlagen, welche Hardware er für ein lokales Setup braucht. Das ist der Unterschied zwischen «ich probier mal» und Beratung.
+    </div>
+
+    <div class="kasten merksatz">
+      <span class="ktitle">Merksatz</span>
+      Parameterzahl × Bytes pro Parameter = Modellgrösse. Q4 ≈ halbes GB pro Milliarde Parameter. Dazu KV-Cache (wächst mit Kontextlänge) und ~10 GB System-Reserve.
+    </div>
+
+    <!-- RAM-Rechner (Simulation) -->
+    <div class="rechner">
+      <h3>RAM-Rechner: Passt es in 128 GB?</h3>
+      <div class="rrow">
+        <div class="rfield">
+          <label>Modell</label>
+          <select id="rcModel"></select>
+        </div>
+        <div class="rfield">
+          <label>Quantisierung</label>
+          <select id="rcQuant"></select>
+        </div>
+        <div class="rfield">
+          <label>Kontextlänge: <span id="rcCtxLabel" style="color:var(--text)">8k</span> Tokens</label>
+          <input type="range" id="rcCtx" min="0" max="6" step="1" value="2">
+        </div>
+      </div>
+      <div class="rambar" id="rcBar">
+        <div class="seg seg-w" id="rcSegW"></div>
+        <div class="seg seg-kv" id="rcSegKV"></div>
+        <div class="seg seg-ov" id="rcSegOV"></div>
+      </div>
+      <div class="ramlegend">
+        <span><span class="dot" style="background:var(--accent)"></span>Gewichte</span>
+        <span><span class="dot" style="background:var(--blue)"></span>KV-Cache</span>
+        <span><span class="dot" style="background:#C9BFB5"></span>Overhead + macOS (~10 GB)</span>
+        <span style="margin-left:auto;">Balken = 128 GB</span>
+      </div>
+      <div class="rstats">
+        <div class="rstat"><div class="v" id="rcWeights">–</div><div class="l">Gewichte</div></div>
+        <div class="rstat"><div class="v" id="rcKV">–</div><div class="l">KV-Cache</div></div>
+        <div class="rstat"><div class="v" id="rcTotal">–</div><div class="l">Total inkl. Overhead</div></div>
+        <div class="rstat"><div class="v" id="rcToks">–</div><div class="l">Token/s (Grössenordnung)</div></div>
+      </div>
+      <div class="ampel g" id="rcAmpel">…</div>
+      <div class="hint">Token/s = Schätzung für die Generierung auf einem M3 Max (~400 GB/s Bandbreite, siehe Abschnitt 3). Alle Zahlen sind Grössenordnungen. macOS reserviert per Default nur ~75% des RAM für die GPU — mit <code>sudo sysctl iogpu.wired_limit_mb=115000</code> hebst du das Limit an.</div>
+    </div>
+
+    <div class="aufgabe">
+      <span class="atitle">Aufgabe 1 — Kopfrechnung</span>
+      <p>Ohne Rechner: Wie gross sind die reinen Gewichte eines <strong>32B-Modells in Q8</strong> ungefähr?</p>
+      <div class="optlist" id="task1"></div>
+      <div id="task1fb"></div>
+    </div>
+  </section>
+
+  <!-- ================= S2 ================= -->
+  <section class="lern" id="sec-s2">
+    <div class="secbadge">ABSCHNITT 2<span class="donemark">✓ abgeschlossen</span></div>
+    <h2>Quantisierung verstehen: was Q4_K_M wirklich bedeutet</h2>
+
+    <p>Quantisierung heisst: die gelernten Gewichte werden von feinen Gleitkommazahlen (FP16: ~65'000 Abstufungen pro Grössenordnung) in ein <strong>gröberes Zahlenraster</strong> umgerechnet. Bei 4 Bit gibt es pro Block nur noch 16 mögliche Werte — jedes Gewicht wird auf den nächstgelegenen gerundet. Das Modell wird dadurch nicht neu trainiert, es wird <em>komprimiert</em>, mit kontrolliertem Rundungsfehler.</p>
+
+    <p>Der Trick, warum das so gut funktioniert: Gewichte werden <strong>blockweise</strong> quantisiert (z.B. 32er-Blöcke), und jeder Block bekommt einen eigenen Skalierungsfaktor in höherer Präzision. So passt sich das grobe Raster lokal an die tatsächlichen Wertebereiche an.</p>
+
+    <h3>Die Namen entschlüsselt</h3>
+    <ul>
+      <li><strong>Q4_K_M</strong>: 4 Bit, «K-Quants» (das modernere Blockverfahren mit gemischten Bitbreiten — wichtige Layer bekommen mehr Bits), M = medium. Der De-facto-Standard.</li>
+      <li><strong>Q8_0</strong>: 8 Bit, einfaches Blockschema. Praktisch nicht vom Original zu unterscheiden.</li>
+      <li><strong>GGUF</strong>: das Dateiformat, in dem das alles steckt — ein einzelnes File mit Gewichten + Metadaten (Tokenizer, Architektur, Kontextlimit), lesbar von llama.cpp, Ollama, LM Studio. Das «Container-Format» der lokalen Szene.</li>
+    </ul>
+
+    <h3>Qualitätsverlust ehrlich eingeordnet</h3>
+    <table>
+      <tr><th>Stufe</th><th>Grösse vs. FP16</th><th>Qualität</th></tr>
+      <tr><td class="num">Q8_0</td><td class="num">~53%</td><td class="ok">praktisch verlustfrei</td></tr>
+      <tr><td class="num">Q5_K_M</td><td class="num">~36%</td><td class="ok">kaum messbar schlechter</td></tr>
+      <tr><td class="num">Q4_K_M</td><td class="num">~29%</td><td class="knapp">Sweet-Spot: minimal schlechter, riesige Ersparnis</td></tr>
+      <tr><td class="num">Q3 / Q2</td><td class="num">~15–22%</td><td class="fail">spürbar dümmer — nur wenn's sonst gar nicht passt</td></tr>
+    </table>
+    <p>Wichtig für die Praxis: <strong>Ein grösseres Modell in Q4 schlägt fast immer ein kleineres in Q8.</strong> 70B-Q4 (~40 GB) ist besser als 32B-Q8 (~35 GB), obwohl beide ähnlich viel RAM brauchen.</p>
+
+    <div class="kasten beispiel">
+      <span class="ktitle">Aus der Praxis</span>
+      LoRA- und Modell-Trainings laufen typischerweise in <strong>BF16</strong> — das ist kein Zufall. Beim Training akkumulieren sich winzige Rundungsfehler über Tausende Gradienten-Updates; mit 4-Bit-Gewichten würde das Lernen zerbröseln. Bei der Inferenz dagegen läuft nur <em>ein</em> Forward-Pass pro Token — ein bisschen Rundung pro Layer verkraftet das Netz locker. Darum: Training präzise, Inferenz quantisiert. Dasselbe Modell, zwei Welten.
+    </div>
+
+    <div class="kasten warum">
+      <span class="ktitle">Wozu brauchst du das</span>
+      Auf Hugging Face liegt jedes Modell in 10+ GGUF-Varianten. Wer die Codes nicht lesen kann, lädt entweder das Falsche (Q2, dann «lokale Modelle sind halt schlecht») oder verschwendet RAM (FP16, obwohl Q8 identisch wäre). Du willst gezielt greifen: Q4_K_M als Default, Q8 wenn Platz da ist.
+    </div>
+
+    <div class="kasten merksatz">
+      <span class="ktitle">Merksatz</span>
+      Quantisierung = Gewichte in gröbere Zahlenraster runden, blockweise mit eigenen Skalierungsfaktoren. Q8 ≈ verlustfrei, Q4_K_M = Sweet-Spot, unter Q4 wird's spürbar. Training braucht BF16, Inferenz nicht.
+    </div>
+
+    <div class="aufgabe">
+      <span class="atitle">Aufgabe 2 — Zuordnung</span>
+      <p>Ordne zu: Klicke links ein Format an, dann rechts die passende Beschreibung.</p>
+      <div class="matchgrid" id="task2"></div>
+      <div id="task2fb"></div>
+    </div>
+  </section>
+
+  <!-- ================= S3 ================= -->
+  <section class="lern" id="sec-s3">
+    <div class="secbadge">ABSCHNITT 3<span class="donemark">✓ abgeschlossen</span></div>
+    <h2>Warum Apple Silicon dafür gebaut ist</h2>
+
+    <p>Ein M3 Max hat gegenüber einem Gaming-PC mit RTX 4090 einen entscheidenden Architektur-Vorteil: <strong>Unified Memory</strong>. CPU und GPU teilen sich denselben physischen Speicher — die vollen 128 GB. Bei NVIDIA-Consumer-Karten ist bei 24 GB VRAM Schluss, egal wie viel RAM im PC steckt. Ein 70B-Q4-Modell (40 GB) passt dort schlicht nicht auf die Karte; auf dem Mac liegt es einfach im RAM und die GPU greift direkt zu.</p>
+
+    <div class="svgbox">
+      <svg viewBox="0 0 720 240" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, sans-serif">
+        <!-- Mac side -->
+        <rect x="10" y="20" width="330" height="200" rx="12" fill="#FFFDF8" stroke="#C9BFB5"/>
+        <text x="175" y="45" fill="#A9741E" font-size="15" font-weight="600" text-anchor="middle">Mac mit M3 Max</text>
+        <rect x="40" y="60" width="270" height="80" rx="8" fill="#FFFDF8" stroke="#A9741E"/>
+        <text x="175" y="95" fill="#1C1613" font-size="13" text-anchor="middle">Unified Memory: 128 GB</text>
+        <text x="175" y="115" fill="#8C8178" font-size="11" text-anchor="middle">~400 GB/s Bandbreite</text>
+        <rect x="55" y="160" width="110" height="40" rx="8" fill="#FFFDF8" stroke="#B25222"/>
+        <text x="110" y="184" fill="#B25222" font-size="12" text-anchor="middle">CPU</text>
+        <rect x="185" y="160" width="110" height="40" rx="8" fill="#FFFDF8" stroke="#4C7A3F"/>
+        <text x="240" y="184" fill="#4C7A3F" font-size="12" text-anchor="middle">GPU (Metal)</text>
+        <line x1="110" y1="160" x2="140" y2="140" stroke="#C9BFB5" stroke-width="2"/>
+        <line x1="240" y1="160" x2="210" y2="140" stroke="#C9BFB5" stroke-width="2"/>
+        <!-- PC side -->
+        <rect x="380" y="20" width="330" height="200" rx="12" fill="#FFFDF8" stroke="#C9BFB5"/>
+        <text x="545" y="45" fill="#8C8178" font-size="15" font-weight="600" text-anchor="middle">PC mit RTX 4090</text>
+        <rect x="410" y="60" width="140" height="60" rx="8" fill="#FFFDF8" stroke="#C9BFB5"/>
+        <text x="480" y="85" fill="#1C1613" font-size="12" text-anchor="middle">System-RAM</text>
+        <text x="480" y="103" fill="#8C8178" font-size="11" text-anchor="middle">z.B. 128 GB</text>
+        <rect x="410" y="150" width="140" height="50" rx="8" fill="#FFFDF8" stroke="#B25222"/>
+        <text x="480" y="180" fill="#B25222" font-size="12" text-anchor="middle">CPU</text>
+        <rect x="580" y="60" width="110" height="140" rx="8" fill="#FFFDF8" stroke="#A3311B"/>
+        <text x="635" y="90" fill="#1C1613" font-size="12" text-anchor="middle">GPU</text>
+        <text x="635" y="115" fill="#A3311B" font-size="12" font-weight="600" text-anchor="middle">nur 24 GB</text>
+        <text x="635" y="133" fill="#A3311B" font-size="11" text-anchor="middle">VRAM-Grenze</text>
+        <line x1="550" y1="130" x2="580" y2="130" stroke="#A3311B" stroke-width="2" stroke-dasharray="4 3"/>
+        <text x="565" y="122" fill="#A3311B" font-size="10" text-anchor="middle">PCIe</text>
+        <text x="635" y="175" fill="#8C8178" font-size="10" text-anchor="middle">70B passt</text>
+        <text x="635" y="189" fill="#8C8178" font-size="10" text-anchor="middle">nicht rein ✗</text>
+      </svg>
+    </div>
+
+    <h3>Der wahre Flaschenhals: Bandbreite, nicht Rechenleistung</h3>
+    <p>Beim Generieren muss das Modell für <em>jedes einzelne Token</em> einmal komplett durch alle Gewichte durch — die müssen also für jedes Token aus dem RAM in die Rechenwerke fliessen. Das macht die Textgenerierung <strong>memory-bound</strong>: nicht die GPU-Power limitiert, sondern wie schnell der Speicher liefert. Daraus folgt eine simple Faustregel:</p>
+    <pre><code>Token/s (theoretisches Maximum) ≈ Bandbreite / Modellgrösse
+
+M3 Max: ~400 GB/s / 40 GB (70B-Q4)  ≈ 10 Token/s Deckel
+                    / 5 GB  (9B-Q4)  ≈ 80 Token/s Deckel</code></pre>
+    <p>Real erreichst du ~60–70% davon. Das erklärt alles: kleine Modelle fühlen sich flott an, 70B ist «Lesetempo». Nur das <em>Prompt-Verarbeiten</em> (der ganze Input auf einmal) ist compute-bound — da ist eine dicke NVIDIA-Karte klar schneller. Deshalb dauert es bei langen Prompts erst einen Moment, bevor das erste Token kommt.</p>
+
+    <h3>Metal, MLX, llama.cpp</h3>
+    <ul>
+      <li><strong>llama.cpp</strong>: das C++-Urgestein, nutzt die GPU via Metal. Frisst GGUF-Dateien.</li>
+      <li><strong>MLX</strong>: Apples eigenes Array-Framework, speziell für Unified Memory gebaut — auf neueren Chips ~30–40% schneller als llama.cpp. Seit 2026 nutzt <strong>Ollama (ab 0.19) MLX als Backend auf Apple Silicon</strong> — du profitierst also automatisch, ohne etwas umzustellen.</li>
+    </ul>
+
+    <div class="kasten beispiel">
+      <span class="ktitle">Aus der Praxis</span>
+      Eine gemietete H100 in der Cloud hat ~3.3 TB/s Bandbreite — gut 8× ein M3 Max. <em>Deshalb</em> mietet man für schwere Video-Inferenz die Cloud. Aber für Text-LLMs bis 70B ist der Mac konkurrenzfähig, weil dort die 24-GB-VRAM-Klasse (alles unter H100/A100-Miete) gar nicht erst mitspielen kann. Sein Vorteil ist nicht Geschwindigkeit — es ist <strong>Kapazität</strong>.
+    </div>
+
+    <div class="kasten warum">
+      <span class="ktitle">Wozu brauchst du das</span>
+      Damit du Erwartungen richtig setzt — bei dir und bei Kunden. «Warum ist das 70B-Modell so langsam, die GPU langweilt sich doch?» ist keine Fehlkonfiguration, sondern Physik. Und beim Hardware-Kauf für einen Kunden zählt: RAM-Menge entscheidet, <em>was</em> läuft; Bandbreite entscheidet, <em>wie schnell</em>.
+    </div>
+
+    <div class="kasten merksatz">
+      <span class="ktitle">Merksatz</span>
+      Unified Memory = keine VRAM-Grenze, die GPU kann fast die ganzen 128 GB nutzen. Token/s ≈ Bandbreite ÷ Modellgrösse — Textgenerierung ist memory-bound, nicht compute-bound.
+    </div>
+
+    <div class="aufgabe">
+      <span class="atitle">Aufgabe 3 — Multiple Choice</span>
+      <p>Was limitiert die Token-Geschwindigkeit bei der Textgenerierung auf einem M3 Max am stärksten?</p>
+      <div class="optlist" id="task3"></div>
+      <div id="task3fb"></div>
+    </div>
+  </section>
+
+  <!-- ================= S4 ================= -->
+  <section class="lern" id="sec-s4">
+    <div class="secbadge">ABSCHNITT 4<span class="donemark">✓ abgeschlossen</span></div>
+    <h2>Was auf so einer Maschine sinnvoll läuft (Stand 2026)</h2>
+
+    <p>Mit 128 GB spielt eine Maschine in einer Liga, die 99% der lokalen Nutzer nie sehen: <strong>70B in Q4 passt locker</strong> (40 GB + Cache), und sogar 120B-Klasse-MoE-Modelle laufen. Konkrete Empfehlungen nach Anwendungsfall:</p>
+
+    <table>
+      <tr><th>Anwendungsfall</th><th>Empfehlung</th><th>RAM (Q4)</th></tr>
+      <tr><td>Code-Assistent</td><td>Qwen3-Coder 30B-A3B (MoE — schnell!) oder Qwen3 32B</td><td class="num">~18–19 GB</td></tr>
+      <tr><td>Text / Deutsch</td><td>Gemma 3 27B (stark mehrsprachig) oder Llama 3.3 70B</td><td class="num">~16 / ~40 GB</td></tr>
+      <tr><td>Allrounder / Reasoning</td><td>gpt-oss-120b (MoE, kommt ab Werk in ~4-Bit «MXFP4»)</td><td class="num">~65 GB</td></tr>
+      <tr><td>Vision (Bilder verstehen)</td><td>Gemma 3 27B (multimodal), Qwen-VL-Familie</td><td class="num">~16–20 GB</td></tr>
+      <tr><td>Embeddings für RAG (Modul 04)</td><td>nomic-embed-text, bge-m3, qwen3-embedding</td><td class="num">&lt; 2 GB</td></tr>
+    </table>
+    <p style="font-size:0.88em; color:var(--muted);">Modellnamen altern schnell — die <em>Grössenklassen und die Rechnung</em> bleiben. Vor dem Pull kurz prüfen, was gerade der Standard in der Klasse ist.</p>
+
+    <h3>MoE vs. Dense: warum 120B trotzdem schnell ist</h3>
+    <p>Bei einem <strong>dense</strong> Modell rechnen alle Parameter an jedem Token mit — 70B dense heisst: 40 GB müssen pro Token durch den Speicher. Ein <strong>Mixture-of-Experts</strong>-Modell (MoE) hält viele «Experten»-Teilnetze bereit, ein Router wählt pro Token aber nur wenige aus. gpt-oss-120b hat 117B Parameter total, <strong>aktiviert pro Token aber nur ~5B</strong>.</p>
+    <p>Für den RAM heisst das: <strong>alle Experten müssen im Speicher liegen</strong> (65 GB), aber pro Token fliessen nur die aktiven ~3 GB durch die Bandbreite → es generiert fast so schnell wie ein kleines Modell, mit dem Wissen eines grossen. MoE ist wie gemacht für diese Konstellation: viel RAM, moderate Bandbreite.</p>
+
+    <div class="kasten beispiel">
+      <span class="ktitle">Aus der Praxis</span>
+      Embeddings lokal sind der unmittelbarste Gewinn: <code>ollama pull nomic-embed-text</code>, und eine interne Wissensdatenbank bekommt semantische Suche statt nur Volltext (Modul 04) — 14'000 Produktbeschreibungen einmal durchembedden kostet auf einem M3 Max Minuten und null Rappen, und keine internen Daten gehen an eine API.
+    </div>
+
+    <div class="kasten warum">
+      <span class="ktitle">Wozu brauchst du das</span>
+      Ohne Landkarte lädst du entweder zu klein («lokal ist halt schlecht») oder planlos. Mit der Tabelle + dem RAM-Rechner wählst du gezielt: schnelles MoE für Alltag, 70B wenn Qualität zählt, Winzling für Embeddings. Und in der Beratung weisst du, dass ein Mac Studio beim Kunden dieselbe Rechnung fährt.
+    </div>
+
+    <div class="kasten merksatz">
+      <span class="ktitle">Merksatz</span>
+      70B-Q4 passt locker in 128 GB, ~120B-MoE auch. MoE: alle Experten im RAM, aber nur wenige pro Token aktiv = gross <em>und</em> schnell — ideal für viel RAM bei moderater Bandbreite.
+    </div>
+
+    <div class="aufgabe">
+      <span class="atitle">Aufgabe 4 — Schätzfragen-Serie</span>
+      <p>Erst schätzen, dann klicken — Auflösung kommt sofort. (<span id="task4count">0</span>/3 beantwortet)</p>
+      <div id="task4"></div>
+      <div id="task4fb"></div>
+    </div>
+  </section>
+
+  <!-- ================= S5 ================= -->
+  <section class="lern" id="sec-s5">
+    <div class="secbadge">ABSCHNITT 5<span class="donemark">✓ abgeschlossen</span></div>
+    <h2>Lokal vs. Cloud — die strategische Entscheidung</h2>
+
+    <p>Zuerst die ehrliche Einordnung: <strong>lokale Modelle sind 1–2 Klassen unter Frontier</strong> (Claude, GPT, Gemini). Ein 70B-Q4 schreibt keinen Code auf Claude-Niveau und verheddert sich bei langen Agenten-Ketten schneller. Wer dir «lokal ist genauso gut» verkauft, hat es nicht gemessen. <em>Aber</em>: für viele KMU-Aufgaben — Dokumente zusammenfassen, E-Mails klassifizieren, Formulardaten extrahieren, interne Suche — reicht diese Klasse völlig. Die Frage ist nie «was ist das beste Modell», sondern «was ist gut genug für diesen Task».</p>
+
+    <table>
+      <tr><th></th><th>Lokal gewinnt</th><th>Cloud gewinnt</th></tr>
+      <tr><td><strong>Daten</strong></td><td class="ok">verlassen das Haus nie — kein Auftragsverarbeiter, kein US-Cloud-Act-Thema (Modul 10)</td><td class="fail">gehen an Dritte, Verträge nötig</td></tr>
+      <tr><td><strong>Qualität</strong></td><td class="knapp">solide Mittelklasse</td><td class="ok">Frontier, Multi-Step-Agenten</td></tr>
+      <tr><td><strong>Kosten</strong></td><td class="ok">Hardware einmal, dann Flatrate — Dauerlast wird günstig</td><td class="knapp">pro Token — skaliert mit Nutzung</td></tr>
+      <tr><td><strong>Betrieb</strong></td><td class="knapp">du bist der Ops-Verantwortliche (Updates, Monitoring)</td><td class="ok">null Ops</td></tr>
+      <tr><td><strong>Offline / Latenz</strong></td><td class="ok">läuft im Zug, im Keller, im Funkloch</td><td class="fail">braucht Netz</td></tr>
+    </table>
+
+    <h3>Das Beratungs-Argument</h3>
+    <p>Für Schweizer KMU mit sensiblen Daten — Treuhänder, Ärzte, Anwälte, HR — ist ein Satz Gold wert: <strong>«Ihre Daten verlassen das Haus nicht.»</strong> Ein Mac Studio im Büro, Ollama drauf, ein lokales Modell für Klassifikation und Zusammenfassung — das ist ein verkaufbares Produkt, kein Bastelprojekt. Das realistische Muster ist dabei fast immer <strong>hybrid</strong>: sensible Daten lokal verarbeiten, generische Aufgaben ohne Personendaten (Marketing-Texte, Code) in die Cloud, wo Qualität zählt.</p>
+
+    <div class="kasten beispiel">
+      <span class="ktitle">Aus der Praxis</span>
+      Viele Power-User leben dieses Hybrid-Muster längst: ein Frontier-Modell (Cloud) für Code und Komplexes, Ollama lokal wo es reicht, gemietete GPU-Server als Mittelweg (fremde Hardware, aber eigene Modelle und Feintunings — Cloud-Flexibilität ohne API-Abhängigkeit). Für eine kleine KI-Beratung musst du es nur noch als Beratungs-Raster formulieren: <em>Datensensibilität × Qualitätsbedarf × Volumen</em> → lokal, Cloud oder hybrid.
+    </div>
+
+    <div class="kasten warum">
+      <span class="ktitle">Wozu brauchst du das</span>
+      Das ist keine Technik-Frage mehr, das ist ein Geschäftsmodell. Der Berater, der begründen kann <em>warum</em> lokal (und ehrlich sagt, wo Cloud besser ist), unterscheidet sich vom Verkäufer, der alles mit demselben Hammer erschlägt. Genau diese Einordnung kannst du in Schulungen verkaufen.
+    </div>
+
+    <div class="kasten merksatz">
+      <span class="ktitle">Merksatz</span>
+      Lokal gewinnt bei Datenschutz, Offline und Dauerlast-Kosten; Cloud bei Spitzenqualität und null Ops. Lokale Modelle sind 1–2 Klassen unter Frontier — für viele KMU-Tasks trotzdem genug. Meist ist hybrid die Antwort.
+    </div>
+
+    <div class="aufgabe">
+      <span class="atitle">Aufgabe 5 — Einordnen: lokal oder Cloud?</span>
+      <p>Entscheide pro Szenario. (<span id="task5count">0</span>/4 beantwortet)</p>
+      <div id="task5"></div>
+      <div id="task5fb"></div>
+    </div>
+  </section>
+
+  <!-- ================= Praxis-Challenge ================= -->
+  <div class="challenge" id="sec-challenge">
+    <div class="secbadge">PRAXIS-CHALLENGE<span class="donemark" id="chDone" style="display:none; color:var(--green);">✓ erledigt</span></div>
+    <h2>Miss deine Maschine gegen den Rechner</h2>
+    <p>Prüfe, ob der RAM-Rechner oben die Realität trifft — an deinem eigenen Ollama.</p>
+    <ol>
+      <li>Schau, was du hast, und lade bei Bedarf ein mittelgrosses Modell:
+<pre><code>ollama list
+ollama pull qwen3:32b   # oder ein anderes 30B-Klasse-Modell</code></pre></li>
+      <li>Lass es mit <code>--verbose</code> laufen — das druckt am Ende die Messwerte:
+<pre><code>ollama run qwen3:32b --verbose "Erkläre in 3 Sätzen, was Unified Memory ist."</code></pre></li>
+      <li>Während es läuft: zweites Terminal, <code>ollama ps</code> → zeigt dir den realen RAM-Verbrauch des geladenen Modells.</li>
+    </ol>
+    <p><strong>Das solltest du sehen:</strong> Am Ende der Ausgabe eine Zeile wie <code>eval rate: 12.4 tokens/s</code> — vergleiche sie mit der Token/s-Schätzung des RAM-Rechners (32B, Q4). Liegt sie in derselben Grössenordnung (~10–17 tok/s), hast du die Bandbreiten-Faustregel live bestätigt. <code>ollama ps</code> sollte ~20 GB zeigen — Gewichte plus Cache, wie berechnet.</p>
+    <label class="checkrow"><input type="checkbox" id="challengeCheck"> Erledigt — Messwert gesehen und mit dem Rechner verglichen</label>
+  </div>
+
+  <!-- ================= Quiz ================= -->
+  <div class="quizbox">
+    <div class="secbadge">ABSCHLUSSQUIZ</div>
+    <h2>10 Fragen übers ganze Modul</h2>
+    <div id="quiz"></div>
+    <div class="btnrow">
+      <button class="primary" id="quizEval">Auswerten</button>
+      <button id="quizReset">Quiz zurücksetzen</button>
+    </div>
+    <div class="quizresult" id="quizResult"></div>
+  </div>
+
+  <footer>
+    <a href="index.html">← Kursübersicht</a>
+    <a href="08-evaluierung-grenzen.html">Weiter zu Modul 08: Evaluierung &amp; Grenzen →</a>
+  </footer>
+
+</div>
+
+<script>
+(function(){
+  'use strict';
+
+  // ---------- localStorage ----------
+  var NN = '07';
+  var KEY_SECTIONS = 'kikurs_' + NN + '_sections';
+  var KEY_QUIZ = 'kikurs_' + NN + '_quiz';
+  var KEY_TOTAL = 'kikurs_' + NN + '_total_sections';
+  var TOTAL = 6; // s1..s5 + challenge
+  var SECTION_IDS = ['s1','s2','s3','s4','s5','challenge'];
+
+  function loadSections(){
+    try {
+      var raw = localStorage.getItem(KEY_SECTIONS);
+      var arr = raw ? JSON.parse(raw) : [];
+      return Array.isArray(arr) ? arr : [];
+    } catch(e){ return []; }
+  }
+  function saveSections(arr){
+    localStorage.setItem(KEY_SECTIONS, JSON.stringify(arr));
+  }
+  localStorage.setItem(KEY_TOTAL, String(TOTAL));
+
+  var completed = loadSections().filter(function(id){ return SECTION_IDS.indexOf(id) !== -1; });
+
+  function updateProgress(){
+    var pct = Math.round(completed.length / TOTAL * 100);
+    document.getElementById('progressBar').style.width = pct + '%';
+    document.getElementById('progressText').textContent = completed.length + ' von ' + TOTAL + ' Abschnitten';
+    completed.forEach(function(id){
+      var sec = document.getElementById('sec-' + id);
+      if (sec) sec.classList.add('done');
+      if (id === 'challenge') {
+        var m = document.getElementById('chDone');
+        if (m) m.style.display = 'inline';
+      }
+    });
+  }
+  function completeSection(id){
+    if (completed.indexOf(id) === -1) {
+      completed.push(id);
+      saveSections(completed);
+    }
+    updateProgress();
+  }
+  function uncompleteSection(id){
+    var i = completed.indexOf(id);
+    if (i !== -1) { completed.splice(i,1); saveSections(completed); }
+    var sec = document.getElementById('sec-' + id);
+    if (sec) sec.classList.remove('done');
+    if (id === 'challenge') document.getElementById('chDone').style.display = 'none';
+    updateProgress();
+  }
+
+  // ---------- RAM-Rechner ----------
+  var MODELS = [
+    { name: '7B dense (z.B. Llama-Klasse)', p: 7,    act: 7,    kvMB: 0.125 },
+    { name: '9B dense (Gemma-2-Klasse)',    p: 9,    act: 9,    kvMB: 0.15 },
+    { name: '14B dense',                    p: 14,   act: 14,   kvMB: 0.19 },
+    { name: '27B dense (Gemma-3-Klasse)',   p: 27,   act: 27,   kvMB: 0.22 },
+    { name: '32B dense (Qwen3-Klasse)',     p: 32.8, act: 32.8, kvMB: 0.25 },
+    { name: '70B dense (Llama-3.3-Klasse)', p: 70.6, act: 70.6, kvMB: 0.31 },
+    { name: '120B MoE, ~5B aktiv (gpt-oss)',p: 117,  act: 5.1,  kvMB: 0.08, moe: true },
+    { name: '235B MoE, ~22B aktiv (Qwen3-Klasse)', p: 235, act: 22, kvMB: 0.18, moe: true }
+  ];
+  var QUANTS = [
+    { name: 'Q4_K_M (~0.57 B/Param)', bpp: 0.57 },
+    { name: 'Q5_K_M (~0.71 B/Param)', bpp: 0.71 },
+    { name: 'Q8_0 (~1.06 B/Param)',   bpp: 1.06 },
+    { name: 'FP16 (2 B/Param)',       bpp: 2.0 }
+  ];
+  var CTX = [2, 4, 8, 16, 32, 64, 128]; // k tokens
+  var RAM_LIMIT = 128;
+  var OVERHEAD = 10; // GB: Laufzeit + macOS
+  var BW = 400, EFF = 0.65;
+
+  var selModel = document.getElementById('rcModel');
+  var selQuant = document.getElementById('rcQuant');
+  var rngCtx = document.getElementById('rcCtx');
+
+  MODELS.forEach(function(m, i){
+    var o = document.createElement('option');
+    o.value = i; o.textContent = m.name;
+    selModel.appendChild(o);
+  });
+  QUANTS.forEach(function(q, i){
+    var o = document.createElement('option');
+    o.value = i; o.textContent = q.name;
+    selQuant.appendChild(o);
+  });
+  selModel.value = 5; // 70B als Start
+
+  function fmtGB(x){
+    return (x >= 100 ? Math.round(x) : x.toFixed(1)) + ' GB';
+  }
+
+  function calc(){
+    var m = MODELS[+selModel.value];
+    var q = QUANTS[+selQuant.value];
+    var ctxK = CTX[+rngCtx.value];
+    document.getElementById('rcCtxLabel').textContent = ctxK + 'k';
+
+    var weights = m.p * q.bpp;
+    var kv = m.kvMB * ctxK * 1024 / 1024; // MB/tok * tokens(k*1024) / 1024 => GB
+    var total = weights + kv + OVERHEAD;
+
+    document.getElementById('rcWeights').textContent = fmtGB(weights);
+    document.getElementById('rcKV').textContent = fmtGB(kv);
+    document.getElementById('rcTotal').textContent = fmtGB(total);
+
+    // tok/s estimate
+    var activeGB = m.act * q.bpp;
+    var toks = BW * EFF / activeGB;
+    if (m.moe) toks *= 0.55; // Routing/Scatter-Abschlag
+    var toksTxt;
+    if (total > RAM_LIMIT) toksTxt = '—';
+    else if (toks > 100) toksTxt = '> 100';
+    else if (toks >= 10) toksTxt = '~' + Math.round(toks);
+    else toksTxt = '~' + toks.toFixed(1);
+    document.getElementById('rcToks').textContent = toksTxt;
+
+    // bar
+    function pct(x){ return Math.max(0, Math.min(100, x / RAM_LIMIT * 100)); }
+    var wP = pct(weights);
+    var kvP = Math.min(pct(kv), 100 - wP);
+    var ovP = Math.min(pct(OVERHEAD), 100 - wP - kvP);
+    document.getElementById('rcSegW').style.width = wP + '%';
+    document.getElementById('rcSegKV').style.width = kvP + '%';
+    document.getElementById('rcSegOV').style.width = ovP + '%';
+
+    // ampel
+    var amp = document.getElementById('rcAmpel');
+    amp.classList.remove('g','y','r');
+    if (total <= 100) {
+      amp.classList.add('g');
+      amp.textContent = '● Passt locker — ' + fmtGB(RAM_LIMIT - total) + ' Luft für Browser, DAW und Rest.';
+    } else if (total <= 122) {
+      amp.classList.add('y');
+      amp.textContent = '● Knapp — läuft, aber schliess besser alles andere. GPU-Wired-Limit ggf. anheben (sysctl).';
+    } else {
+      amp.classList.add('r');
+      amp.textContent = '● Passt nicht in 128 GB — kleinere Quantisierung oder kürzerer Kontext nötig.';
+    }
+  }
+  selModel.addEventListener('change', calc);
+  selQuant.addEventListener('change', calc);
+  rngCtx.addEventListener('input', calc);
+  calc();
+
+  // ---------- Aufgaben-Helfer: Multiple Choice ----------
+  function buildMC(containerId, fbId, options, sectionId){
+    var box = document.getElementById(containerId);
+    var fb = document.getElementById(fbId);
+    var solved = false;
+    options.forEach(function(opt){
+      var b = document.createElement('button');
+      b.textContent = opt.t;
+      b.addEventListener('click', function(){
+        if (solved) return;
+        if (opt.correct) {
+          solved = true;
+          b.classList.add('correct');
+          var all = box.querySelectorAll('button');
+          for (var i=0;i<all.length;i++) all[i].disabled = true;
+          fb.innerHTML = '<div class="feedback good">✓ Richtig.</div>' + renderExplains(options);
+          completeSection(sectionId);
+        } else {
+          b.classList.add('wrong');
+          b.disabled = true;
+          fb.innerHTML = '<div class="feedback bad">✗ ' + opt.why + ' — versuch\'s nochmal.</div>';
+        }
+      });
+      box.appendChild(b);
+    });
+  }
+  function renderExplains(options){
+    var h = '';
+    options.forEach(function(o){
+      h += '<div class="explain"><strong>' + (o.correct ? '✓ ' : '✗ ') + o.t + '</strong> — ' + o.why + '</div>';
+    });
+    return h;
+  }
+
+  // Aufgabe 1: MC (32B in Q8)
+  buildMC('task1', 'task1fb', [
+    { t: '~16 GB', correct: false, why: 'Das wäre ungefähr Q4 (32 × ~0.5). Q8 braucht ~1 Byte pro Parameter' },
+    { t: '~35 GB', correct: true,  why: '32 Milliarden Parameter × ~1 Byte (Q8) ≈ 33–35 GB. Dazu kämen noch KV-Cache und Overhead' },
+    { t: '~66 GB', correct: false, why: 'Das wäre FP16 (2 Bytes/Parameter), nicht Q8' },
+    { t: '~128 GB', correct: false, why: 'So gross wäre nicht mal FP16 — das wäre der komplette RAM-Ausbau der Referenz-Maschine' }
+  ], 's1');
+
+  // ---------- Aufgabe 2: Zuordnung ----------
+  (function(){
+    var pairs = [
+      { l: 'BF16 / FP16', r: 'Training & volle Präzision — 2 Bytes pro Parameter' },
+      { l: 'Q8_0',        r: 'Praktisch verlustfrei bei halber Grösse' },
+      { l: 'Q4_K_M',      r: 'Der Sweet-Spot: ~70% kleiner, minimal schlechter' },
+      { l: 'Q2 / Q3',     r: 'Spürbar dümmer — nur wenn es sonst nicht passt' }
+    ];
+    var grid = document.getElementById('task2');
+    var fb = document.getElementById('task2fb');
+    var selectedLeft = null;
+    var matchedCount = 0;
+    var leftBtns = [], rightBtns = [];
+
+    // rechte Seite mischen (deterministisch anders als links)
+    var order = [2, 0, 3, 1];
+
+    pairs.forEach(function(p, i){
+      var lb = document.createElement('button');
+      lb.textContent = p.l;
+      lb.dataset.idx = i;
+      lb.addEventListener('click', function(){
+        if (lb.classList.contains('matched')) return;
+        leftBtns.forEach(function(b){ b.classList.remove('selected'); });
+        lb.classList.add('selected');
+        selectedLeft = i;
+        fb.innerHTML = '';
+      });
+      leftBtns.push(lb);
+    });
+    order.forEach(function(idx){
+      var rb = document.createElement('button');
+      rb.textContent = pairs[idx].r;
+      rb.dataset.idx = idx;
+      rb.addEventListener('click', function(){
+        if (rb.classList.contains('matched')) return;
+        if (selectedLeft === null) {
+          fb.innerHTML = '<div class="feedback bad">Wähle zuerst links ein Format.</div>';
+          return;
+        }
+        if (+rb.dataset.idx === selectedLeft) {
+          rb.classList.add('matched');
+          leftBtns[selectedLeft].classList.remove('selected');
+          leftBtns[selectedLeft].classList.add('matched');
+          selectedLeft = null;
+          matchedCount++;
+          fb.innerHTML = '<div class="feedback good">✓ Passt.</div>';
+          if (matchedCount === pairs.length) {
+            fb.innerHTML = '<div class="feedback good">✓ Alle vier zugeordnet. Kernpunkt: Training braucht die Präzision (Fehler akkumulieren über Tausende Updates), Inferenz nicht (ein Forward-Pass verkraftet Rundung).</div>';
+            completeSection('s2');
+          }
+        } else {
+          rb.classList.add('wrong');
+          setTimeout(function(){ rb.classList.remove('wrong'); }, 700);
+          fb.innerHTML = '<div class="feedback bad">✗ Passt nicht zusammen — nochmal.</div>';
+        }
+      });
+      rightBtns.push(rb);
+    });
+    // interleave in grid: left col + right col via grid auto-placement (2 columns)
+    for (var i = 0; i < pairs.length; i++) {
+      grid.appendChild(leftBtns[i]);
+      grid.appendChild(rightBtns[i]);
+    }
+  })();
+
+  // Aufgabe 3: MC (Flaschenhals)
+  buildMC('task3', 'task3fb', [
+    { t: 'Die GPU-Rechenleistung', correct: false, why: 'Nur beim Prompt-Verarbeiten (Input auf einmal) ist Rechenleistung der Engpass. Beim Generieren langweilt sich die GPU' },
+    { t: 'Die Speicherbandbreite (~400 GB/s)', correct: true, why: 'Für jedes Token müssen alle aktiven Gewichte einmal durch den Speicher. Token/s ≈ Bandbreite ÷ Modellgrösse' },
+    { t: 'Die Anzahl CPU-Kerne', correct: false, why: 'Die Inferenz läuft auf der GPU (Metal/MLX); die CPU-Kerne spielen kaum eine Rolle' },
+    { t: 'Die SSD-Geschwindigkeit', correct: false, why: 'Die SSD zählt nur einmal beim Laden des Modells in den RAM — danach nie wieder' }
+  ], 's3');
+
+  // ---------- Aufgabe 4: Schätzfragen-Serie ----------
+  (function(){
+    var questions = [
+      {
+        q: '1. Passt Llama 3.3 70B in Q4 mit 8k Kontext in 128 GB?',
+        options: ['Ja, locker', 'Ja, aber sehr knapp', 'Nein'],
+        correct: 0,
+        res: 'Ja, locker: ~40 GB Gewichte + ~2.5 GB KV-Cache + ~10 GB Overhead ≈ 53 GB. Mehr als die Hälfte des RAMs bleibt frei.'
+      },
+      {
+        q: '2. Wie viel RAM brauchen die Gewichte von gpt-oss-120b (kommt ab Werk in ~4-Bit MXFP4)?',
+        options: ['~30 GB', '~65 GB', '~120 GB', '~240 GB'],
+        correct: 1,
+        res: '~65 GB: 117B Parameter × ~0.55 Bytes. Die «120» im Namen ist die Parameterzahl in Milliarden, nicht die Grösse in GB — bei ~4 Bit ist die GB-Zahl etwa die Hälfte der Parameterzahl.'
+      },
+      {
+        q: '3. Qwen3-235B-A22B (MoE) in Q4 — passt das in 128 GB?',
+        options: ['Ja, locker', 'Nein — Q4 sprengt es, erst kleinere Quants machen es knapp möglich', 'Nein, unmöglich in jeder Quantisierung'],
+        correct: 1,
+        res: '235B × 0.57 ≈ 134 GB — allein die Gewichte sprengen die 128 GB. Mit Q3 (~0.45 B/Param ≈ 106 GB) wird es machbar, aber eng und mit Qualitätsabschlag. Merke: auch bei MoE zählt für den RAM die GESAMT-Parameterzahl, die ~22B «aktiv» helfen nur der Geschwindigkeit.'
+      }
+    ];
+    var box = document.getElementById('task4');
+    var answered = 0;
+    questions.forEach(function(item){
+      var qd = document.createElement('div');
+      qd.style.marginTop = '14px';
+      var qp = document.createElement('p');
+      qp.innerHTML = '<strong>' + item.q + '</strong>';
+      qp.style.margin = '6px 0';
+      qd.appendChild(qp);
+      var list = document.createElement('div');
+      list.className = 'optlist';
+      var resDiv = document.createElement('div');
+      var done = false;
+      item.options.forEach(function(optText, oi){
+        var b = document.createElement('button');
+        b.textContent = optText;
+        b.addEventListener('click', function(){
+          if (done) return;
+          done = true;
+          var all = list.querySelectorAll('button');
+          for (var k=0;k<all.length;k++){
+            all[k].disabled = true;
+            if (k === item.correct) all[k].classList.add('correct');
+          }
+          if (oi !== item.correct) b.classList.add('wrong');
+          resDiv.innerHTML = '<div class="feedback ' + (oi === item.correct ? 'good">✓ Richtig geschätzt. ' : 'bad">✗ Daneben. ') + '</div><div class="explain">' + item.res + '</div>';
+          answered++;
+          document.getElementById('task4count').textContent = answered;
+          if (answered === questions.length) {
+            document.getElementById('task4fb').innerHTML = '<div class="feedback good">✓ Serie durch — Abschnitt abgeschlossen.</div>';
+            completeSection('s4');
+          }
+        });
+        list.appendChild(b);
+      });
+      qd.appendChild(list);
+      qd.appendChild(resDiv);
+      box.appendChild(qd);
+    });
+  })();
+
+  // ---------- Aufgabe 5: Lokal oder Cloud ----------
+  (function(){
+    var scenarios = [
+      { t: 'Treuhänder-Kunde: Jahresabschluss-Dokumente zusammenfassen und klassifizieren', correct: 'lokal',
+        why: 'Sensible Finanzdaten von Dritten — «verlässt das Haus nicht» ist hier das Argument, und die Task-Klasse (Zusammenfassen/Klassifizieren) schafft ein lokales Modell gut.' },
+      { t: 'Komplexe Code-Migration eines internen Web-Servers auf eine neue Architektur', correct: 'cloud',
+        why: 'Multi-Step-Refactoring über viele Dateien ist Frontier-Terrain — hier sind lokale Modelle 1–2 Klassen zu schwach, und der Code enthält keine Personendaten.' },
+      { t: 'Embeddings für die semantische Suche über 14\'000 interne Produktbeschreibungen', correct: 'lokal',
+        why: 'Embedding-Modelle sind winzig (<2 GB), die Qualität lokal ist völlig ausreichend, und interne Daten schickt man nicht ohne Not an eine API.' },
+      { t: 'Marketing-Texte für die Firmen-Website in Spitzenqualität', correct: 'cloud',
+        why: 'Keine sensiblen Daten, aber maximaler Qualitätsanspruch — klassischer Cloud-Fall.' }
+    ];
+    var box = document.getElementById('task5');
+    var answered = 0;
+    scenarios.forEach(function(sc){
+      var qd = document.createElement('div');
+      qd.style.marginTop = '14px';
+      var qp = document.createElement('p');
+      qp.innerHTML = '<strong>' + sc.t + '</strong>';
+      qp.style.margin = '6px 0';
+      qd.appendChild(qp);
+      var row = document.createElement('div');
+      row.style.display = 'flex';
+      row.style.gap = '8px';
+      var resDiv = document.createElement('div');
+      var done = false;
+      ['lokal','cloud'].forEach(function(choice){
+        var b = document.createElement('button');
+        b.textContent = choice === 'lokal' ? 'Lokal' : 'Cloud';
+        b.addEventListener('click', function(){
+          if (done) return;
+          done = true;
+          var all = row.querySelectorAll('button');
+          for (var k=0;k<all.length;k++) all[k].disabled = true;
+          if (choice === sc.correct) {
+            b.classList.add('correct');
+            resDiv.innerHTML = '<div class="feedback good">✓ Richtig.</div><div class="explain">' + sc.why + '</div>';
+          } else {
+            b.classList.add('wrong');
+            resDiv.innerHTML = '<div class="feedback bad">✗ Hier gewinnt ' + (sc.correct === 'lokal' ? 'lokal' : 'die Cloud') + '.</div><div class="explain">' + sc.why + '</div>';
+          }
+          answered++;
+          document.getElementById('task5count').textContent = answered;
+          if (answered === scenarios.length) {
+            document.getElementById('task5fb').innerHTML = '<div class="feedback good">✓ Alle vier eingeordnet — Abschnitt abgeschlossen.</div>';
+            completeSection('s5');
+          }
+        });
+        row.appendChild(b);
+      });
+      qd.appendChild(row);
+      qd.appendChild(resDiv);
+      box.appendChild(qd);
+    });
+  })();
+
+  // ---------- Challenge ----------
+  var chk = document.getElementById('challengeCheck');
+  chk.checked = completed.indexOf('challenge') !== -1;
+  chk.addEventListener('change', function(){
+    if (chk.checked) completeSection('challenge');
+    else uncompleteSection('challenge');
+  });
+
+  // ---------- Quiz ----------
+  var QUIZ = [
+    { q: 'Wie viele Bytes braucht ein Parameter in FP16?',
+      opts: ['1 Byte', '2 Bytes', '4 Bytes', '8 Bytes'], c: 1,
+      ex: 'FP16/BF16 = 16 Bit = 2 Bytes. Daraus folgt: Parameterzahl × 2 = Modellgrösse in FP16.' },
+    { q: 'Wie gross sind die Gewichte eines 70B-Modells in Q4 ungefähr?',
+      opts: ['~20 GB', '~40 GB', '~70 GB', '~140 GB'], c: 1,
+      ex: '70 Milliarden × ~0.57 Bytes ≈ 40 GB. (~70 GB wäre Q8, ~140 GB FP16.)' },
+    { q: 'Womit wächst der KV-Cache vor allem?',
+      opts: ['Mit der Parameterzahl des Modells', 'Mit der Kontextlänge', 'Mit der Quantisierungsstufe der Gewichte', 'Mit der Temperatur'], c: 1,
+      ex: 'Pro Token im Kontext werden Keys/Values gespeichert — der Cache wächst linear mit der Kontextlänge. Bei 70B-Klasse und 128k Kontext ist er so gross wie das Modell selbst.' },
+    { q: 'Welche Quantisierungsstufe gilt als praktisch verlustfrei?',
+      opts: ['Q2', 'Q4_K_M', 'Q8_0', 'Keine — jede Quantisierung ruiniert das Modell'], c: 2,
+      ex: 'Q8 ist von FP16 praktisch nicht zu unterscheiden. Q4_K_M ist der Sweet-Spot mit minimalem Verlust; erst unter Q4 wird es spürbar.' },
+    { q: 'Was ist der grösste Vorteil von Unified Memory für lokale LLMs?',
+      opts: ['Der RAM ist schneller als NVIDIA-VRAM', 'CPU und GPU teilen sich den Speicher — die GPU kann fast die ganzen 128 GB nutzen', 'Es braucht keine Quantisierung mehr', 'macOS lädt Modelle automatisch'], c: 1,
+      ex: 'Keine VRAM-Grenze: Ein 40-GB-Modell liegt einfach im RAM, die GPU greift direkt zu. Eine RTX 4090 ist bei 24 GB am Anschlag — schneller (Bandbreite!) ist sie trotzdem, nur eben zu klein.' },
+    { q: 'Warum ist die Textgenerierung memory-bound?',
+      opts: ['Weil die SSD zu langsam ist', 'Weil pro generiertem Token alle aktiven Gewichte einmal durch den Speicher müssen', 'Weil macOS den RAM limitiert', 'Weil der Tokenizer auf der CPU läuft'], c: 1,
+      ex: 'Token/s ≈ Bandbreite ÷ (aktive) Modellgrösse. Beim M3 Max mit ~400 GB/s heisst das: 70B-Q4 (~40 GB) ≈ maximal ~10 Token/s.' },
+    { q: 'gpt-oss-120b ist ein MoE-Modell (117B total, ~5B aktiv pro Token). Was bedeutet das für einen 128-GB-Mac?',
+      opts: ['Es braucht nur ~5B × Bytes RAM', 'Alle 117B müssen in den RAM, aber es generiert fast so schnell wie ein kleines Modell', 'Es läuft nur in der Cloud', 'Es braucht 117 GB VRAM auf einer GPU'], c: 1,
+      ex: 'Alle Experten müssen im Speicher liegen (~65 GB in MXFP4), aber pro Token rechnen nur ~5B mit → wenig Daten pro Token durch die Bandbreite → schnell. Ideal für viel RAM + moderate Bandbreite = genau diese Maschinen-Klasse.' },
+    { q: 'Was ist GGUF?',
+      opts: ['Ein Trainingsverfahren für LoRAs', 'Ein Dateiformat: Gewichte + Metadaten in einem File, Standard im llama.cpp/Ollama-Ökosystem', 'Apples GPU-Framework', 'Ein Quantisierungsalgorithmus von NVIDIA'], c: 1,
+      ex: 'GGUF ist das Container-Format der lokalen Szene — ein einzelnes File mit (meist quantisierten) Gewichten, Tokenizer und Architektur-Metadaten.' },
+    { q: 'Warum trainiert man Modelle und LoRAs in BF16, obwohl die Inferenz in Q4 problemlos geht?',
+      opts: ['BF16 ist ein Irrtum, Q4 würde auch fürs Training reichen', 'Beim Training akkumulieren sich Rundungsfehler über Tausende Gradienten-Updates — die Inferenz macht nur einen Forward-Pass pro Token', 'Cloud-GPUs unterstützen kein Q4', 'Quantisierte Modelle können keine LoRAs laden'], c: 1,
+      ex: 'Training = Tausende winzige Updates, da zerbröselt Rundung das Lernen. Inferenz = ein Durchlauf pro Token, da ist Rundung pro Layer verkraftbar. Darum: Training präzise, Inferenz quantisiert.' },
+    { q: 'Ein Treuhänder will KI für Kundendokumente, brauchbare Qualität reicht. Deine Empfehlung als Berater?',
+      opts: ['Cloud-API — ist immer besser', 'Lokal — «Ihre Daten verlassen das Haus nicht», und die Task-Klasse schafft ein lokales Modell', 'Gar keine KI — zu riskant', 'Erst ein eigenes Modell trainieren'], c: 1,
+      ex: 'Sensible Drittdaten + moderate Qualitätsanforderung = der Paradefall für lokal. Das Datenschutz-Argument ist dein stärkstes Verkaufsargument; die ehrliche Grenze (Frontier-Tasks → Cloud) macht dich glaubwürdig.' }
+  ];
+
+  var quizBox = document.getElementById('quiz');
+  var quizState = new Array(QUIZ.length).fill(null);
+
+  function renderQuiz(){
+    quizBox.innerHTML = '';
+    quizState = new Array(QUIZ.length).fill(null);
+    QUIZ.forEach(function(item, qi){
+      var qd = document.createElement('div');
+      qd.className = 'quizq';
+      qd.innerHTML = '<div class="qnum">FRAGE ' + (qi+1) + ' / ' + QUIZ.length + '</div><p style="margin:6px 0 10px;"><strong>' + item.q + '</strong></p>';
+      var list = document.createElement('div');
+      list.className = 'optlist';
+      item.opts.forEach(function(optText, oi){
+        var b = document.createElement('button');
+        b.textContent = optText;
+        b.dataset.q = qi;
+        b.dataset.o = oi;
+        b.addEventListener('click', function(){
+          if (quizEvaluated) return;
+          var sibs = list.querySelectorAll('button');
+          for (var k=0;k<sibs.length;k++) sibs[k].classList.remove('selected');
+          b.classList.add('selected');
+          quizState[qi] = oi;
+        });
+        list.appendChild(b);
+      });
+      qd.appendChild(list);
+      var exDiv = document.createElement('div');
+      exDiv.id = 'quizex' + qi;
+      qd.appendChild(exDiv);
+      quizBox.appendChild(qd);
+    });
+  }
+
+  var quizEvaluated = false;
+  var resultBox = document.getElementById('quizResult');
+
+  document.getElementById('quizEval').addEventListener('click', function(){
+    if (quizEvaluated) return;
+    var unanswered = [];
+    quizState.forEach(function(v, i){ if (v === null) unanswered.push(i+1); });
+    if (unanswered.length) {
+      resultBox.style.display = 'block';
+      resultBox.style.background = 'rgba(163, 49, 27,0.1)';
+      resultBox.style.color = 'var(--red)';
+      resultBox.textContent = 'Noch unbeantwortet: Frage ' + unanswered.join(', ');
+      return;
+    }
+    quizEvaluated = true;
+    var score = 0;
+    QUIZ.forEach(function(item, qi){
+      var chosen = quizState[qi];
+      var ok = chosen === item.c;
+      if (ok) score++;
+      var btns = quizBox.querySelectorAll('button[data-q="' + qi + '"]');
+      for (var k=0;k<btns.length;k++){
+        btns[k].disabled = true;
+        var oi = +btns[k].dataset.o;
+        if (oi === item.c) btns[k].classList.add('correct');
+        else if (oi === chosen) btns[k].classList.add('wrong');
+      }
+      document.getElementById('quizex' + qi).innerHTML =
+        '<div class="feedback ' + (ok ? 'good">✓ Richtig.' : 'bad">✗ Falsch.') + '</div><div class="explain">' + item.ex + '</div>';
+    });
+    localStorage.setItem(KEY_QUIZ, JSON.stringify({ score: score, total: QUIZ.length, done: true }));
+    resultBox.style.display = 'block';
+    if (score >= 8) {
+      resultBox.style.background = 'rgba(76, 122, 63,0.12)';
+      resultBox.style.color = 'var(--green)';
+    } else if (score >= 5) {
+      resultBox.style.background = 'rgba(169, 116, 30,0.12)';
+      resultBox.style.color = 'var(--yellow)';
+    } else {
+      resultBox.style.background = 'rgba(163, 49, 27,0.1)';
+      resultBox.style.color = 'var(--red)';
+    }
+    resultBox.textContent = score + ' von ' + QUIZ.length + ' richtig' +
+      (score >= 8 ? ' — sitzt. Die 128 GB haben jetzt einen Piloten.' :
+       score >= 5 ? ' — solide, schau dir die roten Erklärungen nochmal an.' :
+       ' — geh die Abschnitte nochmal durch, besonders die Grundrechnung.');
+    resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  });
+
+  document.getElementById('quizReset').addEventListener('click', function(){
+    localStorage.removeItem(KEY_QUIZ);
+    quizEvaluated = false;
+    resultBox.style.display = 'none';
+    renderQuiz();
+  });
+
+  renderQuiz();
+
+  // restore quiz result display if done
+  try {
+    var qsaved = JSON.parse(localStorage.getItem(KEY_QUIZ) || 'null');
+    if (qsaved && qsaved.done) {
+      resultBox.style.display = 'block';
+      resultBox.style.background = 'var(--accent-dim)';
+      resultBox.style.color = 'var(--accent)';
+      resultBox.textContent = 'Bereits absolviert: ' + qsaved.score + ' von ' + qsaved.total + ' richtig. («Quiz zurücksetzen» für einen neuen Versuch.)';
+    }
+  } catch(e){}
+
+  updateProgress();
+})();
+</script>
+</body>
+</html>

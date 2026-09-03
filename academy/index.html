@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="../tokens/fonts.css">
+  <link rel="stylesheet" href="../tokens/colors.css">
+  <link rel="stylesheet" href="../tokens/typography.css">
+  <link rel="stylesheet" href="../tokens/spacing.css">
+  <link rel="stylesheet" href="../tokens/effects.css">
+  <link rel="stylesheet" href="../tokens/base.css">
+  <link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="mobile.css?v=20260729-mobile-86">
+  <script src="../_ds_bundle.js?v=20260729-mobile-86"></script>
+  <script src="./academy-daten.js?v=20260801-advanced-12"></script>
+  <script src="./image-slot.js"></script>
+  <style>
+    html, body { margin: 0; padding: 0; background: #F4EDE1; }
+    body { font-family: 'Quicksand', system-ui, sans-serif; color: #1C1613; }
+    a { color: #B25222; text-decoration: none; }
+    a:hover { color: #9C4517; }
+    ::selection { background: rgba(178, 82, 34, 0.22); }
+  </style>
+</helmet>
+
+<div id="top" style="background:var(--cream-100)">
+
+  <div style="position:sticky; top:0; z-index:40">
+    <header style="background:var(--cream-100); border-bottom:1px solid var(--border-soft)">
+      <div style="max-width:var(--header-max); margin:0 auto; padding:22px 32px; box-sizing:border-box; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px 26px">
+        <a href="#top" aria-label="vaiaconAcademy Startseite" style="display:flex; align-items:center; flex-shrink:0; text-decoration:none">
+          <img src="assets/logo-lockup-academy.png" alt="vaiaconAcademy" style="height:44px; width:auto; display:block">
+        </a>
+        <nav aria-label="Hauptnavigation" style="display:flex; flex-wrap:wrap; align-items:center; gap:12px 24px; font-size:17px; font-weight:600">
+          <a href="#lernplaene" style-hover="color:var(--terra-500)" style="color:var(--text-strong); text-decoration:none; transition:color 0.3s ease">Lernpläne</a>
+          <a href="#vor-ort" style-hover="color:var(--terra-500)" style="color:var(--text-strong); text-decoration:none; transition:color 0.3s ease">Vor Ort</a>
+          <a href="#zugang" style-hover="color:var(--terra-500)" style="color:var(--text-strong); text-decoration:none; transition:color 0.3s ease">Zugang</a>
+          <a href="../index.html" style-hover="color:var(--terra-500)" style="display:inline-flex; align-items:center; gap:7px; color:var(--brown-400); text-decoration:none; transition:color 0.3s ease">← vaiacon</a>
+          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" arrow="{{ true }}" href="#zugang" hint-size="auto,48px">Gratis starten</x-import>
+        </nav>
+      </div>
+    </header>
+  </div>
+
+  <!-- ═══ 01 · LERNPLÄNE ═══ -->
+  <section id="lernplaene" style="position:relative; overflow:hidden; background:var(--sand-200); padding:62px 32px 92px">
+    <div style="position:absolute; inset:0; background:var(--glow-peach); pointer-events:none"></div>
+    <div style="position:relative; max-width:1160px; margin:0 auto; display:flex; flex-direction:column; gap:32px">
+      <div style="display:flex; flex-direction:column; gap:16px">
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Kicker" number="01" hint-size="auto,20px">DIE LERNPLÄNE</x-import>
+        <h1 style="margin:0; font-size:var(--text-h2); font-weight:600; letter-spacing:-0.03em; line-height:1.06; max-width:24ch; text-wrap:pretty">KI im Alltag. Für Schweizer KMU.</h1>
+        <p style="margin:0; max-width:56ch; font-size:17px; line-height:1.65; color:var(--text-body); text-wrap:pretty">Zwölf Lernpfade, 66 Lektionen. Jeder Lernplan ist für sich abgeschlossen und dauert rund eine Stunde — Sie starten dort, wo es bei Ihnen brennt. Neu: der Advanced-Pfad für alle, die tiefer einsteigen wollen.</p>
+        <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brown-400)">Kachel anklicken für alle Lektionen</span>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr)); gap:24px">
+        <sc-for list="{{ tiles }}" as="p" hint-placeholder-count="12">
+          <a href="{{ p.href }}" style-hover="transform:translateY(-6px)" style="display:flex; flex-direction:column; background:var(--cream-card); border:1px solid var(--border-strong); border-radius:24px; overflow:hidden; text-decoration:none; color:inherit; transition:transform 0.4s var(--ease-spring)">
+            <div onClick="{{ stopLink }}" style="aspect-ratio:4/3; background:var(--sand-200); border-bottom:1px solid var(--border-strong)">
+              <image-slot id="{{ p.slotId }}" src="{{ p.img }}" shape="rect" fit="cover" placeholder="{{ p.bild }}"></image-slot>
+            </div>
+            <div style="padding:22px 24px 20px; display:flex; flex-direction:column; gap:11px; flex:1">
+              <div style="display:flex; align-items:center; justify-content:space-between; gap:12px">
+                <span style="font-family:var(--font-mono); font-size:13px; font-weight:600; letter-spacing:0.08em; color:var(--terra-500)">{{ p.n }}</span>
+                <span style="padding:5px 12px; border-radius:999px; background:var(--peach-150); border:1px solid rgba(28,22,19,0.14); font-size:10px; font-weight:600; letter-spacing:0.16em; color:var(--terra-600)">{{ p.level }}</span>
+              </div>
+              <h3 style="margin:0; font-size:21px; font-weight:600; letter-spacing:-0.02em; line-height:1.25">{{ p.title }}</h3>
+              <p style="margin:0; font-size:15px; line-height:1.6; color:var(--text-body); text-wrap:pretty">{{ p.tile }}</p>
+              <div style="display:flex; flex-direction:column; gap:6px; padding-top:14px; border-top:1px solid rgba(28,22,19,0.14)">
+                <span style="font-family:var(--font-mono); font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:var(--terra-500)">Das bringt es Ihnen</span>
+                <span style="font-size:15px; font-weight:600; line-height:1.55; color:var(--text-strong); text-wrap:pretty">{{ p.nutzen }}</span>
+              </div>
+              <div style="margin-top:auto; padding-top:16px; border-top:1px solid rgba(28,22,19,0.14); display:flex; align-items:center; justify-content:space-between; gap:12px">
+                <span style="font-family:var(--font-mono); font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase; color:var(--brown-400)">{{ p.meta }}</span>
+                <span style="font-size:14.5px; font-weight:700; color:var(--terra-500); white-space:nowrap">Lektionen →</span>
+              </div>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+
+      <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:22px; background:var(--cream-card); border:1px solid var(--border-strong); border-radius:22px; padding:24px 28px">
+        <p style="margin:0; font-size:16px; line-height:1.65; color:var(--text-body)">Alle Lernpläne im Pro-Zugang — die ersten Lektionen bleiben offen.</p>
+        <div style="display:flex; flex-wrap:wrap; gap:12px">
+          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" arrow="{{ true }}" href="#vor-ort" hint-size="auto,52px">vaiaconLearning vor Ort</x-import>
+          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" variant="dark" arrow="{{ true }}" href="#zugang" hint-size="auto,52px">Zugang wählen</x-import>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 05 · VAIACONLEARNING VOR ORT ═══ -->
+  <section id="vor-ort" style="background:var(--sand-200); padding:96px 32px">
+    <div style="max-width:1160px; margin:0 auto; display:flex; flex-direction:column; gap:46px">
+      <div data-m="split" style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,0.85fr); gap:56px; align-items:end">
+        <div style="display:flex; flex-direction:column; gap:20px">
+          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Kicker" number="02" hint-size="auto,20px">PERSÖNLICH VOR ORT</x-import>
+          <h2 style="margin:0; font-size:var(--text-h2); font-weight:600; letter-spacing:-0.03em; line-height:1.06; max-width:22ch; text-wrap:pretty">Lieber gemeinsam im Raum? Das ist vaiaconLearning.</h2>
+        </div>
+        <p style="margin:0; font-size:17.5px; line-height:1.7; color:var(--text-body); max-width:48ch; text-wrap:pretty">Die Academy ist zum Selberlernen. Wenn ein ganzes Team mitkommen soll oder Fragen im Gespräch schneller geklärt sind, kommen wir zu Ihnen in den Betrieb — mit Trainings, Workshops und Coachings.</p>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr)); gap:20px">
+        <article style-hover="transform:translateY(-4px)" style="background:var(--cream-card); border:1px solid var(--border-strong); border-radius:24px; padding:30px; display:flex; flex-direction:column; gap:14px; transition:transform 0.4s var(--ease-spring)">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:12px">
+            <span style="font-family:var(--font-mono); font-size:13px; font-weight:600; letter-spacing:0.08em; color:var(--terra-500)">01</span>
+            <span style="padding:5px 12px; border-radius:999px; background:var(--peach-150); border:1px solid rgba(28,22,19,0.14); font-size:10px; font-weight:600; letter-spacing:0.16em; color:var(--terra-600); white-space:nowrap">HALB- ODER GANZTAGS</span>
+          </div>
+          <h3 style="margin:0; font-size:25px; font-weight:600; letter-spacing:-0.02em; line-height:1.15">Trainings</h3>
+          <p style="margin:0; font-size:15.5px; line-height:1.65; color:var(--text-body); text-wrap:pretty">Grundlagen und sichere Anwendung für vier bis zwölf Personen. Nach dem gemeinsamen Teil arbeitet jede Person an einer eigenen Aufgabe aus ihrem Alltag.</p>
+          <div style="margin-top:auto; padding-top:16px; border-top:1px solid rgba(28,22,19,0.14); display:flex; flex-direction:column; gap:6px">
+            <span style="font-family:var(--font-mono); font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:var(--terra-500)">Passend wenn</span>
+            <span style="font-size:15px; font-weight:600; line-height:1.55; color:var(--text-strong); text-wrap:pretty">Das ganze Team auf denselben Stand kommen soll.</span>
+          </div>
+        </article>
+        <article style-hover="transform:translateY(-4px)" style="background:var(--cream-card); border:1px solid var(--border-strong); border-radius:24px; padding:30px; display:flex; flex-direction:column; gap:14px; transition:transform 0.4s var(--ease-spring)">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:12px">
+            <span style="font-family:var(--font-mono); font-size:13px; font-weight:600; letter-spacing:0.08em; color:var(--terra-500)">02</span>
+            <span style="padding:5px 12px; border-radius:999px; background:var(--peach-150); border:1px solid rgba(28,22,19,0.14); font-size:10px; font-weight:600; letter-spacing:0.16em; color:var(--terra-600); white-space:nowrap">EIN HALBER TAG</span>
+          </div>
+          <h3 style="margin:0; font-size:25px; font-weight:600; letter-spacing:-0.02em; line-height:1.15">Workshops</h3>
+          <p style="margin:0; font-size:15.5px; line-height:1.65; color:var(--text-body); text-wrap:pretty">Wir nehmen einen konkreten Ablauf — Offerten, Rapporte, Kundenmails — und bauen ihn im Raum gemeinsam mit KI um, bis er sitzt.</p>
+          <div style="margin-top:auto; padding-top:16px; border-top:1px solid rgba(28,22,19,0.14); display:flex; flex-direction:column; gap:6px">
+            <span style="font-family:var(--font-mono); font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:var(--terra-500)">Passend wenn</span>
+            <span style="font-size:15px; font-weight:600; line-height:1.55; color:var(--text-strong); text-wrap:pretty">Sie mit einer einsatzfertigen Vorlage aus dem Termin gehen wollen.</span>
+          </div>
+        </article>
+        <article style-hover="transform:translateY(-4px)" style="background:var(--cream-card); border:1px solid var(--border-strong); border-radius:24px; padding:30px; display:flex; flex-direction:column; gap:14px; transition:transform 0.4s var(--ease-spring)">
+          <div style="display:flex; align-items:center; justify-content:space-between; gap:12px">
+            <span style="font-family:var(--font-mono); font-size:13px; font-weight:600; letter-spacing:0.08em; color:var(--terra-500)">03</span>
+            <span style="padding:5px 12px; border-radius:999px; background:var(--peach-150); border:1px solid rgba(28,22,19,0.14); font-size:10px; font-weight:600; letter-spacing:0.16em; color:var(--terra-600); white-space:nowrap">60–90 MIN · EINZELN</span>
+          </div>
+          <h3 style="margin:0; font-size:25px; font-weight:600; letter-spacing:-0.02em; line-height:1.15">Coachings</h3>
+          <p style="margin:0; font-size:15.5px; line-height:1.65; color:var(--text-body); text-wrap:pretty">Regelmässige Sessions für Unternehmer und Führungskräfte: was KI im Betrieb darf, wo sie Zeit spart und wie Sie es Ihrem Team erklären.</p>
+          <div style="margin-top:auto; padding-top:16px; border-top:1px solid rgba(28,22,19,0.14); display:flex; flex-direction:column; gap:6px">
+            <span style="font-family:var(--font-mono); font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:var(--terra-500)">Passend wenn</span>
+            <span style="font-size:15px; font-weight:600; line-height:1.55; color:var(--text-strong); text-wrap:pretty">Sie entscheiden müssen, statt Werkzeuge auszuprobieren.</span>
+          </div>
+        </article>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:24px; background:var(--cream-card); border:1px solid var(--border-strong); border-radius:26px; padding:30px 34px">
+        <div style="display:flex; flex-direction:column; gap:9px; max-width:56ch">
+          <span style="font-family:var(--font-mono); font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:var(--brown-400)">In der ganzen Deutschschweiz</span>
+          <strong style="font-size:21px; font-weight:600; letter-spacing:-0.02em; line-height:1.3; text-wrap:pretty">Wir kommen in Ihren Betrieb — oder online, wenn es schneller gehen muss.</strong>
+        </div>
+        <div style="display:flex; flex-wrap:wrap; gap:12px">
+          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" arrow="{{ true }}" href="../index.html#kontakt" hint-size="auto,52px">Termin anfragen</x-import>
+          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" variant="dark" arrow="{{ true }}" href="../index.html#learning" hint-size="auto,52px">Mehr zu vaiaconLearning</x-import>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ 03 · ZUGANG ═══ -->
+  <section id="zugang" style="background:var(--cream-100); padding:96px 32px">
+    <div style="max-width:1160px; margin:0 auto; display:flex; flex-direction:column; gap:46px">
+      <div data-m="split" style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,0.85fr); gap:56px; align-items:end">
+        <div style="display:flex; flex-direction:column; gap:20px">
+          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Kicker" number="03" hint-size="auto,20px">ZUGANG</x-import>
+          <h2 style="margin:0; font-size:var(--text-h2); font-weight:600; letter-spacing:-0.03em; line-height:1.06; max-width:22ch; text-wrap:pretty">Gratis starten. Vertiefen, wenn es passt.</h2>
+        </div>
+        <p style="margin:0; font-size:17.5px; line-height:1.7; color:var(--text-body); max-width:48ch; text-wrap:pretty">Kein Jahresabo, keine Mindestlaufzeit. Wer Begleitung will, bekommt sie von uns persönlich — nicht von einem Chatfenster allein.</p>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr)); gap:24px; align-items:stretch">
+        <article style="background:var(--cream-card); border:1px solid var(--border-strong); border-radius:26px; padding:40px 38px; box-sizing:border-box; display:flex; flex-direction:column; gap:20px">
+          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.LabelBadge" hint-size="auto,26px">GRATIS · OHNE KONTO</x-import>
+          <div style="display:flex; flex-direction:column; gap:8px">
+            <h3 style="margin:0; font-size:30px; font-weight:600; letter-spacing:-0.02em">Schnuppern</h3>
+            <span style="font-size:15px; line-height:1.55; color:var(--text-body)">Reinschauen, ausprobieren, selbst merken, ob es passt.</span>
+          </div>
+          <ul style="display:flex; flex-direction:column; gap:12px; list-style:none; margin:4px 0; padding:0">
+            <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" hint-size="100%,26px">{{ freeTierLine }}</x-import>
+            <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" hint-size="100%,26px">Erstanalyse für Ihren Betrieb</x-import>
+            <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" hint-size="100%,26px">Merkblatt Datenschutz (revDSG)</x-import>
+          </ul>
+          <div style="display:flex; align-items:baseline; gap:12px; margin-top:auto; padding-top:20px; border-top:1px solid var(--border-strong)">
+            <span style="font-size:10.5px; letter-spacing:0.16em; color:var(--brown-400)">PREIS</span>
+            <strong style="font-size:14px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-strong)">KOSTENLOS</strong>
+          </div>
+        </article>
+
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.PackageCard" badge="ACADEMY PRO · PRO PERSON" title="Academy Pro" subtitle="Alles offen — inklusive der Lektionen, die noch kommen." features="{{ proFeatures }}" price="{{ proPrice }}" hint-size="100%,520px"></x-import>
+
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.PackageCard" variant="dark" badge="TEAM & BEGLEITUNG" title="Team" subtitle="Für Betriebe, die es gemeinsam einführen wollen." features="{{ teamFeatures }}" price="{{ teamPrice }}" hint-size="100%,520px"></x-import>
+      </div>
+
+      <p style="margin:0; font-size:15px; line-height:1.6; color:var(--brown-400)">Alle Preise exkl. MWST · monatlich kündbar · Lizenzen für KI-Werkzeuge sind nicht enthalten (wir zeigen, was für Ihren Betrieb reicht).</p>
+    </div>
+  </section>
+
+  <!-- ═══ 04 · FAQ ═══ -->
+  <section id="faq" style="background:var(--cream-100); padding:96px 32px">
+    <div data-m="split" style="max-width:1160px; margin:0 auto; display:grid; grid-template-columns:minmax(0,0.75fr) minmax(0,1.25fr); gap:56px; align-items:start">
+      <div style="display:flex; flex-direction:column; gap:20px">
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Kicker" number="04" hint-size="auto,20px">KURZ GEFRAGT</x-import>
+        <h2 style="margin:0; font-size:var(--text-h2); font-weight:600; letter-spacing:-0.03em; line-height:1.06; text-wrap:pretty">Kurz gefragt. Klar beantwortet.</h2>
+        <p style="margin:0; font-size:16.5px; line-height:1.7; color:var(--text-body); max-width:40ch">Etwas Offenes? Schreiben Sie an <a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a> — wir antworten selbst.</p>
+      </div>
+      <div style="display:flex; flex-direction:column">
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Brauche ich Vorkenntnisse?" default-open="{{ true }}" hint-size="100%,110px">Nein. Lernplan 01 setzt bei null an: Sie brauchen einen Computer, Ihre eigenen Unterlagen und eine halbe Stunde Ruhe. Alles andere erklären wir unterwegs.</x-import>
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Wie viel Zeit muss ich einrechnen?" hint-size="100%,76px">Eine Lektion dauert 15 bis 25 Minuten inklusive Werkstatt. Ein ganzer Lernplan lässt sich in zwei bis vier Wochen nebenher durchziehen.</x-import>
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Was passiert mit unseren Daten?" hint-size="100%,76px">Sie arbeiten in Ihrer eigenen Umgebung — wir sehen Ihre Unterlagen nicht. Was nie in ein KI-Werkzeug gehört, ist eine eigene, immer frei zugängliche Lektion.</x-import>
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Welche Werkzeuge brauche ich — und was kosten die?" hint-size="100%,76px">Für den Einstieg genügt ein gängiger KI-Assistent, oft in der Gratis-Version. Wo eine Lizenz nötig wird, sagen wir es vorher und nennen die Alternative.</x-import>
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Können mehrere Mitarbeitende mitlernen?" hint-size="100%,76px">Ja, über den Team-Zugang. Dort sehen Sie auch, wer wo steht — ohne Notensystem, aber mit Überblick.</x-import>
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Was, wenn ich stecken bleibe?" hint-size="100%,76px">Jede Lektion hat eine Frage-Ecke, und der vaiaconBot hilft bei den häufigen Stolpersteinen. Im Team-Zugang kommt die monatliche Sprechstunde dazu.</x-import>
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Gibt es eine Bestätigung am Ende?" last="{{ true }}" hint-size="100%,76px">Pro Lernplan erhalten Sie eine Teilnahmebestätigung. Uns ist das Resultat im Betrieb wichtiger — aber für die Personalakte reicht es.</x-import>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FINALE ═══ -->
+  <section id="kontakt" style="position:relative; overflow:hidden; background:var(--grad-terra-finale); padding:104px 32px 110px">
+    <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Twinkle" left="12%" top="18%" size="{{ 12 }}" delay="{{ 0.8 }}" hint-size="12px,12px"></x-import>
+    <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Twinkle" right="14%" top="26%" size="{{ 10 }}" delay="{{ 2.4 }}" hint-size="10px,10px"></x-import>
+    <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Twinkle" right="26%" bottom="20%" size="{{ 9 }}" delay="{{ 4.1 }}" hint-size="9px,9px"></x-import>
+    <div style="position:relative; max-width:1160px; margin:0 auto; display:flex; flex-direction:column; align-items:center; gap:30px; text-align:center">
+      <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Kicker" tone="onTerra" hint-size="auto,20px">VAIACONACADEMY</x-import>
+      <h2 style="margin:0; font-size:var(--text-statement); font-weight:600; letter-spacing:-0.035em; line-height:1.05; color:#FFFDF8; max-width:24ch; text-wrap:pretty">Die erste Lektion wartet.</h2>
+      <p style="margin:0; font-size:18.5px; line-height:1.7; color:rgba(255,240,230,0.92); max-width:54ch; text-wrap:pretty">Beginnen Sie mit der Erstanalyse oder springen Sie direkt in Lernplan 01. Beides kostet nichts und dauert weniger als eine Kaffeepause.</p>
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin-top:6px">
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" size="lg" variant="light" arrow="{{ true }}" href="#lernplaene" hint-size="auto,56px">Gratis starten</x-import>
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" size="lg" variant="glass" arrow="↗" href="../erstanalyse.html" hint-size="auto,56px">Erstanalyse machen</x-import>
+      </div>
+      <ul style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr)); gap:16px 34px; list-style:none; margin:34px 0 0; padding:28px 0 0; border-top:1px solid rgba(255,255,255,0.28); width:100%; max-width:900px; text-align:left">
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" tone="onTerra" boxed="{{ true }}" hint-size="100%,26px">Erste Lektionen ohne Konto</x-import>
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" tone="onTerra" boxed="{{ true }}" hint-size="100%,26px">Monatlich kündbar</x-import>
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" tone="onTerra" boxed="{{ true }}" hint-size="100%,26px">Begleitung durch Menschen</x-import>
+      </ul>
+    </div>
+  </section>
+
+  <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.SiteFooter" logo-src="assets/logo-lockup-white.png" email="hallo@vaiacon.ch" hint-size="100%,120px"></x-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;gratisLektionen&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:3,&quot;min&quot;:0,&quot;max&quot;:9,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Paywall&quot;},&quot;preisPro&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:39,&quot;min&quot;:0,&quot;max&quot;:249,&quot;step&quot;:1,&quot;unit&quot;:&quot;CHF&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Paywall&quot;},&quot;zeigePreise&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Paywall&quot;},&quot;betaHinweis&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Inhalt&quot;}}">
+function plans() { return window.ACADEMY_PLANS || []; }
+
+class Component extends DCLogic {
+  state = { videoNote: false, gateOpen: false, ready: !!window.ACADEMY_PLANS };
+
+  componentDidMount() {
+    if (this.state.ready) return;
+    let tries = 0;
+    this.timer = setInterval(() => {
+      if (window.ACADEMY_PLANS) { clearInterval(this.timer); this.setState({ ready: true }); }
+      else if (++tries > 80) clearInterval(this.timer);
+    }, 40);
+  }
+
+  componentWillUnmount() { clearInterval(this.timer); }
+
+  renderVals() {
+    const free = Math.max(0, Math.min(9, this.props.gratisLektionen ?? 2));
+    const showPrice = this.props.zeigePreise ?? true;
+    const pro = this.props.preisPro ?? 39;
+
+    return {
+      videoNote: this.state.videoNote,
+      toggleVideo: () => this.setState((s) => ({ videoNote: !s.videoNote })),
+
+      stopLink: (ev) => { ev.preventDefault(); ev.stopPropagation(); },
+
+      tiles: plans().map((pl) => ({
+        n: pl.n,
+        title: pl.title,
+        level: pl.level,
+        tile: pl.tile,
+        nutzen: pl.nutzen,
+        bild: pl.bild,
+        img: pl.img,
+        slotId: 'lernplan-' + pl.n,
+        href: pl.href || ('lernplan.html#plan=' + pl.n),
+        meta: pl.href
+          ? pl.lessons.length + ' MODULE · ' + pl.hours
+          : pl.lessons.length + ' LEKTIONEN · ' + pl.hours + (free > 0 ? ' · ' + Math.min(free, pl.lessons.length) + ' GRATIS' : ''),
+      })),
+
+      freeTierLine: free === 0 ? 'Keine Gratis-Lektionen' : 'Lektion 01–' + String(free).padStart(2, '0') + ' in jedem Lernplan',
+      proFeatures: [
+        'Alle 12 Lernpfade, alle 66 Lektionen',
+        'Sämtliche Vorlagen, Prompt-Karten und Checklisten',
+        'Neue Lektionen jeden Monat — ohne Aufpreis',
+        'Frage-Ecke zu jeder Lektion',
+        'Teilnahmebestätigung pro Lernplan',
+      ],
+      teamFeatures: [
+        'Bis zehn Zugänge, ein Überblick fürs Team',
+        'Kick-off-Workshop mit André oder Philip',
+        'Eine Lektion auf Ihren Betrieb zugeschnitten',
+        'Monatliche Sprechstunde (30 Min)',
+        'Erstanalyse und KI-Richtlinie inklusive',
+      ],
+      proPrice: showPrice ? 'CHF ' + pro + ' / MONAT' : 'PREIS IN ABKLÄRUNG',
+      teamPrice: showPrice ? 'AB CHF ' + (pro * 6) + ' / MONAT' : 'AUF ANFRAGE',
+    };
+  }
+}
+
+</script>
+</body>
+</html>

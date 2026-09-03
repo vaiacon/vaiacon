@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>vaiaconAcademy · Modul 10 — Recht &amp; Datenschutz</title>
+<style>
+  :root {
+    --bg: #F4EDE1;
+    --bg-card: #FFFDF8;
+    --bg-inset: #EAE0CC;
+    --border: #C9BFB5;
+    --text: #1C1613;
+    --text-dim: #8C8178;
+    --accent: #B25222;
+    --accent-dim: #B2522233;
+    --green: #4C7A3F;
+    --red: #A3311B;
+    --yellow: #A9741E;
+    --orange: #E2652C;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Quicksand', -apple-system, system-ui, sans-serif;
+    line-height: 1.65;
+    font-size: 16.5px;
+    padding: 32px 20px 80px;
+  }
+  .wrap { max-width: 800px; margin: 0 auto; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  code {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 0.88em;
+    background: var(--bg-inset);
+    padding: 1px 6px;
+    border-radius: 4px;
+  }
+  pre {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 13.5px;
+    background: #FFFDF8;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    overflow-x: auto;
+    line-height: 1.55;
+    margin: 12px 0;
+  }
+  pre code { background: none; padding: 0; }
+  .backlink { font-size: 14px; color: var(--text-dim); display: inline-block; margin-bottom: 18px; }
+  header.mod h1 { font-size: 30px; letter-spacing: -0.5px; line-height: 1.25; }
+  header.mod .modnum {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    color: var(--accent);
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  .cando {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 4px solid var(--accent);
+    border-radius: 10px;
+    padding: 16px 20px;
+    margin: 18px 0;
+    font-size: 15.5px;
+  }
+  .cando .t { font-size: 13px; text-transform: uppercase; letter-spacing: 1.2px; color: var(--text-dim); margin-bottom: 6px; }
+  .cando ul { margin-left: 20px; }
+  .progress-wrap {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--bg);
+    padding: 10px 0 12px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 30px;
+  }
+  .progress-wrap .label { display: flex; justify-content: space-between; font-size: 13px; color: var(--text-dim); margin-bottom: 6px; }
+  .progress-track { height: 8px; background: var(--bg-inset); border-radius: 4px; overflow: hidden; }
+  .progress-fill { height: 100%; background: var(--accent); width: 0%; border-radius: 4px; transition: width .5s ease; }
+
+  .disclaimer {
+    background: #FBF1DE;
+    border: 1px solid #A9741E55;
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-size: 14.5px;
+    color: #A9741E;
+    margin: 22px 0;
+  }
+
+  section.learn {
+    margin: 44px 0;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 26px 28px;
+  }
+  section.learn > h2 {
+    font-size: 22px;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+  }
+  section.learn > h2 .snum { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 14px; color: var(--accent); }
+  .status-pill {
+    margin-left: auto;
+    font-size: 12px;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    padding: 2px 10px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    color: var(--text-dim);
+    white-space: nowrap;
+  }
+  .status-pill.done { background: #EDF1E2; color: var(--green); border-color: #4C7A3F66; }
+  section.learn h3 { font-size: 17px; margin: 22px 0 8px; color: var(--accent); }
+  section.learn p { margin: 10px 0; }
+  section.learn ul, section.learn ol { margin: 10px 0 10px 22px; }
+  section.learn li { margin: 5px 0; }
+
+  .box { border-radius: 10px; padding: 14px 18px; margin: 18px 0; font-size: 15.5px; }
+  .box .bt { font-size: 12.5px; text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 6px; font-weight: 600; }
+  .box-why { background: #FFF3E8; border: 1px solid #B2522244; }
+  .box-why .bt { color: var(--accent); }
+  .box-merk { background: #EDF1E2; border: 1px solid #4C7A3F55; }
+  .box-merk .bt { color: var(--green); }
+  .box-bsp { background: #F5E3D7; border: 1px solid #B2522255; }
+  .box-bsp .bt { color: #A83A08; }
+  .box-warn { background: #FAE7E0; border: 1px solid #A3311B44; }
+  .box-warn .bt { color: var(--red); }
+
+  table.cmp { width: 100%; border-collapse: collapse; font-size: 14px; margin: 14px 0; }
+  table.cmp th, table.cmp td { border: 1px solid var(--border); padding: 8px 10px; text-align: left; vertical-align: top; }
+  table.cmp th { background: var(--bg-inset); font-size: 13px; }
+  .tbl-scroll { overflow-x: auto; }
+
+  /* Pyramide */
+  .pyramid { margin: 20px auto; max-width: 560px; }
+  .pyr-row {
+    margin: 4px auto;
+    padding: 10px 14px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .pyr-row b { display: block; font-size: 15px; }
+  .pyr-row small { color: #1C1613cc; }
+  .pyr-1 { width: 40%; background: #FAE7E0; border: 1px solid var(--red); min-width: 220px; }
+  .pyr-2 { width: 60%; background: #FBEADA; border: 1px solid var(--orange); min-width: 260px; }
+  .pyr-3 { width: 80%; background: #FBF1DE; border: 1px solid var(--yellow); min-width: 280px; }
+  .pyr-4 { width: 100%; background: #EDF1E2; border: 1px solid var(--green); }
+
+  /* Timeline */
+  .timeline { margin: 20px 0; border-left: 3px solid var(--border); padding-left: 18px; }
+  .tl-item { position: relative; margin-bottom: 14px; font-size: 15px; }
+  .tl-item::before {
+    content: ''; position: absolute; left: -25px; top: 7px;
+    width: 11px; height: 11px; border-radius: 50%;
+    background: var(--bg-inset); border: 2px solid var(--text-dim);
+  }
+  .tl-item.past::before { background: var(--green); border-color: var(--green); }
+  .tl-item.now::before { background: var(--accent); border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-dim); }
+  .tl-item .tl-date { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 13px; color: var(--accent); }
+  .tl-item.past .tl-date { color: var(--green); }
+  .tl-item .tl-note { color: var(--text-dim); font-size: 14px; }
+
+  /* Aufgaben */
+  .task {
+    margin-top: 24px;
+    border: 1px dashed var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    background: #FFF3E8;
+  }
+  .task .task-t { font-size: 13px; text-transform: uppercase; letter-spacing: 1.2px; color: var(--accent); margin-bottom: 10px; font-weight: 600; }
+  .q-item { margin: 16px 0; padding-bottom: 14px; border-bottom: 1px solid #EAE0CC; }
+  .q-item:last-of-type { border-bottom: none; }
+  .q-text { font-size: 15.5px; margin-bottom: 8px; }
+  .opt-row { display: flex; flex-wrap: wrap; gap: 8px; }
+  button.opt {
+    background: var(--bg-inset);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 7px 14px;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color .15s, background .15s;
+  }
+  button.opt:hover:not(:disabled) { border-color: var(--accent); }
+  button.opt:disabled { cursor: default; opacity: .75; }
+  button.opt.correct { background: #EDF1E2; border-color: var(--green); color: var(--green); opacity: 1; }
+  button.opt.wrong { background: #FAE7E0; border-color: var(--red); color: var(--red); opacity: 1; }
+  button.opt.reveal { border-color: var(--green); opacity: 1; }
+  .feedback { margin-top: 8px; font-size: 14px; border-radius: 8px; padding: 8px 12px; display: none; }
+  .feedback.show { display: block; }
+  .feedback.ok { background: #EDF1E2; border: 1px solid #4C7A3F55; color: #1C1613; }
+  .feedback.no { background: #FAE7E0; border: 1px solid #A3311B44; color: #1C1613; }
+  .task-summary { margin-top: 14px; font-size: 15px; font-weight: 600; display: none; }
+  .task-summary.show { display: block; }
+  button.action {
+    background: var(--accent);
+    color: #F4EDE1;
+    border: none;
+    border-radius: 8px;
+    padding: 9px 18px;
+    font-size: 14.5px;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  button.action:hover { filter: brightness(1.1); }
+  button.action.secondary { background: var(--bg-inset); color: var(--text); border: 1px solid var(--border); font-weight: 400; }
+  select.gap {
+    background: var(--bg-inset);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 3px 6px;
+    font-size: 14.5px;
+    font-family: inherit;
+  }
+  select.gap.ok { border-color: var(--green); color: var(--green); }
+  select.gap.no { border-color: var(--red); color: var(--red); }
+
+  /* Simulation */
+  .sim {
+    margin: 20px 0;
+    border: 1px solid var(--accent-dim);
+    border-radius: 10px;
+    padding: 18px 20px;
+    background: #EAE0CC;
+  }
+  .sim .sim-t { font-size: 13px; text-transform: uppercase; letter-spacing: 1.2px; color: var(--accent); margin-bottom: 12px; font-weight: 600; }
+  .sim-btns { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+  .sim-btns button.opt.active { background: var(--accent); color: #F4EDE1; border-color: var(--accent); font-weight: 600; }
+  .flow { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 14px 0; font-size: 13.5px; }
+  .flow .node {
+    background: var(--bg-inset); border: 1px solid var(--border);
+    border-radius: 8px; padding: 6px 12px; text-align: center; line-height: 1.35;
+  }
+  .flow .node small { display: block; color: var(--text-dim); font-size: 11.5px; }
+  .flow .node.risk { border-color: var(--red); }
+  .flow .node.safe { border-color: var(--green); }
+  .flow .arr { color: var(--text-dim); font-size: 16px; }
+  .answer-block {
+    background: #FFFDF8; border: 1px solid var(--border); border-left: 3px solid var(--accent);
+    border-radius: 8px; padding: 12px 16px; margin-top: 12px; font-size: 15px; font-style: italic;
+  }
+  .answer-block .ab-t { font-style: normal; font-size: 12.5px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-dim); margin-bottom: 6px; }
+  .sim-verdict { margin-top: 10px; font-size: 14px; }
+
+  /* Checkliste */
+  .check-tool { margin: 20px 0; border: 1px solid var(--border); border-radius: 10px; background: #FFFDF8; }
+  .check-head { display: flex; justify-content: space-between; align-items: center; padding: 14px 18px; border-bottom: 1px solid var(--border); flex-wrap: wrap; gap: 8px; }
+  .check-head .ct { font-weight: 600; font-size: 16px; }
+  .check-head .cp { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 13px; color: var(--accent); }
+  .check-item { display: flex; gap: 12px; padding: 12px 18px; border-bottom: 1px solid #C9BFB5; cursor: pointer; }
+  .check-item:last-child { border-bottom: none; }
+  .check-item:hover { background: #F5E3D7; }
+  .check-item input { margin-top: 5px; accent-color: var(--accent); width: 16px; height: 16px; flex-shrink: 0; cursor: pointer; }
+  .check-item .ci-title { font-weight: 600; font-size: 15px; }
+  .check-item .ci-sub { font-size: 13.5px; color: var(--text-dim); }
+  .check-item.checked .ci-title { color: var(--green); }
+  .check-foot { padding: 10px 18px; font-size: 13px; color: var(--text-dim); }
+
+  /* Challenge + Quiz */
+  .challenge { border: 1px solid var(--orange); background: #FBF1DE; }
+  .challenge > h2 .snum { color: var(--orange); }
+  .challenge .task { border-color: var(--orange); }
+  .challenge .task .task-t { color: var(--orange); }
+  .selfcheck { background: #FFFDF8; border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; margin: 12px 0; font-size: 14.5px; }
+  .done-row { display: flex; align-items: center; gap: 10px; margin-top: 14px; font-size: 15.5px; }
+  .done-row input { width: 18px; height: 18px; accent-color: var(--green); cursor: pointer; }
+
+  .quiz-progress { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 13px; color: var(--text-dim); margin-bottom: 10px; }
+  .quiz-result {
+    display: none; margin-top: 18px; padding: 16px 20px;
+    border-radius: 10px; background: #EDF1E2; border: 1px solid #4C7A3F55; font-size: 16px;
+  }
+  .quiz-result.show { display: block; }
+
+  footer.mod {
+    margin-top: 60px; padding-top: 24px; border-top: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+  }
+  footer.mod a.next {
+    background: var(--accent); color: #F4EDE1; font-weight: 600;
+    padding: 10px 20px; border-radius: 8px;
+  }
+  footer.mod a.next:hover { text-decoration: none; filter: brightness(1.1); }
+  @media (max-width: 560px) {
+    section.learn { padding: 20px 16px; }
+    body { padding: 20px 12px 60px; }
+  }
+</style>
+<link rel="stylesheet" href="vaiacon-kurs.css">
+<link rel="icon" href="assets/logo-mark-terra.png">
+<meta name="theme-color" content="#F4EDE1">
+</head>
+<body>
+<div class="kursbar"><div class="kursbar-in"><a href="index.html" aria-label="Kursübersicht"><img src="assets/logo-lockup-academy.png" alt="vaiaconAcademy"></a><span class="kursbar-meta">KI-LERNKURS · MODUL 10</span></div></div>
+<div class="wrap">
+
+  <a class="backlink" href="index.html">← Kursübersicht</a>
+
+  <header class="mod">
+    <div class="modnum">MODUL 10 / 10</div>
+    <h1>Recht &amp; Datenschutz</h1>
+    <div class="cando">
+      <div class="t">Was du danach kannst</div>
+      <ul>
+        <li>Die Kundenfrage <b>«Wo landen unsere Daten?»</b> je nach Setup (Consumer-Tool, API+AVV, EU-Cloud, lokal) präzise und ehrlich beantworten.</li>
+        <li>Jedes Kundenprojekt in <b>5 Minuten</b> gegen CH-DSG und EU AI Act vorprüfen — mit deiner eigenen 10-Punkte-Checkliste.</li>
+        <li>Wissen, was in deine <b>Beratungsverträge</b> gehört und was du niemals versprechen darfst.</li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="progress-wrap">
+    <div class="label"><span>Fortschritt</span><span id="progLabel">0 von 6 Abschnitten</span></div>
+    <div class="progress-track"><div class="progress-fill" id="progFill"></div></div>
+  </div>
+
+  <div class="disclaimer">
+    <b>Wichtig:</b> Dieses Modul vermittelt Orientierungswissen für deine Beratungspraxis — Stand August 2026. Es ist <b>keine Rechtsberatung</b> und ersetzt keine. Bei konkreten Rechtsfragen (Vertragsentwürfe, Streitfälle, Hochrisiko-Einstufungen) gehört ein Anwalt mit Tech-/Datenschutzfokus an den Tisch. Genau das sagst du auch deinen Kunden.
+  </div>
+
+  <!-- ============================ S1: CH-DSG ============================ -->
+  <section class="learn" id="sec-s1">
+    <h2><span class="snum">01</span> Das CH-DSG — dein Heimspiel <span class="status-pill" data-pill="s1">offen</span></h2>
+
+    <p>Seit dem 1. September 2023 gilt das revidierte Datenschutzgesetz (revDSG). Es ist das Gesetz, das für <b>jeden</b> deiner Schweizer KMU-Kunden gilt — unabhängig davon, ob sie je mit der EU zu tun haben. Wenn du hier sattelfest bist, bist du den meisten Mitbewerbern voraus, die nur «DSGVO» sagen können.</p>
+
+    <h3>Die Grundprinzipien (Art. 6 DSG)</h3>
+    <p>Anders als viele glauben, braucht es in der Schweiz <b>keine generelle Einwilligung</b> für die Bearbeitung von Personendaten. Bearbeiten ist grundsätzlich erlaubt — solange die Grundsätze eingehalten werden:</p>
+    <ul>
+      <li><b>Verhältnismässigkeit:</b> nur so viele Daten wie nötig. Ein Offerten-Bot braucht keine Geburtsdaten.</li>
+      <li><b>Zweckbindung:</b> Daten nur für den Zweck nutzen, für den sie erhoben wurden. Kundenadressen aus der Buchhaltung → nicht einfach ins KI-Training kippen.</li>
+      <li><b>Transparenz:</b> die betroffene Person muss erkennen können, dass und wofür Daten bearbeitet werden (Informationspflicht, Art. 19 DSG — deshalb braucht jede Kunden-Website eine Datenschutzerklärung, die auch KI-Verarbeitung erwähnt).</li>
+      <li><b>Richtigkeit &amp; Datensicherheit:</b> Daten korrekt halten, angemessen schützen (TOM — technische und organisatorische Massnahmen).</li>
+    </ul>
+
+    <h3>Besonders schützenswerte Personendaten (Art. 5 lit. c)</h3>
+    <p>Für diese Kategorien gelten strengere Regeln (z.B. ausdrückliche Einwilligung, wenn eine nötig ist; keine Bekanntgabe an Dritte ohne Rechtfertigung):</p>
+    <ul>
+      <li>Gesundheitsdaten und Daten über die Intimsphäre</li>
+      <li>Religiöse, weltanschauliche, politische, gewerkschaftliche Ansichten/Tätigkeiten</li>
+      <li>Rassen- und Ethnie-Zugehörigkeit</li>
+      <li>Genetische und <b>biometrische</b> Daten (die eine Person eindeutig identifizieren)</li>
+      <li>Verwaltungs- und strafrechtliche Verfolgungen oder Sanktionen</li>
+      <li>Massnahmen der sozialen Hilfe</li>
+    </ul>
+    <p>Merke: Lohn, Geburtsdatum, Kaufhistorie fühlen sich sensibel an — sind aber <b>normale</b> Personendaten. Der Katalog ist abschliessend.</p>
+
+    <h3>Auslandsübermittlung (Art. 16 ff.) — der Kern jeder Cloud-KI-Frage</h3>
+    <p>Personendaten dürfen nur in Länder mit «angemessenem» Datenschutz exportiert werden. Der Bundesrat führt die Liste (Anhang 1 der Datenschutzverordnung):</p>
+    <ul>
+      <li><b>EU/EWR:</b> angemessen — Übermittlung ohne Zusatzmassnahmen ok.</li>
+      <li><b>USA:</b> angemessen <b>nur</b> für Unternehmen, die unter dem <b>Swiss-U.S. Data Privacy Framework (DPF)</b> zertifiziert sind. Der Bundesrat hat die Angemessenheit am 14. August 2024 anerkannt, in Kraft seit 15. September 2024 — Stand 2026 ist das der gültige Weg. Anthropic, OpenAI, Microsoft und Google sind zertifiziert; den Status eines Anbieters prüfst du in 30 Sekunden auf <code>dataprivacyframework.gov</code>.</li>
+      <li><b>Ohne DPF-Zertifizierung:</b> Standardvertragsklauseln (SCC) nötig. Profi-Praxis: im AVV eine Fallback-Klausel, die automatisch SCC greifen lässt, falls die Zertifizierung wegfällt — das DPF ist ein politisches Konstrukt und könnte (wie sein Vorgänger Privacy Shield) kippen.</li>
+    </ul>
+
+    <h3>Auftragsbearbeitung (Art. 9) — wer ist was?</h3>
+    <p>Nutzt dein Kunde einen Cloud-KI-Anbieter, ist der Kunde der <b>Verantwortliche</b> und der Anbieter der <b>Auftragsbearbeiter</b>. Das ist nur zulässig mit <b>Vertrag</b> (Auftragsverarbeitungsvertrag, AVV — englisch DPA) oder Gesetz. Der Auftragsbearbeiter darf Sub-Auftragsbearbeiter nur mit Genehmigung beiziehen. Praktisch heisst das: <b>Kein Kundenprojekt mit Cloud-KI ohne unterschriebenen DPA.</b></p>
+
+    <h3>Meldepflicht bei Verletzungen (Art. 24)</h3>
+    <p>Bei einer Datensicherheitsverletzung mit voraussichtlich <b>hohem Risiko</b> für die betroffenen Personen: Meldung an den EDÖB (Eidg. Datenschutz- und Öffentlichkeitsbeauftragter) «so rasch als möglich». Anders als die DSGVO kennt das DSG <b>keine starre 72-Stunden-Frist</b> — und meldepflichtig ist nur der Hoch-Risiko-Fall, nicht jede Panne.</p>
+    <p>Sanktionen: Bussen bis <b>CHF 250'000</b> — und zwar (Schweizer Eigenheit!) primär gegen die <b>verantwortliche natürliche Person</b>, nicht gegen die Firma. Das Argument wirkt in jedem Geschäftsleitungs-Meeting.</p>
+
+    <div class="box box-bsp">
+      <div class="bt">Aus deiner Welt</div>
+      Stell dir vor, deine kleine KI-Beratung lässt Interessenten einen Online-Fragebogen ausfüllen: Ein Formular-Dienst (z.B. Formspree) schickt die Antworten an deine Gmail-Adresse, du wertest sie mit Claude aus. Das sind Personendaten (Name, Firma, E-Mail des Ansprechpartners) — die über <b>drei</b> US-Anbieter laufen (Formspree, Google, Anthropic). Alle drei sind DPF-zertifiziert, damit ist die Auslandsübermittlung sauber. Aber: erwähnt deine Datenschutzerklärung auf der Firmen-Website diese Verarbeitung? Das ist die Transparenzpflicht — und genau die Sorgfalt, die du Kunden verkaufst.
+    </div>
+
+    <div class="box box-why">
+      <div class="bt">Wozu brauchst du das</div>
+      Das DSG ist die rechtliche Grundlage von <b>allem</b>, was du bei Schweizer KMU baust. Kritische Kunden (und deren IT-Verantwortliche) prüfen dich an genau diesen Begriffen: AVV, Auslandsübermittlung, besonders schützenswerte Daten. Wer hier sicher argumentiert, gewinnt das Vertrauen — und den Auftrag.
+    </div>
+
+    <div class="box box-merk">
+      <div class="bt">Merksatz</div>
+      Bearbeiten ist erlaubt, solange die Grundsätze stimmen. Cloud-KI = Auftragsbearbeitung → AVV Pflicht. USA nur mit DPF-Zertifizierung des Anbieters. Bussen treffen die natürliche Person.
+    </div>
+
+    <div class="task" id="task-s1">
+      <div class="task-t">Aufgabe: Besonders schützenswert — ja oder nein?</div>
+      <p style="font-size:14.5px; color:var(--text-dim); margin-bottom:6px;">Ein Kunde will Kundendossiers durch ein KI-System zusammenfassen lassen. Ordne ein, welche Datenfelder nach Art. 5 lit. c DSG <b>besonders schützenswert</b> sind:</p>
+      <div id="classify-s1"></div>
+      <div class="task-summary" id="summary-s1"></div>
+    </div>
+  </section>
+
+  <!-- ============================ S2: EU AI ACT ============================ -->
+  <section class="learn" id="sec-s2">
+    <h2><span class="snum">02</span> EU AI Act — was CH-KMU wirklich betrifft <span class="status-pill" data-pill="s2">offen</span></h2>
+
+    <p>Die EU-KI-Verordnung (in Kraft seit 1. August 2024) ist das weltweit erste umfassende KI-Gesetz. Die Schweiz ist nicht EU — aber der AI Act wirkt <b>extraterritorial</b>: Er gilt auch für Schweizer Firmen, wenn sie KI-Systeme in der EU auf den Markt bringen <b>oder wenn der Output ihres KI-Systems in der EU verwendet wird</b>. Ein CH-KMU mit deutschen Kunden, dessen Chatbot deutsche Endkunden bedient? Betroffen.</p>
+
+    <h3>Die vier Risikoklassen</h3>
+    <div class="pyramid">
+      <div class="pyr-row pyr-1"><b>✗ Verboten</b><small>Social Scoring, Emotionserkennung am Arbeitsplatz, manipulative Systeme — neu ab Dez. 2026 auch Nudify-Apps</small></div>
+      <div class="pyr-row pyr-2"><b>Hochrisiko</b><small>HR/Bewerbungen, Kreditwürdigkeit, kritische Infrastruktur, Bildung, Justiz</small></div>
+      <div class="pyr-row pyr-3"><b>Transparenzpflichten</b><small>Chatbots, Deepfakes/synthetische Inhalte, Emotionserkennung (erlaubte Fälle)</small></div>
+      <div class="pyr-row pyr-4"><b>✓ Minimales Risiko</b><small>Der Rest — die grosse Mehrheit aller KMU-Anwendungen: interne RAG-Suche, Text-Entwürfe, Übersetzung, Code</small></div>
+    </div>
+
+    <ul>
+      <li><b>Verboten:</b> Social Scoring, Ausnutzen von Schwächen, Emotionserkennung am Arbeitsplatz und in Schulen, ungezieltes Scraping von Gesichtsbildern.</li>
+      <li><b>Hochrisiko (Anhang III):</b> KI, die über Menschen entscheidet — Bewerbungs-Screening, Kreditvergabe, Prüfungsbewertung, Sozialleistungen. Pflichten: Risikomanagement, Datenqualität, Doku, menschliche Aufsicht, CE-Konformität.</li>
+      <li><b>Transparenzpflicht (Art. 50):</b> Menschen müssen wissen, dass sie mit KI interagieren (Chatbot-Kennzeichnung); KI-generierte/manipulierte Inhalte (Deepfakes) müssen als solche erkennbar sein.</li>
+      <li><b>Minimal:</b> keine neuen Pflichten. Interner Chatbot über das IT-Handbuch, Offerten-Entwürfe, Dokumenten-RAG — alles hier.</li>
+    </ul>
+
+    <h3>Zeitplan — Stand August 2026 (wichtig: hat sich gerade geändert!)</h3>
+    <p>Am 24. Juli 2026 wurde der <b>«Digital Omnibus on AI»</b> (VO (EU) 2026/1744) im EU-Amtsblatt veröffentlicht, in Kraft seit 27. Juli 2026. Er verschiebt die Hochrisiko-Fristen deutlich und ändert über 40 Artikel:</p>
+    <div class="timeline">
+      <div class="tl-item past"><span class="tl-date">01.08.2024</span> — AI Act in Kraft getreten</div>
+      <div class="tl-item past"><span class="tl-date">02.02.2025</span> — Verbote gelten + Pflicht zu KI-Kompetenz im Unternehmen</div>
+      <div class="tl-item past"><span class="tl-date">02.08.2025</span> — Regeln für GPAI-Modelle (General Purpose AI: GPT, Claude, Gemini &amp; Co. — treffen die Anbieter, nicht die Anwender)</div>
+      <div class="tl-item now"><span class="tl-date">02.08.2026</span> — <b>morgen!</b> Transparenzpflichten (Art. 50) gelten: Chatbot-Kennzeichnung, Deepfake-Labels</div>
+      <div class="tl-item"><span class="tl-date">02.12.2026</span> — Neue Verbote aus dem Omnibus: Nudify-Apps und KI-generierte Missbrauchsdarstellungen</div>
+      <div class="tl-item"><span class="tl-date">02.12.2027</span> — Hochrisiko-Pflichten für eigenständige Systeme (Anhang III) <span class="tl-note">— per Omnibus um 16 Monate verschoben (war: 02.08.2026)</span></div>
+      <div class="tl-item"><span class="tl-date">02.08.2028</span> — Hochrisiko-Pflichten für KI in regulierten Produkten (Anhang I)</div>
+    </div>
+    <p>Sanktionen: bis <b>35 Mio. € oder 7 % des Weltumsatzes</b> bei verbotenen Praktiken — deutlich schärfer als das DSG.</p>
+
+    <h3>Und die Schweiz selbst?</h3>
+    <p>Kein eigenes KI-Gesetz nach EU-Vorbild. Der Bundesrat hat im Februar 2025 entschieden: <b>sektorspezifische Anpassungen</b> bestehender Gesetze plus Ratifikation der <b>Europarats-KI-Konvention</b>. Eine Vernehmlassungsvorlage soll bis <b>Ende 2026</b> vorliegen — kurzfristig ändert sich für deine Kunden also wenig, mittelfristig kommen Transparenz- und Grundrechts-Pflichten. Als Berater bist du die Person, die das auf dem Radar hat.</p>
+
+    <div class="box box-bsp">
+      <div class="bt">Aus deiner Welt</div>
+      Baust du einem Treuhänder ein Dokumenten-RAG über seine internen Vorlagen: minimales Risiko, keine AI-Act-Pflichten. Baut derselbe Treuhänder ein Tool, das Bewerbungen für seine Mandanten vorsortiert: Hochrisiko — ab Dezember 2027 volle Pflichtenlast, wenn EU-Bezug besteht. Gleiche Technik (LLM + Prompt), völlig andere Rechtslage. <b>Die Risikoklasse hängt am Anwendungsfall, nie am Modell.</b>
+    </div>
+
+    <div class="box box-why">
+      <div class="bt">Wozu brauchst du das</div>
+      Zwei Gründe: Erstens verhinderst du, dass ein Kunde versehentlich ein Hochrisiko-System «einfach mal baut». Zweitens entkräftest du das häufigste Verkaufshindernis — «KI ist doch jetzt verboten/reguliert» — mit Fakten: die meisten KMU-Anwendungen sind minimales Risiko, und die Hochrisiko-Fristen wurden gerade auf Ende 2027 verschoben.
+    </div>
+
+    <div class="box box-merk">
+      <div class="bt">Merksatz</div>
+      Risikoklasse = Anwendungsfall, nicht Modell. KMU-Standardfälle sind minimal, Chatbots brauchen ab 2.8.2026 Kennzeichnung, HR/Kredit ist Hochrisiko (Pflichten ab Dez. 2027), Manipulation/Überwachung ist verboten.
+    </div>
+
+    <div class="task" id="task-s2">
+      <div class="task-t">Pflicht-Übung: Der Risikoklassen-Einordner</div>
+      <p style="font-size:14.5px; color:var(--text-dim); margin-bottom:6px;">10 realistische KMU-Szenarien aus deinem künftigen Beratungsalltag. Ordne jedes der richtigen AI-Act-Risikoklasse zu:</p>
+      <div id="risk-sorter"></div>
+      <div class="task-summary" id="summary-s2"></div>
+    </div>
+  </section>
+
+  <!-- ============================ S3: GRETCHENFRAGE ============================ -->
+  <section class="learn" id="sec-s3">
+    <h2><span class="snum">03</span> «Wo landen unsere Daten?» — die Gretchenfrage <span class="status-pill" data-pill="s3">offen</span></h2>
+
+    <p>Das ist die erste Frage jedes kritischen Kunden — und deine Antwort entscheidet, ob er dir vertraut. Die ehrliche Antwort lautet: <b>«Kommt auf das Setup an»</b> — und du musst alle vier Setups im Detail kennen.</p>
+
+    <h3>Consumer-Chat vs. API — der Unterschied, der alles ändert</h3>
+    <p>Die Anbieter behandeln dieselben Modelle über zwei völlig verschiedene Verträge:</p>
+    <div class="tbl-scroll">
+    <table class="cmp">
+      <tr><th></th><th>Consumer (ChatGPT-App, claude.ai)</th><th>Commercial (API, Team/Enterprise)</th></tr>
+      <tr><td><b>Training mit deinen Daten</b></td><td>Anthropic &amp; OpenAI: standardmässig <b>ja</b>, ausser du setzt aktiv das Opt-out (Anthropic seit Herbst 2025 Opt-out-Modell)</td><td><b>Nein</b>, vertraglich zugesichert — Standard bei Anthropic, OpenAI, Azure, Google</td></tr>
+      <tr><td><b>Aufbewahrung (Retention)</b></td><td>Konto-gebunden, teils Jahre; bei Anthropic mit Training-Zustimmung bis 5 Jahre</td><td>Anthropic-API: <b>7 Tage</b> Standard (seit Sept. 2025), 30 Tage per Opt-in. OpenAI-API: bis 30 Tage (Missbrauchs-Monitoring)</td></tr>
+      <tr><td><b>Zero Data Retention</b></td><td>—</td><td>Möglich: Anthropic (Enterprise/API-Konfiguration), OpenAI (auf Antrag)</td></tr>
+      <tr><td><b>AVV / DPA</b></td><td>Nein</td><td>Ja — bei Anthropic seit Jan. 2026 sogar self-service im Dashboard («Legal &amp; Compliance»)</td></tr>
+    </table>
+    </div>
+    <p>Ein Lehrstück zur Ehrlichkeit: Im NYT-Rechtsstreit zwang ein US-Gericht OpenAI zeitweise, Consumer-Chats <b>über die zugesagten Löschfristen hinaus</b> aufzubewahren. Merke: Gerichtsprozesse können Retention-Zusagen aushebeln — ein Argument mehr für ZDR oder lokale Modelle bei wirklich sensiblen Daten.</p>
+
+    <h3>EU-/CH-Hosting: die Hyperscaler-Route</h3>
+    <ul>
+      <li><b>Azure (OpenAI-Modelle, seit 2026 auch Claude via Microsoft Foundry):</b> «EU Data Zone»-Deployments + Microsoft EU Data Boundary — die am besten dokumentierte In-EU-Verarbeitung. Azure hat zudem Rechenzentren <b>in der Schweiz</b> (Zürich/Genf) für klassische Workloads.</li>
+      <li><b>AWS Bedrock (Claude u.a.):</b> EU-Regionen (Frankfurt, Zürich für einzelne Dienste) mit regionalen Inference-Profilen.</li>
+      <li><b>Google Vertex AI (Gemini, Claude):</b> EU-Regionen mit Residency-Zusagen.</li>
+    </ul>
+    <div class="box box-warn">
+      <div class="bt">Die Falle, in die fast alle tappen</div>
+      «EU Data Residency» heisst oft nur: <b>Speicherung</b> (at rest) in der EU — nicht, dass die <b>Inferenz</b> dort läuft. Das sind zwei getrennte Zusagen. Frag beim Anbieter immer explizit nach beidem: Wo liegen die Daten? Wo rechnet das Modell? Neue Modellversionen erscheinen in EU-Regionen zudem oft ein bis zwei Quartale später.
+    </div>
+
+    <h3>Der Datenschutz-Trumpf: lokale Modelle</h3>
+    <p>Aus Modul 07 weisst du, was ein gut ausgestatteter Apple-Silicon-Mac mit viel RAM lokal leisten kann. Rechtlich ist ein lokales Modell (Ollama auf Kunden-Hardware oder ein Mac Studio im Serverraum) die <b>einfachste</b> Antwort: keine Auslandsübermittlung, kein AVV mit einem KI-Anbieter, kein DPF-Risiko, keine Retention-Diskussion. Der Preis: kleinere Modelle, eigener Betrieb. Für Anwaltskanzleien, Ärzte, Treuhänder mit besonders schützenswerten Daten oft trotzdem die richtige Empfehlung — und ein echtes Alleinstellungsmerkmal für eine kleine KI-Beratung.</p>
+
+    <div class="sim" id="sim-answer">
+      <div class="sim-t">Simulation: Dein Antwort-Generator für «Wo landen unsere Daten?»</div>
+      <p style="font-size:14px; color:var(--text-dim);">Wähl das Setup — du siehst den Datenfluss und bekommst den Antwort-Baustein, den du dem Kunden wörtlich sagen kannst:</p>
+      <div class="sim-btns" id="simBtns">
+        <button class="opt" data-setup="consumer">Consumer-Tool</button>
+        <button class="opt" data-setup="api">API mit AVV</button>
+        <button class="opt" data-setup="eu">EU-Cloud</button>
+        <button class="opt" data-setup="lokal">Lokal (Ollama)</button>
+      </div>
+      <div id="simOut"><p style="color:var(--text-dim); font-size:14px;">→ Setup wählen</p></div>
+    </div>
+
+    <div class="box box-bsp">
+      <div class="bt">Aus deiner Welt</div>
+      Idealerweise lebst du alle vier Setups selbst: einen Consumer-Chat in der Freizeit, die API in den eigenen Tools (Commercial — deshalb landen diese Daten nicht im Training), und Ollama auf dem eigenen Rechner (lokal). Wenn ein Kunde fragt «und Sie selbst?», hast du eine glaubwürdige Antwort aus der Praxis — inklusive des Beweis-Tricks: WLAN aus, Ollama antwortet trotzdem.
+    </div>
+
+    <div class="box box-why">
+      <div class="bt">Wozu brauchst du das</div>
+      Diese Frage kommt in <b>jedem</b> Erstgespräch. Wer stottert, verliert den Auftrag. Wer die vier Setups mit konkreten Zahlen (7 Tage, ZDR, DPF, EU Data Zone) erklären kann, positioniert sich als der Berater, der Datenschutz nicht als Hindernis, sondern als lösbares Architektur-Kriterium behandelt.
+    </div>
+
+    <div class="box box-merk">
+      <div class="bt">Merksatz</div>
+      Consumer-Tools sind für Kundendaten tabu. API + AVV ist der Standard-Weg (kein Training, kurze Retention, DPF). EU-Cloud, wenn «USA» politisch nicht geht. Lokal, wenn gar nichts rausdarf.
+    </div>
+
+    <div class="task" id="task-s3">
+      <div class="task-t">Aufgabe: Lückentext — dein Kundengespräch</div>
+      <p style="font-size:15px; line-height:2.1;">
+        «Wir setzen die Claude-API mit
+        <select class="gap" id="gap1">
+          <option value="">…</option>
+          <option value="a">einem Auftragsbearbeitungsvertrag (AVV/DPA)</option>
+          <option value="b">einer mündlichen Zusage</option>
+          <option value="c">einem NDA</option>
+        </select>
+        ein. Anthropic nutzt API-Daten
+        <select class="gap" id="gap2">
+          <option value="">…</option>
+          <option value="a">nach 30 Tagen</option>
+          <option value="b">vertraglich zugesichert nicht</option>
+          <option value="c">nur anonymisiert</option>
+        </select>
+        für das Training, und Anfrage-Logs werden standardmässig nach
+        <select class="gap" id="gap3">
+          <option value="">…</option>
+          <option value="a">7 Tagen</option>
+          <option value="b">5 Jahren</option>
+          <option value="c">90 Tagen</option>
+        </select>
+        gelöscht. Die Übermittlung in die USA ist über
+        <select class="gap" id="gap4">
+          <option value="">…</option>
+          <option value="a">das Swiss-U.S. Data Privacy Framework</option>
+          <option value="b">den Privacy Shield</option>
+          <option value="c">eine Einwilligung von Anthropic</option>
+        </select>
+        abgesichert.»
+      </p>
+      <button class="action" id="gapCheck">Prüfen</button>
+      <div class="feedback" id="gapFeedback"></div>
+    </div>
+  </section>
+
+  <!-- ============================ S4: VERTRÄGE ============================ -->
+  <section class="learn" id="sec-s4">
+    <h2><span class="snum">04</span> Verträge, Haftung, Urheberrecht — deine Firma absichern <span class="status-pill" data-pill="s4">offen</span></h2>
+
+    <p>Du berätst, baust und schulst — und alles, was du lieferst, enthält KI-Output, der falsch sein kann (Modul 08). Deine Verträge müssen das abbilden, sonst haftest du für Halluzinationen.</p>
+
+    <h3>Was in jeden deiner Beratungsverträge gehört</h3>
+    <ul>
+      <li><b>Haftungsbegrenzung für KI-Output:</b> KI-generierte Inhalte sind probabilistisch; du schuldest sorgfältige Arbeit (Sorgfaltspflicht), nicht fehlerfreie Ergebnisse. Haftung auf Auftragswert begrenzen, Folgeschäden ausschliessen (soweit gesetzlich zulässig — grobe Fahrlässigkeit lässt sich in der Schweiz nicht wegbedingen).</li>
+      <li><b>Prüfpflicht des Kunden:</b> Der Kunde prüft und verantwortet Ergebnisse vor deren Verwendung — Human-in-the-Loop als <b>Vertragsklausel</b>, nicht nur als Empfehlung. Das ist gleichzeitig dein qualitatives Sicherheitsnetz: der Mensch bleibt die letzte Instanz vor der Aussenwirkung.</li>
+      <li><b>Keine Rechts-/Steuerberatung:</b> Du lieferst technische und organisatorische Beratung. Auch wenn Claude einen AGB-Entwurf schreiben kann — die rechtliche Prüfung gehört zum Anwalt. Explizit in den Vertrag.</li>
+      <li><b>Transparenz über eingesetzte Anbieter:</b> Liste der Sub-Dienstleister (Anthropic, Azure, …) mit Datenfluss — das nimmt die AVV-Kette des Kunden gleich mit auf.</li>
+      <li><b>Nutzungsrechte am Ergebnis:</b> sauber regeln, was der Kunde mit Prompts, Konfigurationen und Outputs darf.</li>
+    </ul>
+
+    <h3>Urheberrecht an KI-Output — Stand CH/EU 2026</h3>
+    <p>In der Schweiz wie in der EU gilt: Urheberrechtsschutz setzt eine <b>menschliche geistige Schöpfung</b> voraus. Rein KI-generierter Output (Text, Bild, Code ohne wesentlichen menschlichen Gestaltungsbeitrag) ist <b>nicht urheberrechtlich geschützt</b> — er gehört niemandem und jeder dürfte ihn kopieren. Erst substanzielle menschliche Bearbeitung/Auswahl kann Schutz begründen. Der Bundesrat prüft KI-Regeln (Vernehmlassung bis Ende 2026), aber das ist der heutige Stand.</p>
+    <p>Die andere Richtung ist heisser: Training auf fremden Werken. Das Landgericht München hat 2025 (GEMA gegen OpenAI) erstmals entschieden, dass memorierte Songtexte im Modell Urheberrechte verletzen. Für dich als Anwender heisst das: Anbieter-Indemnity-Klauseln (Anthropic, OpenAI, Microsoft und Google bieten Copyright-Freistellungen für zahlende Kunden) sind ein echtes Verkaufsargument.</p>
+
+    <h3>Was du NIE versprechen darfst</h3>
+    <ul>
+      <li>«Der Chatbot macht keine Fehler» — probabilistische Systeme, punkt.</li>
+      <li>«Damit sind Sie automatisch DSG-/DSGVO-konform» — Compliance hängt am Gesamtprozess des Kunden, nicht am Tool.</li>
+      <li>«Der KI-Text gehört exklusiv Ihnen» — ohne menschlichen Schöpfungsbeitrag gibt es kein Urheberrecht, also auch keine Exklusivität.</li>
+      <li>«Ihre Daten werden nie irgendwo gespeichert» — ausser bei ZDR oder lokal ist das schlicht falsch (7/30 Tage Logs).</li>
+    </ul>
+
+    <div class="box box-bsp">
+      <div class="bt">Aus deiner Welt</div>
+      Ein Handwerksbetrieb als Kunde: Sein Offerten-Rechner generiert Offerten mit seinen Preisen. Wenn die KI eine Position falsch berechnet und er CHF 3'000 zu billig offeriert — wer zahlt? Ohne Prüfpflicht-Klausel diskutierst du das vor Gericht. Mit der Klausel («Offerten werden vor Versand durch den Auftraggeber geprüft») ist es sein Prüffehler. Ein Satz im Vertrag, der dich existenziell absichert.
+    </div>
+
+    <div class="box box-why">
+      <div class="bt">Wozu brauchst du das</div>
+      Eine kleine KI-Beratung ist oft eine Einzelfirma-Situation: Haftungsfälle treffen dich persönlich. Gleichzeitig sind saubere Verträge ein Qualitätssignal — Kunden, die deinen Vertrag lesen, sehen, dass du die Risiken kennst. Unseriöse Mitbewerber versprechen 100 % — genau daran erkennt man sie.
+    </div>
+
+    <div class="box box-merk">
+      <div class="bt">Merksatz</div>
+      Du schuldest Sorgfalt, nicht Fehlerfreiheit. Kunde prüft Ergebnisse (vertraglich!). Reiner KI-Output hat kein Urheberrecht. Keine Rechtsberatung, keine Compliance-Garantien, keine 100 %-Versprechen.
+    </div>
+
+    <div class="task" id="task-s4">
+      <div class="task-t">Aufgabe: Darfst du das so sagen/versprechen?</div>
+      <div id="classify-s4"></div>
+      <div class="task-summary" id="summary-s4"></div>
+    </div>
+  </section>
+
+  <!-- ============================ S5: CHECKLISTE ============================ -->
+  <section class="learn" id="sec-s5">
+    <h2><span class="snum">05</span> Deine 10-Punkte-Compliance-Checkliste <span class="status-pill" data-pill="s5">offen</span></h2>
+
+    <p>Alles aus diesem Modul, kondensiert in das Werkzeug, das du bei <b>jedem</b> Kundenprojekt durchgehst — im Erstgespräch, vor dem Bau, vor dem Go-live. Die Häkchen werden gespeichert (<code>localStorage</code>), du kannst die Liste also real pro Projekt nutzen und mit «Zurücksetzen» fürs nächste Projekt leeren.</p>
+
+    <div class="check-tool" id="checkTool">
+      <div class="check-head">
+        <span class="ct">KI-Projekt Compliance-Check</span>
+        <span class="cp" id="checkCount">0 / 10</span>
+      </div>
+      <div id="checkItems"></div>
+      <div class="check-foot">
+        <button class="action secondary" id="checkReset">Checkliste zurücksetzen (neues Projekt)</button>
+      </div>
+    </div>
+
+    <div class="box box-bsp">
+      <div class="bt">Aus deiner Welt</div>
+      Probelauf am eigenen Objekt: Nimm ein privates Tool, das deine lokale Foto-Sammlung per KI verschlagwortet und Gesichter gruppiert. Punkt 1–2: Es verarbeitet Gesichtserkennungs-Daten — biometrische Daten, also besonders schützenswert. Punkt 4: Die Daten bleiben auf deinem Mac und NAS — keine Auslandsübermittlung. Punkt 9: privates Tool, keine Info-Pflichten gegenüber Dritten. So schnell geht die Prüfung, wenn man die Fragen einmal verinnerlicht hat.
+    </div>
+
+    <div class="box box-why">
+      <div class="bt">Wozu brauchst du das</div>
+      Ein dokumentierter, wiederholbarer Prüfprozess ist der Unterschied zwischen «wir haben an Datenschutz gedacht» und «hier ist unser Compliance-Protokoll vom 12.8.». Das Protokoll kannst du dem Kunden als Deliverable mitgeben — aus einer Pflicht wird ein verrechenbares Arbeitsergebnis.
+    </div>
+
+    <div class="box box-merk">
+      <div class="bt">Merksatz</div>
+      Erst die Daten verstehen (was, wessen, wohin), dann die Verträge (AVV, Training, Retention), dann die Pflichten (AI Act, Transparenz, Löschung, Incident-Plan). Immer in dieser Reihenfolge.
+    </div>
+
+    <div class="task" id="task-s5">
+      <div class="task-t">Aufgabe: Die richtige Reihenfolge</div>
+      <div class="q-item">
+        <div class="q-text">Ein Neukunde will «einen Chatbot, der auf unsere Kundendaten zugreift». Was prüfst du als <b>Allererstes</b>?</div>
+        <div class="opt-row" id="s5opts"></div>
+        <div class="feedback" id="s5fb"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ S6: PRAXIS-CHALLENGE ============================ -->
+  <section class="learn challenge" id="sec-s6">
+    <h2><span class="snum">✦</span> Praxis-Challenge: Audit an deinem eigenen Setup <span class="status-pill" data-pill="s6">offen</span></h2>
+
+    <p>Du machst jetzt genau das, was du künftig beim Kunden machst — an einem realistischen eigenen Prozess: dem <b>Kontaktformular-Flow einer kleinen KI-Beratung</b> (Formular-Dienst → Gmail → Auswertung mit Claude). Hast du selbst ein Formular oder einen ähnlichen Prozess, nimm den.</p>
+
+    <div class="task">
+      <div class="task-t">Schritt 1 — Compliance-Check real durchführen</div>
+      <p>Geh die 10-Punkte-Checkliste oben für den Formular-Flow durch und hake ehrlich ab. Leitfragen: Welche Personendaten stecken in einem ausgefüllten Formular? Über welche US-Anbieter laufen sie? Wertest du mit claude.ai (Consumer!) oder über die API aus? Erwähnt die Datenschutzerklärung der Firmen-Website diese Verarbeitung?</p>
+
+      <div class="task-t" style="margin-top:18px;">Schritt 2 — DPF-Zertifizierung live prüfen</div>
+      <p>Prüf im Browser auf <code>dataprivacyframework.gov</code> (Participant Search), ob Anthropic unter dem <b>Swiss-U.S. DPF</b> aktiv zertifiziert ist — genau das wirst du künftig für jeden Anbieter eines Kunden tun.</p>
+
+      <div class="task-t" style="margin-top:18px;">Schritt 3 — den Lokal-Beweis führen</div>
+      <p>Der stärkste Moment jeder Datenschutz-Demo. Im Terminal:</p>
+      <pre><code># WLAN aus (Menüleiste oder:)
+networksetup -setairportpower en0 off
+
+# Lokales Modell befragen — läuft ohne Internet:
+curl -s localhost:11434/api/generate -d '{
+  "model": "llama3.1",
+  "prompt": "Wo landen meine Daten, wenn du antwortest?",
+  "stream": false
+}' | python3 -c "import sys,json; print(json.load(sys.stdin)['response'])"
+
+# WLAN wieder an:
+networksetup -setairportpower en0 on</code></pre>
+      <p style="font-size:14px; color:var(--text-dim);">(Modellname ggf. anpassen — <code>ollama list</code> zeigt, was du installiert hast.)</p>
+
+      <div class="selfcheck">
+        <b>Das solltest du sehen:</b><br>
+        1. Mindestens einen Checklisten-Punkt, der beim Formular-Flow <b>offen</b> ist (Tipp: Punkt 9, Datenschutzerklärung — und falls du mit claude.ai auswertest: Punkt 6).<br>
+        2. Anthropic PBC in der DPF-Liste mit aktivem Status inkl. «Swiss-U.S. DPF».<br>
+        3. Eine Ollama-Antwort <b>ohne aktive Internetverbindung</b> — der Beweis, dass lokal wirklich lokal heisst.
+      </div>
+
+      <div class="done-row">
+        <input type="checkbox" id="challengeDone">
+        <label for="challengeDone"><b>Erledigt</b> — Audit durchgeführt, Lokal-Beweis gesehen</label>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ QUIZ ============================ -->
+  <section class="learn" id="sec-quiz">
+    <h2><span class="snum"></span> Abschlussquiz <span class="status-pill" data-pill="quiz">offen</span></h2>
+    <p>10 Fragen über das ganze Modul. Pro Frage eine Antwort — Erklärung kommt sofort.</p>
+    <div class="quiz-progress" id="quizProgress"></div>
+    <div id="quizBox"></div>
+    <div class="quiz-result" id="quizResult"></div>
+    <button class="action secondary" id="quizReset" style="display:none;">Quiz zurücksetzen</button>
+  </section>
+
+  <footer class="mod">
+    <span style="color:var(--text-dim); font-size:14.5px;">Fast geschafft — ein Bonus-Modul wartet noch.</span>
+    <a class="next" href="11-seo-geo.html">Weiter zu Modul 11: SEO &amp; GEO →</a>
+  </footer>
+
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var NN = '10';
+  var TOTAL_SECTIONS = 6;
+  var LS_SECTIONS = 'kikurs_' + NN + '_sections';
+  var LS_QUIZ = 'kikurs_' + NN + '_quiz';
+  var LS_TOTAL = 'kikurs_' + NN + '_total_sections';
+  var LS_CHECK = 'kikurs_' + NN + '_checkliste';
+
+  localStorage.setItem(LS_TOTAL, String(TOTAL_SECTIONS));
+
+  function lsGet(key, fallback) {
+    try { var v = JSON.parse(localStorage.getItem(key)); return v === null || v === undefined ? fallback : v; }
+    catch (e) { return fallback; }
+  }
+  function lsSet(key, val) { localStorage.setItem(key, JSON.stringify(val)); }
+
+  var doneSections = lsGet(LS_SECTIONS, []);
+  if (!Array.isArray(doneSections)) doneSections = [];
+
+  function updateProgress() {
+    var n = doneSections.length;
+    document.getElementById('progLabel').textContent = n + ' von ' + TOTAL_SECTIONS + ' Abschnitten';
+    document.getElementById('progFill').style.width = (n / TOTAL_SECTIONS * 100) + '%';
+    document.querySelectorAll('.status-pill[data-pill]').forEach(function (pill) {
+      var id = pill.getAttribute('data-pill');
+      if (id === 'quiz') {
+        var q = lsGet(LS_QUIZ, null);
+        if (q && q.done) { pill.textContent = q.score + '/' + q.total + ' ✓'; pill.classList.add('done'); }
+        return;
+      }
+      if (doneSections.indexOf(id) !== -1) { pill.textContent = '✓ abgeschlossen'; pill.classList.add('done'); }
+    });
+  }
+
+  function completeSection(id) {
+    if (doneSections.indexOf(id) === -1) {
+      doneSections.push(id);
+      lsSet(LS_SECTIONS, doneSections);
+    }
+    updateProgress();
+  }
+
+  /* ---------- Generischer Binär-/Mehrfach-Klassifizierer ---------- */
+  function renderClassifier(containerId, items, labels, sectionId, summaryId, summaryFn) {
+    var box = document.getElementById(containerId);
+    var answered = 0, correct = 0;
+    items.forEach(function (item, idx) {
+      var q = document.createElement('div');
+      q.className = 'q-item';
+      var qt = document.createElement('div');
+      qt.className = 'q-text';
+      qt.textContent = (idx + 1) + '. ' + item.text;
+      q.appendChild(qt);
+      var row = document.createElement('div');
+      row.className = 'opt-row';
+      var fb = document.createElement('div');
+      fb.className = 'feedback';
+      labels.forEach(function (lab) {
+        var b = document.createElement('button');
+        b.className = 'opt';
+        b.textContent = lab.label;
+        b.addEventListener('click', function () {
+          if (b.disabled) return;
+          row.querySelectorAll('button').forEach(function (x) {
+            x.disabled = true;
+            if (x.textContent === labelFor(item.key)) x.classList.add(lab.key === item.key && x === b ? 'correct' : 'reveal');
+          });
+          var ok = (lab.key === item.key);
+          if (ok) { b.classList.add('correct'); correct++; }
+          else { b.classList.add('wrong'); }
+          fb.className = 'feedback show ' + (ok ? 'ok' : 'no');
+          fb.innerHTML = (ok ? '✓ Richtig. ' : '✗ Richtig wäre: <b>' + labelFor(item.key) + '</b>. ') + item.expl;
+          answered++;
+          if (answered === items.length) finish();
+        });
+        row.appendChild(b);
+      });
+      function labelFor(key) {
+        for (var i = 0; i < labels.length; i++) if (labels[i].key === key) return labels[i].label;
+        return '';
+      }
+      q.appendChild(row);
+      q.appendChild(fb);
+      box.appendChild(q);
+    });
+    function finish() {
+      var sum = document.getElementById(summaryId);
+      sum.classList.add('show');
+      sum.style.color = correct === items.length ? 'var(--green)' : 'var(--accent)';
+      sum.textContent = summaryFn(correct, items.length);
+      completeSection(sectionId);
+    }
+    // Falls Abschnitt schon abgeschlossen: Hinweis anzeigen, Aufgabe bleibt wiederholbar
+    if (doneSections.indexOf(sectionId) !== -1) {
+      var note = document.createElement('p');
+      note.style.cssText = 'font-size:13px;color:var(--text-dim);margin-top:8px;';
+      note.textContent = '✓ Bereits abgeschlossen — du kannst die Aufgabe trotzdem nochmals durchspielen.';
+      box.parentNode.insertBefore(note, box);
+    }
+  }
+
+  /* ---------- S1: Besonders schützenswert ---------- */
+  renderClassifier('classify-s1', [
+    { text: 'Arztzeugnisse / Krankheitsgeschichte', key: 'b', expl: 'Gesundheitsdaten sind der Klassiker unter den besonders schützenswerten Daten.' },
+    { text: 'Geschäftliche E-Mail-Adresse', key: 'n', expl: 'Personendaten ja, aber normale — der Katalog von Art. 5 lit. c ist abschliessend.' },
+    { text: 'Gewerkschaftsmitgliedschaft', key: 'b', expl: 'Gewerkschaftliche Ansichten/Tätigkeiten stehen explizit im Katalog.' },
+    { text: 'Lohnangaben', key: 'n', expl: 'Fühlt sich sensibel an, steht aber NICHT im Katalog — normale Personendaten. Ein beliebter Prüfungs-Stolperer.' },
+    { text: 'Auszug aus dem Strafregister', key: 'b', expl: 'Strafrechtliche Verfolgungen und Sanktionen sind besonders schützenswert.' },
+    { text: 'Geburtsdatum', key: 'n', expl: 'Normale Personendaten — identifizierend, aber nicht im Katalog.' },
+    { text: 'Face-ID-Template / Gesichtserkennungs-Daten', key: 'b', expl: 'Biometrische Daten, die eine Person eindeutig identifizieren, sind besonders schützenswert.' },
+    { text: 'Religionszugehörigkeit im Personaldossier', key: 'b', expl: 'Religiöse Ansichten stehen explizit im Katalog von Art. 5 lit. c.' }
+  ],
+  [ { key: 'b', label: 'Besonders schützenswert' }, { key: 'n', label: 'Normale Personendaten' } ],
+  's1', 'summary-s1',
+  function (c, t) { return c + ' von ' + t + ' richtig. ' + (c === t ? 'Katalog sitzt — Abschnitt abgeschlossen.' : 'Abschnitt abgeschlossen — merk dir: der Katalog ist abschliessend, «gefühlt sensibel» zählt nicht.'); });
+
+  /* ---------- S2: Risikoklassen-Einordner ---------- */
+  var RISK_LABELS = [
+    { key: 'verboten', label: '✗ Verboten' },
+    { key: 'hoch', label: 'Hochrisiko' },
+    { key: 'transparenz', label: 'Transparenzpflicht' },
+    { key: 'minimal', label: '✓ Minimal' }
+  ];
+  renderClassifier('risk-sorter', [
+    { text: 'Ein Treuhänder lässt eine KI eingehende Bewerbungen vorsortieren und die Top 10 vorschlagen.', key: 'hoch',
+      expl: 'Beschäftigung/Personalauswahl steht in Anhang III — KI, die über Berufschancen von Menschen (mit-)entscheidet, ist Hochrisiko. Pflichten greifen ab Dez. 2027.' },
+    { text: 'Claude entwirft Offerten-Texte, ein Mitarbeiter prüft und versendet sie.', key: 'minimal',
+      expl: 'Text-Entwurf mit menschlicher Prüfung, keine Entscheidung über Personen, keine Interaktion mit Endkunden — minimales Risiko, keine AI-Act-Pflichten.' },
+    { text: 'Ein Website-Chatbot beantwortet Endkunden-Fragen zu Öffnungszeiten und Produkten.', key: 'transparenz',
+      expl: 'Art. 50: Menschen müssen wissen, dass sie mit einer KI sprechen. Kennzeichnung genügt («Sie chatten mit unserem KI-Assistenten») — gilt seit 2.8.2026.' },
+    { text: 'Ein Möbelhaus lässt eine KI die Kreditwürdigkeit von Privatkunden für Ratenzahlungen bewerten.', key: 'hoch',
+      expl: 'Kreditwürdigkeitsprüfung natürlicher Personen ist ein Anhang-III-Fall — Hochrisiko.' },
+    { text: 'Ein Callcenter analysiert per KI die Emotionen seiner Mitarbeitenden während der Arbeit, um «Motivation zu messen».', key: 'verboten',
+      expl: 'Emotionserkennung am Arbeitsplatz ist verboten (seit Feb. 2025) — egal wie das Marketing es nennt.' },
+    { text: 'Marketing-Video mit einer komplett KI-generierten, fotorealistischen Sprecherin.', key: 'transparenz',
+      expl: 'Synthetische/Deepfake-Inhalte müssen als KI-generiert gekennzeichnet werden (Art. 50). Erlaubt — aber Label-Pflicht.' },
+    { text: 'Interne RAG-Suche über Firmenhandbücher: Mitarbeiter bekommen Textstellen mit Quellenangabe.', key: 'minimal',
+      expl: 'Interne Dokumentensuche ohne Entscheidungen über Personen — minimales Risiko. Das ist der Brot-und-Butter-Fall deiner Beratung.' },
+    { text: 'Ein Anbieter bewirbt eine App, die aus normalen Fotos realer Personen Nacktbilder erzeugt.', key: 'verboten',
+      expl: 'Nudify-Apps sind per Digital Omnibus ab 2.12.2026 EU-weit explizit verboten — und in der Schweiz ohnehin strafbar (Persönlichkeitsverletzung, ggf. StGB).' },
+    { text: 'KI übersetzt und korrigiert ausgehende Geschäfts-E-Mails.', key: 'minimal',
+      expl: 'Übersetzung/Korrektur ist der Paradefall für minimales Risiko.' },
+    { text: 'Eine Schule lässt eine KI Prüfungen benoten, die über die Versetzung entscheiden.', key: 'hoch',
+      expl: 'Bildung/Prüfungsbewertung steht in Anhang III — die KI (mit-)entscheidet über Bildungswege. Hochrisiko.' }
+  ], RISK_LABELS, 's2', 'summary-s2',
+  function (c, t) { return c + ' von ' + t + ' richtig eingeordnet. ' + (c >= 8 ? 'Beratungsreif.' : 'Abschnitt abgeschlossen — die Faustregel: Entscheidet die KI über Menschen (Job, Kredit, Bildung)? Dann Hochrisiko. Redet sie mit Menschen oder erzeugt täuschend echte Inhalte? Transparenzpflicht.'); });
+
+  /* ---------- S3: Simulation ---------- */
+  var SIM_DATA = {
+    consumer: {
+      flow: '<div class="flow"><div class="node">Mitarbeiter<br><small>Browser</small></div><span class="arr">→</span><div class="node risk">claude.ai / ChatGPT<br><small>US-Server, Consumer-Vertrag</small></div><span class="arr">→</span><div class="node risk">Training möglich<br><small>ohne aktives Opt-out</small></div></div>',
+      verdict: '<span style="color:var(--red);">✗ Für Kundendaten ungeeignet:</span> kein AVV, Training-Default, lange konto-gebundene Retention. Grösste reale Gefahr: Schatten-IT — Mitarbeiter kopieren Kundendaten «mal schnell» in den Chat.',
+      answer: '«Ehrlich gesagt: Bei Consumer-Tools landen Eingaben auf US-Servern und können ohne aktives Opt-out fürs Training verwendet werden. Genau deshalb bauen wir für Ihre Kundendaten einen anderen Kanal — API mit Vertrag oder lokal. Und wir schulen Ihr Team, damit niemand Kundendaten in den privaten Chat kopiert.»'
+    },
+    api: {
+      flow: '<div class="flow"><div class="node">Ihre App<br><small>z.B. Offerten-Tool</small></div><span class="arr">→</span><div class="node safe">Claude-API<br><small>US, DPF-zertifiziert, AVV</small></div><span class="arr">→</span><div class="node safe">Kein Training<br><small>Logs: 7 Tage, dann gelöscht</small></div></div>',
+      verdict: '<span style="color:var(--green);">✓ Der Standard-Weg</span> für die meisten KMU-Projekte: vertraglich sauber, kurze Retention, für Hochsensibles zusätzlich Zero Data Retention konfigurierbar.',
+      answer: '«Wir nutzen die kommerzielle API mit Auftragsbearbeitungsvertrag. Der Anbieter trainiert vertraglich zugesichert nicht mit Ihren Daten, Anfrage-Logs werden standardmässig nach 7 Tagen gelöscht, und die US-Übermittlung ist über das Swiss-U.S. Data Privacy Framework abgesichert — den Zertifizierungsstatus prüfe ich für Sie laufend.»'
+    },
+    eu: {
+      flow: '<div class="flow"><div class="node">Ihre App</div><span class="arr">→</span><div class="node safe">Azure EU Data Zone<br><small>z.B. Sweden Central</small></div><span class="arr">→</span><div class="node safe">Verarbeitung + Speicherung in der EU<br><small>EU Data Boundary</small></div></div>',
+      verdict: '<span style="color:var(--green);">✓ Wenn «USA» politisch nicht geht:</span> Verarbeitung in EU-Rechenzentren. Aber die zwei Zusagen trennen — Residency (Speicherung) ≠ Inferenz-Standort. Beides schriftlich verlangen. Nachteil: neue Modelle kommen in EU-Regionen oft 1–2 Quartale später.',
+      answer: '«Ihre Daten werden in europäischen Rechenzentren verarbeitet und gespeichert — wir deployen in einer Azure-EU-Data-Zone. Ich habe mir vom Anbieter schriftlich bestätigen lassen, dass nicht nur die Speicherung, sondern auch die Modell-Verarbeitung in der EU stattfindet.»'
+    },
+    lokal: {
+      flow: '<div class="flow"><div class="node">Ihre App</div><span class="arr">→</span><div class="node safe">Ollama / lokales Modell<br><small>Hardware bei Ihnen im Haus</small></div><span class="arr">→</span><div class="node safe">Keine externe Verbindung<br><small>keine Übermittlung, keine Retention</small></div></div>',
+      verdict: '<span style="color:var(--green);">✓ Der Datenschutz-Trumpf:</span> keine Auslandsübermittlung, kein AVV mit KI-Anbietern, keine Retention-Diskussion. Trade-off: kleinere Modelle, eigener Betrieb — ideal für Anwälte, Ärzte, Treuhänder mit besonders schützenswerten Daten.',
+      answer: '«Ihre Daten verlassen Ihr Haus nicht. Das Modell läuft auf Hardware bei Ihnen — es gibt schlicht keine Verbindung nach aussen. Das kann ich Ihnen live beweisen: Wir ziehen den Netzwerkstecker, und das System antwortet weiter.»'
+    }
+  };
+  var simBtns = document.getElementById('simBtns');
+  simBtns.addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-setup]');
+    if (!b) return;
+    simBtns.querySelectorAll('button').forEach(function (x) { x.classList.remove('active'); });
+    b.classList.add('active');
+    var d = SIM_DATA[b.getAttribute('data-setup')];
+    document.getElementById('simOut').innerHTML =
+      d.flow +
+      '<div class="sim-verdict">' + d.verdict + '</div>' +
+      '<div class="answer-block"><div class="ab-t">Dein Antwort-Baustein für den Kunden</div>' + d.answer + '</div>';
+  });
+
+  /* ---------- S3: Lückentext ---------- */
+  var GAP_SOLUTION = { gap1: 'a', gap2: 'b', gap3: 'a', gap4: 'a' };
+  document.getElementById('gapCheck').addEventListener('click', function () {
+    var allFilled = true, allOk = true;
+    Object.keys(GAP_SOLUTION).forEach(function (id) {
+      var sel = document.getElementById(id);
+      sel.classList.remove('ok', 'no');
+      if (!sel.value) { allFilled = false; return; }
+      if (sel.value === GAP_SOLUTION[id]) sel.classList.add('ok');
+      else { sel.classList.add('no'); allOk = false; }
+    });
+    var fb = document.getElementById('gapFeedback');
+    if (!allFilled) {
+      fb.className = 'feedback show no';
+      fb.textContent = 'Füll zuerst alle vier Lücken aus.';
+      return;
+    }
+    if (allOk) {
+      fb.className = 'feedback show ok';
+      fb.innerHTML = '✓ Genau so klingst du im Kundengespräch: AVV, kein Training (Commercial Terms), 7-Tage-Retention (Anthropic-Standard seit Sept. 2025), Swiss-U.S. DPF. Der Privacy Shield ist übrigens seit 2020 tot — wer den noch nennt, ist nicht auf Stand.';
+      completeSection('s3');
+      updateProgress();
+    } else {
+      fb.className = 'feedback show no';
+      fb.textContent = '✗ Die rot markierten Lücken stimmen noch nicht — korrigier sie und prüf nochmals. Tipp: Abschnitt oben nochmals überfliegen.';
+    }
+  });
+
+  /* ---------- S4: Versprechen ja/nein ---------- */
+  renderClassifier('classify-s4', [
+    { text: '«Bei der lokalen Ollama-Lösung verlassen Ihre Daten das Haus nicht.»', key: 'ja',
+      expl: 'Stimmt technisch und rechtlich — und ist live beweisbar (Netzwerk trennen).' },
+    { text: '«Der Chatbot macht keine Fehler — wir haben ihn ausführlich getestet.»', key: 'nein',
+      expl: 'LLMs sind probabilistisch (Modul 08). Testen reduziert Fehler, garantiert aber nichts. Versprich Sorgfalt und einen Prüfprozess, nie Fehlerfreiheit.' },
+    { text: '«Anthropic sichert vertraglich zu, API-Daten nicht für Training zu nutzen.»', key: 'ja',
+      expl: 'Steht so in den Commercial Terms / im DPA — das darfst und sollst du sagen.' },
+    { text: '«Mit dieser Lösung sind Sie automatisch DSG-konform.»', key: 'nein',
+      expl: 'Compliance hängt am Gesamtprozess des Kunden (Info-Pflichten, Löschkonzept, interne Abläufe) — kein Tool macht per se konform.' },
+    { text: '«Der generierte Werbetext gehört danach exklusiv Ihnen.»', key: 'nein',
+      expl: 'Rein KI-generierter Output hat in CH/EU kein Urheberrecht — es gibt nichts Exklusives zu übertragen. Nutzungsrechte regeln: ja. Exklusivität versprechen: nein.' },
+    { text: '«Die rechtliche Prüfung Ihrer neuen AGB übernehme ich gleich mit.»', key: 'nein',
+      expl: 'Rechtsberatung gehört zum Anwalt — auch wenn Claude einen brauchbaren Entwurf schreibt. Das gehört als Abgrenzung sogar in deinen Vertrag.' }
+  ],
+  [ { key: 'ja', label: '✓ Darfst du sagen' }, { key: 'nein', label: '✗ Finger weg' } ],
+  's4', 'summary-s4',
+  function (c, t) { return c + ' von ' + t + ' richtig. ' + (c === t ? 'Deine Versprechen sind gerichtsfest.' : 'Abschnitt abgeschlossen — Faustregel: Alles, was «automatisch», «garantiert» oder «exklusiv» enthält, nochmal prüfen.'); });
+
+  /* ---------- S5: Checkliste (persistiert) ---------- */
+  var CHECK_ITEMS = [
+    { id: 'c1', t: 'Datenkategorien inventarisiert', s: 'Welche Daten fliessen ins KI-System — Eingaben, angebundene Quellen (RAG!), Logs?' },
+    { id: 'c2', t: 'Personendaten identifiziert', s: 'Sind Personendaten dabei? Besonders schützenswerte (Gesundheit, Strafregister, Biometrie …)?' },
+    { id: 'c3', t: 'Verhältnismässigkeit & Zweckbindung', s: 'Nur nötige Daten, nur für den Erhebungszweck? Kann pseudonymisiert/reduziert werden?' },
+    { id: 'c4', t: 'Datenfluss & Länder geklärt', s: 'Wo läuft die Verarbeitung — CH, EU, USA? Bei USA: Anbieter Swiss-U.S.-DPF-zertifiziert (dataprivacyframework.gov)?' },
+    { id: 'c5', t: 'AVV/DPA abgeschlossen', s: 'Auftragsbearbeitungsvertrag mit jedem Cloud-Anbieter (Art. 9 DSG), inkl. Sub-Bearbeiter-Regelung und SCC-Fallback.' },
+    { id: 'c6', t: 'Training ausgeschlossen, Retention bekannt', s: 'Commercial Terms statt Consumer! Retention-Fristen dokumentiert, ZDR geprüft, wo nötig.' },
+    { id: 'c7', t: 'Löschkonzept definiert', s: 'Wann werden Daten (auch in Vektor-DBs, Caches, Logs) gelöscht? Wer löscht auf Anfrage betroffener Personen?' },
+    { id: 'c8', t: 'AI-Act-Risikoklasse geprüft', s: 'Entscheidet die KI über Menschen (HR/Kredit/Bildung)? EU-Bezug (Kunden, Markt, Output in der EU)?' },
+    { id: 'c9', t: 'Transparenz- & Informationspflichten erfüllt', s: 'Datenschutzerklärung erwähnt KI-Verarbeitung, Chatbots gekennzeichnet, synthetische Inhalte gelabelt.' },
+    { id: 'c10', t: 'Human-in-the-Loop & Incident-Prozess', s: 'Wer prüft Outputs vor Aussenwirkung (vertraglich!)? Wer meldet dem EDÖB bei einer Verletzung mit hohem Risiko?' }
+  ];
+  var checkState = lsGet(LS_CHECK, []);
+  if (!Array.isArray(checkState)) checkState = [];
+  var checkBox = document.getElementById('checkItems');
+  CHECK_ITEMS.forEach(function (item) {
+    var row = document.createElement('label');
+    row.className = 'check-item' + (checkState.indexOf(item.id) !== -1 ? ' checked' : '');
+    var cb = document.createElement('input');
+    cb.type = 'checkbox';
+    cb.checked = checkState.indexOf(item.id) !== -1;
+    cb.addEventListener('change', function () {
+      var i = checkState.indexOf(item.id);
+      if (cb.checked && i === -1) checkState.push(item.id);
+      if (!cb.checked && i !== -1) checkState.splice(i, 1);
+      lsSet(LS_CHECK, checkState);
+      row.classList.toggle('checked', cb.checked);
+      updateCheckCount();
+    });
+    var txt = document.createElement('div');
+    txt.innerHTML = '<div class="ci-title">' + item.t + '</div><div class="ci-sub">' + item.s + '</div>';
+    row.appendChild(cb);
+    row.appendChild(txt);
+    checkBox.appendChild(row);
+  });
+  function updateCheckCount() {
+    document.getElementById('checkCount').textContent = checkState.length + ' / ' + CHECK_ITEMS.length;
+  }
+  updateCheckCount();
+  document.getElementById('checkReset').addEventListener('click', function () {
+    checkState = [];
+    lsSet(LS_CHECK, checkState);
+    checkBox.querySelectorAll('input').forEach(function (cb) { cb.checked = false; });
+    checkBox.querySelectorAll('.check-item').forEach(function (r) { r.classList.remove('checked'); });
+    updateCheckCount();
+  });
+
+  /* ---------- S5: Abschluss-Frage ---------- */
+  var S5_OPTS = [
+    { t: 'Welchen Anbieter und welches Modell wir nehmen', ok: false,
+      expl: 'Technik kommt später — erst musst du wissen, was überhaupt verarbeitet wird.' },
+    { t: 'Welche Datenkategorien ins System fliessen würden', ok: true,
+      expl: 'Punkt 1 der Checkliste. Von den Daten hängt alles Weitere ab: Personendaten? Besonders schützenswert? Ausland überhaupt möglich? Erst die Daten, dann die Architektur, dann der Vertrag.' },
+    { t: 'Ob der Kunde bereit ist, einen AVV zu unterschreiben', ok: false,
+      expl: 'Der AVV kommt in Schritt 5 — und er wird zwischen Kunde und KI-Anbieter geschlossen, nicht mit dir.' },
+    { t: 'Ob der Chatbot unter den EU AI Act fällt', ok: false,
+      expl: 'Wichtig (Punkt 8), aber ohne Kenntnis der Daten und des Anwendungsfalls nicht beantwortbar.' }
+  ];
+  var s5row = document.getElementById('s5opts');
+  S5_OPTS.forEach(function (o) {
+    var b = document.createElement('button');
+    b.className = 'opt';
+    b.textContent = o.t;
+    b.addEventListener('click', function () {
+      if (b.disabled) return;
+      s5row.querySelectorAll('button').forEach(function (x) { x.disabled = true; });
+      var fb = document.getElementById('s5fb');
+      if (o.ok) {
+        b.classList.add('correct');
+        fb.className = 'feedback show ok';
+        fb.innerHTML = '✓ ' + o.expl;
+        completeSection('s5');
+      } else {
+        b.classList.add('wrong');
+        s5row.querySelectorAll('button').forEach(function (x, i) { if (S5_OPTS[i].ok) x.classList.add('reveal'); });
+        fb.className = 'feedback show no';
+        fb.innerHTML = '✗ ' + o.expl + '<br><br>Richtig: <b>Datenkategorien zuerst.</b> ' + S5_OPTS[1].expl;
+        completeSection('s5');
+      }
+    });
+    s5row.appendChild(b);
+  });
+
+  /* ---------- S6: Challenge ---------- */
+  var challengeCb = document.getElementById('challengeDone');
+  challengeCb.checked = doneSections.indexOf('s6') !== -1;
+  challengeCb.addEventListener('change', function () {
+    if (challengeCb.checked) completeSection('s6');
+  });
+
+  /* ---------- Quiz ---------- */
+  var QUIZ = [
+    { q: 'Dein Kunde (Treuhand-KMU) nutzt über dein Setup die Claude-API für Mandanten-Dokumente. Wer ist datenschutzrechtlich wer?',
+      opts: [
+        'Anthropic ist Verantwortlicher, der Kunde Auftragsbearbeiter',
+        'Der Kunde ist Verantwortlicher, Anthropic Auftragsbearbeiter — ein AVV/DPA ist Pflicht',
+        'Beide sind gemeinsam Verantwortliche, kein Vertrag nötig',
+        'Du bist als Berater automatisch der Verantwortliche'
+      ], correct: 1,
+      expl: 'Wer über Zweck und Mittel entscheidet, ist Verantwortlicher — das ist der Kunde. Der Cloud-KI-Anbieter bearbeitet im Auftrag → Art. 9 DSG verlangt einen Vertrag (AVV/DPA). Du bist Berater, ggf. selbst Auftragsbearbeiter, aber nie automatisch Verantwortlicher für Kundendaten.' },
+    { q: 'Welche Datenkategorie ist nach CH-DSG besonders schützenswert?',
+      opts: [ 'Lohnangaben', 'Kaufhistorie im Webshop', 'Gesundheitsdaten', 'Geschäftliche Handynummer' ], correct: 2,
+      expl: 'Gesundheitsdaten stehen im abschliessenden Katalog von Art. 5 lit. c. Lohn, Kaufhistorie und Kontaktdaten sind normale Personendaten — auch wenn sie sich sensibel anfühlen.' },
+    { q: 'Wann dürfen Personendaten ohne Zusatzgarantien an einen US-KI-Anbieter übermittelt werden?',
+      opts: [
+        'Nie — die USA gelten als unsicheres Drittland',
+        'Immer — die USA haben generell angemessenen Datenschutz',
+        'Wenn der Anbieter unter dem Swiss-U.S. Data Privacy Framework zertifiziert ist',
+        'Nur mit Einwilligung des EDÖB'
+      ], correct: 2,
+      expl: 'Seit 15.9.2024 gilt die Angemessenheit für DPF-zertifizierte US-Unternehmen (Bundesratsbeschluss vom 14.8.2024). Ohne Zertifizierung braucht es SCC. Der EDÖB bewilligt keine Einzeltransfers.' },
+    { q: 'Was gilt nach dem AI Act ab dem 2. August 2026 neu?',
+      opts: [
+        'Die vollen Hochrisiko-Pflichten für HR- und Kredit-KI',
+        'Die Transparenzpflichten (Art. 50): Chatbot-Kennzeichnung, Deepfake-Labels',
+        'Das Verbot von Social Scoring',
+        'Die GPAI-Regeln für Modellanbieter'
+      ], correct: 1,
+      expl: 'Ab 2.8.2026 gilt Art. 50 (Transparenz). Die Hochrisiko-Pflichten wurden per Digital Omnibus (VO 2026/1744, Juli 2026) auf 2.12.2027 (Anhang III) bzw. 2.8.2028 (Anhang I) verschoben. Verbote gelten seit Feb. 2025, GPAI-Regeln seit Aug. 2025.' },
+    { q: 'Ein KMU will Bewerbungen per KI vorsortieren lassen. AI-Act-Einordnung?',
+      opts: [ 'Minimales Risiko — nur interne Nutzung', 'Transparenzpflicht — Bewerber informieren genügt', 'Hochrisiko — Anhang III (Beschäftigung)', 'Verboten' ], correct: 2,
+      expl: 'KI, die über Berufschancen (mit-)entscheidet, ist Hochrisiko nach Anhang III. Nicht verboten — aber ab Dez. 2027 mit erheblichen Pflichten (Risikomanagement, Doku, menschliche Aufsicht) verbunden, wenn EU-Bezug besteht.' },
+    { q: 'Schätzfrage: die Maximalbusse nach CH-DSG — und gegen wen richtet sie sich primär?',
+      opts: [
+        'CHF 50\'000 gegen das Unternehmen',
+        'CHF 250\'000 gegen die verantwortliche natürliche Person',
+        '4 % des Jahresumsatzes gegen das Unternehmen',
+        'CHF 1 Mio. gegen die Geschäftsleitung'
+      ], correct: 1,
+      expl: 'Bis CHF 250\'000 — und die Schweizer Eigenheit: primär gegen die verantwortliche natürliche Person, nicht die Firma (subsidiär bis CHF 50\'000 ans Unternehmen). Die 4 %-Logik ist DSGVO, nicht DSG.' },
+    { q: 'Wie halten es Anthropic & Co. mit Training auf deinen Daten (Stand 2026)?',
+      opts: [
+        'Alle Daten werden immer fürs Training genutzt',
+        'API-/Commercial-Daten: kein Training (vertraglich); Consumer-Chats: Training möglich, ausser man setzt das Opt-out',
+        'Es wird nie auf Nutzerdaten trainiert',
+        'Nur zahlende Consumer-Accounts sind vom Training ausgenommen'
+      ], correct: 1,
+      expl: 'Der Vertrag entscheidet, nicht das Modell: Commercial (API, Team, Enterprise) = kein Training, per DPA zugesichert. Consumer (claude.ai, ChatGPT) = Training standardmässig möglich; Anthropic fährt seit Herbst 2025 ein Opt-out-Modell. Bezahlen allein schützt Consumer-Accounts nicht.' },
+    { q: 'Datenpanne beim Kunden: KI-Logs mit Gesundheitsdaten waren öffentlich erreichbar. Was verlangt das DSG?',
+      opts: [
+        'Meldung an den EDÖB innert 72 Stunden',
+        'Meldung an den EDÖB «so rasch als möglich», da hohes Risiko für die Betroffenen',
+        'Keine Meldung — das DSG kennt keine Meldepflicht',
+        'Nur ein interner Vermerk'
+      ], correct: 1,
+      expl: 'Art. 24 DSG: Meldung «so rasch als möglich» bei voraussichtlich hohem Risiko — Gesundheitsdaten öffentlich = klarer Fall. Die starre 72-h-Frist ist DSGVO; das DSG formuliert offener, meint aber: nicht trödeln.' },
+    { q: 'Ein Kunde fragt, ob ihm der von Claude generierte Werbeslogan «gehört». Rechtslage CH 2026?',
+      opts: [
+        'Ja — Urheberrecht entsteht automatisch beim Kunden',
+        'Ja — Anthropic tritt die Rechte per Vertrag ab',
+        'Rein KI-generierter Output ist nicht urheberrechtlich geschützt — es gibt kein Exklusivrecht daran',
+        'Das Urheberrecht liegt bei Anthropic'
+      ], correct: 2,
+      expl: 'CH und EU verlangen eine menschliche geistige Schöpfung. Ohne wesentlichen menschlichen Beitrag: kein Urheberrecht, für niemanden — Anthropic kann nichts abtreten, was nicht existiert. Erst substanzielle menschliche Bearbeitung kann Schutz begründen.' },
+    { q: 'Welcher Satz gehört NICHT in das Angebot einer KI-Beratung?',
+      opts: [
+        '«Alle Ergebnisse werden vor Verwendung durch Sie geprüft (Human-in-the-Loop).»',
+        '«Ich garantiere, dass die KI-Outputs zu 100 % korrekt und DSG-konform sind.»',
+        '«Eingesetzte Sub-Dienstleister: Anthropic (API, AVV, DPF-zertifiziert).»',
+        '«Rechtliche Prüfungen erfolgen durch Ihre Anwältin, nicht durch mich.»'
+      ], correct: 1,
+      expl: '100 %-Garantien für probabilistische Systeme und pauschale Compliance-Zusagen sind unhaltbar — und im Streitfall haftest du dafür. Die anderen drei Sätze sind genau die Klauseln, die dich absichern und Seriosität signalisieren.' }
+  ];
+
+  var quizState = lsGet(LS_QUIZ, null);
+  var quizAnswers = [];
+  var quizBox = document.getElementById('quizBox');
+  var quizResult = document.getElementById('quizResult');
+  var quizResetBtn = document.getElementById('quizReset');
+  var quizProgress = document.getElementById('quizProgress');
+
+  function renderQuiz() {
+    quizBox.innerHTML = '';
+    quizAnswers = new Array(QUIZ.length).fill(null);
+    quizResult.classList.remove('show');
+    if (quizState && quizState.done) {
+      quizProgress.textContent = 'Bereits absolviert: ' + quizState.score + ' / ' + quizState.total;
+      quizResult.classList.add('show');
+      quizResult.innerHTML = resultText(quizState.score, quizState.total);
+      quizResetBtn.style.display = 'inline-block';
+      return;
+    }
+    quizProgress.textContent = '0 / ' + QUIZ.length + ' beantwortet';
+    quizResetBtn.style.display = 'none';
+    QUIZ.forEach(function (item, qi) {
+      var q = document.createElement('div');
+      q.className = 'q-item';
+      var qt = document.createElement('div');
+      qt.className = 'q-text';
+      qt.innerHTML = '<b>Frage ' + (qi + 1) + ':</b> ' + item.q;
+      q.appendChild(qt);
+      var row = document.createElement('div');
+      row.className = 'opt-row';
+      row.style.flexDirection = 'column';
+      row.style.alignItems = 'stretch';
+      var fb = document.createElement('div');
+      fb.className = 'feedback';
+      item.opts.forEach(function (optText, oi) {
+        var b = document.createElement('button');
+        b.className = 'opt';
+        b.style.textAlign = 'left';
+        b.textContent = optText;
+        b.addEventListener('click', function () {
+          if (quizAnswers[qi] !== null) return;
+          quizAnswers[qi] = oi;
+          row.querySelectorAll('button').forEach(function (x, xi) {
+            x.disabled = true;
+            if (xi === item.correct) x.classList.add(xi === oi ? 'correct' : 'reveal');
+          });
+          var ok = oi === item.correct;
+          if (!ok) b.classList.add('wrong');
+          fb.className = 'feedback show ' + (ok ? 'ok' : 'no');
+          fb.innerHTML = (ok ? '✓ Richtig. ' : '✗ ') + item.expl;
+          var answered = quizAnswers.filter(function (a) { return a !== null; }).length;
+          quizProgress.textContent = answered + ' / ' + QUIZ.length + ' beantwortet';
+          if (answered === QUIZ.length) finishQuiz();
+        });
+        row.appendChild(b);
+      });
+      q.appendChild(row);
+      q.appendChild(fb);
+      quizBox.appendChild(q);
+    });
+  }
+
+  function resultText(score, total) {
+    var pct = score / total;
+    var verdict;
+    if (pct >= 0.9) verdict = 'Beratungsreif — mit diesem Wissen kannst du vor jeden IT-Verantwortlichen treten.';
+    else if (pct >= 0.7) verdict = 'Solide Basis. Schau dir die Erklärungen der falschen Antworten nochmals an — genau da fragen kritische Kunden nach.';
+    else verdict = 'Geh die Abschnitte 1–4 nochmals durch, besonders Auftragsbearbeitung und die AI-Act-Fristen — das ist Pflichtstoff für jede KI-Beratung.';
+    return '<b>Ergebnis: ' + score + ' von ' + total + ' richtig.</b><br>' + verdict;
+  }
+
+  function finishQuiz() {
+    var score = quizAnswers.reduce(function (acc, a, i) { return acc + (a === QUIZ[i].correct ? 1 : 0); }, 0);
+    quizState = { score: score, total: QUIZ.length, done: true };
+    lsSet(LS_QUIZ, quizState);
+    quizResult.classList.add('show');
+    quizResult.innerHTML = resultText(score, QUIZ.length);
+    quizResetBtn.style.display = 'inline-block';
+    quizProgress.textContent = 'Abgeschlossen: ' + score + ' / ' + QUIZ.length;
+    updateProgress();
+    quizResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  quizResetBtn.addEventListener('click', function () {
+    quizState = null;
+    localStorage.removeItem(LS_QUIZ);
+    var pill = document.querySelector('.status-pill[data-pill="quiz"]');
+    pill.textContent = 'offen';
+    pill.classList.remove('done');
+    renderQuiz();
+  });
+
+  renderQuiz();
+  updateProgress();
+})();
+</script>
+</body>
+</html>

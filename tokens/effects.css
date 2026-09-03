@@ -1,0 +1,28 @@
+/* vaiacon — Schatten, Animationen, Easing. Weich, sanft, verspielt. */
+:root {
+  /* ---- Schatten ---- */
+  --shadow-comic: 6px 6px 0 rgba(28, 22, 19, 0.85);          /* Comic-Offset (Sprechblasen) */
+  --shadow-soft: 0 10px 26px rgba(62, 22, 6, 0.28);          /* schwebende Sticker/Bubbles */
+  --shadow-cta: 0 18px 40px -12px rgba(60, 20, 5, 0.45);     /* helle CTAs auf Terracotta */
+  --shadow-cta-hover: 0 26px 50px -12px rgba(60, 20, 5, 0.55);
+
+  /* ---- Easing ---- */
+  --ease-spring: cubic-bezier(0.22, 1, 0.36, 1); /* @kind other */   /* Hover-Lifts, Buttons */
+  --ease-reveal: cubic-bezier(0.3, 0.72, 0.06, 1); /* @kind other */ /* Scroll-Reveals */
+  --ease-word: cubic-bezier(0.19, 1, 0.22, 1); /* @kind other */     /* Wort-für-Wort-Einstieg */
+
+  /* ---- Dauer ---- */
+  --duration-fast: 0.3s; /* @kind other */  /* Farb-/Opacity-Hover */
+  --duration-med: 0.4s; /* @kind other */   /* Karten-Lift */
+  --duration-slow: 0.55s; /* @kind other */ /* Reveals */
+}
+
+/* Sanfte Dauer-Animationen der Marke */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.12; transform: scale(0.75) rotate(0deg); }
+  50% { opacity: 0.65; transform: scale(1.15) rotate(20deg); }
+}
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.011); }
+}

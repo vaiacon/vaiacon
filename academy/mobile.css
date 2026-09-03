@@ -1,0 +1,26 @@
+/* Mobile-Korrekturen für die Academy-Seiten (Inline-Styles können keine Media Queries). */
+@media (max-width: 860px) {
+  [data-m="split"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 28px !important;
+    align-items: start !important;
+  }
+
+  section {
+    padding-top: 62px !important;
+    padding-bottom: 62px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+
+  header > div {
+    padding: 14px 20px !important;
+  }
+}
+
+@media (max-width: 560px) {
+  section {
+    padding-top: 52px !important;
+    padding-bottom: 52px !important;
+  }
+}

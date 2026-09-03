@@ -1,0 +1,36 @@
+<!-- @dsCard group="Brand" viewport="700x210" name="Stimme & Glyphen" subtitle="Schweizerdeutsch-nah, per Sie, Text-Glyphen statt Icons" -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { padding: 22px 28px; box-sizing: border-box; display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; }
+  .q { display: flex; flex-direction: column; gap: 10px; }
+  .line { font-size: 15px; font-weight: 600; color: var(--text-strong); }
+  .line em { font-style: normal; color: var(--terra-500); }
+  .glyphs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
+  .g { background: var(--sand-200); border: 1px solid var(--border-strong); border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; padding: 10px 4px; }
+  .g b { font-size: 17px; font-weight: 500; color: var(--terra-500); }
+  .g span { font-size: 9px; font-weight: 600; letter-spacing: 0.06em; color: var(--text-muted); }
+</style>
+</head>
+<body>
+  <div class="q">
+    <span class="line">«Grüezi! Haben Sie Fragen? <em>Chatten Sie direkt mit mir →</em>»</span>
+    <span class="line" style="font-weight: 500; color: var(--text-body);">Headlines mit Punkt: <b style="color: var(--text-strong);">Wir geben Orientierung.</b></span>
+    <span class="line" style="font-size: 13px; letter-spacing: 0.14em; color: var(--terra-500);">01 — KICKER IMMER NUMMERIERT</span>
+    <span class="line" style="font-size: 14px;">CTAs lowercase: <em>termin direkt buchen ↗</em></span>
+  </div>
+  <div class="glyphs">
+    <div class="g"><b>→</b><span>WEITER</span></div>
+    <div class="g"><b>↗</b><span>EXTERN</span></div>
+    <div class="g"><b>✓</b><span>CHECK</span></div>
+    <div class="g"><b>✦</b><span>DEKO</span></div>
+    <div class="g"><b>+</b><span>FAQ</span></div>
+    <div class="g"><b>·</b><span>TRENNER</span></div>
+    <div class="g"><b>«»</b><span>ZITAT</span></div>
+    <div class="g"><b>▶</b><span>VIDEO</span></div>
+  </div>
+</body>
+</html>

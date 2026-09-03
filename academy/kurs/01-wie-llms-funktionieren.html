@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>vaiaconAcademy · Modul 01 · Wie LLMs funktionieren</title>
+<style>
+  :root {
+    --bg: #F4EDE1;
+    --bg-card: #FFFDF8;
+    --bg-inset: #FFFDF8;
+    --border: #C9BFB5;
+    --text: #1C1613;
+    --muted: #8C8178;
+    --accent: #B25222;
+    --accent-dim: rgba(178, 82, 34, 0.15);
+    --green: #4C7A3F;
+    --red: #A3311B;
+    --yellow: #A9741E;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Quicksand', -apple-system, system-ui, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    padding: 0 20px 80px;
+  }
+  .wrap { max-width: 800px; margin: 0 auto; }
+  code, pre, .mono {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 0.88em;
+  }
+  code {
+    background: var(--bg-inset);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 6px;
+  }
+  pre {
+    background: var(--bg-inset);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    overflow-x: auto;
+    line-height: 1.5;
+    margin: 14px 0;
+  }
+  pre code { background: none; border: none; padding: 0; }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  h1 { font-size: 1.9em; line-height: 1.25; margin: 8px 0 4px; }
+  h2 { font-size: 1.4em; margin: 0 0 14px; }
+  h3 { font-size: 1.08em; margin: 20px 0 8px; }
+  p { margin: 12px 0; }
+  ul, ol { margin: 12px 0 12px 24px; }
+  li { margin: 5px 0; }
+  strong { color: #1C1613; }
+
+  /* Header */
+  header { padding: 36px 0 10px; }
+  .topline { display: flex; justify-content: space-between; align-items: center; font-size: 0.9em; color: var(--muted); }
+  .modnum { color: var(--accent); font-weight: 700; letter-spacing: 0.08em; }
+  .cando {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 18px 0;
+    font-size: 0.95em;
+  }
+  .cando .cap { color: var(--accent); font-weight: 600; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.06em; }
+  .progress-outer {
+    background: var(--bg-inset);
+    border: 1px solid var(--border);
+    border-radius: 99px;
+    height: 12px;
+    overflow: hidden;
+    margin-top: 6px;
+  }
+  .progress-inner {
+    height: 100%; width: 0%;
+    background: var(--accent);
+    border-radius: 99px;
+    transition: width 0.4s ease;
+  }
+  .progress-label { font-size: 0.85em; color: var(--muted); margin-top: 6px; }
+
+  /* Sections */
+  section.lesson {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 30px;
+    margin: 28px 0;
+  }
+  .sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+  .sec-num { color: var(--accent); font-weight: 700; font-size: 0.85em; letter-spacing: 0.08em; }
+  .badge-done {
+    display: none;
+    color: var(--green);
+    border: 1px solid var(--green);
+    border-radius: 99px;
+    font-size: 0.72em;
+    padding: 2px 10px;
+    white-space: nowrap;
+  }
+  section.done .badge-done { display: inline-block; }
+
+  .box {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 0.95em;
+  }
+  .box .cap { font-weight: 700; font-size: 0.82em; text-transform: uppercase; letter-spacing: 0.06em; display: block; margin-bottom: 6px; }
+  .box-why { border-left: 3px solid var(--yellow); }
+  .box-why .cap { color: var(--yellow); }
+  .box-merk { border-left: 3px solid var(--green); background: rgba(76, 122, 63, 0.06); }
+  .box-merk .cap { color: var(--green); }
+  .box-praxis { border-left: 3px solid var(--accent); background: var(--accent-dim); }
+  .box-praxis .cap { color: var(--accent); }
+
+  /* Interactive widgets */
+  .widget {
+    background: var(--bg-inset);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 18px 0;
+  }
+  .widget .wcap { font-size: 0.82em; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
+  .hint { font-size: 0.82em; color: var(--muted); }
+  input[type="text"], textarea {
+    width: 100%;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text);
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 0.9em;
+    padding: 10px 12px;
+    margin: 8px 0;
+  }
+  input[type="text"]:focus, textarea:focus { outline: none; border-color: var(--accent); }
+  button {
+    background: #EAE0CC;
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 6px;
+    padding: 7px 14px;
+    font-size: 0.9em;
+    font-family: inherit;
+    cursor: pointer;
+    margin: 4px 6px 4px 0;
+  }
+  button:hover { border-color: var(--accent); }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #F4EDE1; font-weight: 600; }
+  button:disabled { opacity: 0.45; cursor: default; }
+  button:disabled:hover { border-color: var(--border); }
+
+  .chips { line-height: 2.3; margin: 10px 0; word-break: break-word; }
+  .chip {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 2px 7px;
+    margin: 2px 3px 2px 0;
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 0.85em;
+    border: 1px solid transparent;
+  }
+  .tokstats { font-size: 0.88em; color: var(--muted); margin-top: 8px; }
+  .tokstats b { color: var(--text); }
+
+  /* Next-token bars */
+  .ctxline {
+    font-family: 'IBM Plex Mono', ui-monospace, monospace;
+    font-size: 0.95em;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 12px 14px;
+    margin-bottom: 14px;
+    min-height: 46px;
+  }
+  .ctxline .gen { color: var(--accent); }
+  .ctxline .cursor { display: inline-block; width: 9px; height: 1.15em; background: var(--accent); vertical-align: text-bottom; animation: blink 1s steps(1) infinite; margin-left: 2px; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .probrow {
+    display: flex; align-items: center; gap: 10px;
+    margin: 6px 0; cursor: pointer;
+    border: 1px solid transparent; border-radius: 6px; padding: 3px 6px;
+  }
+  .probrow:hover { border-color: var(--accent); background: var(--accent-dim); }
+  .probrow.static { cursor: default; }
+  .probrow.static:hover { border-color: transparent; background: none; }
+  .probtok { font-family: 'IBM Plex Mono', ui-monospace, monospace; font-size: 0.85em; min-width: 130px; text-align: right; }
+  .probbar-outer { flex: 1; background: var(--bg); border-radius: 4px; height: 18px; overflow: hidden; }
+  .probbar-inner { height: 100%; background: var(--accent); border-radius: 4px; min-width: 2px; }
+  .probpct { font-size: 0.8em; color: var(--muted); min-width: 48px; }
+
+  /* Tasks */
+  .task {
+    border: 1px solid var(--accent);
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin: 20px 0 4px;
+  }
+  .task .tcap { font-size: 0.82em; font-weight: 700; color: var(--accent); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 8px; }
+  .task .q { font-weight: 600; margin-bottom: 10px; }
+  .opt {
+    display: block; width: 100%; text-align: left;
+    background: var(--bg-inset);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 10px 14px;
+    margin: 7px 0;
+    color: var(--text);
+    font-size: 0.93em;
+    cursor: pointer;
+  }
+  .opt:hover { border-color: var(--accent); }
+  .opt.right { border-color: var(--green); background: rgba(76, 122, 63,0.1); }
+  .opt.wrong { border-color: var(--red); background: rgba(163, 49, 27,0.08); }
+  .expl {
+    display: none;
+    font-size: 0.9em;
+    border-top: 1px dashed var(--border);
+    margin-top: 12px; padding-top: 12px;
+  }
+  .expl.show { display: block; }
+  .expl .ok { color: var(--green); font-weight: 600; }
+  .expl .nok { color: var(--red); font-weight: 600; }
+
+  /* Zuordnung */
+  .sortrow {
+    display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 9px 12px; margin: 8px 0; font-size: 0.92em;
+  }
+  .sortrow .stmt { flex: 1; min-width: 220px; }
+  .sortrow .catbtn { min-width: 92px; }
+  .sortrow .catbtn.sel { background: var(--accent); color: #F4EDE1; border-color: var(--accent); font-weight: 600; }
+  .sortrow.right { border-color: var(--green); }
+  .sortrow.wrong { border-color: var(--red); }
+  .verdict { font-size: 0.85em; width: 100%; color: var(--muted); display: none; }
+  .sortrow.right .verdict, .sortrow.wrong .verdict { display: block; }
+
+  select {
+    background: var(--bg); color: var(--text);
+    border: 1px solid var(--border); border-radius: 6px;
+    padding: 5px 8px; font-family: inherit; font-size: 0.95em;
+  }
+  select.right { border-color: var(--green); }
+  select.wrong { border-color: var(--red); }
+
+  /* Slider sim */
+  input[type="range"] { width: 100%; accent-color: var(--accent); margin: 10px 0; }
+  .simgrid { display: grid; grid-template-columns: 150px 1fr 110px; gap: 8px 12px; align-items: center; font-size: 0.9em; margin-top: 10px; }
+  .simbar-outer { background: var(--bg); border-radius: 4px; height: 16px; overflow: hidden; border: 1px solid var(--border); }
+  .simbar-inner { height: 100%; border-radius: 4px; min-width: 2px; transition: width 0.15s; }
+
+  .fb { font-size: 0.9em; margin-top: 10px; display: none; padding: 10px 14px; border-radius: 8px; }
+  .fb.show { display: block; }
+  .fb.good { background: rgba(76, 122, 63,0.1); border: 1px solid var(--green); }
+  .fb.bad { background: rgba(163, 49, 27,0.08); border: 1px solid var(--red); }
+  .fb.neutral { background: var(--bg-inset); border: 1px solid var(--border); }
+
+  /* Challenge & quiz */
+  .challenge {
+    background: var(--bg-card);
+    border: 1px solid var(--yellow);
+    border-radius: 12px;
+    padding: 28px 30px;
+    margin: 28px 0;
+  }
+  .challenge h2 { color: var(--yellow); }
+  .checkline { display: flex; align-items: center; gap: 10px; margin-top: 16px; font-weight: 600; }
+  .checkline input { width: 20px; height: 20px; accent-color: var(--green); }
+
+  .quiz {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 28px 30px;
+    margin: 28px 0;
+  }
+  .quiz-q { border-top: 1px solid var(--border); padding: 18px 0; }
+  .quiz-q:first-of-type { border-top: none; }
+  .quiz-q .qq { font-weight: 600; margin-bottom: 10px; }
+  .qscore {
+    display: none;
+    text-align: center; font-size: 1.2em; font-weight: 700;
+    border: 1px solid var(--accent); border-radius: 10px;
+    padding: 16px; margin-top: 16px;
+  }
+  footer { text-align: center; margin-top: 48px; color: var(--muted); font-size: 0.95em; }
+  .nextlink {
+    display: inline-block;
+    background: var(--accent); color: #F4EDE1; font-weight: 700;
+    border-radius: 8px; padding: 12px 22px; margin-top: 10px;
+  }
+  .nextlink:hover { text-decoration: none; opacity: 0.9; }
+
+  svg text { font-family: 'Quicksand', -apple-system, system-ui, sans-serif; }
+</style>
+<link rel="stylesheet" href="vaiacon-kurs.css">
+<link rel="icon" href="assets/logo-mark-terra.png">
+<meta name="theme-color" content="#F4EDE1">
+</head>
+<body>
+<div class="kursbar"><div class="kursbar-in"><a href="index.html" aria-label="Kursübersicht"><img src="assets/logo-lockup-academy.png" alt="vaiaconAcademy"></a><span class="kursbar-meta">KI-LERNKURS · MODUL 01</span></div></div>
+<div class="wrap">
+
+<header>
+  <div class="topline">
+    <span class="modnum">MODUL 01</span>
+    <a href="index.html">← Kursübersicht</a>
+  </div>
+  <h1>Wie LLMs funktionieren</h1>
+  <div class="cando">
+    <span class="cap">Was du danach kannst</span>
+    <ul style="margin-bottom:0;">
+      <li>Erklären, was zwischen deinem Prompt und Claudes Antwort technisch passiert — Token für Token.</li>
+      <li>Sicher unterscheiden, was im Modell «eingebaut» ist (Gewichte) und was nur pro Anfrage gilt (Kontext).</li>
+      <li>Vorhersagen, <em>wann</em> ein Modell wahrscheinlich halluziniert und warum lange Claude-Code-Sessions kompaktiert werden.</li>
+    </ul>
+  </div>
+  <div class="progress-outer"><div class="progress-inner" id="progbar"></div></div>
+  <div class="progress-label" id="proglabel">0 von 6 Abschnitten abgeschlossen</div>
+</header>
+
+<!-- ============ S1: TOKENS ============ -->
+<section class="lesson" id="sec-s1">
+  <div class="sec-head">
+    <div><span class="sec-num">ABSCHNITT 1 / 6</span><h2>Tokens: Die Währung der Sprachmodelle</h2></div>
+    <span class="badge-done">✓ abgeschlossen</span>
+  </div>
+
+  <p>Ein LLM sieht niemals Buchstaben oder Wörter. Bevor dein Text das Modell erreicht, zerlegt ihn ein <strong>Tokenizer</strong> in <strong>Tokens</strong> — Zahlen-IDs für Textstücke. Ein Token kann ein ganzes Wort sein («und»), ein Wortteil («keit») oder ein einzelnes Zeichen. Das Modell rechnet ausschliesslich mit diesen IDs.</p>
+  <p>Die Zerlegung folgt der <strong>BPE-Idee</strong> (Byte-Pair Encoding): Man startet mit einzelnen Zeichen und verschmilzt schrittweise die <em>häufigsten</em> Zeichenpaare aus den Trainingsdaten zu neuen Tokens. Was oft vorkommt, wird ein eigenes Token; was selten ist, bleibt in Stücken. Deshalb ist «the» ein Token, «Erdbeere» aber typischerweise zwei bis drei (z.&nbsp;B. <code>Erd</code>+<code>beere</code>).</p>
+
+  <h3>Zwei praktische Konsequenzen</h3>
+  <ul>
+    <li><strong>Buchstaben zählen geht schief.</strong> Frag ein LLM, wie viele «e» in «Erdbeere» stecken: Es sieht nicht <code>E-r-d-b-e-e-r-e</code>, sondern etwa <code>[Erd][beere]</code> — zwei undurchsichtige IDs. Die Buchstaben darin sind für das Modell nicht direkt sichtbar. Gleiches Problem bei Reimen, Anagrammen, Zeichen-genauen String-Operationen.</li>
+    <li><strong>Deutsch ist teurer als Englisch.</strong> Tokenizer sind auf englisch-lastigen Daten trainiert. Englisch braucht grob 1,3–1,4 Tokens pro Wort, Deutsch eher um die 2 — Komposita wie «Netzwerkspeicherkonfiguration» werden in viele Stücke gehackt. Als Grössenordnung: derselbe Inhalt kostet auf Deutsch <strong>20–50&nbsp;% mehr Tokens</strong>. Das heisst: mehr API-Kosten, schneller volles Kontextfenster.</li>
+  </ul>
+
+  <div class="widget">
+    <div class="wcap">✦ Tokenizer-Demo</div>
+    <p class="hint" style="margin-bottom:6px;">Tipp Text ein — er wird live in Token-Chips zerlegt. <strong>Ehrlichkeitshinweis:</strong> Das ist eine Näherung mit einer kleinen Subword-Liste, kein echter BPE-Tokenizer (der hätte ~100'000 gelernte Merges). Die Grössenordnung stimmt aber.</p>
+    <input type="text" id="tokinput" value="Der Jellyfin-Container transkodiert mit Quicksync." autocomplete="off">
+    <div>
+      <button onclick="setTok('Erdbeere')">«Erdbeere»</button>
+      <button onclick="setTok('Die Netzwerkspeicherkonfiguration wurde erfolgreich abgeschlossen.')">Beispiel Deutsch</button>
+      <button onclick="setTok('The network storage configuration was completed successfully.')">Beispiel Englisch</button>
+    </div>
+    <div class="chips" id="tokout"></div>
+    <div class="tokstats" id="tokstats"></div>
+  </div>
+
+  <div class="box box-praxis">
+    <span class="cap">Aus deiner Welt</span>
+    Wenn du Claude Code auf Deutsch bedienst, bezahlst du den Deutsch-Aufschlag bei jedem Turn — dein Prompt <em>und</em> die ganze bisherige Session laufen als Tokens durch. Bei Ollama lokal kostet es kein Geld, aber Kontextplatz und Rechenzeit: gleiche Mechanik, gleicher Tokenizer-Schritt vor dem Modell.
+  </div>
+
+  <div class="box box-why">
+    <span class="cap">Warum gibt es das?</span>
+    Zeichen einzeln wären zu viele Schritte (jedes «e» ein Rechendurchlauf), ganze Wörter als Vokabular wären Millionen Einträge plus «unbekanntes Wort»-Problem. Subword-Tokens sind der Kompromiss: ~50'000–200'000 Vokabular-Einträge decken <em>jeden</em> möglichen Text ab — auch Tippfehler, Code und «Sonarr». Du brauchst das Wissen konkret beim Kosten-Abschätzen von API-Calls und beim Verstehen, warum Kontextfenster in Tokens (nicht Wörtern) gemessen werden.
+  </div>
+
+  <div class="box box-merk">
+    <span class="cap">Merksatz</span>
+    Ein LLM liest keine Buchstaben, sondern Token-IDs. Alles, was zeichen-genau ist (zählen, buchstabieren), ist für das Modell strukturell schwer — und Deutsch kostet spürbar mehr Tokens als Englisch.
+  </div>
+
+  <div class="task" id="task-s1"></div>
+</section>
+
+<!-- ============ S2: NEXT TOKEN ============ -->
+<section class="lesson" id="sec-s2">
+  <div class="sec-head">
+    <div><span class="sec-num">ABSCHNITT 2 / 6</span><h2>Next-Token-Prediction: Das Modell tut nur eines</h2></div>
+    <span class="badge-done">✓ abgeschlossen</span>
+  </div>
+
+  <p>Hier ist die vielleicht wichtigste Einsicht des ganzen Kurses: Ein LLM macht zur Laufzeit genau <strong>eine</strong> Operation. Es nimmt die bisherige Token-Folge und berechnet eine <strong>Wahrscheinlichkeitsverteilung über das nächste Token</strong> — für jedes der ~100'000 Vokabular-Tokens eine Zahl. Dann wird eines gewählt (per Sampling), angehängt, und das Ganze läuft erneut. Token für Token, bis ein Stopp-Token kommt.</p>
+  <p>Es gibt keinen zweiten Modus. Wenn Claude dir ein Bash-Script schreibt: Next-Token-Prediction. Wenn es «nachdenkt» (Extended Thinking): Next-Token-Prediction, nur in einen Denkblock hinein. Wenn es sich entschuldigt: dito. Antworten, Argumente, Code-Struktur — alles <strong>emergiert</strong> aus dieser einen Operation, weil das Modell im Training gelernt hat, welche Fortsetzungen in welchem Kontext plausibel sind.</p>
+  <p>Die Sampler-Regler, die du von ComfyUI und der API kennst (Temperature, Top-p), setzen genau hier an: Sie steuern, wie aus der Verteilung gewählt wird — gierig immer das Top-Token, oder auch mal ein unwahrscheinlicheres.</p>
+
+  <div class="widget">
+    <div class="wcap">✦ Next-Token-Visualisierung</div>
+    <p class="hint" style="margin-bottom:8px;">So sieht die Welt aus Modellsicht aus: ein angefangener Satz, eine Verteilung über Fortsetzungen. <strong>Klick auf einen Balken</strong>, um das Token zu wählen — dann kommt die nächste Verteilung. (Wahrscheinlichkeiten hier handgebaut zur Illustration, aber realistisch geformt.)</p>
+    <div class="ctxline" id="ntctx"></div>
+    <div id="ntbars"></div>
+    <div class="fb neutral" id="ntmsg"></div>
+    <button onclick="ntReset()" style="margin-top:10px;">↺ Von vorne</button>
+  </div>
+
+  <div class="box box-praxis">
+    <span class="cap">Aus deiner Welt</span>
+    Wenn Ollama auf deinem Mac Text «streamt», siehst du diese Schleife live: Jedes aufpoppende Textstück ist ein frisch gesampeltes Token. Und dass die Antwort bei gleichem Prompt zweimal anders ausfällt, liegt nicht an «Laune» — sondern daran, dass bei Temperature &gt; 0 aus der Verteilung <em>gezogen</em> wird statt immer das Maximum zu nehmen.
+  </div>
+
+  <div class="box box-why">
+    <span class="cap">Warum gibt es das?</span>
+    Next-Token-Prediction ist das einzige Trainingsziel, für das es praktisch unbegrenzt Trainingsdaten gibt: jeder existierende Text ist automatisch ein Übungsbeispiel («verdecke das nächste Wort, rate es»). Kein Mensch musste Millionen Beispiele labeln. Für dich ist das der Schlüssel, um Modellverhalten zu <em>debuggen</em>: Bei jeder seltsamen Antwort lautet die richtige Frage nicht «warum lügt es?», sondern «warum war diese Fortsetzung aus Sicht der Trainingsdaten plausibel?».
+  </div>
+
+  <div class="box box-merk">
+    <span class="cap">Merksatz</span>
+    Ein LLM berechnet immer nur die Wahrscheinlichkeitsverteilung für das nächste Token. Alles andere — Antworten, Code, «Denken» — ist diese eine Operation in Schleife.
+  </div>
+
+  <div class="task" id="task-s2"></div>
+</section>
+
+<!-- ============ S3: GEWICHTE VS KONTEXT ============ -->
+<section class="lesson" id="sec-s3">
+  <div class="sec-head">
+    <div><span class="sec-num">ABSCHNITT 3 / 6</span><h2>Gewichte vs. Kontext: Zwei völlig verschiedene Gedächtnisse</h2></div>
+    <span class="badge-done">✓ abgeschlossen</span>
+  </div>
+
+  <p>Woher «weiss» das Modell überhaupt, welche Fortsetzung plausibel ist? Aus zwei Quellen, die man sauber trennen muss:</p>
+
+  <svg viewBox="0 0 740 250" style="width:100%;height:auto;margin:14px 0;" role="img" aria-label="Diagramm Gewichte vs Kontext">
+    <rect x="10" y="20" width="345" height="210" rx="10" fill="#FFFDF8" stroke="#B25222" stroke-width="1.5"/>
+    <text x="182" y="52" text-anchor="middle" fill="#B25222" font-size="18" font-weight="bold">GEWICHTE</text>
+    <text x="182" y="76" text-anchor="middle" fill="#8C8178" font-size="12">Milliarden Zahlen (Parameter)</text>
+    <text x="30" y="108" fill="#1C1613" font-size="13">• Entstehen NUR im Training</text>
+    <text x="30" y="132" fill="#1C1613" font-size="13">• Zur Laufzeit eingefroren — read-only</text>
+    <text x="30" y="156" fill="#1C1613" font-size="13">• Enthalten das «Weltwissen»</text>
+    <text x="30" y="180" fill="#1C1613" font-size="13">• Gleich für alle Nutzer weltweit</text>
+    <text x="30" y="204" fill="#1C1613" font-size="13">• Dein GGUF-File bei Ollama = genau das</text>
+    <rect x="385" y="20" width="345" height="210" rx="10" fill="#FFFDF8" stroke="#4C7A3F" stroke-width="1.5"/>
+    <text x="557" y="52" text-anchor="middle" fill="#4C7A3F" font-size="18" font-weight="bold">KONTEXT</text>
+    <text x="557" y="76" text-anchor="middle" fill="#8C8178" font-size="12">Token-Folge der aktuellen Anfrage</text>
+    <text x="405" y="108" fill="#1C1613" font-size="13">• Existiert nur pro Anfrage / Session</text>
+    <text x="405" y="132" fill="#1C1613" font-size="13">• Prompt, Verlauf, Files, Tool-Ausgaben</text>
+    <text x="405" y="156" fill="#1C1613" font-size="13">• Flüchtig: nach der Session weg</text>
+    <text x="405" y="180" fill="#1C1613" font-size="13">• Pro Nutzer, pro Gespräch verschieden</text>
+    <text x="405" y="204" fill="#1C1613" font-size="13">• Begrenzt (Kontextfenster)</text>
+  </svg>
+
+  <p><strong>Die Gewichte</strong> sind Milliarden Parameter, die im Training (Monate, riesige GPU-Cluster) eingestellt wurden. Zur Laufzeit werden sie <strong>nie verändert</strong> — nur gelesen. <strong>Der Kontext</strong> ist das flüchtige Arbeitsgedächtnis: alles, was in dieser einen Anfrage als Token-Folge vorliegt.</p>
+  <p>Daraus folgt eine Kette von Konsequenzen, die viele überrascht:</p>
+  <ul>
+    <li><strong>Das Modell läuft serverseitig.</strong> Wenn du mit Claude chattest, gehen deine Tokens an Anthropic-Server; dort läuft die Vorhersage-Schleife gegen die eingefrorenen Gewichte. Auf deinem Mac läuft nur die Anzeige. (Bei Ollama läuft dieselbe Maschinerie lokal — deshalb liegen dort die Gewichte als Datei auf deiner SSD.)</li>
+    <li><strong>Dein Prompt ändert das Modell nicht.</strong> Egal was du schreibst — kein Bit der Gewichte bewegt sich. Wenn Claude mitten im Gespräch etwas «lernt» (z.&nbsp;B. dass dein Sonarr KEIN Docker-Container ist), lebt dieses Wissen ausschliesslich im Kontext dieser Session.</li>
+    <li><strong>Deshalb erinnert sich Claude nach Session-Ende an nichts.</strong> Der Kontext wird verworfen; die Gewichte waren nie anders. Neues Gespräch = leeres Arbeitsgedächtnis.</li>
+    <li><strong>«Gedächtnis» muss man aussenrum bauen:</strong> Text speichern und beim nächsten Mal wieder in den Kontext laden. Mehr nicht — aber genau das machen alle Memory-Systeme.</li>
+  </ul>
+
+  <div class="box box-praxis">
+    <span class="cap">Aus deiner Welt</span>
+    Die <code>MEMORY.md</code>- und Memory-Dateien von Claude Code (unter <code>~/.claude/projects/…/memory/</code>) sind exakt so ein externes Gedächtnis: Claude schreibt am Session-Ende Text in Dateien, und beim nächsten Start wird dieser Text wieder <em>in den Kontext geladen</em>. Ein Memory-MCP-Server macht dasselbe mit einem Wissensgraphen. Claude «erinnert» sich nicht — es <strong>liest nach</strong>. Der Unterschied ist unsichtbar, solange die Dateien da sind, und brutal sichtbar, wenn nicht.
+  </div>
+
+  <div class="box box-why">
+    <span class="cap">Warum gibt es diese Trennung?</span>
+    Training kostet Millionen und dauert Monate — das kann nicht pro Nutzer passieren. Ein eingefrorenes Modell, das über den Kontext <em>gesteuert</em> wird, ist der Trick, der LLMs als Massenprodukt möglich macht: ein Gewichtssatz, Millionen gleichzeitige Nutzer, jeder mit eigenem Kontext. Für dich praktisch: Alles, was Claude über dein NAS-Setup «wissen» soll, musst du in den Kontext bringen (CLAUDE.md, Memory, MCP) — es in die Gewichte zu bekommen hiesse Fine-Tuning, ein völlig anderes Kaliber (Modul 02).
+  </div>
+
+  <div class="box box-merk">
+    <span class="cap">Merksatz</span>
+    Gewichte = eingefrorenes Trainings-Wissen, ändern sich zur Laufzeit nie. Kontext = flüchtiges Arbeitsgedächtnis pro Anfrage. «Lernen im Chat» ist immer nur Kontext — darum braucht Erinnerung externe Dateien.
+  </div>
+
+  <div class="task" id="task-s3">
+    <div class="tcap">✎ Aufgabe: Zuordnen</div>
+    <div class="q">Gewichte oder Kontext? Ordne jede Aussage zu, dann «Prüfen».</div>
+    <div id="sortrows"></div>
+    <button class="primary" onclick="checkSort()">Prüfen</button>
+    <div class="fb" id="sortfb"></div>
+  </div>
+</section>
+
+<!-- ============ S4: HALLUZINATIONEN ============ -->
+<section class="lesson" id="sec-s4">
+  <div class="sec-head">
+    <div><span class="sec-num">ABSCHNITT 4 / 6</span><h2>Halluzinationen: Plausibel ≠ wahr</h2></div>
+    <span class="badge-done">✓ abgeschlossen</span>
+  </div>
+
+  <p>Jetzt kannst du Halluzinationen aus den Bausteinen herleiten, statt sie als mysteriösen Bug zu sehen. Das Modell wählt die <strong>plausibelste Fortsetzung</strong> — gemessen an Mustern in den Trainingsdaten. Es gibt <strong>keinen eingebauten Wahrheits-Check</strong>: keine Datenbank-Abfrage, kein Nachschlagen, kein «weiss ich nicht»-Signal aus der Architektur heraus. Wenn die wahre Antwort in den Gewichten schwach oder gar nicht vertreten ist, gewinnt einfach die <em>plausibel klingende</em> Fortsetzung.</p>
+  <p>Und weil das Modell im Training fast nur selbstsichere, flüssige Texte gesehen hat, kommt auch die erfundene Antwort <strong>im selben souveränen Ton</strong>. Konfidenz im Tonfall sagt <em>nichts</em> über Korrektheit — der Ton ist Stil, nicht Signal.</p>
+
+  <h3>Wann es besonders häufig passiert</h3>
+  <ul>
+    <li><strong>Seltene Fakten:</strong> Je seltener etwas in den Trainingsdaten vorkam, desto schwächer die Spur in den Gewichten. Über Docker allgemein: massenhaft Daten. Über die API-Eigenheiten von Bazarr in einer bestimmten Version: fast nichts.</li>
+    <li><strong>Exakte Zahlen, URLs, Zitate, Versionsnummern:</strong> Hier gibt es genau <em>eine</em> richtige Fortsetzung und tausende plausible. <code>docs.example.com/api/v2/auth</code> sieht korrekt aus — ob die Seite existiert, kann das Modell nicht prüfen.</li>
+    <li><strong>Erfundene Prämissen:</strong> Fragst du «Warum nutzt Sonarr Port 8990?», spielt das Modell oft mit, statt die Prämisse zu korrigieren — die Frage <em>klingt</em> ja, als wäre sie wahr.</li>
+    <li><strong>Wissens-Cutoff:</strong> Alles nach dem Trainingsdaten-Stichtag existiert in den Gewichten schlicht nicht — gefragt danach, wird plausibel extrapoliert.</li>
+  </ul>
+
+  <div class="box box-praxis">
+    <span class="cap">Aus deiner Welt</span>
+    Genau deshalb kann Claude bei Konfigfragen zu einem Heim-NAS halluzinieren: Synology-DSM-Pfade, Sonarr-API-Felder oder SABnzbd-Kategorien-Details sind Nischenwissen mit dünner Trainingsdaten-Abdeckung. Ein erfundenes <code>/usr/syno/etc/…</code> klingt völlig plausibel. Das Gegenmittel kannst du selbst bauen: Eine CLAUDE.md pinnt die <em>verifizierten</em> Ports, Keys und Pfade in den Kontext (am besten mit Vermerk «live verifiziert» plus Datum) — Kontext schlägt schwaches Gewichts-Wissen. Und Claude Code kann per <code>curl</code>/<code>ssh</code> nachschauen statt raten: Tool-Zugriff ist der andere Halluzinations-Killer.
+  </div>
+
+  <div class="box box-why">
+    <span class="cap">Wozu brauchst du das?</span>
+    Damit du weisst, <em>wann</em> du prüfen musst — für dich und für alle, denen du KI-Nutzung beibringst. Faustregel fürs Schulen von KMU: LLM-Aussagen über breites Allgemeinwissen sind meist solide; alles Exakte (Zahlen, Rechtsartikel, URLs, Preise, firmenspezifische Details) gehört verifiziert oder per RAG/Tools mit echten Quellen unterfüttert. Wer das versteht, setzt LLMs dort ein, wo sie stark sind — statt ihnen entweder blind zu vertrauen oder sie ganz abzulehnen.
+  </div>
+
+  <div class="box box-merk">
+    <span class="cap">Merksatz</span>
+    Halluzination ist kein Bug im Code, sondern die Architektur selbst: plausibelste ≠ wahre Fortsetzung, und ein Wahrheits-Check ist nicht eingebaut. Höchste Gefahr bei seltenen Fakten und allem Exakten.
+  </div>
+
+  <div class="task" id="task-s4"></div>
+</section>
+
+<!-- ============ S5: KONTEXTFENSTER ============ -->
+<section class="lesson" id="sec-s5">
+  <div class="sec-head">
+    <div><span class="sec-num">ABSCHNITT 5 / 6</span><h2>Das Kontextfenster: Warum das Arbeitsgedächtnis begrenzt ist</h2></div>
+    <span class="badge-done">✓ abgeschlossen</span>
+  </div>
+
+  <p>Der Kontext ist nicht beliebig gross. Typische Fenster 2026: <strong>~200'000 Tokens</strong> bei Claude-Modellen (teils bis 1&nbsp;Mio.), 1–2&nbsp;Mio. bei einzelnen Frontier-Modellen, oft 8k–128k bei lokalen Ollama-Modellen. 200k Tokens klingen nach viel — eine lange Claude-Code-Session mit Datei-Inhalten, Tool-Ausgaben und Logs frisst das erstaunlich schnell.</p>
+  <p>Warum überhaupt eine Grenze? Zwei technische Gründe:</p>
+  <ul>
+    <li><strong>Attention skaliert quadratisch.</strong> Der Kern-Mechanismus (Attention) vergleicht beim Verarbeiten jedes Token mit jedem anderen. Doppelt so viel Kontext ⇒ viermal so viele Vergleiche. Zehnmal so viel ⇒ hundertmal.</li>
+    <li><strong>KV-Cache frisst Speicher.</strong> Damit nicht bei jedem neuen Token alles neu gerechnet wird, hält das Modell pro Token Zwischenergebnisse (Key/Value-Vektoren) im GPU-Speicher. Der wächst linear mit dem Kontext und ist bei langen Fenstern schnell mehrere Gigabyte — <em>pro laufender Anfrage</em>.</li>
+  </ul>
+
+  <div class="widget">
+    <div class="wcap">✦ Simulation: Was Kontextlänge kostet</div>
+    <p class="hint">Zieh den Regler. Attention-Aufwand relativ zu 8k-Kontext; KV-Cache als Grössenordnung für ein 8B-Modell à la Ollama (~130&nbsp;KB/Token, FP16) — auf einem modernen Mac geht das vom Unified Memory ab.</p>
+    <input type="range" id="ctxslider" min="1" max="100" value="10">
+    <div class="simgrid">
+      <div>Kontextlänge</div><div></div><div class="mono" id="ctxlen" style="text-align:right;"></div>
+      <div>Attention-Aufwand</div>
+      <div class="simbar-outer"><div class="simbar-inner" id="attbar" style="background:var(--accent);"></div></div>
+      <div class="mono" id="attval" style="text-align:right;"></div>
+      <div>KV-Cache (8B-Modell)</div>
+      <div class="simbar-outer"><div class="simbar-inner" id="kvbar" style="background:var(--green);"></div></div>
+      <div class="mono" id="kvval" style="text-align:right;"></div>
+    </div>
+    <p class="hint" id="ctxnote" style="margin-top:10px;"></p>
+  </div>
+
+  <h3>Was passiert, wenn das Fenster voll ist?</h3>
+  <p>Irgendwas muss weichen. Zwei Standard-Strategien:</p>
+  <ul>
+    <li><strong>Abschneiden:</strong> Die ältesten Nachrichten fliegen raus. Billig, aber das Modell «vergisst» abrupt den Session-Anfang.</li>
+    <li><strong>Kompaktierung:</strong> Das Modell fasst den bisherigen Verlauf zusammen und ersetzt ihn durch die Zusammenfassung. Genau das macht Claude Code, wenn es «Compacting conversation…» meldet. Danach existiert vom Anfang nur noch das Kondensat — Details (exakte Fehlermeldungen, verworfene Ansätze, ein Pfad aus Message 3) können dabei verloren gehen.</li>
+  </ul>
+
+  <div class="box box-praxis">
+    <span class="cap">Aus deiner Welt</span>
+    Praktische Folgen für lange Claude-Code-Sessions: (1)&nbsp;Nach einer Kompaktierung kann Claude Details von vorhin «vergessen» haben — wichtige Entscheide besser in eine Datei oder Memory schreiben lassen, das überlebt. (2)&nbsp;Grosse Datei-Dumps und Log-Fluten füllen das Fenster sinnlos — gezielt lesen lassen statt <code>cat</code> über alles. (3)&nbsp;Für einen sauberen Themenwechsel ist eine frische Session oft besser als eine zugemüllte alte: leerer Kontext, volle Aufmerksamkeit.
+  </div>
+
+  <div class="box box-why">
+    <span class="cap">Warum gibt es das?</span>
+    Das Kontextfenster ist der Preis-Leistungs-Hebel der ganzen LLM-Ökonomie: Grössere Fenster = quadratisch mehr Rechenzeit + linear mehr GPU-Speicher = teurere Anfragen. Wer versteht, dass Kontext eine <em>knappe Ressource</em> ist, arbeitet automatisch besser mit LLMs: relevante Infos rein, Ballast draussen. Das ist die halbe Miete von gutem Prompting (Modul 03) und der Grund, warum RAG existiert (Modul 04) — statt alles ins Fenster zu stopfen, holt man nur das Relevante.
+  </div>
+
+  <div class="box box-merk">
+    <span class="cap">Merksatz</span>
+    Kontext ist knapp, weil Attention quadratisch und KV-Cache linear kosten. Ist das Fenster voll, wird abgeschnitten oder kompaktiert — was nicht extern gesichert ist, kann dann weg sein.
+  </div>
+
+  <div class="task" id="task-s5">
+    <div class="tcap">✎ Aufgabe: Schätzfrage</div>
+    <div class="q">Deine Claude-Code-Session verarbeitet gerade 20'000 Tokens Kontext. Sie wächst auf 60'000 Tokens (3×). Um welchen Faktor steigt der Attention-Aufwand ungefähr?</div>
+    <div id="s5opts"></div>
+    <div class="expl" id="s5expl"></div>
+  </div>
+</section>
+
+<!-- ============ S6: PROMPT ============ -->
+<section class="lesson" id="sec-s6">
+  <div class="sec-head">
+    <div><span class="sec-num">ABSCHNITT 6 / 6</span><h2>Was ein Prompt wirklich tut</h2></div>
+    <span class="badge-done">✓ abgeschlossen</span>
+  </div>
+
+  <p>Mit den Bausteinen von oben kannst du jetzt präzise sagen, was ein Prompt ist — und was nicht. Ein Prompt <strong>programmiert nichts um und ändert keine Gewichte</strong>. Er ist Kontext, und Kontext <strong>konditioniert die Wahrscheinlichkeitsverteilung</strong>: Dieselben eingefrorenen Gewichte produzieren völlig andere Verteilungen, je nachdem, welche Tokens davor stehen.</p>
+  <p>Nach «Das Rezept für Zopf beginnt mit» ist «Mehl» hochwahrscheinlich. Nach «<code>#!/bin/bash</code>» sind es Shell-Kommandos. Der Prompt verschiebt die Wahrscheinlichkeitsmasse — nichts anderes tun auch die raffinierteren Steuer-Instrumente:</p>
+  <ul>
+    <li><strong>System-Prompt:</strong> Tokens, die vor allem anderen im Kontext stehen und damit <em>alles</em> Nachfolgende konditionieren. Deine CLAUDE.md wird genau so eingespeist — deshalb «weiss» Claude Code deine NAS-IP: Sie steht buchstäblich am Anfang des Kontexts jeder Session.</li>
+    <li><strong>Beispiele (Few-Shot):</strong> Zeigst du zwei Beispiele im Wunschformat, ist die wahrscheinlichste Fortsetzung ein drittes im selben Format. Muster fortsetzen ist das, was Next-Token-Prediction am besten kann.</li>
+    <li><strong>Rollen («Du bist ein erfahrener DevOps-Engineer»):</strong> Verschieben die Verteilung in die Textregionen, wo solche Sätze in den Trainingsdaten standen — hin zu Fachvokabular und typischen Experten-Formulierungen. Kein Schalter, der «Expertenwissen aktiviert», sondern eine statistische Weiche.</li>
+  </ul>
+  <p><strong>Warum gute Prompts wirken</strong>, ist damit entzaubert: Sie machen die gewünschte Fortsetzung zur wahrscheinlichsten. Präzise Anforderungen, Beispiele und relevanter Kontext engen den Raum plausibler Fortsetzungen so ein, dass fast nur noch das Richtige übrig bleibt. Vage Prompts lassen dem Modell einen riesigen Plausibilitätsraum — und dann bekommst du irgendeine generische Mitte. Das Handwerk dazu kommt in Modul 03.</p>
+
+  <div class="box box-praxis">
+    <span class="cap">Aus deiner Welt</span>
+    Wer Claude Code ernsthaft nutzt, betreibt schnell professionelles Kontext-Engineering, ohne es so zu nennen: CLAUDE.md (System-Kontext mit verifizierten Fakten), Memory-Dateien (persistierter Kontext), MCP-Server (holen frischen Kontext zur Laufzeit rein). Wenn Claude dann selten über deine Ports halluziniert, ist das kein Zufall — du hast die Verteilung mit Fakten konditioniert.
+  </div>
+
+  <div class="box box-why">
+    <span class="cap">Wozu brauchst du das?</span>
+    Weil «Prompt = Konditionierung» das mentale Modell ist, das schlechtes von gutem LLM-Arbeiten trennt. Wer denkt, er «befiehlt» einer Person, wundert sich über Ungehorsam. Wer weiss, dass er eine Verteilung formt, fragt automatisch: Welche Tokens im Kontext machen mein Wunschergebnis wahrscheinlich — und welche fehlen noch? Das ist auch der Kern jedes guten Prompting-Workshops in einem Satz.
+  </div>
+
+  <div class="box box-merk">
+    <span class="cap">Merksatz</span>
+    Ein Prompt ändert nie das Modell — er konditioniert die Verteilung über Fortsetzungen. System-Prompt, Beispiele und Rollen sind nur verschiedene Wege, Wahrscheinlichkeitsmasse dorthin zu schieben, wo du sie haben willst.
+  </div>
+
+  <div class="task" id="task-s6">
+    <div class="tcap">✎ Aufgabe: Lückentext</div>
+    <div class="q">Wähl in jeder Lücke die richtige Option, dann «Prüfen».</div>
+    <p style="line-height:2.4;">
+      Ein Prompt <select id="gap1"><option value="">—</option><option>verändert die Gewichte</option><option>konditioniert die Verteilung</option><option>trainiert das Modell nach</option></select>
+      über das nächste Token. Die CLAUDE.md wirkt, weil sie als
+      <select id="gap2"><option value="">—</option><option>Fine-Tuning</option><option>Teil des Kontexts</option><option>Gewichts-Update</option></select>
+      jeder Session vorangestellt wird. Nach Session-Ende bleibt davon im Modell
+      <select id="gap3"><option value="">—</option><option>nichts</option><option>eine Kopie</option><option>ein Embedding</option></select>
+      zurück.
+    </p>
+    <button class="primary" onclick="checkGaps()">Prüfen</button>
+    <div class="fb" id="gapfb"></div>
+  </div>
+</section>
+
+<!-- ============ CHALLENGE ============ -->
+<section class="challenge" id="sec-challenge">
+  <h2>Praxis-Challenge: Gewichte und Kontextfenster anfassen</h2>
+  <p>Du schaust dir an deinem eigenen Ollama-Setup an, wo Gewichte und Kontextfenster konkret stehen. Im Terminal:</p>
+  <pre><code># 1) Welche Modelle (= Gewichtsdateien!) liegen lokal?
+ollama list
+
+# 2) Steckbrief eines Modells — nimm eines aus deiner Liste:
+ollama show &lt;modellname&gt;
+
+# 3) Wo liegen die Gewichte physisch auf deiner SSD?
+du -sh ~/.ollama/models</code></pre>
+  <p><strong>Das solltest du sehen:</strong></p>
+  <ul>
+    <li>Bei <code>ollama show</code>: eine Zeile <code>parameters</code> (z.&nbsp;B. «8.0B» — das sind die Milliarden eingefrorenen Gewichte aus Abschnitt 3) und eine Zeile <code>context length</code> (das Kontextfenster aus Abschnitt 5, oft 4096–131072).</li>
+    <li>Bei <code>du -sh</code>: mehrere GB — das <em>ist</em> das Modell. Kein Wissen ausserhalb dieser Datei plus dem, was du pro Anfrage in den Kontext gibst.</li>
+  </ul>
+  <p>Bonus-Verständnis-Check: Starte <code>ollama run &lt;modell&gt;</code>, erzähl ihm deinen Namen, beende mit <code>/bye</code>, starte neu und frag nach deinem Namen. Du weisst jetzt genau, <em>warum</em> er weg ist — und warum Memory-Dateien in Claude Code dieses Problem lösen.</p>
+  <div class="checkline">
+    <input type="checkbox" id="challengedone">
+    <label for="challengedone">Erledigt — ich habe parameters &amp; context length meines Modells gesehen</label>
+  </div>
+</section>
+
+<!-- ============ QUIZ ============ -->
+<section class="quiz" id="sec-quiz">
+  <h2>Abschlussquiz</h2>
+  <p class="hint">10 Fragen übers ganze Modul. Pro Frage eine Antwort wählen — Auswertung mit Erklärungen am Ende.</p>
+  <div id="quizbody"></div>
+  <button class="primary" id="quizsubmit" onclick="gradeQuiz()">Auswerten</button>
+  <button onclick="resetQuiz()">Quiz zurücksetzen</button>
+  <div class="qscore" id="qscore"></div>
+</section>
+
+<footer>
+  <p>Modul 01 von 10 · Wie LLMs funktionieren</p>
+  <a class="nextlink" href="02-training-pipeline.html">Weiter zu Modul 02: Die Training-Pipeline →</a>
+</footer>
+
+</div>
+
+<script>
+'use strict';
+/* ==================== Fortschritt / localStorage ==================== */
+const NN = '01';
+const KEY = 'kikurs_' + NN + '_';
+const TOTAL_SECTIONS = 6;
+localStorage.setItem(KEY + 'total_sections', String(TOTAL_SECTIONS));
+
+let doneSet = new Set();
+try { doneSet = new Set(JSON.parse(localStorage.getItem(KEY + 'sections') || '[]')); } catch (e) { doneSet = new Set(); }
+
+function completeSection(id) {
+  if (!doneSet.has(id)) {
+    doneSet.add(id);
+    localStorage.setItem(KEY + 'sections', JSON.stringify([...doneSet]));
+  }
+  refreshProgress();
+}
+function refreshProgress() {
+  const n = doneSet.size;
+  document.getElementById('progbar').style.width = (n / TOTAL_SECTIONS * 100) + '%';
+  document.getElementById('proglabel').textContent = n + ' von ' + TOTAL_SECTIONS + ' Abschnitten abgeschlossen';
+  for (const id of doneSet) {
+    const sec = document.getElementById('sec-' + id);
+    if (sec) sec.classList.add('done');
+  }
+}
+
+/* ==================== S1: Tokenizer-Demo ==================== */
+const COMMON_WORDS = new Set(('der die das und ein eine einen einem ist sind war mit auf für von dem den ich du er sie es wir ihr am im an in zu aus bei als auch so wenn aber oder nur noch schon hat kann muss mehr sehr wird wurde nach vor über unter durch was wie wo man nicht kein alle dann denn dass ' +
+  'the and is are was were of to in it a an for on with that this from by at be have has not you i he she they we all can will would there their its ' +
+  'docker nas api code test server port token key file log linux mac ollama claude').split(' '));
+const SUBWORDS = ['lichkeit','schaft','tionen','keiten','heiten','ungen','ation','ition','ssion','iert','iere','tion','sion','ment','ness','able','ible','heit','keit','ung','ing','chen','lein','lich','isch','sch','tsch','ver','vor','zer','ent','emp','ers','ere','ern','est','end','ten','gen','ben','den','sen','len','ung','ge','be','er','en','es','el','le','re','un','de','di','st','ch','ck','ei','ie','au','eu','äu','qu','th','ed','ly','al','or','ar','on','an','at','it','is','us','um'];
+SUBWORDS.sort((a, b) => b.length - a.length);
+const CHIP_COLORS = [
+  ['#FFF3E8', '#B25222'], ['#FBF1DE', '#B25222'], ['#EDF1E2', '#4C7A3F'],
+  ['#FAE7E0', '#A3311B'], ['#F5E3D7', '#A83A08'], ['#FFF3E8', '#9C4517']
+];
+
+const SHOWCASE = {
+  'erdbeere': ['Erd', 'beere'], 'erdbeeren': ['Erd', 'beeren'],
+  'strawberry': ['str', 'aw', 'berry'],
+  'jellyfin': ['Jelly', 'fin'], 'sonarr': ['Son', 'arr'], 'radarr': ['Rad', 'arr'], 'bazarr': ['Baz', 'arr'],
+  'quicksync': ['Quick', 'sync'], 'container': ['Container'], 'synology': ['Syn', 'ology']
+};
+function tokenizeWord(word) {
+  const toks = [];
+  let s = word;
+  if (SHOWCASE[s.toLowerCase()]) return SHOWCASE[s.toLowerCase()];
+  if (COMMON_WORDS.has(s.toLowerCase()) || s.length <= 3) return [s];
+  while (s.length > 0) {
+    if (s.length <= 4 && toks.length > 0) { toks.push(s); break; }
+    let matched = null;
+    // Prefix-Match gegen Subword-Liste (nicht am allerletzten Rest kleben)
+    for (const sub of SUBWORDS) {
+      if (sub.length < s.length && s.toLowerCase().startsWith(sub)) { matched = s.slice(0, sub.length); break; }
+    }
+    if (!matched) matched = s.slice(0, Math.min(3, s.length));
+    toks.push(matched);
+    s = s.slice(matched.length);
+  }
+  return toks;
+}
+function tokenize(text) {
+  const parts = text.match(/[A-Za-zÀ-ÿäöüÄÖÜß]+|\d{1,3}|[^\sA-Za-zÀ-ÿäöüÄÖÜß\d]/g) || [];
+  const out = [];
+  for (const p of parts) {
+    if (/^[A-Za-zÀ-ÿäöüÄÖÜß]+$/.test(p)) out.push(...tokenizeWord(p));
+    else out.push(p);
+  }
+  return out;
+}
+function renderTokens() {
+  const text = document.getElementById('tokinput').value;
+  const toks = tokenize(text);
+  const out = document.getElementById('tokout');
+  out.innerHTML = '';
+  toks.forEach((t, i) => {
+    const span = document.createElement('span');
+    span.className = 'chip';
+    const c = CHIP_COLORS[i % CHIP_COLORS.length];
+    span.style.background = c[0];
+    span.style.color = c[1];
+    span.textContent = t;
+    out.appendChild(span);
+  });
+  const chars = text.replace(/\s/g, '').length;
+  const stats = document.getElementById('tokstats');
+  if (toks.length === 0) { stats.textContent = ''; return; }
+  stats.innerHTML = '<b>' + toks.length + ' Tokens</b> für ' + chars + ' Zeichen · Ø ' +
+    (chars / toks.length).toFixed(1) + ' Zeichen/Token <span class="hint">(Näherung — echte Tokenizer weichen im Detail ab)</span>';
+}
+function setTok(t) { document.getElementById('tokinput').value = t; renderTokens(); }
+document.getElementById('tokinput').addEventListener('input', renderTokens);
+renderTokens();
+
+/* ==================== S2: Next-Token-Visualisierung ==================== */
+const NT_START = 'Der Download auf dem NAS ist';
+const NT_TREE = {
+  root: [
+    { t: 'fertig', p: 34.2, br: 'A' },
+    { t: 'langsam', p: 21.4, br: 'B' },
+    { t: 'fehlgeschlagen', p: 17.8, br: 'C' },
+    { t: 'gleich', p: 9.1, br: 'D' },
+    { t: 'grün', p: 0.4, br: 'E' }
+  ],
+  A: [
+    [ { t: 'und', p: 38.0 }, { t: ',', p: 20.5 }, { t: '.', p: 18.2 }, { t: 'geworden', p: 5.1 }, { t: 'juhu', p: 0.9 } ],
+    [ { t: 'Radarr', p: 41.3 }, { t: 'Sonarr', p: 21.7 }, { t: 'der', p: 13.8 }, { t: 'Jellyfin', p: 8.2 }, { t: 'niemand', p: 0.7 } ],
+    [ { t: 'importiert', p: 52.4 }, { t: 'übernimmt', p: 20.6 }, { t: 'wartet', p: 14.9 }, { t: 'meckert', p: 4.2 }, { t: 'jubelt', p: 1.1 } ],
+    [ { t: 'ihn', p: 47.0 }, { t: 'die Datei', p: 23.8 }, { t: 'alles', p: 12.1 }, { t: 'sofort', p: 9.3 }, { t: 'rückwärts', p: 0.5 } ]
+  ],
+  B: [
+    [ { t: 'weil', p: 42.1 }, { t: 'und', p: 18.9 }, { t: ',', p: 12.6 }, { t: 'heute', p: 7.4 }, { t: 'absichtlich', p: 0.8 } ],
+    [ { t: 'der Provider', p: 32.8 }, { t: 'der', p: 24.1 }, { t: 'die', p: 17.5 }, { t: 'das WLAN', p: 8.3 }, { t: 'Merkur', p: 0.3 } ],
+    [ { t: 'drosselt', p: 38.2 }, { t: 'wieder', p: 26.7 }, { t: 'limitiert', p: 15.9 }, { t: 'zickt', p: 5.8 }, { t: 'tanzt', p: 0.4 } ],
+    [ { t: '.', p: 57.6 }, { t: '…', p: 21.9 }, { t: 'wie immer', p: 14.2 }, { t: 'seit Stunden', p: 4.8 }, { t: 'lila', p: 0.2 } ]
+  ],
+  C: [
+    [ { t: ',', p: 35.7 }, { t: 'weil', p: 28.2 }, { t: '.', p: 16.9 }, { t: 'und', p: 11.0 }, { t: 'leider', p: 4.3 } ],
+    [ { t: 'der', p: 31.2 }, { t: 'die', p: 25.9 }, { t: 'SABnzbd', p: 18.6 }, { t: 'das', p: 12.2 }, { t: 'mein', p: 6.8 } ],
+    [ { t: 'Artikel', p: 29.4 }, { t: 'Server', p: 23.7 }, { t: 'NZB', p: 18.1 }, { t: 'Fallback', p: 10.9 }, { t: 'Toaster', p: 0.5 } ],
+    [ { t: 'fehlt', p: 40.8 }, { t: 'unvollständig ist', p: 29.6 }, { t: 'streikt', p: 15.2 }, { t: 'schweigt', p: 6.1 }, { t: 'weint', p: 1.7 } ]
+  ],
+  D: [
+    [ { t: 'fertig', p: 61.2 }, { t: 'da', p: 16.8 }, { t: 'durch', p: 11.9 }, { t: 'vorbei', p: 6.4 }, { t: 'unsichtbar', p: 0.3 } ],
+    [ { t: '.', p: 55.0 }, { t: ',', p: 22.4 }, { t: '—', p: 12.7 }, { t: 'hoffentlich', p: 7.2 }, { t: 'vielleicht', p: 2.1 } ]
+  ],
+  E: [
+    [ { t: 'markiert', p: 33.5 }, { t: '?', p: 24.8 }, { t: 'hinterlegt', p: 17.2 }, { t: 'vor Neid', p: 6.9 }, { t: 'angelaufen', p: 5.4 } ],
+    [ { t: '.', p: 62.3 }, { t: '…', p: 20.1 }, { t: 'irgendwie', p: 9.8 }, { t: 'oder so', p: 5.5 }, { t: 'meow', p: 0.1 } ]
+  ]
+};
+let ntState = { branch: null, step: 0, gen: [] };
+
+function ntRender() {
+  const ctx = document.getElementById('ntctx');
+  ctx.innerHTML = NT_START + ' <span class="gen">' +
+    ntState.gen.map(escHtml).join(' ') + '</span><span class="cursor"></span>';
+  const bars = document.getElementById('ntbars');
+  bars.innerHTML = '';
+  let opts;
+  if (ntState.branch === null) opts = NT_TREE.root;
+  else {
+    const steps = NT_TREE[ntState.branch];
+    opts = ntState.step < steps.length ? steps[ntState.step] : null;
+  }
+  const msg = document.getElementById('ntmsg');
+  if (!opts) {
+    msg.classList.add('show');
+    msg.innerHTML = '<strong>Satz fertig.</strong> Jeder Klick war ein Sampling-Schritt: Verteilung berechnen → Token wählen → anhängen → von vorn. Genau das macht das Modell — nur wählt es selbst, gesteuert von Temperature &amp; Top-p. Hast du mal ein unwahrscheinliches Token (&lt;1&nbsp;%) gewählt? Dann hast du erlebt, was hohe Temperature macht.';
+    return;
+  }
+  msg.classList.remove('show');
+  const rest = Math.max(0, 100 - opts.reduce((s, o) => s + o.p, 0));
+  opts.forEach(o => {
+    const row = document.createElement('div');
+    row.className = 'probrow';
+    row.innerHTML = '<span class="probtok">' + escHtml(o.t) + '</span>' +
+      '<div class="probbar-outer"><div class="probbar-inner" style="width:' + o.p + '%;"></div></div>' +
+      '<span class="probpct">' + o.p.toFixed(1) + ' %</span>';
+    row.addEventListener('click', () => ntPick(o));
+    bars.appendChild(row);
+  });
+  const row = document.createElement('div');
+  row.className = 'probrow static';
+  row.innerHTML = '<span class="probtok" style="color:var(--muted);">~99’990 weitere…</span>' +
+    '<div class="probbar-outer"><div class="probbar-inner" style="width:' + rest.toFixed(1) + '%;background:var(--muted);"></div></div>' +
+    '<span class="probpct">' + rest.toFixed(1) + ' %</span>';
+  bars.appendChild(row);
+}
+function ntPick(o) {
+  ntState.gen.push(o.t);
+  if (ntState.branch === null) ntState.branch = o.br;
+  else ntState.step++;
+  ntRender();
+}
+function ntReset() { ntState = { branch: null, step: 0, gen: [] }; ntRender(); }
+function escHtml(s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;'); }
+ntRender();
+
+/* ==================== Generischer MC-Task ==================== */
+function buildMcTask(containerId, sectionId, data) {
+  const el = document.getElementById(containerId);
+  el.innerHTML = '<div class="tcap">✎ Aufgabe: ' + data.type + '</div><div class="q">' + data.q + '</div>';
+  const expl = document.createElement('div');
+  expl.className = 'expl';
+  const btns = [];
+  data.options.forEach((opt, i) => {
+    const b = document.createElement('button');
+    b.className = 'opt';
+    b.innerHTML = opt.text;
+    b.addEventListener('click', () => {
+      btns.forEach((bb, j) => {
+        bb.disabled = true;
+        if (j === data.correct) bb.classList.add('right');
+      });
+      if (i !== data.correct) b.classList.add('wrong');
+      expl.innerHTML = data.options.map((o, j) =>
+        '<p><span class="' + (j === data.correct ? 'ok' : 'nok') + '">' + (j === data.correct ? '✓' : '✗') + '</span> <strong>' + o.text + '</strong> — ' + o.why + '</p>'
+      ).join('');
+      expl.classList.add('show');
+      completeSection(sectionId);
+    });
+    btns.push(b);
+    el.appendChild(b);
+  });
+  el.appendChild(expl);
+}
+
+buildMcTask('task-s1', 's1', {
+  type: 'Multiple Choice',
+  q: 'Du fragst ein LLM: «Wie viele r hat Erdbeere?» Es antwortet falsch. Was ist die technisch korrekte Erklärung?',
+  correct: 1,
+  options: [
+    { text: 'Das Modell wurde zu wenig auf Deutsch trainiert.',
+      why: 'Mehr Deutsch-Training verbessert vieles, aber das Zählproblem existiert auch auf Englisch («strawberry»). Die Ursache liegt tiefer.' },
+    { text: 'Das Modell sieht keine Buchstaben, sondern Token-IDs — die Zeichen im Token sind nicht direkt sichtbar.',
+      why: 'Genau. «Erdbeere» kommt als ein bis drei undurchsichtige IDs an. Um Buchstaben zu zählen, müsste das Modell aus dem Training «wissen», welche Zeichen in welchem Token stecken — das klappt nur unzuverlässig.' },
+    { text: 'Die Temperature war zu hoch eingestellt.',
+      why: 'Temperature macht die Auswahl zufälliger, ist aber nicht die Ursache: Auch bei Temperature 0 zählen Modelle Buchstaben oft falsch.' },
+    { text: 'Das Kontextfenster war voll.',
+      why: 'Eine Acht-Zeichen-Frage füllt kein Kontextfenster. Volle Fenster führen zu Vergessen von Verlauf, nicht zu Zählfehlern.' }
+  ]
+});
+
+buildMcTask('task-s2', 's2', {
+  type: 'Multiple Choice',
+  q: 'Claude Code schreibt dir ein komplettes Bash-Script mit Fehlerbehandlung. Was passiert dabei im Modell?',
+  correct: 2,
+  options: [
+    { text: 'Ein spezieller Code-Modus mit Syntax-Regeln wird aktiviert.',
+      why: 'Es gibt keinen Modus-Schalter. Bash-Syntax «beherrscht» das Modell nur, weil in den Trainingsdaten Unmengen Shell-Code steckten — die plausibelste Fortsetzung nach <code>#!/bin/bash</code> ist eben valides Bash.' },
+    { text: 'Das Script wird intern ausgeführt und geprüft, bevor es ausgegeben wird.',
+      why: 'Das Modell selbst führt nichts aus. (Claude Code als Agent kann Scripts danach per Tool ausführen — aber das ist die Werkzeug-Schicht aussenrum, nicht das Modell. Mehr in Modul 05.)' },
+    { text: 'Dieselbe Next-Token-Schleife wie bei jedem Text — Token für Token, konditioniert auf den Kontext.',
+      why: 'Richtig. Code, Prosa, «Denken»: alles dieselbe Operation. Die Struktur des Scripts emergiert daraus, dass strukturierter Code die wahrscheinlichste Fortsetzung des Kontexts ist.' },
+    { text: 'Das Modell ruft eine Bash-Grammatik-Bibliothek auf.',
+      why: 'Es gibt keine eingebauten Grammatik-Bibliotheken — nur Gewichte, Kontext und die Vorhersage-Schleife.' }
+  ]
+});
+
+buildMcTask('task-s4', 's4', {
+  type: 'Multiple Choice',
+  q: 'Bei welcher Frage ist das Halluzinationsrisiko am HÖCHSTEN?',
+  correct: 1,
+  options: [
+    { text: '«Erklär mir, was ein Docker-Volume ist.»',
+      why: 'Breites, millionenfach dokumentiertes Wissen — starke Spur in den Gewichten, niedriges Risiko.' },
+    { text: '«Wie heisst der exakte API-Endpoint, um in Bazarr eine einzelne Untertitel-Datei neu zu synchronisieren?»',
+      why: 'Richtig: Nischen-Software + exakter String = Maximalrisiko. Es gibt eine richtige Antwort und hunderte plausibel klingende. Antwort verifizieren oder Claude direkt in der API nachschauen lassen.' },
+    { text: '«Fasse diesen eingefügten Log-Auszug zusammen.»',
+      why: 'Die Fakten stehen im Kontext — das Modell muss nichts aus schwachen Gewichten holen. Niedriges Risiko (solange der Log ins Fenster passt).' },
+    { text: '«Schreib mir eine Bash-Schleife über alle Dateien in einem Ordner.»',
+      why: 'Standard-Muster, extrem häufig in den Trainingsdaten. Das Ergebnis ist prüfbar durch Ausführen — geringes Risiko.' }
+  ]
+});
+
+/* ==================== S3: Zuordnung ==================== */
+const SORT_ITEMS = [
+  { s: 'Milliarden Parameter, eingestellt im Training', a: 'G', why: 'Das ist die Definition der Gewichte.' },
+  { s: 'Ändert sich, während du mit Claude chattest', a: 'K', why: 'Nur der Kontext wächst pro Nachricht — die Gewichte bleiben eingefroren.' },
+  { s: 'Der Inhalt deiner CLAUDE.md zur Laufzeit', a: 'K', why: 'CLAUDE.md wird bei Session-Start in den Kontext geladen — sie ändert kein einziges Gewicht.' },
+  { s: 'Claudes Wissen über Bash-Syntax', a: 'G', why: 'Aus den Trainingsdaten gelernt, in den Parametern gespeichert.' },
+  { s: 'Ist nach dem Ende der Session weg', a: 'K', why: 'Kontext ist flüchtig. Die Gewichte waren nie anders — es gibt nichts zu vergessen.' },
+  { s: 'Das GGUF-File in ~/.ollama/models', a: 'G', why: 'Die Modelldatei bei Ollama ist buchstäblich der Gewichtssatz auf deiner SSD.' },
+  { s: 'Die Ausgabe eines MCP-Tool-Calls in der laufenden Session', a: 'K', why: 'Tool-Ausgaben werden als Tokens in den Kontext eingespeist — Laufzeit-Info, kein Modellwissen.' }
+];
+(function buildSort() {
+  const host = document.getElementById('sortrows');
+  SORT_ITEMS.forEach((item, i) => {
+    const row = document.createElement('div');
+    row.className = 'sortrow';
+    row.dataset.idx = i;
+    row.innerHTML = '<span class="stmt">' + item.s + '</span>' +
+      '<button class="catbtn" data-v="G">Gewichte</button>' +
+      '<button class="catbtn" data-v="K">Kontext</button>' +
+      '<span class="verdict"></span>';
+    row.querySelectorAll('.catbtn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        row.querySelectorAll('.catbtn').forEach(b => b.classList.remove('sel'));
+        btn.classList.add('sel');
+        row.dataset.choice = btn.dataset.v;
+        row.classList.remove('right', 'wrong');
+      });
+    });
+    host.appendChild(row);
+  });
+})();
+function checkSort() {
+  const rows = document.querySelectorAll('#sortrows .sortrow');
+  const fb = document.getElementById('sortfb');
+  let answered = 0, correct = 0;
+  rows.forEach(row => {
+    const item = SORT_ITEMS[row.dataset.idx];
+    if (!row.dataset.choice) return;
+    answered++;
+    const ok = row.dataset.choice === item.a;
+    if (ok) correct++;
+    row.classList.remove('right', 'wrong');
+    row.classList.add(ok ? 'right' : 'wrong');
+    row.querySelector('.verdict').textContent = (ok ? '✓ ' : '✗ Richtig wäre ' + (item.a === 'G' ? 'Gewichte' : 'Kontext') + ': ') + item.why;
+  });
+  fb.className = 'fb show ' + (answered < rows.length ? 'neutral' : (correct === rows.length ? 'good' : 'bad'));
+  if (answered < rows.length) {
+    fb.textContent = 'Noch ' + (rows.length - answered) + ' Aussage(n) ohne Zuordnung.';
+    return;
+  }
+  fb.textContent = correct + ' von ' + rows.length + ' richtig.' + (correct === rows.length ? ' Sauber.' : ' Lies die Auflösungen — dann sitzt die Trennung.');
+  completeSection('s3');
+}
+
+/* ==================== S5: Slider + Schätzfrage ==================== */
+const ctxSlider = document.getElementById('ctxslider');
+function updateCtxSim() {
+  const v = Number(ctxSlider.value);            // 1..100
+  const tokens = Math.round(Math.pow(10, 3 + (v / 100) * 3)); // 1k .. 1M, log
+  const kTok = tokens / 1000;
+  const attRel = Math.pow(tokens / 8000, 2);    // relativ zu 8k
+  const kvGB = tokens * 130 / 1024 / 1024;      // ~130 KB/Token
+  document.getElementById('ctxlen').textContent = kTok >= 1000 ? (kTok / 1000).toFixed(1) + 'M Tokens' : Math.round(kTok) + 'k Tokens';
+  const attPct = Math.min(100, Math.pow(v / 100, 1) * 100);
+  // Balken logarithmisch skalieren, damit man was sieht:
+  document.getElementById('attbar').style.width = Math.min(100, (Math.log10(attRel * 100) / 6) * 100) + '%';
+  document.getElementById('attval').textContent = attRel >= 100 ? Math.round(attRel).toLocaleString('de-CH') + '×' : attRel.toFixed(1) + '×';
+  document.getElementById('kvbar').style.width = Math.min(100, kvGB / 130 * 100) + '%';
+  document.getElementById('kvval').textContent = kvGB >= 1 ? kvGB.toFixed(1) + ' GB' : Math.round(kvGB * 1024) + ' MB';
+  const note = document.getElementById('ctxnote');
+  if (kvGB > 100) note.textContent = '✗ Mehr KV-Cache, als selbst ein Mac mit sehr viel RAM hat — so viel Kontext läuft lokal schlicht nicht (ohne Quantisierung/Tricks).';
+  else if (kvGB > 20) note.textContent = 'Auf einem Mac mit viel RAM noch machbar — aber der Cache konkurriert mit Modellgewichten und allem anderen im RAM.';
+  else note.textContent = 'Beachte: Der Attention-Aufwand wächst quadratisch — die linke Zahl explodiert viel schneller als die Kontextlänge.';
+}
+ctxSlider.addEventListener('input', updateCtxSim);
+updateCtxSim();
+
+(function buildS5() {
+  const host = document.getElementById('s5opts');
+  const opts = [
+    { label: '≈ 3×', ok: false },
+    { label: '≈ 9×', ok: true },
+    { label: '≈ 27×', ok: false },
+    { label: 'bleibt gleich', ok: false }
+  ];
+  const expl = document.getElementById('s5expl');
+  const btns = [];
+  opts.forEach(o => {
+    const b = document.createElement('button');
+    b.className = 'opt';
+    b.textContent = o.label;
+    b.addEventListener('click', () => {
+      btns.forEach(bb => { bb.disabled = true; if (opts[btns.indexOf(bb)].ok) bb.classList.add('right'); });
+      if (!o.ok) b.classList.add('wrong');
+      expl.innerHTML = '<p><span class="ok">Auflösung:</span> Attention vergleicht jedes Token mit jedem — der Aufwand wächst mit dem <strong>Quadrat</strong> der Länge. 3× so viel Kontext ⇒ 3² = <strong>≈ 9×</strong> Aufwand. (≈ 3× wäre lineares Wachstum, ≈ 27× kubisches — beides falsch. Und «bleibt gleich» wäre schön, dann gäbe es keine Kontextfenster-Limits.) Genau deshalb sind lange Kontexte teuer und die Fenster begrenzt.</p>';
+      expl.classList.add('show');
+      completeSection('s5');
+    });
+    btns.push(b);
+    host.appendChild(b);
+  });
+})();
+
+/* ==================== S6: Lückentext ==================== */
+const GAP_ANSWERS = { gap1: 'konditioniert die Verteilung', gap2: 'Teil des Kontexts', gap3: 'nichts' };
+function checkGaps() {
+  const fb = document.getElementById('gapfb');
+  let filled = 0, correct = 0;
+  for (const [id, ans] of Object.entries(GAP_ANSWERS)) {
+    const sel = document.getElementById(id);
+    sel.classList.remove('right', 'wrong');
+    if (!sel.value) continue;
+    filled++;
+    if (sel.value === ans) { correct++; sel.classList.add('right'); }
+    else sel.classList.add('wrong');
+  }
+  if (filled < 3) {
+    fb.className = 'fb show neutral';
+    fb.textContent = 'Füll zuerst alle drei Lücken.';
+    return;
+  }
+  if (correct === 3) {
+    fb.className = 'fb show good';
+    fb.textContent = '✓ Alle drei richtig. Prompt = Konditionierung, CLAUDE.md = Kontext, und im Modell bleibt: nichts.';
+    completeSection('s6');
+  } else {
+    fb.className = 'fb show bad';
+    fb.textContent = correct + ' von 3 richtig — rot markierte Lücken nochmal anpassen. Denk dran: Gewichte sind zur Laufzeit read-only.';
+  }
+}
+
+/* ==================== Challenge-Checkbox ==================== */
+const chk = document.getElementById('challengedone');
+chk.checked = localStorage.getItem(KEY + 'challenge') === '1';
+chk.addEventListener('change', () => localStorage.setItem(KEY + 'challenge', chk.checked ? '1' : '0'));
+
+/* ==================== Quiz ==================== */
+const QUIZ = [
+  { q: 'Was macht der Tokenizer?',
+    o: ['Er übersetzt Text in eine andere Sprache, die das Modell versteht',
+        'Er zerlegt Text in Subword-Stücke und wandelt sie in Zahlen-IDs um',
+        'Er komprimiert den Text verlustfrei, um Speicher zu sparen',
+        'Er filtert unerlaubte Wörter aus dem Prompt'],
+    c: 1,
+    e: 'Der Tokenizer zerlegt Text nach gelernten Häufigkeitsmustern (BPE) in Tokens und gibt deren IDs ans Modell. Keine Übersetzung, keine Kompression im klassischen Sinn, kein Filter.' },
+  { q: 'Warum braucht derselbe Inhalt auf Deutsch mehr Tokens als auf Englisch?',
+    o: ['Deutsche Wörter enthalten mehr Buchstaben, und Tokens sind immer 4 Buchstaben lang',
+        'Tokenizer-Vokabulare sind englisch-lastig — deutsche Wörter und Komposita werden in mehr Stücke zerlegt',
+        'Umlaute müssen einzeln kodiert werden',
+        'Das stimmt nicht — Deutsch braucht weniger Tokens'],
+    c: 1,
+    e: 'Die BPE-Merges wurden auf überwiegend englischen Daten gelernt: häufige englische Wörter sind ein Token, deutsche Komposita zerfallen in mehrere. Grössenordnung 20–50 % Aufschlag. Tokens haben keine feste Länge, und Umlaute sind nicht das Kernproblem.' },
+  { q: 'Was ist die EINZIGE Operation, die ein LLM zur Laufzeit ausführt?',
+    o: ['Fakten in seiner internen Datenbank nachschlagen',
+        'Je nach Aufgabe: Verstehen, Planen oder Generieren',
+        'Eine Wahrscheinlichkeitsverteilung über das nächste Token berechnen',
+        'Den Prompt in Logik-Regeln übersetzen und auswerten'],
+    c: 2,
+    e: 'Es gibt keine Datenbank, keine getrennten Modi, keine Logik-Engine — nur die Next-Token-Verteilung in Schleife. Alles, was nach Verstehen oder Planen aussieht, emergiert daraus.' },
+  { q: 'Du erklärst Claude im Chat ausführlich, dass dein Sonarr ein natives Paket und KEIN Docker-Container ist. Was hat sich dadurch am Modell geändert?',
+    o: ['Die Gewichte wurden minimal angepasst, damit es sich das merkt',
+        'Nichts — die Information lebt nur im Kontext dieser Session',
+        'Ein Nutzerprofil im Modell wurde aktualisiert',
+        'Das Modell hat einen neuen Fakt in sein Langzeitgedächtnis geschrieben'],
+    c: 1,
+    e: 'Gewichte sind zur Laufzeit read-only. Es gibt kein Profil und kein Langzeitgedächtnis im Modell. Solche Fakten gehören deshalb in eine CLAUDE.md — damit sie in jede neue Session als Kontext geladen werden.' },
+  { q: 'Warum «erinnert» sich Claude in einer neuen Session an gestern — obwohl der Kontext verworfen wurde?',
+    o: ['Anthropic speichert das Gespräch in den Gewichten nach',
+        'Externe Memory-Dateien werden beim Start wieder in den Kontext geladen',
+        'Das Modell erkennt dich an deiner Schreibweise',
+        'Es erinnert sich nicht wirklich — es rät gut'],
+    c: 1,
+    e: 'Memory-Dateien (z. B. eine MEMORY.md) sind Text, der beim Session-Start erneut in den Kontext wandert. Das Modell liest nach statt sich zu erinnern. Gewichte werden durch Gespräche nie verändert.' },
+  { q: 'Warum klingt eine halluzinierte Antwort genauso selbstsicher wie eine korrekte?',
+    o: ['Das Modell will Fehler verbergen',
+        'Der souveräne Ton ist gelernter Stil aus den Trainingsdaten — er ist von der Korrektheit entkoppelt',
+        'Halluzinationen werden intern als korrekt markiert',
+        'Unsichere Antworten werden vor der Ausgabe gelöscht'],
+    c: 1,
+    e: 'Trainingsdaten bestehen fast nur aus flüssig-selbstsicheren Texten, also wird auch Erfundenes so formuliert. Es gibt keine Absicht und keine interne Korrektheits-Markierung — Tonfall ist kein Wahrheitssignal.' },
+  { q: 'Claude nennt dir für eine Synology-DSM-Einstellung einen exakten Konfigurationspfad. Wie gehst du damit um?',
+    o: ['Übernehmen — Pfade halluziniert Claude praktisch nie',
+        'Skeptisch prüfen: Nischenwissen + exakter String = typisches Halluzinations-Terrain',
+        'Nur prüfen, wenn die Antwort zögerlich formuliert war',
+        'Claude nochmal fragen, ob es sicher ist — das ist ein zuverlässiger Check'],
+    c: 1,
+    e: 'Seltene Fakten plus exakte Strings sind die Hochrisiko-Kombination. Der Tonfall hilft nicht (Frage 6), und Nachfragen produziert oft nur eine zweite plausible Antwort. Besser: nachschauen (lassen) — per SSH aufs NAS ist der Check trivial.' },
+  { q: 'Warum sind Kontextfenster überhaupt begrenzt?',
+    o: ['Aus Datenschutzgründen',
+        'Weil der Tokenizer nur begrenzt viele IDs vergeben kann',
+        'Attention-Aufwand wächst quadratisch und der KV-Cache frisst linear GPU-Speicher',
+        'Damit Anbieter mehr Abos verkaufen können'],
+    c: 2,
+    e: 'Die beiden technischen Kostentreiber: jedes Token wird mit jedem verglichen (quadratisch), und pro Token liegen Zwischenwerte im Speicher (linear, aber schnell Gigabytes). Das Vokabular hat damit nichts zu tun.' },
+  { q: 'Claude Code meldet «Compacting conversation…». Was passiert da — und was ist das Risiko?',
+    o: ['Der Verlauf wird verlustfrei gezippt — kein Risiko',
+        'Der Verlauf wird durch eine Modell-Zusammenfassung ersetzt — Details können verloren gehen',
+        'Die Session wird beendet und neu gestartet',
+        'Alte Nachrichten werden auf die Festplatte ausgelagert und bei Bedarf geladen'],
+    c: 1,
+    e: 'Kompaktierung = Zusammenfassung ersetzt den Original-Verlauf im Kontext. Das ist verlustbehaftet: exakte Fehlermeldungen oder Pfade von vorhin können fehlen. Darum wichtige Zwischenstände in Dateien/Memory sichern.' },
+  { q: 'Was tut ein System-Prompt technisch?',
+    o: ['Er schaltet das Modell in einen anderen Betriebsmodus',
+        'Er steht als Token-Folge vor allem anderen im Kontext und konditioniert so die gesamte Verteilung',
+        'Er passt die Gewichte für die Dauer der Session an',
+        'Er wird vom Modell als Befehl mit höchster Priorität ausgeführt'],
+    c: 1,
+    e: 'Kein Modus, kein Gewichts-Update, keine Befehls-Engine: Der System-Prompt ist einfach Kontext an vorderster Position — und prägt damit statistisch jede folgende Vorhersage. Genau so wirkt deine CLAUDE.md.' }
+];
+(function buildQuiz() {
+  const host = document.getElementById('quizbody');
+  QUIZ.forEach((item, qi) => {
+    const div = document.createElement('div');
+    div.className = 'quiz-q';
+    div.innerHTML = '<div class="qq">' + (qi + 1) + '. ' + item.q + '</div>';
+    item.o.forEach((opt, oi) => {
+      const b = document.createElement('button');
+      b.className = 'opt';
+      b.textContent = opt;
+      b.dataset.q = qi;
+      b.dataset.o = oi;
+      b.addEventListener('click', () => {
+        if (quizGraded) return;
+        div.querySelectorAll('.opt').forEach(x => x.style.borderColor = '');
+        div.querySelectorAll('.opt').forEach(x => delete x.dataset.sel);
+        b.dataset.sel = '1';
+        b.style.borderColor = 'var(--accent)';
+      });
+      div.appendChild(b);
+    });
+    const ex = document.createElement('div');
+    ex.className = 'expl';
+    ex.innerHTML = '<p>' + item.e + '</p>';
+    div.appendChild(ex);
+    host.appendChild(div);
+  });
+})();
+let quizGraded = false;
+function gradeQuiz() {
+  const host = document.getElementById('quizbody');
+  const qdivs = host.querySelectorAll('.quiz-q');
+  let answered = 0, score = 0;
+  qdivs.forEach((div, qi) => {
+    const sel = div.querySelector('.opt[data-sel]');
+    if (sel) answered++;
+  });
+  const scoreEl = document.getElementById('qscore');
+  if (answered < QUIZ.length) {
+    scoreEl.style.display = 'block';
+    scoreEl.style.borderColor = 'var(--yellow)';
+    scoreEl.textContent = 'Noch ' + (QUIZ.length - answered) + ' Frage(n) offen.';
+    return;
+  }
+  quizGraded = true;
+  qdivs.forEach((div, qi) => {
+    const item = QUIZ[qi];
+    const opts = div.querySelectorAll('.opt');
+    opts.forEach((b, oi) => {
+      b.disabled = true;
+      if (oi === item.c) b.classList.add('right');
+      else if (b.dataset.sel) b.classList.add('wrong');
+    });
+    const sel = div.querySelector('.opt[data-sel]');
+    if (sel && Number(sel.dataset.o) === item.c) score++;
+    div.querySelector('.expl').classList.add('show');
+  });
+  localStorage.setItem(KEY + 'quiz', JSON.stringify({ score: score, total: QUIZ.length, done: true }));
+  scoreEl.style.display = 'block';
+  scoreEl.style.borderColor = score >= 8 ? 'var(--green)' : (score >= 5 ? 'var(--yellow)' : 'var(--red)');
+  scoreEl.innerHTML = score + ' / ' + QUIZ.length + ' richtig' +
+    (score === QUIZ.length ? ' — fehlerfrei. Weiter zu Modul 02.' :
+     score >= 8 ? ' — solides Fundament. Lies die Erklärungen der Fehler kurz durch.' :
+     score >= 5 ? ' — Kern sitzt, Details nicht. Erklärungen lesen lohnt sich.' :
+     ' — nochmal durch die Merksätze gehen und Quiz zurücksetzen.');
+  document.getElementById('quizsubmit').disabled = true;
+}
+function resetQuiz() {
+  quizGraded = false;
+  localStorage.removeItem(KEY + 'quiz');
+  document.getElementById('quizbody').innerHTML = '';
+  document.getElementById('qscore').style.display = 'none';
+  document.getElementById('quizsubmit').disabled = false;
+  // Quiz neu aufbauen
+  (function () {
+    const host = document.getElementById('quizbody');
+    QUIZ.forEach((item, qi) => {
+      const div = document.createElement('div');
+      div.className = 'quiz-q';
+      div.innerHTML = '<div class="qq">' + (qi + 1) + '. ' + item.q + '</div>';
+      item.o.forEach((opt, oi) => {
+        const b = document.createElement('button');
+        b.className = 'opt';
+        b.textContent = opt;
+        b.dataset.q = qi;
+        b.dataset.o = oi;
+        b.addEventListener('click', () => {
+          if (quizGraded) return;
+          div.querySelectorAll('.opt').forEach(x => { x.style.borderColor = ''; delete x.dataset.sel; });
+          b.dataset.sel = '1';
+          b.style.borderColor = 'var(--accent)';
+        });
+        div.appendChild(b);
+      });
+      const ex = document.createElement('div');
+      ex.className = 'expl';
+      ex.innerHTML = '<p>' + item.e + '</p>';
+      div.appendChild(ex);
+      host.appendChild(div);
+    });
+  })();
+}
+
+/* ==================== Init ==================== */
+refreshProgress();
+// Vorher gespeicherten Quiz-Stand anzeigen
+try {
+  const saved = JSON.parse(localStorage.getItem(KEY + 'quiz') || 'null');
+  if (saved && saved.done) {
+    const scoreEl = document.getElementById('qscore');
+    scoreEl.style.display = 'block';
+    scoreEl.style.borderColor = 'var(--border)';
+    scoreEl.textContent = 'Zuletzt: ' + saved.score + ' / ' + saved.total + ' richtig. (Quiz kann erneut gemacht werden — «Quiz zurücksetzen» löscht den Stand.)';
+  }
+} catch (e) {}
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!-- @dsCard group="Components" viewport="700x400" name="Cards — Step, Paket, Team, Zitat, Kompass" subtitle="Karten-Familie: Terra-Verlauf, Sand-Hairline, Tinte" -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+</head>
+<body style="margin: 0; background: var(--bg-page);">
+<div id="root"></div>
+<script type="text/babel">
+const { StepCard, PackageCard, QuoteCard, KompassTile, TeamCard } = window.vaiaconDesignSystem_5f353f;
+
+function Demo() {
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', gap: 12, padding: 14 }}>
+      <div style={{ display: 'grid', gridTemplateColumns: '1.1fr 1fr 1fr', gap: 12, alignItems: 'stretch' }}>
+        <PackageCard
+          badge="Paket 01 · Arbeitsweise"
+          title="KI im Alltag"
+          features={['Prozesse automatisieren', 'Büro-Bot als digitaler Mitarbeiter']}
+          style={{ padding: '24px 22px', gap: 12 }}
+        />
+        <PackageCard
+          variant="sand"
+          badge="Paket 02 · Mindchange"
+          title="Change & Coaching"
+          features={['Coaching für Unternehmer', 'Teams befähigen']}
+          style={{ padding: '24px 22px', gap: 12 }}
+        />
+        <QuoteCard
+          logoSrc="../../assets/logo-mark-white.png"
+          quote="Fortschritt entsteht nicht durch Vergleich, sondern durch Entwicklung."
+          attribution="Eine unserer Grundüberzeugungen"
+          style={{ padding: '24px 22px' }}
+        />
+      </div>
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 0.9fr', gap: 12, alignItems: 'start' }}>
+        <ol style={{ display: 'contents', margin: 0, padding: 0 }}>
+          <StepCard number="01" badge="Kostenlos & unverbindlich" title="Erstgespräch" style={{ padding: '22px 20px', gap: 10 }}>Wir hören zu und zeigen den nächsten sinnvollen Schritt.</StepCard>
+        </ol>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+          <KompassTile number="01">Ist es richtig für die Menschen, die davon betroffen sind?</KompassTile>
+          <KompassTile number="02">Ist es richtig für das Unternehmen und seine Zukunft?</KompassTile>
+        </div>
+        <TeamCard name="André Ulrich" role="Mitgründer · KMU-Experte" photoHeight={104} style={{ padding: 12, gap: 10 }} />
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+</script>
+</body>
+</html>

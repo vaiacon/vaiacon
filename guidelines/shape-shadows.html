@@ -1,0 +1,20 @@
+<!-- @dsCard group="Spacing" viewport="700x200" name="Schatten" subtitle="Warm getönt, sparsam — Karten bleiben meist schattenlos" -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { padding: 26px 28px 34px; box-sizing: border-box; display: flex; gap: 24px; background: var(--bg-page); }
+  .s { flex: 1; height: 116px; background: var(--surface-card); border-radius: 18px; display: flex; flex-direction: column; justify-content: flex-end; gap: 2px; padding: 12px 16px; box-sizing: border-box; }
+  .n { font-size: 12.5px; font-weight: 700; color: var(--text-strong); }
+  .v { font-family: var(--font-mono); font-size: 10px; color: var(--text-muted); }
+</style>
+</head>
+<body>
+  <div class="s" style="border: 1px solid var(--border-strong);"><span class="n">Standard: kein Schatten</span><span class="v">Hairline genügt</span></div>
+  <div class="s" style="border: 2px solid var(--border-ink); box-shadow: var(--shadow-comic);"><span class="n">Comic-Offset</span><span class="v">6px 6px 0 · Sticker</span></div>
+  <div class="s" style="box-shadow: var(--shadow-soft);"><span class="n">Soft schwebend</span><span class="v">0 10px 26px · warm</span></div>
+  <div class="s" style="box-shadow: var(--shadow-cta);"><span class="n">CTA auf Terra</span><span class="v">0 18px 40px −12px</span></div>
+</body>
+</html>

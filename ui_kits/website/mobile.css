@@ -1,0 +1,265 @@
+/* ============================================================
+   vaiacon.ch — Mobile-Optimierung
+   Responsive Overrides über den Inline-Styles der Sektionen.
+   Breakpoints: 1200 (Header) · 1120 · 700 (Phones) · 480 (klein)
+   ============================================================ */
+
+/* Mobile-Header standardmässig aus (Desktop zeigt SiteHeader) */
+.site-header-shell {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 180;
+  width: 100%;
+}
+.site-header-spacer { height: 113px; }
+html { scroll-padding-top: 116px; }
+.header-mobile { display: none; }
+.chat-fab-short { display: none; }
+.hero-stamp-mobile { display: none; }
+.hero-mobile-values { display: none; }
+
+/* DSG-Siegel: federnder Hover-Lift; bei sehr flachen Fenstern etwas kompakter. */
+.dsgvo-siegel { transition: transform 0.4s var(--ease-spring); }
+.dsgvo-siegel:hover { transform: translateY(-5px); }
+@media (max-height: 640px) {
+  .hero-siegel { width: 92px !important; height: 92px !important; }
+}
+
+/* Touch: kein graues Tap-Highlight */
+a, button, summary { -webkit-tap-highlight-color: transparent; }
+
+/* ── ≤1120px: Hero-Stempel zentrieren (Tweak-Position ist für Desktop gesetzt) ── */
+@media (max-width: 1120px) {
+  .hero-stamp { left: 50% !important; bottom: 47vh !important; max-width: calc(100vw - 44px) !important; }
+}
+
+/* ── ≤1200px: Burger-Header statt Desktop-Nav (lange Nav braucht Luft) ─────────────── */
+@media (max-width: 1200px) {
+  .header-desktop { display: none; }
+  .header-mobile { display: block; }
+  .site-header-spacer { height: 65px; }
+  html { scroll-padding-top: 68px; }
+  .chat-root { display: none !important; }
+}
+
+/* ── ≤700px: Kern-Optimierung für Phones ─────────────────── */
+@media (max-width: 700px) {
+  html, body { overflow-x: hidden; }
+
+  /* Hero: svh statt vh (mobile Adressleiste), kompakte Bühne */
+  #top { height: 100svh !important; min-height: 560px; }
+  .hero-headline { top: 12vh !important; padding: 0 22px; }
+  #top h1 { font-size: clamp(29px, 8.4vw, 40px) !important; hyphens: auto; overflow-wrap: break-word; }
+  .hero-subline { max-width: 340px !important; margin-top: 16px !important; padding: 0 12px !important; font-size: 15px !important; line-height: 1.45 !important; }
+  .hero-pills { gap: 8px !important; margin-top: 18px !important; padding: 0 20px; }
+  .hero-pill { white-space: nowrap !important; text-align: center; padding: 8px 14px !important; font-size: clamp(10.5px, 3.3vw, 13px) !important; }
+  .hero-mobile-values {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: min(100%, 340px);
+    margin: 17px auto 0;
+    padding: 0 10px;
+    box-sizing: border-box;
+    color: rgba(255,253,248,0.86);
+    font-size: clamp(9.5px, 2.8vw, 11px);
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    line-height: 1.35;
+    text-transform: uppercase;
+  }
+  .hero-mobile-values span { display: inline-flex; align-items: center; }
+  .hero-mobile-values span + span::before {
+    content: "";
+    width: 4px;
+    height: 4px;
+    border-radius: 999px;
+    background: var(--peach-200);
+    opacity: 0.85;
+    margin-right: 8px;
+    flex: none;
+  }
+  .hero-robot { height: 44svh !important; bottom: -3svh !important; }
+  .hero-robot > div { left: -6px !important; } /* Roboter mobil leicht nach links */
+  .hero-brand, .hero-brand-link { display: none !important; }
+  .hero-vignette { left: 0 !important; top: 0 !important; }
+
+  /* Erstanalyse-Stempel: mobil im Headline-Stapel statt frei schwebend */
+  .hero-stamp { display: none !important; }
+  .hero-siegel { display: inline-flex !important; width: 82px !important; height: 82px !important; right: 18px !important; bottom: calc(20px + env(safe-area-inset-bottom)) !important; transform: none !important; }
+  .hero-stamp-mobile { display: inline-flex; align-items: baseline; justify-content: center; gap: 9px; pointer-events: auto; margin-top: 16px; background: rgba(255,244,236,0.12); border: 1px solid rgba(255,255,255,0.32); color: var(--cream-50); border-radius: 999px; padding: 8px 14px; font-size: clamp(10.5px, 3.3vw, 13px); font-weight: 700; letter-spacing: 0; line-height: 1.2; text-decoration: none; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+  .hero-stamp-mobile:hover { color: var(--cream-50); }
+  .hero-stamp-mobile > span { color: var(--peach-200); }
+
+  /* Sektionen: kompakteres Padding, saubere Umbrüche */
+  main section > div { padding: 56px 20px !important; }
+  main h2, main h3 { overflow-wrap: break-word; hyphens: auto; }
+
+  /* Mobile-Entwurf: Inhaltsbereiche konsequent zentrieren */
+  main section,
+  main section > div,
+  main section article,
+  main section h2,
+  main section h3,
+  main section p,
+  main section small,
+  main section summary {
+    text-align: center !important;
+  }
+  main section > div,
+  main section > div > div,
+  main section article,
+  main section article > div {
+    align-items: center !important;
+    justify-items: center !important;
+  }
+  main section p,
+  main section h2,
+  main section h3 {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  main section ul,
+  main section ol {
+    justify-content: center !important;
+    justify-items: center !important;
+    align-items: center !important;
+  }
+
+  /* Leistungen: schmale Nummern-Spalte, Pfeil weg */
+  #leistungen article { grid-template-columns: 1fr !important; gap: 12px !important; padding: 26px 4px !important; }
+  #leistungen article > span,
+  #leistungen article > div {
+    justify-self: center !important;
+  }
+  #leistungen article > i { display: none !important; }
+
+  /* Listen und Karten: Icons bleiben ruhig, Texte stehen mittig */
+  #buerobot ul,
+  #datenschutz ul,
+  #begleitung article ul {
+    width: 100%;
+  }
+  #buerobot li,
+  #datenschutz li {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #datenschutz li > span:not([aria-hidden="true"]) {
+    align-items: center !important;
+  }
+  #begleitung article li {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  #ablauf ol li > div,
+  #faq summary {
+    justify-content: center !important;
+  }
+  #faq summary {
+    gap: 10px !important;
+  }
+
+  /* Karten: engeres Innen-Padding */
+  #ablauf ol li { padding: 28px 22px !important; }
+  #ablauf ol li:first-child { gap: 10px !important; }
+  #ablauf ol li:first-child > div:first-child { display: contents !important; }
+  #ablauf ol li:first-child > div:first-child > span:first-child {
+    order: 0;
+    align-self: center !important;
+  }
+  #ablauf ol li:first-child h3 { order: 1; }
+  #ablauf ol li:first-child > div:first-child > span:nth-child(2) {
+    order: 2;
+    align-self: center !important;
+    margin-top: -2px;
+  }
+  #ablauf ol li:first-child p { order: 3; }
+  #begleitung article { padding: 32px 24px !important; }
+  #faq > div { gap: 32px !important; }
+  #faq > div > div:last-child {
+    width: 100% !important;
+    align-items: stretch !important;
+    justify-items: stretch !important;
+  }
+  #faq details,
+  #faq summary {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  /* Statements & Kontakt: Headline-Grössen fürs Phone */
+  #orientierung h2 { font-size: clamp(32px, 9.7vw, 52px) !important; }
+  #datenschutz .datenschutz-heading { hyphens: none !important; overflow-wrap: normal !important; word-break: keep-all; line-height: 1.01 !important; }
+  #datenschutz .datenschutz-heading-main,
+  #datenschutz .datenschutz-heading-verb,
+  #datenschutz .datenschutz-heading-trust { display: block; }
+  #datenschutz .datenschutz-heading-break { display: none; }
+  section[data-screen-label="Versprechen"] h2 { font-size: clamp(30px, 9vw, 44px) !important; }
+  #kontakt h2 { font-size: clamp(30px, 8.6vw, 46px) !important; }
+
+  /* Kontakt-CTAs: untereinander, volle Tap-Breite */
+  #kontakt a { width: min(100%, 340px); }
+  #kontakt a.contact-social-link {
+    width: 46px !important;
+    height: 46px !important;
+    flex: 0 0 46px;
+  }
+
+  /* Footer: zentriert, Safe-Area unten */
+  footer > div { justify-content: center !important; text-align: center; padding: 30px 20px calc(30px + env(safe-area-inset-bottom)) !important; }
+
+  /* Chat: kompakter Button, grosses Panel, kein iOS-Zoom */
+  .chat-root { right: 14px !important; bottom: calc(14px + env(safe-area-inset-bottom)) !important; }
+  .chat-root > button { padding: 13px 20px !important; font-size: 14.5px !important; }
+  .chat-fab-long { display: none; }
+  .chat-fab-short { display: inline; }
+  .chat-panel { width: calc(100vw - 28px) !important; height: min(74svh, 560px) !important; }
+  .chat-input { font-size: 16px !important; }
+  .chat-send { min-width: 52px; }
+}
+
+@media (max-width: 1200px) {
+  .header-mobile nav a {
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center !important;
+    gap: 8px !important;
+  }
+  .header-mobile nav a span:last-child {
+    display: none !important;
+  }
+}
+
+/* ── ≤480px: schmale Phones (360–430px) ──────────────────── */
+@media (max-width: 480px) {
+  #top h1 { font-size: clamp(27px, 8.6vw, 34px) !important; }
+  main section > div { padding: 48px 18px !important; }
+}
+
+/* ── Kurze Phones (z.B. iPhone SE): Hero kompakter stapeln ── */
+@media (max-width: 700px) and (max-height: 720px) {
+  .hero-robot { height: 40svh !important; }
+  .hero-subline { margin-top: 12px !important; font-size: 14px !important; line-height: 1.38 !important; }
+  .hero-pills { gap: 6px !important; margin-top: 14px !important; }
+  .hero-mobile-values { margin-top: 10px !important; font-size: 9.5px !important; gap: 7px !important; }
+  .hero-stamp-mobile { margin-top: 12px; padding: 10px 16px; }
+  .hero-robot { bottom: -4svh !important; }
+  .hero-headline { top: 10vh !important; }
+  .hero-siegel { width: 72px !important; height: 72px !important; right: 14px !important; bottom: calc(14px + env(safe-area-inset-bottom)) !important; }
+}
+
+/* Menü-Overlay: sanfte Einblendung */
+@keyframes mobileMenuIn {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,4 @@
+/* vaiacon — Fonts
+   Quicksand (500/600/700) für alles; IBM Plex Mono (400–600) für Zahlen, Timecodes, Code-Details.
+   Keine lokalen Font-Binaries vorhanden — geladen via Google Fonts (exakt wie die Referenz-Landingpage). */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Quicksand:wght@500;600;700&display=swap");

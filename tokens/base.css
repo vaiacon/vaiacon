@@ -1,0 +1,13 @@
+/* vaiacon — Basis-Regeln (Body, Links, Selection). */
+body {
+  margin: 0;
+  background: var(--bg-page);
+  color: var(--text-strong);
+  font-family: var(--font-sans);
+  font-weight: var(--weight-medium);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a { color: var(--link); }
+a:hover { color: var(--link-hover); }
+::selection { background: var(--selection); }

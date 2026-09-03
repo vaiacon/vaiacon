@@ -1,0 +1,22 @@
+<!-- @dsCard group="Colors" viewport="700x170" name="Tinte & Text" subtitle="Dunkle Töne — Text, dunkle Sektionen" -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { display: flex; gap: 10px; padding: 16px; box-sizing: border-box; background: #fff; }
+  .sw { flex: 1; height: 138px; border-radius: 14px; display: flex; flex-direction: column; justify-content: flex-end; padding: 12px 14px; box-sizing: border-box; }
+  .n { font-size: 13px; font-weight: 700; color: #FBF4EE; }
+  .v { font-family: var(--font-mono); font-size: 11px; color: rgba(251,244,238,0.7); }
+  .dark .n { color: var(--text-strong); } .dark .v { color: var(--text-muted); }
+</style>
+</head>
+<body>
+  <div class="sw" style="background: var(--ink-950);"><span class="n">Dunkle Sektion</span><span class="v">#171210</span></div>
+  <div class="sw" style="background: var(--ink-900);"><span class="n">Tinte · Primärtext</span><span class="v">#1C1613</span></div>
+  <div class="sw" style="background: var(--brown-600);"><span class="n">Sekundärtext</span><span class="v">#5A524B</span></div>
+  <div class="sw" style="background: var(--brown-400);"><span class="n">Muted</span><span class="v">#8C8178</span></div>
+  <div class="sw dark" style="background: var(--brown-300);"><span class="n">Glyphs dezent</span><span class="v">#C9BFB5</span></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!-- @dsCard group="Colors" viewport="700x170" name="Ränder & Selection" subtitle="Hairline vs. Comic-Rand · Terracotta-Selection" -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  body { display: flex; gap: 10px; padding: 16px; box-sizing: border-box; background: var(--bg-page); align-items: stretch; }
+  .box { flex: 1; border-radius: 16px; padding: 14px 16px; display: flex; flex-direction: column; gap: 4px; justify-content: flex-end; box-sizing: border-box; }
+  .n { font-size: 13px; font-weight: 700; color: var(--text-strong); }
+  .v { font-family: var(--font-mono); font-size: 10.5px; color: var(--text-muted); }
+</style>
+</head>
+<body>
+  <div class="box" style="background: var(--surface-card-sand); border: 1px solid var(--border-strong);">
+    <span class="n">Hairline stark</span><span class="v">1px rgba(28,22,19,.32)</span>
+  </div>
+  <div class="box" style="background: var(--surface-card); border: 1px solid var(--border-soft);">
+    <span class="n">Hairline dezent</span><span class="v">1px rgba(28,22,19,.14)</span>
+  </div>
+  <div class="box" style="background: var(--surface-card); border: 2px solid var(--border-ink); box-shadow: var(--shadow-comic); border-radius: 20px;">
+    <span class="n">Comic-Rand</span><span class="v">2px #1C1613 + 6px 6px 0</span>
+  </div>
+  <div class="box" style="background: var(--surface-card); border: 1px dashed var(--border-strong);">
+    <span class="n">Gestrichelt</span><span class="v">Vertrauens-Hinweise</span>
+  </div>
+  <div class="box" style="background: var(--surface-card); border: 1px solid var(--border-soft); justify-content: center;">
+    <span class="n"><mark style="background: var(--selection); color: inherit;">Textauswahl</mark></span><span class="v">rgba(178,82,34,.22)</span>
+  </div>
+</body>
+</html>
