@@ -3,7 +3,8 @@ const {
   ChatMessage
 } = window.vaiaconDesignSystem_5f353f;
 
-/* Fixes Chat-Widget unten rechts. Antworten sind Fake-Demo (keine API). */
+/* Fixes Chat-Widget unten rechts. Antworten kommen live von /api/chat -
+   der Schluessel liegt auf dem Server, nie hier im Browser. */
 function ChatWidget({
   open,
   onOpen,
@@ -52,22 +53,89 @@ function ChatWidget({
       window.removeEventListener('resize', scheduleUpdate);
     };
   }, []);
-  const send = () => {
+  const AUSWEICHTEXT = 'Der Assistent ist gerade nicht erreichbar. Schreiben Sie uns an hallo@vaiacon.ch – wir melden uns rasch.';
+  const send = async () => {
     const q = input.trim();
     if (!q || busy) return;
-    setMsgs(m => m.concat([{
+    const verlauf = msgs.concat([{
       role: 'user',
       text: q
-    }]));
+    }]);
+    setMsgs(verlauf);
     setInput('');
     setBusy(true);
-    setTimeout(() => {
-      setMsgs(m => m.concat([{
+    let begonnen = false;
+    const anhaengen = stueck => {
+      if (!begonnen) {
+        begonnen = true;
+        setBusy(false);
+        setMsgs(m => m.concat([{
+          role: 'bot',
+          text: stueck
+        }]));
+        return;
+      }
+      setMsgs(m => m.slice(0, -1).concat([{
         role: 'bot',
-        text: 'Demo-Antwort: Am besten klären wir das im kostenlosen Erstgespräch – schreiben Sie uns an hallo@vaiacon.ch oder buchen Sie direkt einen Termin.'
+        text: m[m.length - 1].text + stueck
       }]));
+    };
+    try {
+      const antwort = await fetch('/api/chat', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          messages: verlauf.map(m => ({
+            role: m.role === 'user' ? 'user' : 'assistant',
+            content: m.text
+          }))
+        })
+      });
+      if (!antwort.ok || !antwort.body) {
+        let text = AUSWEICHTEXT;
+        try {
+          const daten = await antwort.json();
+          if (daten && daten.fehler) text = daten.fehler;
+        } catch (e) {/* dann eben der Ausweichtext */}
+        anhaengen(text);
+        setBusy(false);
+        return;
+      }
+
+      // Der Server schickt die Antwort in Stuecken (SSE), damit sie mitwaechst.
+      const leser = antwort.body.getReader();
+      const dekoder = new TextDecoder();
+      let rest = '';
+      for (;;) {
+        const {
+          value,
+          done
+        } = await leser.read();
+        if (done) break;
+        rest += dekoder.decode(value, {
+          stream: true
+        });
+        const zeilen = rest.split('\n\n');
+        rest = zeilen.pop();
+        for (const zeile of zeilen) {
+          if (!zeile.startsWith('data: ')) continue;
+          let daten;
+          try {
+            daten = JSON.parse(zeile.slice(6));
+          } catch (e) {
+            continue;
+          }
+          if (daten.text) anhaengen(daten.text);else if (daten.fehler) anhaengen(daten.fehler);
+        }
+      }
+      if (!begonnen) anhaengen(AUSWEICHTEXT);
+    } catch (e) {
+      if (!begonnen) anhaengen(AUSWEICHTEXT);
+    } finally {
       setBusy(false);
-    }, 700);
+    }
   };
   const chatFabStyle = {
     padding: '14px 18px',
