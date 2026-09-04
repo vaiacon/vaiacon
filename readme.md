@@ -1,7 +1,7 @@
 # vaiacon Design System
 
 **VAIACON** — Schweizer KI-Beratung & Automatisierung für KMU · [vaiacon.ch](https://vaiacon.ch)
-vaiacon · Lehenstrasse 74, 8037 Zürich · hallo@vaiacon.ch
+vaiacon GmbH · Lehenstrasse 74, 8037 Zürich · hallo@vaiacon.ch
 Gründer: André Ulrich (Mitgründer, KMU-Experte) und Philip Krieger (Mitgründer, Coach).
 
 ## Produkte & Oberflächen

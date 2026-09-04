@@ -2300,9 +2300,9 @@ try { (() => {
 function SiteFooter({
   logoSrc = 'assets/logo-lockup-white.png',
   logoHeight = 24,
-  address = 'vaiacon · Lehenstrasse 74, 8037 Zürich',
+  address = 'vaiacon GmbH · Lehenstrasse 74, 8037 Zürich',
   email = 'hallo@vaiacon.ch',
-  copyright = '© 2026 vaiacon',
+  copyright = '© 2026 vaiacon GmbH',
   onTop,
   style
 }) {
