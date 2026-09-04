@@ -4,9 +4,9 @@ import React from 'react';
 export function SiteFooter({
   logoSrc = 'assets/logo-lockup-white.png',
   logoHeight = 24,
-  address = 'vaiacon GmbH (in Gründung) · Lehenstrasse 74, 8037 Zürich',
+  address = 'vaiacon · Lehenstrasse 74, 8037 Zürich',
   email = 'hallo@vaiacon.ch',
-  copyright = '© 2026 vaiacon GmbH (in Gründung)',
+  copyright = '© 2026 vaiacon',
   onTop,
   style,
 }) {

@@ -4,7 +4,7 @@ export interface SiteFooterProps {
   logoSrc?: string;
   /** Logo-Höhe in px, Standard 24 */
   logoHeight?: number;
-  /** Standard «vaiacon GmbH (in Gründung) · Lehenstrasse 74, 8037 Zürich» */
+  /** Standard «vaiacon · Lehenstrasse 74, 8037 Zürich» */
   address?: string;
   email?: string;
   copyright?: string;
