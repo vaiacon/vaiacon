@@ -364,7 +364,7 @@ function Faq() {
         <div className="mock-center">
           <Kicker number="06">FAQ</Kicker>
           <h2 className="mock-title">Die wichtigsten Fragen und Antworten zu vaiacon.</h2>
-          <img className="mock-faq-robot" src={asset('vaiacon-buerobot-faq-transparent.png?v=20260725-17')} alt="vaiaconBot beantwortet Fragen" />
+          <img className="mock-faq-robot" src={asset('vaiacon-buerobot-faq-transparent.png?v=20260903-alpha')} alt="vaiaconBot beantwortet Fragen" />
         </div>
         <div>
           {FAQS.map(([question, answer], index) => (

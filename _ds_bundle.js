@@ -4655,7 +4655,7 @@ function Faq() {
     className: "mock-title"
   }, "Die wichtigsten Fragen und Antworten zu vaiacon."), /*#__PURE__*/React.createElement("img", {
     className: "mock-faq-robot",
-    src: asset('vaiacon-buerobot-faq-transparent.png?v=20260725-17'),
+    src: asset('vaiacon-buerobot-faq-transparent.png?v=20260903-alpha'),
     alt: "vaiaconBot beantwortet Fragen"
   })), /*#__PURE__*/React.createElement("div", null, FAQS.map(([question, answer], index) => /*#__PURE__*/React.createElement(FaqItem, {
     key: question,
@@ -5139,7 +5139,7 @@ function Faq() {
     className: "mock-title"
   }, "Die wichtigsten Fragen und Antworten zu vaiacon."), /*#__PURE__*/React.createElement("img", {
     className: "mock-faq-robot",
-    src: asset('vaiacon-buerobot-faq-transparent.png?v=20260725-17'),
+    src: asset('vaiacon-buerobot-faq-transparent.png?v=20260903-alpha'),
     alt: "vaiaconBot beantwortet Fragen"
   })), /*#__PURE__*/React.createElement("div", null, FAQS.map(([question, answer], index) => /*#__PURE__*/React.createElement(FaqItem, {
     key: question,
