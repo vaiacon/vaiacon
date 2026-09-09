@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="mobile.css?v=20260729-mobile-86">
   <script src="../_ds_bundle.js?v=20260729-mobile-86"></script>
-  <script src="./academy-daten.js?v=20260909-dauern"></script>
+  <script src="./academy-daten.js?v=20260909-avv"></script>
   <script src="./image-slot.js"></script>
   <style>
     html, body { margin: 0; padding: 0; background: #F4EDE1; }
@@ -264,7 +264,9 @@ class Component extends DCLogic {
         bild: pl.bild,
         img: pl.img,
         slotId: 'lernplan-' + pl.n,
-        href: pl.href || ('lernplan.html#plan=' + pl.n),
+        // Abfrageteil statt Hash: ein Ankersprung wie #lektionen wuerde die
+        // Modulkennung im Hash sonst ueberschreiben und auf Modul 01 zurueckfallen.
+        href: pl.href || ('lernplan.html?plan=' + pl.n),
         meta: pl.href
           ? pl.lessons.length + ' MODULE · ' + pl.hours
           : pl.lessons.length + ' LEKTIONEN · ' + pl.hours,

@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="mobile.css?v=20260729-mobile-86">
   <script src="../_ds_bundle.js?v=20260729-mobile-86"></script>
-  <script src="./academy-daten.js?v=20260909-dauern"></script>
+  <script src="./academy-daten.js?v=20260909-avv"></script>
   <script src="./image-slot.js"></script>
   <style>
     html, body { margin: 0; padding: 0; background: #F4EDE1; }
@@ -176,7 +176,8 @@
 function plans() { return window.ACADEMY_PLANS || []; }
 
 class Component extends DCLogic {
-  state = { ready: !!window.ACADEMY_PLANS, hash: '', offen: null };
+  // offen === undefined heisst «noch nichts angeklickt», null heisst «zugeklappt».
+  state = { ready: !!window.ACADEMY_PLANS, hash: location.hash, offen: undefined };
 
   componentDidMount() {
     this.onHash = () => this.setState({ hash: location.hash });
@@ -206,25 +207,45 @@ class Component extends DCLogic {
     if (!p) return {};
     if (p.href) { location.replace(p.href); return {}; } // Advanced-Pfad hat eine eigene Kursseite
 
-    const href = (pl) => 'lernplan.html#plan=' + pl.n;
+    const href = (pl) => 'lernplan.html?plan=' + pl.n;
     // Beim ersten Lernplan gibt es kein vorheriges — dann bleibt die Kachel weg,
     // statt zurueck auf den letzten zu springen.
     const prev = i > 0 ? list[i - 1] : null;
     const next = list[(i + 1) % list.length];
 
+    // Der Knopf «Erste Lektion starten» springt auf #lektionen. Dann klappt
+    // die erste Lektion mit Inhalt gleich auf, statt nur zur Liste zu scrollen.
+    const ersteMitInhalt = p.lessons.findIndex((l) => l[3]);
+    const beruehrt = this.state.offen !== undefined;
+    const offenIdx = beruehrt
+      ? this.state.offen
+      : (this.state.hash === '#lektionen' && ersteMitInhalt >= 0 ? ersteMitInhalt : null);
+
     // Lektionen mit Inhalt lassen sich aufklappen. Videos haben keinen Text
     // dahinter und bleiben darum unveraendert stehen.
     const row = (l, idx) => {
       const inhalt = l[3] || null;
-      const offen = this.state.offen === idx;
+      const offen = offenIdx === idx;
       return {
         n: String(idx + 1).padStart(2, '0'),
         title: l[0],
         meta: l[1] + ' · ' + l[2],
         marke: inhalt ? [{ zeichen: offen ? '×' : '+' }] : [],
         zeiger: inhalt ? 'pointer' : 'default',
+        // Beim Wechsel schliesst die vorige Lektion, der Inhalt darueber faellt
+        // weg und die neue rutscht aus dem Bild. Darum nach dem Neuzeichnen an
+        // ihren Kopf scrollen — mit Abstand fuer die mitlaufende Kopfzeile.
         oeffnen: inhalt
-          ? (ev) => { ev.preventDefault(); this.setState((s) => ({ offen: s.offen === idx ? null : idx })); }
+          ? (ev) => {
+              ev.preventDefault();
+              const zeile = ev.currentTarget;
+              const oeffnetSich = offenIdx !== idx;
+              this.setState((s) => ({ offen: s.offen === idx ? null : idx }), () => {
+                if (!oeffnetSich || !zeile) return;
+                const y = zeile.getBoundingClientRect().top + window.scrollY - 110;
+                window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
+              });
+            }
           : undefined,
         absaetze: offen && inhalt ? inhalt.absaetze.map((wert) => ({ wert })) : [],
         punkte: offen && inhalt ? inhalt.punkte.map((wert) => ({ wert })) : [],
