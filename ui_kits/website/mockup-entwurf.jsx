@@ -42,7 +42,7 @@ const NAV_AUX_LINKS = [
 const FAQS = [
   ['Was macht vaiacon?', 'vaiacon befähigt Schweizer KMU, KI verständlich, persönlich und wirksam im Unternehmen einzusetzen. Wir verbinden Lernen, Automatisierung und langfristige Begleitung.'],
   ['Ist vaiacon eine klassische KI-Agentur?', 'Nein. KI ist für uns ein Werkzeug. Im Zentrum stehen verständliche Einführung, konkrete Abläufe und eine Umsetzung, die im Alltag funktioniert.'],
-  ['Was ist vaiaconAcademy?', 'Die vaiaconAcademy ist unsere Selbstlern-Plattform: zwölf Lernpfade mit 66 kurzen Lektionen zu KI im KMU-Alltag — inklusive Advanced-Pfad für Fortgeschrittene. Alle Lektionen sind kostenlos — kein Abo, keine Verpflichtungen.'],
+  ['Was ist vaiaconAcademy?', 'Die vaiaconAcademy ist unsere Selbstlern-Plattform: elf Lernpfade mit 58 kurzen Lektionen zu KI im KMU-Alltag. Alle Lektionen sind kostenlos — kein Abo, keine Verpflichtungen.'],
   ['Was ist vaiaconLearning?', 'vaiaconLearning bündelt Online-Lernprogramme, Bibliotheken und persönliche Coachings, damit Unternehmer und Teams KI sicher anwenden können.'],
   ['Was ist vaiaconBot?', 'vaiaconBot ist der Ansatz für wiederkehrende Büro- und Administrationsprozesse: Wir analysieren Abläufe, priorisieren Hebel und setzen passende Automatisierungen um.'],
   ['Was ist vaiaconService?', 'vaiaconService begleitet bestehende Automatisierungen im Betrieb. Dazu gehören Pflege, Updates, Kontrolle und Weiterentwicklung nach Bedarf.'],
@@ -340,13 +340,13 @@ function Academy() {
         <div className="mock-center">
           <Kicker number="02">E-Learnings</Kicker>
           <h2 className="mock-title">Mehr als ein Chatbot: Lernen Sie, Ihre Büroarbeit mit KI zu automatisieren.</h2>
-          <p className="mock-lead" style={{ maxWidth: 760 }}>Die <ProductName name="Academy" /> ist unsere Selbstlern-Plattform: 66 kurze Lektionen in zwölf Lernpfaden. Jeder Plan ist für sich abgeschlossen und dauert rund eine Stunde — Sie starten dort, wo es bei Ihnen brennt.</p>
+          <p className="mock-lead" style={{ maxWidth: 760 }}>Die <ProductName name="Academy" /> ist unsere Selbstlern-Plattform: 66 kurze Lektionen in elf Lernpfaden. Jeder Plan ist für sich abgeschlossen und dauert 20 bis 45 Minuten — Sie starten dort, wo es bei Ihnen brennt.</p>
         </div>
         <div className="mock-academy-feature">
           <div className="mock-academy-feature__copy">
             <span className="mock-learning-track__label">Online · im eigenen Tempo</span>
             <h3><ProductName name="Academy" /></h3>
-            <p>66 kurze Lektionen in zwölf Lernpfaden: Sie lernen genau das, was in Ihrem KMU gerade weiterhilft - verständlich, praxisnah und in Ihrem Tempo.</p>
+            <p>66 kurze Lektionen in elf Lernpfaden: Sie lernen genau das, was in Ihrem KMU gerade weiterhilft - verständlich, praxisnah und in Ihrem Tempo.</p>
             <p className="mock-academy-feature__note">Die Lektionen sind kostenlos. Kein Abo, keine Verpflichtungen und keine versteckten Kosten.</p>
             <DsButton variant="cta" size="md" arrow href="academy/index.html">Zur vaiaconAcademy</DsButton>
           </div>

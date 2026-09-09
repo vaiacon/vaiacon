@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="mobile.css?v=20260729-mobile-86">
   <script src="../_ds_bundle.js?v=20260729-mobile-86"></script>
-  <script src="./academy-daten.js?v=20260801-advanced-12"></script>
+  <script src="./academy-daten.js?v=20260909-dauern"></script>
   <script src="./image-slot.js"></script>
   <style>
     html, body { margin: 0; padding: 0; background: #F4EDE1; }
@@ -69,7 +69,7 @@
           <span style="font-family:var(--font-mono); font-size:11.5px; letter-spacing:0.18em; text-transform:uppercase; color:var(--brown-400)">{{ plan.meta }}</span>
           <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:4px">
             <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" size="lg" arrow="{{ true }}" href="#lektionen" hint-size="auto,56px">Erste Lektion starten</x-import>
-            <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" size="lg" variant="dark" arrow="{{ true }}" href="#zugang" hint-size="auto,56px">Überblick</x-import>
+            <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" size="lg" arrow="{{ true }}" href="#zugang" hint-size="auto,56px">Überblick</x-import>
           </div>
         </div>
 
@@ -92,12 +92,29 @@
 
         <article style="background:var(--cream-card); border:1px solid var(--border-strong); border-radius:26px; overflow:hidden">
           <sc-for list="{{ freeLessons }}" as="l" hint-placeholder-count="2">
-            <div style-hover="background:var(--sand-300); padding-left:44px" style="display:grid; grid-template-columns:42px minmax(0,1fr) auto; gap:18px; align-items:center; padding:20px 30px; border-bottom:1px solid rgba(28,22,19,0.14); transition:background 0.35s ease, padding-left 0.35s ease">
-              <span style="font-family:var(--font-mono); font-size:13px; font-weight:600; letter-spacing:0.08em; color:var(--terra-500)">{{ l.n }}</span>
-              <span style="display:flex; flex-direction:column; gap:5px">
-                <strong style="font-size:18px; font-weight:600; letter-spacing:-0.015em; line-height:1.35">{{ l.title }}</strong>
-                <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brown-400)">{{ l.meta }}</span>
-              </span>
+            <div style="border-bottom:1px solid rgba(28,22,19,0.14)">
+              <div onClick="{{ l.oeffnen }}" style-hover="background:var(--sand-300); padding-left:44px" style="cursor:{{ l.zeiger }}; display:grid; grid-template-columns:42px minmax(0,1fr) auto; gap:18px; align-items:center; padding:20px 30px; transition:background 0.35s ease, padding-left 0.35s ease">
+                <span style="font-family:var(--font-mono); font-size:13px; font-weight:600; letter-spacing:0.08em; color:var(--terra-500)">{{ l.n }}</span>
+                <span style="display:flex; flex-direction:column; gap:5px">
+                  <strong style="font-size:18px; font-weight:600; letter-spacing:-0.015em; line-height:1.35">{{ l.title }}</strong>
+                  <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brown-400)">{{ l.meta }}</span>
+                </span>
+                <sc-for list="{{ l.marke }}" as="m" hint-placeholder-count="1">
+                  <span style="justify-self:end; width:30px; height:30px; display:flex; align-items:center; justify-content:center; border-radius:999px; border:1px solid rgba(178,82,34,0.30); background:rgba(178,82,34,0.10); color:var(--terra-500); font-size:17px; font-weight:600; line-height:1">{{ m.zeichen }}</span>
+                </sc-for>
+              </div>
+              <sc-for list="{{ l.absaetze }}" as="a" hint-placeholder-count="0">
+                <p style="margin:0; padding:0 30px 14px 72px; font-size:16px; line-height:1.7; color:var(--text-body); text-wrap:pretty">{{ a.wert }}</p>
+              </sc-for>
+              <sc-for list="{{ l.punkte }}" as="pt" hint-placeholder-count="0">
+                <div style="display:flex; gap:11px; padding:0 30px 9px 72px; font-size:15.5px; line-height:1.6; color:var(--text-body)"><i style="font-style:normal; color:var(--terra-500)">✓</i><span>{{ pt.wert }}</span></div>
+              </sc-for>
+              <sc-for list="{{ l.uebungen }}" as="u" hint-placeholder-count="0">
+                <div style="margin:8px 30px 24px 72px; padding:16px 20px; border-radius:14px; background:var(--peach-150); border:1px solid rgba(28,22,19,0.14)">
+                  <span style="font-family:var(--font-mono); font-size:10px; letter-spacing:0.18em; text-transform:uppercase; color:var(--terra-600)">Jetzt selbst</span>
+                  <p style="margin:6px 0 0; font-size:15.5px; line-height:1.6; color:var(--text-strong); text-wrap:pretty">{{ u.wert }}</p>
+                </div>
+              </sc-for>
             </div>
           </sc-for>
 
@@ -110,10 +127,12 @@
         </article>
 
         <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr)); gap:18px">
-          <a href="{{ prev.href }}" style-hover="transform:translateY(-3px)" style="display:flex; flex-direction:column; gap:8px; background:var(--cream-card); border:1px solid var(--border-strong); border-radius:20px; padding:22px 24px; text-decoration:none; color:inherit; transition:transform 0.4s var(--ease-spring)">
-            <span style="font-family:var(--font-mono); font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:var(--brown-400)">← Vorheriger Lernplan</span>
-            <strong style="font-size:17px; font-weight:600; letter-spacing:-0.015em">{{ prev.title }}</strong>
-          </a>
+          <sc-for list="{{ prevLinks }}" as="prev" hint-placeholder-count="1">
+            <a href="{{ prev.href }}" style-hover="transform:translateY(-3px)" style="display:flex; flex-direction:column; gap:8px; background:var(--cream-card); border:1px solid var(--border-strong); border-radius:20px; padding:22px 24px; text-decoration:none; color:inherit; transition:transform 0.4s var(--ease-spring)">
+              <span style="font-family:var(--font-mono); font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:var(--brown-400)">← Vorheriger Lernplan</span>
+              <strong style="font-size:17px; font-weight:600; letter-spacing:-0.015em">{{ prev.title }}</strong>
+            </a>
+          </sc-for>
           <a href="{{ next.href }}" style-hover="transform:translateY(-3px)" style="display:flex; flex-direction:column; gap:8px; background:var(--cream-card); border:1px solid var(--border-strong); border-radius:20px; padding:22px 24px; text-decoration:none; color:inherit; text-align:right; transition:transform 0.4s var(--ease-spring)">
             <span style="font-family:var(--font-mono); font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:var(--brown-400)">Nächster Lernplan →</span>
             <strong style="font-size:17px; font-weight:600; letter-spacing:-0.015em">{{ next.title }}</strong>
@@ -157,7 +176,7 @@
 function plans() { return window.ACADEMY_PLANS || []; }
 
 class Component extends DCLogic {
-  state = { ready: !!window.ACADEMY_PLANS, hash: '' };
+  state = { ready: !!window.ACADEMY_PLANS, hash: '', offen: null };
 
   componentDidMount() {
     this.onHash = () => this.setState({ hash: location.hash });
@@ -188,14 +207,30 @@ class Component extends DCLogic {
     if (p.href) { location.replace(p.href); return {}; } // Advanced-Pfad hat eine eigene Kursseite
 
     const href = (pl) => 'lernplan.html#plan=' + pl.n;
-    const prev = list[(i - 1 + list.length) % list.length];
+    // Beim ersten Lernplan gibt es kein vorheriges — dann bleibt die Kachel weg,
+    // statt zurueck auf den letzten zu springen.
+    const prev = i > 0 ? list[i - 1] : null;
     const next = list[(i + 1) % list.length];
 
-    const row = (l, idx) => ({
-      n: String(idx + 1).padStart(2, '0'),
-      title: l[0],
-      meta: l[1] + ' · ' + l[2],
-    });
+    // Lektionen mit Inhalt lassen sich aufklappen. Videos haben keinen Text
+    // dahinter und bleiben darum unveraendert stehen.
+    const row = (l, idx) => {
+      const inhalt = l[3] || null;
+      const offen = this.state.offen === idx;
+      return {
+        n: String(idx + 1).padStart(2, '0'),
+        title: l[0],
+        meta: l[1] + ' · ' + l[2],
+        marke: inhalt ? [{ zeichen: offen ? '×' : '+' }] : [],
+        zeiger: inhalt ? 'pointer' : 'default',
+        oeffnen: inhalt
+          ? (ev) => { ev.preventDefault(); this.setState((s) => ({ offen: s.offen === idx ? null : idx })); }
+          : undefined,
+        absaetze: offen && inhalt ? inhalt.absaetze.map((wert) => ({ wert })) : [],
+        punkte: offen && inhalt ? inhalt.punkte.map((wert) => ({ wert })) : [],
+        uebungen: offen && inhalt && inhalt.uebung ? [{ wert: inhalt.uebung }] : [],
+      };
+    };
 
     return {
       plan: {
@@ -213,7 +248,7 @@ class Component extends DCLogic {
         meta: p.level + ' · ' + p.lessons.length + ' LEKTIONEN · ' + p.hours,
       },
       freeLessons: p.lessons.map((l, idx) => row(l, idx)),
-      prev: { href: href(prev), title: prev.n + ' · ' + prev.title },
+      prevLinks: prev ? [{ href: href(prev), title: prev.n + ' · ' + prev.title }] : [],
       next: { href: href(next), title: next.n + ' · ' + next.title },
     };
   }
