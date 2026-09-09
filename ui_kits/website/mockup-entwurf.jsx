@@ -42,7 +42,7 @@ const NAV_AUX_LINKS = [
 const FAQS = [
   ['Was macht vaiacon?', 'vaiacon befähigt Schweizer KMU, KI verständlich, persönlich und wirksam im Unternehmen einzusetzen. Wir verbinden Lernen, Automatisierung und langfristige Begleitung.'],
   ['Ist vaiacon eine klassische KI-Agentur?', 'Nein. KI ist für uns ein Werkzeug. Im Zentrum stehen verständliche Einführung, konkrete Abläufe und eine Umsetzung, die im Alltag funktioniert.'],
-  ['Was ist vaiaconAcademy?', 'Die vaiaconAcademy ist unsere Selbstlern-Plattform: zwölf Lernpfade mit 66 kurzen Lektionen zu KI im KMU-Alltag — inklusive Advanced-Pfad für Fortgeschrittene. Die ersten Lektionen sind gratis, danach ab CHF 39 pro Monat.'],
+  ['Was ist vaiaconAcademy?', 'Die vaiaconAcademy ist unsere Selbstlern-Plattform: zwölf Lernpfade mit 66 kurzen Lektionen zu KI im KMU-Alltag — inklusive Advanced-Pfad für Fortgeschrittene. Alle Lektionen sind kostenlos — kein Abo, keine Verpflichtungen.'],
   ['Was ist vaiaconLearning?', 'vaiaconLearning bündelt Online-Lernprogramme, Bibliotheken und persönliche Coachings, damit Unternehmer und Teams KI sicher anwenden können.'],
   ['Was ist vaiaconBot?', 'vaiaconBot ist der Ansatz für wiederkehrende Büro- und Administrationsprozesse: Wir analysieren Abläufe, priorisieren Hebel und setzen passende Automatisierungen um.'],
   ['Was ist vaiaconService?', 'vaiaconService begleitet bestehende Automatisierungen im Betrieb. Dazu gehören Pflege, Updates, Kontrolle und Weiterentwicklung nach Bedarf.'],
@@ -347,7 +347,7 @@ function Academy() {
             <span className="mock-learning-track__label">Online · im eigenen Tempo</span>
             <h3><ProductName name="Academy" /></h3>
             <p>66 kurze Lektionen in zwölf Lernpfaden: Sie lernen genau das, was in Ihrem KMU gerade weiterhilft - verständlich, praxisnah und in Ihrem Tempo.</p>
-            <p className="mock-academy-feature__note">Die ersten Lektionen sind gratis, danach ab CHF 39 pro Monat - jederzeit kündbar.</p>
+            <p className="mock-academy-feature__note">Die Lektionen sind kostenlos. Kein Abo, keine Verpflichtungen und keine versteckten Kosten.</p>
             <DsButton variant="cta" size="md" arrow href="academy/index.html">Zur vaiaconAcademy</DsButton>
           </div>
           <img className="mock-academy-feature__image" src={asset('vaiacon-buerobot-academy.png')} alt="vaiaconBot am Schreibtisch beim Erstellen eines Lernmoduls" />

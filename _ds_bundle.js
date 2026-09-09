@@ -4277,7 +4277,7 @@ const NAV_LINKS = [{
   href: '#kontakt',
   contact: true
 }];
-const FAQS = [['Was macht vaiacon?', 'vaiacon befähigt Schweizer KMU, KI verständlich, persönlich und wirksam im Unternehmen einzusetzen. Wir verbinden Lernen, Automatisierung und langfristige Begleitung.'], ['Ist vaiacon eine klassische KI-Agentur?', 'Nein. KI ist für uns ein Werkzeug. Im Zentrum stehen verständliche Einführung, konkrete Abläufe und eine Umsetzung, die im Alltag funktioniert.'], ['Was ist vaiaconAcademy?', 'Die vaiaconAcademy ist unsere Selbstlern-Plattform: elf Lernpläne mit 55 kurzen Lektionen zu KI im KMU-Alltag. Die ersten Lektionen sind gratis, danach ab CHF 39 pro Monat.'], ['Was ist vaiaconLearning?', 'vaiaconLearning bündelt Online-Lernprogramme, Bibliotheken und persönliche Coachings, damit Unternehmer und Teams KI sicher anwenden können.'], ['Was ist vaiaconBot?', 'vaiaconBot ist der Ansatz für wiederkehrende Büro- und Administrationsprozesse: Wir analysieren Abläufe, priorisieren Hebel und setzen passende Automatisierungen um.'], ['Was ist vaiaconService?', 'vaiaconService begleitet bestehende Automatisierungen im Betrieb. Dazu gehören Pflege, Updates, Kontrolle und Weiterentwicklung nach Bedarf.'], ['Brauche ich technisches Vorwissen?', 'Nein. Die Inhalte und die Umsetzung werden so erklärt, dass Unternehmer und Mitarbeitende ohne technisches Vorwissen mitkommen.'], ['Was kostet eine Automation?', 'Eine Automation beginnt bei CHF 600. Den Fixpreis nennen wir nach der Erstanalyse — Sie wissen vor der Umsetzung, woran Sie sind.'], ['Was passiert mit unseren Daten?', 'Wir arbeiten nach dem revDSG. Vor der Umsetzung klären wir mit Ihnen, welche Daten ein Werkzeug überhaupt sehen darf, und halten Kundendaten dort heraus, wo sie nicht hingehören.'], ['Wie beginnt eine Zusammenarbeit?', 'Am Anfang steht ein unverbindliches Gespräch. Danach klären wir, ob Learning, Bot, Service oder eine Kombination davon sinnvoll ist.']];
+const FAQS = [['Was macht vaiacon?', 'vaiacon befähigt Schweizer KMU, KI verständlich, persönlich und wirksam im Unternehmen einzusetzen. Wir verbinden Lernen, Automatisierung und langfristige Begleitung.'], ['Ist vaiacon eine klassische KI-Agentur?', 'Nein. KI ist für uns ein Werkzeug. Im Zentrum stehen verständliche Einführung, konkrete Abläufe und eine Umsetzung, die im Alltag funktioniert.'], ['Was ist vaiaconAcademy?', 'Die vaiaconAcademy ist unsere Selbstlern-Plattform: elf Lernpläne mit 55 kurzen Lektionen zu KI im KMU-Alltag. Alle Lektionen sind kostenlos \u2014 kein Abo, keine Verpflichtungen.'], ['Was ist vaiaconLearning?', 'vaiaconLearning bündelt Online-Lernprogramme, Bibliotheken und persönliche Coachings, damit Unternehmer und Teams KI sicher anwenden können.'], ['Was ist vaiaconBot?', 'vaiaconBot ist der Ansatz für wiederkehrende Büro- und Administrationsprozesse: Wir analysieren Abläufe, priorisieren Hebel und setzen passende Automatisierungen um.'], ['Was ist vaiaconService?', 'vaiaconService begleitet bestehende Automatisierungen im Betrieb. Dazu gehören Pflege, Updates, Kontrolle und Weiterentwicklung nach Bedarf.'], ['Brauche ich technisches Vorwissen?', 'Nein. Die Inhalte und die Umsetzung werden so erklärt, dass Unternehmer und Mitarbeitende ohne technisches Vorwissen mitkommen.'], ['Was kostet eine Automation?', 'Eine Automation beginnt bei CHF 600. Den Fixpreis nennen wir nach der Erstanalyse — Sie wissen vor der Umsetzung, woran Sie sind.'], ['Was passiert mit unseren Daten?', 'Wir arbeiten nach dem revDSG. Vor der Umsetzung klären wir mit Ihnen, welche Daten ein Werkzeug überhaupt sehen darf, und halten Kundendaten dort heraus, wo sie nicht hingehören.'], ['Wie beginnt eine Zusammenarbeit?', 'Am Anfang steht ein unverbindliches Gespräch. Danach klären wir, ob Learning, Bot, Service oder eine Kombination davon sinnvoll ist.']];
 const SERVICE_PLANS = [{
   number: '01',
   title: 'vaiaconService BASIC',
@@ -4478,7 +4478,7 @@ function Learning() {
     className: "mock-learning-track__label"
   }, "Online \xB7 im eigenen Tempo"), /*#__PURE__*/React.createElement("h3", null, /*#__PURE__*/React.createElement(ProductName, {
     name: "Academy"
-  })), /*#__PURE__*/React.createElement("p", null, "Unsere Selbstlern-Plattform: E-Learnings zu KI f\xFCr KMU — elf Lernpl\xE4ne mit 55 kurzen Lektionen, im eigenen Tempo. Die ersten Lektionen sind gratis, danach ab CHF 39 pro Monat."), /*#__PURE__*/React.createElement(DsButton, {
+  })), /*#__PURE__*/React.createElement("p", null, "Unsere Selbstlern-Plattform: E-Learnings zu KI f\xFCr KMU — elf Lernpl\xE4ne mit 55 kurzen Lektionen, im eigenen Tempo. Alle Lektionen sind kostenlos \u2014 kein Abo, keine Verpflichtungen."), /*#__PURE__*/React.createElement(DsButton, {
     variant: "cta",
     size: "sm",
     arrow: true,
@@ -4634,7 +4634,7 @@ function Academy() {
     className: "mock-academy-foot"
   }, /*#__PURE__*/React.createElement("p", {
     className: "mock-academy-foot__note"
-  }, "Die ersten Lektionen sind gratis, danach ab CHF 39 pro Monat \u2014 jederzeit k\xFCndbar."), /*#__PURE__*/React.createElement(DsButton, {
+  }, "Die Lektionen sind kostenlos. Kein Abo, keine Verpflichtungen und keine versteckten Kosten."), /*#__PURE__*/React.createElement(DsButton, {
     variant: "cta",
     size: "md",
     arrow: true,
@@ -4761,7 +4761,7 @@ const NAV_LINKS = [{
   href: '#kontakt',
   contact: true
 }];
-const FAQS = [['Was macht vaiacon?', 'vaiacon befähigt Schweizer KMU, KI verständlich, persönlich und wirksam im Unternehmen einzusetzen. Wir verbinden Lernen, Automatisierung und langfristige Begleitung.'], ['Ist vaiacon eine klassische KI-Agentur?', 'Nein. KI ist für uns ein Werkzeug. Im Zentrum stehen verständliche Einführung, konkrete Abläufe und eine Umsetzung, die im Alltag funktioniert.'], ['Was ist vaiaconAcademy?', 'Die vaiaconAcademy ist unsere Selbstlern-Plattform: elf Lernpläne mit 55 kurzen Lektionen zu KI im KMU-Alltag. Die ersten Lektionen sind gratis, danach ab CHF 39 pro Monat.'], ['Was ist vaiaconLearning?', 'vaiaconLearning bündelt Online-Lernprogramme, Bibliotheken und persönliche Coachings, damit Unternehmer und Teams KI sicher anwenden können.'], ['Was ist vaiaconBot?', 'vaiaconBot ist der Ansatz für wiederkehrende Büro- und Administrationsprozesse: Wir analysieren Abläufe, priorisieren Hebel und setzen passende Automatisierungen um.'], ['Was ist vaiaconService?', 'vaiaconService begleitet bestehende Automatisierungen im Betrieb. Dazu gehören Pflege, Updates, Kontrolle und Weiterentwicklung nach Bedarf.'], ['Brauche ich technisches Vorwissen?', 'Nein. Die Inhalte und die Umsetzung werden so erklärt, dass Unternehmer und Mitarbeitende ohne technisches Vorwissen mitkommen.'], ['Was kostet eine Automation?', 'Eine Automation beginnt bei CHF 600. Den Fixpreis nennen wir nach der Erstanalyse — Sie wissen vor der Umsetzung, woran Sie sind.'], ['Was passiert mit unseren Daten?', 'Wir arbeiten nach dem revDSG. Vor der Umsetzung klären wir mit Ihnen, welche Daten ein Werkzeug überhaupt sehen darf, und halten Kundendaten dort heraus, wo sie nicht hingehören.'], ['Wie beginnt eine Zusammenarbeit?', 'Am Anfang steht ein unverbindliches Gespräch. Danach klären wir, ob Learning, Bot, Service oder eine Kombination davon sinnvoll ist.']];
+const FAQS = [['Was macht vaiacon?', 'vaiacon befähigt Schweizer KMU, KI verständlich, persönlich und wirksam im Unternehmen einzusetzen. Wir verbinden Lernen, Automatisierung und langfristige Begleitung.'], ['Ist vaiacon eine klassische KI-Agentur?', 'Nein. KI ist für uns ein Werkzeug. Im Zentrum stehen verständliche Einführung, konkrete Abläufe und eine Umsetzung, die im Alltag funktioniert.'], ['Was ist vaiaconAcademy?', 'Die vaiaconAcademy ist unsere Selbstlern-Plattform: elf Lernpläne mit 55 kurzen Lektionen zu KI im KMU-Alltag. Alle Lektionen sind kostenlos \u2014 kein Abo, keine Verpflichtungen.'], ['Was ist vaiaconLearning?', 'vaiaconLearning bündelt Online-Lernprogramme, Bibliotheken und persönliche Coachings, damit Unternehmer und Teams KI sicher anwenden können.'], ['Was ist vaiaconBot?', 'vaiaconBot ist der Ansatz für wiederkehrende Büro- und Administrationsprozesse: Wir analysieren Abläufe, priorisieren Hebel und setzen passende Automatisierungen um.'], ['Was ist vaiaconService?', 'vaiaconService begleitet bestehende Automatisierungen im Betrieb. Dazu gehören Pflege, Updates, Kontrolle und Weiterentwicklung nach Bedarf.'], ['Brauche ich technisches Vorwissen?', 'Nein. Die Inhalte und die Umsetzung werden so erklärt, dass Unternehmer und Mitarbeitende ohne technisches Vorwissen mitkommen.'], ['Was kostet eine Automation?', 'Eine Automation beginnt bei CHF 600. Den Fixpreis nennen wir nach der Erstanalyse — Sie wissen vor der Umsetzung, woran Sie sind.'], ['Was passiert mit unseren Daten?', 'Wir arbeiten nach dem revDSG. Vor der Umsetzung klären wir mit Ihnen, welche Daten ein Werkzeug überhaupt sehen darf, und halten Kundendaten dort heraus, wo sie nicht hingehören.'], ['Wie beginnt eine Zusammenarbeit?', 'Am Anfang steht ein unverbindliches Gespräch. Danach klären wir, ob Learning, Bot, Service oder eine Kombination davon sinnvoll ist.']];
 const SERVICE_PLANS = [{
   number: '01',
   title: 'vaiaconService BASIC',
@@ -4962,7 +4962,7 @@ function Learning() {
     className: "mock-learning-track__label"
   }, "Online \xB7 im eigenen Tempo"), /*#__PURE__*/React.createElement("h3", null, /*#__PURE__*/React.createElement(ProductName, {
     name: "Academy"
-  })), /*#__PURE__*/React.createElement("p", null, "Unsere Selbstlern-Plattform: E-Learnings zu KI f\xFCr KMU \u2014 elf Lernpl\xE4ne mit 55 kurzen Lektionen, im eigenen Tempo. Die ersten Lektionen sind gratis, danach ab CHF 39 pro Monat."), /*#__PURE__*/React.createElement(DsButton, {
+  })), /*#__PURE__*/React.createElement("p", null, "Unsere Selbstlern-Plattform: E-Learnings zu KI f\xFCr KMU \u2014 elf Lernpl\xE4ne mit 55 kurzen Lektionen, im eigenen Tempo. Alle Lektionen sind kostenlos \u2014 kein Abo, keine Verpflichtungen."), /*#__PURE__*/React.createElement(DsButton, {
     variant: "cta",
     size: "sm",
     arrow: true,
@@ -5118,7 +5118,7 @@ function Academy() {
     className: "mock-academy-foot"
   }, /*#__PURE__*/React.createElement("p", {
     className: "mock-academy-foot__note"
-  }, "Die ersten Lektionen sind gratis, danach ab CHF 39 pro Monat \u2014 jederzeit k\xFCndbar."), /*#__PURE__*/React.createElement(DsButton, {
+  }, "Die Lektionen sind kostenlos. Kein Abo, keine Verpflichtungen und keine versteckten Kosten."), /*#__PURE__*/React.createElement(DsButton, {
     variant: "cta",
     size: "md",
     arrow: true,
