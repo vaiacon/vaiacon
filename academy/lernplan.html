@@ -41,7 +41,7 @@
           <a href="index.html#vor-ort" style-hover="color:var(--terra-500)" style="color:var(--text-strong); text-decoration:none; transition:color 0.3s ease">Vor Ort</a>
           <a href="index.html#zugang" style-hover="color:var(--terra-500)" style="color:var(--text-strong); text-decoration:none; transition:color 0.3s ease">Zugang</a>
           <a href="../index.html" style-hover="color:var(--terra-500)" style="display:inline-flex; align-items:center; gap:7px; color:var(--brown-400); text-decoration:none; transition:color 0.3s ease">← vaiacon</a>
-          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" arrow="{{ true }}" href="index.html#zugang" hint-size="auto,48px">Gratis starten</x-import>
+          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" arrow="{{ true }}" href="index.html#zugang" hint-size="auto,48px">Jetzt starten</x-import>
         </nav>
       </div>
     </header>
@@ -69,7 +69,7 @@
           <span style="font-family:var(--font-mono); font-size:11.5px; letter-spacing:0.18em; text-transform:uppercase; color:var(--brown-400)">{{ plan.meta }}</span>
           <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:4px">
             <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" size="lg" arrow="{{ true }}" href="#lektionen" hint-size="auto,56px">Erste Lektion starten</x-import>
-            <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" size="lg" variant="dark" arrow="{{ true }}" href="#zugang" hint-size="auto,56px">Zugang wählen</x-import>
+            <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" size="lg" variant="dark" arrow="{{ true }}" href="#zugang" hint-size="auto,56px">Überblick</x-import>
           </div>
         </div>
 
@@ -98,26 +98,6 @@
                 <strong style="font-size:18px; font-weight:600; letter-spacing:-0.015em; line-height:1.35">{{ l.title }}</strong>
                 <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brown-400)">{{ l.meta }}</span>
               </span>
-              <span style="justify-self:end; padding:6px 13px; border-radius:999px; font-size:10px; font-weight:600; letter-spacing:0.16em; white-space:nowrap; background:rgba(178,82,34,0.10); color:var(--terra-500); border:1px solid rgba(178,82,34,0.30)">GRATIS</span>
-            </div>
-          </sc-for>
-
-          <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:18px; padding:24px 30px; background:var(--ink-950)">
-            <div style="display:flex; flex-direction:column; gap:7px">
-              <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--orange-300)">Ab hier mit Academy Pro</span>
-              <strong style="font-size:19px; font-weight:600; letter-spacing:-0.015em; color:#FFFDF8">{{ gateText }}</strong>
-            </div>
-            <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" arrow="{{ true }}" href="#zugang" hint-size="auto,52px">Freischalten</x-import>
-          </div>
-
-          <sc-for list="{{ proLessons }}" as="l" hint-placeholder-count="3">
-            <div style-hover="background:var(--sand-300); padding-left:44px" style="display:grid; grid-template-columns:42px minmax(0,1fr) auto; gap:18px; align-items:center; padding:20px 30px; border-bottom:1px solid rgba(28,22,19,0.14); transition:background 0.35s ease, padding-left 0.35s ease">
-              <span style="font-family:var(--font-mono); font-size:13px; font-weight:600; letter-spacing:0.08em; color:var(--brown-400)">{{ l.n }}</span>
-              <span style="display:flex; flex-direction:column; gap:5px">
-                <strong style="font-size:18px; font-weight:600; letter-spacing:-0.015em; line-height:1.35; color:var(--brown-600)">{{ l.title }}</strong>
-                <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brown-400)">{{ l.meta }}</span>
-              </span>
-              <span style="justify-self:end; padding:6px 13px; border-radius:999px; font-size:10px; font-weight:600; letter-spacing:0.16em; white-space:nowrap; background:var(--ink-900); color:var(--peach-100); border:1px solid var(--ink-900)">PRO</span>
             </div>
           </sc-for>
 
@@ -143,21 +123,17 @@
 
       <aside style="display:flex; flex-direction:column; gap:20px; position:sticky; top:140px">
         <div id="zugang" style="background:var(--grad-package); border:1.5px solid rgba(28,22,19,0.5); border-radius:26px; padding:30px 28px; display:flex; flex-direction:column; gap:18px">
-          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.LabelBadge" tone="onTerra" hint-size="auto,26px">ACADEMY PRO</x-import>
+          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.LabelBadge" tone="onTerra" hint-size="auto,26px">OFFEN FÜR ALLE</x-import>
           <div style="display:flex; flex-direction:column; gap:8px">
-            <strong style="font-size:26px; font-weight:600; letter-spacing:-0.02em; color:#FFFFFF">Alles freischalten</strong>
-            <span style="font-size:15px; line-height:1.55; color:rgba(255,240,230,0.9)">Alle 12 Lernpfade, 66 Lektionen und sämtliche Vorlagen — monatlich kündbar.</span>
+            <strong style="font-size:26px; font-weight:600; letter-spacing:-0.02em; color:#FFFFFF">Alles offen</strong>
+            <span style="font-size:15px; line-height:1.55; color:rgba(255,240,230,0.9)">Alle Lernpfade, alle Lektionen und sämtliche Vorlagen — ohne Konto, ohne Bedingungen.</span>
           </div>
           <ul style="display:flex; flex-direction:column; gap:12px; list-style:none; margin:2px 0; padding:0">
             <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" tone="onTerra" hint-size="100%,26px">Alle Lektionen dieses Lernplans</x-import>
             <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" tone="onTerra" hint-size="100%,26px">Vorlagen und Checklisten zum Behalten</x-import>
             <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" tone="onTerra" hint-size="100%,26px">Neue Lektionen jeden Monat</x-import>
           </ul>
-          <div style="display:flex; align-items:baseline; gap:12px; padding-top:18px; border-top:1px solid rgba(255,255,255,0.28)">
-            <span style="font-size:10.5px; letter-spacing:0.16em; color:rgba(255,240,230,0.75)">PREIS</span>
-            <strong style="font-size:14px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:#FFFFFF">{{ proPrice }}</strong>
-          </div>
-          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" variant="light" arrow="{{ true }}" href="index.html#zugang" hint-size="100%,52px">Zugang wählen</x-import>
+          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" variant="light" arrow="{{ true }}" href="#lektionen" hint-size="100%,52px">Zur ersten Lektion</x-import>
         </div>
 
         <div style="background:var(--cream-card); border:1px solid var(--border-strong); border-radius:22px; padding:26px 26px; display:flex; flex-direction:column; gap:14px">
@@ -177,7 +153,7 @@
   <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.SiteFooter" logo-src="assets/logo-lockup-white.png" email="hallo@vaiacon.ch" hint-size="100%,120px"></x-import>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;gratisLektionen&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:2,&quot;min&quot;:0,&quot;max&quot;:9,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Paywall&quot;},&quot;preisPro&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:39,&quot;min&quot;:0,&quot;max&quot;:249,&quot;step&quot;:1,&quot;unit&quot;:&quot;CHF&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Paywall&quot;},&quot;zeigePreise&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Paywall&quot;}}">
+<script type="text/x-dc" data-dc-script>
 function plans() { return window.ACADEMY_PLANS || []; }
 
 class Component extends DCLogic {
@@ -202,31 +178,24 @@ class Component extends DCLogic {
 
   renderVals() {
     const list = plans();
-    const free = Math.max(0, Math.min(9, this.props.gratisLektionen ?? 2));
-    const showPrice = this.props.zeigePreise ?? true;
-    const price = this.props.preisPro ?? 39;
 
     const match = (location.hash + ' ' + location.search).match(/plan=(\d+)/);
     const wanted = match ? match[1] : '01';
     let i = list.findIndex((p) => p.n === wanted);
     if (i < 0) i = 0;
     const p = list[i];
-    if (!p) return { proPrice: showPrice ? 'CHF ' + price + ' / MONAT' : 'PREIS IN ABKLÄRUNG' };
+    if (!p) return {};
     if (p.href) { location.replace(p.href); return {}; } // Advanced-Pfad hat eine eigene Kursseite
 
     const href = (pl) => 'lernplan.html#plan=' + pl.n;
     const prev = list[(i - 1 + list.length) % list.length];
     const next = list[(i + 1) % list.length];
-    const cut = Math.min(free, p.lessons.length);
 
-    const row = (l, idx, isFree) => ({
+    const row = (l, idx) => ({
       n: String(idx + 1).padStart(2, '0'),
       title: l[0],
       meta: l[1] + ' · ' + l[2],
-      isFree: isFree,
     });
-
-    const locked = p.lessons.length - cut;
 
     return {
       plan: {
@@ -241,16 +210,11 @@ class Component extends DCLogic {
         takeaways: p.takeaways,
         count: p.lessons.length + ' Lektionen',
         hours: p.hours,
-        meta: p.level + ' · ' + p.lessons.length + ' LEKTIONEN · ' + p.hours + ' · ' + (cut > 0 ? String(cut).padStart(2, '0') + ' GRATIS' : 'PRO'),
+        meta: p.level + ' · ' + p.lessons.length + ' LEKTIONEN · ' + p.hours,
       },
-      freeLessons: p.lessons.slice(0, cut).map((l, idx) => row(l, idx, true)),
-      proLessons: p.lessons.slice(cut).map((l, idx) => row(l, idx + cut, false)),
-      gateText: locked === 0
-        ? 'Alle Lektionen dieses Lernplans sind offen.'
-        : (locked === 1 ? 'Noch eine Lektion und alle Vorlagen.' : 'Noch ' + locked + ' Lektionen und alle Vorlagen.'),
+      freeLessons: p.lessons.map((l, idx) => row(l, idx)),
       prev: { href: href(prev), title: prev.n + ' · ' + prev.title },
       next: { href: href(next), title: next.n + ' · ' + next.title },
-      proPrice: showPrice ? 'CHF ' + price + ' / MONAT' : 'PREIS IN ABKLÄRUNG',
     };
   }
 }

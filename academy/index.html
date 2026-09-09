@@ -41,7 +41,7 @@
           <a href="#vor-ort" style-hover="color:var(--terra-500)" style="color:var(--text-strong); text-decoration:none; transition:color 0.3s ease">Vor Ort</a>
           <a href="#zugang" style-hover="color:var(--terra-500)" style="color:var(--text-strong); text-decoration:none; transition:color 0.3s ease">Zugang</a>
           <a href="../index.html" style-hover="color:var(--terra-500)" style="display:inline-flex; align-items:center; gap:7px; color:var(--brown-400); text-decoration:none; transition:color 0.3s ease">← vaiacon</a>
-          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" arrow="{{ true }}" href="#zugang" hint-size="auto,48px">Gratis starten</x-import>
+          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" arrow="{{ true }}" href="#zugang" hint-size="auto,48px">Jetzt starten</x-import>
         </nav>
       </div>
     </header>
@@ -85,10 +85,10 @@
       </div>
 
       <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:22px; background:var(--cream-card); border:1px solid var(--border-strong); border-radius:22px; padding:24px 28px">
-        <p style="margin:0; font-size:16px; line-height:1.65; color:var(--text-body)">Alle Lernpläne im Pro-Zugang — die ersten Lektionen bleiben offen.</p>
+        <p style="margin:0; font-size:16px; line-height:1.65; color:var(--text-body)">Alle Lernpläne, alle Lektionen — offen für jeden, ohne Konto.</p>
         <div style="display:flex; flex-wrap:wrap; gap:12px">
           <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" arrow="{{ true }}" href="#vor-ort" hint-size="auto,52px">vaiaconLearning vor Ort</x-import>
-          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" variant="dark" arrow="{{ true }}" href="#zugang" hint-size="auto,52px">Zugang wählen</x-import>
+          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" variant="dark" arrow="{{ true }}" href="#zugang" hint-size="auto,52px">Überblick</x-import>
         </div>
       </div>
     </div>
@@ -161,35 +161,29 @@
       <div data-m="split" style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,0.85fr); gap:56px; align-items:end">
         <div style="display:flex; flex-direction:column; gap:20px">
           <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Kicker" number="03" hint-size="auto,20px">ZUGANG</x-import>
-          <h2 style="margin:0; font-size:var(--text-h2); font-weight:600; letter-spacing:-0.03em; line-height:1.06; max-width:22ch; text-wrap:pretty">Gratis starten. Vertiefen, wenn es passt.</h2>
+          <h2 style="margin:0; font-size:var(--text-h2); font-weight:600; letter-spacing:-0.03em; line-height:1.06; max-width:22ch; text-wrap:pretty">Alles offen. Für alle.</h2>
         </div>
-        <p style="margin:0; font-size:17.5px; line-height:1.7; color:var(--text-body); max-width:48ch; text-wrap:pretty">Kein Jahresabo, keine Mindestlaufzeit. Wer Begleitung will, bekommt sie von uns persönlich — nicht von einem Chatfenster allein.</p>
+        <p style="margin:0; font-size:17.5px; line-height:1.7; color:var(--text-body); max-width:48ch; text-wrap:pretty">Kein Konto, keine Anmeldung, keine Bedingungen. Wer Begleitung will, bekommt sie von uns persönlich — nicht von einem Chatfenster allein.</p>
       </div>
 
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr)); gap:24px; align-items:stretch">
         <article style="background:var(--cream-card); border:1px solid var(--border-strong); border-radius:26px; padding:40px 38px; box-sizing:border-box; display:flex; flex-direction:column; gap:20px">
-          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.LabelBadge" hint-size="auto,26px">GRATIS · OHNE KONTO</x-import>
+          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.LabelBadge" hint-size="auto,26px">OFFEN · OHNE KONTO</x-import>
           <div style="display:flex; flex-direction:column; gap:8px">
-            <h3 style="margin:0; font-size:30px; font-weight:600; letter-spacing:-0.02em">Schnuppern</h3>
-            <span style="font-size:15px; line-height:1.55; color:var(--text-body)">Reinschauen, ausprobieren, selbst merken, ob es passt.</span>
+            <h3 style="margin:0; font-size:30px; font-weight:600; letter-spacing:-0.02em">Die ganze Academy</h3>
+            <span style="font-size:15px; line-height:1.55; color:var(--text-body)">Reinschauen, ausprobieren, dranbleiben — in Ihrem Tempo.</span>
           </div>
           <ul style="display:flex; flex-direction:column; gap:12px; list-style:none; margin:4px 0; padding:0">
-            <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" hint-size="100%,26px">{{ freeTierLine }}</x-import>
+            <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" hint-size="100%,26px">Alle Lernpfade, alle Lektionen</x-import>
+            <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" hint-size="100%,26px">Sämtliche Vorlagen, Prompt-Karten und Checklisten</x-import>
+            <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" hint-size="100%,26px">Neue Lektionen jeden Monat</x-import>
             <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" hint-size="100%,26px">Erstanalyse für Ihren Betrieb</x-import>
             <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" hint-size="100%,26px">Merkblatt Datenschutz (revDSG)</x-import>
           </ul>
-          <div style="display:flex; align-items:baseline; gap:12px; margin-top:auto; padding-top:20px; border-top:1px solid var(--border-strong)">
-            <span style="font-size:10.5px; letter-spacing:0.16em; color:var(--brown-400)">PREIS</span>
-            <strong style="font-size:14px; font-weight:600; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-strong)">KOSTENLOS</strong>
-          </div>
         </article>
 
-        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.PackageCard" badge="ACADEMY PRO · PRO PERSON" title="Academy Pro" subtitle="Alles offen — inklusive der Lektionen, die noch kommen." features="{{ proFeatures }}" price="{{ proPrice }}" hint-size="100%,520px"></x-import>
-
-        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.PackageCard" variant="dark" badge="TEAM & BEGLEITUNG" title="Team" subtitle="Für Betriebe, die es gemeinsam einführen wollen." features="{{ teamFeatures }}" price="{{ teamPrice }}" hint-size="100%,520px"></x-import>
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.PackageCard" variant="dark" badge="TEAM & BEGLEITUNG" title="Begleitung im Betrieb" subtitle="Für Betriebe, die es gemeinsam einführen wollen — auf Anfrage." features="{{ teamFeatures }}" hint-size="100%,520px"></x-import>
       </div>
-
-      <p style="margin:0; font-size:15px; line-height:1.6; color:var(--brown-400)">Alle Preise exkl. MWST · monatlich kündbar · Lizenzen für KI-Werkzeuge sind nicht enthalten (wir zeigen, was für Ihren Betrieb reicht).</p>
     </div>
   </section>
 
@@ -207,7 +201,7 @@
         <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Was passiert mit unseren Daten?" hint-size="100%,76px">Sie arbeiten in Ihrer eigenen Umgebung — wir sehen Ihre Unterlagen nicht. Was nie in ein KI-Werkzeug gehört, ist eine eigene, immer frei zugängliche Lektion.</x-import>
         <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Welche Werkzeuge brauche ich — und was kosten die?" hint-size="100%,76px">Für den Einstieg genügt ein gängiger KI-Assistent, oft in der Gratis-Version. Wo eine Lizenz nötig wird, sagen wir es vorher und nennen die Alternative.</x-import>
         <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Können mehrere Mitarbeitende mitlernen?" hint-size="100%,76px">Ja, über den Team-Zugang. Dort sehen Sie auch, wer wo steht — ohne Notensystem, aber mit Überblick.</x-import>
-        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Was, wenn ich stecken bleibe?" hint-size="100%,76px">Jede Lektion hat eine Frage-Ecke, und der vaiaconBot hilft bei den häufigen Stolpersteinen. Im Team-Zugang kommt die monatliche Sprechstunde dazu.</x-import>
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Was, wenn ich stecken bleibe?" hint-size="100%,76px">Jede Lektion hat eine Frage-Ecke, und der vaiaconBot hilft bei den häufigen Stolpersteinen. Wer Begleitung im Betrieb möchte, meldet sich bei uns.</x-import>
         <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Gibt es eine Bestätigung am Ende?" last="{{ true }}" hint-size="100%,76px">Pro Lernplan erhalten Sie eine Teilnahmebestätigung. Uns ist das Resultat im Betrieb wichtiger — aber für die Personalakte reicht es.</x-import>
       </div>
     </div>
@@ -223,12 +217,12 @@
       <h2 style="margin:0; font-size:var(--text-statement); font-weight:600; letter-spacing:-0.035em; line-height:1.05; color:#FFFDF8; max-width:24ch; text-wrap:pretty">Die erste Lektion wartet.</h2>
       <p style="margin:0; font-size:18.5px; line-height:1.7; color:rgba(255,240,230,0.92); max-width:54ch; text-wrap:pretty">Beginnen Sie mit der Erstanalyse oder springen Sie direkt in Lernplan 01. Beides kostet nichts und dauert weniger als eine Kaffeepause.</p>
       <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:14px; margin-top:6px">
-        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" size="lg" variant="light" arrow="{{ true }}" href="#lernplaene" hint-size="auto,56px">Gratis starten</x-import>
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" size="lg" variant="light" arrow="{{ true }}" href="#lernplaene" hint-size="auto,56px">Jetzt starten</x-import>
         <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" size="lg" variant="glass" arrow="↗" href="../erstanalyse.html" hint-size="auto,56px">Erstanalyse machen</x-import>
       </div>
       <ul style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(250px,100%),1fr)); gap:16px 34px; list-style:none; margin:34px 0 0; padding:28px 0 0; border-top:1px solid rgba(255,255,255,0.28); width:100%; max-width:900px; text-align:left">
         <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" tone="onTerra" boxed="{{ true }}" hint-size="100%,26px">Erste Lektionen ohne Konto</x-import>
-        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" tone="onTerra" boxed="{{ true }}" hint-size="100%,26px">Monatlich kündbar</x-import>
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" tone="onTerra" boxed="{{ true }}" hint-size="100%,26px">Ohne Konto</x-import>
         <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" tone="onTerra" boxed="{{ true }}" hint-size="100%,26px">Begleitung durch Menschen</x-import>
       </ul>
     </div>
@@ -237,7 +231,7 @@
   <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.SiteFooter" logo-src="assets/logo-lockup-white.png" email="hallo@vaiacon.ch" hint-size="100%,120px"></x-import>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props="{&quot;gratisLektionen&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:3,&quot;min&quot;:0,&quot;max&quot;:9,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Paywall&quot;},&quot;preisPro&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:39,&quot;min&quot;:0,&quot;max&quot;:249,&quot;step&quot;:1,&quot;unit&quot;:&quot;CHF&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Paywall&quot;},&quot;zeigePreise&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Paywall&quot;},&quot;betaHinweis&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Inhalt&quot;}}">
+<script type="text/x-dc" data-dc-script data-props="{&quot;betaHinweis&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:false,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Inhalt&quot;}}">
 function plans() { return window.ACADEMY_PLANS || []; }
 
 class Component extends DCLogic {
@@ -255,10 +249,6 @@ class Component extends DCLogic {
   componentWillUnmount() { clearInterval(this.timer); }
 
   renderVals() {
-    const free = Math.max(0, Math.min(9, this.props.gratisLektionen ?? 2));
-    const showPrice = this.props.zeigePreise ?? true;
-    const pro = this.props.preisPro ?? 39;
-
     return {
       videoNote: this.state.videoNote,
       toggleVideo: () => this.setState((s) => ({ videoNote: !s.videoNote })),
@@ -277,17 +267,9 @@ class Component extends DCLogic {
         href: pl.href || ('lernplan.html#plan=' + pl.n),
         meta: pl.href
           ? pl.lessons.length + ' MODULE · ' + pl.hours
-          : pl.lessons.length + ' LEKTIONEN · ' + pl.hours + (free > 0 ? ' · ' + Math.min(free, pl.lessons.length) + ' GRATIS' : ''),
+          : pl.lessons.length + ' LEKTIONEN · ' + pl.hours,
       })),
 
-      freeTierLine: free === 0 ? 'Keine Gratis-Lektionen' : 'Lektion 01–' + String(free).padStart(2, '0') + ' in jedem Lernplan',
-      proFeatures: [
-        'Alle 12 Lernpfade, alle 66 Lektionen',
-        'Sämtliche Vorlagen, Prompt-Karten und Checklisten',
-        'Neue Lektionen jeden Monat — ohne Aufpreis',
-        'Frage-Ecke zu jeder Lektion',
-        'Teilnahmebestätigung pro Lernplan',
-      ],
       teamFeatures: [
         'Bis zehn Zugänge, ein Überblick fürs Team',
         'Kick-off-Workshop mit André oder Philip',
@@ -295,8 +277,6 @@ class Component extends DCLogic {
         'Monatliche Sprechstunde (30 Min)',
         'Erstanalyse und KI-Richtlinie inklusive',
       ],
-      proPrice: showPrice ? 'CHF ' + pro + ' / MONAT' : 'PREIS IN ABKLÄRUNG',
-      teamPrice: showPrice ? 'AB CHF ' + (pro * 6) + ' / MONAT' : 'AUF ANFRAGE',
     };
   }
 }
