@@ -1,4 +1,3 @@
-<!-- @dsCard group="Website" viewport="1440x900" name="vaiacon.ch — Über uns" subtitle="Unterseite mit Team, aus dem One-Pager ausgelagert" -->
 <!DOCTYPE html>
 <html lang="de-CH">
 <head>
@@ -16,15 +15,113 @@
 <meta name="twitter:card" content="summary_large_image">
 <title>Über uns — die Menschen hinter vaiacon</title>
 <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20260830-shared-header">
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="_ds_bundle.js?v=20260909-vaia3"></script>
-<script>window.VAIACON_ASSET_BASE = 'assets/';</script>
+<link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20260909-seiten">
+<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20260909-zwei">
+<link rel="stylesheet" href="ui_kits/website/chat.css?v=20260909-vaia3">
 </head>
 <body>
-<div id="root"></div>
-<script src="ui_kits/website/chat-widget.compiled.js?v=20260909-vaia3"></script>
-<script src="ui_kits/website/ueber-uns-header-current.compiled.js"></script>
+<div class="sv-page">
+  <header class="mock-header sv-header">
+    <div class="mock-header__inner">
+      <a class="mock-header__logo" href="index.html" aria-label="vaiacon Start">
+        <img src="assets/logo-lockup-white.png" alt="vaiacon">
+      </a>
+      <button class="mock-menu-toggle" type="button" aria-label="Menü öffnen" aria-controls="mock-mobile-menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="mock-header__nav" aria-label="Hauptnavigation">
+        <a href="visibility.html">Visibility</a>
+        <a href="academy/">Academy</a>
+        <a href="learning.html">Learning</a>
+        <a href="bot.html">Bot</a>
+        <a href="service.html">Service</a>
+        <a href="faq.html">FAQ</a>
+        <a class="mock-header__contact" href="kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+    <nav id="mock-mobile-menu" class="mock-mobile-nav" aria-label="Mobile Navigation">
+      <a href="visibility.html">Visibility</a>
+      <a href="academy/">Academy</a>
+      <a href="learning.html">Learning</a>
+      <a href="bot.html">Bot</a>
+      <a href="service.html">Service</a>
+      <a href="faq.html">FAQ</a>
+      <a class="mock-header__contact" href="kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="top" class="sv-hero sv-hero--kompakt" aria-label="Start">
+      <div class="sv-hero__inner">
+        <div class="sv-hero__copy">
+          <p class="sv-kicker sv-kicker--on-terra">01 — ÜBER UNS</p>
+          <h1>Unternehmerische Praxis, menschliche Werte und moderne Technologie.</h1>
+          <p class="sv-hero__lead">
+            André Ulrich und Philip Krieger sind zwei Unternehmer aus Zürich. Sie haben vaiacon gegründet, um Schweizer KMU in das Zeitalter von KI zu begleiten — persönlich, vor Ort und auf Augenhöhe.
+          </p>
+          <div class="sv-actions">
+            <a class="sv-button sv-button--light" href="kontakt.html">Erstgespräch vereinbaren →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="sv-section">
+      <div class="sv-wrap">
+        <div class="sv-center">
+          <p class="sv-kicker">02 — DIE GRÜNDER</p>
+        </div>
+        <div class="sv-card-grid sv-card-grid--zwei">
+          <article class="sv-card">
+            <img src="assets/andre-ulrich-team.png?v=20260720-andre-bg-clean" alt="André Ulrich" style="width:100%; max-width:220px; height:auto; border-radius:18px; display:block; margin-bottom:16px">
+            <h3>André Ulrich</h3>
+            <p>Mitgründer · KMU-Experte</p>
+          </article>
+          <article class="sv-card">
+            <img src="assets/philip-krieger-team.png" alt="Philip Krieger" style="width:100%; max-width:220px; height:auto; border-radius:18px; display:block; margin-bottom:16px">
+            <h3>Philip Krieger</h3>
+            <p>Mitgründer · Coach</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="haltung" class="sv-section sv-section--terra">
+      <div class="sv-wrap sv-center">
+        <p class="sv-kicker sv-kicker--on-terra">03 — WOFÜR WIR STEHEN</p>
+        <h2 class="sv-title sv-title--on-terra">KI ist für uns nicht das Produkt, sondern das Werkzeug.</h2>
+        <p class="sv-lead sv-lead--on-terra">
+          Wir verkaufen keine Technik, sondern zurückgewonnene Zeit. Wo sich etwas nicht rechnet, sagen wir das — auch wenn es uns einen Auftrag kostet. Ihre Kundendaten bleiben dort, wo sie hingehören: nach revDSG, auf Schweizer Infrastruktur.
+        </p>
+      </div>
+    </section>
+
+    <section id="kontakt" class="sv-final">
+      <div class="sv-wrap sv-center">
+        <p class="sv-kicker sv-kicker--on-terra">04 — NÄCHSTER SCHRITT</p>
+        <h2 class="sv-title sv-title--on-terra">Lernen wir uns kennen.</h2>
+        <p class="sv-lead sv-lead--on-terra">
+          Ein halbstündiges Erstgespräch, kostenlos und ohne Verpflichtung. Danach wissen Sie, ob und wo wir Ihrem Betrieb weiterhelfen.
+        </p>
+        <div class="sv-actions">
+          <a class="sv-button sv-button--light" href="https://calendly.com/vaiacon" target="_blank" rel="noopener">Termin direkt buchen ↗</a>
+          <a class="sv-button sv-button--glass" href="kontakt.html">Zur Kontaktseite →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="sv-footer">
+    <div class="sv-footer__inner">
+      <a class="sv-footer__logo" href="#top" aria-label="Zurück nach oben">
+        <img src="assets/logo-lockup-white.png" alt="vaiacon">
+      </a>
+      <p>vaiacon GmbH · Lehenstrasse 74, 8037 Zürich · <a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a></p>
+      <a class="sv-footer__top" href="#top">↑ Nach oben</a>
+    </div>
+  </footer>
+</div>
+<script src="ui_kits/website/visibility.js?v=20260909-mobil"></script>
+<script src="ui_kits/website/chat.js?v=20260909-vaia3"></script>
 </body>
 </html>

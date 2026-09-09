@@ -15,28 +15,28 @@ const NAV_GROUPS = [
   {
     label: 'Lernen',
     links: [
-      { label: 'vaiaconAcademy', href: 'index.html#academy', product: 'Academy' },
-      { label: 'vaiaconLearning', href: 'index.html#learning', product: 'Learning' },
+      { label: 'vaiaconAcademy', href: 'academy/', product: 'Academy' },
+      { label: 'vaiaconLearning', href: 'learning.html', product: 'Learning' },
     ],
   },
   {
     label: 'Automatisieren',
     links: [
-      { label: 'vaiaconBot', href: 'index.html#service', product: 'Bot' },
+      { label: 'vaiaconBot', href: 'bot.html', product: 'Bot' },
     ],
   },
   {
     label: 'Begleitung',
     links: [
-      { label: 'vaiaconService', href: 'index.html#service-pakete', product: 'Service' },
+      { label: 'vaiaconService', href: 'service.html', product: 'Service' },
     ],
   },
 ];
 
 const NAV_AUX_LINKS = [
   { label: 'Über uns', href: 'ueber-uns.html' },
-  { label: 'FAQ', href: 'index.html#faq' },
-  { label: 'Kontakt', href: 'index.html#kontakt', contact: true },
+  { label: 'FAQ', href: 'faq.html' },
+  { label: 'Kontakt', href: 'kontakt.html', contact: true },
 ];
 
 function NavLabel({ link }) {
