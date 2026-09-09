@@ -837,7 +837,8 @@ body {
     min-height: 42px;
     display: inline-flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    text-align: center;
     border-radius: 0;
     color: var(--ink-900);
     text-decoration: none;
@@ -864,6 +865,7 @@ body {
 
   .mock-mobile-nav__group-title {
     padding-bottom: 4px;
+    text-align: center;
     color: var(--terra-500);
     font-size: 12px;
     font-weight: 700;
