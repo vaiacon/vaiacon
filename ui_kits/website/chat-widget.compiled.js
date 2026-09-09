@@ -12,7 +12,7 @@ function ChatWidget({
 }) {
   const [msgs, setMsgs] = React.useState([{
     role: 'bot',
-    text: 'Grüezi! Ich beantworte gern Ihre Fragen zu vaiacon, unseren Paketen oder dem vaiaconBot. Womit kann ich helfen?'
+    text: 'Grüezi, ich bin Vaia! Die digitale Mitarbeiterin von vaiacon. Ich beantworte gerne Ihre Fragen zu vaiacon, unseren Paketen und den ersten Schritten.'
   }]);
   const [input, setInput] = React.useState('');
   const [busy, setBusy] = React.useState(false);
@@ -187,7 +187,7 @@ function ChatWidget({
     }
   })), /*#__PURE__*/React.createElement("span", {
     className: "chat-fab-long"
-  }, "Fragen an den vaiaconBot?")), open && /*#__PURE__*/React.createElement("div", {
+  }, "Fragen Sie Vaia")), open && /*#__PURE__*/React.createElement("div", {
     className: "chat-panel",
     style: {
       width: 380,
@@ -222,7 +222,7 @@ function ChatWidget({
       fontSize: 16,
       fontWeight: 700
     }
-  }, "vaiacon Assistent"), /*#__PURE__*/React.createElement("span", {
+  }, "Vaia"), /*#__PURE__*/React.createElement("span", {
     style: {
       fontSize: 12.5,
       opacity: 0.85

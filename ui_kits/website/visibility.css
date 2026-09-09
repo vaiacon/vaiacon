@@ -678,3 +678,33 @@ body {
     padding: 0 var(--space-5) var(--space-5);
   }
 }
+
+/* Kompakter Terracotta-Kopf für Bereiche ohne grosses Bild (Academy).
+   Gleiche Farbe und gleiche Kopfzeile wie überall, aber flach statt bildschirmhoch. */
+.sv-hero--kompakt { min-height: 0; }
+.sv-hero--kompakt .sv-hero__inner {
+  padding-top: calc(var(--section-pad-y) + var(--space-6));
+  padding-bottom: var(--space-6);
+  gap: var(--space-4);
+}
+
+/* Karte auf Terracotta — für die Karte, die aus der Reihe hervorstechen soll,
+   ohne wie ein Fremdkörper zu wirken. Textfarben mitgeführt. */
+.sv-card--terra {
+  background: var(--grad-package);
+  color: var(--text-on-terra);
+  border-color: var(--border-ink);
+}
+.sv-card--terra h3 { color: #FFFDF8; }
+.sv-card--terra p { color: rgba(255, 240, 230, 0.92); }
+.sv-card--terra .sv-card__no { color: var(--peach-200); }
+
+@media (max-width: 700px) {
+  /* Ohne diese Zeilen gewinnt die kompakte Regel oben gegen die Handy-Anpassung
+     und der Kopf bekaeme zu wenig Platz unter der festen Kopfzeile. */
+  .sv-hero--kompakt .sv-hero__inner {
+    padding-top: calc(var(--section-pad-y) + var(--space-9));
+    padding-bottom: var(--space-6);
+    gap: var(--space-7);
+  }
+}

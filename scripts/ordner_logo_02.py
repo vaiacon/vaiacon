@@ -1,4 +1,4 @@
-"""Ersetzt das geprägte «+» auf dem Ordner in lernplan-02 durch das vaiacon-Zeichen.
+"""Ersetzt das gepraegte «+» auf dem Ordner in lernplan-02 durch das vaiacon-Zeichen.
 
 Zwei Varianten zur Auswahl:
   praegung - Ton in Ton in den Ordner gepraegt, wie das + vorher. Aus dem Bild

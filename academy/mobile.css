@@ -6,7 +6,7 @@
     align-items: start !important;
   }
 
-  section {
+  section:not(#top):not(.sv-hero) {
     padding-top: 62px !important;
     padding-bottom: 62px !important;
     padding-left: 20px !important;
@@ -19,8 +19,14 @@
 }
 
 @media (max-width: 560px) {
-  section {
+  section:not(#top):not(.sv-hero) {
     padding-top: 52px !important;
     padding-bottom: 52px !important;
   }
+}
+
+/* Der Terracotta-Kopf liegt unter der festen Kopfzeile (66px auf dem Handy)
+   und braucht darum eigenes Polster, statt auf 62px gestaucht zu werden. */
+@media (max-width: 860px) {
+  #top[style] { padding-top: 108px !important; padding-bottom: 48px !important; }
 }

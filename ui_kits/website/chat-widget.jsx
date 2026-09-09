@@ -4,7 +4,7 @@ const { Button, ChatMessage } = window.vaiaconDesignSystem_5f353f;
    der Schluessel liegt auf dem Server, nie hier im Browser. */
 function ChatWidget({ open, onOpen, onClose }) {
   const [msgs, setMsgs] = React.useState([
-    { role: 'bot', text: 'Grüezi! Ich beantworte gern Ihre Fragen zu vaiacon, unseren Paketen oder dem vaiaconBot. Womit kann ich helfen?' },
+    { role: 'bot', text: 'Grüezi, ich bin Vaia! Die digitale Mitarbeiterin von vaiacon. Ich beantworte gerne Ihre Fragen zu vaiacon, unseren Paketen und den ersten Schritten.' },
   ]);
   const [input, setInput] = React.useState('');
   const [busy, setBusy] = React.useState(false);
@@ -138,7 +138,7 @@ function ChatWidget({ open, onOpen, onClose }) {
           <span style={{ width: 24, height: 24, borderRadius: 10, background: 'var(--cream-100)', border: '1px solid rgba(28,22,19,0.18)', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', flex: '0 0 24px' }}>
             <span style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--terra-500)', display: 'block' }}></span>
           </span>
-          <span className="chat-fab-long">Fragen an den vaiaconBot?</span>
+          <span className="chat-fab-long">Fragen Sie Vaia</span>
         </Button>
       )}
       {open && (

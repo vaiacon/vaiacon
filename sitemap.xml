@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://vaiacon.ch/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://vaiacon.ch/ueber-uns</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vaiacon.ch/visibility</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vaiacon.ch/learning</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vaiacon.ch/bot</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vaiacon.ch/service</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vaiacon.ch/faq</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vaiacon.ch/kontakt</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vaiacon.ch/academy/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vaiacon.ch/academy/lernplan.html</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
+</urlset>

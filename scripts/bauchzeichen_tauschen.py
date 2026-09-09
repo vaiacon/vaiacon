@@ -1,4 +1,4 @@
-"""Tauscht das alte Simplaro-Zeichen auf dem Bauch des Bueroboters gegen das
+"""Tauscht das alte Zeichen auf dem Bauch des Bueroboters gegen das
 vaiacon-Zeichen. Gebraucht am 08.09.2026 fuer die Lernplan-Bilder der Academy.
 
     python3 scripts/bauchzeichen_tauschen.py            # alle bekannten Bilder
@@ -13,7 +13,7 @@ Sonderfaelle:
   lernplan-02.png - die verschraenkten Arme verdecken zwei Drittel des Zeichens.
                     Entscheid Andre am 08.09.2026: Bauch bleibt leer, also nur
                     entfernen und nichts einsetzen.
-  lernplan-12.png - keine Bauchmarke, sondern die Wortmarke "simplaro" gross an
+  lernplan-12.png - keine Bauchmarke, sondern die alte Wortmarke gross an
                     der Wand. Nicht mit diesem Werkzeug loesbar, dafuer braucht es
                     ein neu gerendertes Bild. Bleibt vorerst unveraendert.
 """

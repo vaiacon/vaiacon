@@ -7,7 +7,9 @@
   if (!toggle || !menu || !header || !logo) return;
 
   function syncHeader() {
-    const isSolid = window.scrollY > 24 || toggle.getAttribute('aria-expanded') === 'true';
+    // Seiten mit hellem Hero (Academy) tragen data-solid="always" und bleiben fest.
+    const immer = header.getAttribute('data-solid') === 'always';
+    const isSolid = immer || window.scrollY > 24 || toggle.getAttribute('aria-expanded') === 'true';
     header.classList.toggle('is-solid', isSolid);
     logo.src = isSolid ? 'assets/logo-lockup-terra.png' : 'assets/logo-lockup-white.png';
   }

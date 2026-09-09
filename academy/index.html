@@ -8,6 +8,16 @@
 <body>
 <x-dc>
 <helmet>
+  <title>vaiaconAcademy — KI-Weiterbildung für Schweizer KMU</title>
+  <meta name="description" content="Elf Lernpfade, 58 Lektionen zu KI im KMU-Alltag: Datenschutz, Korrespondenz, Offerten, Buchhaltung, Automatisierung. Kostenlos und ohne Konto.">
+  <link rel="canonical" href="https://vaiacon.ch/academy/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="vaiacon">
+  <meta property="og:locale" content="de_CH">
+  <meta property="og:title" content="vaiaconAcademy — KI-Weiterbildung für Schweizer KMU">
+  <meta property="og:description" content="Elf Lernpfade, 58 Lektionen zu KI im KMU-Alltag: Datenschutz, Korrespondenz, Offerten, Buchhaltung, Automatisierung. Kostenlos und ohne Konto.">
+  <meta property="og:image" content="https://vaiacon.ch/assets/vaiacon-buerobot-hero.png">
+  <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="../tokens/fonts.css">
   <link rel="stylesheet" href="../tokens/colors.css">
   <link rel="stylesheet" href="../tokens/typography.css">
@@ -15,8 +25,8 @@
   <link rel="stylesheet" href="../tokens/effects.css">
   <link rel="stylesheet" href="../tokens/base.css">
   <link rel="stylesheet" href="../styles.css">
-<link rel="stylesheet" href="mobile.css?v=20260729-mobile-86">
-  <script src="../_ds_bundle.js?v=20260729-mobile-86"></script>
+<link rel="stylesheet" href="mobile.css?v=20260909-mobil">
+  <script src="../_ds_bundle.js?v=20260909-vaia3"></script>
   <script src="./academy-daten.js?v=20260909-avv"></script>
   <script src="./image-slot.js"></script>
   <style>
@@ -26,26 +36,60 @@
     a:hover { color: #9C4517; }
     ::selection { background: rgba(178, 82, 34, 0.22); }
   </style>
+  <link rel="stylesheet" href="../ui_kits/website/chat.css?v=20260909-vaia3">
+  <script src="../ui_kits/website/chat.js?v=20260909-vaia3" defer></script>
+  <link rel="stylesheet" href="../ui_kits/website/mockup-entwurf.css?v=20260909-vaia3">
+  <link rel="stylesheet" href="../ui_kits/website/visibility.css?v=20260909-mobil">
+  <script src="../ui_kits/website/visibility.js?v=20260909-vaia3" defer></script>
 </helmet>
 
-<div id="top" style="background:var(--cream-100)">
+<div style="background:var(--cream-100)">
 
-  <div style="position:sticky; top:0; z-index:40">
-    <header style="background:var(--cream-100); border-bottom:1px solid var(--border-soft)">
-      <div style="max-width:var(--header-max); margin:0 auto; padding:22px 32px; box-sizing:border-box; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:14px 26px">
-        <a href="#top" aria-label="vaiaconAcademy Startseite" style="display:flex; align-items:center; flex-shrink:0; text-decoration:none">
-          <img src="assets/logo-lockup-academy.png" alt="vaiaconAcademy" style="height:44px; width:auto; display:block">
-        </a>
-        <nav aria-label="Hauptnavigation" style="display:flex; flex-wrap:wrap; align-items:center; gap:12px 24px; font-size:17px; font-weight:600">
-          <a href="#lernplaene" style-hover="color:var(--terra-500)" style="color:var(--text-strong); text-decoration:none; transition:color 0.3s ease">Lernpläne</a>
-          <a href="#vor-ort" style-hover="color:var(--terra-500)" style="color:var(--text-strong); text-decoration:none; transition:color 0.3s ease">Vor Ort</a>
-          <a href="#zugang" style-hover="color:var(--terra-500)" style="color:var(--text-strong); text-decoration:none; transition:color 0.3s ease">Zugang</a>
-          <a href="../index.html" style-hover="color:var(--terra-500)" style="display:inline-flex; align-items:center; gap:7px; color:var(--brown-400); text-decoration:none; transition:color 0.3s ease">← vaiacon</a>
-          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" arrow="{{ true }}" href="#zugang" hint-size="auto,48px">Jetzt starten</x-import>
-        </nav>
+  <header class="mock-header sv-header">
+    <div class="mock-header__inner">
+      <a class="mock-header__logo" href="../index.html" aria-label="vaiacon Startseite">
+        <img src="../assets/logo-lockup-white.png" alt="vaiacon">
+      </a>
+      <button class="mock-menu-toggle" type="button" aria-label="Menü öffnen" aria-controls="mock-mobile-menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="mock-header__nav" aria-label="Hauptnavigation">
+        <a href="../visibility.html">Visibility</a>
+        <a href="index.html">Academy</a>
+        <a href="../learning.html">Learning</a>
+        <a href="../bot.html">Bot</a>
+        <a href="../service.html">Service</a>
+        <a href="../ueber-uns.html">Über uns</a>
+        <a class="mock-header__contact" href="../kontakt.html">Kontakt</a>
+      </nav>
+    </div>
+    <nav id="mock-mobile-menu" class="mock-mobile-nav" aria-label="Mobile Navigation">
+      <a href="../visibility.html">Visibility</a>
+      <a href="index.html">Academy</a>
+      <a href="../learning.html">Learning</a>
+      <a href="../bot.html">Bot</a>
+      <a href="../service.html">Service</a>
+      <a href="../ueber-uns.html">Über uns</a>
+      <a class="mock-header__contact" href="../kontakt.html">Kontakt</a>
+    </nav>
+  </header>
+
+
+  <section id="top" class="sv-hero sv-hero--kompakt" aria-label="Start">
+    <div class="sv-hero__inner">
+      <div class="sv-hero__copy">
+        <p class="sv-kicker sv-kicker--on-terra">VAIACON ACADEMY</p>
+        <h1>KI im Alltag. Für Schweizer KMU.</h1>
+        <p class="sv-hero__lead">
+          Elf Lernpfade, 58 kurze Lektionen — kostenlos, ohne Konto und ohne Anmeldung. Sie starten dort, wo es bei Ihnen brennt.
+        </p>
+        <div class="sv-actions">
+          <a class="sv-button sv-button--light" href="#lernplaene">Zu den Lernpfaden →</a>
+          <a class="sv-button sv-button--glass" href="lernplan.html?plan=01">Erste Lektion starten →</a>
+        </div>
       </div>
-    </header>
-  </div>
+    </div>
+  </section>
 
   <!-- ═══ 01 · LERNPLÄNE ═══ -->
   <section id="lernplaene" style="position:relative; overflow:hidden; background:var(--sand-200); padding:62px 32px 92px">
@@ -53,7 +97,7 @@
     <div style="position:relative; max-width:1160px; margin:0 auto; display:flex; flex-direction:column; gap:32px">
       <div style="display:flex; flex-direction:column; gap:16px">
         <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Kicker" number="01" hint-size="auto,20px">DIE LERNPLÄNE</x-import>
-        <h1 style="margin:0; font-size:var(--text-h2); font-weight:600; letter-spacing:-0.03em; line-height:1.06; max-width:24ch; text-wrap:pretty">KI im Alltag. Für Schweizer KMU.</h1>
+        <h2 style="margin:0; font-size:var(--text-h2); font-weight:600; letter-spacing:-0.03em; line-height:1.06; max-width:24ch; text-wrap:pretty">Die elf Lernpfade.</h2>
         <p style="margin:0; max-width:56ch; font-size:17px; line-height:1.65; color:var(--text-body); text-wrap:pretty">Elf Lernpfade, 58 Lektionen. Jeder Lernplan ist für sich abgeschlossen und dauert 20 bis 45 Minuten — Sie starten dort, wo es bei Ihnen brennt.</p>
         <span style="font-family:var(--font-mono); font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:var(--brown-400)">Kachel anklicken für alle Lektionen</span>
       </div>
@@ -201,7 +245,7 @@
         <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Was passiert mit unseren Daten?" hint-size="100%,76px">Sie arbeiten in Ihrer eigenen Umgebung — wir sehen Ihre Unterlagen nicht. Was nie in ein KI-Werkzeug gehört, ist eine eigene, immer frei zugängliche Lektion.</x-import>
         <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Welche Werkzeuge brauche ich — und was kosten die?" hint-size="100%,76px">Für den Einstieg genügt ein gängiger KI-Assistent, oft in der Gratis-Version. Wo eine Lizenz nötig wird, sagen wir es vorher und nennen die Alternative.</x-import>
         <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Können mehrere Mitarbeitende mitlernen?" hint-size="100%,76px">Ja, über den Team-Zugang. Dort sehen Sie auch, wer wo steht — ohne Notensystem, aber mit Überblick.</x-import>
-        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Was, wenn ich stecken bleibe?" hint-size="100%,76px">Jede Lektion hat eine Frage-Ecke, und der vaiaconBot hilft bei den häufigen Stolpersteinen. Wer Begleitung im Betrieb möchte, meldet sich bei uns.</x-import>
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Was, wenn ich stecken bleibe?" hint-size="100%,76px">Jede Lektion hat eine Frage-Ecke, und Vaia hilft bei den häufigen Stolpersteinen. Wer Begleitung im Betrieb möchte, meldet sich bei uns.</x-import>
         <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Gibt es eine Bestätigung am Ende?" last="{{ true }}" hint-size="100%,76px">Pro Lernplan erhalten Sie eine Teilnahmebestätigung. Uns ist das Resultat im Betrieb wichtiger — aber für die Personalakte reicht es.</x-import>
       </div>
     </div>

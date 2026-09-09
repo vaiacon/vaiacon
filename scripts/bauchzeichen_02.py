@@ -1,7 +1,7 @@
 """Setzt das vaiacon-Zeichen auf den Bauch des Roboters in lernplan-02.
 
 Die Arme bleiben verschraenkt. Das Zeichen sitzt darum nicht dort, wo das alte
-Simplaro-Zeichen sass (zu zwei Dritteln verdeckt), sondern im freien Band direkt
+Zeichen sass (zu zwei Dritteln verdeckt), sondern im freien Band direkt
 unter den Haenden.
 
 Aus dem Bild gemessen:

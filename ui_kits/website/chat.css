@@ -1,0 +1,116 @@
+/* Chat-Widget für die statischen Seiten — ohne React.
+   Auf dem Bildschirm schwebt es unten rechts. Auf dem Handy steht es am Ende
+   der Seite im Fluss, damit der unterste Inhalt sichtbar bleibt. */
+
+.vc-chat {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 12px;
+  font-family: 'Quicksand', -apple-system, 'Helvetica Neue', system-ui, sans-serif;
+}
+
+.vc-chat__fab {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 20px;
+  border-radius: 999px;
+  border: 2px solid #1C1613;
+  background: #A83A08;
+  color: #FBF4EE;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 6px 6px 0 rgba(28, 22, 19, 0.85);
+  transition: transform 0.3s cubic-bezier(.22, 1, .36, 1), background 0.3s ease;
+}
+.vc-chat__fab:hover { transform: translateY(-4px); background: #9C4517; }
+.vc-chat__fab-dot {
+  width: 9px; height: 9px; border-radius: 999px;
+  background: #FFD9C2; flex: none;
+}
+
+.vc-chat__panel {
+  display: none;
+  width: min(360px, calc(100vw - 48px));
+  background: #FFFDF8;
+  border: 2px solid #1C1613;
+  border-radius: 18px;
+  box-shadow: 6px 6px 0 rgba(28, 22, 19, 0.85);
+  overflow: hidden;
+}
+.vc-chat[data-open="true"] .vc-chat__panel { display: block; }
+
+.vc-chat__head {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 14px 16px;
+  background: #A83A08;
+  color: #FBF4EE;
+}
+.vc-chat__head strong { font-size: 15.5px; font-weight: 700; }
+.vc-chat__head span { display: block; font-size: 12.5px; opacity: 0.85; font-weight: 600; }
+.vc-chat__close {
+  border: none; background: transparent; color: #FBF4EE;
+  font-size: 22px; line-height: 1; cursor: pointer; padding: 0 2px;
+}
+
+.vc-chat__log {
+  padding: 16px;
+  max-height: min(46vh, 380px);
+  overflow-y: auto;
+  display: flex; flex-direction: column; gap: 10px;
+  background: #FBF4EE;
+}
+.vc-chat__msg {
+  max-width: 86%;
+  padding: 10px 14px;
+  border-radius: 16px;
+  font-size: 15px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+}
+.vc-chat__msg--bot { align-self: flex-start; background: #FFFDF8; border: 1px solid rgba(28,22,19,.32); color: #1C1613; }
+.vc-chat__msg--user { align-self: flex-end; background: #B25222; color: #FFFDF8; }
+
+.vc-chat__form {
+  display: flex; gap: 8px; padding: 12px;
+  border-top: 1px solid rgba(28,22,19,.14);
+  background: #FFFDF8;
+}
+.vc-chat__form input {
+  flex: 1; min-width: 0;
+  padding: 11px 14px;
+  border: 1.5px solid #1C1613;
+  border-radius: 999px;
+  font-family: inherit; font-size: 15px; color: #1C1613;
+  background: #FFFDF8;
+}
+.vc-chat__form input:focus { outline: 2px solid rgba(178,82,34,.35); outline-offset: 1px; }
+.vc-chat__form button {
+  flex: none; width: 44px;
+  border: 1.5px solid #1C1613; border-radius: 999px;
+  background: #E2652C; color: #FFFDF8;
+  font-size: 17px; font-weight: 700; cursor: pointer;
+}
+.vc-chat__form button:hover { background: #F4793E; }
+.vc-chat__form button[disabled] { opacity: 0.5; cursor: default; }
+
+/* Handy: nicht schwebend, sondern am Ende der Seite im Fluss —
+   sonst deckt es die unterste Zeile ab. */
+@media (max-width: 720px) {
+  .vc-chat {
+    position: static;
+    align-items: stretch;
+    padding: 0 20px 32px;
+    background: #171210;
+  }
+  .vc-chat__fab { justify-content: center; }
+  .vc-chat__panel { width: auto; }
+  .vc-chat__log { max-height: 52vh; }
+}

@@ -15,28 +15,28 @@ const NAV_GROUPS = [
   {
     label: 'Lernen',
     links: [
-      { label: 'vaiaconAcademy', href: '#academy', product: 'Academy' },
-      { label: 'vaiaconLearning', href: '#learning', product: 'Learning' },
+      { label: 'vaiaconAcademy', href: 'academy/', product: 'Academy' },
+      { label: 'vaiaconLearning', href: 'learning.html', product: 'Learning' },
     ],
   },
   {
     label: 'Automatisieren',
     links: [
-      { label: 'vaiaconBot', href: '#service', product: 'Bot' },
+      { label: 'vaiaconBot', href: 'bot.html', product: 'Bot' },
     ],
   },
   {
     label: 'Begleitung',
     links: [
-      { label: 'vaiaconService', href: '#service-pakete', product: 'Service' },
+      { label: 'vaiaconService', href: 'service.html', product: 'Service' },
     ],
   },
 ];
 
 const NAV_AUX_LINKS = [
   { label: 'Über uns', href: 'ueber-uns.html' },
-  { label: 'FAQ', href: '#faq' },
-  { label: 'Kontakt', href: '#kontakt', contact: true },
+  { label: 'FAQ', href: 'faq.html' },
+  { label: 'Kontakt', href: 'kontakt.html', contact: true },
 ];
 
 const FAQS = [
@@ -340,13 +340,13 @@ function Academy() {
         <div className="mock-center">
           <Kicker number="02">E-Learnings</Kicker>
           <h2 className="mock-title">Mehr als ein Chatbot: Lernen Sie, Ihre Büroarbeit mit KI zu automatisieren.</h2>
-          <p className="mock-lead" style={{ maxWidth: 760 }}>Die <ProductName name="Academy" /> ist unsere Selbstlern-Plattform: 66 kurze Lektionen in elf Lernpfaden. Jeder Plan ist für sich abgeschlossen und dauert 20 bis 45 Minuten — Sie starten dort, wo es bei Ihnen brennt.</p>
+          <p className="mock-lead" style={{ maxWidth: 760 }}>Die <ProductName name="Academy" /> ist unsere Selbstlern-Plattform: 58 kurze Lektionen in elf Lernpfaden. Jeder Plan ist für sich abgeschlossen und dauert 20 bis 45 Minuten — Sie starten dort, wo es bei Ihnen brennt.</p>
         </div>
         <div className="mock-academy-feature">
           <div className="mock-academy-feature__copy">
             <span className="mock-learning-track__label">Online · im eigenen Tempo</span>
             <h3><ProductName name="Academy" /></h3>
-            <p>66 kurze Lektionen in elf Lernpfaden: Sie lernen genau das, was in Ihrem KMU gerade weiterhilft - verständlich, praxisnah und in Ihrem Tempo.</p>
+            <p>58 kurze Lektionen in elf Lernpfaden: Sie lernen genau das, was in Ihrem KMU gerade weiterhilft - verständlich, praxisnah und in Ihrem Tempo.</p>
             <p className="mock-academy-feature__note">Die Lektionen sind kostenlos. Kein Abo, keine Verpflichtungen und keine versteckten Kosten.</p>
             <DsButton variant="cta" size="md" arrow href="academy/index.html">Zur vaiaconAcademy</DsButton>
           </div>
