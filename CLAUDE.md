@@ -16,6 +16,9 @@ es hält uns also nichts auf ausser Absprache.
 - ⛔ **Nie `--force`.** Das überschreibt den Stand auf GitHub mit dem eigenen, statt
   ihn zusammenzuführen — es ist der einzige Weg, auf dem hier Arbeit wirklich
   verschwindet.
+- **Fertiges gleich hochladen**, spätestens am Ende des Tages. Ein `pull` holt nur,
+  was auch schon oben liegt — was tagelang auf dem eigenen Rechner bleibt, sieht der
+  andere nicht, und dann bauen beide am selben Ding.
 - **Sagen, woran man ist** — im Chat oder als Aufgabe auf intern.vaiacon.ch.
 
 ## Änderungen laufen immer über dieses Repo
