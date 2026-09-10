@@ -8,6 +8,10 @@ export interface SiteFooterProps {
   address?: string;
   email?: string;
   copyright?: string;
+  /** Link zur Seite «Datenschutz und Impressum»; ohne Angabe kein Link */
+  legalHref?: string;
+  /** Standard «Datenschutz und Impressum» */
+  legalLabel?: string;
   /** Klick-Handler für «nach oben» */
   onTop?: (e: MouseEvent) => void;
   style?: React.CSSProperties;

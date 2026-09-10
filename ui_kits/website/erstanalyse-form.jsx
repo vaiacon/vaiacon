@@ -264,7 +264,7 @@ function ErstanalyseApp() {
         )}
       </main>
 
-      <EaSiteFooter logoSrc="../../assets/logo-lockup-white.png" />
+      <EaSiteFooter logoSrc="../../assets/logo-lockup-white.png" legalHref="../../datenschutz.html" />
     </div>
   );
 }
