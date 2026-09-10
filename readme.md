@@ -90,6 +90,20 @@ Kein Figma, kein weiteres Repo. Es wurden keine Font-Binaries geliefert; Quicksa
 - Punkt-Indikator: 9px-Kreis in #E2652C (Chat-Button «online»)
 
 **Kein Emoji.** Ein einzelnes ✎ (Redesign-Notizen, intern) ist die Ausnahme, kein Muster.
+
+**Ausnahme: die Logos der sozialen Netzwerke.** Am 10.09.2026 von André entschieden.
+Facebook, Instagram und LinkedIn werden in der Fusszeile verlinkt, und dafür braucht es
+ihre Marken-Zeichen — ein Text-Glyph gibt es dafür nicht, und ein Netzwerk erkennt man
+am Zeichen oder gar nicht. Die Ausnahme ist eng:
+
+- Nur diese drei, nur in der Fusszeile, nur als Verweis auf unsere Profile.
+- Die gelieferten Marken-Zeichen der Netzwerke, **nicht nachgezeichnet** — hier gilt
+  dasselbe wie beim vaiacon-Lockup.
+- **Als schlichter `href` mit `target="_blank"`, nie als fertiger Baustein des
+  Netzwerks.** «Gefällt mir»-Knöpfe und eingebettete Beitragsströme laden fremden
+  Code bei jedem Seitenaufruf, setzen Cookies und melden den Besuch — auch bei
+  Leuten, die nie klicken. Das wäre ein Datenschutzfall, kein Gestaltungsfall.
+- Kein weiteres Icon-Set leitet sich daraus ab. Für alles andere gilt die Regel oben.
 **Illustration statt Icons:** Wo andere Marken Icon-Grids setzen, nutzt vaiacon das Maskottchen und 3D-Clay-Renderings (`assets/vaiacon-buerobot-hero.png`, `vaiacon-buerobot-phone.png`, `vaiacon-buerobot-hero.png`). Neue Icon-Bedürfnisse: zuerst Glyphen prüfen; falls zwingend ein Set nötig wird, ist das eine bewusste Erweiterung (mit dem Kunden klären) — nichts nachzeichnen.
 
 **Logo.** vaiacon-Symbol mit Bewegungslinien und Aufwärtspfeil; Wortmarke «vaiacon» lowercase. **Massgeblich ist das Lockup** (Mark + Wortmarke in fixer Anordnung): `assets/logo-lockup-terra.png` (auf hell) und `logo-lockup-white.png` (auf Terra/Dunkel). Das vaiacon-Symbol solo (`logo-mark-terra.png`, `logo-mark-white.png`) für kleine Flächen (Favicon, Avatar, Zitat-Karten); Einzel-Wortmarken (`logo-wordmark-*.png`) nur noch als Reserve. Nie einfärben, nie verzerren, nie nachbauen.

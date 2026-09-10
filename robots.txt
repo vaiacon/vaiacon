@@ -10,4 +10,8 @@ Disallow: /guidelines/
 Disallow: /tokens/
 Disallow: /uploads/
 
+# Das Wissen für den Chat ist eine Zusammenfassung des Seitentexts. Es soll
+# nicht als Doppel der Website in der Suche auftauchen.
+Disallow: /bot/
+
 Sitemap: https://vaiacon.ch/sitemap.xml
