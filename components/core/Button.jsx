@@ -5,6 +5,7 @@ const BUTTON_VARIANTS = {
   light: { base: { background: 'var(--cream-100)', color: 'var(--terra-600)', boxShadow: 'var(--shadow-cta)' }, hover: { transform: 'translateY(-3px)', boxShadow: 'var(--shadow-cta-hover)' } },
   glass: { base: { background: 'rgba(255, 244, 236, 0.12)', border: '1px solid rgba(255, 255, 255, 0.35)', backdropFilter: 'blur(12px)', WebkitBackdropFilter: 'blur(12px)', color: '#FFFFFF' }, hover: { background: 'rgba(255, 244, 236, 0.24)' } },
   dark:  { base: { background: 'var(--ink-950)', color: 'var(--cream-100)' }, hover: { background: 'var(--terra-700)' } },
+  terra: { base: { background: 'var(--terra-500)', color: '#FFFFFF' }, hover: { background: 'var(--terra-600)' } },
 };
 
 const BUTTON_SIZES = {

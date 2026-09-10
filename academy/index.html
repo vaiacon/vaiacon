@@ -25,9 +25,9 @@
   <link rel="stylesheet" href="../tokens/effects.css">
   <link rel="stylesheet" href="../tokens/base.css">
   <link rel="stylesheet" href="../styles.css">
-<link rel="stylesheet" href="mobile.css?v=20260909-mobil">
-  <script src="../_ds_bundle.js?v=20260909-vaia3"></script>
-  <script src="./academy-daten.js?v=20260910-ziffern"></script>
+<link rel="stylesheet" href="mobile.css?v=20260910-balken">
+  <script src="../_ds_bundle.js?v=20260910-terra"></script>
+  <script src="./academy-daten.js?v=20260910-strich"></script>
   <script src="./image-slot.js"></script>
   <style>
     html, body { margin: 0; padding: 0; background: #F4EDE1; }
@@ -98,7 +98,7 @@
   <section id="lernplaene" style="position:relative; overflow:hidden; background:var(--sand-200); padding:62px 32px 92px">
     <div style="position:absolute; inset:0; background:var(--glow-peach); pointer-events:none"></div>
     <div style="position:relative; max-width:1160px; margin:0 auto; display:flex; flex-direction:column; gap:32px">
-      <div style="display:flex; flex-direction:column; gap:16px">
+      <div style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:16px">
         <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Kicker" number="01" hint-size="auto,20px">DIE LERNPLÄNE</x-import>
         <h2 style="margin:0; font-size:var(--text-h2); font-weight:600; letter-spacing:-0.03em; line-height:1.06; max-width:24ch; text-wrap:pretty">Die 11 Lernpfade.</h2>
         <p style="margin:0; max-width:56ch; font-size:17px; line-height:1.65; color:var(--text-body); text-wrap:pretty">11 Lernpfade, 58 Lektionen. Jeder Lernplan ist für sich abgeschlossen und dauert 20 bis 45 Minuten — Sie starten dort, wo es bei Ihnen brennt.</p>
@@ -131,7 +131,7 @@
         </sc-for>
       </div>
 
-      <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:22px; background:var(--cream-card); border:1px solid var(--border-strong); border-radius:22px; padding:24px 28px">
+      <div class="ak-balken" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:22px; background:var(--cream-card); border:1px solid var(--border-strong); border-radius:22px; padding:24px 28px">
         <p style="margin:0; font-size:16px; line-height:1.65; color:var(--text-body)">Alle Lernpläne, alle Lektionen — offen für jeden, ohne Konto.</p>
         <div style="display:flex; flex-wrap:wrap; gap:12px">
           <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" arrow="{{ true }}" href="#vor-ort" hint-size="auto,52px">vaiaconLearning vor Ort</x-import>
@@ -189,14 +189,14 @@
           </div>
         </article>
       </div>
-      <div style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:24px; background:var(--cream-card); border:1px solid var(--border-strong); border-radius:26px; padding:30px 34px">
+      <div class="ak-balken" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:24px; background:var(--cream-card); border:1px solid var(--border-strong); border-radius:26px; padding:30px 34px">
         <div style="display:flex; flex-direction:column; gap:9px; max-width:56ch">
           <span style="font-family:var(--font-mono); font-size:10.5px; letter-spacing:0.18em; text-transform:uppercase; color:var(--brown-400)">In der ganzen Deutschschweiz</span>
           <strong style="font-size:21px; font-weight:600; letter-spacing:-0.02em; line-height:1.3; text-wrap:pretty">Wir kommen in Ihren Betrieb — oder online, wenn es schneller gehen muss.</strong>
         </div>
         <div style="display:flex; flex-wrap:wrap; gap:12px">
           <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" arrow="{{ true }}" href="../kontakt.html" hint-size="auto,52px">Termin anfragen</x-import>
-          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" variant="dark" arrow="{{ true }}" href="../learning.html" hint-size="auto,52px">Mehr zu vaiaconLearning</x-import>
+          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Button" variant="terra" arrow="{{ true }}" href="../learning.html" hint-size="auto,52px">Zu vaiaconLearning</x-import>
         </div>
       </div>
     </div>
@@ -205,12 +205,9 @@
   <!-- ═══ 03 · ZUGANG ═══ -->
   <section id="zugang" style="background:var(--cream-100); padding:96px 32px">
     <div style="max-width:1160px; margin:0 auto; display:flex; flex-direction:column; gap:46px">
-      <div data-m="split" style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,0.85fr); gap:56px; align-items:end">
-        <div style="display:flex; flex-direction:column; gap:20px">
-          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Kicker" number="03" hint-size="auto,20px">ZUGANG</x-import>
-          <h2 style="margin:0; font-size:var(--text-h2); font-weight:600; letter-spacing:-0.03em; line-height:1.06; max-width:22ch; text-wrap:pretty">Alles offen. Für alle.</h2>
-        </div>
-        <p style="margin:0; font-size:17.5px; line-height:1.7; color:var(--text-body); max-width:48ch; text-wrap:pretty">Kein Konto, keine Anmeldung, keine Bedingungen. Wer Begleitung will, bekommt sie von uns persönlich — nicht von einem Chatfenster allein.</p>
+      <div style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:20px">
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Kicker" number="03" hint-size="auto,20px">ZUGANG</x-import>
+        <h2 style="margin:0; font-size:var(--text-h2); font-weight:600; letter-spacing:-0.03em; line-height:1.06; max-width:22ch; text-wrap:pretty">Alles offen. Für alle.</h2>
       </div>
 
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr)); gap:24px; align-items:stretch">
@@ -229,7 +226,7 @@
           </ul>
         </article>
 
-        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.PackageCard" variant="dark" badge="TEAM & BEGLEITUNG" title="Begleitung im Betrieb" subtitle="Für Betriebe, die es gemeinsam einführen wollen — auf Anfrage." features="{{ teamFeatures }}" hint-size="100%,520px"></x-import>
+        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.PackageCard" variant="terra" badge="TEAM & BEGLEITUNG" title="Begleitung im Betrieb" subtitle="Für Betriebe, die es gemeinsam einführen wollen — auf Anfrage." features="{{ teamFeatures }}" hint-size="100%,520px"></x-import>
       </div>
     </div>
   </section>

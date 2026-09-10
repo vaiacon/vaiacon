@@ -3,7 +3,7 @@
  */
 export interface ButtonProps {
   /** cta = Orange #E2652C (Standard) · light = Creme auf Terra · glass = transluzent auf Terra/Dunkel · dark = Tinte, Hover Terra */
-  variant?: 'cta' | 'light' | 'glass' | 'dark';
+  variant?: 'cta' | 'light' | 'glass' | 'dark' | 'terra';
   /** sm 14.5px · md 17px (Standard) · lg 18px (Nav-CTA) */
   size?: 'sm' | 'md' | 'lg';
   /** true = «→»; oder eigenes Glyph («↗», «↑») */

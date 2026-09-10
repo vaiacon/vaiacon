@@ -188,7 +188,7 @@ window.ACADEMY_PLANS = [
           'Bevor Sie etwas beschleunigen, müssen Sie wissen, was Sie überhaupt aufhält. Die meisten Betriebe schätzen falsch — die Zeit geht nicht bei den schwierigen Mails verloren, sondern bei den vielen gleichen.',
         ],
         punkte: [
-          'Führen Sie eine Woche lang Strichliste: Welche Art Mail kam wie oft?',
+          'Führen Sie eine Woche lang eine Strichliste: Welche Art Mail kam wie oft?',
           'Notieren Sie grob, wie lange Sie je Antwort brauchen.',
           'Multiplizieren Sie Anzahl mal Dauer. Die grösste Zahl gewinnt.',
           'Fangen Sie dort an — nicht bei dem, was Sie am meisten nervt.',
@@ -220,9 +220,9 @@ window.ACADEMY_PLANS = [
         ],
         uebung: 'Bauen Sie heute die 3 häufigsten Bausteine. Mehr braucht es für den Anfang nicht.',
       }],
-      ['Heikle Mails: Reklamation, Mahnung, Absage', 'WERKSTATT', '7 Min', {
+      ['Heikle Mails: Reklamationen, Mahnungen und Absagen', 'WERKSTATT', '7 Min', {
         absaetze: [
-          'Bei heiklen Mails hilft KI anders als bei Routine: nicht schneller, sondern kühler. Sie schreiben im ersten Ärger, lassen umformulieren und entscheiden dann in Ruhe, was rausgeht.',
+          'Bei heiklen Mails sollte KI anders helfen als bei Standardmails. Es geht nicht um Schnelligkeit, sondern um die sorgfältige Wortwahl und um die benötigte Empathie. Schreiben Sie nie im ersten Ärger, lassen Sie gegebenenfalls umformulieren und entscheiden Sie in Ruhe, was raus darf.',
           'Der Assistent nimmt die Schärfe heraus, ohne die Sache weichzuspülen — wenn Sie ihm sagen, dass die Position bleibt.',
         ],
         punkte: [

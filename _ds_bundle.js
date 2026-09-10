@@ -1831,6 +1831,15 @@ const BUTTON_VARIANTS = {
     hover: {
       background: 'var(--terra-700)'
     }
+  },
+  terra: {
+    base: {
+      background: 'var(--terra-500)',
+      color: '#FFFFFF'
+    },
+    hover: {
+      background: 'var(--terra-600)'
+    }
   }
 };
 const BUTTON_SIZES = {

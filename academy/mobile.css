@@ -30,3 +30,26 @@
 @media (max-width: 860px) {
   #top[style] { padding-top: 108px !important; padding-bottom: 48px !important; }
 }
+
+/* Verweis-Balken («In der ganzen Deutschschweiz …», «Alle Lernpläne …»):
+   Die Knöpfe tragen white-space:nowrap fest im Element — auf schmalen Geräten
+   ragt der Text sonst über den Kartenrand hinaus. Darum stehen sie dort
+   untereinander und nehmen die volle Breite. */
+@media (max-width: 620px) {
+  .ak-balken {
+    padding: 24px 20px !important;
+    gap: 18px !important;
+  }
+
+  .ak-balken > div:last-child {
+    width: 100%;
+    gap: 10px !important;
+  }
+
+  .ak-balken a {
+    width: 100% !important;
+    padding-left: 18px !important;
+    padding-right: 18px !important;
+    font-size: 15.5px !important;
+  }
+}
