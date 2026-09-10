@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 10.09.2026 · Eintrag d097282 Skript fuer datierte Sicherungsarchive
+> Stand: 10.09.2026 · Eintrag 30dd223 Datenschutzseite und Chat-Hinweis von Philip zusammengefuehrt
 
 ## Wie du antwortest
 
@@ -665,3 +665,50 @@ Schreiben Sie uns, was Sie beschäftigt. Wir antworten selbst, in der Regel inne
 03
 Adresse
 vaiacon GmbH Lehenstrasse 74 8037 Zürich
+
+### Datenschutz und Impressum
+
+01 — RECHTLICHES
+Datenschutz und Impressum
+Wer hinter vaiacon.ch steht und was mit Ihren Daten geschieht — kurz, vollständig und in einfacher Sprache.
+02 — IMPRESSUM
+Verantwortlich für diese Website.
+vaiacon GmbH
+Lehenstrasse 74 8037 Zürich Schweiz
+hallo@vaiacon.ch
+Verantwortlich für Inhalt und Datenschutz im Sinne des revDSG ist die vaiacon GmbH. Anfragen zum Datenschutz richten Sie an hallo@vaiacon.ch .
+03 — DATENSCHUTZ
+Was mit Ihren Daten geschieht.
+Massgebend ist das revidierte Schweizer Datenschutzgesetz (revDSG). Wir erheben so wenig wie möglich — und erklären hier alles, was auf dieser Website tatsächlich passiert.
+Kurz gesagt
+Diese Website verlangt kein Konto und führt keine Besucherstatistik. Sie läuft auf einem Schweizer Server. Drei Stellen geben Daten ins Ausland: die Schriften, die Programmbibliotheken und der Chat mit Vaia. Alle drei sind unten einzeln erklärt.
+Was beim Aufruf dieser Seite geschieht
+Die Website liegt auf einem Server von Infomaniak in der Schweiz. Bei jedem Aufruf entstehen technische Einträge im Serverprotokoll: Ihre IP-Adresse, der Zeitpunkt, die aufgerufene Seite und die Kennung Ihres Browsers.
+Diese Einträge dienen allein dem sicheren Betrieb — sie zeigen uns Störungen und Angriffsversuche. Wir werten sie nicht aus, um Besucher zu unterscheiden oder wiederzuerkennen. Nach 30 Tagen werden sie gelöscht.
+Schriften
+Die Schriften Quicksand und IBM Plex Mono werden beim Seitenaufruf von Google Fonts geladen. Dabei erhält Google LLC (USA) Ihre IP-Adresse und die Angabe, welche Seite Sie aufrufen. Weitere Daten übermitteln wir nicht.
+Das betrifft jede Seite dieser Website.
+Programmbibliotheken
+Die vaiaconAcademy und der Erstanalyse-Fragebogen laden zusätzlich zwei Programmbibliotheken (React und Babel) über das Verteilnetz unpkg.com. Auch dabei wird nur Ihre IP-Adresse übermittelt. Die übrigen Seiten brauchen das nicht.
+Chat mit Vaia
+Vaia ist ein KI-Assistent, keine Person.
+Ihre Eingabe geht zunächst an unseren Server in der Schweiz. Von dort wird sie zur Beantwortung an Anthropic (USA) weitergeleitet, den Anbieter des Sprachmodells Claude. Die Antwort nimmt denselben Weg zurück.
+Wir speichern den Gesprächsverlauf nicht. Er besteht nur in Ihrem Browser und ist verschwunden, sobald Sie die Seite schliessen oder neu laden.
+Bitte geben Sie im Chat keine Personendaten ein — keine Namen, Adressen, Gesundheits- oder Kundendaten. Für persönliche Anliegen sind wir per Mail und im Gespräch da.
+Zum Schutz vor Missbrauch ist die Zahl der Fragen je Besucher begrenzt. Dafür hält der Server Ihre IP-Adresse kurzzeitig im Arbeitsspeicher; sie wird nicht dauerhaft abgelegt.
+Erstanalyse-Fragebogen
+Die Auswertung wird vollständig in Ihrem Browser berechnet. Ihre Antworten verlassen Ihr Gerät nicht.
+Während Sie den Fragebogen ausfüllen, werden die Antworten im lokalen Speicher Ihres Browsers zwischengelegt, damit nichts verloren geht, wenn Sie zwischendurch weggehen. Sobald Sie die Auswertung anfordern, wird dieser Zwischenspeicher gelöscht. Sie können ihn jederzeit selbst leeren, indem Sie die Websitedaten in Ihrem Browser löschen.
+Eine Übermittlung Ihrer Antworten an uns oder an einen Formulardienst findet zurzeit nicht statt. Sollte sich das ändern, ändern wir zuerst diese Erklärung.
+Kontakt per Mail
+Mails an hallo@vaiacon.ch liegen beim Mail-Hosting von Infomaniak in der Schweiz. Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu bearbeiten, und geben sie nicht weiter. Anfragen, aus denen kein Auftrag wird, löschen wir nach 30 Tagen.
+Ihre Rechte
+Sie können jederzeit verlangen, dass wir Ihnen Auskunft über die Daten geben, die wir über Sie bearbeiten, und dass wir sie berichtigen oder löschen. Eine Mail an hallo@vaiacon.ch genügt; wir antworten innert 30 Tagen und stellen die Auskunft kostenlos aus.
+Sind Sie mit unserer Antwort nicht zufrieden, können Sie sich an den Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB) in Bern wenden.
+Änderungen
+Ändert sich an dieser Website etwas, das Ihre Daten betrifft, ändern wir diese Erklärung mit. Diese Fassung stammt vom 10. September 2026.
+04 — FRAGEN?
+Etwas ist unklar geblieben?
+Schreiben Sie uns. Wir antworten selbst und erklären gerne, was wir hier meinen.
+hallo@vaiacon.ch ↗
+Zur Kontaktseite →
