@@ -713,3 +713,45 @@ body {
     gap: var(--space-7);
   }
 }
+
+/* ── Netzwerk-Zeichen in der Fusszeile ───────────────────────────────────
+   Bewusste Ausnahme vom Symbolverbot (10.09.2026): Facebook, Instagram und
+   LinkedIn erkennt man am Zeichen oder gar nicht. Glas-Optik ist hier
+   zulässig, weil die Fusszeile terracottafarben ist — auf hellem Grund wäre
+   sie es nicht. Schlichte Verweise, kein Baustein der Netzwerke. */
+.sv-footer__social {
+  /* width statt flex-basis: Unter 700px wird .sv-footer__inner zur Spalte, und
+     dort meint flex-basis die Höhe. width erzwingt in der Zeile den Umbruch auf
+     eine eigene Zeile und stört in der Spalte nicht. */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 2px;
+}
+
+.sv-footer__social a {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-pill);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  background: rgba(255, 244, 236, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-sizing: border-box;
+  transition: background 0.3s ease, transform 0.3s var(--ease-spring);
+}
+
+.sv-footer__social a:hover {
+  background: rgba(255, 244, 236, 0.24);
+  transform: translateY(-2px);
+}
+
+.sv-footer__social svg {
+  display: block;
+}

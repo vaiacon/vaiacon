@@ -53,3 +53,17 @@
     font-size: 15.5px !important;
   }
 }
+
+/* Fusszeile: Sie kommt aus einem Baustein mit Inline-Stilen und steht auf
+   «space-between». Auf schmalen Geräten zieht das Logo, Adresse, Netzwerk-
+   Zeichen und Meta auseinander, statt sie zu stapeln. Darum hier mittig —
+   wie auf den übrigen Seiten. Inline-Stile schlägt man nur mit !important. */
+@media (max-width: 700px) {
+  footer > div {
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 16px 20px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}

@@ -2305,6 +2305,75 @@ Object.assign(__ds_scope, { Twinkle });
 
 // components/navigation/SiteFooter.jsx
 try { (() => {
+/* Netzwerk-Zeichen: die bewusste Ausnahme vom Symbolverbot (10.09.2026).
+   Nur diese drei, nur in der Fusszeile, nur als schlichter Verweis. */
+const NETZ_ZEICHEN = {
+  facebook: /*#__PURE__*/React.createElement("path", {
+    d: "M14.9 8.1h2.4V4.3c-.4-.1-1.8-.2-3.4-.2-3.4 0-5.7 2.1-5.7 6v3.3H4.5v4.3h3.7V24h4.5v-6.3h3.7l.6-4.3h-4.3v-2.9c0-1.3.4-2.4 2.2-2.4Z"
+  }),
+  linkedin: /*#__PURE__*/React.createElement("path", {
+    d: "M5.4 8.5H2.3V22h3.1V8.5ZM3.9 6.7c1 0 1.8-.7 1.8-1.7S4.9 3.3 3.9 3.3 2.1 4 2.1 5s.8 1.7 1.8 1.7ZM22 22h-3.1v-6.6c0-1.6 0-3.6-2.2-3.6s-2.5 1.7-2.5 3.5V22h-3.1V8.5h3v1.8h.1c.4-.8 1.5-2.2 4.5-2.2 3.2 0 3.8 2.1 3.8 4.9V22Z"
+  })
+};
+
+function NetzVerweis({ art, href, label }) {
+  const [hover, setHover] = React.useState(false);
+  const umriss = art === 'instagram';
+  return /*#__PURE__*/React.createElement("a", {
+    href: href,
+    target: "_blank",
+    rel: "noopener",
+    "aria-label": `vaiacon auf ${label}`,
+    title: label,
+    onMouseEnter: () => setHover(true),
+    onMouseLeave: () => setHover(false),
+    style: {
+      width: 40,
+      height: 40,
+      borderRadius: 'var(--radius-pill)',
+      display: 'inline-flex',
+      alignItems: 'center',
+      justifyContent: 'center',
+      color: '#FFFFFF',
+      boxSizing: 'border-box',
+      textDecoration: 'none',
+      background: hover ? 'rgba(255, 244, 236, 0.24)' : 'rgba(255, 244, 236, 0.12)',
+      border: '1px solid rgba(255, 255, 255, 0.35)',
+      backdropFilter: 'blur(12px)',
+      WebkitBackdropFilter: 'blur(12px)',
+      transform: hover ? 'translateY(-2px)' : 'translateY(0)',
+      transition: 'background 0.3s ease, transform 0.3s var(--ease-spring)'
+    }
+  }, /*#__PURE__*/React.createElement("svg", {
+    width: umriss ? 19 : 18,
+    height: umriss ? 19 : 18,
+    viewBox: "0 0 24 24",
+    "aria-hidden": "true",
+    fill: umriss ? 'none' : 'currentColor',
+    stroke: umriss ? 'currentColor' : undefined,
+    strokeWidth: umriss ? 2 : undefined,
+    style: {
+      display: 'block'
+    }
+  }, umriss ? /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("rect", {
+    x: "3.5",
+    y: "3.5",
+    width: "17",
+    height: "17",
+    rx: "5"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: "12",
+    cy: "12",
+    r: "4"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: "17",
+    cy: "7",
+    r: "1.1",
+    fill: "currentColor",
+    stroke: "none"
+  })) : NETZ_ZEICHEN[art]));
+}
+
 /** Schlanker Footer auf Terra-Glow: weisses Lockup, Adresszeile, Meta. */
 function SiteFooter({
   logoSrc = 'assets/logo-lockup-white.png',
@@ -2314,10 +2383,26 @@ function SiteFooter({
   copyright = '© 2026 vaiacon GmbH',
   legalHref,
   legalLabel = 'Datenschutz und Impressum',
+  facebookHref,
+  instagramHref,
+  linkedinHref,
   onTop,
   style
 }) {
   const [hover, setHover] = React.useState(false);
+  const netze = [{
+    art: 'facebook',
+    label: 'Facebook',
+    href: facebookHref
+  }, {
+    art: 'instagram',
+    label: 'Instagram',
+    href: instagramHref
+  }, {
+    art: 'linkedin',
+    label: 'LinkedIn',
+    href: linkedinHref
+  }].filter(n => n.href);
   return /*#__PURE__*/React.createElement("footer", {
     style: {
       background: 'var(--grad-terra-footer)',
@@ -2366,7 +2451,18 @@ function SiteFooter({
       fontWeight: 500,
       textDecoration: 'none'
     }
-  }, email)), /*#__PURE__*/React.createElement("div", {
+  }, email)), netze.length ? /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: 'flex',
+      alignItems: 'center',
+      gap: '12px'
+    }
+  }, netze.map(n => /*#__PURE__*/React.createElement(NetzVerweis, {
+    key: n.art,
+    art: n.art,
+    label: n.label,
+    href: n.href
+  }))) : null, /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       alignItems: 'baseline',

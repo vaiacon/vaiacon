@@ -12,6 +12,12 @@ export interface SiteFooterProps {
   legalHref?: string;
   /** Standard «Datenschutz und Impressum» */
   legalLabel?: string;
+  /** Verweis auf das Facebook-Profil; ohne Angabe kein Zeichen */
+  facebookHref?: string;
+  /** Verweis auf das Instagram-Profil; ohne Angabe kein Zeichen */
+  instagramHref?: string;
+  /** Verweis auf das LinkedIn-Profil; ohne Angabe kein Zeichen */
+  linkedinHref?: string;
   /** Klick-Handler für «nach oben» */
   onTop?: (e: MouseEvent) => void;
   style?: React.CSSProperties;
