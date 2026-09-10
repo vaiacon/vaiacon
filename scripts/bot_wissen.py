@@ -1,4 +1,4 @@
-"""Schreibt `bot/wissen.md` neu aus dem echten Seitenstand.
+"""Schreibt `vaia-wissen/wissen.md` neu aus dem echten Seitenstand.
 
     python3 scripts/bot_wissen.py
 
@@ -23,7 +23,7 @@ import subprocess
 from pathlib import Path
 
 WURZEL = Path(__file__).resolve().parents[1]
-ZIEL = WURZEL / "bot" / "wissen.md"
+ZIEL = WURZEL / "vaia-wissen" / "wissen.md"
 JSC = Path("/System/Library/Frameworks/JavaScriptCore.framework/Versions/A/Helpers/jsc")
 
 # Reihenfolge zaehlt: So liest der Chat die Website von vorn nach hinten.

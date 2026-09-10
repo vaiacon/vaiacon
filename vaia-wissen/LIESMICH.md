@@ -16,6 +16,27 @@ Gemerkt hat es niemand, bis ein Mensch zufällig nachgefragt hat. Das ist der
 Fehler, den diese Ablage behebt: Das Wissen liegt jetzt neben dem Seitentext,
 aus dem es stammt.
 
+## Warum der Ordner nicht «bot» heisst
+
+Er hiess es kurz — und hat damit `vaiacon.ch/bot` lahmgelegt. Der Server löst
+Adressen ohne Endung auf: `/bot` fand den Ordner statt `bot.html`, suchte darin
+eine Startseite, fand keine und gab 404 zurück. Die Landingpage war rund zehn
+Minuten nicht erreichbar.
+
+Die genaue Regel: **Ein Ordner in der Wurzel verdeckt die gleichnamige
+`.html`-Datei — ausser er enthält selbst eine `index.html`.** Darum geht
+`/erstanalyse` weiterhin: Dort liegt `erstanalyse/index.html`, die
+weiterleitet. `bot/` hatte nichts dergleichen.
+
+Wer künftig einen Ordner in der Wurzel anlegt, prüft vorher:
+
+```bash
+comm -12 <(ls -d */ | tr -d /) <(ls *.html | sed 's/.html//') | sort
+```
+
+Was dabei herauskommt, muss eine `index.html` haben — sonst ist die
+Landingpage weg.
+
 ## Die Datei nicht von Hand ändern
 
 Sie wird erzeugt. Änderungen von Hand sind beim nächsten Lauf weg.
@@ -40,7 +61,7 @@ Es braucht einen Handgriff auf dem Server — den kann nur machen, wer Zugang ha
 **Weg 1 — Verweis setzen (klein, sofort machbar).**
 
 ```bash
-ln -sf /srv/vaiacon-web/bot/wissen.md /srv/vaiacon-bot/wissen.md
+ln -sf /srv/vaiacon-web/vaia-wissen/wissen.md /srv/vaiacon-bot/wissen.md
 ```
 
 Damit liest der Chat immer die Fassung aus dem Repo. ⚠️ Der Dienst muss

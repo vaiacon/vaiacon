@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 10.09.2026 · Eintrag 30dd223 Datenschutzseite und Chat-Hinweis von Philip zusammengefuehrt
+> Stand: 10.09.2026 · Eintrag 0ac1c76 Netzwerk-Zeichen in der Fusszeile, Termin-Knopf entfernt
 
 ## Wie du antwortest
 
@@ -163,9 +163,9 @@ VAIACON — FÜR SCHWEIZER KMU
 Digitale Sichtbarkeit und KI-Kompetenz für Schweizer KMU.
 Wir führen kleine Betriebe an KI heran — verständlich, persönlich und ohne Verkaufsdruck. Vom ersten Lernen bis zur Automation, die im Alltag trägt.
 Kostenlose Erstanalyse ↗
-Die fünf Bereiche →
+Unsere Lösungen →
 01 — WAS WIR ANBIETEN
-Fünf Bereiche. Sie starten dort, wo es bei Ihnen drückt.
+Fünf Lösungen. Starten Sie dort, wo es am dringendsten ist.
 Jeder Bereich steht für sich. Sie müssen nicht alles buchen und schon gar nicht in dieser Reihenfolge — viele fangen kostenlos in der Academy an und melden sich erst später.
 01
 vaiaconVisibility
@@ -219,7 +219,6 @@ Am Anfang steht ein unverbindliches Gespräch. Danach klären wir, ob Learning, 
 05 — NÄCHSTER SCHRITT
 Welche vaiacon-Lösung passt zu Ihrem Betrieb?
 Im unverbindlichen Gespräch klären wir, ob Learning, Bot, Service oder eine Kombination der richtige nächste Schritt ist. Simpel · Klar · Persönlich.
-Termin direkt buchen ↗
 Zur Kontaktseite →
 
 ### Über uns
@@ -239,7 +238,6 @@ Wir verkaufen keine Technik, sondern zurückgewonnene Zeit. Wo sich etwas nicht 
 04 — NÄCHSTER SCHRITT
 Lernen wir uns kennen.
 Ein halbstündiges Erstgespräch, kostenlos und ohne Verpflichtung. Danach wissen Sie, ob und wo wir Ihrem Betrieb weiterhelfen.
-Termin direkt buchen ↗
 Zur Kontaktseite →
 
 ### vaiaconVisibility — gefunden werden
@@ -640,7 +638,6 @@ Zur Kontaktseite →
 01 — KONTAKT
 Welche vaiacon-Lösung passt zu Ihrem Betrieb?
 Im unverbindlichen Erstgespräch klären wir, ob Learning, Bot, Service oder eine Kombination der richtige nächste Schritt ist. Eine halbe Stunde, kostenlos, ohne Verkaufsdruck.
-Termin direkt buchen ↗
 hallo@vaiacon.ch →
 02 — WAS SIE ERWARTET
 Ein Gespräch, kein Verkaufstermin.
