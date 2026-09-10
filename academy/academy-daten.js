@@ -206,7 +206,7 @@ window.ACADEMY_PLANS = [
           'Bestimmen Sie Anrede und Gruss ein für alle Mal.',
           'Lesen Sie den Entwurf laut. Was Sie so nicht sagen würden, streichen Sie.',
         ],
-        uebung: 'Lassen Sie dieselbe Mail zweimal schreiben: einmal ohne Beispiele, einmal mit Ihren drei. Der Unterschied ist der ganze Punkt.',
+        uebung: 'Lassen Sie dieselbe Mail zweimal schreiben: einmal ohne Beispiele, einmal mit Ihren drei. Entscheiden Sie selbst, welche Version Ihnen und Ihrem Betrieb besser entspricht.',
       }],
       ['Standardantworten als Bausteine', 'WERKSTATT', '7 Min', {
         absaetze: [
