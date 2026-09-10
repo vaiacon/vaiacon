@@ -2312,6 +2312,8 @@ function SiteFooter({
   address = 'vaiacon GmbH · Lehenstrasse 74, 8037 Zürich',
   email = 'hallo@vaiacon.ch',
   copyright = '© 2026 vaiacon GmbH',
+  legalHref,
+  legalLabel = 'Datenschutz und Impressum',
   onTop,
   style
 }) {
@@ -2374,7 +2376,13 @@ function SiteFooter({
       fontWeight: 600,
       color: 'rgba(255, 255, 255, 0.5)'
     }
-  }, /*#__PURE__*/React.createElement("span", null, copyright), /*#__PURE__*/React.createElement("a", {
+  }, /*#__PURE__*/React.createElement("span", null, copyright), legalHref ? /*#__PURE__*/React.createElement("a", {
+    href: legalHref,
+    style: {
+      color: 'rgba(255, 255, 255, 0.65)',
+      textDecoration: 'none'
+    }
+  }, legalLabel) : null, /*#__PURE__*/React.createElement("a", {
     href: "#top",
     onClick: onTop,
     onMouseEnter: () => setHover(true),

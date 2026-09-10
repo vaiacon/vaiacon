@@ -7,6 +7,8 @@ export function SiteFooter({
   address = 'vaiacon GmbH · Lehenstrasse 74, 8037 Zürich',
   email = 'hallo@vaiacon.ch',
   copyright = '© 2026 vaiacon GmbH',
+  legalHref,
+  legalLabel = 'Datenschutz und Impressum',
   onTop,
   style,
 }) {
@@ -28,6 +30,9 @@ export function SiteFooter({
           fontFamily: 'var(--font-sans)', fontSize: '13.5px', fontWeight: 600, color: 'rgba(255, 255, 255, 0.5)',
         }}>
           <span>{copyright}</span>
+          {legalHref ? (
+            <a href={legalHref} style={{ color: 'rgba(255, 255, 255, 0.65)', textDecoration: 'none' }}>{legalLabel}</a>
+          ) : null}
           <a
             href="#top"
             onClick={onTop}
