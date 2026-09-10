@@ -197,7 +197,7 @@ window.ACADEMY_PLANS = [
       }],
       ['Mails, die nach Ihnen klingen', 'WERKSTATT', '8 Min', {
         absaetze: [
-          'Der häufigste Vorwurf gegen KI-Texte: Sie klingen glatt und nach niemandem. Das liegt nicht am Werkzeug, sondern daran, dass niemand ihm gesagt hat, wie Sie schreiben.',
+          'Der häufigste Vorwurf in Bezug auf KI-generierte Texte: Sie klingen glatt und manchmal holprig. Das liegt nicht am eigentlichen Werkzeug, sondern an der Tatsache, dass ihm niemand gesagt hat, wie es formuliert werden soll.',
           'Drei eigene Mails als Beispiel genügen meistens. Der Assistent übernimmt Satzlänge, Anrede und Verabschiedung.',
         ],
         punkte: [
