@@ -36,7 +36,7 @@ Kein Figma, kein weiteres Repo. Es wurden keine Font-Binaries geliefert; Quicksa
 - Nav-Links und CTAs: **lowercase** («leistungen», «erstgespräch →», «termin direkt buchen ↗»).
 - Badges/Overlines: UPPERCASE mit weiter Laufweite («KOSTENLOS & UNVERBINDLICH», «BUCHHALTUNG · ADMINISTRATION · KI-SUPPORT»).
 
-**Interpunktion & Zeichen.** Guillemets «…» für Zitate und Produktnamen-Betonung (nie "…"). Mittepunkt · als Trenner. Pfeile als Text-Glyphen: → (weiter/senden), ↗ (extern), ↑ (nach oben), ✓ (Checks), ✦ (Deko-Sterne), + (FAQ auf/zu). Kein Emoji.
+**Interpunktion & Zeichen.** Guillemets «…» für Zitate und Produktnamen-Betonung (nie "…"). Mittepunkt · als Trenner. Pfeile als Text-Glyphen: → (weiter/senden), ↗ (extern), ↑ (nach oben), ✓ (Checks), + (FAQ auf/zu). Kein Emoji.
 
 **Zahlen & Nummerierung.** Zweistellige Ordnungszahlen «01», «02», «03» strukturieren alles (Sektionen, Leistungen, Schritte, Kompass). Mono-Details wie Timecodes («00:07.3», «BUERO-BOT.MP4») in IBM Plex Mono.
 
@@ -58,7 +58,7 @@ Kein Figma, kein weiteres Repo. Es wurden keine Font-Binaries geliefert; Quicksa
 
 **Typografie.** Quicksand für alles — Headlines w600 mit negativer Laufweite (−0.02…−0.035em) und enger Zeilenhöhe (1.05–1.08), Body w500 mit lockerer Zeilenhöhe (1.65–1.7), UI-Elemente w600/700. IBM Plex Mono nur für Zahlen-Details, Timecodes, technische Zeilen. Kein Serif, nirgends. Krumme, exakte Grössen sind Absicht (13.5px, 16.5px, 17.5px, 18.5px) — nicht auf Raster runden.
 
-**Hintergründe.** Flächige Farben oder sanfte Verläufe; Peach-Glows als radiale Lichtquellen von unten. Keine Muster, keine Texturen, kein Grain. Deko: einzelne ✦-Sterne, die `twinkle`-animiert funkeln (5–6.5s, versetzte Delays).
+**Hintergründe.** Flächige Farben oder sanfte Verläufe; Peach-Glows als radiale Lichtquellen von unten. Keine Muster, keine Texturen, kein Grain, keine Deko-Sterne.
 
 **Ränder & Linien.** Zwei Systeme: (1) Hairlines `rgba(28,22,19,0.32)` für Karten, Trenner, Listenzeilen — Sektionen werden oft durch 1px-Linien getrennt statt durch Schatten. (2) Comic-Ränder `1.5–2px solid #1C1613` für Sprechblasen, Chat-Bubbles und Inputs im Hero — zusammen mit dem Offset-Schatten `6px 6px 0 rgba(28,22,19,0.85)` ergibt das den verspielten Sticker-Look.
 
@@ -66,7 +66,7 @@ Kein Figma, kein weiteres Repo. Es wurden keine Font-Binaries geliefert; Quicksa
 
 **Radien.** Stark gerundet: Pills 999px (alle Buttons, Chips, Badges), grosse Karten 22–26px, Sprechblasen 18–20px (mit einer «Ecke» 3–4px als Tail-Seite), Tiles 14px, Inputs 12px oder Pill, Mini-Quadrate 6px.
 
-**Animation.** Sanft und federnd. Hover-Lifts `translateY(-4…-6px)` mit `cubic-bezier(0.22,1,0.36,1)` (0.4s); Listenzeilen schieben sich bei Hover nach rechts (`padding-left` wächst) und tönen den Grund auf #E2D5BC; Farb-Hover 0.3s ease. Scroll-Reveals: `opacity 0 → 1` + `translateY(14px → 0)` mit `cubic-bezier(0.3,0.72,0.06,1)`, gestaffelt in 80–120ms-Schritten. Dauer-Animationen: `breathe` (scale 1→1.011, 6.5s) und `twinkle`. Nichts blinkt, nichts dreht schnell.
+**Animation.** Sanft und federnd. Hover-Lifts `translateY(-4…-6px)` mit `cubic-bezier(0.22,1,0.36,1)` (0.4s); Listenzeilen schieben sich bei Hover nach rechts (`padding-left` wächst) und tönen den Grund auf #E2D5BC; Farb-Hover 0.3s ease. Scroll-Reveals: `opacity 0 → 1` + `translateY(14px → 0)` mit `cubic-bezier(0.3,0.72,0.06,1)`, gestaffelt in 80–120ms-Schritten. Dauer-Animation: `breathe` (scale 1→1.011, 6.5s). Nichts blinkt, nichts dreht schnell.
 
 **Hover-Zustände.** Links: Farbe → Terracotta. Buttons: hellere Füllung (#E2652C → #F4793E) oder Lift + stärkerer Schatten. Karten: Lift ohne Schattenzuwachs. Sticker: Lift + leichte Rotation (−1deg).
 
@@ -86,7 +86,7 @@ Kein Figma, kein weiteres Repo. Es wurden keine Font-Binaries geliefert; Quicksa
 
 - → weiter / senden / Listenpfeil (dezent in #C9BFB5) · ↗ externer Link · ↑ nach oben
 - ✓ Checks: auf hell direkt in Terracotta; auf Terra-Flächen in #FFD9C2, optional in 22px-Quadrat (radius 6px, `rgba(255,244,236,0.15)` + Hairline)
-- ✦ Deko-Sterne (twinkle-animiert, weiss auf Terracotta) · + FAQ-Indikator (rotiert 45° zu ×) · ▶ Video-Marker · × schliessen
+- + FAQ-Indikator (rotiert 45° zu ×) · ▶ Video-Marker · × schliessen
 - Punkt-Indikator: 9px-Kreis in #E2652C (Chat-Button «online»)
 
 **Kein Emoji.** Ein einzelnes ✎ (Redesign-Notizen, intern) ist die Ausnahme, kein Muster.
@@ -104,7 +104,7 @@ Kein Figma, kein weiteres Repo. Es wurden keine Font-Binaries geliefert; Quicksa
 - `tokens/colors.css` — Palette + semantische Aliase
 - `tokens/typography.css` — Fonts, Grössen, Gewichte, Laufweiten
 - `tokens/spacing.css` — Layout, Abstände, Radien
-- `tokens/effects.css` — Schatten, Easing, Keyframes (twinkle/breathe)
+- `tokens/effects.css` — Schatten, Easing, Keyframes (breathe)
 - `tokens/fonts.css` — Google-Fonts-Import (Quicksand, IBM Plex Mono)
 - `tokens/base.css` — Body/Link/Selection-Grundregeln
 
@@ -116,7 +116,6 @@ Kein Figma, kein weiteres Repo. Es wurden keine Font-Binaries geliefert; Quicksa
 - `content/` — ServiceRow, FaqItem
 - `chat/` — SpeechBubble, ChatMessage
 - `navigation/` — SiteHeader, SiteFooter
-- `decor/` — Twinkle
 
 **UI-Kit** (`ui_kits/website/`): klickbare Recreation der vaiacon.ch-Landingpage (statischer Hero mit Poster-Bild statt Video).
 

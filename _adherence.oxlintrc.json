@@ -139,10 +139,6 @@
       {
         "selector": "JSXOpeningElement[name.name='TeamCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:src|alt|name|role|photoHeight|style|children|key|ref|className|style|children)$/]",
         "message": "<TeamCard> doesn't accept that prop. Declared props: src, alt, name, role, photoHeight, style, children."
-      },
-      {
-        "selector": "JSXOpeningElement[name.name='Twinkle'] > JSXAttribute > JSXIdentifier[name!=/^(?:left|right|top|bottom|size|delay|duration|color|style|key|ref|className|style|children)$/]",
-        "message": "<Twinkle> doesn't accept that prop. Declared props: left, right, top, bottom, size, delay, duration, color, style."
       }
     ]
   },
@@ -204,9 +200,6 @@
         "replaces": []
       },
       "TeamCard": {
-        "replaces": []
-      },
-      "Twinkle": {
         "replaces": []
       }
     },
