@@ -24,10 +24,10 @@ window.ACADEMY_PLANS = [
         ],
         uebung: 'Nehmen Sie eine E-Mail, die heute ohnehin ansteht, und lassen Sie sich einen Entwurf schreiben. Vergleichen Sie ihn mit dem, was Sie selbst geschrieben hätten.',
       }],
-      ['Gute Anweisungen: die vier Bausteine', 'WERKSTATT', '7 Min', {
+      ['Gute Anweisungen: die 4 Bausteine', 'WERKSTATT', '7 Min', {
         absaetze: [
-          'Eine gute Anweisung hat vier Teile. Fehlt einer, rät das Werkzeug — und raten heisst hier: irgendetwas Plausibles.',
-          'Der vierte Baustein wirkt am stärksten. Ein einziges echtes Beispiel aus Ihrem Betrieb bringt mehr als drei Absätze Erklärung.',
+          'Eine gute Anweisung hat 4 Teile. Fehlt einer, rät das Werkzeug — und raten heisst hier: irgendetwas Plausibles.',
+          'Der vierte Baustein wirkt am stärksten. Ein einziges echtes Beispiel aus Ihrem Betrieb bringt mehr als 3 Absätze Erklärung.',
         ],
         punkte: [
           'Rolle: «Sie sind Sachbearbeiterin in einem Schweizer Malerbetrieb.»',
@@ -35,7 +35,7 @@ window.ACADEMY_PLANS = [
           'Rahmen: Länge, Ton, Sprache — und was nicht vorkommen darf.',
           'Beispiel: ein Text von Ihnen, an dem sich der Assistent ausrichtet.',
         ],
-        uebung: 'Bauen Sie eine Anweisung mit allen vier Teilen für eine Aufgabe, die bei Ihnen wöchentlich anfällt. Heben Sie sie auf — daraus wird Ihre Prompt-Karte.',
+        uebung: 'Bauen Sie eine Anweisung mit allen 4 Teilen für eine Aufgabe, die bei Ihnen wöchentlich anfällt. Heben Sie sie auf — daraus wird Ihre Prompt-Karte.',
       }],
       ['Wenn der Assistent Unsinn erzählt', 'WERKSTATT', '6 Min', {
         absaetze: [
@@ -48,7 +48,7 @@ window.ACADEMY_PLANS = [
           'Fragen Sie dieselbe Sache zweimal in getrennten Gesprächen. Weichen die Antworten ab, ist mindestens eine erfunden.',
           'Fehlt eine Quelle, gilt die Aussage als unbelegt — nicht als richtig.',
         ],
-        uebung: 'Lassen Sie sich drei Angaben zu Ihrer Branche nennen und prüfen Sie jede einzelne nach. Notieren Sie, wie viele gestimmt haben.',
+        uebung: 'Lassen Sie sich 3 Angaben zu Ihrer Branche nennen und prüfen Sie jede einzelne nach. Notieren Sie, wie viele gestimmt haben.',
       }],
       ['Eigene Dokumente befragen', 'WERKSTATT', '6 Min', {
         absaetze: [
@@ -57,11 +57,11 @@ window.ACADEMY_PLANS = [
         ],
         punkte: [
           'Sagen Sie: «Antworte nur aus dem beigelegten Dokument. Steht es nicht drin, schreib das.»',
-          'Ein Dokument nach dem anderen. Zehn auf einmal verwässern die Antwort.',
+          'Ein Dokument nach dem anderen. 10 auf einmal verwässern die Antwort.',
           'Lassen Sie sich die Stelle nennen, auf die sich die Antwort stützt.',
           'Vor dem Beilegen: Entfernen Sie unbedingt die persönlichen Daten. Was das genau heisst, steht in Lernplan 02.',
         ],
-        uebung: 'Nehmen Sie Ihre letzte Offerte und lassen Sie in fünf Sätzen zusammenfassen, was der Kunde bekommt. Prüfen Sie, ob etwas fehlt.',
+        uebung: 'Nehmen Sie Ihre letzte Offerte und lassen Sie in 5 Sätzen zusammenfassen, was der Kunde bekommt. Prüfen Sie, ob etwas fehlt.',
       }],
       ['Aus einer guten Antwort eine Vorlage machen', 'WERKSTATT', '6 Min', {
         absaetze: [
@@ -73,20 +73,20 @@ window.ACADEMY_PLANS = [
           'Geben Sie ihr einen Namen, unter dem Sie sie in einem Monat wiederfinden.',
           'Eine Vorlage, die zweimal funktioniert hat, gehört ins Team — nicht in Ihren Kopf.',
         ],
-        uebung: 'Legen Sie eine Datei «Prompt-Karte» an und tragen Sie die erste Vorlage ein. Drei bis fünf Stück decken den Alltag der meisten Betriebe ab.',
+        uebung: 'Legen Sie eine Datei «Prompt-Karte» an und tragen Sie die erste Vorlage ein. 3 bis 5 Stück decken den Alltag der meisten Betriebe ab.',
       }],
       ['Ihr Wochenrhythmus: 30 Minuten, die bleiben', 'ÜBUNG', '5 Min', {
         absaetze: [
-          'Der häufigste Grund, warum es nach zwei Wochen wieder einschläft: Es gibt keinen festen Platz im Kalender. Gute Vorsätze verlieren gegen den Alltag.',
-          'Dreissig Minuten pro Woche reichen für den Anfang. Wichtiger als die Dauer ist, dass der Termin immer am selben Tag steht.',
+          'Der häufigste Grund, warum es nach 2 Wochen wieder einschläft: Es gibt keinen festen Platz im Kalender. Gute Vorsätze verlieren gegen den Alltag.',
+          '30 Minuten pro Woche reichen für den Anfang. Wichtiger als die Dauer ist, dass der Termin immer am selben Tag steht.',
         ],
         punkte: [
-          'Ein fester Termin, dreissig Minuten, gleicher Wochentag.',
+          'Ein fester Termin, 30 Minuten, gleicher Wochentag.',
           'Eine Aufgabe pro Woche — die, die Sie diese Woche ohnehin nervt.',
-          'Halten Sie fest, was funktioniert hat. Zwei Zeilen genügen.',
-          'Nach vier Wochen schauen Sie zurück: Was ist geblieben, was nicht?',
+          'Halten Sie fest, was funktioniert hat. 2 Zeilen genügen.',
+          'Nach 4 Wochen schauen Sie zurück: Was ist geblieben, was nicht?',
         ],
-        uebung: 'Tragen Sie den Termin jetzt für die nächsten vier Wochen ein. Nicht später — jetzt.',
+        uebung: 'Tragen Sie den Termin jetzt für die nächsten 4 Wochen ein. Nicht später — jetzt.',
       }],
     ],
   },
@@ -94,7 +94,7 @@ window.ACADEMY_PLANS = [
     n: '02', title: 'Datenschutz & Sicherheit', level: 'GRUNDLAGE', hours: '35 Min',
     nutzen: 'Sie wissen, welche Kundendaten rein dürfen und welche nie. Eine einzige vermiedene Datenschutzpanne ist teurer als jede Weiterbildung.',
     tile: 'Was rein darf und was nie: revDSG, Anonymisieren, Cloud-Standort.',
-    lead: 'Die Lektionen, die vor allen anderen kommen sollten: welche Daten Sie nie eingeben, wie Sie Kundenangaben in zwei Minuten anonymisieren und was das revDSG von Ihrem Betrieb verlangt.',
+    lead: 'Die Lektionen, die vor allen anderen kommen sollten: welche Daten Sie nie eingeben, wie Sie Kundenangaben in 2 Minuten anonymisieren und was das revDSG von Ihrem Betrieb verlangt.',
     bild: 'Bild: Aktenordner und Bildschirm',
     img: 'assets/lernplan-02.png',
     takeaways: ['Merkblatt «nie eingeben»', 'Anonymisierungs-Vorlage', 'Sicherheits-Check auf einer Seite'],
@@ -110,7 +110,7 @@ window.ACADEMY_PLANS = [
           'Zugangsdaten, Passwörter, Bank- und Kartennummern. Nie, unter keinen Umständen.',
           'Verträge und Offerten fremder Firmen, die Ihnen vertraulich vorliegen.',
         ],
-        uebung: 'Gehen Sie die letzten fünf Dinge durch, die Sie einem Assistenten gegeben haben. Was davon hätte draussen bleiben müssen?',
+        uebung: 'Gehen Sie die letzten 5 Dinge durch, die Sie einem Assistenten gegeben haben. Was davon hätte draussen bleiben müssen?',
       }],
       ['revDSG — Was es ist und was wir darüber wissen müssen', 'WISSEN', '8 Min', {
         absaetze: [
@@ -128,12 +128,12 @@ window.ACADEMY_PLANS = [
           'Datenschutz durch Technik: sparsame Voreinstellungen von Anfang an, nicht als Nachbesserung.',
           'Wer für die EU anbietet, hat zusätzlich die DSGVO am Hals. Die beiden ersetzen einander nicht.',
         ],
-        uebung: 'Prüfen Sie zwei Dinge: Steht auf Ihrer Website eine Datenschutzerklärung, die Zweck und Empfänger nennt? Und wüssten Sie heute, wer im Betrieb für eine Auskunftsanfrage zuständig wäre?',
+        uebung: 'Prüfen Sie 2 Dinge: Steht auf Ihrer Website eine Datenschutzerklärung, die Zweck und Empfänger nennt? Und wüssten Sie heute, wer im Betrieb für eine Auskunftsanfrage zuständig wäre?',
       }],
       ['Kundendaten anonymisieren — schnell und sauber', 'WERKSTATT', '7 Min', {
         absaetze: [
           'Anonymisieren heisst nicht löschen. Sie ersetzen das Erkennbare durch Platzhalter und behalten alles, was die Aufgabe braucht — der Assistent arbeitet mit der Struktur, nicht mit der Person.',
-          'Das dauert nach etwas Übung unter zwei Minuten und ist der Unterschied zwischen zulässig und heikel.',
+          'Das dauert nach etwas Übung unter 2 Minuten und ist der Unterschied zwischen zulässig und heikel.',
         ],
         punkte: [
           'Namen werden zu [Kunde], [Mitarbeiterin], [Lieferant].',
@@ -151,7 +151,7 @@ window.ACADEMY_PLANS = [
         ],
         punkte: [
           'Machen Sie zuerst eine Liste: Welcher Dienst sieht welche Personendaten?',
-          'Für jeden davon einen AVV abschliessen. Bei den meisten Anbietern zwei Klicks.',
+          'Für jeden davon einen AVV abschliessen. Bei den meisten Anbietern 2 Klicks.',
           'Daten dürfen ins Ausland, wenn das Land angemessen schützt. Die Liste führt der Bundesrat; die EU- und EWR-Staaten stehen darauf.',
           'Sonst braucht es Standardvertragsklauseln. Für die USA gibt es seit 2024 ein Rahmenabkommen — es hilft aber nur bei Anbietern, die sich dafür zertifiziert haben.',
           '«Server in der Schweiz» ist nicht dasselbe wie «Daten bleiben in der Schweiz». Prüfen Sie auch, von wo aus der Support zugreift.',
@@ -162,7 +162,7 @@ window.ACADEMY_PLANS = [
       }],
       ['Der Sicherheits-Check für Ihren Betrieb', 'ÜBUNG', '7 Min', {
         absaetze: [
-          'Datenschutz scheitert selten am Wissen und fast immer daran, dass niemand zuständig ist. Ein Blatt Papier mit fünf beantworteten Fragen ist mehr wert als ein Ordner Theorie.',
+          'Datenschutz scheitert selten am Wissen und fast immer daran, dass niemand zuständig ist. Ein Blatt Papier mit 5 beantworteten Fragen ist mehr wert als ein Ordner Theorie.',
         ],
         punkte: [
           'Welche Werkzeuge sind bei uns im Einsatz — auch die, die jemand privat mitgebracht hat?',
@@ -170,13 +170,13 @@ window.ACADEMY_PLANS = [
           'Wo stehen die Server der Anbieter, die wir nutzen?',
           'Wer merkt es, wenn etwas schiefläuft, und was passiert dann?',
         ],
-        uebung: 'Beantworten Sie die vier Fragen schriftlich für Ihren Betrieb. Wo Sie keine Antwort haben, steht Ihre nächste Aufgabe.',
+        uebung: 'Beantworten Sie die 4 Fragen schriftlich für Ihren Betrieb. Wo Sie keine Antwort haben, steht Ihre nächste Aufgabe.',
       }],
     ],
   },
   {
     n: '03', title: 'Korrespondenz & E-Mail', level: 'PRAXIS', hours: '33 Min',
-    nutzen: 'Aus zwei Stunden Postfach am Morgen werden vierzig Minuten — mit Antworten, die klingen wie von Ihnen geschrieben.',
+    nutzen: 'Aus 2 Stunden Postfach am Morgen werden 40 Minuten — mit Antworten, die klingen wie von Ihnen geschrieben.',
     tile: 'Der Posteingang zuerst — Antworten, die nach Ihnen klingen.',
     lead: 'Wo die meisten Stunden verschwinden: im Postfach. Sie bauen Bausteine für Ihre häufigsten Antworten, lernen den Ton treffen und behalten die heiklen Mails selbst in der Hand.',
     bild: 'Bild: Postfach am Morgen',
@@ -198,27 +198,27 @@ window.ACADEMY_PLANS = [
       ['Mails, die nach Ihnen klingen', 'WERKSTATT', '8 Min', {
         absaetze: [
           'Der häufigste Vorwurf in Bezug auf KI-generierte Texte: Sie klingen glatt und manchmal holprig. Das liegt nicht am eigentlichen Werkzeug, sondern an der Tatsache, dass ihm niemand gesagt hat, wie es formuliert werden soll.',
-          'Drei eigene Mails als Beispiel genügen meistens. Der Assistent übernimmt Satzlänge, Anrede und Verabschiedung.',
+          '3 eigene Mails als Beispiel genügen meistens. Der Assistent übernimmt Satzlänge, Anrede und Verabschiedung.',
         ],
         punkte: [
-          'Legen Sie drei Mails bei, die Sie selbst geschrieben haben und gut finden.',
+          'Legen Sie 3 Mails bei, die Sie selbst geschrieben haben und gut finden.',
           'Sagen Sie, was Sie nie schreiben würden — «gerne», «zeitnah», Ausrufezeichen.',
           'Bestimmen Sie Anrede und Gruss ein für alle Mal.',
           'Lesen Sie den Entwurf laut. Was Sie so nicht sagen würden, streichen Sie.',
         ],
-        uebung: 'Lassen Sie dieselbe Mail zweimal schreiben: einmal ohne Beispiele, einmal mit Ihren drei. Entscheiden Sie selbst, welche Version Ihnen und Ihrem Betrieb besser entspricht.',
+        uebung: 'Lassen Sie dieselbe Mail zweimal schreiben: einmal ohne Beispiele, einmal mit Ihren 3. Entscheiden Sie selbst, welche Version Ihnen und Ihrem Betrieb besser entspricht.',
       }],
       ['Standardantworten als Bausteine', 'WERKSTATT', '7 Min', {
         absaetze: [
-          'Achtzig Prozent Ihrer Antworten sind Varianten von fünf bis zehn Grundtexten. Wer die einmal sauber baut, schreibt danach nur noch das Besondere dazu.',
+          '80 % Ihrer Antworten sind Varianten zwischen 5 – 10 Grundtexten. Wer einmal sauber baut, braucht danach nur noch zu ergänzen.',
         ],
         punkte: [
           'Suchen Sie im Gesendet-Ordner nach dem, was Sie am häufigsten schreiben.',
           'Bauen Sie je einen Baustein mit Platzhaltern: [Kunde], [Termin], [Betrag].',
           'Ein Baustein ist fertig, wenn er ohne Nachdenken einsetzbar ist.',
-          'Legen Sie sie dort ab, wo auch Ihre Stellvertretung sie findet.',
+          'Legen Sie den Baustein dort ab, wo auch Ihre Stellvertretung ihn findet.',
         ],
-        uebung: 'Bauen Sie heute die drei häufigsten Bausteine. Mehr braucht es für den Anfang nicht.',
+        uebung: 'Bauen Sie heute die 3 häufigsten Bausteine. Mehr braucht es für den Anfang nicht.',
       }],
       ['Heikle Mails: Reklamation, Mahnung, Absage', 'WERKSTATT', '7 Min', {
         absaetze: [
@@ -228,7 +228,7 @@ window.ACADEMY_PLANS = [
         punkte: [
           'Schreiben Sie zuerst ungefiltert auf, worum es geht. Das schickt niemand ab.',
           'Verlangen Sie: sachlich, freundlich, Position unverändert.',
-          'Lassen Sie sich zwei Fassungen geben und wählen Sie.',
+          'Lassen Sie sich 2 Fassungen geben und wählen Sie.',
           'Bei rechtlich heiklen Fällen entscheidet ein Mensch, nicht der Entwurf.',
         ],
         uebung: 'Nehmen Sie eine Reklamation, die Sie geärgert hat, und lassen Sie eine sachliche Antwort entwerfen. Vergleichen Sie mit dem, was Sie damals geschrieben haben.',
@@ -249,8 +249,8 @@ window.ACADEMY_PLANS = [
   },
   {
     n: '04', title: 'Offerten & Aufträge', level: 'PRAXIS', hours: '35 Min',
-    nutzen: 'Eine Offerte in zehn Minuten statt in einer Stunde. Wer am selben Tag offeriert, gewinnt mehr Aufträge.',
-    tile: 'Aus fünf Stichworten eine Offerte in Ihrer Struktur.',
+    nutzen: 'Eine Offerte in 10 Minuten statt in einer Stunde. Wer am selben Tag offeriert, gewinnt mehr Aufträge.',
+    tile: 'Aus 5 Stichworten eine Offerte in Ihrer Struktur.',
     lead: 'Vom Stichwort zur fertigen Offerte — mit Ihren Positionen, Ihrer Preislogik und Ihrem Schlusssatz. Danach folgen Nachfassen und Auftragsbestätigung, damit nichts liegen bleibt.',
     bild: 'Bild: Offerte auf dem Bürotisch',
     img: 'assets/lernplan-04.png',
@@ -258,7 +258,7 @@ window.ACADEMY_PLANS = [
     lessons: [
       ['Offerten aus Stichworten', 'WERKSTATT', '8 Min', {
         absaetze: [
-          'Der Weg vom Baustellentermin zur fertigen Offerte ist der teuerste Handgriff im Betrieb — und der langweiligste. Aus zehn Stichworten wird ein Entwurf, den Sie nur noch prüfen.',
+          'Der Weg vom Baustellentermin zur fertigen Offerte ist der teuerste Handgriff im Betrieb — und der langweiligste. Aus 10 Stichworten wird ein Entwurf, den Sie nur noch prüfen.',
         ],
         punkte: [
           'Diktieren Sie die Stichworte unterwegs, ordnen Sie später.',
@@ -290,23 +290,23 @@ window.ACADEMY_PLANS = [
           'Was nicht enthalten ist, gehört genauso hinein wie das Enthaltene.',
           'Lassen Sie den Text von jemandem lesen, der Ihr Gewerbe nicht kennt.',
         ],
-        uebung: 'Nehmen Sie drei Positionen Ihrer letzten Offerte und schreiben Sie zu jeder den Nutzen dazu.',
+        uebung: 'Nehmen Sie 3 Positionen Ihrer letzten Offerte und schreiben Sie zu jeder den Nutzen dazu.',
       }],
       ['Nachfassen ohne Verkaufsdruck', 'WERKSTATT', '7 Min', {
         absaetze: [
           'Die meisten Offerten werden nicht abgelehnt, sondern vergessen. Ein freundliches Nachfassen nach einer Woche holt einen Teil davon zurück — vorausgesetzt, es klingt nicht nach Verkauf.',
         ],
         punkte: [
-          'Erste Nachfrage nach sieben Tagen, kurz und ohne Vorwurf.',
+          'Erste Nachfrage nach 7 Tagen, kurz und ohne Vorwurf.',
           'Bieten Sie etwas an: eine Frage klären, einen Termin, eine Variante.',
-          'Zweite Nachfrage nach drei Wochen. Danach ist Schluss.',
+          'Zweite Nachfrage nach 3 Wochen. Danach ist Schluss.',
           'Ein Nein ist ein Ergebnis. Danken Sie dafür und fragen Sie nach dem Grund.',
         ],
-        uebung: 'Bauen Sie eine Nachfass-Sequenz aus zwei Mails und legen Sie sie zu Ihren Bausteinen.',
+        uebung: 'Bauen Sie eine Nachfass-Sequenz aus 2 Mails und legen Sie sie zu Ihren Bausteinen.',
       }],
       ['Auftragsbestätigung und Übergabe', 'WERKSTATT', '6 Min', {
         absaetze: [
-          'Zwischen dem Ja des Kunden und dem Start der Arbeit gehen die meisten Missverständnisse verloren — und tauchen später als Streit wieder auf. Eine Bestätigung, die Umfang, Termin und Ansprechpartner festhält, kostet fünf Minuten.',
+          'Zwischen dem Ja des Kunden und dem Start der Arbeit gehen die meisten Missverständnisse verloren — und tauchen später als Streit wieder auf. Eine Bestätigung, die Umfang, Termin und Ansprechpartner festhält, kostet 5 Minuten.',
         ],
         punkte: [
           'Halten Sie fest, was vereinbart ist — und was ausdrücklich nicht.',
@@ -320,7 +320,7 @@ window.ACADEMY_PLANS = [
   },
   {
     n: '05', title: 'Buchhaltung & Belege', level: 'PRAXIS', hours: '32 Min',
-    nutzen: 'Der Belegstapel fürs Treuhandbüro ist in zwanzig Minuten sortiert — und die Treuhandrechnung sinkt, weil die Rückfragen ausbleiben.',
+    nutzen: 'Der Belegstapel fürs Treuhandbüro ist in 20 Minuten sortiert — und die Treuhandrechnung sinkt, weil die Rückfragen ausbleiben.',
     tile: 'Belegstapel, Spesen, Mahnwesen — bis zur Übergabe ans Treuhandbüro.',
     lead: 'Der Papierkram, den niemand mag: Belege vorsortieren, Spesen erfassen, Zahlungseingänge prüfen. Am Ende steht ein Monatsabschluss, der eine halbe Stunde dauert statt einen Abend.',
     bild: 'Bild: Belege und Kaffeetasse',
@@ -345,7 +345,7 @@ window.ACADEMY_PLANS = [
         ],
         punkte: [
           'Foto der Quittung, dazu ein Satz: Was, für wen, warum.',
-          'Ein fester Ort für alles. Nicht drei.',
+          'Ein fester Ort für alles. Nicht 3.',
           'Einmal pro Woche zusammenfassen lassen und prüfen.',
           'Was steuerlich zählt, klären Sie einmal mit dem Treuhandbüro — nicht mit dem Assistenten.',
         ],
@@ -357,11 +357,11 @@ window.ACADEMY_PLANS = [
         ],
         punkte: [
           'Ein fixer Tag im Monat für den Abgleich offener Posten.',
-          'Erste Erinnerung freundlich, nach dreissig Tagen.',
-          'Zweite nach vierzehn Tagen, mit Frist und Konsequenz.',
+          'Erste Erinnerung freundlich, nach 30 Tagen.',
+          'Zweite nach 14 Tagen, mit Frist und Konsequenz.',
           'Vorlagen für alle Stufen bereithalten, damit es nicht am Formulieren scheitert.',
         ],
-        uebung: 'Legen Sie die drei Mahnstufen als Vorlagen an und tragen Sie den monatlichen Termin ein.',
+        uebung: 'Legen Sie die 3 Mahnstufen als Vorlagen an und tragen Sie den monatlichen Termin ein.',
       }],
       ['Monatsabschluss in einer halben Stunde', 'WERKSTATT', '8 Min', {
         absaetze: [
@@ -371,7 +371,7 @@ window.ACADEMY_PLANS = [
         punkte: [
           'Belege vollständig? Was fehlt, wird notiert, nicht gesucht.',
           'Offene Rechnungen und Zahlungseingänge gegeneinander halten.',
-          'Auffälligkeiten in zwei Sätzen festhalten.',
+          'Auffälligkeiten in 2 Sätzen festhalten.',
           'Eine Zahl, die Sie jeden Monat verfolgen. Nur eine.',
         ],
         uebung: 'Machen Sie den Abschluss für den letzten Monat nach diesem Muster und stoppen Sie die Zeit.',
@@ -414,7 +414,7 @@ window.ACADEMY_PLANS = [
       }],
       ['Wissen festhalten: das Betriebshandbuch', 'WERKSTATT', '7 Min', {
         absaetze: [
-          'Das meiste Wissen eines Betriebs steht nirgends — es steckt in den Köpfen von zwei, drei Leuten. Wenn eine davon ausfällt, merkt man es sofort.',
+          'Das meiste Wissen eines Betriebs steht nirgends — es steckt in den Köpfen von 2, 3 Leuten. Wenn eine davon ausfällt, merkt man es sofort.',
           'Ein Handbuch entsteht nicht an einem Tag. Es entsteht, indem man jedes Mal aufschreibt, was man ohnehin gerade erklärt.',
         ],
         punkte: [
@@ -455,35 +455,35 @@ window.ACADEMY_PLANS = [
         ],
         punkte: [
           'Duzen oder siezen — einmal entscheiden, überall gleich.',
-          'Fünf Wörter, die zu uns gehören. Fünf, die wir nie verwenden.',
-          'Zwei eigene Texte als Muster, die es gut treffen.',
+          '5 Wörter, die zu uns gehören. 5, die wir nie verwenden.',
+          '2 eigene Texte als Muster, die es gut treffen.',
           'Ein Satz dazu, was uns von den anderen im Gewerbe unterscheidet.',
         ],
         uebung: 'Schreiben Sie das Profil auf eine halbe Seite und legen Sie es künftig jeder Textaufgabe bei.',
       }],
       ['Website-Texte, die nicht nach KI klingen', 'WERKSTATT', '8 Min', {
         absaetze: [
-          'Man erkennt KI-Texte an drei Dingen: Sie sind zu glatt, zu allgemein und behaupten mehr, als sie belegen. Alle drei lassen sich abstellen.',
+          'Man erkennt KI-Texte an 3 Dingen: Sie sind zu glatt, zu allgemein und behaupten mehr, als sie belegen. Alle 3 lassen sich abstellen.',
         ],
         punkte: [
           'Ersetzen Sie jede Behauptung durch ein Beispiel aus Ihrem Betrieb.',
           'Streichen Sie Wörter wie «massgeschneidert», «innovativ», «ganzheitlich».',
-          'Kurze Sätze. Wo drei Nebensätze stehen, gehören zwei Punkte hin.',
+          'Kurze Sätze. Wo 3 Nebensätze stehen, gehören 2 Punkte hin.',
           'Zahlen, Orte und Jahre machen einen Text sofort glaubwürdig.',
         ],
         uebung: 'Nehmen Sie den Text Ihrer Startseite und streichen Sie jede Aussage, die jeder Mitbewerber genauso schreiben könnte. Was bleibt, ist der Anfang.',
       }],
-      ['Anfragen in drei Minuten qualifizieren', 'WERKSTATT', '7 Min', {
+      ['Anfragen in 3 Minuten qualifizieren', 'WERKSTATT', '7 Min', {
         absaetze: [
           'Nicht jede Anfrage ist ein Auftrag. Die Zeit geht bei denen verloren, aus denen ohnehin nichts wird — und die erkennt man an wenigen Merkmalen.',
         ],
         punkte: [
-          'Drei Fragen, die Sie jeder Anfrage stellen: Was, bis wann, welcher Rahmen?',
+          '3 Fragen, die Sie jeder Anfrage stellen: Was, bis wann, welcher Rahmen?',
           'Wer auf keine davon antwortet, ist noch nicht so weit.',
           'Lassen Sie eingehende Anfragen zusammenfassen und einordnen.',
-          'Eine höfliche Absage kostet zwei Minuten und spart zehn Stunden.',
+          'Eine höfliche Absage kostet 2 Minuten und spart 10 Stunden.',
         ],
-        uebung: 'Bauen Sie eine Rückfrage-Vorlage mit Ihren drei Fragen und setzen Sie sie bei der nächsten unklaren Anfrage ein.',
+        uebung: 'Bauen Sie eine Rückfrage-Vorlage mit Ihren 3 Fragen und setzen Sie sie bei der nächsten unklaren Anfrage ein.',
       }],
       ['Bewertungen und Referenzen einholen', 'ÜBUNG', '6 Min', {
         absaetze: [
@@ -491,71 +491,71 @@ window.ACADEMY_PLANS = [
         ],
         punkte: [
           'Fragen Sie am Tag der Übergabe, nicht am Monatsende.',
-          'Machen Sie es leicht: ein Link, zwei Sätze genügen.',
+          'Machen Sie es leicht: ein Link, 2 Sätze genügen.',
           'Schlagen Sie vor, worauf sie eingehen könnten. Ein leeres Feld schreckt ab.',
           'Bedanken Sie sich für jede Bewertung, auch für die mittelmässige.',
         ],
-        uebung: 'Schreiben Sie eine kurze Anfrage-Vorlage und schicken Sie sie an drei Kunden der letzten Wochen.',
+        uebung: 'Schreiben Sie eine kurze Anfrage-Vorlage und schicken Sie sie an 3 Kunden der letzten Wochen.',
       }],
       ['Ein Rhythmus, den Sie halten können', 'ÜBUNG', '8 Min', {
         absaetze: [
           'Sichtbarkeit entsteht nicht durch eine grosse Aktion, sondern durch viele kleine über Monate. Die Frage ist deshalb nicht, was möglich wäre, sondern was Sie auch im Frühling noch schaffen.',
         ],
         punkte: [
-          'Ein Beitrag pro Monat, den Sie sicher halten, schlägt vier geplante.',
+          'Ein Beitrag pro Monat, den Sie sicher halten, schlägt 4 geplante.',
           'Sammeln Sie das ganze Jahr Fotos von der Arbeit. Ohne Bilder kein Beitrag.',
           'Ein fester Tag im Monat, im Kalender, mit Erinnerung.',
           'Nach einem halben Jahr prüfen: Was hat Anfragen gebracht, was nicht?',
         ],
-        uebung: 'Legen Sie Ihren Rhythmus fest und tragen Sie die nächsten sechs Termine gleich ein.',
+        uebung: 'Legen Sie Ihren Rhythmus fest und tragen Sie die nächsten 6 Termine gleich ein.',
       }],
       ['Was Chefsache bleibt', 'VIDEO', '3 Min'],
     ],
   },
   {
     n: '08', title: 'Kundenservice & vaiaconBot', level: 'PRAXIS', hours: '33 Min',
-    nutzen: 'Der vaiaconBot beantwortet die zwanzig häufigsten Fragen rund um die Uhr. Ihr Telefon klingelt deutlich seltener für Auskünfte, die längst auf der Website stehen.',
-    tile: 'Ein digitaler Mitarbeiter für die zwanzig häufigsten Fragen.',
+    nutzen: 'Der vaiaconBot beantwortet die 20 häufigsten Fragen rund um die Uhr. Ihr Telefon klingelt deutlich seltener für Auskünfte, die längst auf der Website stehen.',
+    tile: 'Ein digitaler Mitarbeiter für die 20 häufigsten Fragen.',
     lead: 'Der vaiaconBot beantwortet, was sich täglich wiederholt — und gibt sauber an den Menschen ab, wenn es persönlich wird. Sie bauen ihn in dieser Werkstatt selbst.',
     bild: 'Bild: vaiaconBot am Telefon',
     img: 'assets/vaiacon-buerobot-phone.png',
     takeaways: ['Fragenkatalog (20 Fragen)', 'Übergabe-Regeln an den Menschen', 'Qualitäts-Check zum Mitlesen'],
     lessons: [
-      ['Die zwanzig häufigsten Fragen sammeln', 'ÜBUNG', '6 Min', {
+      ['Die 20 häufigsten Fragen sammeln', 'ÜBUNG', '6 Min', {
         absaetze: [
           'Ein Bot ist nur so gut wie die Fragen, die er kennt. Die stehen nicht in einem Handbuch, sondern in Ihrem Postfach und im Telefonverlauf.',
         ],
         punkte: [
-          'Sammeln Sie zwei Wochen lang jede Frage mit, die hereinkommt.',
+          'Sammeln Sie 2 Wochen lang jede Frage mit, die hereinkommt.',
           'Schreiben Sie die Frage so auf, wie der Kunde sie stellt — nicht in Ihrer Sprache.',
           'Zählen Sie, wie oft dieselbe Frage kommt, und sortieren Sie danach.',
-          'Zwanzig genügen. Damit sind die meisten Anfragen abgedeckt.',
+          '20 genügen. Damit sind die meisten Anfragen abgedeckt.',
         ],
-        uebung: 'Führen Sie zwei Wochen lang die Liste und ordnen Sie sie am Ende nach Häufigkeit.',
+        uebung: 'Führen Sie 2 Wochen lang die Liste und ordnen Sie sie am Ende nach Häufigkeit.',
       }],
       ['Ein vaiaconBot für die häufigen Fragen', 'WERKSTATT', '8 Min', {
         absaetze: [
           'Ein Bot ersetzt nicht das Gespräch, er nimmt Ihnen die Wiederholung ab. Sein Wissen ist Ihr Seitentext, Ihre Preisliste, Ihre Öffnungszeiten — nichts, was er nicht hat, darf er erfinden.',
         ],
         punkte: [
-          'Antworten kurz halten: drei Sätze reichen fast immer.',
+          'Antworten kurz halten: 3 Sätze reichen fast immer.',
           'Sagen Sie ihm ausdrücklich, dass er bei Unsicherheit weiterverweist.',
           'Keine Preise oder Fristen, die sich häufig ändern — sonst veraltet er.',
           'Wissen geändert heisst Bot neu starten. Sonst gilt der alte Stand.',
         ],
-        uebung: 'Schreiben Sie das Wissen für die fünf häufigsten Fragen auf und prüfen Sie die Antworten selbst.',
+        uebung: 'Schreiben Sie das Wissen für die 5 häufigsten Fragen auf und prüfen Sie die Antworten selbst.',
       }],
       ['Übergabe an den Menschen — sauber geregelt', 'WERKSTATT', '7 Min', {
         absaetze: [
           'Der häufigste Ärger mit Bots entsteht nicht durch falsche Antworten, sondern durch Sackgassen: Der Kunde kommt nicht weiter und findet niemanden.',
         ],
         punkte: [
-          'Legen Sie fest, wann übergeben wird: nach zwei erfolglosen Versuchen.',
+          'Legen Sie fest, wann übergeben wird: nach 2 erfolglosen Versuchen.',
           'Der Weg zum Menschen muss immer sichtbar sein, nicht versteckt.',
           'Bei Beschwerden und Geld wird sofort übergeben, ohne Umweg.',
           'Sagen Sie, wann jemand antwortet — und halten Sie es ein.',
         ],
-        uebung: 'Spielen Sie drei Anfragen durch, bei denen der Bot scheitern muss. Prüfen Sie, ob der Kunde jedes Mal weiterkommt.',
+        uebung: 'Spielen Sie 3 Anfragen durch, bei denen der Bot scheitern muss. Prüfen Sie, ob der Kunde jedes Mal weiterkommt.',
       }],
       ['Telefonnotizen und Rückrufe', 'WERKSTATT', '6 Min', {
         absaetze: [
@@ -567,19 +567,19 @@ window.ACADEMY_PLANS = [
           'Ein Ort für alle Rückrufe, keine Zettel.',
           'Kein Rückruf ohne Frist. «Melde mich» ist keine.',
         ],
-        uebung: 'Bauen Sie eine Notizvorlage mit den vier Feldern und verwenden Sie sie eine Woche lang.',
+        uebung: 'Bauen Sie eine Notizvorlage mit den 4 Feldern und verwenden Sie sie eine Woche lang.',
       }],
       ['Qualität prüfen: mitlesen und nachschärfen', 'ÜBUNG', '6 Min', {
         absaetze: [
           'Ein Bot, den niemand kontrolliert, wird mit der Zeit schlechter — weil sich Ihr Betrieb ändert und seine Antworten nicht. Mitlesen ist keine Kür.',
         ],
         punkte: [
-          'Einmal pro Woche zwanzig Gespräche durchsehen. Das dauert zehn Minuten.',
+          'Einmal pro Woche 20 Gespräche durchsehen. Das dauert 10 Minuten.',
           'Achten Sie auf Fragen, die er nicht beantworten konnte. Das ist Ihre Liste.',
           'Falsche Antworten sofort korrigieren, nicht sammeln.',
           'Halten Sie fest, was Sie geändert haben und wann.',
         ],
-        uebung: 'Lesen Sie die Gespräche einer Woche durch und notieren Sie die drei häufigsten Lücken.',
+        uebung: 'Lesen Sie die Gespräche einer Woche durch und notieren Sie die 3 häufigsten Lücken.',
       }],
     ],
   },
@@ -603,15 +603,15 @@ window.ACADEMY_PLANS = [
           'Ergebnis: Woran erkennt man, dass es fertig ist?',
           'Ausnahmen: Was läuft anders, und wie oft kommt das vor?',
         ],
-        uebung: 'Beschreiben Sie einen Ablauf, den Sie wöchentlich machen, nach diesen vier Punkten.',
+        uebung: 'Beschreiben Sie einen Ablauf, den Sie wöchentlich machen, nach diesen 4 Punkten.',
       }],
       ['Der erste automatische Ablauf', 'WERKSTATT', '8 Min', {
         absaetze: [
           'Fangen Sie klein an — mit etwas, das oft passiert, wenig Schaden anrichtet und dessen Ergebnis Sie sofort sehen. Nicht mit der Rechnungsstellung.',
         ],
         punkte: [
-          'Ein Auslöser, drei Schritte, ein Ergebnis. Mehr nicht.',
-          'Lassen Sie ihn zwei Wochen neben dem alten Weg laufen.',
+          'Ein Auslöser, 3 Schritte, ein Ergebnis. Mehr nicht.',
+          'Lassen Sie ihn 2 Wochen neben dem alten Weg laufen.',
           'Vergleichen Sie die Ergebnisse, bevor Sie den alten Weg abschalten.',
           'Was der Ablauf tut, muss nachvollziehbar sein — sonst sucht später niemand den Fehler.',
         ],
@@ -634,7 +634,7 @@ window.ACADEMY_PLANS = [
           'Automatisierung macht keine Fehler weg, sie beschleunigt sie. Eine doppelte Kundenadresse ist von Hand ein Ärgernis und automatisch ein Serienbrief an dieselbe Person.',
         ],
         punkte: [
-          'Eine Quelle je Angabe. Wo zwei Listen dasselbe führen, gibt es Streit.',
+          'Eine Quelle je Angabe. Wo 2 Listen dasselbe führen, gibt es Streit.',
           'Doppelte Einträge suchen, bevor Sie automatisieren, nicht danach.',
           'Schreibweisen festlegen: Datum, Telefonnummer, Anrede.',
           'Löschfristen mitdenken — was weg muss, muss auch automatisch weg.',
@@ -653,17 +653,17 @@ window.ACADEMY_PLANS = [
         ],
         uebung: 'Schreiben Sie für Ihren ersten Ablauf auf, was bei Ausfall passiert. Eine Seite genügt.',
       }],
-      ['Aus einem Ablauf zehn machen', 'ÜBUNG', '8 Min', {
+      ['Aus einem Ablauf 10 machen', 'ÜBUNG', '8 Min', {
         absaetze: [
-          'Der erste Ablauf ist der teuerste. Danach wiederholen sich die Muster — und was Sie einmal gelernt haben, gilt für die nächsten neun.',
+          'Der erste Ablauf ist der teuerste. Danach wiederholen sich die Muster — und was Sie einmal gelernt haben, gilt für die nächsten 9.',
         ],
         punkte: [
           'Suchen Sie Abläufe, die demselben Muster folgen wie der erste.',
-          'Bauen Sie einen nach dem anderen, nicht drei gleichzeitig.',
+          'Bauen Sie einen nach dem anderen, nicht 3 gleichzeitig.',
           'Nach jedem Ablauf festhalten, was länger dauerte als gedacht.',
           'Was zweimal gebaut wurde, gehört als Vorlage festgehalten.',
         ],
-        uebung: 'Listen Sie fünf weitere Abläufe auf und ordnen Sie sie nach Aufwand und Nutzen.',
+        uebung: 'Listen Sie 5 weitere Abläufe auf und ordnen Sie sie nach Aufwand und Nutzen.',
       }],
     ],
   },
@@ -685,7 +685,7 @@ window.ACADEMY_PLANS = [
           'Wie viele Stunden pro Monat gehen heute dafür drauf?',
           'Wie viele bleiben realistisch übrig — nicht null, meistens die Hälfte.',
           'Was kostet es: Lizenz, Einrichtung, Schulung, laufende Pflege?',
-          'Ab wann ist es bezahlt? Über zwölf Monate lohnt es selten.',
+          'Ab wann ist es bezahlt? Über 12 Monate lohnt es selten.',
         ],
         uebung: 'Rechnen Sie einen Ihrer geplanten Abläufe durch. Wenn er sich nicht rechnet, ist auch das ein Ergebnis.',
       }],
@@ -693,7 +693,7 @@ window.ACADEMY_PLANS = [
       ['Wann sich Eigenbau lohnt — und wann nicht', 'VIDEO', '3 Min'],
       ['Der Quartals-Entscheid: was bleibt, was fliegt', 'ÜBUNG', '7 Min', {
         absaetze: [
-          'Werkzeuge sammeln sich an, und niemand schaltet je etwas ab. Vier Termine im Jahr genügen, um den Bestand ehrlich zu prüfen.',
+          'Werkzeuge sammeln sich an, und niemand schaltet je etwas ab. 4 Termine im Jahr genügen, um den Bestand ehrlich zu prüfen.',
         ],
         punkte: [
           'Was haben wir im Einsatz, und was kostet es zusammen?',
@@ -717,7 +717,7 @@ window.ACADEMY_PLANS = [
       ['Eine KI-Richtlinie auf einer Seite', 'WERKSTATT', '8 Min', {
         absaetze: [
           'Eine Richtlinie, die niemand liest, schützt niemanden. Eine Seite, die jede und jeder im Betrieb kennt, tut es.',
-          'Sie beantwortet vier Fragen — mehr braucht es für den Anfang nicht.',
+          'Sie beantwortet 4 Fragen — mehr braucht es für den Anfang nicht.',
         ],
         punkte: [
           'Welche Werkzeuge sind erlaubt, welche ausdrücklich nicht?',
@@ -725,7 +725,7 @@ window.ACADEMY_PLANS = [
           'Wer entscheidet über neue Werkzeuge, und wie fragt man an?',
           'Was passiert, wenn etwas schiefgeht — und an wen meldet man es?',
         ],
-        uebung: 'Schreiben Sie die vier Antworten für Ihren Betrieb auf und legen Sie die Seite dem Team vor.',
+        uebung: 'Schreiben Sie die 4 Antworten für Ihren Betrieb auf und legen Sie die Seite dem Team vor.',
       }],
       ['Mitarbeitende mitnehmen statt überfahren', 'VIDEO', '3 Min'],
       ['Wer darf was? Rollen und Freigaben', 'WERKSTATT', '7 Min', {
@@ -743,7 +743,7 @@ window.ACADEMY_PLANS = [
       ['Umgang mit Skepsis im Team', 'VIDEO', '3 Min'],
       ['KI-Kompetenz messen: der kleine Check', 'ÜBUNG', '6 Min', {
         absaetze: [
-          'Ob es im Betrieb angekommen ist, merkt man nicht an Schulungsstunden, sondern daran, was Leute tatsächlich tun. Fünf Fragen genügen für ein ehrliches Bild.',
+          'Ob es im Betrieb angekommen ist, merkt man nicht an Schulungsstunden, sondern daran, was Leute tatsächlich tun. 5 Fragen genügen für ein ehrliches Bild.',
         ],
         punkte: [
           'Wer hat im letzten Monat ein KI-Werkzeug für die Arbeit benutzt?',

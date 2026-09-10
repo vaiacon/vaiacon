@@ -1,4 +1,5 @@
-/* vaiacon — Farben. Quelle: index.dc.html (Referenz-Landingpage, massgeblich). */
+/* vaiacon — Farben. Diese Datei ist die massgebliche Quelle; die frühere
+   Referenz-Landingpage (uploads/index.dc.html) gibt es nicht mehr. */
 :root {
   /* ---- Creme & Sand (Hintergründe, hell → dunkel) ---- */
   --cream-card: #FFFDF8;   /* Karten, Sprechblasen, Inputs */

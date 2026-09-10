@@ -1,4 +1,13 @@
 User-agent: *
 Allow: /
 
+# Werkstatt statt Schaufenster: Das Design-System und der Bausatz sind
+# Arbeitsmaterial. Sie liegen offen, sollen aber nicht in der Suche gegen
+# die echten Seiten antreten.
+Disallow: /ui_kits/
+Disallow: /components/
+Disallow: /guidelines/
+Disallow: /tokens/
+Disallow: /uploads/
+
 Sitemap: https://vaiacon.ch/sitemap.xml
