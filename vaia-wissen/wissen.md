@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 10.09.2026 · Eintrag 591feca Ordner bot/ umbenannt — er hat vaiacon.ch/bot lahmgelegt
+> Stand: 11.09.2026 · Eintrag 91d469a Datenschutz: Serverprotokolle richtiggestellt, Kundenportal ergaenzt
 
 ## Wie du antwortest
 
@@ -678,7 +678,7 @@ Verantwortlich für Inhalt und Datenschutz im Sinne des revDSG ist die vaiacon G
 Was mit Ihren Daten geschieht.
 Massgebend ist das revidierte Schweizer Datenschutzgesetz (revDSG). Wir erheben so wenig wie möglich — und erklären hier alles, was auf dieser Website und im Kundenportal tatsächlich passiert.
 Kurz gesagt
-Diese Website verlangt kein Konto und führt keine Besucherstatistik. Sie läuft auf einem Schweizer Server. Drei Stellen geben Daten ins Ausland: die Schriften, die Programmbibliotheken und der Chat mit Vaia. Alle drei sind unten einzeln erklärt.
+Diese Website verlangt kein Konto und führt keine Besucherstatistik. Sie läuft auf einem Schweizer Server. Einiges geht ins Ausland — die Schriften, die Programmbibliotheken und der Chat mit Vaia. Jedes davon ist unten einzeln erklärt, und der Abschnitt «Bekanntgabe ins Ausland» fasst zusammen, auf welcher Grundlage das geschieht.
 Diese Erklärung gilt auch für das Kundenportal unter kunden.vaiacon.ch. Dort speichern wir mehr, weil es dort nötig ist — was genau, steht weiter unten.
 Was beim Aufruf dieser Seite geschieht
 Die Website liegt bei Infomaniak in der Schweiz. Wir führen kein Zugriffsprotokoll und speichern keine IP-Adressen. Wer diese Seiten liest, hinterlässt bei uns also keine Spur.
@@ -710,6 +710,13 @@ Das Zugriffsprotokoll gibt es hier, weil hinter der Anmeldung Kundendaten liegen
 Jeder Kunde sieht nur sein eigenes Projekt. Ist ein Auftrag abgeschlossen und wollen Sie Ihre Daten gelöscht haben, genügt eine Mail an hallo@vaiacon.ch .
 Kontakt per Mail
 Mails an hallo@vaiacon.ch liegen beim Mail-Hosting von Infomaniak in der Schweiz. Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu bearbeiten, und geben sie nicht weiter. Anfragen, aus denen kein Auftrag wird, löschen wir nach 30 Tagen.
+Bekanntgabe ins Ausland
+Drei Dienste, die wir einsetzen, sitzen in den USA. Auf welcher Grundlage die Daten dorthin gehen dürfen:
+Google Fonts · USA · Swiss-U.S. Data Privacy Framework, aktiv zertifiziert
+Calendly · USA · Swiss-U.S. Data Privacy Framework, aktiv zertifiziert
+Anthropic (Chat mit Vaia) · USA · Standardvertragsklauseln im Data Processing Addendum, das zusammen mit den Commercial Terms automatisch gilt
+Infomaniak (Hosting und Mail) · Schweiz · keine Bekanntgabe ins Ausland
+Zum Chat kommt hinzu: Anthropic trainiert seine Modelle nicht mit unseren Inhalten, und Ein- und Ausgaben werden nach 30 Tagen gelöscht. Beides steht in den Commercial Terms und im Data Processing Addendum .
 Ihre Rechte
 Sie können jederzeit verlangen, dass wir Ihnen Auskunft über die Daten geben, die wir über Sie bearbeiten, und dass wir sie berichtigen oder löschen. Eine Mail an hallo@vaiacon.ch genügt; wir antworten innert 30 Tagen und stellen die Auskunft kostenlos aus.
 Sind Sie mit unserer Antwort nicht zufrieden, können Sie sich an den Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB) in Bern wenden.
