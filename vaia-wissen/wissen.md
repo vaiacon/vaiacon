@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 11.09.2026 · Eintrag 91d469a Datenschutz: Serverprotokolle richtiggestellt, Kundenportal ergaenzt
+> Stand: 11.09.2026 · Eintrag bf39c81 Datenschutz: Abschnitt «Bekanntgabe ins Ausland»
 
 ## Wie du antwortest
 
@@ -674,6 +674,7 @@ vaiacon GmbH
 Lehenstrasse 74 8037 Zürich Schweiz
 hallo@vaiacon.ch
 Verantwortlich für Inhalt und Datenschutz im Sinne des revDSG ist die vaiacon GmbH. Anfragen zum Datenschutz richten Sie an hallo@vaiacon.ch .
+Eine Datenschutzberaterin oder ein Datenschutzberater ist für einen Betrieb unserer Grösse nicht erforderlich und darum nicht bestellt.
 03 — DATENSCHUTZ
 Was mit Ihren Daten geschieht.
 Massgebend ist das revidierte Schweizer Datenschutzgesetz (revDSG). Wir erheben so wenig wie möglich — und erklären hier alles, was auf dieser Website und im Kundenportal tatsächlich passiert.
@@ -693,7 +694,7 @@ Vaia ist ein KI-Assistent, keine Person.
 Ihre Eingabe geht zunächst an unseren Server in der Schweiz. Von dort wird sie zur Beantwortung an Anthropic (USA) weitergeleitet, den Anbieter des Sprachmodells Claude. Die Antwort nimmt denselben Weg zurück.
 Wir speichern den Gesprächsverlauf nicht. Er besteht nur in Ihrem Browser und ist verschwunden, sobald Sie die Seite schliessen oder neu laden.
 Bitte geben Sie im Chat keine Personendaten ein — keine Namen, Adressen, Gesundheits- oder Kundendaten. Für persönliche Anliegen sind wir per Mail und im Gespräch da.
-Zum Schutz vor Missbrauch ist die Zahl der Fragen je Besucher begrenzt. Dafür hält der Server Ihre IP-Adresse kurzzeitig im Arbeitsspeicher; sie wird nicht dauerhaft abgelegt.
+Zum Schutz vor Missbrauch ist die Zahl der Fragen je Besucher begrenzt. Dafür hält der Server Ihre IP-Adresse im Arbeitsspeicher — wie lange, steht unter «Aufbewahrung und Löschung».
 Erstanalyse-Fragebogen
 Die Auswertung wird vollständig in Ihrem Browser berechnet. Ihre Antworten verlassen Ihr Gerät nicht.
 Während Sie den Fragebogen ausfüllen, werden die Antworten im lokalen Speicher Ihres Browsers zwischengelegt, damit nichts verloren geht, wenn Sie zwischendurch weggehen. Sobald Sie die Auswertung anfordern, wird dieser Zwischenspeicher gelöscht. Sie können ihn jederzeit selbst leeren, indem Sie die Websitedaten in Ihrem Browser löschen.
@@ -705,20 +706,40 @@ Anders als hier speichern wir im Portal etwas — und zwar nur das:
 ✓ Name und E-Mail-Adresse der Ansprechperson
 ✓ Den Zugangscode, und zwar nur verschlüsselt. Im Klartext steht er nirgends — auch wir können ihn nicht nachlesen.
 ✓ Ihre Rückmeldungen zu den Vorschauen
-✓ Ein Zugriffsprotokoll mit IP-Adresse, 90 Tage lang
-Das Zugriffsprotokoll gibt es hier, weil hinter der Anmeldung Kundendaten liegen: Wir müssen nachvollziehen können, wer wann zugegriffen hat. Es wird nach 90 Tagen gelöscht.
+✓ Ein Zugriffsprotokoll mit IP-Adresse
+Das Zugriffsprotokoll gibt es hier, weil hinter der Anmeldung Kundendaten liegen: Wir müssen nachvollziehen können, wer wann zugegriffen hat. Wie lange es bleibt, steht unter «Aufbewahrung und Löschung».
 Jeder Kunde sieht nur sein eigenes Projekt. Ist ein Auftrag abgeschlossen und wollen Sie Ihre Daten gelöscht haben, genügt eine Mail an hallo@vaiacon.ch .
 Kontakt per Mail
-Mails an hallo@vaiacon.ch liegen beim Mail-Hosting von Infomaniak in der Schweiz. Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu bearbeiten, und geben sie nicht weiter. Anfragen, aus denen kein Auftrag wird, löschen wir nach 30 Tagen.
+Mails an hallo@vaiacon.ch liegen beim Mail-Hosting von Infomaniak in der Schweiz. Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu bearbeiten, und geben sie nicht weiter.
+Unsere Dienstleister
+Diese Firmen arbeiten in unserem Auftrag und kommen dabei mit Daten in Berührung. Mehr sind es nicht:
+Infomaniak (Schweiz) · betreibt den Server für Website und Kundenportal und hostet unser Mail-Konto
+Google LLC (USA) · liefert die Schriften aus
+Anthropic (USA) · stellt das Sprachmodell hinter dem Chat mit Vaia
+unpkg.com (USA) · liefert die Programmbibliotheken für Academy und Erstanalyse-Fragebogen
+Keine dieser Firmen darf Ihre Daten für eigene Zwecke verwenden. Wir geben nichts an Werbenetzwerke oder Adresshändler weiter und verkaufen keine Daten.
 Bekanntgabe ins Ausland
 Drei Dienste, die wir einsetzen, sitzen in den USA. Auf welcher Grundlage die Daten dorthin gehen dürfen:
 Google Fonts · USA · Swiss-U.S. Data Privacy Framework, aktiv zertifiziert
-Calendly · USA · Swiss-U.S. Data Privacy Framework, aktiv zertifiziert
+Calendly · USA · Swiss-U.S. Data Privacy Framework, aktiv zertifiziert. Calendly arbeitet nicht in unserem Auftrag — wir verweisen nur darauf. Es erfährt erst von Ihnen, wenn Sie den Verweis anklicken.
 Anthropic (Chat mit Vaia) · USA · Standardvertragsklauseln im Data Processing Addendum, das zusammen mit den Commercial Terms automatisch gilt
 Infomaniak (Hosting und Mail) · Schweiz · keine Bekanntgabe ins Ausland
-Zum Chat kommt hinzu: Anthropic trainiert seine Modelle nicht mit unseren Inhalten, und Ein- und Ausgaben werden nach 30 Tagen gelöscht. Beides steht in den Commercial Terms und im Data Processing Addendum .
+Zum Chat kommt hinzu: Anthropic trainiert seine Modelle nicht mit unseren Inhalten. Das steht zusammen mit der Löschfrist in den Commercial Terms und im Data Processing Addendum .
+Aufbewahrung und Löschung
+Wir behalten nichts länger, als es gebraucht wird. Alle Fristen auf einen Blick:
+Sperre im Chat · Ihre IP-Adresse liegt kurzzeitig im Arbeitsspeicher des Servers und wird nicht dauerhaft abgelegt
+Ihre Eingaben und Vaias Antworten bei Anthropic · 30 Tage
+Mailanfragen, aus denen kein Auftrag wird · 30 Tage
+Zugriffsprotokoll im Kundenportal · 90 Tage
+Buchhaltungsunterlagen · 10 Jahre. Das schreibt Art. 958f OR vor — daran können wir nichts ändern, auch nicht auf Wunsch.
+Auf der Website selbst entsteht nichts, was aufbewahrt werden müsste: kein Zugriffsprotokoll, keine IP-Adressen.
 Ihre Rechte
-Sie können jederzeit verlangen, dass wir Ihnen Auskunft über die Daten geben, die wir über Sie bearbeiten, und dass wir sie berichtigen oder löschen. Eine Mail an hallo@vaiacon.ch genügt; wir antworten innert 30 Tagen und stellen die Auskunft kostenlos aus.
+Eine Mail an hallo@vaiacon.ch genügt. Wir antworten innert 30 Tagen, und es kostet Sie nichts.
+Auskunft · Sie erfahren, welche Daten wir über Sie bearbeiten und woher sie stammen.
+Berichtigung · Stimmt etwas nicht, korrigieren wir es.
+Löschung · Wir löschen Ihre Daten, soweit wir sie nicht aufbewahren müssen — siehe «Aufbewahrung und Löschung».
+Herausgabe Ihrer Daten · Sie erhalten die Daten, die Sie uns gegeben haben, in einem gängigen Dateiformat, oder wir schicken sie direkt weiter. Das steht in Art. 28 revDSG.
+Widerspruch · Sie können einer Bearbeitung widersprechen. Wir hören dann damit auf, ausser es gibt einen zwingenden Grund dagegen — den nennen wir Ihnen dann.
 Sind Sie mit unserer Antwort nicht zufrieden, können Sie sich an den Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB) in Bern wenden.
 Änderungen
 Ändert sich an dieser Website etwas, das Ihre Daten betrifft, ändern wir diese Erklärung mit. Diese Fassung stammt vom 11. September 2026.
