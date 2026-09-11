@@ -2,7 +2,7 @@ Pill-Button der Marke; Beschriftung lowercase, Pfeil als Text-Glyph — für jed
 
 ```jsx
 <Button arrow>erstgespräch</Button>
-<Button variant="light" arrow="↗" href="https://calendly.com/vaiacon" target="_blank">termin direkt buchen</Button>
+<Button variant="light" arrow="→" href="kontakt.html#formular">Gespräch vereinbaren</Button>
 <Button variant="glass" arrow>oder per e-mail</Button>
 <Button variant="dark" size="sm">fragen? wir antworten sofort</Button>
 ```

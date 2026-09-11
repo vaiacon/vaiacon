@@ -168,7 +168,7 @@ function Kontakt() {
         <h2 style={{ margin: 0, fontSize: 'clamp(36px, 4.6vw, 62px)', fontWeight: 600, letterSpacing: '-0.035em', lineHeight: 1.08, color: 'var(--cream-50)' }}>Welche Richtung ist für Ihr Unternehmen die richtige?</h2>
         <p style={{ margin: 0, fontSize: 17, lineHeight: 1.7, color: 'var(--text-on-terra-soft)', maxWidth: '56ch' }}>Im Erstgespräch schaffen wir Orientierung: Wir klären Ziele, Herausforderungen und den nächsten sinnvollen Schritt für eine nachhaltige Entwicklung.</p>
         <div style={{ display: 'flex', alignItems: 'center', gap: 18, flexWrap: 'wrap', justifyContent: 'center', marginTop: 10 }}>
-          <Button variant="glass" arrow href="https://calendly.com/vaiacon" target="_blank">Termin direkt buchen</Button>
+          <Button variant="glass" arrow href="../../kontakt.html#formular">Gespräch vereinbaren</Button>
         </div>
         <small style={{ fontSize: 15, fontWeight: 600, color: 'rgba(255,236,222,0.9)' }}>Klar · Persönlich · Ohne Verkaufsdruck</small>
         <div className="contact-social-row" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 14, marginTop: 10 }}>

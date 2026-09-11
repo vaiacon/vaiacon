@@ -384,7 +384,7 @@ function Kontakt() {
         <h2 className="mock-title" style={{ color: '#fff', maxWidth: 840 }}>Welche vaiacon-Lösung passt zu Ihrem Unternehmen?</h2>
         <p className="mock-lead" style={{ maxWidth: 720 }}>Im unverbindlichen Gespräch klären wir, ob für Sie Learning, Bot, Service oder eine Kombination der richtige nächste Schritt ist.</p>
         <div className="mock-actions">
-          <DsButton variant="light" arrow href="https://calendly.com/vaiacon" target="_blank">Termin direkt buchen</DsButton>
+          <DsButton variant="light" arrow href="../../kontakt.html#formular">Gespräch vereinbaren</DsButton>
           <DsButton variant="glass" arrow href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</DsButton>
         </div>
         <small style={{ fontSize: 15, fontWeight: 700, color: 'rgba(255,236,222,0.9)' }}>Simpel · Klar · Persönlich</small>

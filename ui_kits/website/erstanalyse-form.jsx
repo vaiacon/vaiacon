@@ -164,8 +164,8 @@ function EaSuccess({ answers, result }) {
         <p className="ea-result-vorbehalt">Bewusst konservativ gerechnet — wir versprechen lieber zu wenig als zu viel. Welche Lösungswege dahinter stecken und was sie kosten, zeigen wir Ihnen im kostenlosen Erstgespräch.</p>
       </div>
       <div className="ea-success-ctas">
-        <EaButton variant="cta" arrow="↗" href="https://calendly.com/vaiacon" target="_blank">termin direkt buchen</EaButton>
-        <a className="ea-back" href="index.html">zurück zur startseite →</a>
+        <EaButton variant="cta" arrow="→" href="../../kontakt.html#formular">Gespräch vereinbaren</EaButton>
+        <a className="ea-back" href="../../index.html">Zurück zur Startseite →</a>
       </div>
     </div>
   );
@@ -213,12 +213,16 @@ function ErstanalyseApp() {
 
   return (
     <div data-screen-label="Erstanalyse">
-      <header className="ea-header">
-        <div className="ea-header-inner">
-          <a href="index.html" aria-label="vaiacon Startseite" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-            <img src="../../assets/logo-lockup-terra-symbol-cream.png" alt="vaiacon" style={{ height: 44, width: 'auto', display: 'block' }} />
+      {/* Dieselbe Kopfzeile wie auf den übrigen Seiten. is-solid steht fest:
+          Die Klasse wird sonst beim Blättern gesetzt, wenn die Kopfzeile den
+          Terracotta-Hero verlässt — den gibt es hier nicht, die Seite beginnt
+          hell. Menüpunkte braucht es hier keine, nur den Weg zurück. */}
+      <header className="mock-header is-solid">
+        <div className="mock-header__inner">
+          <a className="mock-header__logo" href="../../index.html" aria-label="vaiacon Startseite">
+            <img src="../../assets/logo-lockup-terra.png" alt="vaiacon" />
           </a>
-          <a className="ea-back" href="index.html">zurück zur startseite →</a>
+          <a className="ea-back" href="../../index.html">Zurück zur Startseite →</a>
         </div>
       </header>
 
@@ -256,7 +260,7 @@ function ErstanalyseApp() {
 
             <div className="ea-submit">
               <EaButton variant="cta" size="lg" arrow={busy ? undefined : '→'} disabled={busy} onClick={submit}>
-                {busy ? 'Ihre Antworten werden ausgewertet …' : 'auswertung anfordern'}
+                {busy ? 'Ihre Antworten werden ausgewertet …' : 'Auswertung anfordern'}
               </EaButton>
               {busy ? <p className="ea-busy-note">Einen Moment bitte — das kann bis zu einer halben Minute dauern.</p> : <p className="ea-trust">Klar · Persönlich · Ohne Verkaufsdruck</p>}
             </div>

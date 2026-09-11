@@ -3954,8 +3954,7 @@ function EaSuccess({
   }, /*#__PURE__*/React.createElement(EaButton, {
     variant: "cta",
     arrow: "\u2197",
-    href: "https://calendly.com/vaiacon",
-    target: "_blank"
+    href: "../../kontakt.html#formular"
   }, "termin direkt buchen"), /*#__PURE__*/React.createElement("a", {
     className: "ea-back",
     href: "index.html"
@@ -4806,9 +4805,8 @@ function Kontakt() {
   }, /*#__PURE__*/React.createElement(DsButton, {
     variant: "light",
     arrow: true,
-    href: "https://calendly.com/vaiacon",
-    target: "_blank"
-  }, "Termin direkt buchen"), /*#__PURE__*/React.createElement(DsButton, {
+    href: "../../kontakt.html#formular"
+  }, "Gespr\xE4ch vereinbaren"), /*#__PURE__*/React.createElement(DsButton, {
     variant: "glass",
     arrow: true,
     href: "mailto:hallo@vaiacon.ch"
@@ -5290,9 +5288,8 @@ function Kontakt() {
   }, /*#__PURE__*/React.createElement(DsButton, {
     variant: "light",
     arrow: true,
-    href: "https://calendly.com/vaiacon",
-    target: "_blank"
-  }, "Termin direkt buchen"), /*#__PURE__*/React.createElement(DsButton, {
+    href: "../../kontakt.html#formular"
+  }, "Gespr\xE4ch vereinbaren"), /*#__PURE__*/React.createElement(DsButton, {
     variant: "glass",
     arrow: true,
     href: "mailto:hallo@vaiacon.ch"
@@ -5993,9 +5990,8 @@ function Kontakt() {
   }, /*#__PURE__*/React.createElement(Button, {
     variant: "glass",
     arrow: true,
-    href: "https://calendly.com/vaiacon",
-    target: "_blank"
-  }, "Termin direkt buchen")), /*#__PURE__*/React.createElement("small", {
+    href: "../../kontakt.html#formular"
+  }, "Gespr\xE4ch vereinbaren")), /*#__PURE__*/React.createElement("small", {
     style: {
       fontSize: 15,
       fontWeight: 600,

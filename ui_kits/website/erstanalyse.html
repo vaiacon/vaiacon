@@ -6,6 +6,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Kostenlose Erstanalyse — vaiacon</title>
 <link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="mockup-entwurf.css?v=20260911-menue-voll">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <style>
   html { scroll-behavior: smooth; }
   a { color: var(--link); }
@@ -14,10 +18,13 @@
 
   body { background: var(--bg-page); }
 
-  /* Kopfzeile */
-  .ea-header { background: var(--cream-100); border-bottom: 1px solid var(--border-soft); }
-  .ea-header-inner { max-width: var(--header-max); margin: 0 auto; padding: 14px clamp(16px, 3vw, 40px); box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
-  .ea-back { font-family: var(--font-sans); font-size: 15px; font-weight: 600; text-decoration: none; color: var(--text-strong); transition: color 0.3s ease; white-space: nowrap; }
+  /* Kopfzeile — dieselbe wie auf den übrigen Seiten, aber hier NICHT fixiert:
+     Direkt darunter klebt die Fortschrittsleiste mit top:0. Bliebe die
+     Kopfzeile fixiert, schöbe sich die Leiste dahinter und wäre weg. Die
+     Seite hat keinen Hero, über dem die Kopfzeile schweben müsste. */
+  .mock-header { position: static; }
+  .mock-header__inner { justify-content: space-between; }
+  .ea-back { font-family: var(--font-sans); font-size: 15px; font-weight: 700; text-decoration: none; color: var(--ink-900); transition: color 0.3s ease; white-space: nowrap; }
   .ea-back:hover { color: var(--terra-500); }
 
   /* Fortschritt über die 8 Blöcke */
@@ -84,7 +91,7 @@
 
   @media (max-width: 700px) {
     html, body { overflow-x: hidden; }
-    .ea-header img { height: 38px !important; }
+    .mock-header__logo img { width: 170px; }
     .ea-progress-label { font-size: 11.5px; letter-spacing: 0.06em; }
     .ea-success-ctas { flex-direction: column; align-items: stretch; text-align: center; }
     .ea-success-ctas .ea-back { text-align: center; }

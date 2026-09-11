@@ -518,9 +518,8 @@ function Kontakt() {
   }, /*#__PURE__*/React.createElement(DsButton, {
     variant: "light",
     arrow: true,
-    href: "https://calendly.com/vaiacon",
-    target: "_blank"
-  }, "Termin direkt buchen"), /*#__PURE__*/React.createElement(DsButton, {
+    href: "../../kontakt.html#formular"
+  }, "Gespr\xE4ch vereinbaren"), /*#__PURE__*/React.createElement(DsButton, {
     variant: "glass",
     arrow: true,
     href: "mailto:hallo@vaiacon.ch"
