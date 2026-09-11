@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 11.09.2026 · Eintrag bf39c81 Datenschutz: Abschnitt «Bekanntgabe ins Ausland»
+> Stand: 11.09.2026 · Eintrag a02a92e Datenschutz: Fristen gebuendelt, Dienstleister, Rechte vollstaendig
 
 ## Wie du antwortest
 

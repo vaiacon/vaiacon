@@ -1635,3 +1635,28 @@ body {
     white-space: normal;
   }
 }
+
+/* ── Der Punkt, auf dem man gerade steht ─────────────────────────────────
+   Er verschwindet nicht mehr aus dem Menü, also braucht er ein Zeichen, sonst
+   weiss niemand, wo er ist. Ein Strich darunter, keine zweite Farbe — die
+   Marke arbeitet mit Zeichen, nicht mit Auszeichnungsfarben. Der Kontakt-Knopf
+   ist schon eine Pille und bleibt darum aussen vor. */
+.mock-header__nav a[aria-current="page"]:not(.mock-header__contact) {
+  position: relative;
+}
+
+.mock-header__nav a[aria-current="page"]:not(.mock-header__contact)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  opacity: 0.9;
+}
+
+.mock-mobile-nav a[aria-current="page"] {
+  color: var(--terra-500);
+}

@@ -2,8 +2,9 @@
    Der Vertrag mit dem Server ist derselbe wie beim React-Widget:
    POST /api/chat mit {messages:[{role,content}]}, Antwort als Strom in
    «data: {...}»-Blöcken. Der Schlüssel liegt auf dem Server, nie hier.
-   Das Widget wird ans Ende des Body gehängt: auf dem Handy steht es damit im
-   Fluss hinter der Fusszeile, statt den untersten Inhalt zu überdecken. */
+   Das Widget schwebt unten rechts und läuft beim Blättern mit. Kommt die
+   Fusszeile ins Bild, hebt es sich um deren sichtbare Höhe an, damit der
+   unterste Bereich lesbar bleibt. */
 (function () {
   var BEGRUESSUNG = 'Grüezi, ich bin Vaia! Die digitale Mitarbeiterin von vaiacon. Ich beantworte gerne Ihre Fragen zu vaiacon, unseren Paketen und den ersten Schritten.';
   var AUSWEICHTEXT = 'Das hat gerade nicht geklappt. Schreiben Sie uns bitte an hallo@vaiacon.ch — wir antworten selbst.';
@@ -56,7 +57,50 @@
       if (!verlauf.length) { zeige('bot', BEGRUESSUNG); verlauf.push({ role: 'assistant', text: BEGRUESSUNG }); }
       feld.focus();
     }
+    hubBerechnen();   // beim Auf- und Zuklappen neu entscheiden
   }
+
+  /* ── Anheben über der Fusszeile ──────────────────────────────────────────
+     Wir setzen nur die Zahl; ob sie benutzt wird, entscheidet chat.css. So
+     bleibt das Verhalten am Bildschirm unberührt, ohne Fallunterscheidung
+     hier drin. Gerechnet wird, wie weit die Fusszeile ins Bild ragt. */
+  var HOECHSTER_HUB = 170;   // mehr würde den Knopf in den Inhalt schieben
+  var fusszeile = null;
+  var angefordert = false;
+
+  /* Nicht einmalig beim Start suchen: In der Academy entsteht die Fusszeile
+     erst im Browser aus einem Baustein. Wer sie zu früh sucht, findet nichts
+     und hebt nie an. Darum bei jedem Lauf nachsehen, bis sie da ist. */
+  function fusszeileFinden() {
+    if (fusszeile && fusszeile.isConnected) return fusszeile;
+    fusszeile = document.querySelector('.sv-footer') || document.querySelector('footer');
+    return fusszeile;
+  }
+
+  function hubBerechnen() {
+    angefordert = false;
+    var fuss = fusszeileFinden();
+    if (!fuss) return;
+    // Offen deckt das Fenster ohnehin den unteren Rand — dann nicht verschieben.
+    if (wurzel.getAttribute('data-open') === 'true') {
+      wurzel.style.setProperty('--vc-hub', '0px');
+      return;
+    }
+    var kasten = fuss.getBoundingClientRect();
+    var sichtbar = window.innerHeight - kasten.top;
+    var hub = Math.max(0, Math.min(sichtbar, kasten.height, HOECHSTER_HUB));
+    wurzel.style.setProperty('--vc-hub', Math.round(hub) + 'px');
+  }
+
+  function hubAnfordern() {
+    if (angefordert) return;
+    angefordert = true;
+    window.requestAnimationFrame(hubBerechnen);
+  }
+
+  window.addEventListener('scroll', hubAnfordern, { passive: true });
+  window.addEventListener('resize', hubAnfordern);
+  hubBerechnen();
 
   knopf.addEventListener('click', function () {
     umschalten(wurzel.getAttribute('data-open') !== 'true');

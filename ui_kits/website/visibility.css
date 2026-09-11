@@ -19,6 +19,12 @@ body {
 .sv-hero {
   position: relative;
   min-height: max(740px, 88svh);
+  /* Flex, damit der Inhalt die volle Hoehe bekommt und mittig sitzt, wenn
+     Platz uebrig ist. Bewusst NICHT «align-items: center» am Abschnitt: Ist
+     der Inhalt hoeher als 740px — auf dem Handy die Regel —, wuerde er dann
+     oben und unten beschnitten, und die Kopfzeile lege sich darueber. So
+     waechst der Abschnitt stattdessen mit. */
+  display: flex;
   overflow: hidden;
   background: var(--grad-terra-hero);
   color: var(--text-on-terra);
@@ -47,6 +53,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   gap: var(--space-7);
   text-align: center;
 }
