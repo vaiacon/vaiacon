@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 10.09.2026 · Eintrag 0ac1c76 Netzwerk-Zeichen in der Fusszeile, Termin-Knopf entfernt
+> Stand: 10.09.2026 · Eintrag 591feca Ordner bot/ umbenannt — er hat vaiacon.ch/bot lahmgelegt
 
 ## Wie du antwortest
 
@@ -667,24 +667,25 @@ vaiacon GmbH Lehenstrasse 74 8037 Zürich
 
 01 — RECHTLICHES
 Datenschutz und Impressum
-Wer hinter vaiacon.ch steht und was mit Ihren Daten geschieht — kurz, vollständig und in einfacher Sprache.
+Wer hinter vaiacon.ch und dem Kundenportal steht und was mit Ihren Daten geschieht — kurz, vollständig und in einfacher Sprache.
 02 — IMPRESSUM
-Verantwortlich für diese Website.
+Verantwortlich für Website und Portal.
 vaiacon GmbH
 Lehenstrasse 74 8037 Zürich Schweiz
 hallo@vaiacon.ch
 Verantwortlich für Inhalt und Datenschutz im Sinne des revDSG ist die vaiacon GmbH. Anfragen zum Datenschutz richten Sie an hallo@vaiacon.ch .
 03 — DATENSCHUTZ
 Was mit Ihren Daten geschieht.
-Massgebend ist das revidierte Schweizer Datenschutzgesetz (revDSG). Wir erheben so wenig wie möglich — und erklären hier alles, was auf dieser Website tatsächlich passiert.
+Massgebend ist das revidierte Schweizer Datenschutzgesetz (revDSG). Wir erheben so wenig wie möglich — und erklären hier alles, was auf dieser Website und im Kundenportal tatsächlich passiert.
 Kurz gesagt
 Diese Website verlangt kein Konto und führt keine Besucherstatistik. Sie läuft auf einem Schweizer Server. Drei Stellen geben Daten ins Ausland: die Schriften, die Programmbibliotheken und der Chat mit Vaia. Alle drei sind unten einzeln erklärt.
+Diese Erklärung gilt auch für das Kundenportal unter kunden.vaiacon.ch. Dort speichern wir mehr, weil es dort nötig ist — was genau, steht weiter unten.
 Was beim Aufruf dieser Seite geschieht
-Die Website liegt auf einem Server von Infomaniak in der Schweiz. Bei jedem Aufruf entstehen technische Einträge im Serverprotokoll: Ihre IP-Adresse, der Zeitpunkt, die aufgerufene Seite und die Kennung Ihres Browsers.
-Diese Einträge dienen allein dem sicheren Betrieb — sie zeigen uns Störungen und Angriffsversuche. Wir werten sie nicht aus, um Besucher zu unterscheiden oder wiederzuerkennen. Nach 30 Tagen werden sie gelöscht.
+Die Website liegt bei Infomaniak in der Schweiz. Wir führen kein Zugriffsprotokoll und speichern keine IP-Adressen. Wer diese Seiten liest, hinterlässt bei uns also keine Spur.
+Eine einzige Ausnahme gibt es: die kurzzeitige Sperre im Chat. Sie ist beim Chat mit Vaia beschrieben.
 Schriften
 Die Schriften Quicksand und IBM Plex Mono werden beim Seitenaufruf von Google Fonts geladen. Dabei erhält Google LLC (USA) Ihre IP-Adresse und die Angabe, welche Seite Sie aufrufen. Weitere Daten übermitteln wir nicht.
-Das betrifft jede Seite dieser Website.
+Das betrifft jede Seite dieser Website — und das Kundenportal, das dieselben Schriften lädt.
 Programmbibliotheken
 Die vaiaconAcademy und der Erstanalyse-Fragebogen laden zusätzlich zwei Programmbibliotheken (React und Babel) über das Verteilnetz unpkg.com. Auch dabei wird nur Ihre IP-Adresse übermittelt. Die übrigen Seiten brauchen das nicht.
 Chat mit Vaia
@@ -697,13 +698,23 @@ Erstanalyse-Fragebogen
 Die Auswertung wird vollständig in Ihrem Browser berechnet. Ihre Antworten verlassen Ihr Gerät nicht.
 Während Sie den Fragebogen ausfüllen, werden die Antworten im lokalen Speicher Ihres Browsers zwischengelegt, damit nichts verloren geht, wenn Sie zwischendurch weggehen. Sobald Sie die Auswertung anfordern, wird dieser Zwischenspeicher gelöscht. Sie können ihn jederzeit selbst leeren, indem Sie die Websitedaten in Ihrem Browser löschen.
 Eine Übermittlung Ihrer Antworten an uns oder an einen Formulardienst findet zurzeit nicht statt. Sollte sich das ändern, ändern wir zuerst diese Erklärung.
+Kundenportal kunden.vaiacon.ch
+Wer bei uns ein Projekt hat, meldet sich im Kundenportal mit einem Zugangscode an und sieht dort die Vorschau seiner Website. Das Portal läuft auf demselben Schweizer Server wie diese Website.
+Anders als hier speichern wir im Portal etwas — und zwar nur das:
+✓ Firma und Projektname
+✓ Name und E-Mail-Adresse der Ansprechperson
+✓ Den Zugangscode, und zwar nur verschlüsselt. Im Klartext steht er nirgends — auch wir können ihn nicht nachlesen.
+✓ Ihre Rückmeldungen zu den Vorschauen
+✓ Ein Zugriffsprotokoll mit IP-Adresse, 90 Tage lang
+Das Zugriffsprotokoll gibt es hier, weil hinter der Anmeldung Kundendaten liegen: Wir müssen nachvollziehen können, wer wann zugegriffen hat. Es wird nach 90 Tagen gelöscht.
+Jeder Kunde sieht nur sein eigenes Projekt. Ist ein Auftrag abgeschlossen und wollen Sie Ihre Daten gelöscht haben, genügt eine Mail an hallo@vaiacon.ch .
 Kontakt per Mail
 Mails an hallo@vaiacon.ch liegen beim Mail-Hosting von Infomaniak in der Schweiz. Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu bearbeiten, und geben sie nicht weiter. Anfragen, aus denen kein Auftrag wird, löschen wir nach 30 Tagen.
 Ihre Rechte
 Sie können jederzeit verlangen, dass wir Ihnen Auskunft über die Daten geben, die wir über Sie bearbeiten, und dass wir sie berichtigen oder löschen. Eine Mail an hallo@vaiacon.ch genügt; wir antworten innert 30 Tagen und stellen die Auskunft kostenlos aus.
 Sind Sie mit unserer Antwort nicht zufrieden, können Sie sich an den Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB) in Bern wenden.
 Änderungen
-Ändert sich an dieser Website etwas, das Ihre Daten betrifft, ändern wir diese Erklärung mit. Diese Fassung stammt vom 10. September 2026.
+Ändert sich an dieser Website etwas, das Ihre Daten betrifft, ändern wir diese Erklärung mit. Diese Fassung stammt vom 11. September 2026.
 04 — FRAGEN?
 Etwas ist unklar geblieben?
 Schreiben Sie uns. Wir antworten selbst und erklären gerne, was wir hier meinen.

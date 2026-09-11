@@ -755,3 +755,26 @@ body {
 .sv-footer__social svg {
   display: block;
 }
+
+/* Häkchen in hellen Karten: Auf Creme gehört der Haken in Terracotta, nicht in
+   Peach — Peach ist für Terracotta-Flächen gedacht und verschwindet auf hell.
+   So steht es in den Design-Regeln. */
+.sv-detail-card--light .sv-checklist span,
+.sv-card .sv-checklist span {
+  color: var(--terra-500);
+}
+
+.sv-detail-card--light .sv-checklist,
+.sv-card .sv-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  text-align: left;
+}
+
+.sv-detail-card--light .sv-checklist li,
+.sv-card .sv-checklist li {
+  display: flex;
+  gap: var(--space-2);
+  line-height: 1.6;
+}
