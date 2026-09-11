@@ -2383,6 +2383,8 @@ function SiteFooter({
   copyright = '© 2026 vaiacon GmbH',
   legalHref,
   legalLabel = 'Datenschutz und Impressum',
+  agbHref,
+  agbLabel = 'AGB',
   facebookHref,
   instagramHref,
   linkedinHref,
@@ -2460,7 +2462,13 @@ function SiteFooter({
       color: 'rgba(255, 255, 255, 0.75)',
       textDecoration: 'none'
     }
-  }, legalLabel)) : null)), netze.length ? /*#__PURE__*/React.createElement("div", {
+  }, legalLabel)) : null, agbHref ? /*#__PURE__*/React.createElement(React.Fragment, null, " \xB7 ", /*#__PURE__*/React.createElement("a", {
+    href: agbHref,
+    style: {
+      color: 'rgba(255, 255, 255, 0.75)',
+      textDecoration: 'none'
+    }
+  }, agbLabel)) : null)), netze.length ? /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       alignItems: 'center',

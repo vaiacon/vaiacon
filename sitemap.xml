@@ -9,6 +9,7 @@
   <url><loc>https://vaiacon.ch/faq</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://vaiacon.ch/kontakt</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://vaiacon.ch/datenschutz</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://vaiacon.ch/agb</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://vaiacon.ch/academy/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://vaiacon.ch/academy/lernplan.html</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
 </urlset>

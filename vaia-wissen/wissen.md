@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 11.09.2026 · Eintrag abaddfc FAQ gesammelt, Fusszeile dreizeilig, Vaia am Knopf — mobil nachgezogen
+> Stand: 11.09.2026 · Eintrag 842ed88 Design-Regel nachgezogen: Menue und Knoepfe beginnen gross
 
 ## Wie du antwortest
 
@@ -749,3 +749,76 @@ Etwas ist unklar geblieben?
 Schreiben Sie uns. Wir antworten selbst und erklären gerne, was wir hier meinen.
 hallo@vaiacon.ch ↗
 Zur Kontaktseite →
+
+### Allgemeine Geschäftsbedingungen
+
+01 — RECHTLICHES
+Allgemeine Geschäftsbedingungen
+Was gilt, wenn Sie mit uns arbeiten — Leistungen, Vergütung, Einsatz von KI, Haftung. In der Reihenfolge und Nummerierung des Vertragsdokuments.
+Datenschutz und Impressum →
+02 — AGB
+Die Bedingungen im Wortlaut.
+Es gilt Schweizer Recht. Für bestehende Verträge gelten die AGB, die bei Vertragsabschluss vereinbart wurden.
+1. Geltungsbereich
+Diese Allgemeinen Geschäftsbedingungen (AGB) regeln sämtliche Geschäftsbeziehungen zwischen der vaiacon GmbH (nachfolgend «Anbieterin») und ihren Kunden im Zusammenhang mit Beratungsdienstleistungen, Unternehmensentwicklung, Prozessautomatisierung, Digitalisierung, Entwicklung und Implementierung von Software- und KI-Lösungen sowie Support- und Wartungsleistungen. Abweichende Bedingungen des Kunden gelten nur, sofern sie von der Anbieterin ausdrücklich und schriftlich anerkannt wurden.
+2. Vertragsabschluss
+Ein Vertrag kommt durch die schriftliche Annahme einer Offerte, die Unterzeichnung eines Vertrages oder die schriftliche Beauftragung durch den Kunden zustande. Die Anbieterin ist berechtigt, Anfragen ohne Angabe von Gründen abzulehnen.
+3. Leistungsumfang
+Unternehmensentwicklung und Transformation, Analyse und Optimierung von Geschäftsprozessen, Digitalisierung, Automatisierungslösungen, Software- und Schnittstellenentwicklung, KI-Integration, Datenanalysen, Schulungen, Support, Wartung und Projektbegleitung. Der konkrete Leistungsumfang ergibt sich aus Angebot oder Vertrag.
+4. Mitwirkungspflichten
+Der Kunde stellt Informationen, Zugänge und Ansprechpartner rechtzeitig bereit und sichert die rechtmässige Bereitstellung sämtlicher Daten zu. Verzögerungen verlängern Fristen entsprechend.
+5. Vergütung
+Gemäss Offerte oder Vertrag. Sofern nichts anderes vereinbart wurde, erfolgt die Abrechnung nach Aufwand. Rechnungen sind innert 30 Tagen zahlbar. Bei Verzug kann die Anbieterin Leistungen aussetzen.
+6. Termine
+Termine gelten als Richtwerte, sofern nicht ausdrücklich verbindlich vereinbart. Keine Haftung für Verzögerungen durch Kunden oder Dritte.
+7. Einsatz künstlicher Intelligenz
+Die Anbieterin kann KI-Systeme einsetzen. KI-Ergebnisse beruhen auf Wahrscheinlichkeiten und können Fehler enthalten. Der Kunde prüft sämtliche Ergebnisse eigenständig. Eine Garantie für bestimmte Resultate besteht nicht.
+8. Datenschutz
+Bearbeitung personenbezogener Daten erfolgt nach geltendem Datenschutzrecht. Soweit erforderlich wird ein Auftragsbearbeitungsvertrag abgeschlossen. Es gilt zusätzlich die Datenschutzerklärung .
+9. Vertraulichkeit
+Beide Parteien behandeln sämtliche vertraulichen Informationen vertraulich. Die Pflicht gilt über das Vertragsende hinaus.
+10. Geistiges Eigentum
+Urheberrechte, Konzepte, Methoden, Frameworks, Bibliotheken, Vorlagen, Prompts, KI-Agenten, Workflows, Automatisierungen, Skripte und wiederverwendbare Komponenten verbleiben bei der Anbieterin. Der Kunde erhält nach vollständiger Zahlung ausschliesslich die vertraglich vereinbarten Nutzungsrechte. Open-Source-Komponenten unterliegen ihren jeweiligen Lizenzen.
+11. Gewährleistung
+Die Anbieterin schuldet eine sorgfältige Leistungserbringung, jedoch keinen bestimmten wirtschaftlichen Erfolg.
+11a. Projektabnahme
+Nach Abschluss eines Projektes oder einer Projektphase wird der Kunde zur Abnahme aufgefordert. Erfolgt innerhalb von zehn Arbeitstagen weder eine begründete schriftliche Mängelrüge noch eine Ablehnung der Abnahme, gilt die Leistung als abgenommen. Unerhebliche Mängel berechtigen nicht zur Verweigerung der Abnahme.
+11b. Änderungswünsche
+Änderungen bedürfen der Schriftform. Termine und Vergütung können angepasst werden. Zusatzleistungen werden nach Aufwand verrechnet.
+11c. Datensicherung
+Der Kunde erstellt vollständige Backups. Keine Haftung für Datenverluste infolge ungenügender Datensicherung.
+11d. IT-Sicherheit
+Es werden branchenübliche Sicherheitsmassnahmen umgesetzt. Ein absoluter Schutz vor Cyberangriffen kann nicht garantiert werden.
+11e. Cloud- und KI-Dienste
+Die Anbieterin darf Drittanbieter einsetzen. Für deren Verfügbarkeit oder Änderungen wird keine Haftung übernommen.
+11f. Rechtmässigkeit der Daten
+Der Kunde sichert die Rechtmässigkeit aller Daten zu und stellt die Anbieterin von Ansprüchen Dritter frei.
+11g. KI-generierte Inhalte
+Keine Gewähr für Richtigkeit, Vollständigkeit oder rechtliche Zulässigkeit KI-generierter Inhalte. Der Kunde prüft sämtliche Resultate selbst.
+11h. Open Source Software
+Es gelten ausschliesslich die jeweiligen Lizenzbedingungen.
+11i. Verfügbarkeit externer Systeme
+Keine Haftung für Ausfälle oder Änderungen externer Cloud-, API-, Hosting- oder KI-Dienste.
+11j. Exportkontrolle und Compliance
+Der Kunde hält sämtliche gesetzlichen Vorgaben ein. Die Anbieterin darf Leistungen einstellen, sofern gesetzliche Gründe dies verlangen.
+12. Haftung
+Haftung nur für Vorsatz oder grobe Fahrlässigkeit, soweit gesetzlich zulässig. Ausgeschlossen sind indirekte Schäden, Folgeschäden, Datenverlust, Betriebsunterbrüche, entgangener Gewinn, entgangene Einsparungen, Reputationsschäden, Cyberangriffe, Hackerangriffe, Ransomware, Schäden aufgrund fehlerhafter Eingabedaten, KI-Halluzinationen und Entscheidungen des Kunden. Die Gesamthaftung ist auf den niedrigeren Betrag aus der Projektvergütung oder CHF 100'000 begrenzt, soweit gesetzlich zulässig.
+13. Leistungen Dritter
+Einsatz von Unterauftragnehmern und Drittsoftware ist zulässig. Keine Haftung ausserhalb des Einflussbereichs.
+14. Support und Wartung
+Nur bei entsprechender Vereinbarung. Service Levels ergeben sich aus dem Vertrag.
+15. Höhere Gewalt
+Keine Haftung bei höherer Gewalt.
+16. Änderungen der AGB
+Für bestehende Verträge gelten die bei Vertragsabschluss vereinbarten AGB, sofern nichts anderes vereinbart wird.
+17. Anwendbares Recht und Gerichtsstand
+Es gilt Schweizer Recht. Gerichtsstand ist der Sitz der Anbieterin.
+18. Versicherung
+Die Anbieterin unterhält eine angemessene Betriebs- und/oder Berufshaftpflichtversicherung. Eine weitergehende Haftung besteht nicht.
+19. Salvatorische Klausel
+Sollte eine Bestimmung unwirksam sein, bleibt die Wirksamkeit der übrigen Bestimmungen unberührt. Die Parteien ersetzen sie durch eine wirtschaftlich möglichst gleichwertige zulässige Regelung.
+03 — FRAGEN?
+Etwas ist unklar geblieben?
+Schreiben Sie uns. Wir antworten selbst und erklären gerne, was wir hier meinen.
+hallo@vaiacon.ch ↗
+Zum Kontaktformular →

@@ -12,6 +12,10 @@ export interface SiteFooterProps {
   legalHref?: string;
   /** Standard «Datenschutz und Impressum» */
   legalLabel?: string;
+  /** Verweis auf die AGB; ohne Angabe kein Link */
+  agbHref?: string;
+  /** Standard «AGB» */
+  agbLabel?: string;
   /** Verweis auf das Facebook-Profil; ohne Angabe kein Zeichen */
   facebookHref?: string;
   /** Verweis auf das Instagram-Profil; ohne Angabe kein Zeichen */

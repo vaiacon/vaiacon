@@ -1040,3 +1040,21 @@ button.sv-button[disabled] {
     width: 100%;
   }
 }
+
+/* ── Lange deutsche Wörter ───────────────────────────────────────────────
+   «Berufshaftpflichtversicherung» ist bei 16.5px rund 263px breit. In einer
+   Karte auf einem 320px-Gerät bleiben innen 240px — das Wort liefe hinaus.
+   Und weil .sv-page seitlichen Überlauf versteckt, wäre es nicht einmal
+   sichtbar, sondern abgeschnitten. Silbentrennung greift, weil die Seiten
+   lang="de-CH" tragen; overflow-wrap fängt ab, was sich nicht trennen lässt. */
+.sv-detail-card p,
+.sv-detail-card li,
+.sv-card p,
+.sv-faq-item p,
+.sv-lead,
+.sv-hero__lead,
+.sv-steps p {
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}

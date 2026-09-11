@@ -59,6 +59,8 @@ export function SiteFooter({
   copyright = '© 2026 vaiacon GmbH',
   legalHref,
   legalLabel = 'Datenschutz und Impressum',
+  agbHref,
+  agbLabel = 'AGB',
   facebookHref,
   instagramHref,
   linkedinHref,
@@ -90,6 +92,9 @@ export function SiteFooter({
             <a href={`mailto:${email}`} style={{ color: '#FFFFFF', fontWeight: 500, textDecoration: 'none' }}>{email}</a>
             {legalHref ? (
               <> · <a href={legalHref} style={{ color: 'rgba(255, 255, 255, 0.75)', textDecoration: 'none' }}>{legalLabel}</a></>
+            ) : null}
+            {agbHref ? (
+              <> · <a href={agbHref} style={{ color: 'rgba(255, 255, 255, 0.75)', textDecoration: 'none' }}>{agbLabel}</a></>
             ) : null}
           </span>
         </p>

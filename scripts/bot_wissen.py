@@ -42,6 +42,7 @@ SEITEN = [
     # uebersprungen und gemeldet. Sobald die Seite da ist, kann Vaia
     # Datenschutzfragen aus dem eigenen Text beantworten, statt zu raten.
     ("datenschutz.html", "Datenschutz und Impressum"),
+    ("agb.html", "Allgemeine Geschäftsbedingungen"),
 ]
 
 
