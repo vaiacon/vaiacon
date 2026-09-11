@@ -16,7 +16,7 @@
 <title>Kontakt und Erstgespräch — vaiacon, Zürich</title>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20260911-menue-voll">
-<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20260911-mobil">
+<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20260911-formular">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20260911-mitlaufend">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
@@ -90,7 +90,7 @@
             <span class="sv-step__no">01</span>
             <div>
               <h3>Sie melden sich</h3>
-              <p>Per Termin im Kalender oder mit einer Mail an <a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a>. Ein, zwei Sätze zu Ihrem Betrieb genügen.</p>
+              <p>Über das Formular unten oder mit einer Mail an <a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a>. Ein, zwei Sätze zu Ihrem Betrieb genügen.</p>
             </div>
           </li>
           <li>
@@ -111,17 +111,58 @@
       </div>
     </section>
 
+    <section id="formular" class="sv-section">
+      <div class="sv-wrap">
+        <div class="sv-center">
+          <p class="sv-kicker">03 — SCHREIBEN SIE UNS</p>
+          <h2 class="sv-title">Ein paar Zeilen genügen.</h2>
+          <p class="sv-lead">
+            Sagen Sie uns kurz, worum es geht. Wir antworten selbst, in der Regel innert eines Arbeitstages.
+          </p>
+        </div>
+
+        <form class="vc-kontakt" novalidate>
+          <div class="vc-kontakt__reihe">
+            <label>Name *
+              <input type="text" name="name" autocomplete="name" required>
+            </label>
+            <label>Firma
+              <input type="text" name="firma" autocomplete="organization">
+            </label>
+          </div>
+          <div class="vc-kontakt__reihe">
+            <label>E-Mail *
+              <input type="email" name="mail" autocomplete="email" required>
+            </label>
+            <label>Telefon
+              <input type="tel" name="telefon" autocomplete="tel">
+            </label>
+          </div>
+          <label>Ihre Nachricht *
+            <textarea name="nachricht" required placeholder="Was beschäftigt Sie gerade?"></textarea>
+          </label>
+          <div class="vc-kontakt__fuss">
+            <p class="vc-kontakt__hinweis">
+              Beim Senden öffnet sich Ihr Mailprogramm mit der fertigen Nachricht. Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu bearbeiten — mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.
+            </p>
+            <button class="sv-button sv-button--cta" type="submit">Nachricht senden →</button>
+          </div>
+          <p class="vc-kontakt__meldung" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
     <section id="wege" class="sv-section sv-section--terra">
       <div class="sv-wrap">
         <div class="sv-center">
-          <p class="sv-kicker sv-kicker--on-terra">03 — SO ERREICHEN SIE UNS</p>
+          <p class="sv-kicker sv-kicker--on-terra">04 — SO ERREICHEN SIE UNS</p>
           <h2 class="sv-title sv-title--on-terra">Simpel · Klar · Persönlich</h2>
         </div>
         <div class="sv-card-grid sv-card-grid--three">
           <article class="sv-card sv-card--sand">
             <span class="sv-card__no">01</span>
-            <h3>Termin buchen</h3>
-            <p>Suchen Sie sich direkt einen freien Platz im Kalender. <a href="https://calendly.com/vaiacon" target="_blank" rel="noopener">Zum Kalender ↗</a></p>
+            <h3>Formular</h3>
+            <p>Ein paar Zeilen genügen, wir melden uns. <a href="#formular">Zum Formular →</a></p>
           </article>
           <article class="sv-card sv-card--sand">
             <span class="sv-card__no">02</span>
@@ -162,5 +203,6 @@
 </div>
 <script src="ui_kits/website/visibility.js?v=20260828-main-header"></script>
 <script src="ui_kits/website/chat.js?v=20260911-hub"></script>
+<script src="ui_kits/website/kontakt.js?v=20260911-mailweg" defer></script>
 </body>
 </html>

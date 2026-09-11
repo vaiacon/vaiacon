@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 11.09.2026 · Eintrag e623e27 Hero ueberall gleich hoch, Menue vollstaendig auf jeder Seite
+> Stand: 11.09.2026 · Eintrag abaddfc FAQ gesammelt, Fusszeile dreizeilig, Vaia am Knopf — mobil nachgezogen
 
 ## Wie du antwortest
 
@@ -634,18 +634,28 @@ Ein Gespräch, kein Verkaufstermin.
 Wir hören zu, stellen Fragen und sagen ehrlich, wo wir helfen können und wo nicht. Wenn nichts davon zu Ihnen passt, sagen wir auch das — das kostet uns eine halbe Stunde und Ihnen nichts.
 01
 Sie melden sich
-Per Termin im Kalender oder mit einer Mail an hallo@vaiacon.ch . Ein, zwei Sätze zu Ihrem Betrieb genügen.
+Über das Formular unten oder mit einer Mail an hallo@vaiacon.ch . Ein, zwei Sätze zu Ihrem Betrieb genügen.
 02
 Das Erstgespräch
 Eine halbe Stunde am Telefon oder bei Ihnen. Was kostet heute am meisten Zeit, was wurde schon versucht, wo drückt es wirklich?
 03
 Unsere Einschätzung
 Sie erhalten schriftlich, was wir empfehlen — mit Aufwand und Preis. Auch dann, wenn die Empfehlung lautet, vorerst nichts zu tun.
-03 — SO ERREICHEN SIE UNS
+03 — SCHREIBEN SIE UNS
+Ein paar Zeilen genügen.
+Sagen Sie uns kurz, worum es geht. Wir antworten selbst, in der Regel innert eines Arbeitstages.
+Name *
+Firma
+E-Mail *
+Telefon
+Ihre Nachricht *
+Beim Senden öffnet sich Ihr Mailprogramm mit der fertigen Nachricht. Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu bearbeiten — mehr dazu in der Datenschutzerklärung .
+Nachricht senden →
+04 — SO ERREICHEN SIE UNS
 Simpel · Klar · Persönlich
 01
-Termin buchen
-Suchen Sie sich direkt einen freien Platz im Kalender. Zum Kalender ↗
+Formular
+Ein paar Zeilen genügen, wir melden uns. Zum Formular →
 02
 E-Mail
 Schreiben Sie uns, was Sie beschäftigt. Wir antworten selbst, in der Regel innert eines Arbeitstages. hallo@vaiacon.ch
@@ -699,8 +709,10 @@ Anders als hier speichern wir im Portal etwas — und zwar nur das:
 ✓ Ein Zugriffsprotokoll mit IP-Adresse
 Das Zugriffsprotokoll gibt es hier, weil hinter der Anmeldung Kundendaten liegen: Wir müssen nachvollziehen können, wer wann zugegriffen hat. Wie lange es bleibt, steht unter «Aufbewahrung und Löschung».
 Jeder Kunde sieht nur sein eigenes Projekt. Ist ein Auftrag abgeschlossen und wollen Sie Ihre Daten gelöscht haben, genügt eine Mail an hallo@vaiacon.ch .
-Kontakt per Mail
+Kontakt und Formular
 Mails an hallo@vaiacon.ch liegen beim Mail-Hosting von Infomaniak in der Schweiz. Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu bearbeiten, und geben sie nicht weiter.
+Das Kontaktformular fragt Name, E-Mail und Ihre Nachricht; Firma und Telefon sind freiwillig. Es verschickt nichts selbst: Es schreibt die Nachricht fertig und übergibt sie Ihrem eigenen Mailprogramm. Bis Sie dort auf «senden» drücken, verlässt nichts Ihr Gerät — und es ist kein Formulardienst eines Dritten beteiligt.
+Eine Terminvereinbarung über einen Kalenderdienst bieten wir nicht an.
 Unsere Dienstleister
 Diese Firmen arbeiten in unserem Auftrag und kommen dabei mit Daten in Berührung. Mehr sind es nicht:
 Infomaniak (Schweiz) · betreibt den Server für Website und Kundenportal und hostet unser Mail-Konto
@@ -709,9 +721,8 @@ Anthropic (USA) · stellt das Sprachmodell hinter dem Chat mit Vaia
 unpkg.com (USA) · liefert die Programmbibliotheken für Academy und Erstanalyse-Fragebogen
 Keine dieser Firmen darf Ihre Daten für eigene Zwecke verwenden. Wir geben nichts an Werbenetzwerke oder Adresshändler weiter und verkaufen keine Daten.
 Bekanntgabe ins Ausland
-Drei Dienste, die wir einsetzen, sitzen in den USA. Auf welcher Grundlage die Daten dorthin gehen dürfen:
+Wohin Daten gehen und auf welcher Grundlage:
 Google Fonts · USA · Swiss-U.S. Data Privacy Framework, aktiv zertifiziert
-Calendly · USA · Swiss-U.S. Data Privacy Framework, aktiv zertifiziert. Calendly arbeitet nicht in unserem Auftrag — wir verweisen nur darauf. Es erfährt erst von Ihnen, wenn Sie den Verweis anklicken.
 Anthropic (Chat mit Vaia) · USA · Standardvertragsklauseln im Data Processing Addendum, das zusammen mit den Commercial Terms automatisch gilt
 Infomaniak (Hosting und Mail) · Schweiz · keine Bekanntgabe ins Ausland
 Zum Chat kommt hinzu: Anthropic trainiert seine Modelle nicht mit unseren Inhalten. Das steht zusammen mit der Löschfrist in den Commercial Terms und im Data Processing Addendum .
@@ -719,7 +730,7 @@ Aufbewahrung und Löschung
 Wir behalten nichts länger, als es gebraucht wird. Alle Fristen auf einen Blick:
 Sperre im Chat · Ihre IP-Adresse liegt kurzzeitig im Arbeitsspeicher des Servers und wird nicht dauerhaft abgelegt
 Ihre Eingaben und Vaias Antworten bei Anthropic · 30 Tage
-Mailanfragen, aus denen kein Auftrag wird · 30 Tage
+Anfragen per Mail oder Formular, aus denen kein Auftrag wird · 30 Tage
 Zugriffsprotokoll im Kundenportal · 90 Tage
 Buchhaltungsunterlagen · 10 Jahre. Das schreibt Art. 958f OR vor — daran können wir nichts ändern, auch nicht auf Wunsch.
 Auf der Website selbst entsteht nichts, was aufbewahrt werden müsste: kein Zugriffsprotokoll, keine IP-Adressen.

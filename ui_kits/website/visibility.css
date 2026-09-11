@@ -179,6 +179,36 @@ body {
   box-shadow: var(--shadow-cta);
 }
 
+/* Der Handlungsknopf auf hellem Grund. Es gab bisher nur die beiden Varianten
+   für Terracotta — auf Creme wäre ein Knopf ohne Hintergrund unsichtbar
+   gewesen. Farben aus dem Design-System: --cta-bg, unter dem Zeiger
+   --cta-bg-hover. */
+.sv-button--cta {
+  background: var(--cta-bg);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-cta);
+}
+
+.sv-button--cta:hover,
+.sv-button--cta:focus-visible {
+  background: var(--cta-bg-hover);
+  box-shadow: var(--shadow-cta-hover);
+}
+
+/* Als <button> statt <a> braucht es die Vorgaben des Browsers weggeräumt. */
+button.sv-button {
+  cursor: pointer;
+  font-family: var(--font-sans);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+button.sv-button[disabled] {
+  opacity: 0.55;
+  cursor: default;
+  transform: none;
+}
+
 .sv-button--light:hover,
 .sv-button--light:focus-visible {
   background: var(--peach-100);
@@ -910,5 +940,103 @@ body {
 
   .sv-footer__adresse > span + span::before {
     content: none;
+  }
+}
+
+/* ── Kontaktformular ─────────────────────────────────────────────────────
+   Datensparsam: Pflicht sind Name, Mail und Nachricht. Firma und Telefon
+   stehen dabei, weil sie das Erstgespräch abkürzen — mehr wird nicht
+   gefragt. Comic-Rand ist hier nicht erlaubt (der gilt nur für Chat und
+   Sprechblasen), darum Haarlinie wie bei den Karten. */
+.vc-kontakt {
+  width: min(100%, 40rem);
+  margin: var(--space-9) auto 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  text-align: left;
+}
+
+.vc-kontakt__reihe {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.vc-kontakt label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: var(--text-ui);
+  font-weight: var(--weight-semibold);
+  color: var(--text-strong);
+}
+
+.vc-kontakt input,
+.vc-kontakt textarea {
+  font-family: var(--font-sans);
+  font-size: var(--text-size-body);
+  font-weight: var(--weight-medium);
+  color: var(--text-strong);
+  background: var(--cream-card);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 12px 14px;
+  box-sizing: border-box;
+  width: 100%;
+  transition: border-color 0.3s ease;
+}
+
+.vc-kontakt textarea {
+  min-height: 9rem;
+  resize: vertical;
+}
+
+.vc-kontakt input:focus,
+.vc-kontakt textarea:focus {
+  outline: none;
+  border-color: var(--terra-500);
+}
+
+.vc-kontakt__fuss {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.vc-kontakt__hinweis {
+  margin: 0;
+  max-width: 34ch;
+  font-size: var(--text-body-sm);
+  line-height: 1.55;
+  color: var(--text-body);
+}
+
+.vc-kontakt__meldung {
+  margin: 0;
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-semibold);
+  line-height: 1.55;
+  color: var(--text-body);
+}
+
+.vc-kontakt__meldung[data-art="gut"]     { color: #1B5E33; }
+.vc-kontakt__meldung[data-art="fehler"]  { color: #8C1D18; }
+.vc-kontakt__meldung[data-art="hinweis"] { color: var(--terra-600); }
+
+@media (max-width: 700px) {
+  .vc-kontakt__reihe {
+    grid-template-columns: 1fr;
+  }
+
+  .vc-kontakt__fuss {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .vc-kontakt__fuss .sv-button {
+    width: 100%;
   }
 }
