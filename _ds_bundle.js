@@ -2438,20 +2438,29 @@ function SiteFooter({
       opacity: 0.95
     }
   })), /*#__PURE__*/React.createElement("p", {
+    className: "sv-footer__adresse",
     style: {
       margin: 0,
       fontSize: '14px',
       lineHeight: 1.6,
       color: 'rgba(255, 255, 255, 0.6)'
     }
-  }, address, " \xB7 ", /*#__PURE__*/React.createElement("a", {
+  }, address.split(" \xB7 ").map((teil, i) => /*#__PURE__*/React.createElement("span", {
+    key: i
+  }, teil)), /*#__PURE__*/React.createElement("span", null, /*#__PURE__*/React.createElement("a", {
     href: `mailto:${email}`,
     style: {
       color: '#FFFFFF',
       fontWeight: 500,
       textDecoration: 'none'
     }
-  }, email)), netze.length ? /*#__PURE__*/React.createElement("div", {
+  }, email), legalHref ? /*#__PURE__*/React.createElement(React.Fragment, null, " \xB7 ", /*#__PURE__*/React.createElement("a", {
+    href: legalHref,
+    style: {
+      color: 'rgba(255, 255, 255, 0.75)',
+      textDecoration: 'none'
+    }
+  }, legalLabel)) : null)), netze.length ? /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       alignItems: 'center',
@@ -2472,13 +2481,7 @@ function SiteFooter({
       fontWeight: 600,
       color: 'rgba(255, 255, 255, 0.5)'
     }
-  }, /*#__PURE__*/React.createElement("span", null, copyright), legalHref ? /*#__PURE__*/React.createElement("a", {
-    href: legalHref,
-    style: {
-      color: 'rgba(255, 255, 255, 0.65)',
-      textDecoration: 'none'
-    }
-  }, legalLabel) : null, /*#__PURE__*/React.createElement("a", {
+  }, /*#__PURE__*/React.createElement("span", null, copyright), /*#__PURE__*/React.createElement("a", {
     href: "#top",
     onClick: onTop,
     onMouseEnter: () => setHover(true),

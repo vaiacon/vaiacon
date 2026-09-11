@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 11.09.2026 · Eintrag a02a92e Datenschutz: Fristen gebuendelt, Dienstleister, Rechte vollstaendig
+> Stand: 11.09.2026 · Eintrag e623e27 Hero ueberall gleich hoch, Menue vollstaendig auf jeder Seite
 
 ## Wie du antwortest
 
@@ -206,17 +206,7 @@ Sie erhalten schriftlich, was wir vorschlagen — mit Aufwand und Preis. Auch da
 03
 Umsetzung in Ihrem Tempo
 Wir fangen klein an, mit einer Sache, die trägt. Alles Weitere entscheiden Sie, wenn Sie den Nutzen gesehen haben.
-04 — KURZ GEFRAGT
-Kurz gefragt. Klar beantwortet.
-Brauche ich technisches Vorwissen? +
-Nein. Die Inhalte und die Umsetzung werden so erklärt, dass Unternehmer und Mitarbeitende ohne technisches Vorwissen mitkommen.
-Was kostet eine Automation? +
-Eine Automation beginnt bei CHF 600. Den Fixpreis nennen wir nach der Erstanalyse — Sie wissen vor der Umsetzung, woran Sie sind.
-Was passiert mit unseren Daten? +
-Wir arbeiten nach dem revDSG. Vor der Umsetzung klären wir, welche Daten ein Werkzeug überhaupt sehen darf, und halten Kundendaten dort heraus, wo sie nicht hingehören.
-Wie beginnt eine Zusammenarbeit? +
-Am Anfang steht ein unverbindliches Gespräch. Danach klären wir, ob Learning, Bot, Service oder eine Kombination davon sinnvoll ist.
-05 — NÄCHSTER SCHRITT
+04 — NÄCHSTER SCHRITT
 Welche vaiacon-Lösung passt zu Ihrem Betrieb?
 Im unverbindlichen Gespräch klären wir, ob Learning, Bot, Service oder eine Kombination der richtige nächste Schritt ist. Simpel · Klar · Persönlich.
 Zur Kontaktseite →
@@ -311,19 +301,7 @@ GEO-Inhalte.
 Antwortfähige Texte, FAQ-Blöcke und Leistungsseiten, die auch ohne Vorwissen verstanden werden.
 Kontrolle.
 Regelmässige Prüfung, was sichtbar wird, welche Fragen auftauchen und welche Inhalte nachziehen sollten.
-08 — FAQ
-Die wichtigsten Fragen zu SEO und GEO.
-Ist GEO einfach ein neues Wort für SEO? +
-Nein. SEO hilft vor allem bei Suchmaschinenresultaten. GEO ergänzt das: Inhalte werden so erklärt und strukturiert, dass KI-Systeme sie als klare Quelle verstehen können.
-Muss ich dafür Technik verstehen? +
-Nein. Wir erklären die Zusammenhänge einfach und kümmern uns um Struktur, Sprache und Umsetzung. Sie bringen Ihr Fachwissen ein, wir übersetzen es für Website, Suche und KI.
-Kann man Platz eins bei Google garantieren? +
-Nein, seriös nicht. Wir verbessern die Voraussetzungen: klare Inhalte, saubere Struktur und bessere Auffindbarkeit. Rankings hängen immer auch von Wettbewerb, Nachfrage und Zeit ab.
-Warum ist GEO für ein KMU relevant? +
-Weil Kunden immer häufiger KI nutzen, um Angebote zu vergleichen oder erste Empfehlungen zu erhalten. Wenn Ihre Informationen nicht klar genug sind, werden Sie dort schwerer berücksichtigt.
-Wie schnell sieht man Resultate? +
-Erste Verbesserungen an Klarheit und Struktur sieht man sofort auf der Website. Sichtbarkeit in Suchmaschinen und KI-Antworten entwickelt sich über Zeit und muss regelmässig geprüft werden.
-09 — NÄCHSTER SCHRITT
+08 — NÄCHSTER SCHRITT
 Lassen Sie prüfen, ob Ihr Angebot online klar verstanden wird.
 Wir schauen mit Ihnen auf Ihre heutige Website und zeigen verständlich, wo SEO und GEO den grössten Hebel haben.
 Sichtbarkeit prüfen lassen ↗
@@ -387,16 +365,6 @@ Sämtliche Vorlagen, Prompt-Karten und Checklisten
 Neue Lektionen jeden Monat
 Erstanalyse für Ihren Betrieb
 Merkblatt Datenschutz (revDSG)
-KURZ GEFRAGT
-Kurz gefragt. Klar beantwortet.
-Etwas Offenes? Schreiben Sie an hallo@vaiacon.ch — wir antworten selbst.
-Nein. Lernplan 01 setzt bei null an: Sie brauchen einen Computer, Ihre eigenen Unterlagen und eine halbe Stunde Ruhe. Alles andere erklären wir unterwegs.
-Eine Lektion dauert 3 bis 8 Minuten. Ein ganzer Lernplan ist in einer knappen Dreiviertelstunde durch — auch in mehreren Etappen.
-Sie arbeiten in Ihrer eigenen Umgebung — wir sehen Ihre Unterlagen nicht. Was nie in ein KI-Werkzeug gehört, ist eine eigene, immer frei zugängliche Lektion.
-Für den Einstieg genügt ein gängiger KI-Assistent, oft in der Gratis-Version. Wo eine Lizenz nötig wird, sagen wir es vorher und nennen die Alternative.
-Ja, über den Team-Zugang. Dort sehen Sie auch, wer wo steht — ohne Notensystem, aber mit Überblick.
-Jede Lektion hat eine Frage-Ecke, und Vaia hilft bei den häufigen Stolpersteinen. Wer Begleitung im Betrieb möchte, meldet sich bei uns.
-Pro Lernplan erhalten Sie eine Teilnahmebestätigung. Uns ist das Resultat im Betrieb wichtiger — aber für die Personalakte reicht es.
 VAIACONACADEMY
 Die erste Lektion wartet.
 Beginnen Sie mit der Erstanalyse oder springen Sie direkt in Lernplan 01. Beides kostet nichts und dauert weniger als eine Kaffeepause.
@@ -451,19 +419,7 @@ Wir kommen zu Ihnen. Kurze Erklärungen, viel Üben, alles an Ihren Fällen. Fra
 04
 Was bleibt
 Vorlagen, Prompt-Karten und eine Seite Spielregeln für den Betrieb. Dazu ein Termin nach vier Wochen, an dem wir nachschärfen, was im Alltag hakt.
-05 — KURZ GEFRAGT
-Kurz gefragt. Klar beantwortet.
-Braucht mein Team Vorkenntnisse? +
-Nein. Wir setzen bei null an: ein Computer, die eigenen Unterlagen, etwas Neugier. Alles andere erklären wir unterwegs, ohne Fachchinesisch.
-Wie lange dauert eine Schulung? +
-Ein Team-Training dauert einen halben Tag, eine Werkstatt zwei Stunden, ein Coaching je nach Bedarf. Länger als einen Tag am Stück schulen wir bewusst nicht — dann bleibt nichts hängen.
-Was passiert mit unseren Daten? +
-Sie arbeiten in Ihrer eigenen Umgebung, wir sehen Ihre Unterlagen nur, wenn Sie sie uns zeigen. Was nie in ein KI-Werkzeug gehört, ist fester Bestandteil jeder Schulung — nach dem revDSG.
-Können wir zuerst selbst reinschauen? +
-Ja. In der vaiaconAcademy stehen 11 Lernpfade mit 58 Lektionen offen — kostenlos und ohne Konto. Viele Betriebe fangen dort an und holen uns danach für die Stellen, an denen es hakt.
-Und wenn es nach der Schulung wieder einschläft? +
-Genau dagegen ist der Nachtermin nach vier Wochen da. Wer darüber hinaus Begleitung will, findet sie bei vaiaconService .
-06 — NÄCHSTER SCHRITT
+05 — NÄCHSTER SCHRITT
 Reden wir darüber, wer bei Ihnen lernen soll.
 Ein halbstündiges Vorgespräch, kostenlos und ohne Verpflichtung. Danach wissen Sie, ob und in welcher Form sich eine Schulung für Ihren Betrieb lohnt.
 Schulung anfragen ↗
@@ -509,19 +465,7 @@ Wir richten die Automation bei Ihnen ein und zeigen Ihrem Team, wie sie läuft. 
 05
 Kontrolle
 Regelmässig prüfen, ob es noch passt — auf Wunsch dauerhaft mit vaiaconService .
-05 — KURZ GEFRAGT
-Kurz gefragt. Klar beantwortet.
-Müssen wir unsere Software wechseln? +
-In der Regel nicht. Wir verbinden, was Sie schon haben. Ein Wechsel kommt nur zur Sprache, wenn ein Werkzeug den Ablauf wirklich blockiert — und dann sagen wir vorher, was er kostet.
-Was passiert, wenn eine Automation ausfällt? +
-Zu jeder Automation gehört ein Rückfallplan auf einer Seite: wer benachrichtigt wird, wie es von Hand weitergeht und wie Sie sehen, ob während des Ausfalls etwas liegen geblieben ist.
-Sehen Sie unsere Kundendaten? +
-Nur so weit, wie es für die Einrichtung nötig ist — und nur, was Sie freigeben. Wir arbeiten nach dem revDSG und klären vorher schriftlich, welche Daten ein Werkzeug überhaupt sehen darf.
-Brauchen wir dafür technisches Wissen? +
-Nein. Wir richten es ein und zeigen es Ihrem Team. Wer tiefer verstehen will, wie es funktioniert, findet das kostenlos in der vaiaconAcademy .
-Wie lange dauert die erste Automation? +
-Von der Erstanalyse bis zum Betrieb meist wenige Wochen. Wir fangen bewusst klein an — eine Sache, die funktioniert, ist mehr wert als fünf, die halb fertig sind.
-06 — NÄCHSTER SCHRITT
+05 — NÄCHSTER SCHRITT
 Zeigen Sie uns, was jede Woche Zeit frisst.
 Im Erstgespräch schauen wir gemeinsam auf Ihre Abläufe und sagen Ihnen, wo sich eine Automation lohnt — und wo nicht. Kostenlos und unverbindlich.
 Gespräch buchen ↗
@@ -572,19 +516,7 @@ Kleine Änderungen aus dem Alltag setzen wir laufend um, ohne dass daraus ein Pr
 04
 Berichten
 Sie erfahren, was geändert wurde und was aufgefallen ist. Auch dann, wenn wir etwas empfehlen, das Sie Geld spart statt uns Umsatz bringt.
-05 — KURZ GEFRAGT
-Kurz gefragt. Klar beantwortet.
-Brauchen wir das überhaupt? +
-Wenn Sie eine einzelne, einfache Automation haben und jemanden im Haus, der sie versteht: eher nicht. Sobald mehrere Abläufe zusammenspielen oder niemand zuständig ist, wird es sinnvoll.
-Betreuen Sie auch, was jemand anderes gebaut hat? +
-Ja, sofern wir hineinsehen dürfen und der Aufbau nachvollziehbar ist. Wir schauen es vorher an und sagen ehrlich, ob wir es verantworten können.
-Wie schnell reagieren Sie? +
-Im Basispaket per E-Mail innert eines Arbeitstages, in den höheren Stufen schneller und mit Vorrang. Verbindliche Zeiten halten wir im Vertrag fest, nicht in einem Werbeversprechen.
-Sind wir an eine Laufzeit gebunden? +
-Nein, alle drei Pakete sind monatlich kündbar. Wer nicht bleiben will, soll nicht bleiben müssen.
-Was ist nicht enthalten? +
-Neue Automationen sind ein eigener Auftrag über vaiaconBot , Schulungen laufen über vaiaconLearning . Lizenzkosten fremder Werkzeuge tragen Sie selbst — wir sagen vorher, welche nötig sind.
-06 — NÄCHSTER SCHRITT
+05 — NÄCHSTER SCHRITT
 Sagen Sie uns, was heute läuft.
 Wir schauen uns Ihre bestehenden Automationen an und sagen, welches Paket passt — oder ob Sie vorerst gar keines brauchen.
 Betreuung anfragen ↗
@@ -595,10 +527,12 @@ Zurück zur Startseite →
 01 — HÄUFIGE FRAGEN
 Kurz gefragt. Klar beantwortet.
 Was Betriebe uns am häufigsten fragen — zu Kosten, Daten, Vorwissen und dem ersten Schritt. Steht Ihre Frage nicht dabei, schreiben Sie uns.
-Frage stellen ↗
+Frage stellen →
 Zu den Antworten →
-02 — ÜBER VAIACON
-Wer wir sind und was wir tun.
+02 — ALLE FRAGEN
+Alles an einem Ort.
+Die Fragen von allen Seiten, nach Bereich geordnet. Auf den Seiten selbst stehen sie weiterhin dort, wo sie hingehören — hier finden Sie sie beisammen.
+Allgemein
 Was macht vaiacon? +
 vaiacon befähigt Schweizer KMU, KI verständlich, persönlich und wirksam im Unternehmen einzusetzen. Wir verbinden Lernen, Automatisierung und langfristige Begleitung.
 Ist vaiacon eine klassische KI-Agentur? +
@@ -607,27 +541,83 @@ Brauche ich technisches Vorwissen? +
 Nein. Die Inhalte und die Umsetzung werden so erklärt, dass Unternehmer und Mitarbeitende ohne technisches Vorwissen mitkommen.
 Wie beginnt eine Zusammenarbeit? +
 Am Anfang steht ein unverbindliches Gespräch. Danach klären wir, ob Learning, Bot, Service oder eine Kombination davon sinnvoll ist.
-03 — DIE ANGEBOTE
-Was sich hinter den Namen verbirgt.
-Was ist vaiaconAcademy? +
-Unsere Selbstlern-Plattform: 11 Lernpfade mit 58 kurzen Lektionen zu KI im KMU-Alltag. Alle Lektionen sind kostenlos — kein Abo, keine Verpflichtungen. Zur Academy →
-Was ist vaiaconLearning? +
-Trainings, Coachings und Workshops bei Ihnen im Betrieb, damit Unternehmer und Teams KI sicher anwenden können. Zu Learning →
-Was ist vaiaconBot? +
-Unser Ansatz für wiederkehrende Büro- und Administrationsprozesse: Wir analysieren Abläufe, priorisieren Hebel und setzen passende Automatisierungen um. Zu Bot →
-Was ist vaiaconService? +
-Begleitung bestehender Automatisierungen im Betrieb: Pflege, Updates, Kontrolle und Weiterentwicklung nach Bedarf. Zu Service →
-Was ist vaiaconVisibility? +
-Sichtbarkeit im Netz: SEO für Suchmaschinen und GEO für KI-Antworten, damit Ihr Angebot gefunden und verstanden wird. Zu Visibility →
-04 — GELD UND DATEN
-Die zwei Fragen, die alle stellen.
-Was kostet eine Automation? +
-Eine Automation beginnt bei CHF 600. Den Fixpreis nennen wir nach der Erstanalyse — Sie wissen vor der Umsetzung, woran Sie sind. Rechnet sich eine Automation nicht, sagen wir das.
 Was passiert mit unseren Daten? +
 Wir arbeiten nach dem revDSG. Vor der Umsetzung klären wir mit Ihnen, welche Daten ein Werkzeug überhaupt sehen darf, und halten Kundendaten dort heraus, wo sie nicht hingehören.
+vaiaconVisibility
+Was ist vaiaconVisibility? +
+Sichtbarkeit im Netz: SEO für Suchmaschinen und GEO für KI-Antworten, damit Ihr Angebot gefunden und verstanden wird. Zu Visibility →
+Ist GEO einfach ein neues Wort für SEO? +
+Nein. SEO hilft vor allem bei Suchmaschinenresultaten. GEO ergänzt das: Inhalte werden so erklärt und strukturiert, dass KI-Systeme sie als klare Quelle verstehen können.
+Muss ich dafür Technik verstehen? +
+Nein. Wir erklären die Zusammenhänge einfach und kümmern uns um Struktur, Sprache und Umsetzung. Sie bringen Ihr Fachwissen ein, wir übersetzen es für Website, Suche und KI.
+Kann man Platz eins bei Google garantieren? +
+Nein, seriös nicht. Wir verbessern die Voraussetzungen: klare Inhalte, saubere Struktur und bessere Auffindbarkeit. Rankings hängen immer auch von Wettbewerb, Nachfrage und Zeit ab.
+Warum ist GEO für ein KMU relevant? +
+Weil Kunden immer häufiger KI nutzen, um Angebote zu vergleichen oder erste Empfehlungen zu erhalten. Wenn Ihre Informationen nicht klar genug sind, werden Sie dort schwerer berücksichtigt.
+Wie schnell sieht man Resultate? +
+Erste Verbesserungen an Klarheit und Struktur sieht man sofort auf der Website. Sichtbarkeit in Suchmaschinen und KI-Antworten entwickelt sich über Zeit und muss regelmässig geprüft werden.
+Alles zu vaiaconVisibility →
+vaiaconAcademy
+Was ist vaiaconAcademy? +
+Unsere Selbstlern-Plattform: 11 Lernpfade mit 58 kurzen Lektionen zu KI im KMU-Alltag. Alle Lektionen sind kostenlos — kein Abo, keine Verpflichtungen. Zur Academy →
 Kostet die Academy etwas? +
 Nein. Alle Lernpfade und Lektionen sind offen — ohne Konto, ohne Anmeldung, ohne versteckte Kosten. Lizenzen fremder KI-Werkzeuge sind davon nicht betroffen; wo eine nötig wird, sagen wir es vorher.
-05 — NÄCHSTER SCHRITT
+Brauche ich Vorkenntnisse? +
+Nein. Lernplan 01 setzt bei null an: Sie brauchen einen Computer, Ihre eigenen Unterlagen und eine halbe Stunde Ruhe. Alles andere erklären wir unterwegs.
+Wie viel Zeit muss ich einrechnen? +
+Eine Lektion dauert 3 bis 8 Minuten. Ein ganzer Lernplan ist in einer knappen Dreiviertelstunde durch — auch in mehreren Etappen.
+Welche Werkzeuge brauche ich — und was kosten die? +
+Für den Einstieg genügt ein gängiger KI-Assistent, oft in der Gratis-Version. Wo eine Lizenz nötig wird, sagen wir es vorher und nennen die Alternative.
+Können mehrere Mitarbeitende mitlernen? +
+Ja, über den Team-Zugang. Dort sehen Sie auch, wer wo steht — ohne Notensystem, aber mit Überblick.
+Was, wenn ich stecken bleibe? +
+Jede Lektion hat eine Frage-Ecke, und Vaia hilft bei den häufigen Stolpersteinen. Wer Begleitung im Betrieb möchte, meldet sich bei uns.
+Gibt es eine Bestätigung am Ende? +
+Pro Lernplan erhalten Sie eine Teilnahmebestätigung. Uns ist das Resultat im Betrieb wichtiger — aber für die Personalakte reicht es.
+Alles zu vaiaconAcademy →
+vaiaconLearning
+Was ist vaiaconLearning? +
+Trainings, Coachings und Workshops bei Ihnen im Betrieb, damit Unternehmer und Teams KI sicher anwenden können. Zu Learning →
+Braucht mein Team Vorkenntnisse? +
+Nein. Wir setzen bei null an: ein Computer, die eigenen Unterlagen, etwas Neugier. Alles andere erklären wir unterwegs, ohne Fachchinesisch.
+Wie lange dauert eine Schulung? +
+Ein Team-Training dauert einen halben Tag, eine Werkstatt zwei Stunden, ein Coaching je nach Bedarf. Länger als einen Tag am Stück schulen wir bewusst nicht — dann bleibt nichts hängen.
+Können wir zuerst selbst reinschauen? +
+Ja. In der vaiaconAcademy stehen 11 Lernpfade mit 58 Lektionen offen — kostenlos und ohne Konto. Viele Betriebe fangen dort an und holen uns danach für die Stellen, an denen es hakt.
+Und wenn es nach der Schulung wieder einschläft? +
+Genau dagegen ist der Nachtermin nach vier Wochen da. Wer darüber hinaus Begleitung will, findet sie bei vaiaconService .
+Alles zu vaiaconLearning →
+vaiaconBot
+Was ist vaiaconBot? +
+Unser Ansatz für wiederkehrende Büro- und Administrationsprozesse: Wir analysieren Abläufe, priorisieren Hebel und setzen passende Automatisierungen um. Zu Bot →
+Was kostet eine Automation? +
+Eine Automation beginnt bei CHF 600. Den Fixpreis nennen wir nach der Erstanalyse — Sie wissen vor der Umsetzung, woran Sie sind. Rechnet sich eine Automation nicht, sagen wir das.
+Müssen wir unsere Software wechseln? +
+In der Regel nicht. Wir verbinden, was Sie schon haben. Ein Wechsel kommt nur zur Sprache, wenn ein Werkzeug den Ablauf wirklich blockiert — und dann sagen wir vorher, was er kostet.
+Was passiert, wenn eine Automation ausfällt? +
+Zu jeder Automation gehört ein Rückfallplan auf einer Seite: wer benachrichtigt wird, wie es von Hand weitergeht und wie Sie sehen, ob während des Ausfalls etwas liegen geblieben ist.
+Sehen Sie unsere Kundendaten? +
+Nur so weit, wie es für die Einrichtung nötig ist — und nur, was Sie freigeben. Wir arbeiten nach dem revDSG und klären vorher schriftlich, welche Daten ein Werkzeug überhaupt sehen darf.
+Brauchen wir dafür technisches Wissen? +
+Nein. Wir richten es ein und zeigen es Ihrem Team. Wer tiefer verstehen will, wie es funktioniert, findet das kostenlos in der vaiaconAcademy .
+Wie lange dauert die erste Automation? +
+Von der Erstanalyse bis zum Betrieb meist wenige Wochen. Wir fangen bewusst klein an — eine Sache, die funktioniert, ist mehr wert als fünf, die halb fertig sind.
+Alles zu vaiaconBot →
+vaiaconService
+Was ist vaiaconService? +
+Begleitung bestehender Automatisierungen im Betrieb: Pflege, Updates, Kontrolle und Weiterentwicklung nach Bedarf. Zu Service →
+Brauchen wir das überhaupt? +
+Wenn Sie eine einzelne, einfache Automation haben und jemanden im Haus, der sie versteht: eher nicht. Sobald mehrere Abläufe zusammenspielen oder niemand zuständig ist, wird es sinnvoll.
+Betreuen Sie auch, was jemand anderes gebaut hat? +
+Ja, sofern wir hineinsehen dürfen und der Aufbau nachvollziehbar ist. Wir schauen es vorher an und sagen ehrlich, ob wir es verantworten können.
+Wie schnell reagieren Sie? +
+Im Basispaket per E-Mail innert eines Arbeitstages, in den höheren Stufen schneller und mit Vorrang. Verbindliche Zeiten halten wir im Vertrag fest, nicht in einem Werbeversprechen.
+Sind wir an eine Laufzeit gebunden? +
+Nein, alle drei Pakete sind monatlich kündbar. Wer nicht bleiben will, soll nicht bleiben müssen.
+Was ist nicht enthalten? +
+Neue Automationen sind ein eigener Auftrag über vaiaconBot , Schulungen laufen über vaiaconLearning . Lizenzkosten fremder Werkzeuge tragen Sie selbst — wir sagen vorher, welche nötig sind.
+Alles zu vaiaconService →
+03 — NÄCHSTER SCHRITT
 Ihre Frage steht nicht dabei?
 Schreiben Sie uns. Wir antworten selbst — nicht aus einem Chatfenster, sondern als die zwei Menschen, die hier arbeiten.
 hallo@vaiacon.ch ↗

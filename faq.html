@@ -16,7 +16,7 @@
 <title>Häufige Fragen zu KI im KMU — vaiacon</title>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20260911-menue-voll">
-<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20260911-hero">
+<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20260911-mobil">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20260911-mitlaufend">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
@@ -65,103 +65,233 @@
             Was Betriebe uns am häufigsten fragen — zu Kosten, Daten, Vorwissen und dem ersten Schritt. Steht Ihre Frage nicht dabei, schreiben Sie uns.
           </p>
           <div class="sv-actions">
-            <a class="sv-button sv-button--light" href="mailto:hallo@vaiacon.ch">Frage stellen ↗</a>
+            <a class="sv-button sv-button--light" href="mailto:hallo@vaiacon.ch" data-vaia>Frage stellen →</a>
             <a class="sv-button sv-button--glass" href="#fragen">Zu den Antworten →</a>
           </div>
         </div>
         <div class="sv-hero__visual" aria-label="Häufige Fragen">
-          <figure class="sv-hero__robot">
-            <img src="assets/vaiacon-buerobot-faq.png" alt="vaiaconBot mit einem Fragezeichen">
+          <figure class="sv-hero__robot sv-hero__robot--frei">
+            <img src="assets/vaiacon-buerobot-faq-transparent.png" alt="Der vaiacon Büro-Bot winkt">
           </figure>
         </div>
       </div>
     </section>
 
     <section id="fragen" class="sv-section">
-      <div class="sv-wrap sv-faq-layout">
-        <div class="sv-copy">
-          <p class="sv-kicker">02 — ÜBER VAIACON</p>
-          <h2 class="sv-title">Wer wir sind und was wir tun.</h2>
-          <img class="sv-question-bot" src="assets/vaiacon-buerobot-faq-transparent.png" alt="vaiaconBot mit einem Fragezeichen">
+      <div class="sv-wrap">
+        <div class="sv-center">
+          <p class="sv-kicker">02 — ALLE FRAGEN</p>
+          <h2 class="sv-title">Alles an einem Ort.</h2>
+          <p class="sv-lead">
+            Die Fragen von allen Seiten, nach Bereich geordnet. Auf den Seiten selbst stehen sie weiterhin dort, wo sie hingehören — hier finden Sie sie beisammen.
+          </p>
         </div>
-        <div class="sv-faq-list">
-          <details class="sv-faq-item" open>
-            <summary><span>Was macht vaiacon?</span><span aria-hidden="true">+</span></summary>
-            <p>vaiacon befähigt Schweizer KMU, KI verständlich, persönlich und wirksam im Unternehmen einzusetzen. Wir verbinden Lernen, Automatisierung und langfristige Begleitung.</p>
-          </details>
-          <details class="sv-faq-item">
-            <summary><span>Ist vaiacon eine klassische KI-Agentur?</span><span aria-hidden="true">+</span></summary>
-            <p>Nein. KI ist für uns ein Werkzeug. Im Zentrum stehen verständliche Einführung, konkrete Abläufe und eine Umsetzung, die im Alltag funktioniert.</p>
-          </details>
-          <details class="sv-faq-item">
-            <summary><span>Brauche ich technisches Vorwissen?</span><span aria-hidden="true">+</span></summary>
-            <p>Nein. Die Inhalte und die Umsetzung werden so erklärt, dass Unternehmer und Mitarbeitende ohne technisches Vorwissen mitkommen.</p>
-          </details>
-          <details class="sv-faq-item">
-            <summary><span>Wie beginnt eine Zusammenarbeit?</span><span aria-hidden="true">+</span></summary>
-            <p>Am Anfang steht ein unverbindliches Gespräch. Danach klären wir, ob Learning, Bot, Service oder eine Kombination davon sinnvoll ist.</p>
-          </details>
-        </div>
+
+        <nav class="sv-faq-sprung" aria-label="Zu einem Bereich springen">
+          <a href="#faq-allgemein">Allgemein</a>
+          <a href="#faq-visibility">Visibility</a>
+          <a href="#faq-academy">Academy</a>
+          <a href="#faq-learning">Learning</a>
+          <a href="#faq-bot">Bot</a>
+          <a href="#faq-service">Service</a>
+        </nav>
+
+        <section class="sv-faq-gruppe" id="faq-allgemein">
+          <h3>Allgemein</h3>
+          <div class="sv-faq-list">
+            <details class="sv-faq-item">
+              <summary><span>Was macht vaiacon?</span><span aria-hidden="true">+</span></summary>
+              <p>vaiacon befähigt Schweizer KMU, KI verständlich, persönlich und wirksam im Unternehmen einzusetzen. Wir verbinden Lernen, Automatisierung und langfristige Begleitung.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Ist vaiacon eine klassische KI-Agentur?</span><span aria-hidden="true">+</span></summary>
+              <p>Nein. KI ist für uns ein Werkzeug. Im Zentrum stehen verständliche Einführung, konkrete Abläufe und eine Umsetzung, die im Alltag funktioniert.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Brauche ich technisches Vorwissen?</span><span aria-hidden="true">+</span></summary>
+              <p>Nein. Die Inhalte und die Umsetzung werden so erklärt, dass Unternehmer und Mitarbeitende ohne technisches Vorwissen mitkommen.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Wie beginnt eine Zusammenarbeit?</span><span aria-hidden="true">+</span></summary>
+              <p>Am Anfang steht ein unverbindliches Gespräch. Danach klären wir, ob Learning, Bot, Service oder eine Kombination davon sinnvoll ist.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Was passiert mit unseren Daten?</span><span aria-hidden="true">+</span></summary>
+              <p>Wir arbeiten nach dem revDSG. Vor der Umsetzung klären wir mit Ihnen, welche Daten ein Werkzeug überhaupt sehen darf, und halten Kundendaten dort heraus, wo sie nicht hingehören.</p>
+            </details>
+          </div>
+        </section>
+
+        <section class="sv-faq-gruppe" id="faq-visibility">
+          <h3>vaiaconVisibility</h3>
+          <div class="sv-faq-list">
+            <details class="sv-faq-item">
+              <summary><span>Was ist vaiaconVisibility?</span><span aria-hidden="true">+</span></summary>
+              <p>Sichtbarkeit im Netz: SEO für Suchmaschinen und GEO für KI-Antworten, damit Ihr Angebot gefunden und verstanden wird. <a href="visibility.html">Zu Visibility →</a></p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Ist GEO einfach ein neues Wort für SEO?</span><span aria-hidden="true">+</span></summary>
+              <p>Nein. SEO hilft vor allem bei Suchmaschinenresultaten. GEO ergänzt das: Inhalte werden so erklärt und strukturiert, dass KI-Systeme sie als klare Quelle verstehen können.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Muss ich dafür Technik verstehen?</span><span aria-hidden="true">+</span></summary>
+              <p>Nein. Wir erklären die Zusammenhänge einfach und kümmern uns um Struktur, Sprache und Umsetzung. Sie bringen Ihr Fachwissen ein, wir übersetzen es für Website, Suche und KI.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Kann man Platz eins bei Google garantieren?</span><span aria-hidden="true">+</span></summary>
+              <p>Nein, seriös nicht. Wir verbessern die Voraussetzungen: klare Inhalte, saubere Struktur und bessere Auffindbarkeit. Rankings hängen immer auch von Wettbewerb, Nachfrage und Zeit ab.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Warum ist GEO für ein KMU relevant?</span><span aria-hidden="true">+</span></summary>
+              <p>Weil Kunden immer häufiger KI nutzen, um Angebote zu vergleichen oder erste Empfehlungen zu erhalten. Wenn Ihre Informationen nicht klar genug sind, werden Sie dort schwerer berücksichtigt.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Wie schnell sieht man Resultate?</span><span aria-hidden="true">+</span></summary>
+              <p>Erste Verbesserungen an Klarheit und Struktur sieht man sofort auf der Website. Sichtbarkeit in Suchmaschinen und KI-Antworten entwickelt sich über Zeit und muss regelmässig geprüft werden.</p>
+            </details>
+          </div>
+          <a class="sv-faq-gruppe__mehr" href="visibility.html">Alles zu vaiaconVisibility →</a>
+        </section>
+
+        <section class="sv-faq-gruppe" id="faq-academy">
+          <h3>vaiaconAcademy</h3>
+          <div class="sv-faq-list">
+            <details class="sv-faq-item">
+              <summary><span>Was ist vaiaconAcademy?</span><span aria-hidden="true">+</span></summary>
+              <p>Unsere Selbstlern-Plattform: 11 Lernpfade mit 58 kurzen Lektionen zu KI im KMU-Alltag. Alle Lektionen sind kostenlos — kein Abo, keine Verpflichtungen. <a href="academy/">Zur Academy →</a></p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Kostet die Academy etwas?</span><span aria-hidden="true">+</span></summary>
+              <p>Nein. Alle Lernpfade und Lektionen sind offen — ohne Konto, ohne Anmeldung, ohne versteckte Kosten. Lizenzen fremder KI-Werkzeuge sind davon nicht betroffen; wo eine nötig wird, sagen wir es vorher.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Brauche ich Vorkenntnisse?</span><span aria-hidden="true">+</span></summary>
+              <p>Nein. Lernplan 01 setzt bei null an: Sie brauchen einen Computer, Ihre eigenen Unterlagen und eine halbe Stunde Ruhe. Alles andere erklären wir unterwegs.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Wie viel Zeit muss ich einrechnen?</span><span aria-hidden="true">+</span></summary>
+              <p>Eine Lektion dauert 3 bis 8 Minuten. Ein ganzer Lernplan ist in einer knappen Dreiviertelstunde durch — auch in mehreren Etappen.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Welche Werkzeuge brauche ich — und was kosten die?</span><span aria-hidden="true">+</span></summary>
+              <p>Für den Einstieg genügt ein gängiger KI-Assistent, oft in der Gratis-Version. Wo eine Lizenz nötig wird, sagen wir es vorher und nennen die Alternative.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Können mehrere Mitarbeitende mitlernen?</span><span aria-hidden="true">+</span></summary>
+              <p>Ja, über den Team-Zugang. Dort sehen Sie auch, wer wo steht — ohne Notensystem, aber mit Überblick.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Was, wenn ich stecken bleibe?</span><span aria-hidden="true">+</span></summary>
+              <p>Jede Lektion hat eine Frage-Ecke, und Vaia hilft bei den häufigen Stolpersteinen. Wer Begleitung im Betrieb möchte, meldet sich bei uns.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Gibt es eine Bestätigung am Ende?</span><span aria-hidden="true">+</span></summary>
+              <p>Pro Lernplan erhalten Sie eine Teilnahmebestätigung. Uns ist das Resultat im Betrieb wichtiger — aber für die Personalakte reicht es.</p>
+            </details>
+          </div>
+          <a class="sv-faq-gruppe__mehr" href="academy/">Alles zu vaiaconAcademy →</a>
+        </section>
+
+        <section class="sv-faq-gruppe" id="faq-learning">
+          <h3>vaiaconLearning</h3>
+          <div class="sv-faq-list">
+            <details class="sv-faq-item">
+              <summary><span>Was ist vaiaconLearning?</span><span aria-hidden="true">+</span></summary>
+              <p>Trainings, Coachings und Workshops bei Ihnen im Betrieb, damit Unternehmer und Teams KI sicher anwenden können. <a href="learning.html">Zu Learning →</a></p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Braucht mein Team Vorkenntnisse?</span><span aria-hidden="true">+</span></summary>
+              <p>Nein. Wir setzen bei null an: ein Computer, die eigenen Unterlagen, etwas Neugier. Alles andere erklären wir unterwegs, ohne Fachchinesisch.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Wie lange dauert eine Schulung?</span><span aria-hidden="true">+</span></summary>
+              <p>Ein Team-Training dauert einen halben Tag, eine Werkstatt zwei Stunden, ein Coaching je nach Bedarf. Länger als einen Tag am Stück schulen wir bewusst nicht — dann bleibt nichts hängen.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Können wir zuerst selbst reinschauen?</span><span aria-hidden="true">+</span></summary>
+              <p>Ja. In der <a href="academy/">vaiaconAcademy</a> stehen 11 Lernpfade mit 58 Lektionen offen — kostenlos und ohne Konto. Viele Betriebe fangen dort an und holen uns danach für die Stellen, an denen es hakt.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Und wenn es nach der Schulung wieder einschläft?</span><span aria-hidden="true">+</span></summary>
+              <p>Genau dagegen ist der Nachtermin nach vier Wochen da. Wer darüber hinaus Begleitung will, findet sie bei <a href="service.html">vaiaconService</a>.</p>
+            </details>
+          </div>
+          <a class="sv-faq-gruppe__mehr" href="learning.html">Alles zu vaiaconLearning →</a>
+        </section>
+
+        <section class="sv-faq-gruppe" id="faq-bot">
+          <h3>vaiaconBot</h3>
+          <div class="sv-faq-list">
+            <details class="sv-faq-item">
+              <summary><span>Was ist vaiaconBot?</span><span aria-hidden="true">+</span></summary>
+              <p>Unser Ansatz für wiederkehrende Büro- und Administrationsprozesse: Wir analysieren Abläufe, priorisieren Hebel und setzen passende Automatisierungen um. <a href="bot.html">Zu Bot →</a></p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Was kostet eine Automation?</span><span aria-hidden="true">+</span></summary>
+              <p>Eine Automation beginnt bei CHF 600. Den Fixpreis nennen wir nach der Erstanalyse — Sie wissen vor der Umsetzung, woran Sie sind. Rechnet sich eine Automation nicht, sagen wir das.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Müssen wir unsere Software wechseln?</span><span aria-hidden="true">+</span></summary>
+              <p>In der Regel nicht. Wir verbinden, was Sie schon haben. Ein Wechsel kommt nur zur Sprache, wenn ein Werkzeug den Ablauf wirklich blockiert — und dann sagen wir vorher, was er kostet.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Was passiert, wenn eine Automation ausfällt?</span><span aria-hidden="true">+</span></summary>
+              <p>Zu jeder Automation gehört ein Rückfallplan auf einer Seite: wer benachrichtigt wird, wie es von Hand weitergeht und wie Sie sehen, ob während des Ausfalls etwas liegen geblieben ist.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Sehen Sie unsere Kundendaten?</span><span aria-hidden="true">+</span></summary>
+              <p>Nur so weit, wie es für die Einrichtung nötig ist — und nur, was Sie freigeben. Wir arbeiten nach dem revDSG und klären vorher schriftlich, welche Daten ein Werkzeug überhaupt sehen darf.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Brauchen wir dafür technisches Wissen?</span><span aria-hidden="true">+</span></summary>
+              <p>Nein. Wir richten es ein und zeigen es Ihrem Team. Wer tiefer verstehen will, wie es funktioniert, findet das kostenlos in der <a href="academy/">vaiaconAcademy</a>.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Wie lange dauert die erste Automation?</span><span aria-hidden="true">+</span></summary>
+              <p>Von der Erstanalyse bis zum Betrieb meist wenige Wochen. Wir fangen bewusst klein an — eine Sache, die funktioniert, ist mehr wert als fünf, die halb fertig sind.</p>
+            </details>
+          </div>
+          <a class="sv-faq-gruppe__mehr" href="bot.html">Alles zu vaiaconBot →</a>
+        </section>
+
+        <section class="sv-faq-gruppe" id="faq-service">
+          <h3>vaiaconService</h3>
+          <div class="sv-faq-list">
+            <details class="sv-faq-item">
+              <summary><span>Was ist vaiaconService?</span><span aria-hidden="true">+</span></summary>
+              <p>Begleitung bestehender Automatisierungen im Betrieb: Pflege, Updates, Kontrolle und Weiterentwicklung nach Bedarf. <a href="service.html">Zu Service →</a></p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Brauchen wir das überhaupt?</span><span aria-hidden="true">+</span></summary>
+              <p>Wenn Sie eine einzelne, einfache Automation haben und jemanden im Haus, der sie versteht: eher nicht. Sobald mehrere Abläufe zusammenspielen oder niemand zuständig ist, wird es sinnvoll.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Betreuen Sie auch, was jemand anderes gebaut hat?</span><span aria-hidden="true">+</span></summary>
+              <p>Ja, sofern wir hineinsehen dürfen und der Aufbau nachvollziehbar ist. Wir schauen es vorher an und sagen ehrlich, ob wir es verantworten können.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Wie schnell reagieren Sie?</span><span aria-hidden="true">+</span></summary>
+              <p>Im Basispaket per E-Mail innert eines Arbeitstages, in den höheren Stufen schneller und mit Vorrang. Verbindliche Zeiten halten wir im Vertrag fest, nicht in einem Werbeversprechen.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Sind wir an eine Laufzeit gebunden?</span><span aria-hidden="true">+</span></summary>
+              <p>Nein, alle drei Pakete sind monatlich kündbar. Wer nicht bleiben will, soll nicht bleiben müssen.</p>
+            </details>
+            <details class="sv-faq-item">
+              <summary><span>Was ist nicht enthalten?</span><span aria-hidden="true">+</span></summary>
+              <p>Neue Automationen sind ein eigener Auftrag über <a href="bot.html">vaiaconBot</a>, Schulungen laufen über <a href="learning.html">vaiaconLearning</a>. Lizenzkosten fremder Werkzeuge tragen Sie selbst — wir sagen vorher, welche nötig sind.</p>
+            </details>
+          </div>
+          <a class="sv-faq-gruppe__mehr" href="service.html">Alles zu vaiaconService →</a>
+        </section>
       </div>
     </section>
 
-    <section id="angebote" class="sv-section sv-section--alt">
-      <div class="sv-wrap sv-faq-layout">
-        <div class="sv-copy">
-          <p class="sv-kicker">03 — DIE ANGEBOTE</p>
-          <h2 class="sv-title">Was sich hinter den Namen verbirgt.</h2>
-        </div>
-        <div class="sv-faq-list">
-          <details class="sv-faq-item">
-            <summary><span>Was ist vaiaconAcademy?</span><span aria-hidden="true">+</span></summary>
-            <p>Unsere Selbstlern-Plattform: 11 Lernpfade mit 58 kurzen Lektionen zu KI im KMU-Alltag. Alle Lektionen sind kostenlos — kein Abo, keine Verpflichtungen. <a href="academy/">Zur Academy →</a></p>
-          </details>
-          <details class="sv-faq-item">
-            <summary><span>Was ist vaiaconLearning?</span><span aria-hidden="true">+</span></summary>
-            <p>Trainings, Coachings und Workshops bei Ihnen im Betrieb, damit Unternehmer und Teams KI sicher anwenden können. <a href="learning.html">Zu Learning →</a></p>
-          </details>
-          <details class="sv-faq-item">
-            <summary><span>Was ist vaiaconBot?</span><span aria-hidden="true">+</span></summary>
-            <p>Unser Ansatz für wiederkehrende Büro- und Administrationsprozesse: Wir analysieren Abläufe, priorisieren Hebel und setzen passende Automatisierungen um. <a href="bot.html">Zu Bot →</a></p>
-          </details>
-          <details class="sv-faq-item">
-            <summary><span>Was ist vaiaconService?</span><span aria-hidden="true">+</span></summary>
-            <p>Begleitung bestehender Automatisierungen im Betrieb: Pflege, Updates, Kontrolle und Weiterentwicklung nach Bedarf. <a href="service.html">Zu Service →</a></p>
-          </details>
-          <details class="sv-faq-item">
-            <summary><span>Was ist vaiaconVisibility?</span><span aria-hidden="true">+</span></summary>
-            <p>Sichtbarkeit im Netz: SEO für Suchmaschinen und GEO für KI-Antworten, damit Ihr Angebot gefunden und verstanden wird. <a href="visibility.html">Zu Visibility →</a></p>
-          </details>
-        </div>
-      </div>
-    </section>
 
-    <section id="geld-daten" class="sv-section">
-      <div class="sv-wrap sv-faq-layout">
-        <div class="sv-copy">
-          <p class="sv-kicker">04 — GELD UND DATEN</p>
-          <h2 class="sv-title">Die zwei Fragen, die alle stellen.</h2>
-        </div>
-        <div class="sv-faq-list">
-          <details class="sv-faq-item">
-            <summary><span>Was kostet eine Automation?</span><span aria-hidden="true">+</span></summary>
-            <p>Eine Automation beginnt bei CHF 600. Den Fixpreis nennen wir nach der Erstanalyse — Sie wissen vor der Umsetzung, woran Sie sind. Rechnet sich eine Automation nicht, sagen wir das.</p>
-          </details>
-          <details class="sv-faq-item">
-            <summary><span>Was passiert mit unseren Daten?</span><span aria-hidden="true">+</span></summary>
-            <p>Wir arbeiten nach dem revDSG. Vor der Umsetzung klären wir mit Ihnen, welche Daten ein Werkzeug überhaupt sehen darf, und halten Kundendaten dort heraus, wo sie nicht hingehören.</p>
-          </details>
-          <details class="sv-faq-item">
-            <summary><span>Kostet die Academy etwas?</span><span aria-hidden="true">+</span></summary>
-            <p>Nein. Alle Lernpfade und Lektionen sind offen — ohne Konto, ohne Anmeldung, ohne versteckte Kosten. Lizenzen fremder KI-Werkzeuge sind davon nicht betroffen; wo eine nötig wird, sagen wir es vorher.</p>
-          </details>
-        </div>
-      </div>
-    </section>
 
     <section id="kontakt" class="sv-final">
       <div class="sv-wrap sv-center">
-        <p class="sv-kicker sv-kicker--on-terra">05 — NÄCHSTER SCHRITT</p>
+        <p class="sv-kicker sv-kicker--on-terra">03 — NÄCHSTER SCHRITT</p>
         <h2 class="sv-title sv-title--on-terra">Ihre Frage steht nicht dabei?</h2>
         <p class="sv-lead sv-lead--on-terra">
           Schreiben Sie uns. Wir antworten selbst — nicht aus einem Chatfenster, sondern als die zwei Menschen, die hier arbeiten.
@@ -179,7 +309,7 @@
       <a class="sv-footer__logo" href="#top" aria-label="Zurück nach oben">
         <img src="assets/logo-lockup-white.png" alt="vaiacon">
       </a>
-      <p>vaiacon GmbH · Lehenstrasse 74, 8037 Zürich · <a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a> · <a href="datenschutz.html">Datenschutz und Impressum</a></p>
+      <p class="sv-footer__adresse"><span>vaiacon GmbH</span><span>Lehenstrasse 74, 8037 Zürich</span><span><a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a> · <a href="datenschutz.html">Datenschutz und Impressum</a></span></p>
       <a class="sv-footer__top" href="#top">↑ Nach oben</a>
       <div class="sv-footer__social">
         <a href="https://www.facebook.com/vaiacon" target="_blank" rel="noopener" aria-label="vaiacon auf Facebook" title="Facebook">
@@ -196,6 +326,6 @@
   </footer>
 </div>
 <script src="ui_kits/website/visibility.js?v=20260828-main-header"></script>
-<script src="ui_kits/website/chat.js?v=20260911-mitlaufend"></script>
+<script src="ui_kits/website/chat.js?v=20260911-hub"></script>
 </body>
 </html>

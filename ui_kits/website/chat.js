@@ -64,7 +64,14 @@
      Wir setzen nur die Zahl; ob sie benutzt wird, entscheidet chat.css. So
      bleibt das Verhalten am Bildschirm unberührt, ohne Fallunterscheidung
      hier drin. Gerechnet wird, wie weit die Fusszeile ins Bild ragt. */
-  var HOECHSTER_HUB = 170;   // mehr würde den Knopf in den Inhalt schieben
+  /* Der Deckel war einmal fest bei 170px. Seit die Fusszeile auf dem Handy
+     drei Zeilen und die Netzwerk-Zeichen trägt, ist sie rund 266px hoch — der
+     Knopf wäre darin stehen geblieben. Darum bemisst sich der Deckel jetzt an
+     der Fensterhöhe: genug, um jede Fusszeile freizugeben, und nie so viel,
+     dass der Knopf mitten im Text landet. */
+  function hoechsterHub() {
+    return Math.round(window.innerHeight * 0.45);
+  }
   var fusszeile = null;
   var angefordert = false;
 
@@ -88,7 +95,7 @@
     }
     var kasten = fuss.getBoundingClientRect();
     var sichtbar = window.innerHeight - kasten.top;
-    var hub = Math.max(0, Math.min(sichtbar, kasten.height, HOECHSTER_HUB));
+    var hub = Math.max(0, Math.min(sichtbar, kasten.height, hoechsterHub()));
     wurzel.style.setProperty('--vc-hub', Math.round(hub) + 'px');
   }
 
@@ -101,6 +108,24 @@
   window.addEventListener('scroll', hubAnfordern, { passive: true });
   window.addEventListener('resize', hubAnfordern);
   hubBerechnen();
+
+  /* ── Vaia von aussen öffnen ──────────────────────────────────────────────
+     Jedes Element mit data-vaia öffnet den Chat. Steht dort ein Text, wird er
+     als Frage vorgelegt. Absichtlich als Delegation am Dokument: So wirkt es
+     auch auf Elemente, die erst später entstehen — in der Academy baut sich
+     die Seite im Browser auf.
+     Die Knöpfe bleiben Verweise auf hallo@vaiacon.ch. Wer kein JavaScript hat,
+     landet damit bei der Mail statt bei einem toten Knopf. */
+  document.addEventListener('click', function (ev) {
+    var ziel = ev.target;
+    var ausloeser = ziel && ziel.closest ? ziel.closest('[data-vaia]') : null;
+    if (!ausloeser) return;
+    ev.preventDefault();
+    umschalten(true);
+    var vorgabe = ausloeser.getAttribute('data-vaia');
+    if (vorgabe) feld.value = vorgabe;
+    feld.focus();
+  });
 
   knopf.addEventListener('click', function () {
     umschalten(wurzel.getAttribute('data-open') !== 'true');

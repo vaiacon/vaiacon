@@ -785,3 +785,130 @@ body {
   gap: var(--space-2);
   line-height: 1.6;
 }
+
+/* ── Freigestellter Büro-Bot ─────────────────────────────────────────────
+   Die übrigen Hero-Bilder bringen einen eigenen terracottafarbenen Grund mit;
+   bei ihnen weicht die Kante-weich-Maske den Übergang auf. Ein freigestelltes
+   Bild hat keinen Grund — dieselbe Maske würde ihm Kopf und Füsse abschneiden.
+   Darum hier keine Maske, sondern ein weicher Peach-Schein dahinter und ein
+   warmer Bodenschatten darunter: So sitzt er in der Fläche, statt auf ihr zu
+   kleben. Schatten warm-braun, nie grau — so steht es in den Design-Regeln. */
+.sv-hero__robot--frei {
+  width: min(60vw, 16rem);
+  overflow: visible;
+  border-radius: 0;
+}
+
+.sv-hero__robot--frei::before {
+  content: "";
+  position: absolute;
+  inset: -14% -26% -4%;
+  z-index: -1;
+  border-radius: 999px;
+  background: radial-gradient(60% 50% at 50% 52%, rgba(244, 158, 96, 0.5), transparent 72%);
+}
+
+.sv-hero__robot--frei::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: 12%;
+  right: 12%;
+  bottom: 1%;
+  height: 5%;
+  border-radius: 999px;
+  background: rgba(62, 22, 6, 0.5);
+  filter: blur(9px);
+}
+
+.sv-hero__robot--frei img {
+  -webkit-mask-image: none;
+  mask-image: none;
+  filter: drop-shadow(0 16px 22px rgba(62, 22, 6, 0.4));
+}
+
+/* ── FAQ nach Bereichen ──────────────────────────────────────────────────
+   Die Fragen aller Seiten an einem Ort. Jede Gruppe trägt den Namen ihres
+   Bereichs und einen Verweis dorthin — sonst weiss niemand, woher eine
+   Frage stammt. Die Sprungleiste oben führt direkt zur Gruppe. */
+.sv-faq-sprung {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+  margin: var(--space-9) 0 var(--space-4);
+}
+
+.sv-faq-sprung a {
+  padding: 9px 18px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  color: var(--text-strong);
+  font-size: var(--text-ui);
+  font-weight: var(--weight-semibold);
+  text-decoration: none;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.sv-faq-sprung a:hover {
+  background: var(--sand-200);
+  border-color: var(--border-ink);
+}
+
+.sv-faq-gruppe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-5);
+  width: min(100%, 48rem);
+  margin: 0 auto;
+  padding-top: var(--space-11);
+  /* Kein eigenes scroll-margin: html trägt bereits ein scroll-padding-top
+     (88px am Bildschirm, 72px auf dem Handy). Beides zusammen hätte beim
+     Sprung eine Lücke von über 170px über der Überschrift gelassen. */
+}
+
+.sv-faq-gruppe + .sv-faq-gruppe {
+  border-top: 1px solid var(--border-soft);
+}
+
+.sv-faq-gruppe h3 {
+  margin: 0;
+  font-size: var(--text-h3);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-tight);
+  color: var(--terra-500);
+}
+
+.sv-faq-gruppe__mehr {
+  color: var(--link);
+  font-size: var(--text-ui);
+  font-weight: var(--weight-bold);
+  text-decoration: none;
+}
+
+.sv-faq-gruppe__mehr:hover { color: var(--link-hover); }
+
+/* ── Adresszeile der Fusszeile ───────────────────────────────────────────
+   Am Bildschirm eine Zeile mit Mittepunkten, auf dem Handy drei Zeilen:
+   Firma · Adresse · Mail und Datenschutz. Die Trenner stecken in ::before
+   und verschwinden beim Umbruch von selbst — so steht kein Punkt am
+   Zeilenende. */
+.sv-footer__adresse {
+  margin: 0;
+}
+
+.sv-footer__adresse > span + span::before {
+  content: " · ";
+}
+
+@media (max-width: 700px) {
+  .sv-footer__adresse > span {
+    display: block;
+    line-height: 1.7;
+  }
+
+  .sv-footer__adresse > span + span::before {
+    content: none;
+  }
+}

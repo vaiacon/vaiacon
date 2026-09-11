@@ -26,7 +26,7 @@
   <link rel="stylesheet" href="../tokens/base.css">
   <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="mobile.css?v=20260910-fusszeile">
-  <script src="../_ds_bundle.js?v=20260910-netze"></script>
+  <script src="../_ds_bundle.js?v=20260911-fusszeile"></script>
   <script src="./academy-daten.js?v=20260910-strich"></script>
   <script src="./image-slot.js"></script>
   <style>
@@ -37,9 +37,9 @@
     ::selection { background: rgba(178, 82, 34, 0.22); }
   </style>
   <link rel="stylesheet" href="../ui_kits/website/chat.css?v=20260911-mitlaufend">
-  <script src="../ui_kits/website/chat.js?v=20260911-mitlaufend" defer></script>
+  <script src="../ui_kits/website/chat.js?v=20260911-hub" defer></script>
   <link rel="stylesheet" href="../ui_kits/website/mockup-entwurf.css?v=20260911-menue-voll">
-  <link rel="stylesheet" href="../ui_kits/website/visibility.css?v=20260911-hero">
+  <link rel="stylesheet" href="../ui_kits/website/visibility.css?v=20260911-mobil">
   <script src="../ui_kits/website/visibility.js?v=20260909-vaia3" defer></script>
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
@@ -233,25 +233,6 @@
     </div>
   </section>
 
-  <!-- ═══ 04 · FAQ ═══ -->
-  <section id="faq" style="background:var(--cream-100); padding:96px 32px">
-    <div data-m="split" style="max-width:1160px; margin:0 auto; display:grid; grid-template-columns:minmax(0,0.75fr) minmax(0,1.25fr); gap:56px; align-items:start">
-      <div style="display:flex; flex-direction:column; gap:20px">
-        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Kicker" number="04" hint-size="auto,20px">KURZ GEFRAGT</x-import>
-        <h2 style="margin:0; font-size:var(--text-h2); font-weight:600; letter-spacing:-0.03em; line-height:1.06; text-wrap:pretty">Kurz gefragt. Klar beantwortet.</h2>
-        <p style="margin:0; font-size:16.5px; line-height:1.7; color:var(--text-body); max-width:40ch">Etwas Offenes? Schreiben Sie an <a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a> — wir antworten selbst.</p>
-      </div>
-      <div style="display:flex; flex-direction:column">
-        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Brauche ich Vorkenntnisse?" default-open="{{ true }}" hint-size="100%,110px">Nein. Lernplan 01 setzt bei null an: Sie brauchen einen Computer, Ihre eigenen Unterlagen und eine halbe Stunde Ruhe. Alles andere erklären wir unterwegs.</x-import>
-        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Wie viel Zeit muss ich einrechnen?" hint-size="100%,76px">Eine Lektion dauert 3 bis 8 Minuten. Ein ganzer Lernplan ist in einer knappen Dreiviertelstunde durch — auch in mehreren Etappen.</x-import>
-        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Was passiert mit unseren Daten?" hint-size="100%,76px">Sie arbeiten in Ihrer eigenen Umgebung — wir sehen Ihre Unterlagen nicht. Was nie in ein KI-Werkzeug gehört, ist eine eigene, immer frei zugängliche Lektion.</x-import>
-        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Welche Werkzeuge brauche ich — und was kosten die?" hint-size="100%,76px">Für den Einstieg genügt ein gängiger KI-Assistent, oft in der Gratis-Version. Wo eine Lizenz nötig wird, sagen wir es vorher und nennen die Alternative.</x-import>
-        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Können mehrere Mitarbeitende mitlernen?" hint-size="100%,76px">Ja, über den Team-Zugang. Dort sehen Sie auch, wer wo steht — ohne Notensystem, aber mit Überblick.</x-import>
-        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Was, wenn ich stecken bleibe?" hint-size="100%,76px">Jede Lektion hat eine Frage-Ecke, und Vaia hilft bei den häufigen Stolpersteinen. Wer Begleitung im Betrieb möchte, meldet sich bei uns.</x-import>
-        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.FaqItem" question="Gibt es eine Bestätigung am Ende?" last="{{ true }}" hint-size="100%,76px">Pro Lernplan erhalten Sie eine Teilnahmebestätigung. Uns ist das Resultat im Betrieb wichtiger — aber für die Personalakte reicht es.</x-import>
-      </div>
-    </div>
-  </section>
 
   <!-- ═══ FINALE ═══ -->
   <section id="kontakt" style="position:relative; overflow:hidden; background:var(--grad-terra-finale); padding:104px 32px 110px">

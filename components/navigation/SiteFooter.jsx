@@ -80,8 +80,18 @@ export function SiteFooter({
         <a href="#top" onClick={onTop} style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
           <img src={logoSrc} alt="vaiacon" style={{ height: `${logoHeight}px`, width: 'auto', display: 'block', opacity: 0.95 }} />
         </a>
-        <p style={{ margin: 0, fontSize: '14px', lineHeight: 1.6, color: 'rgba(255, 255, 255, 0.6)' }}>
-          {address} · <a href={`mailto:${email}`} style={{ color: '#FFFFFF', fontWeight: 500, textDecoration: 'none' }}>{email}</a>
+        {/* Dieselbe Gliederung wie auf den statischen Seiten: Am Bildschirm eine
+            Zeile, auf dem Handy drei — Firma, Adresse, Mail und Datenschutz.
+            Das Umbrechen erledigt .sv-footer__adresse in visibility.css, die
+            auch hier geladen wird. */}
+        <p className="sv-footer__adresse" style={{ margin: 0, fontSize: '14px', lineHeight: 1.6, color: 'rgba(255, 255, 255, 0.6)' }}>
+          {address.split(' · ').map((teil, i) => <span key={i}>{teil}</span>)}
+          <span>
+            <a href={`mailto:${email}`} style={{ color: '#FFFFFF', fontWeight: 500, textDecoration: 'none' }}>{email}</a>
+            {legalHref ? (
+              <> · <a href={legalHref} style={{ color: 'rgba(255, 255, 255, 0.75)', textDecoration: 'none' }}>{legalLabel}</a></>
+            ) : null}
+          </span>
         </p>
         {netze.length ? (
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
@@ -93,9 +103,6 @@ export function SiteFooter({
           fontFamily: 'var(--font-sans)', fontSize: '13.5px', fontWeight: 600, color: 'rgba(255, 255, 255, 0.5)',
         }}>
           <span>{copyright}</span>
-          {legalHref ? (
-            <a href={legalHref} style={{ color: 'rgba(255, 255, 255, 0.65)', textDecoration: 'none' }}>{legalLabel}</a>
-          ) : null}
           <a
             href="#top"
             onClick={onTop}
