@@ -1,4 +1,4 @@
-Pill-Button der Marke; Beschriftung lowercase, Pfeil als Text-Glyph — für jede Handlungsaufforderung.
+Pill-Button der Marke; Beschriftung beginnt gross, Pfeil als Text-Glyph — für jede Handlungsaufforderung.
 
 ```jsx
 <Button arrow>erstgespräch</Button>

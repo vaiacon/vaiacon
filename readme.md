@@ -33,7 +33,9 @@ Kein Figma, kein weiteres Repo. Es wurden keine Font-Binaries geliefert; Quicksa
 **Casing-System (wichtig, sehr charakteristisch):**
 - Headlines: normaler Satz-Case mit Schlusspunkt.
 - Kicker/Eyebrows: UPPERCASE mit Nummerierung und Gedankenstrich — «01 — WOFÜR WIR STEHEN», «03 — EIN KONKRETER HEBEL».
-- Nav-Links und CTAs: **lowercase** («leistungen», «erstgespräch →», «termin direkt buchen ↗»).
+- Nav-Links und CTAs: **beginnen gross** («Visibility», «Erstgespräch vereinbaren →»,
+  «Auswertung anfordern»). Bis 11.09.2026 galt hier Kleinschreibung; die Website hatte
+  das nirgends mehr so, die Regel folgt jetzt dem Stand.
 - Badges/Overlines: UPPERCASE mit weiter Laufweite («KOSTENLOS & UNVERBINDLICH», «BUCHHALTUNG · ADMINISTRATION · KI-SUPPORT»).
 
 **Interpunktion & Zeichen.** Guillemets «…» für Zitate und Produktnamen-Betonung (nie "…"). Mittepunkt · als Trenner. Pfeile als Text-Glyphen: → (weiter/senden), ↗ (extern), ↑ (nach oben), ✓ (Checks), + (FAQ auf/zu). Kein Emoji.
@@ -43,7 +45,7 @@ Kein Figma, kein weiteres Repo. Es wurden keine Font-Binaries geliefert; Quicksa
 **Wiederkehrende Begriffe.** «Transformationspartner», «Orientierung», «Hebel», «Roadmap», «Begleitung», «entlasten», «im Alltag», «auf Augenhöhe», «digitaler Mitarbeiter» (= Büro-Bot). Der Kompass: vier «Ist es richtig für …?»-Fragen, Abschluss «4 × Ja — dann sind wir auf Kurs.»
 
 **Beispiele in Markenstimme.**
-- CTA: «erstgespräch →» / «termin direkt buchen ↗» / «oder per e-mail →»
+- CTA: «Erstgespräch vereinbaren →» / «Auswertung anfordern» / «Nachricht senden →»
 - Chat: «Grüezi! Haben Sie Fragen? Chatten Sie direkt mit mir →»
 - Vertrauen: «Transparent & zweckgebunden · Sparsam — nur was nötig ist · Geschützt nach geltendem Schweizer Datenschutzgesetz»
 - Bildunterschrift (verspielt): «Büro-Bot — immer am Apparat»

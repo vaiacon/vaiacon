@@ -19,7 +19,7 @@ function NavLink({ href, active, onClick, children }) {
   );
 }
 
-/** Website-Header: vaiacon-Lockup, lowercase-Nav, oranger Pill-CTA. */
+/** Website-Header: vaiacon-Lockup, Nav, oranger Pill-CTA. */
 export function SiteHeader({
   logoSrc = 'assets/logo-lockup-terra.png',
   logoHeight = 56,

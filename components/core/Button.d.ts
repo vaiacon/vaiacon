@@ -1,5 +1,5 @@
 /**
- * Pill-Button der Marke. Beschriftung lowercase («erstgespräch»), Pfeil-Glyph als Suffix.
+ * Pill-Button der Marke. Beschriftung beginnt gross («Erstgespräch vereinbaren»), Pfeil-Glyph als Suffix.
  */
 export interface ButtonProps {
   /** cta = Orange #E2652C (Standard) · light = Creme auf Terra · glass = transluzent auf Terra/Dunkel · dark = Tinte, Hover Terra */

@@ -14,7 +14,7 @@ const BUTTON_SIZES = {
   lg: { fontSize: '18px', padding: '16px 32px' },
 };
 
-/** Pill-Button der Marke — Beschriftung lowercase, Pfeil-Glyph als Suffix. */
+/** Pill-Button der Marke — Beschriftung beginnt gross, Pfeil-Glyph als Suffix. */
 export function Button({ variant = 'cta', size = 'md', arrow, href, target, onClick, disabled, style, children }) {
   const [hover, setHover] = React.useState(false);
   const v = BUTTON_VARIANTS[variant] || BUTTON_VARIANTS.cta;

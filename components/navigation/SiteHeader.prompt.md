@@ -1,4 +1,4 @@
-Website-Header mit vaiacon-Lockup, lowercase-Nav und CTA-Pill.
+Website-Header mit vaiacon-Lockup, Nav und CTA-Pill.
 
 ```jsx
 <SiteHeader
@@ -12,4 +12,4 @@ Website-Header mit vaiacon-Lockup, lowercase-Nav und CTA-Pill.
 />
 ```
 
-Nav-Labels immer lowercase; aktiver Anker färbt sich Terracotta. Auf Terra/Dunkel `logo-lockup-white.png` verwenden.
+Nav-Labels beginnen gross; aktiver Anker färbt sich Terracotta. Auf Terra/Dunkel `logo-lockup-white.png` verwenden.
