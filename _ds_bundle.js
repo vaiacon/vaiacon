@@ -2456,19 +2456,19 @@ function SiteFooter({
       fontWeight: 500,
       textDecoration: 'none'
     }
-  }, email), legalHref ? /*#__PURE__*/React.createElement(React.Fragment, null, " \xB7 ", /*#__PURE__*/React.createElement("a", {
+  }, email)), legalHref || agbHref ? /*#__PURE__*/React.createElement("span", null, legalHref ? /*#__PURE__*/React.createElement("a", {
     href: legalHref,
     style: {
       color: 'rgba(255, 255, 255, 0.75)',
       textDecoration: 'none'
     }
-  }, legalLabel)) : null, agbHref ? /*#__PURE__*/React.createElement(React.Fragment, null, " \xB7 ", /*#__PURE__*/React.createElement("a", {
+  }, legalLabel) : null, legalHref && agbHref ? " \xB7 " : null, agbHref ? /*#__PURE__*/React.createElement("a", {
     href: agbHref,
     style: {
       color: 'rgba(255, 255, 255, 0.75)',
       textDecoration: 'none'
     }
-  }, agbLabel)) : null)), netze.length ? /*#__PURE__*/React.createElement("div", {
+  }, agbLabel) : null) : null), netze.length ? /*#__PURE__*/React.createElement("div", {
     style: {
       display: 'flex',
       alignItems: 'center',

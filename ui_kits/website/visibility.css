@@ -655,10 +655,19 @@ button.sv-button[disabled] {
     padding-right: var(--space-5);
   }
 
+  /* Auf dem Handy richtet sich der Hero nach seinem Inhalt. Die feste Höhe
+     von 740px ist für den Bildschirm gedacht, wo alle Hero-Bereiche gleich
+     hoch sein sollen. Auf einer Seite wie den AGB, deren Hero nur Titel und
+     zwei Zeilen trägt, entstünden daraus rund 280px Leere — die Hälfte davon
+     zwischen Kopfzeile und Titel. */
+  .sv-hero {
+    min-height: auto;
+  }
+
   .sv-hero__inner {
-    padding-top: calc(var(--section-pad-y) + var(--space-9));
-    padding-bottom: var(--space-6);
-    gap: var(--space-7);
+    padding-top: calc(var(--section-pad-y) + var(--space-4));
+    padding-bottom: var(--space-9);
+    gap: var(--space-6);
   }
 
   .sv-hero h1 {
@@ -1057,4 +1066,25 @@ button.sv-button[disabled] {
   -webkit-hyphens: auto;
   hyphens: auto;
   overflow-wrap: break-word;
+}
+
+/* ── Lange Wörter in Hero-Überschriften ──────────────────────────────────
+   «Geschäftsbedingungen» braucht bei 32px rund 371px; auf einem 375px-Gerät
+   stehen 335px zur Verfügung. Der Abschnitt schneidet seitlichen Überlauf ab,
+   das Wort wäre also halb verschwunden. Silbentrennung greift dank
+   lang="de-CH" und ist die saubere Lösung — deutsche Leser erwarten sie. */
+.sv-hero h1,
+.sv-title {
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
+/* Für Seiten, deren Titel aus einem einzigen langen Wort besteht: eine Stufe
+   kleiner, damit es auch ohne Trennung nicht knapp wird. Nur auf dem Handy —
+   am Bildschirm ist Platz genug. */
+@media (max-width: 700px) {
+  .sv-hero h1.sv-hero__titel--lang {
+    font-size: clamp(25px, 6.6vw, 34px);
+  }
 }

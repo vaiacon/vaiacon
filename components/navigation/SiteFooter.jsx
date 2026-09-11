@@ -90,13 +90,18 @@ export function SiteFooter({
           {address.split(' · ').map((teil, i) => <span key={i}>{teil}</span>)}
           <span>
             <a href={`mailto:${email}`} style={{ color: '#FFFFFF', fontWeight: 500, textDecoration: 'none' }}>{email}</a>
-            {legalHref ? (
-              <> · <a href={legalHref} style={{ color: 'rgba(255, 255, 255, 0.75)', textDecoration: 'none' }}>{legalLabel}</a></>
-            ) : null}
-            {agbHref ? (
-              <> · <a href={agbHref} style={{ color: 'rgba(255, 255, 255, 0.75)', textDecoration: 'none' }}>{agbLabel}</a></>
-            ) : null}
           </span>
+          {legalHref || agbHref ? (
+            <span>
+              {legalHref ? (
+                <a href={legalHref} style={{ color: 'rgba(255, 255, 255, 0.75)', textDecoration: 'none' }}>{legalLabel}</a>
+              ) : null}
+              {legalHref && agbHref ? ' · ' : null}
+              {agbHref ? (
+                <a href={agbHref} style={{ color: 'rgba(255, 255, 255, 0.75)', textDecoration: 'none' }}>{agbLabel}</a>
+              ) : null}
+            </span>
+          ) : null}
         </p>
         {netze.length ? (
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
