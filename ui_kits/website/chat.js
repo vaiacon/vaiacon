@@ -20,7 +20,13 @@
         '<div><strong>Vaia</strong><span>Antwortet meist sofort</span></div>' +
         '<button class="vc-chat__close" type="button" aria-label="Chat schliessen">×</button>' +
       '</div>' +
-      '<p class="vc-chat__hinweis">Vaia ist ein KI-Assistent. Eingaben gehen zur Beantwortung an einen KI-Dienst (Anthropic, USA). Bitte keine Personendaten eingeben. <a href="/datenschutz.html">Datenschutz</a></p>' +
+      /* Zugeklappt steht nur die Zeile «Datenschutzerklärung» da — der Text
+         erscheint erst auf Klick. Wer den Chat öffnet, will schreiben, nicht
+         lesen; wer es wissen will, findet es trotzdem. */
+      '<details class="vc-chat__hinweis">' +
+        '<summary>Datenschutzerklärung</summary>' +
+        '<p>Vaia ist ein KI-Assistent. Eingaben gehen zur Beantwortung an einen KI-Dienst (Anthropic, USA). Bitte keine Personendaten eingeben. <a href="/datenschutz.html">Ganze Erklärung →</a></p>' +
+      '</details>' +
       '<div class="vc-chat__log" aria-live="polite"></div>' +
       '<form class="vc-chat__form">' +
         '<input type="text" placeholder="Ihre Frage …" aria-label="Ihre Frage" autocomplete="off">' +
