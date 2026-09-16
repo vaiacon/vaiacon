@@ -1,5 +1,5 @@
 const { Button: EaButton, Kicker: EaKicker, CheckPill: EaCheckPill, SiteFooter: EaSiteFooter } = window.vaiaconDesignSystem_5f353f;
-const { WORKER_URL, FORMSPREE_URL, PROD_HOSTS, SECTIONS, ALL_FIELDS, fmtCHF, fmtHours, fallbackAssessment, progressOf, blockComplete } = window.ErstanalyseData;
+const { WORKER_URL, ANFRAGE_URL, PROD_HOSTS, SECTIONS, ALL_FIELDS, fmtCHF, fmtHours, fallbackAssessment, progressOf, blockComplete } = window.ErstanalyseData;
 
 const DRAFT_KEY = 'vaiacon-erstanalyse-draft';
 const REQUIRED = ALL_FIELDS.filter((f) => f.required).map((f) => f.name);
@@ -52,22 +52,37 @@ function assessmentSummary(a) {
     + ' | Vorbehalt: ' + (a.vorbehalt || '–');
 }
 
-async function sendFormspree(answers, assessment, gotcha) {
-  if (!FORMSPREE_URL || !PROD_HOSTS.includes(location.hostname)) {
+async function sendAnfrage(answers, assessment, gotcha) {
+  if (!ANFRAGE_URL || !PROD_HOSTS.includes(location.hostname)) {
     console.info('Erstanalyse: Preview-Umgebung erkannt — Mail-Versand übersprungen.');
     return;
   }
-  const fd = new FormData();
+  // Geht an /api/kontakt auf unserem Server (Dienst vaiacon-kontakt), der
+  // daraus eine Mail an hallo@vaiacon.ch macht, Reply-To = Adresse des
+  // Betriebs. Dieselbe Schnittstelle wie das Kontaktformular: name, mail,
+  // firma, telefon, nachricht, fangfrage. Die Antworten stehen zeilenweise
+  // «Label: Wert» in der Nachricht.
+  const zeilen = [];
   ALL_FIELDS.forEach((f) => {
     const v = answers[f.name];
-    fd.append(f.name, Array.isArray(v) ? v.join(', ') : (v || '').trim());
+    const text = Array.isArray(v) ? v.join(', ') : (v || '').trim();
+    if (text) zeilen.push(f.name + ': ' + text);
   });
-  fd.append('_gotcha', gotcha || '');
-  fd.append('_subject', 'vaiacon Erstanalyse: ' + (answers['Firma und Name'] || '').trim());
-  const replyMail = (answers['E-Mail'] || '').trim();
-  if (replyMail) fd.append('_replyto', replyMail);
-  fd.append('Ersteinschätzung Sparpotenzial (auto)', assessmentSummary(assessment));
-  await fetch(FORMSPREE_URL, { method: 'POST', headers: { Accept: 'application/json' }, body: fd });
+  zeilen.push('Ersteinschätzung Sparpotenzial (auto): ' + assessmentSummary(assessment));
+  const firmaUndName = (answers['Firma und Name'] || '').trim();
+  const r = await fetch(ANFRAGE_URL, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      name: firmaUndName,
+      mail: (answers['E-Mail'] || '').trim(),
+      firma: 'Erstanalyse: ' + firmaUndName,
+      telefon: (answers['Telefon'] || '').trim(),
+      nachricht: zeilen.join('\n').slice(0, 5000),
+      fangfrage: gotcha || '',
+    }),
+  });
+  if (!r.ok) throw new Error('kontakt http ' + r.status);
 }
 
 function vornameOf(firmaUndName) {
@@ -140,13 +155,17 @@ function EaProgress({ answers }) {
 }
 
 /* ---- Erfolgs-Screen ---- */
-function EaSuccess({ answers, result }) {
+function EaSuccess({ answers, result, zugestellt }) {
   const vorname = vornameOf(answers['Firma und Name']);
   return (
     <div className="ea-success" data-screen-label="Erstanalyse — Erfolg">
       <EaKicker>Kostenlos &amp; unverbindlich</EaKicker>
       <h1 className="ea-h1">{vorname ? 'Herzlichen Dank, ' + vorname + '!' : 'Herzlichen Dank!'}</h1>
-      <p className="ea-lead">Ihre Angaben sind bei uns angekommen. Wir schauen sie persönlich an und melden uns bei Ihnen — ohne Fachchinesisch und ohne Verkaufsdruck.</p>
+      {zugestellt ? (
+        <p className="ea-lead">Ihre Angaben sind bei uns angekommen. Wir schauen sie persönlich an und melden uns bei Ihnen — ohne Fachchinesisch und ohne Verkaufsdruck.</p>
+      ) : (
+        <p className="ea-lead">Ihre Ersteinschätzung steht unten. Die Übermittlung an uns hat leider nicht geklappt — schreiben Sie uns bitte kurz an <a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a>, dann melden wir uns persönlich bei Ihnen.</p>
+      )}
       <div className="ea-result">
         <EaKicker>Ihre Ersteinschätzung</EaKicker>
         <p className="ea-result-big">ca. {fmtHours(result.stunden_pro_woche_min)}–{fmtHours(result.stunden_pro_woche_max)} Std. pro Woche</p>
@@ -180,6 +199,7 @@ function ErstanalyseApp() {
   const [busy, setBusy] = React.useState(false);
   const [result, setResult] = React.useState(null);
   const [gotcha, setGotcha] = React.useState('');
+  const [zugestellt, setZugestellt] = React.useState(true);
 
   React.useEffect(() => {
     try { localStorage.setItem(DRAFT_KEY, JSON.stringify(answers)); } catch {}
@@ -204,7 +224,9 @@ function ErstanalyseApp() {
     setBusy(true);
     let assessment;
     try { assessment = await fetchAssessment(answers); } catch { assessment = fallbackAssessment(answers); }
-    try { await sendFormspree(answers, assessment, gotcha); } catch {}
+    let angekommen = true;
+    try { await sendAnfrage(answers, assessment, gotcha); } catch { angekommen = false; }
+    setZugestellt(angekommen);
     try { localStorage.removeItem(DRAFT_KEY); } catch {}
     setResult(assessment);
     setBusy(false);
@@ -230,7 +252,7 @@ function ErstanalyseApp() {
 
       <main className="ea-wrap">
         {result ? (
-          <EaSuccess answers={answers} result={result} />
+          <EaSuccess answers={answers} result={result} zugestellt={zugestellt} />
         ) : (
           <React.Fragment>
             <div className="ea-intro">

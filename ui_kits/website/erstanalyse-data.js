@@ -2,9 +2,10 @@
    Feldnamen sind EXAKT die Mail-Labels (identisch mit buero-bot.ch/erstanalyse).
    Gliederung: 8 Blöcke gemäss Konzept — Feldnamen unverändert, nur neu gruppiert. */
 window.ErstanalyseData = (function () {
-  // External collection stays disabled until vaiacon has its own endpoints.
-  const WORKER_URL = '';
-  const FORMSPREE_URL = '';
+  // Beide Dienste laufen auf unserem eigenen Server (vaiacon.ch, Caddy → Container):
+  // WORKER_URL = KI-Schätzung des Sparpotenzials, ANFRAGE_URL = Mail an hallo@vaiacon.ch.
+  const WORKER_URL = 'https://vaiacon.ch/api/erstanalyse';
+  const ANFRAGE_URL = '/api/kontakt';
   const PROD_HOSTS = ['philip1658.github.io', 'vaiacon.ch', 'www.vaiacon.ch', 'buero-bot.ch', 'www.buero-bot.ch', 'localhost', '127.0.0.1'];
 
   const SECTIONS = [
@@ -137,5 +138,5 @@ window.ErstanalyseData = (function () {
     };
   }
 
-  return { WORKER_URL, FORMSPREE_URL, PROD_HOSTS, SECTIONS, ALL_FIELDS, fmtCHF, fmtHours, fallbackAssessment, progressOf, blockComplete };
+  return { WORKER_URL, ANFRAGE_URL, PROD_HOSTS, SECTIONS, ALL_FIELDS, fmtCHF, fmtHours, fallbackAssessment, progressOf, blockComplete };
 })();

@@ -3465,7 +3465,7 @@ try { (() => {
    Gliederung: 8 Blöcke gemäss Konzept — Feldnamen unverändert, nur neu gruppiert. */
 window.ErstanalyseData = function () {
   // External collection stays disabled until vaiacon has its own endpoints.
-  const WORKER_URL = '';
+  const WORKER_URL = 'https://vaiacon.ch/api/erstanalyse';
   const FORMSPREE_URL = '';
   const PROD_HOSTS = ['philip1658.github.io', 'vaiacon.ch', 'www.vaiacon.ch', 'buero-bot.ch', 'www.buero-bot.ch', 'localhost', '127.0.0.1'];
   const SECTIONS = [{

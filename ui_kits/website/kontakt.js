@@ -6,16 +6,16 @@
    sendet, und es ist kein Dienst eines Dritten beteiligt. Am 11.09.2026 von
    Andre so entschieden: «Vorerst genuegt der Weg uebers Mailprogramm.»
 
-   ZIEL ist der Schalter fuer spaeter. Steht dort eine Adresse — gedacht ist
-   /api/kontakt auf unserem Schweizer Server, im Repo vaiacon-bot neben
-   /api/chat —, schickt das Formular dorthin und faellt nur bei einem Fehler
-   aufs Mailprogramm zurueck. Leer heisst: direkt ins Mailprogramm, ohne
-   Umweg und ohne Wartezeit.
+   Seit 16.09.2026 steht in ZIEL /api/kontakt: unser eigener Schweizer Server
+   (Dienst vaiacon-kontakt, /srv/kontakt) macht aus der Anfrage eine Mail an
+   hallo@vaiacon.ch, Antworten geht direkt an den Besucher. Nur wenn der
+   Dienst nicht antwortet, faellt das Formular aufs Mailprogramm zurueck.
+   ZIEL leer heisst: direkt ins Mailprogramm, ohne Umweg.
 
    Ein Formulardienst eines Dritten kommt bewusst nicht in Frage — das waere
    eine Bekanntgabe, die niemand entschieden hat. */
 (function () {
-  var ZIEL = '';                       // leer = direkt ins Mailprogramm
+  var ZIEL = '/api/kontakt';           // unser Server (Dienst vaiacon-kontakt); leer = direkt ins Mailprogramm
   var MAIL = 'hallo@vaiacon.ch';
 
   var formular = document.querySelector('.vc-kontakt');
@@ -61,6 +61,7 @@
       mail: wert('mail'),
       telefon: wert('telefon'),
       nachricht: wert('nachricht'),
+      fangfrage: wert('fangfrage'),   // Honigtopf, bleibt bei Menschen leer
     };
     if (!d.name || !d.mail || !d.nachricht) {
       sagen('Bitte Name, E-Mail und Nachricht ausfüllen.', 'fehler');
