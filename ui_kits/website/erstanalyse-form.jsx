@@ -57,23 +57,29 @@ async function sendAnfrage(answers, assessment, gotcha) {
     console.info('Erstanalyse: Preview-Umgebung erkannt — Mail-Versand übersprungen.');
     return;
   }
-  // Geht an /api/kontakt auf unserem Server, der daraus eine Mail an
-  // hallo@vaiacon.ch macht (Reply-To = Adresse des Betriebs). Feldnamen
-  // bleiben die Mail-Labels, damit die Auswertung sie wiedererkennt.
-  const felder = {};
+  // Geht an /api/kontakt auf unserem Server (Dienst vaiacon-kontakt), der
+  // daraus eine Mail an hallo@vaiacon.ch macht, Reply-To = Adresse des
+  // Betriebs. Dieselbe Schnittstelle wie das Kontaktformular: name, mail,
+  // firma, telefon, nachricht, fangfrage. Die Antworten stehen zeilenweise
+  // «Label: Wert» in der Nachricht.
+  const zeilen = [];
   ALL_FIELDS.forEach((f) => {
     const v = answers[f.name];
-    felder[f.name] = Array.isArray(v) ? v.join(', ') : (v || '').trim();
+    const text = Array.isArray(v) ? v.join(', ') : (v || '').trim();
+    if (text) zeilen.push(f.name + ': ' + text);
   });
-  felder['Ersteinschätzung Sparpotenzial (auto)'] = assessmentSummary(assessment);
+  zeilen.push('Ersteinschätzung Sparpotenzial (auto): ' + assessmentSummary(assessment));
+  const firmaUndName = (answers['Firma und Name'] || '').trim();
   const r = await fetch(ANFRAGE_URL, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
-      betreff: 'vaiacon Erstanalyse: ' + (answers['Firma und Name'] || '').trim(),
-      antwort_an: (answers['E-Mail'] || '').trim(),
-      felder,
-      falle: gotcha || '',
+      name: firmaUndName,
+      mail: (answers['E-Mail'] || '').trim(),
+      firma: 'Erstanalyse: ' + firmaUndName,
+      telefon: (answers['Telefon'] || '').trim(),
+      nachricht: zeilen.join('\n').slice(0, 5000),
+      fangfrage: gotcha || '',
     }),
   });
   if (!r.ok) throw new Error('kontakt http ' + r.status);

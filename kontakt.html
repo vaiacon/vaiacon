@@ -141,6 +141,10 @@
           <label>Ihre Nachricht *
             <textarea name="nachricht" required placeholder="Was beschäftigt Sie gerade?"></textarea>
           </label>
+          <!-- Honigtopf: bleibt bei Menschen leer, Spam-Programme füllen alles aus. -->
+          <label aria-hidden="true" style="position:absolute;left:-9999px;opacity:0;height:0;overflow:hidden">Fangfrage
+            <input type="text" name="fangfrage" tabindex="-1" autocomplete="off">
+          </label>
           <div class="vc-kontakt__fuss">
             <p class="vc-kontakt__hinweis">
               Ihre Nachricht geht direkt an uns — auf unseren eigenen Server in der Schweiz, ohne Dienst eines Dritten. Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu bearbeiten — mehr dazu in der <a href="datenschutz.html">Datenschutzerklärung</a>.
