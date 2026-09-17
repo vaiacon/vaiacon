@@ -138,5 +138,17 @@ window.ErstanalyseData = (function () {
     };
   }
 
-  return { WORKER_URL, ANFRAGE_URL, PROD_HOSTS, SECTIONS, ALL_FIELDS, fmtCHF, fmtHours, fallbackAssessment, progressOf, blockComplete };
+  /* ---- Zusatz für /api/kontakt ----
+     intern legt die Anfrage mit Quelle «erstanalyse» ab und speichert die
+     Antworten samt Einschätzung strukturiert (analyse_json). */
+  function anfrageZusatz(answers, assessment) {
+    const antworten = {};
+    ALL_FIELDS.forEach((f) => {
+      const v = answers[f.name];
+      if (Array.isArray(v) ? v.length : (v || '').trim()) antworten[f.name] = v;
+    });
+    return { quelle: 'erstanalyse', analyse: { antworten, einschaetzung: assessment || null } };
+  }
+
+  return { WORKER_URL, ANFRAGE_URL, anfrageZusatz, PROD_HOSTS, SECTIONS, ALL_FIELDS, fmtCHF, fmtHours, fallbackAssessment, progressOf, blockComplete };
 })();

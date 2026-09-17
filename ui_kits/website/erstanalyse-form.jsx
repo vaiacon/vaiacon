@@ -57,11 +57,13 @@ async function sendAnfrage(answers, assessment, gotcha) {
     console.info('Erstanalyse: Preview-Umgebung erkannt — Mail-Versand übersprungen.');
     return;
   }
-  // Geht an /api/kontakt auf unserem Server (Dienst vaiacon-kontakt), der
-  // daraus eine Mail an hallo@vaiacon.ch macht, Reply-To = Adresse des
-  // Betriebs. Dieselbe Schnittstelle wie das Kontaktformular: name, mail,
-  // firma, telefon, nachricht, fangfrage. Die Antworten stehen zeilenweise
-  // «Label: Wert» in der Nachricht.
+  // Geht an /api/kontakt auf unserem Server (intern.vaiacon.ch nimmt die
+  // Anfrage an, legt sie unter «Anfragen» ab und schickt eine Mail an
+  // hallo@vaiacon.ch, Reply-To = Adresse des Betriebs). Dieselbe Schnittstelle
+  // wie das Kontaktformular (name, mail, firma, telefon, nachricht, fangfrage),
+  // dazu quelle:"erstanalyse" und die Antworten samt KI-Einschätzung als
+  // «analyse» - so steht die Erstanalyse strukturiert in der Anfrage. Die
+  // Antworten stehen weiterhin zeilenweise «Label: Wert» in der Nachricht.
   const zeilen = [];
   ALL_FIELDS.forEach((f) => {
     const v = answers[f.name];
@@ -80,6 +82,7 @@ async function sendAnfrage(answers, assessment, gotcha) {
       telefon: (answers['Telefon'] || '').trim(),
       nachricht: zeilen.join('\n').slice(0, 5000),
       fangfrage: gotcha || '',
+      ...window.ErstanalyseData.anfrageZusatz(answers, assessment),
     }),
   });
   if (!r.ok) throw new Error('kontakt http ' + r.status);
