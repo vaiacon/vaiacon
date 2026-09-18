@@ -1134,3 +1134,16 @@ button.sv-button[disabled] {
     font-size: clamp(26px, 7.6vw, 32px);
   }
 }
+
+/* ── Knöpfe auf dem Handy eine Nummer kleiner ────────────────────────────
+   Am Bildschirm stehen die Knöpfe nebeneinander, dort ist die Höhe von 52px
+   richtig. Auf dem Handy stehen sie untereinander und über der ganzen
+   Breite — zwei davon nehmen dann einen guten Teil des ersten Bildschirms
+   ein. 44px bleiben bequem zu treffen (das ist das übliche Mindestmass für
+   eine Fingerfläche), die Schriftgrösse bleibt unverändert. */
+@media (max-width: 700px) {
+  .sv-button {
+    min-height: 44px;
+    padding: var(--space-3) var(--space-6);
+  }
+}
