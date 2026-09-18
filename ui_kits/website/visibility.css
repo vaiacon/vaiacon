@@ -1117,3 +1117,20 @@ button.sv-button[disabled] {
     margin-bottom: 4px;
   }
 }
+
+/* ── Titel «Über uns»: keine Worttrennung ────────────────────────────────
+   Auf schmalen Geräten trennte der Browser «moderne» zu «moder-ne». Die
+   Silbentrennung ist für Seiten wie die AGB da, deren Titel aus einem
+   einzigen langen Wort besteht; hier sind alle Wörter kurz genug, der Titel
+   bricht auch an den Wortgrenzen sauber. Unter 380px eine Spur kleiner,
+   damit «Unternehmerische» ganz auf eine Zeile passt. */
+.sv-hero h1.sv-hero__titel--ganz {
+  -webkit-hyphens: manual;
+  hyphens: manual;
+}
+
+@media (max-width: 380px) {
+  .sv-hero h1.sv-hero__titel--ganz {
+    font-size: clamp(26px, 7.6vw, 32px);
+  }
+}
