@@ -1088,3 +1088,32 @@ button.sv-button[disabled] {
     font-size: clamp(25px, 6.6vw, 34px);
   }
 }
+
+/* ── Gründerbilder auf «Über uns» ────────────────────────────────────────
+   Auf dem Handy bleibt alles, wie es war: das Bild in seiner natürlichen
+   Form, höchstens 220px breit, zentriert in der Karte. Am Bildschirm war
+   genau das zu klein — 220px in einer 568px breiten Karte, mit viel Luft
+   daneben. Dort füllt das Foto jetzt die Karte und steht in einem festen
+   Ausschnitt (3:2), damit beide Gründer gleich gross und gleich hoch im
+   Bild sind. Die Vorlagen sind 1508×1043, der Kopf jeweils mittig — der
+   Ausschnitt schneidet darum nur wenig unten weg. */
+.sv-team-foto {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  border-radius: 18px;
+  display: block;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 701px) {
+  .sv-team-foto {
+    max-width: none;
+    aspect-ratio: 3 / 2;
+    height: auto;
+    object-fit: cover;
+    object-position: 50% 25%;
+    border-radius: 16px;
+    margin-bottom: 4px;
+  }
+}
