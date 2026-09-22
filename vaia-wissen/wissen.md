@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 18.09.2026 · Eintrag b77102e Knoepfe auf dem Handy eine Nummer kleiner
+> Stand: 11.09.2026 · Eintrag 842ed88 Design-Regel nachgezogen: Menue und Knoepfe beginnen gross
 
 ## Wie du antwortest
 
@@ -181,12 +181,12 @@ Trainings, Coachings und Workshops bei Ihnen im Betrieb — an Ihren echten Aufg
 Zu Learning →
 04
 vaiaconBot
-Wenn die Standardlösung nicht reicht: ein klar abgegrenzter KI-Pilot für einen konkreten Ablauf. Ab CHF 12'000, mit schriftlichem Scope.
-Zu Projekten →
+Was sich jede Woche wiederholt, übernimmt der Bot: Belege, Offerten, Korrespondenz, Anfragen. Ab CHF 600 zum Fixpreis.
+Zu Bot →
 05
-vaiaconFlat
-Der standardisierte Einstieg für Studios: Branchenvorlage, Buchung, Google-Grundeinrichtung und eine Standardautomation. CHF 290 im Monat.
-Zur Flat →
+vaiaconService
+Betreuung für alles, was läuft: Pflege, Updates, Kontrolle und Weiterentwicklung. Ab CHF 90 im Monat, monatlich kündbar.
+Zu Service →
 06
 Noch unsicher?
 Die kostenlose Erstanalyse zeigt in wenigen Minuten, wo in Ihrem Betrieb der grösste Hebel liegt.
@@ -208,35 +208,34 @@ Umsetzung in Ihrem Tempo
 Wir fangen klein an, mit einer Sache, die trägt. Alles Weitere entscheiden Sie, wenn Sie den Nutzen gesehen haben.
 04 — NÄCHSTER SCHRITT
 Welche vaiacon-Lösung passt zu Ihrem Betrieb?
-Im unverbindlichen Gespräch klären wir, ob Learning, Flat, ein Projekt oder eine Kombination der richtige nächste Schritt ist. Simpel · Klar · Persönlich.
-Kostenlose Erstanalyse →
+Im unverbindlichen Gespräch klären wir, ob Learning, Bot, Service oder eine Kombination der richtige nächste Schritt ist. Simpel · Klar · Persönlich.
+Zur Kontaktseite →
 
 ### Über uns
 
 01 — ÜBER UNS
 Unternehmerische Praxis, menschliche Werte und moderne Technologie.
-Wer wir sind ↓
-Wofür wir stehen ↓
+André Ulrich und Philip Krieger sind zwei Unternehmer aus Zürich. Sie haben vaiacon gegründet, um Schweizer KMU in das Zeitalter von KI zu begleiten — persönlich, vor Ort und auf Augenhöhe.
+Erstgespräch vereinbaren →
 02 — DIE GRÜNDER
-André Ulrich und Philip Krieger sind zwei Schweizer Unternehmer, deren Ziel es ist, mit der Gründung von vaiacon Schweizer KMU in das Zeitalter von KI zu begleiten. Dabei machen sich die beiden ihren langjährigen Erfahrungsschatz zunutze. André führte 20 Jahre erfolgreich ein eigenes kleines Dienstleistungsunternehmen und ist gelernter Immobilienbewirtschafter, während Philip sich über die Jahre ein fundiertes Wissen in den Bereichen Coaching und Digitalisierung aufgebaut hat. Beide Gründer sind auf Augenhöhe persönlich für Sie da.
 André Ulrich
 Mitgründer · KMU-Experte
 Philip Krieger
 Mitgründer · Coach
 03 — WOFÜR WIR STEHEN
 KI ist für uns nicht das Produkt, sondern das Werkzeug.
-Wir verkaufen keine Technik, sondern zurückgewonnene Zeit. Wenn sich etwas für Sie nicht rechnet, sagen wir es Ihnen. Auch dann, wenn es uns einen Auftrag kostet. Ihre Kundendaten bleiben dort, wo sie hingehören: nach revDSG, auf Schweizer Infrastruktur.
+Wir verkaufen keine Technik, sondern zurückgewonnene Zeit. Wo sich etwas nicht rechnet, sagen wir das — auch wenn es uns einen Auftrag kostet. Ihre Kundendaten bleiben dort, wo sie hingehören: nach revDSG, auf Schweizer Infrastruktur.
 04 — NÄCHSTER SCHRITT
 Lernen wir uns kennen.
 Ein halbstündiges Erstgespräch, kostenlos und ohne Verpflichtung. Danach wissen Sie, ob und wo wir Ihrem Betrieb weiterhelfen.
-Kostenlose Erstanalyse →
+Zur Kontaktseite →
 
 ### vaiaconVisibility — gefunden werden
 
 01 — VAIACON VISIBILITY
 Gefunden werden, wenn Menschen suchen und KI antwortet.
 vaiacon Visibility hilft Schweizer KMU, online sichtbar und verständlich zu werden: mit SEO für Suchmaschinen und GEO für KI-Antworten.
-Kostenlose Erstanalyse →
+Sichtbarkeit prüfen lassen ↗
 SEO und GEO verstehen →
 02 — EINFACH ERKLÄRT
 Sichtbarkeit beginnt damit, dass Ihr Angebot verstanden wird.
@@ -305,7 +304,7 @@ Regelmässige Prüfung, was sichtbar wird, welche Fragen auftauchen und welche I
 08 — NÄCHSTER SCHRITT
 Lassen Sie prüfen, ob Ihr Angebot online klar verstanden wird.
 Wir schauen mit Ihnen auf Ihre heutige Website und zeigen verständlich, wo SEO und GEO den grössten Hebel haben.
-Kostenlose Erstanalyse →
+Sichtbarkeit prüfen lassen ↗
 Zurück zur Startseite →
 
 ### vaiaconAcademy — Selbstlernen
@@ -354,7 +353,7 @@ Passend wenn
 Sie entscheiden müssen, statt Werkzeuge auszuprobieren.
 In der ganzen Deutschschweiz
 Wir kommen in Ihren Betrieb — oder online, wenn es schneller gehen muss.
-Kostenlose Erstanalyse
+Termin anfragen
 Zu vaiaconLearning
 ZUGANG
 Alles offen. Für alle.
@@ -380,7 +379,7 @@ Begleitung durch Menschen
 01 — VAIACON LEARNING
 KI im Team. Verstanden, nicht nur eingeführt.
 vaiacon Learning bringt Ihren Mitarbeitenden bei, KI im Arbeitsalltag sicher anzuwenden — mit Trainings, Coachings und Workshops bei Ihnen im Betrieb.
-Kostenlose Erstanalyse →
+Schulung anfragen ↗
 Die Formate ansehen →
 02 — WARUM SCHULUNG
 Werkzeuge einführen ist einfach. Sie nutzen nicht.
@@ -395,25 +394,25 @@ Wer nicht weiss, was er eingeben darf, lässt es lieber ganz. Wir klären die Gr
 Was niemand aufschreibt, geht verloren.
 Am Ende jeder Schulung steht Festgehaltenes: Vorlagen, Prompt-Karten, eine Seite Spielregeln. Sonst wandert das Wissen mit der Person aus dem Betrieb.
 03 — DIE FORMATE
-Drei Formate. Klar im Umfang.
-Alle Preise exkl. MWST. Vor- und Nachbereitung sowie der konkrete Umfang stehen vor dem Termin fest — damit Schulung nicht unbemerkt zum Individualprojekt wird.
+Drei Wege, je nachdem wer lernen soll.
+Alle drei finden bei Ihnen statt, mit Ihren Unterlagen und Ihren Abläufen. Was Sie üben, brauchen Sie am nächsten Tag.
 01
-KI-Kurs fürs Gewerbe — CHF 390 p. P.
-Drei Stunden für 6–12 Betriebe. Durchführung ab sechs bezahlten Plätzen; praxisnah an typischen Aufgaben im Gewerbe.
+Training fürs Team
+Ein halber Tag mit allen, die täglich am Bildschirm arbeiten. Vom ersten Gespräch mit einem Assistenten bis zu Vorlagen, die danach im Betrieb bleiben.
 02
-KI-Halbtag im Betrieb — CHF 1'490
-Bis zehn Personen, mit festgelegter Vor- und Nachbereitung und einem vorab definierten Trainingsumfang.
+Coaching für Führungskräfte
+Einzeln oder zu zweit. Was heute geht und was nicht, wo der Hebel in Ihrem Betrieb liegt, und welche Entscheide Chefsache bleiben.
 03
-KI-Tag mit Umsetzung — CHF 2'400
-Schulung am Morgen, eine vorher definierte Standardautomation am Nachmittag. Weitere Automationen sind eigene Projekte.
+Werkstatt zu einem Thema
+Zwei Stunden auf eine Sache zugeschnitten: Offerten, Korrespondenz, Protokolle oder Belege. Am Ende läuft es, nicht nur die Erklärung.
 04 — SO LÄUFT ES AB
-Vier Schritte, mit klarem Rahmen.
+Vier Schritte, kein Programm von der Stange.
 01
 Vorgespräch
 Eine halbe Stunde am Telefon: Wer soll lernen, was kostet heute am meisten Zeit, was ist schon versucht worden? Kostenlos und unverbindlich.
 02
 Zuschnitt
-Wir legen Ziel, Teilnehmende, Vor- und Nachbereitung sowie den Umfang schriftlich fest. Sie sagen uns, welche Unterlagen wir verwenden dürfen — und welche nicht.
+Wir bauen die Schulung um Ihre echten Aufgaben herum. Sie sagen uns, welche Unterlagen wir verwenden dürfen — und welche nicht.
 03
 Der Tag im Betrieb
 Wir kommen zu Ihnen. Kurze Erklärungen, viel Üben, alles an Ihren Fällen. Fragen sind erwünscht, auch die vermeintlich dummen.
@@ -423,19 +422,19 @@ Vorlagen, Prompt-Karten und eine Seite Spielregeln für den Betrieb. Dazu ein Te
 05 — NÄCHSTER SCHRITT
 Reden wir darüber, wer bei Ihnen lernen soll.
 Ein halbstündiges Vorgespräch, kostenlos und ohne Verpflichtung. Danach wissen Sie, ob und in welcher Form sich eine Schulung für Ihren Betrieb lohnt.
-Kostenlose Erstanalyse →
+Schulung anfragen ↗
 Zurück zur Startseite →
 
-### vaiaconBot — KI-Pilot und Projekt
+### vaiaconBot — Automation
 
 01 — VAIACON BOT
-Wenn der Standard nicht reicht, bauen wir einen klaren Pilot.
-vaiacon Bot ist ein individueller KI-Pilot für einen klar abgegrenzten Ablauf — etwa Belege, Offerten, Korrespondenz oder Anfragen. Umfang, Schnittstellen und Abnahme stehen vor dem Start schriftlich fest.
-Kostenlose Erstanalyse →
+Die Arbeit, die sich jede Woche wiederholt, macht der Bot.
+vaiacon Bot übernimmt, was in Ihrem Betrieb regelmässig Zeit kostet — Belege, Offerten, Korrespondenz, Anfragen. Eingerichtet bei Ihnen, zum Fixpreis.
+Gespräch buchen ↗
 So läuft es ab →
 02 — WAS SICH LOHNT
-Nicht alles gehört in einen Pilot.
-Ein Pilot lohnt sich dort, wo ein Ablauf klar ist, häufig vorkommt und mit einer Standardlösung nicht zuverlässig abgedeckt werden kann. Alles andere lassen wir bewusst in Ruhe — auch wenn es technisch ginge.
+Nicht alles gehört automatisiert.
+Es lohnt sich dort, wo etwas oft passiert, immer gleich abläuft und heute von Hand gemacht wird. Alles andere lassen wir bewusst in Ruhe — auch wenn es technisch ginge.
 01
 Belege und Buchhaltung
 Belege erfassen, sortieren und fürs Treuhandbüro aufbereiten. Der häufigste Einstieg — und der, bei dem die Rechnung am schnellsten aufgeht.
@@ -445,91 +444,82 @@ Aus Stichworten wird ein Entwurf mit Ihren Positionen und Ihrer Preislogik. Stan
 03
 Anfragen und Auskünfte
 Die zwanzig Fragen, die täglich kommen, beantwortet der Bot rund um die Uhr — und gibt sauber an einen Menschen ab, wenn es persönlich wird.
-03 — PROJEKTE
-Klarer Scope, klarer Preis.
-Alle Preise exkl. MWST. Integrationen, Migrationen und eigene Software sind nie still in einer Pauschale enthalten — sie werden vor dem Start beschrieben, offeriert und abgenommen.
-01
-KI-Potenzial-Check — CHF 1'990
-Wir priorisieren Ihre Abläufe und geben eine schriftliche Empfehlung. Der Betrag wird vollständig an ein grösseres Projekt angerechnet, nicht an die Flat.
-02
-Website nach Mass — ab CHF 4'900
-Für individuelles Design, weitere Seiten, Migrationen oder besondere Integrationen. Umfang und Abnahme stehen schriftlich in der Offerte.
-03
-KI-Pilot — ab CHF 12'000
-Ein klar abgegrenzter Use Case mit vereinbarten Schnittstellen, Ergebnis und Abnahme. Weitere Automationen bleiben eigene Projekte.
+03 — WAS ES KOSTET
+Ab CHF 600 pro Automation. Fixpreis.
+Den genauen Preis nennen wir nach der Erstanalyse — Sie wissen vor der Umsetzung, woran Sie sind. Eine Automation, die eine Stunde pro Woche spart, ist bei den meisten Betrieben in wenigen Monaten bezahlt. Rechnet sie sich nicht, sagen wir das.
+Erstanalyse anfragen ↗
 04 — SO LÄUFT ES AB
-Fünf Schritte, vom Problem bis zur Abnahme.
+Fünf Schritte, vom Gespräch bis zur Kontrolle.
 01
-Potenzial klären
-Wir schauen auf Ihre Abläufe und sagen, ob sich ein Pilot lohnt. Für eine vertiefte Analyse gibt es den KI-Potenzial-Check mit schriftlicher Empfehlung.
+Empfehlung
+Wir schauen uns Ihre Abläufe an und benennen die Prozesse mit dem grössten Entlastungspotenzial — mit Offerte und ohne Verpflichtung.
 02
-Use Case festlegen
-Wir vereinbaren einen Ablauf, ein Ergebnis und die nötigen Schnittstellen. Ein Pilot beginnt nicht mit einer Wunschliste, sondern mit einer klaren Aufgabe.
+Priorisierung
+Gemeinsam legen wir fest, was zuerst kommt. In der Regel das Einfachste mit dem schnellsten Nutzen, nicht das Grösste.
 03
-Scope und Offerte
-Vor dem Bau stehen Preis, Ausschlüsse, Fremdkosten, Verantwortlichkeiten und Abnahme schriftlich fest.
+Planung
+Wir beschreiben den Ablauf sauber, bevor gebaut wird: Auslöser, Schritte, Ergebnis, Ausnahmen — und was passiert, wenn etwas ausfällt.
 04
 Umsetzung
-Wir bauen den vereinbarten Pilot, testen ihn mit Ihnen und dokumentieren, wie der Ablauf im Alltag weiterläuft.
+Wir richten die Automation bei Ihnen ein und zeigen Ihrem Team, wie sie läuft. Zwei Wochen läuft sie neben dem alten Weg mit, bis klar ist, dass sie trägt.
 05
-Abnahme und nächster Schritt
-Sie prüfen das vereinbarte Ergebnis. Wenn es trägt, entscheiden Sie über Betrieb, Erweiterung oder eine passende Vaiacon Flat .
+Kontrolle
+Regelmässig prüfen, ob es noch passt — auf Wunsch dauerhaft mit vaiaconService .
 05 — NÄCHSTER SCHRITT
-Zeigen Sie uns, wo der Standard nicht reicht.
-Im Erstgespräch schauen wir gemeinsam auf Ihren Ablauf und sagen Ihnen, ob eine Flat, ein Projekt oder vorerst gar nichts sinnvoll ist. Kostenlos und unverbindlich.
-Kostenlose Erstanalyse →
+Zeigen Sie uns, was jede Woche Zeit frisst.
+Im Erstgespräch schauen wir gemeinsam auf Ihre Abläufe und sagen Ihnen, wo sich eine Automation lohnt — und wo nicht. Kostenlos und unverbindlich.
+Gespräch buchen ↗
 Zurück zur Startseite →
 
-### Vaiacon Flat — standardisierter Einstieg
+### vaiaconService — Betreuung
 
-01 — VAIACON FLAT
-Der digitale Einstieg, der im Alltag trägt.
-vaiacon Flat bringt Studios mit einer erprobten Branchenvorlage online — mit Buchung, Google-Grundeinrichtung und einer Standardautomation. Klar im Umfang, statt eine Mini-Agentur zum Pauschalpreis.
-Kostenlose Erstanalyse →
-Den Umfang ansehen →
-02 — WARUM STANDARD
-Ein klarer Einstieg statt ein offenes Versprechen.
-Ein Studio braucht zuerst eine verständliche Website, eine verlässliche Buchung und weniger Handarbeit. Die Flat bündelt genau diesen Einstieg — wiederholbar für uns und überschaubar für Sie.
+01 — VAIACON SERVICE
+Eingerichtet ist erst der Anfang.
+vaiacon Service hält Ihre Automationen am Laufen: Pflege, Updates, Kontrolle und Weiterentwicklung — passend zu Ihren Abläufen und Ihrem Tempo.
+Betreuung anfragen ↗
+Die Pakete ansehen →
+02 — WARUM BETREUUNG
+Automationen altern, wenn niemand hinschaut.
+Anbieter ändern Schnittstellen, Preise ziehen an, Abläufe im Betrieb verschieben sich. Was heute läuft, läuft in einem Jahr nicht mehr von selbst — und der Ausfall fällt oft erst auf, wenn etwas fehlt.
 01
-Eine Branchenvorlage, Ihre Angaben.
-Die Website folgt einer erprobten Vorlage für Studios und umfasst maximal sechs Seiten. Das hält den Start schnell und die Erwartungen klar.
+Jemand merkt es, bevor Sie es merken.
+Wir prüfen regelmässig, ob alles läuft. Wenn etwas klemmt, hören Sie es von uns — nicht von einem Kunden, der auf eine Antwort wartet.
 02
-Ein Buchungsweg, der passt.
-Wir richten ein Buchungssystem ein und verbinden es im vereinbarten Standardumfang. Sie behalten die Wahl des Anbieters und dessen Vertrag.
+Kleine Anpassungen ohne neues Projekt.
+Ein Feld dazu, eine Vorlage geändert, ein Empfänger neu: solche Dinge erledigen wir laufend, statt sie zu einem Auftrag aufzublasen.
 03
-Ein konkreter Hebel statt zehn Ideen.
-Google-Grundeinrichtung und eine Standardautomation schaffen die Basis. Was darüber hinausgeht, wird nicht still in die Flat geschoben, sondern klar angeboten.
-03 — PREIS UND UMFANG
-CHF 290 im Monat. Klar abgegrenzt.
-Mindestlaufzeit zwölf Monate, danach monatlich kündbar. Alle Preise exkl. MWST. Das Onboarding wird vor dem Start separat nach dem vereinbarten Umfang offeriert.
+Weiterentwickeln statt stillstehen.
+Was einmal läuft, zeigt oft den nächsten Hebel. Wir bringen die Vorschläge, Sie entscheiden — und nichts wird ohne Ihr Ja gebaut.
+03 — DIE PAKETE
+Drei Stufen, monatlich kündbar.
+Für bestehende Automationen und gemeinsam aufgebaute Lösungen. Sie fangen klein an und wechseln, wenn es mehr braucht.
 01
-Website nach Branchenvorlage
-Maximal sechs Seiten, eine klar geführte Struktur und ein Buchungssystem im vereinbarten Standardumfang.
+BASIC — ab CHF 90 / Monat
+Regelmässige Funktionsprüfung, kleine Anpassungen und E-Mail-Support. Für Betriebe mit ein bis zwei laufenden Automationen.
 02
-Google-Grundeinrichtung
-Wir richten die Basis so ein, dass Ihr Betrieb bei Google verständlich auffindbar ist. Laufende SEO- oder GEO-Projekte gehören nicht in die Flat.
+STANDARD — ab CHF 190 / Monat
+Laufende Pflege und Updates, Optimierung bestehender Abläufe, Support für Ihr Team und ein periodischer Review-Termin.
 03
-Eine Standardautomation
-Ein vereinbarter Standardablauf, etwa für Anfragen oder Erinnerungen. Neue Abläufe und Integrationen sind eigenständige Projekte.
-Preisübersicht als PDF ↗
-04 — WAS KLAR GEREGELT IST
-Damit aus der Flat kein offenes Projekt wird.
+PREMIUM — ab CHF 390 / Monat
+Proaktive Weiterentwicklung, priorisierte Betreuung, Erweiterungen und Integrationen. Für Betriebe, bei denen mehrere Abläufe zusammenspielen.
+04 — WAS WIR TUN
+Vier Dinge, immer wieder.
 01
-Onboarding vor dem Start
-Der Aufbauaufwand fällt am Anfang an. Umfang, Starttermin und Onboardingbetrag stehen deshalb vor dem Start schriftlich in der Offerte.
+Prüfen
+Läuft jede Automation noch so, wie sie soll? Gab es Ausfälle, und ist dabei etwas liegen geblieben?
 02
-Kleine Änderungen: 30 Minuten pro Monat
-Kleine Anpassungen sind bis maximal 30 Minuten je Kalendermonat enthalten. Nicht genutzte Zeit wird nicht in den nächsten Monat übertragen.
+Pflegen
+Updates einspielen, geänderte Schnittstellen nachziehen, Vorlagen aktuell halten. Meist merken Sie davon nichts — das ist der Sinn.
 03
-Fremdkosten bleiben sichtbar
-Buchungs-, SMS-, Zahlungs-, KI/API- und Lizenzkosten rechnen die jeweiligen Anbieter separat ab. Sie gehören nicht in die Flat.
+Anpassen
+Kleine Änderungen aus dem Alltag setzen wir laufend um, ohne dass daraus ein Projekt wird.
 04
-Was nicht dazugehört
-Individuelle Gestaltung, Texte und Fotos, Migrationen, weitere Seiten, zusätzliche Integrationen, eigene Software und weitere Automationen sind Projekte mit schriftlichem Scope, Abnahme und Preis.
+Berichten
+Sie erfahren, was geändert wurde und was aufgefallen ist. Auch dann, wenn wir etwas empfehlen, das Sie Geld spart statt uns Umsatz bringt.
 05 — NÄCHSTER SCHRITT
-Passt die Flat zu Ihrem Studio?
-Im Erstgespräch klären wir Branche, Ausgangslage und Umfang. Reaktionszeit, Onboarding und alles, was über den Standard hinausgeht, halten wir danach verbindlich in der Offerte fest.
-Kostenlose Erstanalyse →
+Sagen Sie uns, was heute läuft.
+Wir schauen uns Ihre bestehenden Automationen an und sagen, welches Paket passt — oder ob Sie vorerst gar keines brauchen.
+Betreuung anfragen ↗
 Zurück zur Startseite →
 
 ### Häufige Fragen
@@ -550,7 +540,7 @@ Nein. KI ist für uns ein Werkzeug. Im Zentrum stehen verständliche Einführung
 Brauche ich technisches Vorwissen? +
 Nein. Die Inhalte und die Umsetzung werden so erklärt, dass Unternehmer und Mitarbeitende ohne technisches Vorwissen mitkommen.
 Wie beginnt eine Zusammenarbeit? +
-Am Anfang steht ein unverbindliches Gespräch. Danach klären wir, ob Learning, Flat, ein Projekt oder eine Kombination davon sinnvoll ist.
+Am Anfang steht ein unverbindliches Gespräch. Danach klären wir, ob Learning, Bot, Service oder eine Kombination davon sinnvoll ist.
 Was passiert mit unseren Daten? +
 Wir arbeiten nach dem revDSG. Vor der Umsetzung klären wir mit Ihnen, welche Daten ein Werkzeug überhaupt sehen darf, und halten Kundendaten dort heraus, wo sie nicht hingehören.
 vaiaconVisibility
@@ -595,50 +585,50 @@ Ein Team-Training dauert einen halben Tag, eine Werkstatt zwei Stunden, ein Coac
 Können wir zuerst selbst reinschauen? +
 Ja. In der vaiaconAcademy stehen 11 Lernpfade mit 58 Lektionen offen — kostenlos und ohne Konto. Viele Betriebe fangen dort an und holen uns danach für die Stellen, an denen es hakt.
 Und wenn es nach der Schulung wieder einschläft? +
-Genau dagegen ist der Nachtermin nach vier Wochen da. Wer danach einen standardisierten digitalen Einstieg braucht, findet ihn bei der Vaiacon Flat .
+Genau dagegen ist der Nachtermin nach vier Wochen da. Wer darüber hinaus Begleitung will, findet sie bei vaiaconService .
 Alles zu vaiaconLearning →
 vaiaconBot
 Was ist vaiaconBot? +
-Ein KI-Pilot für einen klar abgegrenzten Ablauf, wenn die Standardlösung nicht reicht. Scope, Schnittstellen, Preis und Abnahme stehen vor dem Start schriftlich fest. Zu Bot →
-Was kostet ein KI-Pilot? +
-Ein KI-Pilot beginnt bei CHF 12'000 exkl. MWST. Er umfasst einen klar definierten Use Case; weitere Automationen, Integrationen und Migrationen sind eigene Projekte.
+Unser Ansatz für wiederkehrende Büro- und Administrationsprozesse: Wir analysieren Abläufe, priorisieren Hebel und setzen passende Automatisierungen um. Zu Bot →
+Was kostet eine Automation? +
+Eine Automation beginnt bei CHF 600. Den Fixpreis nennen wir nach der Erstanalyse — Sie wissen vor der Umsetzung, woran Sie sind. Rechnet sich eine Automation nicht, sagen wir das.
 Müssen wir unsere Software wechseln? +
-Nicht zwingend. Ob eine Integration, Migration oder ein Wechsel nötig ist, klären wir vor dem Start. Alles, was über den vereinbarten Pilot hinausgeht, steht separat in der Offerte.
+In der Regel nicht. Wir verbinden, was Sie schon haben. Ein Wechsel kommt nur zur Sprache, wenn ein Werkzeug den Ablauf wirklich blockiert — und dann sagen wir vorher, was er kostet.
 Was passiert, wenn eine Automation ausfällt? +
 Zu jeder Automation gehört ein Rückfallplan auf einer Seite: wer benachrichtigt wird, wie es von Hand weitergeht und wie Sie sehen, ob während des Ausfalls etwas liegen geblieben ist.
 Sehen Sie unsere Kundendaten? +
 Nur so weit, wie es für die Einrichtung nötig ist — und nur, was Sie freigeben. Wir arbeiten nach dem revDSG und klären vorher schriftlich, welche Daten ein Werkzeug überhaupt sehen darf.
 Brauchen wir dafür technisches Wissen? +
 Nein. Wir richten es ein und zeigen es Ihrem Team. Wer tiefer verstehen will, wie es funktioniert, findet das kostenlos in der vaiaconAcademy .
-Wie lange dauert ein KI-Pilot? +
-Das hängt vom vereinbarten Use Case und den Schnittstellen ab. Terminplan, Mitwirkung und Abnahme stehen vor dem Start in der Offerte.
+Wie lange dauert die erste Automation? +
+Von der Erstanalyse bis zum Betrieb meist wenige Wochen. Wir fangen bewusst klein an — eine Sache, die funktioniert, ist mehr wert als fünf, die halb fertig sind.
 Alles zu vaiaconBot →
-Vaiacon Flat
-Was ist die Vaiacon Flat? +
-Der standardisierte Einstieg für Studios: Website nach Branchenvorlage mit maximal sechs Seiten, ein Buchungssystem, Google-Grundeinrichtung und eine Standardautomation. Zur Flat →
-Passt die Flat zu unserem Betrieb? +
-Sie passt, wenn Sie mit einer Branchenvorlage starten und den vereinbarten Standardumfang nutzen möchten. Wenn Sie individuelles Design, mehrere Integrationen oder eigene Software brauchen, prüfen wir ein Projekt.
-Was kostet die Flat? +
-CHF 290 pro Monat exkl. MWST, mit zwölf Monaten Mindestlaufzeit und danach monatlicher Kündigung. Das Onboarding wird vor dem Start separat nach dem vereinbarten Umfang offeriert.
+vaiaconService
+Was ist vaiaconService? +
+Begleitung bestehender Automatisierungen im Betrieb: Pflege, Updates, Kontrolle und Weiterentwicklung nach Bedarf. Zu Service →
+Brauchen wir das überhaupt? +
+Wenn Sie eine einzelne, einfache Automation haben und jemanden im Haus, der sie versteht: eher nicht. Sobald mehrere Abläufe zusammenspielen oder niemand zuständig ist, wird es sinnvoll.
+Betreuen Sie auch, was jemand anderes gebaut hat? +
+Ja, sofern wir hineinsehen dürfen und der Aufbau nachvollziehbar ist. Wir schauen es vorher an und sagen ehrlich, ob wir es verantworten können.
 Wie schnell reagieren Sie? +
-Die Reaktionszeit hängt vom vereinbarten Umfang ab und wird für den konkreten Auftrag verbindlich in Offerte und Vereinbarung festgelegt.
+Im Basispaket per E-Mail innert eines Arbeitstages, in den höheren Stufen schneller und mit Vorrang. Verbindliche Zeiten halten wir im Vertrag fest, nicht in einem Werbeversprechen.
 Sind wir an eine Laufzeit gebunden? +
-Ja: Die Flat hat eine Mindestlaufzeit von zwölf Monaten. Danach ist sie monatlich kündbar.
+Nein, alle drei Pakete sind monatlich kündbar. Wer nicht bleiben will, soll nicht bleiben müssen.
 Was ist nicht enthalten? +
-Individuelle Gestaltung, Texte und Fotos, Migrationen, weitere Seiten, zusätzliche Integrationen, eigene Software und weitere Automationen. Buchungs-, SMS-, Zahlungs-, KI/API- und Lizenzkosten der Anbieter sind ebenfalls separat.
-Alles zur Vaiacon Flat →
+Neue Automationen sind ein eigener Auftrag über vaiaconBot , Schulungen laufen über vaiaconLearning . Lizenzkosten fremder Werkzeuge tragen Sie selbst — wir sagen vorher, welche nötig sind.
+Alles zu vaiaconService →
 03 — NÄCHSTER SCHRITT
 Ihre Frage steht nicht dabei?
 Schreiben Sie uns. Wir antworten selbst — nicht aus einem Chatfenster, sondern als die zwei Menschen, die hier arbeiten.
 hallo@vaiacon.ch ↗
-Kostenlose Erstanalyse →
+Zur Kontaktseite →
 
 ### Kontakt
 
 01 — KONTAKT
 Welche vaiacon-Lösung passt zu Ihrem Betrieb?
-Im unverbindlichen Erstgespräch klären wir, ob Learning, Flat, ein KI-Projekt oder eine Kombination der richtige nächste Schritt ist. Eine halbe Stunde, kostenlos, ohne Verkaufsdruck.
-Kostenlose Erstanalyse →
+Im unverbindlichen Erstgespräch klären wir, ob Learning, Bot, Service oder eine Kombination der richtige nächste Schritt ist. Eine halbe Stunde, kostenlos, ohne Verkaufsdruck.
+hallo@vaiacon.ch →
 02 — WAS SIE ERWARTET
 Ein Gespräch, kein Verkaufstermin.
 Wir hören zu, stellen Fragen und sagen ehrlich, wo wir helfen können und wo nicht. Wenn nichts davon zu Ihnen passt, sagen wir auch das — das kostet uns eine halbe Stunde und Ihnen nichts.
@@ -659,8 +649,7 @@ Firma
 E-Mail *
 Telefon
 Ihre Nachricht *
-Fangfrage
-Ihre Nachricht geht direkt an uns — auf unseren eigenen Server in der Schweiz, ohne Dienst eines Dritten. Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu bearbeiten — mehr dazu in der Datenschutzerklärung .
+Beim Senden öffnet sich Ihr Mailprogramm mit der fertigen Nachricht. Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu bearbeiten — mehr dazu in der Datenschutzerklärung .
 Nachricht senden →
 04 — SO ERREICHEN SIE UNS
 Simpel · Klar · Persönlich
