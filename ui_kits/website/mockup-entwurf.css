@@ -751,7 +751,11 @@ body {
   }
 }
 
-@media (max-width: 760px) {
+/* Das Menü klappt neu schon ab 1024px in den Burger. Mit «Schulung im Betrieb»
+   und «Automatisierungen» ist die Zeile so lang, dass «FAQ» und «Kontakt» auf
+   einem schmalen Notebook rechts aus der Kopfzeile liefen. Bis 1024px passt
+   sie geprüft, darunter nicht mehr. */
+@media (max-width: 1024px) {
   html {
     scroll-padding-top: 76px;
   }
