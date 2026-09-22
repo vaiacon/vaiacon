@@ -33,8 +33,8 @@ SEITEN = [
     ("visibility.html", "vaiaconVisibility — gefunden werden"),
     ("academy/index.html", "vaiaconAcademy — Selbstlernen"),
     ("learning.html", "vaiaconLearning — Schulung vor Ort"),
-    ("bot.html", "vaiaconBot — Automation"),
-    ("service.html", "vaiaconService — Betreuung"),
+    ("bot.html", "vaiaconBot — KI-Pilot und Projekt"),
+    ("service.html", "Vaiacon Flat — standardisierter Einstieg"),
     ("faq.html", "Häufige Fragen"),
     ("kontakt.html", "Kontakt"),
     # Steht noch nicht in main, sondern im Zweig «datenschutz-und-chat-hinweis».
