@@ -18,12 +18,23 @@ body {
 
 .sv-hero {
   position: relative;
-  min-height: max(740px, 88svh);
+  /* Bildschirmhoch auf jeder Seite (26.09.2026): Wer eine Seite oeffnet, sieht
+     den ganzen Terracotta-Kopf und nichts darunter. svh statt dvh, damit er
+     auf dem iPhone auch mit eingeblendeten Leisten ganz sichtbar ist und nicht
+     springt, wenn sie verschwinden. Vorher: max(740px, 88svh).
+     Feste Hoehe, damit der Bot unten schrumpfen kann (siehe «Der Bot nimmt,
+     was der bildschirmhohe Kopf uebrig laesst»). min-height: min-content
+     faengt den Rest ab: Passt der Inhalt selbst mit kleinstem Bot nicht (sehr
+     niedrige Fenster), waechst der Kopf, statt etwas abzuschneiden. */
+  height: 100vh;
+  height: 100svh;
+  min-height: min-content;
+  box-sizing: border-box;
   /* Flex, damit der Inhalt die volle Hoehe bekommt und mittig sitzt, wenn
      Platz uebrig ist. Bewusst NICHT «align-items: center» am Abschnitt: Ist
-     der Inhalt hoeher als 740px — auf dem Handy die Regel —, wuerde er dann
-     oben und unten beschnitten, und die Kopfzeile lege sich darueber. So
-     waechst der Abschnitt stattdessen mit. */
+     der Inhalt hoeher als der Bildschirm, wuerde er dann oben und unten
+     beschnitten, und die Kopfzeile lege sich darueber. So waechst der
+     Abschnitt stattdessen mit. */
   display: flex;
   overflow: hidden;
   background: var(--grad-terra-hero);
@@ -655,14 +666,11 @@ button.sv-button[disabled] {
     padding-right: var(--space-5);
   }
 
-  /* Auf dem Handy richtet sich der Hero nach seinem Inhalt. Die feste Höhe
-     von 740px ist für den Bildschirm gedacht, wo alle Hero-Bereiche gleich
-     hoch sein sollen. Auf einer Seite wie den AGB, deren Hero nur Titel und
-     zwei Zeilen trägt, entstünden daraus rund 280px Leere — die Hälfte davon
-     zwischen Kopfzeile und Titel. */
-  .sv-hero {
-    min-height: auto;
-  }
+  /* Bis 25.09.2026 richtete sich der Hero auf dem Handy nach seinem Inhalt,
+     damit die AGB keine 280px leere Terracotta-Flaeche bekamen. Seit dem
+     26.09.2026 ist er auch hier bildschirmhoch (Entscheid André: jede Seite
+     gleich, der Kopf fuellt den Bildschirm) — die Regel oben gilt also auch
+     auf dem Handy; der Inhalt sitzt mittig. */
 
   .sv-hero__inner {
     padding-top: calc(var(--section-pad-y) + var(--space-4));
@@ -887,6 +895,54 @@ button.sv-button[disabled] {
   -webkit-mask-image: none;
   mask-image: none;
   filter: drop-shadow(0 16px 22px rgba(62, 22, 6, 0.4));
+}
+
+/* ── Der Bot nimmt, was der bildschirmhohe Kopf uebrig laesst (26.09.2026) ─
+   Text und Knoepfe werden nie beschnitten; schrumpfen darf nur der Bot. Die
+   Bildflaeche ist hoechstens 308px hoch (so gross wie bisher), mindestens
+   120px, und sonst so hoch wie der Platz unter den Knoepfen. Die Breite folgt
+   aus dem Bildverhaeltnis 682×820, bei breiten Motiven mal --bot-breite.
+   Auf grossen Bildschirmen bleibt Platz uebrig; dann sitzt alles mittig.
+   Die Breitenregeln oben bleiben als Rueckfall fuer Browser ohne
+   Container-Abfragen. */
+.sv-hero__copy {
+  flex-shrink: 0;
+}
+
+.sv-hero__visual:has(.sv-hero__robot--frei) {
+  flex: 0 1 308px;
+  min-height: 120px;
+  container-type: size;
+  justify-content: flex-end;
+}
+
+@supports (height: 1cqh) {
+  .sv-hero__robot--frei {
+    height: min(100cqh, 308px);
+    width: auto;
+    max-width: 100%;
+    aspect-ratio: calc(682 / 820 * var(--bot-breite, 1));
+  }
+}
+
+/* Auf dem Handy schwebt «Fragen Sie Vaia» unten rechts (46px hoch, 24px vom
+   Rand) — genau dort, wo der Bot mit den Fuessen steht. Darum unten so viel
+   Luft, dass er darueber endet. Bleibt dann fuer den Bot weniger als 120px
+   (sehr kleine Handys), faellt er weg, statt als Briefmarke zu erscheinen. */
+@media (max-width: 700px) {
+  .sv-hero__inner:has(.sv-hero__robot--frei) {
+    padding-bottom: calc(var(--space-6) + 60px);
+  }
+
+  .sv-hero__visual:has(.sv-hero__robot--frei) {
+    min-height: 0;
+  }
+
+  @container (max-height: 119px) {
+    .sv-hero__robot--frei {
+      display: none;
+    }
+  }
 }
 
 /* ── FAQ nach Bereichen ──────────────────────────────────────────────────
