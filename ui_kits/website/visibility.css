@@ -874,11 +874,13 @@ button.sv-button[disabled] {
   filter: blur(9px);
 }
 
-/* Breites Motiv (Begleitung: Bot mit Kundin und Laptop, 26.09.2026). Der Bot
-   soll gleich hoch stehen wie auf den übrigen Seiten, darum wird der Rahmen im
-   Verhältnis des Bildes breiter statt das Bild kleiner. */
+/* Breites Motiv (Begleitung, Academy; 26.09.2026). Der Bot soll gleich hoch
+   stehen wie auf den übrigen Seiten, darum wird der Rahmen im Verhältnis des
+   Bildes breiter statt das Bild kleiner. Das Verhältnis gibt die Seite mit:
+   style="--bot-breite: 1.18" — scripts/bot_einpassen.py --breit rechnet es aus.
+   Ohne Angabe gilt 1.26 (Begleitung). */
 .sv-hero__robot--breit {
-  width: min(75.6vw, 20.15rem);
+  width: min(calc(60vw * var(--bot-breite, 1.26)), calc(16rem * var(--bot-breite, 1.26)));
 }
 
 .sv-hero__robot--frei img {
