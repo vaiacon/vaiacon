@@ -874,6 +874,13 @@ button.sv-button[disabled] {
   filter: blur(9px);
 }
 
+/* Breites Motiv (Begleitung: Bot mit Kundin und Laptop, 26.09.2026). Der Bot
+   soll gleich hoch stehen wie auf den übrigen Seiten, darum wird der Rahmen im
+   Verhältnis des Bildes breiter statt das Bild kleiner. */
+.sv-hero__robot--breit {
+  width: min(75.6vw, 20.15rem);
+}
+
 .sv-hero__robot--frei img {
   -webkit-mask-image: none;
   mask-image: none;
