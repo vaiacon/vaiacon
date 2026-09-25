@@ -32,7 +32,7 @@ Kein Figma, kein weiteres Repo. Es wurden keine Font-Binaries geliefert; Quicksa
 
 **Casing-System (wichtig, sehr charakteristisch):**
 - Headlines: normaler Satz-Case mit Schlusspunkt.
-- Kicker/Eyebrows: UPPERCASE mit Nummerierung und Gedankenstrich — «01 — WOFÜR WIR STEHEN», «03 — EIN KONKRETER HEBEL».
+- Kicker/Eyebrows: UPPERCASE, **ohne Nummer** — «WOFÜR WIR STEHEN», «EIN KONKRETER HEBEL». Bis 26.09.2026 standen davor «01 — », «02 — »; André hat die Nummern als unnötig und störend entfernt.
 - Nav-Links und CTAs: **beginnen gross** («Visibility», «Erstgespräch vereinbaren →»,
   «Auswertung anfordern»). Bis 11.09.2026 galt hier Kleinschreibung; die Website hatte
   das nirgends mehr so, die Regel folgt jetzt dem Stand.
@@ -40,7 +40,7 @@ Kein Figma, kein weiteres Repo. Es wurden keine Font-Binaries geliefert; Quicksa
 
 **Interpunktion & Zeichen.** Guillemets «…» für Zitate und Produktnamen-Betonung (nie "…"). Mittepunkt · als Trenner. Pfeile als Text-Glyphen: → (weiter/senden), ↗ (extern), ↑ (nach oben), ✓ (Checks), + (FAQ auf/zu). Kein Emoji.
 
-**Zahlen & Nummerierung.** Zweistellige Ordnungszahlen «01», «02», «03» strukturieren alles (Sektionen, Leistungen, Schritte, Kompass). Mono-Details wie Timecodes («00:07.3», «BUERO-BOT.MP4») in IBM Plex Mono.
+**Zahlen & Nummerierung.** Zweistellige Ordnungszahlen «01», «02», «03» nur dort, wo sie eine Reihenfolge zeigen: Schritte eines Ablaufs, Lektionen eines Lernplans. Keine Nummern vor Kickern und über Karten (seit 26.09.2026). Mono-Details wie Timecodes («00:07.3», «BUERO-BOT.MP4») in IBM Plex Mono.
 
 **Wiederkehrende Begriffe.** «Transformationspartner», «Orientierung», «Hebel», «Roadmap», «Begleitung», «entlasten», «im Alltag», «auf Augenhöhe», «digitaler Mitarbeiter» (= Büro-Bot). Der Kompass: vier «Ist es richtig für …?»-Fragen, Abschluss «4 × Ja — dann sind wir auf Kurs.»
 
