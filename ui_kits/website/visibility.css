@@ -750,6 +750,20 @@ button.sv-button[disabled] {
 .sv-card--terra p { color: rgba(255, 240, 230, 0.92); }
 .sv-card--terra .sv-card__no { color: var(--peach-200); }
 
+/* Karte über zwei Spalten. Seit Kurse und Schulung im Betrieb eine Karte sind
+   (25.09.2026), stehen im Dreierraster fünf Karten; «Noch unsicher?» füllt die
+   Lücke. Auf dem Handy gibt es nur eine Spalte — dort würde «span 2» eine
+   zweite, leere Spalte erzwingen. */
+.sv-card-grid--three .sv-card--breit {
+  grid-column: span 2;
+}
+
+@media (max-width: 700px) {
+  .sv-card-grid--three .sv-card--breit {
+    grid-column: auto;
+  }
+}
+
 @media (max-width: 700px) {
   /* Ohne diese Zeilen gewinnt die kompakte Regel oben gegen die Handy-Anpassung
      und der Kopf bekaeme zu wenig Platz unter der festen Kopfzeile. */

@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 11.09.2026 · Eintrag 842ed88 Design-Regel nachgezogen: Menue und Knoepfe beginnen gross
+> Stand: 25.09.2026 · Eintrag ae4b1dc Menue: Kurse und Schulung im Betrieb unter neuem Reiter KI-Kompetenz
 
 ## Wie du antwortest
 
@@ -165,29 +165,25 @@ Wir führen kleine Betriebe an KI heran — verständlich, persönlich und ohne 
 Kostenlose Erstanalyse ↗
 Unsere Lösungen →
 01 — WAS WIR ANBIETEN
-Fünf Lösungen. Starten Sie dort, wo es am dringendsten ist.
+Vier Lösungen. Starten Sie dort, wo es am dringendsten ist.
 Jeder Bereich steht für sich. Sie müssen nicht alles buchen und schon gar nicht in dieser Reihenfolge — viele fangen kostenlos in der Academy an und melden sich erst später.
 01
-vaiaconVisibility
+Sichtbarkeit
 Gefunden werden, wenn Menschen suchen und KI antwortet. SEO für Suchmaschinen, GEO für KI-Antworten.
 Zu Visibility →
 02
-vaiaconAcademy
-11 Lernpfade mit 58 kurzen Lektionen zu KI im KMU-Alltag. Kostenlos, ohne Konto und ohne Anmeldung.
-Zur Academy →
+KI-Kompetenz
+Selbst lernen: 11 Lernpfade mit 58 kurzen Lektionen, kostenlos und ohne Anmeldung. Oder gemeinsam: Trainings, Coachings und Workshops bei Ihnen im Betrieb.
+Zur Academy → Zu Learning →
 03
-vaiaconLearning
-Trainings, Coachings und Workshops bei Ihnen im Betrieb — an Ihren echten Aufgaben statt an Beispielen.
-Zu Learning →
-04
-vaiaconBot
+Automatisierungen
 Was sich jede Woche wiederholt, übernimmt der Bot: Belege, Offerten, Korrespondenz, Anfragen. Ab CHF 600 zum Fixpreis.
 Zu Bot →
-05
-vaiaconService
+04
+Begleitung
 Betreuung für alles, was läuft: Pflege, Updates, Kontrolle und Weiterentwicklung. Ab CHF 90 im Monat, monatlich kündbar.
 Zu Service →
-06
+?
 Noch unsicher?
 Die kostenlose Erstanalyse zeigt in wenigen Minuten, wo in Ihrem Betrieb der grösste Hebel liegt.
 Erstanalyse starten →
@@ -209,33 +205,34 @@ Wir fangen klein an, mit einer Sache, die trägt. Alles Weitere entscheiden Sie,
 04 — NÄCHSTER SCHRITT
 Welche vaiacon-Lösung passt zu Ihrem Betrieb?
 Im unverbindlichen Gespräch klären wir, ob Learning, Bot, Service oder eine Kombination der richtige nächste Schritt ist. Simpel · Klar · Persönlich.
-Zur Kontaktseite →
+Kostenlose Erstanalyse →
 
 ### Über uns
 
 01 — ÜBER UNS
 Unternehmerische Praxis, menschliche Werte und moderne Technologie.
-André Ulrich und Philip Krieger sind zwei Unternehmer aus Zürich. Sie haben vaiacon gegründet, um Schweizer KMU in das Zeitalter von KI zu begleiten — persönlich, vor Ort und auf Augenhöhe.
-Erstgespräch vereinbaren →
+Wer wir sind ↓
+Wofür wir stehen ↓
 02 — DIE GRÜNDER
+André Ulrich und Philip Krieger sind zwei Schweizer Unternehmer, deren Ziel es ist, mit der Gründung von vaiacon Schweizer KMU in das Zeitalter von KI zu begleiten. Dabei machen sich die beiden ihren langjährigen Erfahrungsschatz zunutze. André führte 20 Jahre erfolgreich ein eigenes kleines Dienstleistungsunternehmen und ist gelernter Immobilienbewirtschafter, während Philip sich über die Jahre ein fundiertes Wissen in den Bereichen Coaching und Digitalisierung aufgebaut hat. Beide Gründer sind auf Augenhöhe persönlich für Sie da.
 André Ulrich
 Mitgründer · KMU-Experte
 Philip Krieger
 Mitgründer · Coach
 03 — WOFÜR WIR STEHEN
 KI ist für uns nicht das Produkt, sondern das Werkzeug.
-Wir verkaufen keine Technik, sondern zurückgewonnene Zeit. Wo sich etwas nicht rechnet, sagen wir das — auch wenn es uns einen Auftrag kostet. Ihre Kundendaten bleiben dort, wo sie hingehören: nach revDSG, auf Schweizer Infrastruktur.
+Wir verkaufen keine Technik, sondern zurückgewonnene Zeit. Wenn sich etwas für Sie nicht rechnet, sagen wir es Ihnen. Auch dann, wenn es uns einen Auftrag kostet. Ihre Kundendaten bleiben dort, wo sie hingehören: nach revDSG, auf Schweizer Infrastruktur.
 04 — NÄCHSTER SCHRITT
 Lernen wir uns kennen.
 Ein halbstündiges Erstgespräch, kostenlos und ohne Verpflichtung. Danach wissen Sie, ob und wo wir Ihrem Betrieb weiterhelfen.
-Zur Kontaktseite →
+Kostenlose Erstanalyse →
 
 ### vaiaconVisibility — gefunden werden
 
 01 — VAIACON VISIBILITY
 Gefunden werden, wenn Menschen suchen und KI antwortet.
 vaiacon Visibility hilft Schweizer KMU, online sichtbar und verständlich zu werden: mit SEO für Suchmaschinen und GEO für KI-Antworten.
-Sichtbarkeit prüfen lassen ↗
+Kostenlose Erstanalyse →
 SEO und GEO verstehen →
 02 — EINFACH ERKLÄRT
 Sichtbarkeit beginnt damit, dass Ihr Angebot verstanden wird.
@@ -304,7 +301,7 @@ Regelmässige Prüfung, was sichtbar wird, welche Fragen auftauchen und welche I
 08 — NÄCHSTER SCHRITT
 Lassen Sie prüfen, ob Ihr Angebot online klar verstanden wird.
 Wir schauen mit Ihnen auf Ihre heutige Website und zeigen verständlich, wo SEO und GEO den grössten Hebel haben.
-Sichtbarkeit prüfen lassen ↗
+Kostenlose Erstanalyse →
 Zurück zur Startseite →
 
 ### vaiaconAcademy — Selbstlernen
@@ -353,7 +350,7 @@ Passend wenn
 Sie entscheiden müssen, statt Werkzeuge auszuprobieren.
 In der ganzen Deutschschweiz
 Wir kommen in Ihren Betrieb — oder online, wenn es schneller gehen muss.
-Termin anfragen
+Kostenlose Erstanalyse
 Zu vaiaconLearning
 ZUGANG
 Alles offen. Für alle.
@@ -379,7 +376,7 @@ Begleitung durch Menschen
 01 — VAIACON LEARNING
 KI im Team. Verstanden, nicht nur eingeführt.
 vaiacon Learning bringt Ihren Mitarbeitenden bei, KI im Arbeitsalltag sicher anzuwenden — mit Trainings, Coachings und Workshops bei Ihnen im Betrieb.
-Schulung anfragen ↗
+Kostenlose Erstanalyse →
 Die Formate ansehen →
 02 — WARUM SCHULUNG
 Werkzeuge einführen ist einfach. Sie nutzen nicht.
@@ -422,7 +419,7 @@ Vorlagen, Prompt-Karten und eine Seite Spielregeln für den Betrieb. Dazu ein Te
 05 — NÄCHSTER SCHRITT
 Reden wir darüber, wer bei Ihnen lernen soll.
 Ein halbstündiges Vorgespräch, kostenlos und ohne Verpflichtung. Danach wissen Sie, ob und in welcher Form sich eine Schulung für Ihren Betrieb lohnt.
-Schulung anfragen ↗
+Kostenlose Erstanalyse →
 Zurück zur Startseite →
 
 ### vaiaconBot — Automation
@@ -430,7 +427,7 @@ Zurück zur Startseite →
 01 — VAIACON BOT
 Die Arbeit, die sich jede Woche wiederholt, macht der Bot.
 vaiacon Bot übernimmt, was in Ihrem Betrieb regelmässig Zeit kostet — Belege, Offerten, Korrespondenz, Anfragen. Eingerichtet bei Ihnen, zum Fixpreis.
-Gespräch buchen ↗
+Kostenlose Erstanalyse →
 So läuft es ab →
 02 — WAS SICH LOHNT
 Nicht alles gehört automatisiert.
@@ -447,7 +444,7 @@ Die zwanzig Fragen, die täglich kommen, beantwortet der Bot rund um die Uhr —
 03 — WAS ES KOSTET
 Ab CHF 600 pro Automation. Fixpreis.
 Den genauen Preis nennen wir nach der Erstanalyse — Sie wissen vor der Umsetzung, woran Sie sind. Eine Automation, die eine Stunde pro Woche spart, ist bei den meisten Betrieben in wenigen Monaten bezahlt. Rechnet sie sich nicht, sagen wir das.
-Erstanalyse anfragen ↗
+Erstanalyse starten →
 04 — SO LÄUFT ES AB
 Fünf Schritte, vom Gespräch bis zur Kontrolle.
 01
@@ -468,7 +465,7 @@ Regelmässig prüfen, ob es noch passt — auf Wunsch dauerhaft mit vaiaconServi
 05 — NÄCHSTER SCHRITT
 Zeigen Sie uns, was jede Woche Zeit frisst.
 Im Erstgespräch schauen wir gemeinsam auf Ihre Abläufe und sagen Ihnen, wo sich eine Automation lohnt — und wo nicht. Kostenlos und unverbindlich.
-Gespräch buchen ↗
+Kostenlose Erstanalyse →
 Zurück zur Startseite →
 
 ### vaiaconService — Betreuung
@@ -476,7 +473,7 @@ Zurück zur Startseite →
 01 — VAIACON SERVICE
 Eingerichtet ist erst der Anfang.
 vaiacon Service hält Ihre Automationen am Laufen: Pflege, Updates, Kontrolle und Weiterentwicklung — passend zu Ihren Abläufen und Ihrem Tempo.
-Betreuung anfragen ↗
+Kostenlose Erstanalyse →
 Die Pakete ansehen →
 02 — WARUM BETREUUNG
 Automationen altern, wenn niemand hinschaut.
@@ -519,7 +516,7 @@ Sie erfahren, was geändert wurde und was aufgefallen ist. Auch dann, wenn wir e
 05 — NÄCHSTER SCHRITT
 Sagen Sie uns, was heute läuft.
 Wir schauen uns Ihre bestehenden Automationen an und sagen, welches Paket passt — oder ob Sie vorerst gar keines brauchen.
-Betreuung anfragen ↗
+Kostenlose Erstanalyse →
 Zurück zur Startseite →
 
 ### Häufige Fragen
@@ -621,14 +618,14 @@ Alles zu vaiaconService →
 Ihre Frage steht nicht dabei?
 Schreiben Sie uns. Wir antworten selbst — nicht aus einem Chatfenster, sondern als die zwei Menschen, die hier arbeiten.
 hallo@vaiacon.ch ↗
-Zur Kontaktseite →
+Kostenlose Erstanalyse →
 
 ### Kontakt
 
 01 — KONTAKT
 Welche vaiacon-Lösung passt zu Ihrem Betrieb?
 Im unverbindlichen Erstgespräch klären wir, ob Learning, Bot, Service oder eine Kombination der richtige nächste Schritt ist. Eine halbe Stunde, kostenlos, ohne Verkaufsdruck.
-hallo@vaiacon.ch →
+Kostenlose Erstanalyse →
 02 — WAS SIE ERWARTET
 Ein Gespräch, kein Verkaufstermin.
 Wir hören zu, stellen Fragen und sagen ehrlich, wo wir helfen können und wo nicht. Wenn nichts davon zu Ihnen passt, sagen wir auch das — das kostet uns eine halbe Stunde und Ihnen nichts.
@@ -649,7 +646,8 @@ Firma
 E-Mail *
 Telefon
 Ihre Nachricht *
-Beim Senden öffnet sich Ihr Mailprogramm mit der fertigen Nachricht. Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu bearbeiten — mehr dazu in der Datenschutzerklärung .
+Fangfrage
+Ihre Nachricht geht direkt an uns — auf unseren eigenen Server in der Schweiz, ohne Dienst eines Dritten. Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu bearbeiten — mehr dazu in der Datenschutzerklärung .
 Nachricht senden →
 04 — SO ERREICHEN SIE UNS
 Simpel · Klar · Persönlich
