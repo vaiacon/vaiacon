@@ -24,7 +24,7 @@
   <link rel="stylesheet" href="../tokens/effects.css">
   <link rel="stylesheet" href="../tokens/base.css">
   <link rel="stylesheet" href="../styles.css">
-<link rel="stylesheet" href="mobile.css?v=20260910-fusszeile">
+<link rel="stylesheet" href="mobile.css?v=20260926-lernkopf">
   <script src="../_ds_bundle.js?v=20260911-fuss4"></script>
   <script src="./academy-daten.js?v=20260910-strich"></script>
   <script src="./image-slot.js"></script>
@@ -87,14 +87,14 @@
   </header>
 
   <!-- ═══ LERNPLAN-KOPF ═══ -->
-  <section id="top" style="position:relative; overflow:hidden; box-sizing:border-box; min-height:100vh; min-height:100svh; display:flex; flex-direction:column; justify-content:center; padding:132px 32px 72px; background:var(--grad-terra-hero); color:var(--text-on-terra); border-bottom:2px solid var(--border-ink)">
+  <section id="top" class="lp-kopf" style="position:relative; overflow:hidden; box-sizing:border-box; display:flex; flex-direction:column; justify-content:center; padding:132px 32px 72px; background:var(--grad-terra-hero); color:var(--text-on-terra); border-bottom:2px solid var(--border-ink)">
     <div style="position:absolute; inset:0; background:var(--glow-peach); pointer-events:none"></div>
     <div style="position:relative; max-width:1160px; margin:0 auto; display:flex; flex-direction:column; gap:34px">
 
       <a href="index.html#lernplaene" style="display:inline-flex; align-items:center; gap:10px; font-size:14.5px; font-weight:700; color:var(--terra-500)"><i style="font-style:normal">←</i>Alle Lernpläne</a>
 
       <div data-m="split" style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,0.82fr); gap:52px; align-items:center">
-        <div style="display:flex; flex-direction:column; align-items:flex-start; gap:22px">
+        <div class="lp-kopf__text" style="display:flex; flex-direction:column; align-items:flex-start; gap:22px">
           <div style="display:flex; flex-wrap:wrap; align-items:center; gap:14px">
             <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Kicker" number="{{ plan.n }}" hint-size="auto,20px">LERNPLAN</x-import>
             <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.LabelBadge" hint-size="auto,26px">{{ plan.level }}</x-import>
@@ -112,7 +112,7 @@
           </div>
         </div>
 
-        <div style="aspect-ratio:4/3; border-radius:26px; overflow:hidden; border:1px solid var(--border-strong); background:var(--sand-200)">
+        <div class="lp-kopf__bild" style="aspect-ratio:4/3; border-radius:26px; overflow:hidden; border:1px solid var(--border-strong); background:var(--sand-200)">
           <image-slot id="{{ plan.heroSlot }}" src="{{ plan.img }}" shape="rect" fit="cover" placeholder="{{ plan.bild }}"></image-slot>
         </div>
       </div>

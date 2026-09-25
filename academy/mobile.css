@@ -67,3 +67,72 @@
     padding-right: 20px !important;
   }
 }
+
+/* ── Lernplan-Kopf bildschirmhoch (26.09.2026) ─────────────────────────────
+   Wie der Terracotta-Kopf aller übrigen Seiten füllt auch der Lernplan-Kopf
+   genau den Bildschirm. Auf Laptops ist nicht das Bild zu hoch, sondern die
+   Textspalte daneben — darum werden bei niedrigen Bildschirmen die Abstände
+   enger, und das Bild schrumpft mit der Höhe (höchstens so gross wie bisher).
+   Wo alles untereinander steht (bis 860px), fällt das Bild weg. Passt der
+   Text selbst dann nicht, wächst der Kopf (min-content), statt zu beschneiden.
+   !important, weil die Werte im Element als Inline-Stil stehen. */
+.lp-kopf {
+  height: 100vh;
+  height: 100svh;
+  min-height: min-content;
+  padding-top: clamp(96px, 14.7svh, 132px) !important;
+  padding-bottom: clamp(20px, 6svh, 72px) !important;
+}
+
+.lp-kopf > div:last-child {
+  gap: clamp(14px, 3.8svh, 34px) !important;
+}
+
+.lp-kopf__text {
+  gap: clamp(12px, 2.45svh, 22px) !important;
+}
+
+/* Das Bild ist so breit wie bisher (0.82-Spalte, rund 500px), bei niedrigen
+   Bildschirmen schmaler; die frei werdende Breite geht an die Textspalte,
+   damit der Text in weniger Zeilen umbricht. */
+.lp-kopf [data-m="split"] {
+  grid-template-columns: minmax(0, 1fr) auto !important;
+}
+
+.lp-kopf__bild {
+  width: min(calc(42svh * 4 / 3), 34.6vw, 500px);
+}
+
+@media (max-width: 860px) {
+  #top.lp-kopf[style] {
+    padding-top: clamp(84px, 12.8svh, 108px) !important;
+    padding-bottom: clamp(16px, 4svh, 48px) !important;
+  }
+
+  .lp-kopf__bild {
+    display: none !important;
+  }
+
+  .lp-kopf__text {
+    gap: clamp(8px, 1.4svh, 22px) !important;
+  }
+}
+
+/* Handys mit wenig Höhe: Titel, Einleitung und Nutzen eine Stufe kleiner —
+   innerhalb der Schriftskala (Einleitung 16.5 = Fliesstext, Nutzen 15 =
+   Kartentext), damit der Kopf auch dort den Bildschirm füllt statt überläuft. */
+@media (max-width: 560px) and (max-height: 900px) {
+  .lp-kopf__text h1 {
+    font-size: clamp(28px, 4.2svh, 34px) !important;
+  }
+
+  .lp-kopf__text > p {
+    font-size: 16.5px !important;
+    line-height: 1.6 !important;
+  }
+
+  .lp-kopf__text > div > span:last-child {
+    font-size: 15px !important;
+    line-height: 1.55 !important;
+  }
+}
