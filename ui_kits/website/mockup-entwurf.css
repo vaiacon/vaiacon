@@ -1645,11 +1645,13 @@ body {
    weiss niemand, wo er ist. Ein Strich darunter, keine zweite Farbe — die
    Marke arbeitet mit Zeichen, nicht mit Auszeichnungsfarben. Der Kontakt-Knopf
    ist schon eine Pille und bleibt darum aussen vor. */
-.mock-header__nav a[aria-current="page"]:not(.mock-header__contact) {
+.mock-header__nav > a[aria-current="page"]:not(.mock-header__contact),
+.mock-nav-group__toggle.is-current {
   position: relative;
 }
 
-.mock-header__nav a[aria-current="page"]:not(.mock-header__contact)::after {
+.mock-header__nav > a[aria-current="page"]:not(.mock-header__contact)::after,
+.mock-nav-group__toggle.is-current::after {
   content: "";
   position: absolute;
   left: 0;
@@ -1659,6 +1661,51 @@ body {
   border-radius: 999px;
   background: currentColor;
   opacity: 0.9;
+}
+
+/* Der Reiter-Knopf hat 8px Polster; der Strich sitzt trotzdem gleich tief wie
+   bei den Verweisen und läuft nicht unter das Winkelzeichen. */
+.mock-nav-group__toggle.is-current::after {
+  right: 14px;
+  bottom: 2px;
+}
+
+/* ── KI-Kompetenz: Kurse und Schulung im Betrieb unter einem Reiter ───────
+   (25.09.2026). Im Ausklappmenü ist die aktuelle Seite terracotta, der Pfeil
+   steht dauernd. Die Verweise brauchen «relative», sonst sitzt der Pfeil am
+   Menü statt an seiner Zeile. */
+.mock-nav-group__menu a {
+  position: relative;
+  white-space: nowrap;
+}
+
+.mock-nav-group__menu a[aria-current="page"] {
+  color: var(--terra-500);
+}
+
+.mock-nav-group__menu a[aria-current="page"]::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.mock-mobile-nav__bereich {
+  width: min(100%, 340px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4px 0;
+  padding: 6px 0;
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.mock-mobile-nav__bereich-titel {
+  padding: 4px 0 2px;
+  color: var(--terra-500);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
 }
 
 .mock-mobile-nav a[aria-current="page"] {

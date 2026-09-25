@@ -37,9 +37,9 @@
   </style>
   <link rel="stylesheet" href="../ui_kits/website/chat.css?v=20260913-hinweis">
   <script src="../ui_kits/website/chat.js?v=20260913-hinweis" defer></script>
-  <link rel="stylesheet" href="../ui_kits/website/mockup-entwurf.css?v=20260922-menuetexte">
+  <link rel="stylesheet" href="../ui_kits/website/mockup-entwurf.css?v=20260925-ki-kompetenz">
   <link rel="stylesheet" href="../ui_kits/website/visibility.css?v=20260918-knoepfe">
-  <script src="../ui_kits/website/visibility.js?v=20260909-vaia3" defer></script>
+  <script src="../ui_kits/website/visibility.js?v=20260925-ki-kompetenz" defer></script>
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
@@ -57,8 +57,13 @@
       </button>
       <nav class="mock-header__nav" aria-label="Hauptnavigation">
         <a href="../visibility.html">Sichtbarkeit</a>
-        <a href="index.html" aria-current="page">Kurse</a>
-        <a href="../learning.html">Schulung im Betrieb</a>
+        <div class="mock-nav-group">
+          <button class="mock-nav-group__toggle is-current" type="button" aria-expanded="false" aria-controls="mock-nav-ki-kompetenz">KI-Kompetenz<span class="mock-nav-group__indicator" aria-hidden="true"></span></button>
+          <div id="mock-nav-ki-kompetenz" class="mock-nav-group__menu">
+            <a href="index.html" aria-current="page">Kurse</a>
+            <a href="../learning.html">Schulung im Betrieb</a>
+          </div>
+        </div>
         <a href="../bot.html">Automatisierungen</a>
         <a href="../service.html">Begleitung</a>
         <a href="../ueber-uns.html">Über uns</a>
@@ -68,8 +73,11 @@
     </div>
     <nav id="mock-mobile-menu" class="mock-mobile-nav" aria-label="Mobile Navigation">
       <a href="../visibility.html">Sichtbarkeit</a>
-      <a href="index.html" aria-current="page">Kurse</a>
-      <a href="../learning.html">Schulung im Betrieb</a>
+      <div class="mock-mobile-nav__bereich">
+        <span class="mock-mobile-nav__bereich-titel">KI-Kompetenz</span>
+        <a href="index.html" aria-current="page">Kurse</a>
+        <a href="../learning.html">Schulung im Betrieb</a>
+      </div>
       <a href="../bot.html">Automatisierungen</a>
       <a href="../service.html">Begleitung</a>
       <a href="../ueber-uns.html">Über uns</a>
