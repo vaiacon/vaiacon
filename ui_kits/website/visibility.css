@@ -450,6 +450,43 @@ button.sv-button[disabled] {
   font-size: var(--text-badge);
 }
 
+/* Rechenbeispiel auf Terracotta (26.09.2026, Punkt 06 aus Philips
+   Vorschlaegen): ausdruecklich als Beispiel gekennzeichnet, bis ein echter
+   Fall mit Einwilligung vorliegt. Haarlinie auf Dunkel, kein Comic-Rand. */
+.sv-beispiel {
+  display: grid;
+  gap: var(--space-2);
+  width: min(100%, 40rem);
+  padding: var(--space-5) var(--space-6);
+  box-sizing: border-box;
+  border: 1px solid var(--border-on-dark);
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.sv-beispiel p {
+  margin: 0;
+  color: var(--text-on-terra-soft);
+  font-size: var(--text-body-sm);
+  line-height: 1.65;
+  -webkit-hyphens: manual;
+  hyphens: manual;
+}
+
+.sv-beispiel .sv-beispiel__label {
+  font-family: var(--font-mono);
+  font-size: var(--text-overline);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-badge);
+  text-transform: uppercase;
+  color: var(--peach-200);
+}
+
+.sv-beispiel .sv-beispiel__hinweis {
+  font-size: var(--text-overline);
+  color: var(--peach-200);
+}
+
 /* «Passt, wenn …» auf den Startseitenkarten (26.09.2026, Punkt 03 aus
    Philips Vorschlaegen): Der Kartentext sagt, was wir tun — diese Zeile,
    woran man merkt, dass es passt. Ueber die ganze Kartenbreite, abgesetzt mit
@@ -472,7 +509,8 @@ button.sv-button[disabled] {
    faengt ab, falls doch einmal eines nicht passt. */
 #bereiche .sv-card p,
 #bereiche .sv-title,
-#bereiche .sv-lead {
+#bereiche .sv-lead,
+#preis .sv-lead {
   -webkit-hyphens: manual;
   hyphens: manual;
 }

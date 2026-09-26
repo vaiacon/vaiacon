@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 26.09.2026 · Eintrag 1642cbb Startseite: «Passt, wenn …» auf den Karten, neue Ueberschrift
+> Stand: 26.09.2026 · Eintrag db07c10 Erstanalyse: ehrliche Zeitangabe, alte Angebotsnamen ersetzt
 
 ## Wie du antwortest
 
@@ -433,7 +433,10 @@ Anfragen und Auskünfte
 Die zwanzig Fragen, die täglich kommen, beantwortet der Bot rund um die Uhr — und gibt sauber an einen Menschen ab, wenn es persönlich wird.
 WAS ES KOSTET
 Ab CHF 600 pro Automation. Fixpreis.
-Den genauen Preis nennen wir nach der Erstanalyse — Sie wissen vor der Umsetzung, woran Sie sind. Eine Automation, die eine Stunde pro Woche spart, ist bei den meisten Betrieben in wenigen Monaten bezahlt. Rechnet sie sich nicht, sagen wir das.
+Den genauen Preis nennen wir nach der Erstanalyse. Sie wissen vor der Umsetzung, woran Sie sind. Eine Automation, die eine Stunde pro Woche spart, ist bei den meisten Betrieben in wenigen Monaten bezahlt. Rechnet sie sich nicht, sagen wir das.
+Rechenbeispiel
+Ein Sanitärbetrieb mit sechs Mitarbeitenden schreibt zwölf Offerten im Monat. Heute braucht eine Offerte 90 Minuten, mit Automation 25. Das sind 13 Stunden im Monat, die wieder auf der Baustelle sind.
+Zur Veranschaulichung, kein echter Kunde.
 Erstanalyse starten →
 SO LÄUFT ES AB
 Fünf Schritte, vom Gespräch bis zur Kontrolle.
