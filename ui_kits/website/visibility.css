@@ -672,10 +672,19 @@ button.sv-button[disabled] {
      gleich, der Kopf fuellt den Bildschirm) — die Regel oben gilt also auch
      auf dem Handy; der Inhalt sitzt mittig. */
 
+  /* Mehr Luft auf dem Handy (26.09.2026, André: Kicker klebte an der
+     Kopfzeile). Die Kopfzeile ist hier 66px hoch; darunter stehen jetzt 44px
+     statt 22px, zwischen Kicker, Titel, Einleitung und Knoepfen 26px statt
+     20px, zwischen Knoepfen und Bot 32px statt 24px. Der Bot nimmt, was
+     uebrig bleibt, und wird dadurch etwas kleiner. */
   .sv-hero__inner {
-    padding-top: calc(var(--section-pad-y) + var(--space-4));
+    padding-top: calc(66px + var(--space-11));
     padding-bottom: var(--space-9);
-    gap: var(--space-6);
+    gap: 32px;
+  }
+
+  .sv-hero__copy {
+    gap: 26px;
   }
 
   .sv-hero h1 {

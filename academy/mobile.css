@@ -105,7 +105,7 @@
 
 @media (max-width: 860px) {
   #top.lp-kopf[style] {
-    padding-top: clamp(84px, 12.8svh, 108px) !important;
+    padding-top: 114px !important;   /* 70px Kopfzeile der Academy + 44px Luft, wie auf allen Seiten */
     padding-bottom: clamp(16px, 4svh, 48px) !important;
   }
 
@@ -134,5 +134,13 @@
   .lp-kopf__text > div > span:last-child {
     font-size: 15px !important;
     line-height: 1.55 !important;
+  }
+}
+
+/* Die Kopfzeile der Academy ist auf dem Handy 70px hoch (4px mehr als auf den
+   übrigen Seiten) — damit unter ihr gleich viel Luft steht wie überall: 44px. */
+@media (max-width: 700px) {
+  .sv-hero .sv-hero__inner {
+    padding-top: 114px !important;
   }
 }
