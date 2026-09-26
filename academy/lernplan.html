@@ -49,40 +49,40 @@
 
   <header class="mock-header sv-header">
     <div class="mock-header__inner">
-      <a class="mock-header__logo" href="../index.html" aria-label="vaiacon Startseite">
+      <a class="mock-header__logo" href="../" aria-label="vaiacon Startseite">
         <img src="../assets/logo-lockup-white.png" alt="vaiacon">
       </a>
       <button class="mock-menu-toggle" type="button" aria-label="Menü öffnen" aria-controls="mock-mobile-menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <nav class="mock-header__nav" aria-label="Hauptnavigation">
-        <a href="../visibility.html">Sichtbarkeit</a>
+        <a href="../visibility">Sichtbarkeit</a>
         <div class="mock-nav-group">
           <button class="mock-nav-group__toggle is-current" type="button" aria-expanded="false" aria-controls="mock-nav-ki-kompetenz">KI-Kompetenz<span class="mock-nav-group__indicator" aria-hidden="true"></span></button>
           <div id="mock-nav-ki-kompetenz" class="mock-nav-group__menu">
-            <a href="index.html" aria-current="page">Kurse</a>
-            <a href="../learning.html">Schulung im Betrieb</a>
+            <a href="./" aria-current="page">Kurse</a>
+            <a href="../learning">Schulung im Betrieb</a>
           </div>
         </div>
-        <a href="../bot.html">Automatisierungen</a>
-        <a href="../service.html">Begleitung</a>
-        <a href="../ueber-uns.html">Über uns</a>
-        <a href="../faq.html">FAQ</a>
-        <a class="mock-header__contact" href="../kontakt.html">Kontakt</a>
+        <a href="../bot">Automatisierungen</a>
+        <a href="../service">Begleitung</a>
+        <a href="../ueber-uns">Über uns</a>
+        <a href="../faq">FAQ</a>
+        <a class="mock-header__contact" href="../kontakt">Kontakt</a>
       </nav>
     </div>
     <nav id="mock-mobile-menu" class="mock-mobile-nav" aria-label="Mobile Navigation">
-      <a href="../visibility.html">Sichtbarkeit</a>
+      <a href="../visibility">Sichtbarkeit</a>
       <div class="mock-mobile-nav__bereich">
         <span class="mock-mobile-nav__bereich-titel">KI-Kompetenz</span>
-        <a href="index.html" aria-current="page">Kurse</a>
-        <a href="../learning.html">Schulung im Betrieb</a>
+        <a href="./" aria-current="page">Kurse</a>
+        <a href="../learning">Schulung im Betrieb</a>
       </div>
-      <a href="../bot.html">Automatisierungen</a>
-      <a href="../service.html">Begleitung</a>
-      <a href="../ueber-uns.html">Über uns</a>
-      <a href="../faq.html">FAQ</a>
-      <a class="mock-header__contact" href="../kontakt.html">Kontakt</a>
+      <a href="../bot">Automatisierungen</a>
+      <a href="../service">Begleitung</a>
+      <a href="../ueber-uns">Über uns</a>
+      <a href="../faq">FAQ</a>
+      <a class="mock-header__contact" href="../kontakt">Kontakt</a>
     </nav>
   </header>
 
@@ -91,7 +91,7 @@
     <div style="position:absolute; inset:0; background:var(--glow-peach); pointer-events:none"></div>
     <div style="position:relative; max-width:1160px; margin:0 auto; display:flex; flex-direction:column; gap:34px">
 
-      <a href="index.html#lernplaene" style="display:inline-flex; align-items:center; gap:10px; font-size:14.5px; font-weight:700; color:var(--terra-500)"><i style="font-style:normal">←</i>Alle Lernpläne</a>
+      <a href="./#lernplaene" style="display:inline-flex; align-items:center; gap:10px; font-size:14.5px; font-weight:700; color:var(--terra-500)"><i style="font-style:normal">←</i>Alle Lernpläne</a>
 
       <div data-m="split" style="display:grid; grid-template-columns:minmax(0,1fr) minmax(0,0.82fr); gap:52px; align-items:center">
         <div class="lp-kopf__text" style="display:flex; flex-direction:column; align-items:flex-start; gap:22px">
@@ -202,13 +202,13 @@
             <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" hint-size="100%,26px">Vorlage zum Mitnehmen</x-import>
             <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" hint-size="100%,26px">Kontroll-Check vor dem Einsatz</x-import>
           </ul>
-          <a href="index.html#vor-ort" style="font-size:15px; font-weight:700">Lieber vor Ort lernen? →</a>
+          <a href="./#vor-ort" style="font-size:15px; font-weight:700">Lieber vor Ort lernen? →</a>
         </div>
       </aside>
     </div>
   </section>
 
-  <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.SiteFooter" logo-src="assets/logo-lockup-white.png" email="hallo@vaiacon.ch" legal-href="../datenschutz.html" agb-href="../agb.html" facebook-href="https://www.facebook.com/vaiacon" instagram-href="https://www.instagram.com/vaiacon" linkedin-href="https://www.linkedin.com/company/vaiacon" hint-size="100%,120px"></x-import>
+  <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.SiteFooter" logo-src="assets/logo-lockup-white.png" email="hallo@vaiacon.ch" legal-href="../datenschutz" agb-href="../agb" facebook-href="https://www.facebook.com/vaiacon" instagram-href="https://www.instagram.com/vaiacon" linkedin-href="https://www.linkedin.com/company/vaiacon" hint-size="100%,120px"></x-import>
 </div>
 </x-dc>
 <script type="text/x-dc" data-dc-script>
@@ -246,7 +246,7 @@ class Component extends DCLogic {
     if (!p) return {};
     if (p.href) { location.replace(p.href); return {}; } // Advanced-Pfad hat eine eigene Kursseite
 
-    const href = (pl) => 'lernplan.html?plan=' + pl.n;
+    const href = (pl) => 'lernplan?plan=' + pl.n;
     // Beim ersten Lernplan gibt es kein vorheriges — dann bleibt die Kachel weg,
     // statt zurueck auf den letzten zu springen.
     const prev = i > 0 ? list[i - 1] : null;

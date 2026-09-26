@@ -25,7 +25,7 @@
          lesen; wer es wissen will, findet es trotzdem. */
       '<details class="vc-chat__hinweis">' +
         '<summary>Datenschutzerklärung</summary>' +
-        '<p>Vaia ist ein KI-Assistent. Eingaben gehen zur Beantwortung an einen KI-Dienst (Anthropic, USA). Bitte keine Personendaten eingeben. <a href="/datenschutz.html">Ganze Erklärung →</a></p>' +
+        '<p>Vaia ist ein KI-Assistent. Eingaben gehen zur Beantwortung an einen KI-Dienst (Anthropic, USA). Bitte keine Personendaten eingeben. <a href="/datenschutz">Ganze Erklärung →</a></p>' +
       '</details>' +
       '<div class="vc-chat__log" aria-live="polite"></div>' +
       '<form class="vc-chat__form">' +

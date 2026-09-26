@@ -3962,10 +3962,10 @@ function EaSuccess({
   }, /*#__PURE__*/React.createElement(EaButton, {
     variant: "cta",
     arrow: "\u2197",
-    href: "../../kontakt.html#formular"
+    href: "../../kontakt#formular"
   }, "termin direkt buchen"), /*#__PURE__*/React.createElement("a", {
     className: "ea-back",
-    href: "index.html"
+    href: "./"
   }, "zur\xFCck zur startseite \u2192")));
 }
 
@@ -4035,7 +4035,7 @@ function ErstanalyseApp() {
   }, /*#__PURE__*/React.createElement("div", {
     className: "ea-header-inner"
   }, /*#__PURE__*/React.createElement("a", {
-    href: "index.html",
+    href: "./",
     "aria-label": "vaiacon Startseite",
     style: {
       display: 'flex',
@@ -4052,7 +4052,7 @@ function ErstanalyseApp() {
     }
   })), /*#__PURE__*/React.createElement("a", {
     className: "ea-back",
-    href: "index.html"
+    href: "./"
   }, "zur\xFCck zur startseite \u2192"))), result ? null : /*#__PURE__*/React.createElement(EaProgress, {
     answers: answers
   }), /*#__PURE__*/React.createElement("main", {
@@ -4391,7 +4391,7 @@ const NAV_LINKS = [{
   product: 'Service'
 }, {
   label: 'Über uns',
-  href: 'ueber-uns.html'
+  href: 'ueber-uns'
 }, {
   label: 'FAQ',
   href: '#faq'
@@ -4570,7 +4570,7 @@ function Hero() {
     alt: ""
   })), /*#__PURE__*/React.createElement("a", {
     className: "mock-stamp",
-    href: "erstanalyse.html"
+    href: "erstanalyse"
   }, /*#__PURE__*/React.createElement("span", {
     className: "mock-stamp__over"
   }, "Kostenlos & unverbindlich"), /*#__PURE__*/React.createElement("span", {
@@ -4761,7 +4761,7 @@ function Academy() {
     variant: "cta",
     size: "md",
     arrow: true,
-    href: "academy/index.html"
+    href: "academy/"
   }, "Zur vaiaconAcademy"))));
 }
 function Faq() {
@@ -4813,7 +4813,7 @@ function Kontakt() {
   }, /*#__PURE__*/React.createElement(DsButton, {
     variant: "light",
     arrow: true,
-    href: "../../kontakt.html#formular"
+    href: "../../kontakt#formular"
   }, "Gespr\xE4ch vereinbaren"), /*#__PURE__*/React.createElement(DsButton, {
     variant: "glass",
     arrow: true,
@@ -4874,7 +4874,7 @@ const NAV_LINKS = [{
   product: 'Service'
 }, {
   label: 'Über uns',
-  href: 'ueber-uns.html'
+  href: 'ueber-uns'
 }, {
   label: 'FAQ',
   href: '#faq'
@@ -5053,7 +5053,7 @@ function Hero() {
     alt: ""
   })), /*#__PURE__*/React.createElement("a", {
     className: "mock-stamp",
-    href: "erstanalyse.html"
+    href: "erstanalyse"
   }, /*#__PURE__*/React.createElement("span", {
     className: "mock-stamp__over"
   }, "Kostenlos & unverbindlich"), /*#__PURE__*/React.createElement("span", {
@@ -5244,7 +5244,7 @@ function Academy() {
     variant: "cta",
     size: "md",
     arrow: true,
-    href: "academy/index.html"
+    href: "academy/"
   }, "Zur vaiaconAcademy"))));
 }
 function Faq() {
@@ -5296,7 +5296,7 @@ function Kontakt() {
   }, /*#__PURE__*/React.createElement(DsButton, {
     variant: "light",
     arrow: true,
-    href: "../../kontakt.html#formular"
+    href: "../../kontakt#formular"
   }, "Gespr\xE4ch vereinbaren"), /*#__PURE__*/React.createElement(DsButton, {
     variant: "glass",
     arrow: true,
@@ -5500,7 +5500,7 @@ function Hero({
     }
   }, "\u2192")), /*#__PURE__*/React.createElement("a", {
     className: "hero-pill hero-analysis-pill",
-    href: "erstanalyse.html",
+    href: "erstanalyse",
     "aria-label": "Kostenlose Online-Erstanalyse \xF6ffnen",
     style: stampButtonStyle
   }, /*#__PURE__*/React.createElement("span", null, t.stampText || 'Kostenlose Online-Erstanalyse'), /*#__PURE__*/React.createElement("span", {
@@ -5998,7 +5998,7 @@ function Kontakt() {
   }, /*#__PURE__*/React.createElement(Button, {
     variant: "glass",
     arrow: true,
-    href: "../../kontakt.html#formular"
+    href: "../../kontakt#formular"
   }, "Gespr\xE4ch vereinbaren")), /*#__PURE__*/React.createElement("small", {
     style: {
       fontSize: 15,
@@ -7285,25 +7285,25 @@ function asset(path) {
 }
 const NAV_LINKS = [{
   label: 'vaiaconLearning',
-  href: 'index.html#learning',
+  href: './#learning',
   product: 'Learning'
 }, {
   label: 'vaiaconBot',
-  href: 'index.html#service',
+  href: './#service',
   product: 'Bot'
 }, {
   label: 'vaiaconService',
-  href: 'index.html#service-pakete',
+  href: './#service-pakete',
   product: 'Service'
 }, {
   label: 'Über uns',
-  href: 'ueber-uns.html'
+  href: 'ueber-uns'
 }, {
   label: 'FAQ',
-  href: 'index.html#faq'
+  href: './#faq'
 }, {
   label: 'Kontakt',
-  href: 'index.html#kontakt',
+  href: './#kontakt',
   contact: true
 }];
 function NavLabel({
@@ -7327,7 +7327,7 @@ function Header() {
     className: "mock-header__inner"
   }, /*#__PURE__*/React.createElement("a", {
     className: "mock-header__logo",
-    href: "index.html",
+    href: "./",
     "aria-label": "vaiacon Start"
   }, /*#__PURE__*/React.createElement("img", {
     src: asset('logo-lockup-terra.png'),
@@ -7422,25 +7422,25 @@ function asset(path) {
 }
 const NAV_LINKS = [{
   label: 'vaiaconLearning',
-  href: 'index.html#learning',
+  href: './#learning',
   product: 'Learning'
 }, {
   label: 'vaiaconBot',
-  href: 'index.html#service',
+  href: './#service',
   product: 'Bot'
 }, {
   label: 'vaiaconService',
-  href: 'index.html#service-pakete',
+  href: './#service-pakete',
   product: 'Service'
 }, {
   label: 'Über uns',
-  href: 'ueber-uns.html'
+  href: 'ueber-uns'
 }, {
   label: 'FAQ',
-  href: 'index.html#faq'
+  href: './#faq'
 }, {
   label: 'Kontakt',
-  href: 'index.html#kontakt',
+  href: './#kontakt',
   contact: true
 }];
 function NavLabel({
@@ -7464,7 +7464,7 @@ function Header() {
     className: "mock-header__inner"
   }, /*#__PURE__*/React.createElement("a", {
     className: "mock-header__logo",
-    href: "index.html",
+    href: "./",
     "aria-label": "vaiacon Start"
   }, /*#__PURE__*/React.createElement("img", {
     src: asset('logo-lockup-terra.png'),

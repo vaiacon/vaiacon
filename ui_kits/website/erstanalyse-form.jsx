@@ -186,8 +186,8 @@ function EaSuccess({ answers, result, zugestellt }) {
         <p className="ea-result-vorbehalt">Bewusst konservativ gerechnet — wir versprechen lieber zu wenig als zu viel. Welche Lösungswege dahinter stecken und was sie kosten, zeigen wir Ihnen im kostenlosen Erstgespräch.</p>
       </div>
       <div className="ea-success-ctas">
-        <EaButton variant="cta" arrow="→" href="../../kontakt.html#formular">Gespräch vereinbaren</EaButton>
-        <a className="ea-back" href="../../index.html">Zurück zur Startseite →</a>
+        <EaButton variant="cta" arrow="→" href="../../kontakt#formular">Gespräch vereinbaren</EaButton>
+        <a className="ea-back" href="../../">Zurück zur Startseite →</a>
       </div>
     </div>
   );
@@ -244,10 +244,10 @@ function ErstanalyseApp() {
           hell. Menüpunkte braucht es hier keine, nur den Weg zurück. */}
       <header className="mock-header is-solid">
         <div className="mock-header__inner">
-          <a className="mock-header__logo" href="../../index.html" aria-label="vaiacon Startseite">
+          <a className="mock-header__logo" href="../../" aria-label="vaiacon Startseite">
             <img src="../../assets/logo-lockup-terra.png" alt="vaiacon" />
           </a>
-          <a className="ea-back" href="../../index.html">Zurück zur Startseite →</a>
+          <a className="ea-back" href="../../">Zurück zur Startseite →</a>
         </div>
       </header>
 
@@ -293,7 +293,7 @@ function ErstanalyseApp() {
         )}
       </main>
 
-      <EaSiteFooter logoSrc="../../assets/logo-lockup-white.png" legalHref="../../datenschutz.html" />
+      <EaSiteFooter logoSrc="../../assets/logo-lockup-white.png" legalHref="../../datenschutz" />
     </div>
   );
 }
