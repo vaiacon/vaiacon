@@ -292,6 +292,13 @@ button.sv-button[disabled] {
   pointer-events: none;
 }
 
+/* Bilder kommen als WebP mit PNG als Rueckfall (26.09.2026, Punkt 07b):
+   <picture> soll fuer das Layout nicht existieren, damit alle Regeln fuer
+   das <img> darin gleich wirken wie vorher. */
+picture {
+  display: contents;
+}
+
 .sv-hero__robot img {
   display: block;
   width: 100%;
