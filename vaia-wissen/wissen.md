@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 26.09.2026 · Eintrag e23df8d Startseite: Preiszeile auf jeder Angebotskarte
+> Stand: 26.09.2026 · Eintrag 1642cbb Startseite: «Passt, wenn …» auf den Karten, neue Ueberschrift
 
 ## Wie du antwortest
 
@@ -188,7 +188,7 @@ Passt, wenn Sie bereits auf eine oder mehrere unserer Lösungen setzen und dabei
 Ab CHF 90 / Monat · monatlich kündbar
 Zur Begleitung →
 Noch unsicher?
-Die kostenlose Erstanalyse zeigt in wenigen Minuten, wo in Ihrem Betrieb der grösste Hebel liegt.
+Die kostenlose Erstanalyse zeigt in rund zehn Minuten, wo in Ihrem Betrieb der grösste Hebel liegt.
 Erstanalyse starten →
 WOFÜR WIR STEHEN
 KI ist für uns nicht das Produkt, sondern das Werkzeug.
@@ -207,7 +207,7 @@ Umsetzung in Ihrem Tempo
 Wir fangen klein an, mit einer Sache, die trägt. Alles Weitere entscheiden Sie, wenn Sie den Nutzen gesehen haben.
 NÄCHSTER SCHRITT
 Welche vaiacon-Lösung passt zu Ihrem Betrieb?
-Im unverbindlichen Gespräch klären wir, ob Learning, Bot, Service oder eine Kombination der richtige nächste Schritt ist. Simpel · Klar · Persönlich.
+Im unverbindlichen Gespräch klären wir, ob Sichtbarkeit, Schulung, Automatisierung, Begleitung oder eine Kombination der richtige nächste Schritt ist. Simpel · Klar · Persönlich.
 Kostenlose Erstanalyse →
 
 ### Über uns
@@ -521,7 +521,7 @@ Nein. KI ist für uns ein Werkzeug. Im Zentrum stehen verständliche Einführung
 Brauche ich technisches Vorwissen? +
 Nein. Die Inhalte und die Umsetzung werden so erklärt, dass Unternehmer und Mitarbeitende ohne technisches Vorwissen mitkommen.
 Wie beginnt eine Zusammenarbeit? +
-Am Anfang steht ein unverbindliches Gespräch. Danach klären wir, ob Learning, Bot, Service oder eine Kombination davon sinnvoll ist.
+Am Anfang steht ein unverbindliches Gespräch. Danach klären wir, ob Sichtbarkeit, Schulung, Automatisierung, Begleitung oder eine Kombination davon sinnvoll ist.
 Was passiert mit unseren Daten? +
 Wir arbeiten nach dem revDSG. Vor der Umsetzung klären wir mit Ihnen, welche Daten ein Werkzeug überhaupt sehen darf, und halten Kundendaten dort heraus, wo sie nicht hingehören.
 vaiaconVisibility
@@ -608,7 +608,7 @@ Kostenlose Erstanalyse →
 
 KONTAKT
 Welche vaiacon-Lösung passt zu Ihrem Betrieb?
-Im unverbindlichen Erstgespräch klären wir, ob Learning, Bot, Service oder eine Kombination der richtige nächste Schritt ist. Eine halbe Stunde, kostenlos, ohne Verkaufsdruck.
+Im unverbindlichen Erstgespräch klären wir, ob Sichtbarkeit, Schulung, Automatisierung, Begleitung oder eine Kombination der richtige nächste Schritt ist. Eine halbe Stunde, kostenlos, ohne Verkaufsdruck.
 Kostenlose Erstanalyse →
 WAS SIE ERWARTET
 Ein Gespräch, kein Verkaufstermin.

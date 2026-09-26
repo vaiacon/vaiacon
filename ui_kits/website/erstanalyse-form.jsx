@@ -261,7 +261,7 @@ function ErstanalyseApp() {
             <div className="ea-intro">
               <EaKicker>Kostenlos &amp; unverbindlich</EaKicker>
               <h1 className="ea-h1">Kostenlose Erstanalyse.</h1>
-              <p className="ea-lead">Acht kurze Blöcke, rund fünf Minuten — fast alles zum Ankreuzen. Direkt nach dem Absenden sehen Sie, wie viel Zeit und Geld in Ihrer Administration steckt.</p>
+              <p className="ea-lead">Acht kurze Blöcke, rund zehn Minuten, fast alles zum Ankreuzen. Direkt nach dem Absenden sehen Sie, wie viel Zeit und Geld in Ihrer Administration steckt.</p>
             </div>
 
             <div className="ea-note">
