@@ -1286,3 +1286,18 @@ button.sv-button[disabled] {
     padding-bottom: max(84px, var(--kopf-luft-unten));
   }
 }
+
+/* Desktop: Bot auf allen Seiten gleich gross wie auf «Kontakt» (26.09.2026,
+   André). Vorher nahm er den Platz unter dem Text — Seiten mit kurzem Text
+   bekamen einen groesseren Bot. Jetzt haengt die Hoehe nur vom Bildschirm ab:
+   so viel, wie auf der Kontaktseite unter dem Text frei bleibt (1440×900:
+   203px), hoechstens 308px, mindestens 120px. Seiten mit laengerem Text werden
+   dafuer etwas hoeher als der Bildschirm, solche mit kuerzerem bekommen mehr
+   Luft ober- und unterhalb. */
+@media (min-width: 1025px) {
+  .sv-hero__visual:has(.sv-hero__robot--frei) {
+    flex: 0 0 auto;
+    height: clamp(120px, calc(100vh - 697px), 308px);
+    height: clamp(120px, calc(100svh - 697px), 308px);
+  }
+}
