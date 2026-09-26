@@ -34,6 +34,15 @@
   transition: transform 0.3s cubic-bezier(.22, 1, .36, 1), background 0.3s ease;
 }
 .vc-chat__fab:hover { transform: translateY(-4px); background: #9C4517; }
+/* Ragt der Kopf der Seite über den unteren Bildschirmrand, blendet chat.js den
+   Knopf aus (data-ueber-kopf), bis der Kopf hinausgescrollt ist — sonst läge er
+   auf Text oder Knöpfen (26.09.2026). Sanft, wie alles an der Marke. */
+.vc-chat[data-ueber-kopf="true"] .vc-chat__fab {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.vc-chat__fab { transition: transform 0.3s cubic-bezier(.22, 1, .36, 1), background 0.3s ease, opacity 0.3s ease, visibility 0.3s ease; }
 .vc-chat__fab-dot {
   width: 9px; height: 9px; border-radius: 999px;
   background: #FFD9C2; flex: none;

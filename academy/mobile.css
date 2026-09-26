@@ -80,7 +80,7 @@
   height: 100vh;
   height: 100svh;
   min-height: min-content;
-  padding-top: clamp(96px, 14.7svh, 132px) !important;
+  padding-top: calc(82px + clamp(20px, calc(16svh - 72px), 72px)) !important;   /* Kopfzeile + Luft wie FAQ */
   padding-bottom: clamp(20px, 6svh, 72px) !important;
 }
 
@@ -105,8 +105,11 @@
 
 @media (max-width: 860px) {
   #top.lp-kopf[style] {
-    padding-top: 114px !important;   /* 70px Kopfzeile der Academy + 44px Luft, wie auf allen Seiten */
-    padding-bottom: clamp(16px, 4svh, 48px) !important;
+    /* Handy: oben etwas weniger Luft als auf den übrigen Seiten, weil der
+       Lernplan-Kopf viel Text trägt; unten Platz für «Fragen Sie Vaia»
+       (46px + 24px Rand), damit der Chat-Knopf nichts verdeckt. */
+    padding-top: calc(70px + clamp(20px, calc(16svh - 96px), 72px)) !important;
+    padding-bottom: 84px !important;
   }
 
   .lp-kopf__bild {
@@ -137,10 +140,8 @@
   }
 }
 
-/* Die Kopfzeile der Academy ist auf dem Handy 70px hoch (4px mehr als auf den
-   übrigen Seiten) — damit unter ihr gleich viel Luft steht wie überall: 44px. */
-@media (max-width: 700px) {
-  .sv-hero .sv-hero__inner {
-    padding-top: 114px !important;
-  }
+/* Die Kopfzeile der Academy ist bis 860px Breite 70px hoch (4px mehr als auf
+   den übrigen Seiten) — damit unter ihr gleich viel Luft steht wie überall. */
+@media (max-width: 860px) {
+  #top.sv-hero { --kopfzeile: 70px; }
 }

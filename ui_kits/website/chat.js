@@ -90,8 +90,25 @@
     return fusszeile;
   }
 
+  /* ── Nicht über dem Kopf der Seite (26.09.2026) ────────────────────────
+     Reicht der Terracotta-Kopf über den unteren Bildschirmrand hinaus (Handy
+     quer, lange Lernpläne, sehr niedrige Fenster), läge der Knopf mitten auf
+     Text oder Knöpfen. Dann bleibt er ausgeblendet, bis der Kopf oben
+     hinausgescrollt ist. Passt der Kopf auf den Bildschirm, ändert sich nichts:
+     Dort ist unten Platz für den Knopf freigehalten. */
+  function kopfPruefen() {
+    var kopf = document.querySelector('.sv-hero') || document.getElementById('top');
+    var verdeckt = false;
+    if (kopf && wurzel.getAttribute('data-open') !== 'true') {
+      var k = kopf.getBoundingClientRect();
+      verdeckt = k.bottom > window.innerHeight + 1 && k.top < window.innerHeight;
+    }
+    wurzel.setAttribute('data-ueber-kopf', verdeckt ? 'true' : 'false');
+  }
+
   function hubBerechnen() {
     angefordert = false;
+    kopfPruefen();
     var fuss = fusszeileFinden();
     if (!fuss) return;
     // Offen deckt das Fenster ohnehin den unteren Rand — dann nicht verschieben.
@@ -114,6 +131,10 @@
   window.addEventListener('scroll', hubAnfordern, { passive: true });
   window.addEventListener('resize', hubAnfordern);
   hubBerechnen();
+  /* In der Academy entsteht der Kopf erst nach dem Laden aus einem Baustein —
+     darum nach dem Laden und kurz danach noch einmal nachsehen. */
+  window.addEventListener('load', hubAnfordern);
+  [600, 1500, 3000].forEach(function (ms) { window.setTimeout(hubAnfordern, ms); });
 
   /* ── Vaia von aussen öffnen ──────────────────────────────────────────────
      Jedes Element mit data-vaia öffnet den Chat. Steht dort ein Text, wird er
