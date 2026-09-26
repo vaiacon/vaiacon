@@ -108,7 +108,7 @@
     /* Handy: oben etwas weniger Luft als auf den übrigen Seiten, weil der
        Lernplan-Kopf viel Text trägt; unten Platz für «Fragen Sie Vaia»
        (46px + 24px Rand), damit der Chat-Knopf nichts verdeckt. */
-    padding-top: calc(70px + clamp(20px, calc(16svh - 96px), 72px)) !important;
+    padding-top: calc(70px + 48px) !important;   /* fest: der Kopf wächst auf dem Handy ohnehin mit */
     padding-bottom: 84px !important;
   }
 

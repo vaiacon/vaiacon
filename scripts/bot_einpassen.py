@@ -16,7 +16,7 @@ Drei Schritte, so wie sie am 25./26.09.2026 fuer alle acht Seiten gemacht wurden
    buendig — dann steht jeder Bot mit `sv-hero__robot--frei` gleich hoch
    (256×308 px auf der Seite) und die Fuesse auf dem Bodenschatten. Mit
    `--breit` bleibt das Bild so breit wie das Motiv; dann braucht die Figur
-   `sv-hero__robot--breit` und `style="--bot-breite: <faktor>"` — das Skript
+   `sv-hero__robot--breit` und `style="--bot-verhaeltnis: <breite> / 820"` — das Skript
    gibt die fertige Zeile aus.
 
 Eingeschlossene Reste des Grundes (zwischen Kabelwindungen, unter einer
@@ -85,7 +85,7 @@ def main() -> None:
     print(f"Geschrieben: {args.ausgabe} ({fertig.width}×{fertig.height}, {groesse} KB)")
     if args.breit:
         faktor = (fertig.width / HOEHE) / (BREITE / HOEHE)
-        print(f'  Fuer die Figur: class="... sv-hero__robot--breit" style="--bot-breite: {faktor:.3f}"')
+        print(f'  Fuer die Figur: class="... sv-hero__robot--breit" style="--bot-verhaeltnis: {fertig.width} / {HOEHE}"')
 
 
 if __name__ == "__main__":

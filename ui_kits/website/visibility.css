@@ -895,7 +895,9 @@ button.sv-button[disabled] {
 /* Breites Motiv (Begleitung, Academy; 26.09.2026). Der Bot soll gleich hoch
    stehen wie auf den übrigen Seiten, darum wird der Rahmen im Verhältnis des
    Bildes breiter statt das Bild kleiner. Das Verhältnis gibt die Seite mit:
-   style="--bot-breite: 1.18" — scripts/bot_einpassen.py --breit rechnet es aus.
+   style="--bot-verhaeltnis: 804 / 820" (Bildbreite / Bildhoehe) —
+   scripts/bot_einpassen.py --breit gibt die Zeile aus. Die Breite hier gilt
+   nur noch als Rueckfall; massgebend ist die Regel weiter unten.
    Ohne Angabe gilt 1.26 (Begleitung). */
 .sv-hero__robot--breit {
   width: min(calc(60vw * var(--bot-breite, 1.26)), calc(16rem * var(--bot-breite, 1.26)));
@@ -921,41 +923,54 @@ button.sv-button[disabled] {
 
 /* Der Bot-Bereich zaehlt fuer die Hoehe des Kopfs nur mit seinem Minimum
    (Basis 0, Groesse eingeschlossen). Ist Platz, waechst er bis 308px; der
-   Rest verteilt sich ober- und unterhalb des Inhalts. */
-.sv-hero__visual:has(.sv-hero__robot--frei) {
-  flex: 1 1 0;
-  min-height: 100px;
-  max-height: 308px;
-  container-type: size;
-  justify-content: flex-end;
+   Rest verteilt sich ober- und unterhalb des Inhalts.
+   Der Innenteil ist selbst mindestens bildschirmhoch (min-height): So fuellt
+   der Bot den Platz in jedem Browser — auch in Safari, das den Raster-Weg
+   anders rechnet (26.09.2026: dort waren die Bots verschwunden). */
+.sv-hero__inner {
+  min-height: calc(100vh - 2px);
+  min-height: calc(100svh - 2px);
 }
 
-@supports (height: 1cqh) {
-  .sv-hero__robot--frei {
-    height: min(100cqh, 308px);
-    width: auto;
-    max-width: 100%;
-    aspect-ratio: calc(682 / 820 * var(--bot-breite, 1));
-  }
+.sv-hero__visual:has(.sv-hero__robot--frei) {
+  position: relative;
+  flex: 1 1 0;
+  min-height: 120px;
+  max-height: 308px;
+}
+
+/* Der Bot fuellt die Hoehe seines Bereichs: absolut oben und unten angesetzt,
+   die Breite folgt aus dem Bildverhaeltnis (682:820, breite Motive geben
+   --bot-verhaeltnis mit). Kein Ausblenden mehr: Am 26.09.2026 waren die Bots
+   auf dem iPhone weg — Safari zeigt dort mit Leisten nur 660–750px Hoehe, und
+   die Regeln «unter 700px Hoehe» und «unter 120px Platz» blendeten sie aus. */
+.sv-hero__visual .sv-hero__robot--frei {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: auto;
+  max-width: 100%;
+  margin: 0;
+  aspect-ratio: var(--bot-verhaeltnis, 682 / 820);
+  transform: translateX(-50%);
+}
+
+.sv-hero__visual .sv-hero__robot--frei img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center bottom;
 }
 
 /* Auf dem Handy schwebt «Fragen Sie Vaia» unten rechts (46px hoch, 24px vom
    Rand) — genau dort, wo der Bot mit den Fuessen steht. Darum unten so viel
-   Luft, dass er darueber endet. Bleibt dann fuer den Bot weniger als 120px
-   (sehr kleine Handys), faellt er weg, statt als Briefmarke zu erscheinen. */
+   Luft, dass er darueber endet. Der Bot bleibt immer sichtbar, mindestens
+   120px hoch; reicht der Platz nicht, wird der Kopf hoeher (26.09.2026: das
+   Ausblenden traf in Safari fast jedes iPhone). */
 @media (max-width: 700px) {
   .sv-hero__inner:has(.sv-hero__robot--frei) {
     padding-bottom: max(calc(var(--space-6) + 60px), var(--kopf-luft-unten));
-  }
-
-  .sv-hero__visual:has(.sv-hero__robot--frei) {
-    min-height: 0;
-  }
-
-  @container (max-height: 119px) {
-    .sv-hero__robot--frei {
-      display: none;
-    }
   }
 }
 
@@ -1241,6 +1256,18 @@ button.sv-button[disabled] {
   }
 }
 
+/* Handy: Luft unter der Kopfzeile fest 56px statt mit der Hoehe zu schrumpfen.
+   Safari zeigt auf dem iPhone mit eingeblendeten Leisten nur 660–750px Hoehe;
+   geschrumpft blieben dort 34–48px — so eng, wie André es nicht will. Passt der
+   Inhalt dann nicht, waechst der Kopf, und der Chat-Knopf wartet. */
+@media (max-width: 700px) {
+  .sv-hero { --kopf-luft: 56px; }
+
+  /* Auf dem Handy ist der Kopf in Safari meist ohnehin laenger als der
+     Bildschirm — dann soll der Bot nicht beim Minimum stehen bleiben. */
+  .sv-hero__visual:has(.sv-hero__robot--frei) { min-height: 160px; }
+}
+
 /* Kopfzeilenhoehe je Breite, passend zu mockup-entwurf.css (26.09.2026). */
 @media (max-width: 1080px) {
   .sv-hero { --kopfzeile: 74px; }
@@ -1250,14 +1277,6 @@ button.sv-button[disabled] {
   .sv-hero { --kopfzeile: 66px; }
 }
 
-/* Kleine Handys (bis 700px hoch): Fuer den Bot bleibt dort ohnehin kaum Platz.
-   Statt eines leeren Bereichs unter den Knoepfen faellt er ganz weg, und der
-   Text sitzt mittig im bildschirmhohen Kopf (26.09.2026). */
-@media (max-width: 700px) and (max-height: 700px) {
-  .sv-hero__visual:has(.sv-hero__robot--frei) {
-    display: none;
-  }
-}
 
 /* Bis Tablet-Breite schwebt «Fragen Sie Vaia» unten rechts ueber dem Kopf.
    Unten ist darum immer Platz fuer ihn frei (46px + 24px Rand + Luft), auch

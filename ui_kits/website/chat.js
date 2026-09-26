@@ -132,9 +132,14 @@
   window.addEventListener('resize', hubAnfordern);
   hubBerechnen();
   /* In der Academy entsteht der Kopf erst nach dem Laden aus einem Baustein —
-     darum nach dem Laden und kurz danach noch einmal nachsehen. */
+     wann genau, hängt vom Browser ab. Darum jedes Mal nachsehen, wenn sich die
+     Seite in der Höhe verändert, und zur Sicherheit nach dem Laden. */
   window.addEventListener('load', hubAnfordern);
-  [600, 1500, 3000].forEach(function (ms) { window.setTimeout(hubAnfordern, ms); });
+  if (window.ResizeObserver) {
+    new ResizeObserver(hubAnfordern).observe(document.documentElement);
+  } else {
+    [600, 1500, 3000, 6000].forEach(function (ms) { window.setTimeout(hubAnfordern, ms); });
+  }
 
   /* ── Vaia von aussen öffnen ──────────────────────────────────────────────
      Jedes Element mit data-vaia öffnet den Chat. Steht dort ein Text, wird er
