@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 26.09.2026 · Eintrag db07c10 Erstanalyse: ehrliche Zeitangabe, alte Angebotsnamen ersetzt
+> Stand: 26.09.2026 · Eintrag 3a7e5a2 Automatisierungen: Rechenbeispiel im Abschnitt «Was es kostet»
 
 ## Wie du antwortest
 
@@ -216,12 +216,17 @@ Kostenlose Erstanalyse →
 Unternehmerische Praxis, menschliche Werte und moderne Technologie.
 Wer wir sind ↓
 Wofür wir stehen ↓
-DIE GRÜNDER
-André Ulrich und Philip Krieger sind zwei Schweizer Unternehmer, deren Ziel es ist, mit der Gründung von vaiacon Schweizer KMU in das Zeitalter von KI zu begleiten. Dabei machen sich die beiden ihren langjährigen Erfahrungsschatz zunutze. André führte 20 Jahre erfolgreich ein eigenes kleines Dienstleistungsunternehmen und ist gelernter Immobilienbewirtschafter, während Philip sich über die Jahre ein fundiertes Wissen in den Bereichen Coaching und Digitalisierung aufgebaut hat. Beide Gründer sind auf Augenhöhe persönlich für Sie da.
+WARUM VAIACON
+Zwei Unternehmer, die den Geschäftsalltag kennen.
+Wir haben erkannt, dass gerade kleine und mittlere Unternehmen Mühe haben, KI und Automatisierungen sinnvoll in ihren Betrieb zu integrieren. Darum haben wir 2026 vaiacon gegründet: Um genau solche Betriebe zu begleiten. Persönlich und auf Augenhöhe.
 André Ulrich
-Mitgründer · KMU-Experte
+Mitgründer · Strategie und Marketing
+André führt seit 20 Jahren ein eigenes Unternehmen im Bereich Facility Management und in der Textilreinigung. Dazu war er Verwaltungsrat und Bewirtschafter bei einer kleinen Immobilienfirma in Zürich. Offerten, Auftragsbestätigungen, E-Mails, Dossiers, Beiträge für Social Media: Die Arbeit, die jede Woche wiederkommt, kennt er aus eigener Erfahrung. Bei vaiacon kümmert er sich um Strategie und Marketing.
 Philip Krieger
-Mitgründer · Coach
+Mitgründer · Technik und Coaching
+Philip bringt zehn Jahre Erfahrung als Trainer bei einem der grössten Schweizer Telekommunikationsanbieter mit. Er ist Ausbilder mit eidgenössischem Fachausweis und hat über Jahre Lösungen für die digitale Transformation und die Einführung von KI begleitet. Bei vaiacon ist er für Technik, Coaching und Support zuständig.
+SO ARBEITEN WIR
+Das Erstgespräch führen wir beide. Wer uns schreibt, bekommt innerhalb von höchstens 12 Stunden einen Rückruf von einem von uns. Sie sprechen immer direkt mit einem der Gründer.
 WOFÜR WIR STEHEN
 KI ist für uns nicht das Produkt, sondern das Werkzeug.
 Wir verkaufen keine Technik, sondern zurückgewonnene Zeit. Wenn sich etwas für Sie nicht rechnet, sagen wir es Ihnen. Auch dann, wenn es uns einen Auftrag kostet. Ihre Kundendaten bleiben dort, wo sie hingehören: nach revDSG, auf Schweizer Infrastruktur.

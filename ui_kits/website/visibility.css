@@ -510,7 +510,10 @@ button.sv-button[disabled] {
 #bereiche .sv-card p,
 #bereiche .sv-title,
 #bereiche .sv-lead,
-#preis .sv-lead {
+#preis .sv-lead,
+#team .sv-card p,
+#team .sv-title,
+#team .sv-lead {
   -webkit-hyphens: manual;
   hyphens: manual;
 }
@@ -1317,6 +1320,18 @@ button.sv-button[disabled] {
    Ausschnitt (3:2), damit beide Gründer gleich gross und gleich hoch im
    Bild sind. Die Vorlagen sind 1508×1043, der Kopf jeweils mittig — der
    Ausschnitt schneidet darum nur wenig unten weg. */
+/* «Über uns» (26.09.2026, Punkt 06c): Rolle unter dem Namen hervorgehoben,
+   darunter ein Absatz pro Gruender; «So arbeiten wir» mit Abstand unter
+   den Karten. */
+.sv-card .sv-team-rolle {
+  font-weight: var(--weight-semibold);
+  color: var(--terra-600);
+}
+
+.sv-team-arbeit {
+  margin-top: var(--space-11);
+}
+
 .sv-team-foto {
   width: 100%;
   max-width: 220px;
