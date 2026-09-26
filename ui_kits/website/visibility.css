@@ -450,6 +450,45 @@ button.sv-button[disabled] {
   font-size: var(--text-badge);
 }
 
+/* «Passt, wenn …» auf den Startseitenkarten (26.09.2026, Punkt 03 aus
+   Philips Vorschlaegen): Der Kartentext sagt, was wir tun — diese Zeile,
+   woran man merkt, dass es passt. Ueber die ganze Kartenbreite, abgesetzt mit
+   der Haarlinie (Randsystem der Karten), der Anfang in terra-600. */
+.sv-card .sv-card__passt {
+  align-self: stretch;
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--border-strong);
+}
+
+.sv-card__passt strong {
+  color: var(--terra-600);
+  font-weight: var(--weight-bold);
+}
+
+/* Keine Silbentrennung im Angebotsabschnitt der Startseite (26.09.2026, André: «Trenn-
+   und Gedankenstriche generell vermeiden»). Die Karten sind schmal, «au-tomatisch», «Korrespon-denz»
+   und «Automatisie-rungen» standen gleich mehrfach da. Das laengste Wort
+   («Automatisierungen») passt auch auf 320px ganz; overflow-wrap von oben
+   faengt ab, falls doch einmal eines nicht passt. */
+#bereiche .sv-card p,
+#bereiche .sv-title,
+#bereiche .sv-lead {
+  -webkit-hyphens: manual;
+  hyphens: manual;
+}
+
+/* «Noch unsicher?» senkrecht in der Mitte (26.09.2026, André). Auf dem
+   Desktop steht die Karte neben «Begleitung» und ist so hoch wie diese; ohne
+   das sass der Inhalt oben und darunter blieb eine leere Flaeche. */
+#bereiche .sv-card--terra {
+  justify-content: center;
+}
+
+/* Wort mit Bindestrich nie am Bindestrich umbrechen («KI-» / «Antworten»). */
+.sv-ganz {
+  white-space: nowrap;
+}
+
 /* Preiszeile der Startseitenkarten (26.09.2026, Punkt 02 aus Philips
    Vorschlaegen): jede Angebotskarte nennt ihren Einstieg an derselben Stelle,
    direkt ueber dem Knopf — «alle oder keine». Mono wie alle Zahlen, terra-600

@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 26.09.2026 · Eintrag 82c229a Namen in Kundensprache: Kartenknoepfe, Bildbeschreibungen, Vermerk
+> Stand: 26.09.2026 · Eintrag e23df8d Startseite: Preiszeile auf jeder Angebotskarte
 
 ## Wie du antwortest
 
@@ -165,22 +165,26 @@ Wir führen kleine Betriebe an KI heran — verständlich, persönlich und ohne 
 Kostenlose Erstanalyse ↗
 Unsere Lösungen →
 WAS WIR ANBIETEN
-Vier Lösungen. Starten Sie dort, wo es am dringendsten ist.
-Jeder Bereich steht für sich. Sie müssen nicht alles buchen und schon gar nicht in dieser Reihenfolge — viele fangen kostenlos in der Academy an und melden sich erst später.
+Mehr Sichtbarkeit. Mehr KI-Kompetenz. Mehr Effizienz. Starten Sie mit der passenden Lösung.
+Jeder Bereich steht für sich. Sie müssen nicht alles buchen und schon gar nicht in dieser Reihenfolge.
 Sichtbarkeit
-Gefunden werden, wenn Menschen suchen und KI antwortet. SEO für Suchmaschinen, GEO für KI-Antworten.
+Gefunden werden, wenn Menschen suchen und KI antwortet. SEO für Suchmaschinen, GEO für KI-Antworten .
+Passt, wenn Sie möchten, dass Ihr Unternehmen in klassischen Suchmaschinen und KI-Suchsystemen gefunden und empfohlen wird.
 Preis nach Erstgespräch
 Zu Visibility →
 KI-Kompetenz
 Selbst lernen: 11 Lernpfade mit 58 kurzen Lektionen, ohne Anmeldung. Oder gemeinsam: Trainings, Coachings und Workshops bei Ihnen im Betrieb.
+Passt, wenn Sie möchten, dass Sie und Ihre Mitarbeitenden KI verstehen, sinnvoll einsetzen und in ihren Arbeitsalltag integrieren können.
 Kurse kostenlos · Schulung nach Erstgespräch
 Zur Academy → Zur Schulung →
 Automatisierungen
 Was sich jede Woche wiederholt, läuft automatisch: Belege, Offerten, Korrespondenz, Anfragen.
+Passt, wenn Sie möchten, dass wiederkehrende Aufgaben weniger Zeit kosten und Prozesse effizienter werden.
 Ab CHF 600 · Fixpreis
 Zu den Automatisierungen →
 Begleitung
 Betreuung für alles, was läuft: Pflege, Updates, Kontrolle und Weiterentwicklung.
+Passt, wenn Sie bereits auf eine oder mehrere unserer Lösungen setzen und dabei gerne Support erhalten möchten.
 Ab CHF 90 / Monat · monatlich kündbar
 Zur Begleitung →
 Noch unsicher?
