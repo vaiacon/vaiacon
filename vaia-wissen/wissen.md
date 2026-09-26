@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 26.09.2026 · Eintrag 45eaa63 Lernplan-Kopf bildschirmhoch, Bild schrumpft mit
+> Stand: 26.09.2026 · Eintrag 4569313 Adressen ohne .html: interne Verweise umgestellt
 
 ## Wie du antwortest
 
@@ -172,13 +172,13 @@ Gefunden werden, wenn Menschen suchen und KI antwortet. SEO für Suchmaschinen, 
 Zu Visibility →
 KI-Kompetenz
 Selbst lernen: 11 Lernpfade mit 58 kurzen Lektionen, kostenlos und ohne Anmeldung. Oder gemeinsam: Trainings, Coachings und Workshops bei Ihnen im Betrieb.
-Zur Academy → Zu Learning →
+Zur Academy → Zur Schulung →
 Automatisierungen
-Was sich jede Woche wiederholt, übernimmt der Bot: Belege, Offerten, Korrespondenz, Anfragen. Ab CHF 600 zum Fixpreis.
-Zu Bot →
+Was sich jede Woche wiederholt, läuft automatisch: Belege, Offerten, Korrespondenz, Anfragen. Ab CHF 600 zum Fixpreis.
+Zu den Automatisierungen →
 Begleitung
 Betreuung für alles, was läuft: Pflege, Updates, Kontrolle und Weiterentwicklung. Ab CHF 90 im Monat, monatlich kündbar.
-Zu Service →
+Zur Begleitung →
 Noch unsicher?
 Die kostenlose Erstanalyse zeigt in wenigen Minuten, wo in Ihrem Betrieb der grösste Hebel liegt.
 Erstanalyse starten →
@@ -550,7 +550,7 @@ Pro Lernplan erhalten Sie eine Teilnahmebestätigung. Uns ist das Resultat im Be
 Alles zu vaiaconAcademy →
 vaiaconLearning
 Was ist vaiaconLearning? +
-Trainings, Coachings und Workshops bei Ihnen im Betrieb, damit Unternehmer und Teams KI sicher anwenden können. Zu Learning →
+Trainings, Coachings und Workshops bei Ihnen im Betrieb, damit Unternehmer und Teams KI sicher anwenden können. Zur Schulung →
 Braucht mein Team Vorkenntnisse? +
 Nein. Wir setzen bei null an: ein Computer, die eigenen Unterlagen, etwas Neugier. Alles andere erklären wir unterwegs, ohne Fachchinesisch.
 Wie lange dauert eine Schulung? +
@@ -562,7 +562,7 @@ Genau dagegen ist der Nachtermin nach vier Wochen da. Wer darüber hinaus Beglei
 Alles zu vaiaconLearning →
 vaiaconBot
 Was ist vaiaconBot? +
-Unser Ansatz für wiederkehrende Büro- und Administrationsprozesse: Wir analysieren Abläufe, priorisieren Hebel und setzen passende Automatisierungen um. Zu Bot →
+Unser Ansatz für wiederkehrende Büro- und Administrationsprozesse: Wir analysieren Abläufe, priorisieren Hebel und setzen passende Automatisierungen um. Zu den Automatisierungen →
 Was kostet eine Automation? +
 Eine Automation beginnt bei CHF 600. Den Fixpreis nennen wir nach der Erstanalyse — Sie wissen vor der Umsetzung, woran Sie sind. Rechnet sich eine Automation nicht, sagen wir das.
 Müssen wir unsere Software wechseln? +
@@ -578,7 +578,7 @@ Von der Erstanalyse bis zum Betrieb meist wenige Wochen. Wir fangen bewusst klei
 Alles zu vaiaconBot →
 vaiaconService
 Was ist vaiaconService? +
-Begleitung bestehender Automatisierungen im Betrieb: Pflege, Updates, Kontrolle und Weiterentwicklung nach Bedarf. Zu Service →
+Begleitung bestehender Automatisierungen im Betrieb: Pflege, Updates, Kontrolle und Weiterentwicklung nach Bedarf. Zur Begleitung →
 Brauchen wir das überhaupt? +
 Wenn Sie eine einzelne, einfache Automation haben und jemanden im Haus, der sie versteht: eher nicht. Sobald mehrere Abläufe zusammenspielen oder niemand zuständig ist, wird es sinnvoll.
 Betreuen Sie auch, was jemand anderes gebaut hat? +

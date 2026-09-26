@@ -782,6 +782,17 @@ button.sv-button[disabled] {
   }
 }
 
+/* Startseite auf dem Tablet (701–1024px): zwei Spalten statt drei. In drei
+   Spalten waren die Karten dort nur 224px breit — «Zu den Automatisierungen →»
+   (263px, bricht nicht um) ragte über den Rand (26.09.2026). Vier Karten stehen
+   2×2, «Noch unsicher?» darunter über die ganze Breite. Nur das Raster mit der
+   breiten Karte, also nur die Startseite. */
+@media (min-width: 701px) and (max-width: 1024px) {
+  .sv-card-grid--three:has(.sv-card--breit) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (max-width: 700px) {
   /* Ohne diese Zeilen gewinnt die kompakte Regel oben gegen die Handy-Anpassung
      und der Kopf bekaeme zu wenig Platz unter der festen Kopfzeile. */
