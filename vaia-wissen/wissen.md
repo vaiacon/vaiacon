@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 26.09.2026 · Eintrag 4569313 Adressen ohne .html: interne Verweise umgestellt
+> Stand: 26.09.2026 · Eintrag 82c229a Namen in Kundensprache: Kartenknoepfe, Bildbeschreibungen, Vermerk
 
 ## Wie du antwortest
 
@@ -169,15 +169,19 @@ Vier Lösungen. Starten Sie dort, wo es am dringendsten ist.
 Jeder Bereich steht für sich. Sie müssen nicht alles buchen und schon gar nicht in dieser Reihenfolge — viele fangen kostenlos in der Academy an und melden sich erst später.
 Sichtbarkeit
 Gefunden werden, wenn Menschen suchen und KI antwortet. SEO für Suchmaschinen, GEO für KI-Antworten.
+Preis nach Erstgespräch
 Zu Visibility →
 KI-Kompetenz
-Selbst lernen: 11 Lernpfade mit 58 kurzen Lektionen, kostenlos und ohne Anmeldung. Oder gemeinsam: Trainings, Coachings und Workshops bei Ihnen im Betrieb.
+Selbst lernen: 11 Lernpfade mit 58 kurzen Lektionen, ohne Anmeldung. Oder gemeinsam: Trainings, Coachings und Workshops bei Ihnen im Betrieb.
+Kurse kostenlos · Schulung nach Erstgespräch
 Zur Academy → Zur Schulung →
 Automatisierungen
-Was sich jede Woche wiederholt, läuft automatisch: Belege, Offerten, Korrespondenz, Anfragen. Ab CHF 600 zum Fixpreis.
+Was sich jede Woche wiederholt, läuft automatisch: Belege, Offerten, Korrespondenz, Anfragen.
+Ab CHF 600 · Fixpreis
 Zu den Automatisierungen →
 Begleitung
-Betreuung für alles, was läuft: Pflege, Updates, Kontrolle und Weiterentwicklung. Ab CHF 90 im Monat, monatlich kündbar.
+Betreuung für alles, was läuft: Pflege, Updates, Kontrolle und Weiterentwicklung.
+Ab CHF 90 / Monat · monatlich kündbar
 Zur Begleitung →
 Noch unsicher?
 Die kostenlose Erstanalyse zeigt in wenigen Minuten, wo in Ihrem Betrieb der grösste Hebel liegt.

@@ -450,6 +450,30 @@ button.sv-button[disabled] {
   font-size: var(--text-badge);
 }
 
+/* Preiszeile der Startseitenkarten (26.09.2026, Punkt 02 aus Philips
+   Vorschlaegen): jede Angebotskarte nennt ihren Einstieg an derselben Stelle,
+   direkt ueber dem Knopf — «alle oder keine». Mono wie alle Zahlen, terra-600
+   statt terra-500, weil die Schrift klein ist (5.5:1 statt 4.4:1).
+   Direkt unter dem Text wie bisher die Knoepfe — ein «margin-top: auto» riss
+   auf dem Desktop grosse Luecken, weil die Karte KI-Kompetenz zwei Knoepfe
+   untereinander traegt. Umbrochen wird nur beim «·»: jeder Teil steht in
+   einem eigenen <span>, der nicht bricht.
+   Wo noch kein Preis feststeht: «nach Erstgespraech». */
+.sv-card .sv-card__preis {
+  hyphens: none;
+  font-family: var(--font-mono);
+  font-size: var(--text-overline);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-badge);
+  line-height: 1.5;
+  text-transform: uppercase;
+  color: var(--terra-600);
+}
+
+.sv-card__preis span {
+  white-space: nowrap;
+}
+
 .sv-explain-item h3,
 .sv-card h3,
 .sv-detail-card h3,
