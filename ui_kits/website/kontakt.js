@@ -46,11 +46,11 @@
   }
 
   function insMailprogramm(d) {
-    var betreff = 'Anfrage über vaiacon.ch' + (d.firma ? ' — ' + d.firma : '');
+    var betreff = 'Anfrage über vaiacon.ch' + (d.firma ? ' · ' + d.firma : '');
     window.location.href = 'mailto:' + MAIL
       + '?subject=' + encodeURIComponent(betreff)
       + '&body=' + encodeURIComponent(alsText(d));
-    sagen('Ihr Mailprogramm öffnet sich mit der fertigen Nachricht — bitte dort noch auf «senden» drücken.', 'hinweis');
+    sagen('Ihr Mailprogramm öffnet sich mit der fertigen Nachricht. Bitte dort noch auf «senden» drücken.', 'hinweis');
   }
 
   formular.addEventListener('submit', function (ev) {
@@ -80,7 +80,7 @@
     }).then(function (antwort) {
       if (!antwort.ok) throw new Error('Dienst antwortet mit ' + antwort.status);
       formular.reset();
-      sagen('Danke — Ihre Nachricht ist bei uns. Wir antworten in der Regel innert eines Arbeitstages.', 'gut');
+      sagen('Danke, Ihre Nachricht ist bei uns. Wir antworten in der Regel innert eines Arbeitstages.', 'gut');
     }).catch(function () {
       // Kein Dienst erreichbar: Weg 2. Kein Fehler für den Besucher, nur ein
       // anderer Weg — die Nachricht ist ja fertig geschrieben.

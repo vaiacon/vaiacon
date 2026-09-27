@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 26.09.2026 · Eintrag 3a7e5a2 Automatisierungen: Rechenbeispiel im Abschnitt «Was es kostet»
+> Stand: 27.09.2026 · Eintrag a34aed0 Bilder leichter: Hero-Bots und Portraets als WebP
 
 ## Wie du antwortest
 
@@ -159,9 +159,9 @@ Ihre Mitarbeitenden nutzen KI nach klaren Regeln statt heimlich am eigenen Konto
 
 ### Startseite
 
-VAIACON — FÜR SCHWEIZER KMU
+VAIACON · FÜR SCHWEIZER KMU
 Digitale Sichtbarkeit und KI-Kompetenz für Schweizer KMU.
-Wir führen kleine Betriebe an KI heran — verständlich, persönlich und ohne Verkaufsdruck. Vom ersten Lernen bis zur Automation, die im Alltag trägt.
+Wir führen kleine Betriebe an KI heran: verständlich, persönlich und ohne Verkaufsdruck. Vom ersten Lernen bis zur Automation, die im Alltag trägt.
 Kostenlose Erstanalyse ↗
 Unsere Lösungen →
 WAS WIR ANBIETEN
@@ -192,7 +192,7 @@ Die kostenlose Erstanalyse zeigt in rund zehn Minuten, wo in Ihrem Betrieb der g
 Erstanalyse starten →
 WOFÜR WIR STEHEN
 KI ist für uns nicht das Produkt, sondern das Werkzeug.
-Wir verkaufen keine Technik, sondern zurückgewonnene Zeit. Wo sich etwas nicht rechnet, sagen wir das — auch wenn es uns einen Auftrag kostet. Ihre Kundendaten bleiben dort, wo sie hingehören: nach revDSG, auf Schweizer Infrastruktur.
+Wir verkaufen keine Technik, sondern zurückgewonnene Zeit. Wo sich etwas nicht rechnet, sagen wir das. Auch wenn es uns einen Auftrag kostet. Ihre Kundendaten bleiben dort, wo sie hingehören: nach revDSG, auf Schweizer Infrastruktur.
 Über uns ↗
 SO FÄNGT ES AN
 Drei Schritte, ohne Verpflichtung.
@@ -201,7 +201,7 @@ Erstgespräch
 Eine halbe Stunde. Was kostet heute am meisten Zeit, was wurde schon versucht, wo drückt es wirklich? Kostenlos.
 02
 Empfehlung
-Sie erhalten schriftlich, was wir vorschlagen — mit Aufwand und Preis. Auch dann, wenn die Empfehlung lautet, vorerst nichts zu tun.
+Sie erhalten schriftlich, was wir vorschlagen, mit Aufwand und Preis. Auch dann, wenn die Empfehlung lautet, vorerst nichts zu tun.
 03
 Umsetzung in Ihrem Tempo
 Wir fangen klein an, mit einer Sache, die trägt. Alles Weitere entscheiden Sie, wenn Sie den Nutzen gesehen haben.
@@ -311,15 +311,15 @@ Zurück zur Startseite →
 
 ### vaiaconAcademy — Selbstlernen
 
-vaiaconAcademy — KI-Weiterbildung für Schweizer KMU
+vaiaconAcademy · KI-Weiterbildung für Schweizer KMU
 VAIACON ACADEMY
 KI im Alltag. Für Schweizer KMU.
-11 Lernpfade, 58 kurze Lektionen — kostenlos, ohne Konto und ohne Anmeldung. Sie starten dort, wo es bei Ihnen brennt.
+11 Lernpfade, 58 kurze Lektionen: kostenlos, ohne Konto und ohne Anmeldung. Sie starten dort, wo es bei Ihnen brennt.
 Zu den Lernpfaden →
 Erste Lektion starten →
 DIE LERNPLÄNE
 Die 11 Lernpfade.
-11 Lernpfade, 58 Lektionen. Jeder Lernplan ist für sich abgeschlossen und dauert 20 bis 45 Minuten — Sie starten dort, wo es bei Ihnen brennt.
+11 Lernpfade, 58 Lektionen. Jeder Lernplan ist für sich abgeschlossen und dauert 20 bis 45 Minuten. Sie starten dort, wo es bei Ihnen brennt.
 Kachel anklicken für alle Lektionen
 {{ p.level }}
 {{ p.title }}
@@ -328,12 +328,12 @@ Das bringt es Ihnen
 {{ p.nutzen }}
 {{ p.meta }}
 Lektionen →
-Alle Lernpläne, alle Lektionen — offen für jeden, ohne Konto.
+Alle Lernpläne, alle Lektionen: offen für jeden, ohne Konto.
 vaiaconLearning vor Ort
 Überblick
 PERSÖNLICH VOR ORT
 Lieber gemeinsam im Raum? Das ist vaiaconLearning.
-Die Academy ist zum Selberlernen. Wenn ein ganzes Team mitkommen soll oder Fragen im Gespräch schneller geklärt sind, kommen wir zu Ihnen in den Betrieb — mit Trainings, Workshops und Coachings.
+Die Academy ist zum Selberlernen. Wenn ein ganzes Team mitkommen soll oder Fragen im Gespräch schneller geklärt sind, kommen wir zu Ihnen in den Betrieb, mit Trainings, Workshops und Coachings.
 01
 HALB- ODER GANZTAGS
 Trainings
@@ -343,7 +343,7 @@ Das ganze Team auf denselben Stand kommen soll.
 02
 EIN HALBER TAG
 Workshops
-Wir nehmen einen konkreten Ablauf — Offerten, Rapporte, Kundenmails — und bauen ihn im Raum gemeinsam mit KI um, bis er sitzt.
+Wir nehmen einen konkreten Ablauf (Offerten, Rapporte, Kundenmails) und bauen ihn im Raum gemeinsam mit KI um, bis er sitzt.
 Passend wenn
 Sie mit einer einsatzfertigen Vorlage aus dem Termin gehen wollen.
 03
@@ -353,14 +353,14 @@ Regelmässige Sessions für Unternehmer und Führungskräfte: was KI im Betrieb 
 Passend wenn
 Sie entscheiden müssen, statt Werkzeuge auszuprobieren.
 In der ganzen Deutschschweiz
-Wir kommen in Ihren Betrieb — oder online, wenn es schneller gehen muss.
+Wir kommen in Ihren Betrieb. Oder online, wenn es schneller gehen muss.
 Kostenlose Erstanalyse
 Zu vaiaconLearning
 ZUGANG
 Alles offen. Für alle.
 OFFEN · OHNE KONTO
 Die ganze Academy
-Reinschauen, ausprobieren, dranbleiben — in Ihrem Tempo.
+Reinschauen, ausprobieren, dranbleiben, in Ihrem Tempo.
 Alle Lernpfade, alle Lektionen
 Sämtliche Vorlagen, Prompt-Karten und Checklisten
 Neue Lektionen jeden Monat
@@ -379,14 +379,14 @@ Begleitung durch Menschen
 
 VAIACON LEARNING
 KI im Team. Verstanden, nicht nur eingeführt.
-vaiacon Learning bringt Ihren Mitarbeitenden bei, KI im Arbeitsalltag sicher anzuwenden — mit Trainings, Coachings und Workshops bei Ihnen im Betrieb.
+vaiacon Learning bringt Ihren Mitarbeitenden bei, KI im Arbeitsalltag sicher anzuwenden: mit Trainings, Coachings und Workshops bei Ihnen im Betrieb.
 Kostenlose Erstanalyse →
 Die Formate ansehen →
 WARUM SCHULUNG
 Werkzeuge einführen ist einfach. Sie nutzen nicht.
-Die meisten Betriebe scheitern nicht an der Technik. Sie scheitern daran, dass nach zwei Wochen niemand mehr weiss, wofür das Werkzeug gut war — und niemand fragen mag.
+Die meisten Betriebe scheitern nicht an der Technik. Sie scheitern daran, dass nach zwei Wochen niemand mehr weiss, wofür das Werkzeug gut war, und niemand fragen mag.
 Ohne Übung bleibt es beim Ausprobieren.
-Eine Vorführung reicht nicht. Erst wer an der eigenen Aufgabe übt, behält es — darum arbeiten wir mit Ihren echten Fällen, nicht mit Beispielen aus dem Lehrbuch.
+Eine Vorführung reicht nicht. Erst wer an der eigenen Aufgabe übt, behält es. Darum arbeiten wir mit Ihren echten Fällen, nicht mit Beispielen aus dem Lehrbuch.
 Unsicherheit bremst mehr als Unwissen.
 Wer nicht weiss, was er eingeben darf, lässt es lieber ganz. Wir klären die Grenzen früh, damit Ihr Team sich traut.
 Was niemand aufschreibt, geht verloren.
@@ -407,7 +407,7 @@ Vorgespräch
 Eine halbe Stunde am Telefon: Wer soll lernen, was kostet heute am meisten Zeit, was ist schon versucht worden? Kostenlos und unverbindlich.
 02
 Zuschnitt
-Wir bauen die Schulung um Ihre echten Aufgaben herum. Sie sagen uns, welche Unterlagen wir verwenden dürfen — und welche nicht.
+Wir bauen die Schulung um Ihre echten Aufgaben herum. Sie sagen uns, welche Unterlagen wir verwenden dürfen und welche nicht.
 03
 Der Tag im Betrieb
 Wir kommen zu Ihnen. Kurze Erklärungen, viel Üben, alles an Ihren Fällen. Fragen sind erwünscht, auch die vermeintlich dummen.
@@ -424,18 +424,18 @@ Zurück zur Startseite →
 
 VAIACON BOT
 Die Arbeit, die sich jede Woche wiederholt, macht der Bot.
-vaiacon Bot übernimmt, was in Ihrem Betrieb regelmässig Zeit kostet — Belege, Offerten, Korrespondenz, Anfragen. Eingerichtet bei Ihnen, zum Fixpreis.
+vaiacon Bot übernimmt, was in Ihrem Betrieb regelmässig Zeit kostet: Belege, Offerten, Korrespondenz, Anfragen. Eingerichtet bei Ihnen, zum Fixpreis.
 Kostenlose Erstanalyse →
 So läuft es ab →
 WAS SICH LOHNT
 Nicht alles gehört automatisiert.
-Es lohnt sich dort, wo etwas oft passiert, immer gleich abläuft und heute von Hand gemacht wird. Alles andere lassen wir bewusst in Ruhe — auch wenn es technisch ginge.
+Es lohnt sich dort, wo etwas oft passiert, immer gleich abläuft und heute von Hand gemacht wird. Alles andere lassen wir bewusst in Ruhe, auch wenn es technisch ginge.
 Belege und Buchhaltung
-Belege erfassen, sortieren und fürs Treuhandbüro aufbereiten. Der häufigste Einstieg — und der, bei dem die Rechnung am schnellsten aufgeht.
+Belege erfassen, sortieren und fürs Treuhandbüro aufbereiten. Der häufigste Einstieg, und der, bei dem die Rechnung am schnellsten aufgeht.
 Offerten und Korrespondenz
 Aus Stichworten wird ein Entwurf mit Ihren Positionen und Ihrer Preislogik. Standardantworten entstehen aus Bausteinen statt jedes Mal neu.
 Anfragen und Auskünfte
-Die zwanzig Fragen, die täglich kommen, beantwortet der Bot rund um die Uhr — und gibt sauber an einen Menschen ab, wenn es persönlich wird.
+Die zwanzig Fragen, die täglich kommen, beantwortet der Bot rund um die Uhr und gibt sauber an einen Menschen ab, wenn es persönlich wird.
 WAS ES KOSTET
 Ab CHF 600 pro Automation. Fixpreis.
 Den genauen Preis nennen wir nach der Erstanalyse. Sie wissen vor der Umsetzung, woran Sie sind. Eine Automation, die eine Stunde pro Woche spart, ist bei den meisten Betrieben in wenigen Monaten bezahlt. Rechnet sie sich nicht, sagen wir das.
@@ -447,22 +447,22 @@ SO LÄUFT ES AB
 Fünf Schritte, vom Gespräch bis zur Kontrolle.
 01
 Empfehlung
-Wir schauen uns Ihre Abläufe an und benennen die Prozesse mit dem grössten Entlastungspotenzial — mit Offerte und ohne Verpflichtung.
+Wir schauen uns Ihre Abläufe an und benennen die Prozesse mit dem grössten Entlastungspotenzial, mit Offerte und ohne Verpflichtung.
 02
 Priorisierung
 Gemeinsam legen wir fest, was zuerst kommt. In der Regel das Einfachste mit dem schnellsten Nutzen, nicht das Grösste.
 03
 Planung
-Wir beschreiben den Ablauf sauber, bevor gebaut wird: Auslöser, Schritte, Ergebnis, Ausnahmen — und was passiert, wenn etwas ausfällt.
+Wir beschreiben den Ablauf sauber, bevor gebaut wird: Auslöser, Schritte, Ergebnis, Ausnahmen und was passiert, wenn etwas ausfällt.
 04
 Umsetzung
 Wir richten die Automation bei Ihnen ein und zeigen Ihrem Team, wie sie läuft. Zwei Wochen läuft sie neben dem alten Weg mit, bis klar ist, dass sie trägt.
 05
 Kontrolle
-Regelmässig prüfen, ob es noch passt — auf Wunsch dauerhaft mit vaiaconService .
+Regelmässig prüfen, ob es noch passt, auf Wunsch dauerhaft mit vaiaconService .
 NÄCHSTER SCHRITT
 Zeigen Sie uns, was jede Woche Zeit frisst.
-Im Erstgespräch schauen wir gemeinsam auf Ihre Abläufe und sagen Ihnen, wo sich eine Automation lohnt — und wo nicht. Kostenlos und unverbindlich.
+Im Erstgespräch schauen wir gemeinsam auf Ihre Abläufe und sagen Ihnen, wo sich eine Automation lohnt und wo nicht. Kostenlos und unverbindlich.
 Kostenlose Erstanalyse →
 Zurück zur Startseite →
 
@@ -470,26 +470,26 @@ Zurück zur Startseite →
 
 VAIACON SERVICE
 Eingerichtet ist erst der Anfang.
-vaiacon Service hält Ihre Automationen am Laufen: Pflege, Updates, Kontrolle und Weiterentwicklung — passend zu Ihren Abläufen und Ihrem Tempo.
+vaiacon Service hält Ihre Automationen am Laufen: Pflege, Updates, Kontrolle und Weiterentwicklung, passend zu Ihren Abläufen und Ihrem Tempo.
 Kostenlose Erstanalyse →
 Die Pakete ansehen →
 WARUM BETREUUNG
 Automationen altern, wenn niemand hinschaut.
-Anbieter ändern Schnittstellen, Preise ziehen an, Abläufe im Betrieb verschieben sich. Was heute läuft, läuft in einem Jahr nicht mehr von selbst — und der Ausfall fällt oft erst auf, wenn etwas fehlt.
+Anbieter ändern Schnittstellen, Preise ziehen an, Abläufe im Betrieb verschieben sich. Was heute läuft, läuft in einem Jahr nicht mehr von selbst. Und der Ausfall fällt oft erst auf, wenn etwas fehlt.
 Jemand merkt es, bevor Sie es merken.
-Wir prüfen regelmässig, ob alles läuft. Wenn etwas klemmt, hören Sie es von uns — nicht von einem Kunden, der auf eine Antwort wartet.
+Wir prüfen regelmässig, ob alles läuft. Wenn etwas klemmt, hören Sie es von uns, nicht von einem Kunden, der auf eine Antwort wartet.
 Kleine Anpassungen ohne neues Projekt.
 Ein Feld dazu, eine Vorlage geändert, ein Empfänger neu: solche Dinge erledigen wir laufend, statt sie zu einem Auftrag aufzublasen.
 Weiterentwickeln statt stillstehen.
-Was einmal läuft, zeigt oft den nächsten Hebel. Wir bringen die Vorschläge, Sie entscheiden — und nichts wird ohne Ihr Ja gebaut.
+Was einmal läuft, zeigt oft den nächsten Hebel. Wir bringen die Vorschläge, Sie entscheiden. Nichts wird ohne Ihr Ja gebaut.
 DIE PAKETE
 Drei Stufen, monatlich kündbar.
 Für bestehende Automationen und gemeinsam aufgebaute Lösungen. Sie fangen klein an und wechseln, wenn es mehr braucht.
-BASIC — ab CHF 90 / Monat
+BASIC · ab CHF 90 / Monat
 Regelmässige Funktionsprüfung, kleine Anpassungen und E-Mail-Support. Für Betriebe mit ein bis zwei laufenden Automationen.
-STANDARD — ab CHF 190 / Monat
+STANDARD · ab CHF 190 / Monat
 Laufende Pflege und Updates, Optimierung bestehender Abläufe, Support für Ihr Team und ein periodischer Review-Termin.
-PREMIUM — ab CHF 390 / Monat
+PREMIUM · ab CHF 390 / Monat
 Proaktive Weiterentwicklung, priorisierte Betreuung, Erweiterungen und Integrationen. Für Betriebe, bei denen mehrere Abläufe zusammenspielen.
 WAS WIR TUN
 Vier Dinge, immer wieder.
@@ -498,7 +498,7 @@ Prüfen
 Läuft jede Automation noch so, wie sie soll? Gab es Ausfälle, und ist dabei etwas liegen geblieben?
 02
 Pflegen
-Updates einspielen, geänderte Schnittstellen nachziehen, Vorlagen aktuell halten. Meist merken Sie davon nichts — das ist der Sinn.
+Updates einspielen, geänderte Schnittstellen nachziehen, Vorlagen aktuell halten. Meist merken Sie davon nichts. Das ist der Sinn.
 03
 Anpassen
 Kleine Änderungen aus dem Alltag setzen wir laufend um, ohne dass daraus ein Projekt wird.
@@ -507,7 +507,7 @@ Berichten
 Sie erfahren, was geändert wurde und was aufgefallen ist. Auch dann, wenn wir etwas empfehlen, das Sie Geld spart statt uns Umsatz bringt.
 NÄCHSTER SCHRITT
 Sagen Sie uns, was heute läuft.
-Wir schauen uns Ihre bestehenden Automationen an und sagen, welches Paket passt — oder ob Sie vorerst gar keines brauchen.
+Wir schauen uns Ihre bestehenden Automationen an und sagen, welches Paket passt oder ob Sie vorerst gar keines brauchen.
 Kostenlose Erstanalyse →
 Zurück zur Startseite →
 
@@ -515,12 +515,12 @@ Zurück zur Startseite →
 
 HÄUFIGE FRAGEN
 Kurz gefragt. Klar beantwortet.
-Was Betriebe uns am häufigsten fragen — zu Kosten, Daten, Vorwissen und dem ersten Schritt. Steht Ihre Frage nicht dabei, schreiben Sie uns.
+Was Betriebe uns am häufigsten fragen: zu Kosten, Daten, Vorwissen und dem ersten Schritt. Steht Ihre Frage nicht dabei, schreiben Sie uns.
 Frage stellen →
 Zu den Antworten →
 ALLE FRAGEN
 Alles an einem Ort.
-Die Fragen von allen Seiten, nach Bereich geordnet. Auf den Seiten selbst stehen sie weiterhin dort, wo sie hingehören — hier finden Sie sie beisammen.
+Die Fragen von allen Seiten, nach Bereich geordnet. Auf den Seiten selbst stehen sie weiterhin dort, wo sie hingehören. Hier finden Sie sie beisammen.
 Allgemein
 Was macht vaiacon? +
 vaiacon befähigt Schweizer KMU, KI verständlich, persönlich und wirksam im Unternehmen einzusetzen. Wir verbinden Lernen, Automatisierung und langfristige Begleitung.
@@ -548,21 +548,21 @@ Erste Verbesserungen an Klarheit und Struktur sieht man sofort auf der Website. 
 Alles zu vaiaconVisibility →
 vaiaconAcademy
 Was ist vaiaconAcademy? +
-Unsere Selbstlern-Plattform: 11 Lernpfade mit 58 kurzen Lektionen zu KI im KMU-Alltag. Alle Lektionen sind kostenlos — kein Abo, keine Verpflichtungen. Zur Academy →
+Unsere Selbstlern-Plattform: 11 Lernpfade mit 58 kurzen Lektionen zu KI im KMU-Alltag. Alle Lektionen sind kostenlos: kein Abo, keine Verpflichtungen. Zur Academy →
 Kostet die Academy etwas? +
-Nein. Alle Lernpfade und Lektionen sind offen — ohne Konto, ohne Anmeldung, ohne versteckte Kosten. Lizenzen fremder KI-Werkzeuge sind davon nicht betroffen; wo eine nötig wird, sagen wir es vorher.
+Nein. Alle Lernpfade und Lektionen sind offen: ohne Konto, ohne Anmeldung, ohne versteckte Kosten. Lizenzen fremder KI-Werkzeuge sind davon nicht betroffen; wo eine nötig wird, sagen wir es vorher.
 Brauche ich Vorkenntnisse? +
 Nein. Lernplan 01 setzt bei null an: Sie brauchen einen Computer, Ihre eigenen Unterlagen und eine halbe Stunde Ruhe. Alles andere erklären wir unterwegs.
 Wie viel Zeit muss ich einrechnen? +
-Eine Lektion dauert 3 bis 8 Minuten. Ein ganzer Lernplan ist in einer knappen Dreiviertelstunde durch — auch in mehreren Etappen.
-Welche Werkzeuge brauche ich — und was kosten die? +
+Eine Lektion dauert 3 bis 8 Minuten. Ein ganzer Lernplan ist in einer knappen Dreiviertelstunde durch, auch in mehreren Etappen.
+Welche Werkzeuge brauche ich, und was kosten die? +
 Für den Einstieg genügt ein gängiger KI-Assistent, oft in der Gratis-Version. Wo eine Lizenz nötig wird, sagen wir es vorher und nennen die Alternative.
 Können mehrere Mitarbeitende mitlernen? +
-Ja, über den Team-Zugang. Dort sehen Sie auch, wer wo steht — ohne Notensystem, aber mit Überblick.
+Ja, über den Team-Zugang. Dort sehen Sie auch, wer wo steht: ohne Notensystem, aber mit Überblick.
 Was, wenn ich stecken bleibe? +
 Jede Lektion hat eine Frage-Ecke, und Vaia hilft bei den häufigen Stolpersteinen. Wer Begleitung im Betrieb möchte, meldet sich bei uns.
 Gibt es eine Bestätigung am Ende? +
-Pro Lernplan erhalten Sie eine Teilnahmebestätigung. Uns ist das Resultat im Betrieb wichtiger — aber für die Personalakte reicht es.
+Pro Lernplan erhalten Sie eine Teilnahmebestätigung. Uns ist das Resultat im Betrieb wichtiger, aber für die Personalakte reicht es.
 Alles zu vaiaconAcademy →
 vaiaconLearning
 Was ist vaiaconLearning? +
@@ -570,9 +570,9 @@ Trainings, Coachings und Workshops bei Ihnen im Betrieb, damit Unternehmer und T
 Braucht mein Team Vorkenntnisse? +
 Nein. Wir setzen bei null an: ein Computer, die eigenen Unterlagen, etwas Neugier. Alles andere erklären wir unterwegs, ohne Fachchinesisch.
 Wie lange dauert eine Schulung? +
-Ein Team-Training dauert einen halben Tag, eine Werkstatt zwei Stunden, ein Coaching je nach Bedarf. Länger als einen Tag am Stück schulen wir bewusst nicht — dann bleibt nichts hängen.
+Ein Team-Training dauert einen halben Tag, eine Werkstatt zwei Stunden, ein Coaching je nach Bedarf. Länger als einen Tag am Stück schulen wir bewusst nicht, sonst bleibt nichts hängen.
 Können wir zuerst selbst reinschauen? +
-Ja. In der vaiaconAcademy stehen 11 Lernpfade mit 58 Lektionen offen — kostenlos und ohne Konto. Viele Betriebe fangen dort an und holen uns danach für die Stellen, an denen es hakt.
+Ja. In der vaiaconAcademy stehen 11 Lernpfade mit 58 Lektionen offen, kostenlos und ohne Konto. Viele Betriebe fangen dort an und holen uns danach für die Stellen, an denen es hakt.
 Und wenn es nach der Schulung wieder einschläft? +
 Genau dagegen ist der Nachtermin nach vier Wochen da. Wer darüber hinaus Begleitung will, findet sie bei vaiaconService .
 Alles zu vaiaconLearning →
@@ -580,17 +580,17 @@ vaiaconBot
 Was ist vaiaconBot? +
 Unser Ansatz für wiederkehrende Büro- und Administrationsprozesse: Wir analysieren Abläufe, priorisieren Hebel und setzen passende Automatisierungen um. Zu den Automatisierungen →
 Was kostet eine Automation? +
-Eine Automation beginnt bei CHF 600. Den Fixpreis nennen wir nach der Erstanalyse — Sie wissen vor der Umsetzung, woran Sie sind. Rechnet sich eine Automation nicht, sagen wir das.
+Eine Automation beginnt bei CHF 600. Den Fixpreis nennen wir nach der Erstanalyse. Sie wissen vor der Umsetzung, woran Sie sind. Rechnet sich eine Automation nicht, sagen wir das.
 Müssen wir unsere Software wechseln? +
-In der Regel nicht. Wir verbinden, was Sie schon haben. Ein Wechsel kommt nur zur Sprache, wenn ein Werkzeug den Ablauf wirklich blockiert — und dann sagen wir vorher, was er kostet.
+In der Regel nicht. Wir verbinden, was Sie schon haben. Ein Wechsel kommt nur zur Sprache, wenn ein Werkzeug den Ablauf wirklich blockiert. Und dann sagen wir vorher, was er kostet.
 Was passiert, wenn eine Automation ausfällt? +
 Zu jeder Automation gehört ein Rückfallplan auf einer Seite: wer benachrichtigt wird, wie es von Hand weitergeht und wie Sie sehen, ob während des Ausfalls etwas liegen geblieben ist.
 Sehen Sie unsere Kundendaten? +
-Nur so weit, wie es für die Einrichtung nötig ist — und nur, was Sie freigeben. Wir arbeiten nach dem revDSG und klären vorher schriftlich, welche Daten ein Werkzeug überhaupt sehen darf.
+Nur so weit, wie es für die Einrichtung nötig ist, und nur, was Sie freigeben. Wir arbeiten nach dem revDSG und klären vorher schriftlich, welche Daten ein Werkzeug überhaupt sehen darf.
 Brauchen wir dafür technisches Wissen? +
 Nein. Wir richten es ein und zeigen es Ihrem Team. Wer tiefer verstehen will, wie es funktioniert, findet das kostenlos in der vaiaconAcademy .
 Wie lange dauert die erste Automation? +
-Von der Erstanalyse bis zum Betrieb meist wenige Wochen. Wir fangen bewusst klein an — eine Sache, die funktioniert, ist mehr wert als fünf, die halb fertig sind.
+Von der Erstanalyse bis zum Betrieb meist wenige Wochen. Wir fangen bewusst klein an: Eine Sache, die funktioniert, ist mehr wert als fünf, die halb fertig sind.
 Alles zu vaiaconBot →
 vaiaconService
 Was ist vaiaconService? +
@@ -604,11 +604,11 @@ Im Basispaket per E-Mail innert eines Arbeitstages, in den höheren Stufen schne
 Sind wir an eine Laufzeit gebunden? +
 Nein, alle drei Pakete sind monatlich kündbar. Wer nicht bleiben will, soll nicht bleiben müssen.
 Was ist nicht enthalten? +
-Neue Automationen sind ein eigener Auftrag über vaiaconBot , Schulungen laufen über vaiaconLearning . Lizenzkosten fremder Werkzeuge tragen Sie selbst — wir sagen vorher, welche nötig sind.
+Neue Automationen sind ein eigener Auftrag über vaiaconBot , Schulungen laufen über vaiaconLearning . Lizenzkosten fremder Werkzeuge tragen Sie selbst. Wir sagen vorher, welche nötig sind.
 Alles zu vaiaconService →
 NÄCHSTER SCHRITT
 Ihre Frage steht nicht dabei?
-Schreiben Sie uns. Wir antworten selbst — nicht aus einem Chatfenster, sondern als die zwei Menschen, die hier arbeiten.
+Schreiben Sie uns. Wir antworten selbst, nicht aus einem Chatfenster, sondern als die zwei Menschen, die hier arbeiten.
 hallo@vaiacon.ch ↗
 Kostenlose Erstanalyse →
 
@@ -620,7 +620,7 @@ Im unverbindlichen Erstgespräch klären wir, ob Sichtbarkeit, Schulung, Automat
 Kostenlose Erstanalyse →
 WAS SIE ERWARTET
 Ein Gespräch, kein Verkaufstermin.
-Wir hören zu, stellen Fragen und sagen ehrlich, wo wir helfen können und wo nicht. Wenn nichts davon zu Ihnen passt, sagen wir auch das — das kostet uns eine halbe Stunde und Ihnen nichts.
+Wir hören zu, stellen Fragen und sagen ehrlich, wo wir helfen können und wo nicht. Wenn nichts davon zu Ihnen passt, sagen wir auch das. Das kostet uns eine halbe Stunde und Ihnen nichts.
 01
 Sie melden sich
 Über das Formular unten oder mit einer Mail an hallo@vaiacon.ch . Ein, zwei Sätze zu Ihrem Betrieb genügen.
@@ -629,7 +629,7 @@ Das Erstgespräch
 Eine halbe Stunde am Telefon oder bei Ihnen. Was kostet heute am meisten Zeit, was wurde schon versucht, wo drückt es wirklich?
 03
 Unsere Einschätzung
-Sie erhalten schriftlich, was wir empfehlen — mit Aufwand und Preis. Auch dann, wenn die Empfehlung lautet, vorerst nichts zu tun.
+Sie erhalten schriftlich, was wir empfehlen, mit Aufwand und Preis. Auch dann, wenn die Empfehlung lautet, vorerst nichts zu tun.
 SCHREIBEN SIE UNS
 Ein paar Zeilen genügen.
 Sagen Sie uns kurz, worum es geht. Wir antworten selbst, in der Regel innert eines Arbeitstages.
@@ -639,7 +639,7 @@ E-Mail *
 Telefon
 Ihre Nachricht *
 Fangfrage
-Ihre Nachricht geht direkt an uns — auf unseren eigenen Server in der Schweiz, ohne Dienst eines Dritten. Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu bearbeiten — mehr dazu in der Datenschutzerklärung .
+Ihre Nachricht geht direkt an uns, auf unseren eigenen Server in der Schweiz, ohne Dienst eines Dritten. Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu bearbeiten. Mehr dazu in der Datenschutzerklärung .
 Nachricht senden →
 SO ERREICHEN SIE UNS
 Simpel · Klar · Persönlich
@@ -654,7 +654,7 @@ vaiacon GmbH Lehenstrasse 74 8037 Zürich
 
 RECHTLICHES
 Datenschutz und Impressum
-Wer hinter vaiacon.ch und dem Kundenportal steht und was mit Ihren Daten geschieht — kurz, vollständig und in einfacher Sprache.
+Wer hinter vaiacon.ch und dem Kundenportal steht und was mit Ihren Daten geschieht: kurz, vollständig und in einfacher Sprache.
 IMPRESSUM
 Verantwortlich für Website und Portal.
 vaiacon GmbH
@@ -664,41 +664,41 @@ Verantwortlich für Inhalt und Datenschutz im Sinne des revDSG ist die vaiacon G
 Eine Datenschutzberaterin oder ein Datenschutzberater ist für einen Betrieb unserer Grösse nicht erforderlich und darum nicht bestellt.
 DATENSCHUTZ
 Was mit Ihren Daten geschieht.
-Massgebend ist das revidierte Schweizer Datenschutzgesetz (revDSG). Wir erheben so wenig wie möglich — und erklären hier alles, was auf dieser Website und im Kundenportal tatsächlich passiert.
+Massgebend ist das revidierte Schweizer Datenschutzgesetz (revDSG). Wir erheben so wenig wie möglich und erklären hier alles, was auf dieser Website und im Kundenportal tatsächlich passiert.
 Kurz gesagt
-Diese Website verlangt kein Konto und führt keine Besucherstatistik. Sie läuft auf einem Schweizer Server. Einiges geht ins Ausland — die Schriften, die Programmbibliotheken und der Chat mit Vaia. Jedes davon ist unten einzeln erklärt, und der Abschnitt «Bekanntgabe ins Ausland» fasst zusammen, auf welcher Grundlage das geschieht.
-Diese Erklärung gilt auch für das Kundenportal unter kunden.vaiacon.ch. Dort speichern wir mehr, weil es dort nötig ist — was genau, steht weiter unten.
+Diese Website verlangt kein Konto und führt keine Besucherstatistik. Sie läuft auf einem Schweizer Server. Einiges geht ins Ausland: die Schriften, die Programmbibliotheken und der Chat mit Vaia. Jedes davon ist unten einzeln erklärt, und der Abschnitt «Bekanntgabe ins Ausland» fasst zusammen, auf welcher Grundlage das geschieht.
+Diese Erklärung gilt auch für das Kundenportal unter kunden.vaiacon.ch. Dort speichern wir mehr, weil es dort nötig ist. Was genau, steht weiter unten.
 Was beim Aufruf dieser Seite geschieht
 Die Website liegt bei Infomaniak in der Schweiz. Wir führen kein Zugriffsprotokoll und speichern keine IP-Adressen. Wer diese Seiten liest, hinterlässt bei uns also keine Spur.
 Eine einzige Ausnahme gibt es: die kurzzeitige Sperre im Chat. Sie ist beim Chat mit Vaia beschrieben.
 Schriften
 Die Schriften Quicksand und IBM Plex Mono werden beim Seitenaufruf von Google Fonts geladen. Dabei erhält Google LLC (USA) Ihre IP-Adresse und die Angabe, welche Seite Sie aufrufen. Weitere Daten übermitteln wir nicht.
-Das betrifft jede Seite dieser Website — und das Kundenportal, das dieselben Schriften lädt.
+Das betrifft jede Seite dieser Website und das Kundenportal, das dieselben Schriften lädt.
 Programmbibliotheken
 Die vaiaconAcademy und der Erstanalyse-Fragebogen laden zusätzlich zwei Programmbibliotheken (React und Babel) über das Verteilnetz unpkg.com. Auch dabei wird nur Ihre IP-Adresse übermittelt. Die übrigen Seiten brauchen das nicht.
 Chat mit Vaia
 Vaia ist ein KI-Assistent, keine Person.
 Ihre Eingabe geht zunächst an unseren Server in der Schweiz. Von dort wird sie zur Beantwortung an Anthropic (USA) weitergeleitet, den Anbieter des Sprachmodells Claude. Die Antwort nimmt denselben Weg zurück.
 Wir speichern den Gesprächsverlauf nicht. Er besteht nur in Ihrem Browser und ist verschwunden, sobald Sie die Seite schliessen oder neu laden.
-Bitte geben Sie im Chat keine Personendaten ein — keine Namen, Adressen, Gesundheits- oder Kundendaten. Für persönliche Anliegen sind wir per Mail und im Gespräch da.
-Zum Schutz vor Missbrauch ist die Zahl der Fragen je Besucher begrenzt. Dafür hält der Server Ihre IP-Adresse im Arbeitsspeicher — wie lange, steht unter «Aufbewahrung und Löschung».
+Bitte geben Sie im Chat keine Personendaten ein: keine Namen, Adressen, Gesundheits- oder Kundendaten. Für persönliche Anliegen sind wir per Mail und im Gespräch da.
+Zum Schutz vor Missbrauch ist die Zahl der Fragen je Besucher begrenzt. Dafür hält der Server Ihre IP-Adresse im Arbeitsspeicher. Wie lange, steht unter «Aufbewahrung und Löschung».
 Erstanalyse-Fragebogen
 Die Auswertung wird vollständig in Ihrem Browser berechnet. Ihre Antworten verlassen Ihr Gerät nicht.
 Während Sie den Fragebogen ausfüllen, werden die Antworten im lokalen Speicher Ihres Browsers zwischengelegt, damit nichts verloren geht, wenn Sie zwischendurch weggehen. Sobald Sie die Auswertung anfordern, wird dieser Zwischenspeicher gelöscht. Sie können ihn jederzeit selbst leeren, indem Sie die Websitedaten in Ihrem Browser löschen.
 Eine Übermittlung Ihrer Antworten an uns oder an einen Formulardienst findet zurzeit nicht statt. Sollte sich das ändern, ändern wir zuerst diese Erklärung.
 Kundenportal kunden.vaiacon.ch
 Wer bei uns ein Projekt hat, meldet sich im Kundenportal mit einem Zugangscode an und sieht dort die Vorschau seiner Website. Das Portal läuft auf demselben Schweizer Server wie diese Website.
-Anders als hier speichern wir im Portal etwas — und zwar nur das:
+Anders als hier speichern wir im Portal etwas, und zwar nur das:
 ✓ Firma und Projektname
 ✓ Name und E-Mail-Adresse der Ansprechperson
-✓ Den Zugangscode, und zwar nur verschlüsselt. Im Klartext steht er nirgends — auch wir können ihn nicht nachlesen.
+✓ Den Zugangscode, und zwar nur verschlüsselt. Im Klartext steht er nirgends. Auch wir können ihn nicht nachlesen.
 ✓ Ihre Rückmeldungen zu den Vorschauen
 ✓ Ein Zugriffsprotokoll mit IP-Adresse
 Das Zugriffsprotokoll gibt es hier, weil hinter der Anmeldung Kundendaten liegen: Wir müssen nachvollziehen können, wer wann zugegriffen hat. Wie lange es bleibt, steht unter «Aufbewahrung und Löschung».
 Jeder Kunde sieht nur sein eigenes Projekt. Ist ein Auftrag abgeschlossen und wollen Sie Ihre Daten gelöscht haben, genügt eine Mail an hallo@vaiacon.ch .
 Kontakt und Formular
 Mails an hallo@vaiacon.ch liegen beim Mail-Hosting von Infomaniak in der Schweiz. Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu bearbeiten, und geben sie nicht weiter.
-Das Kontaktformular fragt Name, E-Mail und Ihre Nachricht; Firma und Telefon sind freiwillig. Es verschickt nichts selbst: Es schreibt die Nachricht fertig und übergibt sie Ihrem eigenen Mailprogramm. Bis Sie dort auf «senden» drücken, verlässt nichts Ihr Gerät — und es ist kein Formulardienst eines Dritten beteiligt.
+Das Kontaktformular fragt Name, E-Mail und Ihre Nachricht; Firma und Telefon sind freiwillig. Es verschickt nichts selbst: Es schreibt die Nachricht fertig und übergibt sie Ihrem eigenen Mailprogramm. Bis Sie dort auf «senden» drücken, verlässt nichts Ihr Gerät, und es ist kein Formulardienst eines Dritten beteiligt.
 Eine Terminvereinbarung über einen Kalenderdienst bieten wir nicht an.
 Unsere Dienstleister
 Diese Firmen arbeiten in unserem Auftrag und kommen dabei mit Daten in Berührung. Mehr sind es nicht:
@@ -719,15 +719,15 @@ Sperre im Chat · Ihre IP-Adresse liegt kurzzeitig im Arbeitsspeicher des Server
 Ihre Eingaben und Vaias Antworten bei Anthropic · 30 Tage
 Anfragen per Mail oder Formular, aus denen kein Auftrag wird · 30 Tage
 Zugriffsprotokoll im Kundenportal · 90 Tage
-Buchhaltungsunterlagen · 10 Jahre. Das schreibt Art. 958f OR vor — daran können wir nichts ändern, auch nicht auf Wunsch.
+Buchhaltungsunterlagen · 10 Jahre. Das schreibt Art. 958f OR vor. Daran können wir nichts ändern, auch nicht auf Wunsch.
 Auf der Website selbst entsteht nichts, was aufbewahrt werden müsste: kein Zugriffsprotokoll, keine IP-Adressen.
 Ihre Rechte
 Eine Mail an hallo@vaiacon.ch genügt. Wir antworten innert 30 Tagen, und es kostet Sie nichts.
 Auskunft · Sie erfahren, welche Daten wir über Sie bearbeiten und woher sie stammen.
 Berichtigung · Stimmt etwas nicht, korrigieren wir es.
-Löschung · Wir löschen Ihre Daten, soweit wir sie nicht aufbewahren müssen — siehe «Aufbewahrung und Löschung».
+Löschung · Wir löschen Ihre Daten, soweit wir sie nicht aufbewahren müssen, siehe «Aufbewahrung und Löschung».
 Herausgabe Ihrer Daten · Sie erhalten die Daten, die Sie uns gegeben haben, in einem gängigen Dateiformat, oder wir schicken sie direkt weiter. Das steht in Art. 28 revDSG.
-Widerspruch · Sie können einer Bearbeitung widersprechen. Wir hören dann damit auf, ausser es gibt einen zwingenden Grund dagegen — den nennen wir Ihnen dann.
+Widerspruch · Sie können einer Bearbeitung widersprechen. Wir hören dann damit auf, ausser es gibt einen zwingenden Grund dagegen. Den nennen wir Ihnen dann.
 Sind Sie mit unserer Antwort nicht zufrieden, können Sie sich an den Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB) in Bern wenden.
 Änderungen
 Ändert sich an dieser Website etwas, das Ihre Daten betrifft, ändern wir diese Erklärung mit. Diese Fassung stammt vom 11. September 2026.
@@ -741,7 +741,7 @@ Zur Kontaktseite →
 
 RECHTLICHES
 Allgemeine Geschäftsbedingungen
-Was gilt, wenn Sie mit uns arbeiten — Leistungen, Vergütung, Einsatz von KI, Haftung. In der Reihenfolge und Nummerierung des Vertragsdokuments.
+Was gilt, wenn Sie mit uns arbeiten: Leistungen, Vergütung, Einsatz von KI, Haftung. In der Reihenfolge und Nummerierung des Vertragsdokuments.
 Datenschutz und Impressum →
 AGB
 Die Bedingungen im Wortlaut.

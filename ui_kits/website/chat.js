@@ -7,7 +7,7 @@
    unterste Bereich lesbar bleibt. */
 (function () {
   var BEGRUESSUNG = 'Grüezi, ich bin Vaia! Die digitale Mitarbeiterin von vaiacon. Ich beantworte gerne Ihre Fragen zu vaiacon, unseren Paketen und den ersten Schritten.';
-  var AUSWEICHTEXT = 'Das hat gerade nicht geklappt. Schreiben Sie uns bitte an hallo@vaiacon.ch — wir antworten selbst.';
+  var AUSWEICHTEXT = 'Das hat gerade nicht geklappt. Schreiben Sie uns bitte an hallo@vaiacon.ch. Wir antworten selbst.';
 
   if (document.querySelector('.vc-chat')) return;
 

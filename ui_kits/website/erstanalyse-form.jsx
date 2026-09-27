@@ -165,9 +165,9 @@ function EaSuccess({ answers, result, zugestellt }) {
       <EaKicker>Kostenlos &amp; unverbindlich</EaKicker>
       <h1 className="ea-h1">{vorname ? 'Herzlichen Dank, ' + vorname + '!' : 'Herzlichen Dank!'}</h1>
       {zugestellt ? (
-        <p className="ea-lead">Ihre Angaben sind bei uns angekommen. Wir schauen sie persönlich an und melden uns bei Ihnen — ohne Fachchinesisch und ohne Verkaufsdruck.</p>
+        <p className="ea-lead">Ihre Angaben sind bei uns angekommen. Wir schauen sie persönlich an und melden uns bei Ihnen, ohne Fachchinesisch und ohne Verkaufsdruck.</p>
       ) : (
-        <p className="ea-lead">Ihre Ersteinschätzung steht unten. Die Übermittlung an uns hat leider nicht geklappt — schreiben Sie uns bitte kurz an <a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a>, dann melden wir uns persönlich bei Ihnen.</p>
+        <p className="ea-lead">Ihre Ersteinschätzung steht unten. Die Übermittlung an uns hat leider nicht geklappt. Schreiben Sie uns bitte kurz an <a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a>, dann melden wir uns persönlich bei Ihnen.</p>
       )}
       <div className="ea-result">
         <EaKicker>Ihre Ersteinschätzung</EaKicker>
@@ -183,7 +183,7 @@ function EaSuccess({ answers, result, zugestellt }) {
           </div>
         ) : null}
         {result.vorbehalt ? <p className="ea-result-vorbehalt">{result.vorbehalt}</p> : null}
-        <p className="ea-result-vorbehalt">Bewusst konservativ gerechnet — wir versprechen lieber zu wenig als zu viel. Welche Lösungswege dahinter stecken und was sie kosten, zeigen wir Ihnen im kostenlosen Erstgespräch.</p>
+        <p className="ea-result-vorbehalt">Bewusst konservativ gerechnet: Wir versprechen lieber zu wenig als zu viel. Welche Lösungswege dahinter stecken und was sie kosten, zeigen wir Ihnen im kostenlosen Erstgespräch.</p>
       </div>
       <div className="ea-success-ctas">
         <EaButton variant="cta" arrow="→" href="../../kontakt#formular">Gespräch vereinbaren</EaButton>
@@ -266,13 +266,13 @@ function ErstanalyseApp() {
 
             <div className="ea-note">
               <p className="ea-note-title">Was Sie sofort erhalten</p>
-              <p className="ea-note-text">Stunden pro Woche, Franken pro Jahr und Ihre grössten Hebel — konservativ gerechnet. Die konkreten Lösungswege besprechen wir im kostenlosen Erstgespräch, gemeinsam und ohne Verkaufsdruck.</p>
+              <p className="ea-note-text">Stunden pro Woche, Franken pro Jahr und Ihre grössten Hebel, konservativ gerechnet. Die konkreten Lösungswege besprechen wir im kostenlosen Erstgespräch, gemeinsam und ohne Verkaufsdruck.</p>
             </div>
 
             {SECTIONS.map((s) => (
               <section key={s.number} className="ea-card">
                 <div className="ea-card-head">
-                  <EaKicker number={s.number}>{s.kicker}</EaKicker>
+                  <EaKicker>{s.number + ' · ' + s.kicker}</EaKicker>
                   {blockComplete(s, answers) ? <span className="ea-card-done">✓ vollständig</span> : null}
                 </div>
                 {s.fields.map((f) => (
@@ -287,7 +287,7 @@ function ErstanalyseApp() {
               <EaButton variant="cta" size="lg" arrow={busy ? undefined : '→'} disabled={busy} onClick={submit}>
                 {busy ? 'Ihre Antworten werden ausgewertet …' : 'Auswertung anfordern'}
               </EaButton>
-              {busy ? <p className="ea-busy-note">Einen Moment bitte — das kann bis zu einer halben Minute dauern.</p> : <p className="ea-trust">Klar · Persönlich · Ohne Verkaufsdruck</p>}
+              {busy ? <p className="ea-busy-note">Einen Moment bitte, das kann bis zu einer halben Minute dauern.</p> : <p className="ea-trust">Klar · Persönlich · Ohne Verkaufsdruck</p>}
             </div>
           </React.Fragment>
         )}

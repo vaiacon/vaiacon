@@ -1293,8 +1293,8 @@ picture {
 .sv-lead,
 .sv-hero__lead,
 .sv-steps p {
-  -webkit-hyphens: auto;
-  hyphens: auto;
+  -webkit-hyphens: manual;
+  hyphens: manual;
   overflow-wrap: break-word;
 }
 
@@ -1305,8 +1305,8 @@ picture {
    lang="de-CH" und ist die saubere Lösung — deutsche Leser erwarten sie. */
 .sv-hero h1,
 .sv-title {
-  -webkit-hyphens: auto;
-  hyphens: auto;
+  -webkit-hyphens: manual;
+  hyphens: manual;
   overflow-wrap: break-word;
 }
 

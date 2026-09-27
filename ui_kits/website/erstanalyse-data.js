@@ -13,7 +13,7 @@ window.ErstanalyseData = (function () {
       number: '01',
       kicker: 'Firmenprofil',
       fields: [
-        { name: 'Firma und Name', type: 'text', required: true, placeholder: 'Muster AG, Hans Meier', hint: 'Firma, dann Ihr Name — z.B. «Muster AG, Hans Meier»' },
+        { name: 'Firma und Name', type: 'text', required: true, placeholder: 'Muster AG, Hans Meier', hint: 'Firma, dann Ihr Name. Zum Beispiel «Muster AG, Hans Meier»' },
         { name: 'Branche und Tätigkeit', type: 'text', required: true, placeholder: 'z.B. Sanitär, Kleinbetrieb mit Notfalldienst' },
         { name: 'Mitarbeitende', type: 'radio', options: ['Nur ich', '2–5', '6–15', '16–50', 'Mehr als 50'] },
       ],
@@ -25,7 +25,7 @@ window.ErstanalyseData = (function () {
         { name: 'Büroarbeit erledigt', type: 'check', hint: 'Wer kümmert sich heute darum? Mehrfachauswahl möglich.', options: ['Ich selbst', 'Partner:in / Familie', 'Mitarbeiter:in', 'Extern (z.B. Treuhänder)'] },
         { name: 'Team-Haltung', type: 'radio', hint: 'Wie steht Ihr Team Veränderungen und neuen Tools gegenüber?', options: ['Offen und neugierig', 'Gemischt', 'Eher zurückhaltend', 'Schwer zu sagen'] },
         { name: 'KI-Schulung für', type: 'radio', hint: 'Wer soll bei Ihnen den Umgang mit KI lernen?', options: ['Das ganze Team', 'Einzelne Schlüsselpersonen', 'Erst einmal nur ich', 'Noch unklar'] },
-        { name: 'Coaching-Interesse', type: 'radio', hint: 'Wünschen Sie sich neben der Technik auch Begleitung für sich und Ihr Team — Führung, Veränderung, Entlastung?', options: ['Ja, das interessiert mich', 'Vielleicht, erzählen Sie mehr', 'Nein, im Moment nur Technik'] },
+        { name: 'Coaching-Interesse', type: 'radio', hint: 'Wünschen Sie sich neben der Technik auch Begleitung für sich und Ihr Team, etwa bei Führung, Veränderung, Entlastung?', options: ['Ja, das interessiert mich', 'Vielleicht, erzählen Sie mehr', 'Nein, im Moment nur Technik'] },
       ],
     },
     {
@@ -74,7 +74,7 @@ window.ErstanalyseData = (function () {
       fields: [
         { name: 'Wiederkehrende Aufgaben', type: 'check', hint: 'Was kommt bei Ihnen regelmässig vor? Mehrfachauswahl möglich.', options: ['Offerten schreiben', 'Rechnungen und Mahnungen', 'E-Mails beantworten', 'Terminkoordination', 'Dokumente suchen und ablegen', 'Rapporte und Arbeitszeiten erfassen', 'Belege für die Buchhaltung', 'Social Media und Werbung', 'Lohnadministration', 'Texte und Briefe formulieren'] },
         { name: 'Bürostunden pro Woche', type: 'radio', options: ['Weniger als 5', '5–10', '10–20', 'Mehr als 20'] },
-        { name: 'Grösster Zeitfresser', type: 'textarea', required: true, placeholder: 'Was frisst in Ihrem Büroalltag am meisten Zeit?', hint: 'Das einzige Feld, das wir nicht zum Ankreuzen anbieten — ein Satz genügt.' },
+        { name: 'Grösster Zeitfresser', type: 'textarea', required: true, placeholder: 'Was frisst in Ihrem Büroalltag am meisten Zeit?', hint: 'Das einzige Feld, das wir nicht zum Ankreuzen anbieten. Ein Satz genügt.' },
       ],
     },
     {
@@ -82,7 +82,7 @@ window.ErstanalyseData = (function () {
       kicker: 'Kontakt & Erwartungen',
       fields: [
         { name: 'E-Mail', type: 'text', inputType: 'email', required: true, placeholder: 'z.B. peter.muster@muster-gmbh.ch', hint: 'Für Ihre Ersteinschätzung und die Terminvereinbarung.' },
-        { name: 'Telefon', type: 'text', inputType: 'tel', placeholder: 'z.B. 079 123 45 67', hint: 'Optional — falls Sie lieber angerufen werden.' },
+        { name: 'Telefon', type: 'text', inputType: 'tel', placeholder: 'z.B. 079 123 45 67', hint: 'Optional, falls Sie lieber angerufen werden.' },
         { name: 'Zeithorizont', type: 'radio', hint: 'Wann möchten Sie etwas verändern?', options: ['So bald wie möglich', 'In den nächsten 3–6 Monaten', 'Ich möchte mich erst informieren'] },
         { name: 'Erwartungen an den Termin', type: 'textarea', placeholder: 'Optional: Was möchten Sie aus dem Erstgespräch mitnehmen?' },
       ],
