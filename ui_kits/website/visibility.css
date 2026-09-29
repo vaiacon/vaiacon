@@ -494,6 +494,37 @@ picture {
   color: var(--peach-200);
 }
 
+/* Hervorgehobene Karte mit Etikett (29.09.2026, André: «Beliebter Einstieg»
+   auf KI-Kompetenz). Rand 2px in terra-500 statt der Haarlinie, das Polster
+   um 1px kleiner, damit der Inhalt genau dort bleibt, wo er in den anderen
+   Karten steht. Das Etikett ist der Baustein «Etikett» (LabelBadge, Ton
+   peach) und sitzt mittig auf der oberen Kante; die Haarlinie trennt es vom
+   Sand. Kein Schatten: Karten auf Creme und Sand bleiben schattenlos. */
+.sv-card--hervor {
+  position: relative;
+  padding: 19px 21px;
+  border: 2px solid var(--terra-500);
+}
+
+.sv-card .sv-card__etikett {
+  position: absolute;
+  top: -1px;   /* Mitte genau auf dem 2px-Rand */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 7px 14px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  background: var(--peach-150);
+  color: var(--terra-600);
+  font-size: 11px;
+  font-weight: var(--weight-bold);
+  line-height: 1.2;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
 /* «Passt, wenn …» auf den Startseitenkarten (26.09.2026, Punkt 03 aus
    Philips Vorschlaegen): Der Kartentext sagt, was wir tun — diese Zeile,
    woran man merkt, dass es passt. Ueber die ganze Kartenbreite, abgesetzt mit
