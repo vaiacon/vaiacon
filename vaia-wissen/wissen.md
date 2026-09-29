@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 29.09.2026 · Eintrag f15a84c Academy: keine Gedankenstriche in den Lernplan-Texten
+> Stand: 29.09.2026 · Eintrag dd960c3 Vorschaubilder beim Teilen: neun neue og:image mit dem Bot der Seite
 
 ## Wie du antwortest
 
@@ -165,13 +165,8 @@ Wir führen kleine Betriebe an KI heran: verständlich, persönlich und ohne Ver
 Kostenlose Erstanalyse ↗
 Unsere Lösungen →
 WAS WIR ANBIETEN
-Mehr Sichtbarkeit. Mehr KI-Kompetenz. Mehr Effizienz. Starten Sie mit der passenden Lösung.
+Mehr KI-Kompetenz. Mehr Effizienz. Mehr Sichtbarkeit. Starten Sie mit der passenden Lösung.
 Jeder Bereich steht für sich. Sie müssen nicht alles buchen und schon gar nicht in dieser Reihenfolge.
-Sichtbarkeit
-Gefunden werden, wenn Menschen suchen und KI antwortet. SEO für Suchmaschinen, GEO für KI-Antworten .
-Passt, wenn Sie möchten, dass Ihr Unternehmen in klassischen Suchmaschinen und KI-Suchsystemen gefunden und empfohlen wird.
-Preis nach Erstgespräch
-Zu Visibility →
 KI-Kompetenz
 Selbst lernen: 11 Lernpfade mit 58 kurzen Lektionen, ohne Anmeldung. Oder gemeinsam: Trainings, Coachings und Workshops bei Ihnen im Betrieb.
 Passt, wenn Sie möchten, dass Sie und Ihre Mitarbeitenden KI verstehen, sinnvoll einsetzen und in ihren Arbeitsalltag integrieren können.
@@ -182,6 +177,11 @@ Was sich jede Woche wiederholt, läuft automatisch: Belege, Offerten, Korrespond
 Passt, wenn Sie möchten, dass wiederkehrende Aufgaben weniger Zeit kosten und Prozesse effizienter werden.
 Ab CHF 600 · Fixpreis
 Zu den Automatisierungen →
+Sichtbarkeit
+Gefunden werden, wenn Menschen suchen und KI antwortet. SEO für Suchmaschinen, GEO für KI-Antworten .
+Passt, wenn Sie möchten, dass Ihr Unternehmen in klassischen Suchmaschinen und KI-Suchsystemen gefunden und empfohlen wird.
+Preis nach Erstgespräch
+Zu Visibility →
 Begleitung
 Betreuung für alles, was läuft: Pflege, Updates, Kontrolle und Weiterentwicklung.
 Passt, wenn Sie bereits auf eine oder mehrere unserer Lösungen setzen und dabei gerne Support erhalten möchten.
@@ -532,21 +532,7 @@ Wie beginnt eine Zusammenarbeit? +
 Am Anfang steht ein unverbindliches Gespräch. Danach klären wir, ob Sichtbarkeit, Schulung, Automatisierung, Begleitung oder eine Kombination davon sinnvoll ist.
 Was passiert mit unseren Daten? +
 Wir arbeiten nach dem revDSG. Vor der Umsetzung klären wir mit Ihnen, welche Daten ein Werkzeug überhaupt sehen darf, und halten Kundendaten dort heraus, wo sie nicht hingehören.
-vaiaconVisibility
-Was ist vaiaconVisibility? +
-Sichtbarkeit im Netz: SEO für Suchmaschinen und GEO für KI-Antworten, damit Ihr Angebot gefunden und verstanden wird. Zu Visibility →
-Ist GEO einfach ein neues Wort für SEO? +
-Nein. SEO hilft vor allem bei Suchmaschinenresultaten. GEO ergänzt das: Inhalte werden so erklärt und strukturiert, dass KI-Systeme sie als klare Quelle verstehen können.
-Muss ich dafür Technik verstehen? +
-Nein. Wir erklären die Zusammenhänge einfach und kümmern uns um Struktur, Sprache und Umsetzung. Sie bringen Ihr Fachwissen ein, wir übersetzen es für Website, Suche und KI.
-Kann man Platz eins bei Google garantieren? +
-Nein, seriös nicht. Wir verbessern die Voraussetzungen: klare Inhalte, saubere Struktur und bessere Auffindbarkeit. Rankings hängen immer auch von Wettbewerb, Nachfrage und Zeit ab.
-Warum ist GEO für ein KMU relevant? +
-Weil Kunden immer häufiger KI nutzen, um Angebote zu vergleichen oder erste Empfehlungen zu erhalten. Wenn Ihre Informationen nicht klar genug sind, werden Sie dort schwerer berücksichtigt.
-Wie schnell sieht man Resultate? +
-Erste Verbesserungen an Klarheit und Struktur sieht man sofort auf der Website. Sichtbarkeit in Suchmaschinen und KI-Antworten entwickelt sich über Zeit und muss regelmässig geprüft werden.
-Alles zu vaiaconVisibility →
-vaiaconAcademy
+Kurse
 Was ist vaiaconAcademy? +
 Unsere Selbstlern-Plattform: 11 Lernpfade mit 58 kurzen Lektionen zu KI im KMU-Alltag. Alle Lektionen sind kostenlos: kein Abo, keine Verpflichtungen. Zur Academy →
 Kostet die Academy etwas? +
@@ -563,8 +549,8 @@ Was, wenn ich stecken bleibe? +
 Jede Lektion hat eine Frage-Ecke, und Vaia hilft bei den häufigen Stolpersteinen. Wer Begleitung im Betrieb möchte, meldet sich bei uns.
 Gibt es eine Bestätigung am Ende? +
 Pro Lernplan erhalten Sie eine Teilnahmebestätigung. Uns ist das Resultat im Betrieb wichtiger, aber für die Personalakte reicht es.
-Alles zu vaiaconAcademy →
-vaiaconLearning
+Zur Academy →
+Schulung im Betrieb
 Was ist vaiaconLearning? +
 Trainings, Coachings und Workshops bei Ihnen im Betrieb, damit Unternehmer und Teams KI sicher anwenden können. Zur Schulung →
 Braucht mein Team Vorkenntnisse? +
@@ -575,8 +561,8 @@ Können wir zuerst selbst reinschauen? +
 Ja. In der vaiaconAcademy stehen 11 Lernpfade mit 58 Lektionen offen, kostenlos und ohne Konto. Viele Betriebe fangen dort an und holen uns danach für die Stellen, an denen es hakt.
 Und wenn es nach der Schulung wieder einschläft? +
 Genau dagegen ist der Nachtermin nach vier Wochen da. Wer darüber hinaus Begleitung will, findet sie bei vaiaconService .
-Alles zu vaiaconLearning →
-vaiaconBot
+Zur Schulung →
+Automatisierungen
 Was ist vaiaconBot? +
 Unser Ansatz für wiederkehrende Büro- und Administrationsprozesse: Wir analysieren Abläufe, priorisieren Hebel und setzen passende Automatisierungen um. Zu den Automatisierungen →
 Was kostet eine Automation? +
@@ -591,8 +577,22 @@ Brauchen wir dafür technisches Wissen? +
 Nein. Wir richten es ein und zeigen es Ihrem Team. Wer tiefer verstehen will, wie es funktioniert, findet das kostenlos in der vaiaconAcademy .
 Wie lange dauert die erste Automation? +
 Von der Erstanalyse bis zum Betrieb meist wenige Wochen. Wir fangen bewusst klein an: Eine Sache, die funktioniert, ist mehr wert als fünf, die halb fertig sind.
-Alles zu vaiaconBot →
-vaiaconService
+Zu den Automatisierungen →
+Sichtbarkeit
+Was ist vaiaconVisibility? +
+Sichtbarkeit im Netz: SEO für Suchmaschinen und GEO für KI-Antworten, damit Ihr Angebot gefunden und verstanden wird. Zu Visibility →
+Ist GEO einfach ein neues Wort für SEO? +
+Nein. SEO hilft vor allem bei Suchmaschinenresultaten. GEO ergänzt das: Inhalte werden so erklärt und strukturiert, dass KI-Systeme sie als klare Quelle verstehen können.
+Muss ich dafür Technik verstehen? +
+Nein. Wir erklären die Zusammenhänge einfach und kümmern uns um Struktur, Sprache und Umsetzung. Sie bringen Ihr Fachwissen ein, wir übersetzen es für Website, Suche und KI.
+Kann man Platz eins bei Google garantieren? +
+Nein, seriös nicht. Wir verbessern die Voraussetzungen: klare Inhalte, saubere Struktur und bessere Auffindbarkeit. Rankings hängen immer auch von Wettbewerb, Nachfrage und Zeit ab.
+Warum ist GEO für ein KMU relevant? +
+Weil Kunden immer häufiger KI nutzen, um Angebote zu vergleichen oder erste Empfehlungen zu erhalten. Wenn Ihre Informationen nicht klar genug sind, werden Sie dort schwerer berücksichtigt.
+Wie schnell sieht man Resultate? +
+Erste Verbesserungen an Klarheit und Struktur sieht man sofort auf der Website. Sichtbarkeit in Suchmaschinen und KI-Antworten entwickelt sich über Zeit und muss regelmässig geprüft werden.
+Zu Visibility →
+Begleitung
 Was ist vaiaconService? +
 Begleitung bestehender Automatisierungen im Betrieb: Pflege, Updates, Kontrolle und Weiterentwicklung nach Bedarf. Zur Begleitung →
 Brauchen wir das überhaupt? +
@@ -605,7 +605,7 @@ Sind wir an eine Laufzeit gebunden? +
 Nein, alle drei Pakete sind monatlich kündbar. Wer nicht bleiben will, soll nicht bleiben müssen.
 Was ist nicht enthalten? +
 Neue Automationen sind ein eigener Auftrag über vaiaconBot , Schulungen laufen über vaiaconLearning . Lizenzkosten fremder Werkzeuge tragen Sie selbst. Wir sagen vorher, welche nötig sind.
-Alles zu vaiaconService →
+Zur Begleitung →
 NÄCHSTER SCHRITT
 Ihre Frage steht nicht dabei?
 Schreiben Sie uns. Wir antworten selbst, nicht aus einem Chatfenster, sondern als die zwei Menschen, die hier arbeiten.
