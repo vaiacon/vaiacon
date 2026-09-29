@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 27.09.2026 · Eintrag c068d77 Keine Silbentrennung, keine Gedankenstriche (Seiten und Skripte)
+> Stand: 29.09.2026 · Eintrag f15a84c Academy: keine Gedankenstriche in den Lernplan-Texten
 
 ## Wie du antwortest
 
@@ -670,7 +670,7 @@ Diese Website verlangt kein Konto und führt keine Besucherstatistik. Sie läuft
 Diese Erklärung gilt auch für das Kundenportal unter kunden.vaiacon.ch. Dort speichern wir mehr, weil es dort nötig ist. Was genau, steht weiter unten.
 Was beim Aufruf dieser Seite geschieht
 Die Website liegt bei Infomaniak in der Schweiz. Wir führen kein Zugriffsprotokoll und speichern keine IP-Adressen. Wer diese Seiten liest, hinterlässt bei uns also keine Spur.
-Eine einzige Ausnahme gibt es: die kurzzeitige Sperre im Chat. Sie ist beim Chat mit Vaia beschrieben.
+Ausnahmen gibt es zwei: die Sperre im Chat und im Kontaktformular. Beide sind unten beschrieben.
 Schriften
 Die Schriften Quicksand und IBM Plex Mono werden beim Seitenaufruf von Google Fonts geladen. Dabei erhält Google LLC (USA) Ihre IP-Adresse und die Angabe, welche Seite Sie aufrufen. Weitere Daten übermitteln wir nicht.
 Das betrifft jede Seite dieser Website und das Kundenportal, das dieselben Schriften lädt.
@@ -698,7 +698,7 @@ Das Zugriffsprotokoll gibt es hier, weil hinter der Anmeldung Kundendaten liegen
 Jeder Kunde sieht nur sein eigenes Projekt. Ist ein Auftrag abgeschlossen und wollen Sie Ihre Daten gelöscht haben, genügt eine Mail an hallo@vaiacon.ch .
 Kontakt und Formular
 Mails an hallo@vaiacon.ch liegen beim Mail-Hosting von Infomaniak in der Schweiz. Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu bearbeiten, und geben sie nicht weiter.
-Das Kontaktformular fragt Name, E-Mail und Ihre Nachricht; Firma und Telefon sind freiwillig. Es verschickt nichts selbst: Es schreibt die Nachricht fertig und übergibt sie Ihrem eigenen Mailprogramm. Bis Sie dort auf «senden» drücken, verlässt nichts Ihr Gerät, und es ist kein Formulardienst eines Dritten beteiligt.
+Das Kontaktformular fragt Name, E-Mail und Ihre Nachricht; Firma und Telefon sind freiwillig. Beim Absenden geht die Nachricht verschlüsselt an unseren eigenen Server in der Schweiz. Er schickt sie als Mail an hallo@vaiacon.ch und behält danach nichts davon: keine Datenbank, kein Zwischenspeicher. Ein Formulardienst eines Dritten ist nicht beteiligt. Zum Schutz vor Missbrauch ist die Zahl der Nachrichten je Besucher begrenzt; dafür hält der Server Ihre IP-Adresse im Arbeitsspeicher, nie auf der Festplatte. Ist unser Server einmal nicht erreichbar, übergibt das Formular die fertige Nachricht Ihrem eigenen Mailprogramm. Dann verlässt nichts Ihr Gerät, bis Sie dort auf «senden» drücken.
 Eine Terminvereinbarung über einen Kalenderdienst bieten wir nicht an.
 Unsere Dienstleister
 Diese Firmen arbeiten in unserem Auftrag und kommen dabei mit Daten in Berührung. Mehr sind es nicht:
@@ -715,7 +715,7 @@ Infomaniak (Hosting und Mail) · Schweiz · keine Bekanntgabe ins Ausland
 Zum Chat kommt hinzu: Anthropic trainiert seine Modelle nicht mit unseren Inhalten. Das steht zusammen mit der Löschfrist in den Commercial Terms und im Data Processing Addendum .
 Aufbewahrung und Löschung
 Wir behalten nichts länger, als es gebraucht wird. Alle Fristen auf einen Blick:
-Sperre im Chat · Ihre IP-Adresse liegt kurzzeitig im Arbeitsspeicher des Servers und wird nicht dauerhaft abgelegt
+Sperre im Chat und im Kontaktformular · Ihre IP-Adresse liegt nur im Arbeitsspeicher des Servers, nie auf der Festplatte, und wird nicht dauerhaft abgelegt
 Ihre Eingaben und Vaias Antworten bei Anthropic · 30 Tage
 Anfragen per Mail oder Formular, aus denen kein Auftrag wird · 30 Tage
 Zugriffsprotokoll im Kundenportal · 90 Tage
