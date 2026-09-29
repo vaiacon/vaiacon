@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 27.09.2026 · Eintrag a34aed0 Bilder leichter: Hero-Bots und Portraets als WebP
+> Stand: 27.09.2026 · Eintrag c068d77 Keine Silbentrennung, keine Gedankenstriche (Seiten und Skripte)
 
 ## Wie du antwortest
 
@@ -44,9 +44,9 @@ keine Anmeldung. Es gibt keinen Pro-Zugang und keinen Team-Zugang gegen Geld.
 
 ### Lernpfad 01 — Grundlagen: KI einordnen
 
-Ab der ersten Woche erledigen Sie Texte, Zusammenfassungen und Recherchen in der halben Zeit — rund 30 Minuten pro Arbeitstag, ohne dass Sie etwas installieren müssen.
+Ab der ersten Woche erledigen Sie Texte, Zusammenfassungen und Recherchen in der halben Zeit, rund 30 Minuten pro Arbeitstag, ohne dass Sie etwas installieren müssen.
 
-- Was KI heute kann — und was nicht (VIDEO, 3 Min)
+- Was KI heute kann und was nicht (VIDEO, 3 Min)
 - Welcher Assistent für welchen Zweck (VIDEO, 3 Min)
 - Das erste Gespräch mit einem Assistenten (WERKSTATT, 5 Min)
 - Gute Anweisungen: die 4 Bausteine (WERKSTATT, 7 Min)
@@ -60,14 +60,14 @@ Ab der ersten Woche erledigen Sie Texte, Zusammenfassungen und Recherchen in der
 Sie wissen, welche Kundendaten rein dürfen und welche nie. Eine einzige vermiedene Datenschutzpanne ist teurer als jede Weiterbildung.
 
 - Was Sie nie eingeben dürfen (VIDEO + CHECK, 6 Min)
-- revDSG — Was es ist und was wir darüber wissen müssen (WISSEN, 8 Min)
-- Kundendaten anonymisieren — schnell und sauber (WERKSTATT, 7 Min)
-- Auftragsbearbeitung und Cloud — wer darf Ihre Daten sehen (WISSEN, 7 Min)
+- revDSG: Was es ist und was wir darüber wissen müssen (WISSEN, 8 Min)
+- Kundendaten anonymisieren: schnell und sauber (WERKSTATT, 7 Min)
+- Auftragsbearbeitung und Cloud: wer darf Ihre Daten sehen (WISSEN, 7 Min)
 - Der Sicherheits-Check für Ihren Betrieb (ÜBUNG, 7 Min)
 
 ### Lernpfad 03 — Korrespondenz & E-Mail
 
-Aus 2 Stunden Postfach am Morgen werden 40 Minuten — mit Antworten, die klingen wie von Ihnen geschrieben.
+Aus 2 Stunden Postfach am Morgen werden 40 Minuten, mit Antworten, die klingen wie von Ihnen geschrieben.
 
 - Ihre Zeitfresser im Postfach finden (ÜBUNG, 6 Min)
 - Mails, die nach Ihnen klingen (WERKSTATT, 8 Min)
@@ -87,7 +87,7 @@ Eine Offerte in 10 Minuten statt in einer Stunde. Wer am selben Tag offeriert, g
 
 ### Lernpfad 05 — Buchhaltung & Belege
 
-Der Belegstapel fürs Treuhandbüro ist in 20 Minuten sortiert — und die Treuhandrechnung sinkt, weil die Rückfragen ausbleiben.
+Der Belegstapel fürs Treuhandbüro ist in 20 Minuten sortiert, und die Treuhandrechnung sinkt, weil die Rückfragen ausbleiben.
 
 - Belege vorsortieren fürs Treuhandbüro (WERKSTATT, 7 Min)
 - Spesen und Quittungen ohne Zettelchaos (WERKSTATT, 7 Min)
@@ -97,7 +97,7 @@ Der Belegstapel fürs Treuhandbüro ist in 20 Minuten sortiert — und die Treuh
 
 ### Lernpfad 06 — Sitzungen & Dokumentation
 
-Das Protokoll ist fertig, bevor alle den Sitzungsraum verlassen haben — inklusive Aufgabenliste mit Namen und Termin.
+Das Protokoll ist fertig, bevor alle den Sitzungsraum verlassen haben, inklusive Aufgabenliste mit Namen und Termin.
 
 - Sitzungsnotizen zu Protokollen (WERKSTATT, 7 Min)
 - Aufgaben und Termine herausziehen (WERKSTATT, 6 Min)
@@ -106,7 +106,7 @@ Das Protokoll ist fertig, bevor alle den Sitzungsraum verlassen haben — inklus
 
 ### Lernpfad 07 — Kundengewinnung & Sichtbarkeit
 
-Website-Texte und Kundenkontakte in einer Stunde pro Monat, in Ihrer Sprache — statt einem Agenturauftrag über einige Tausend Franken.
+Website-Texte und Kundenkontakte in einer Stunde pro Monat, in Ihrer Sprache, statt einem Agenturauftrag über einige Tausend Franken.
 
 - Ihre Sprache festhalten: das Tonalitäts-Profil (WERKSTATT, 7 Min)
 - Website-Texte, die nicht nach KI klingen (WERKSTATT, 8 Min)
@@ -121,13 +121,13 @@ Der vaiaconBot beantwortet die 20 häufigsten Fragen rund um die Uhr. Ihr Telefo
 
 - Die 20 häufigsten Fragen sammeln (ÜBUNG, 6 Min)
 - Ein vaiaconBot für die häufigen Fragen (WERKSTATT, 8 Min)
-- Übergabe an den Menschen — sauber geregelt (WERKSTATT, 7 Min)
+- Übergabe an den Menschen: sauber geregelt (WERKSTATT, 7 Min)
 - Telefonnotizen und Rückrufe (WERKSTATT, 6 Min)
 - Qualität prüfen: mitlesen und nachschärfen (ÜBUNG, 6 Min)
 
 ### Lernpfad 09 — Abläufe automatisieren
 
-Ein Ablauf, den Sie einmal bauen, arbeitet jede Woche weiter — typisch ein halber Arbeitstag pro Monat, den Sie zurückbekommen.
+Ein Ablauf, den Sie einmal bauen, arbeitet jede Woche weiter, typisch ein halber Arbeitstag pro Monat, den Sie zurückbekommen.
 
 - Vom Handgriff zum Prozess: sauber beschreiben (WERKSTATT, 8 Min)
 - Der erste automatische Ablauf (WERKSTATT, 8 Min)
@@ -138,11 +138,11 @@ Ein Ablauf, den Sie einmal bauen, arbeitet jede Woche weiter — typisch ein hal
 
 ### Lernpfad 10 — Zahlen & Entscheide
 
-Sie rechnen vor dem Kauf, ob sich ein Werkzeug lohnt — und stoppen Abos, die nichts bringen. Das sind schnell einige Hundert Franken im Jahr.
+Sie rechnen vor dem Kauf, ob sich ein Werkzeug lohnt, und stoppen Abos, die nichts bringen. Das sind schnell einige Hundert Franken im Jahr.
 
 - Kosten und Nutzen rechnen (ÜBUNG, 8 Min)
 - Angebote und Lizenzen vergleichen (VIDEO, 3 Min)
-- Wann sich Eigenbau lohnt — und wann nicht (VIDEO, 3 Min)
+- Wann sich Eigenbau lohnt und wann nicht (VIDEO, 3 Min)
 - Der Quartals-Entscheid: was bleibt, was fliegt (ÜBUNG, 7 Min)
 
 ### Lernpfad 11 — Team & Verantwortung
