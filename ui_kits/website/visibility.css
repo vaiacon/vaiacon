@@ -525,14 +525,15 @@ picture {
   white-space: nowrap;
 }
 
-/* Desktop (ab 1025px, drei Spalten): die hervorgehobene Karte KI-Kompetenz
-   steht in der Mitte, Automatisierungen links, Sichtbarkeit rechts
-   (30.09.2026, André). Nur die Anzeige wird umgestellt: Im Quelltext bleibt
-   KI-Kompetenz zuerst, darum steht sie auf Handy und Tablet weiter zuoberst
-   und Screenreader lesen in der Reihenfolge des Menues. */
-@media (min-width: 1025px) {
-  .sv-card-grid--three:has(.sv-card--hervor) > .sv-card--hervor + .sv-card {
-    order: -1;
+/* Reihenfolge der Startseitenkarten (30.09.2026, André): Automatisierungen,
+   KI-Kompetenz, Sichtbarkeit, Begleitung. So steht es im Quelltext, also auf jedem
+   Geraet gleich. Auf dem Desktop steht die hervorgehobene Karte damit in der
+   Mitte. Auf dem Handy stehen die Karten untereinander und das Etikett ragt
+   14px ueber die Karte hinaus; bei 16px Abstand stiesse es fast an die Karte
+   darueber, darum dort etwas mehr Luft. */
+@media (max-width: 700px) {
+  .sv-card + .sv-card--hervor {
+    margin-top: var(--space-3);
   }
 }
 

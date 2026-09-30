@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 29.09.2026 · Eintrag 4e736b0 Menue, Karten und FAQ in neuer Reihenfolge: KI-Kompetenz zuerst
+> Stand: 30.09.2026 · Eintrag 5351933 Startseite Desktop: Karte KI-Kompetenz in der Mitte
 
 ## Wie du antwortest
 
@@ -167,17 +167,17 @@ Unsere Lösungen →
 WAS WIR ANBIETEN
 Mehr KI-Kompetenz. Mehr Effizienz. Mehr Sichtbarkeit. Starten Sie mit der passenden Lösung.
 Jeder Bereich steht für sich. Sie müssen nicht alles buchen und schon gar nicht in dieser Reihenfolge.
+Automatisierungen
+Was sich jede Woche wiederholt, läuft automatisch: Belege, Offerten, Korrespondenz, Anfragen.
+Passt, wenn Sie möchten, dass wiederkehrende Aufgaben weniger Zeit kosten und Prozesse effizienter werden.
+Ab CHF 600 · Fixpreis
+Zu den Automatisierungen →
 Beliebter Einstieg
 KI-Kompetenz
 Selbst lernen: 11 Lernpfade mit 58 kurzen Lektionen, ohne Anmeldung. Oder gemeinsam: Trainings, Coachings und Workshops bei Ihnen im Betrieb.
 Passt, wenn Sie möchten, dass Sie und Ihre Mitarbeitenden KI verstehen, sinnvoll einsetzen und in ihren Arbeitsalltag integrieren können.
 Kurse kostenlos · Schulung nach Erstgespräch
 Zur Academy → Zur Schulung →
-Automatisierungen
-Was sich jede Woche wiederholt, läuft automatisch: Belege, Offerten, Korrespondenz, Anfragen.
-Passt, wenn Sie möchten, dass wiederkehrende Aufgaben weniger Zeit kosten und Prozesse effizienter werden.
-Ab CHF 600 · Fixpreis
-Zu den Automatisierungen →
 Sichtbarkeit
 Gefunden werden, wenn Menschen suchen und KI antwortet. SEO für Suchmaschinen, GEO für KI-Antworten .
 Passt, wenn Sie möchten, dass Ihr Unternehmen in klassischen Suchmaschinen und KI-Suchsystemen gefunden und empfohlen wird.
