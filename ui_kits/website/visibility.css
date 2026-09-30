@@ -525,6 +525,17 @@ picture {
   white-space: nowrap;
 }
 
+/* Desktop (ab 1025px, drei Spalten): die hervorgehobene Karte KI-Kompetenz
+   steht in der Mitte, Automatisierungen links, Sichtbarkeit rechts
+   (30.09.2026, André). Nur die Anzeige wird umgestellt: Im Quelltext bleibt
+   KI-Kompetenz zuerst, darum steht sie auf Handy und Tablet weiter zuoberst
+   und Screenreader lesen in der Reihenfolge des Menues. */
+@media (min-width: 1025px) {
+  .sv-card-grid--three:has(.sv-card--hervor) > .sv-card--hervor + .sv-card {
+    order: -1;
+  }
+}
+
 /* «Passt, wenn …» auf den Startseitenkarten (26.09.2026, Punkt 03 aus
    Philips Vorschlaegen): Der Kartentext sagt, was wir tun — diese Zeile,
    woran man merkt, dass es passt. Ueber die ganze Kartenbreite, abgesetzt mit
