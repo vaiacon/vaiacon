@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 30.09.2026 · Eintrag 5351933 Startseite Desktop: Karte KI-Kompetenz in der Mitte
+> Stand: 30.09.2026 · Eintrag 2072b24 Startseite: Karten ueberall Automatisierungen · KI-Kompetenz · Sichtbarkeit
 
 ## Wie du antwortest
 
@@ -209,7 +209,7 @@ Wir fangen klein an, mit einer Sache, die trägt. Alles Weitere entscheiden Sie,
 NÄCHSTER SCHRITT
 Welche vaiacon-Lösung passt zu Ihrem Betrieb?
 Im unverbindlichen Gespräch klären wir, ob Sichtbarkeit, Schulung, Automatisierung, Begleitung oder eine Kombination der richtige nächste Schritt ist. Simpel · Klar · Persönlich.
-Kostenlose Erstanalyse →
+Erstgespräch vereinbaren →
 
 ### Über uns
 
