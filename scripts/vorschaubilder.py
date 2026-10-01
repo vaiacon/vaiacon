@@ -95,7 +95,7 @@ VORLAGE = """<!DOCTYPE html>
 </style></head>
 <body>
   <div class="text">
-    <img class="logo" src="logo-lockup-white.png" alt="">
+    <img class="logo" src="logo-lockup-white.svg" alt="">
     <p class="kicker">{kicker}</p>
     <h1>{titel}</h1>
     <p class="adresse">vaiacon.ch</p>
@@ -113,7 +113,7 @@ def ganz(text: str) -> str:
 def bilder_bauen(nur: list[str]) -> None:
     with tempfile.TemporaryDirectory() as tmp:
         ordner = Path(tmp)
-        shutil.copy(WURZEL / "assets/logo-lockup-white.png", ordner)
+        shutil.copy(WURZEL / "assets/logo-lockup-white.svg", ordner)
         for name, (kicker, titel, bot, _) in BILDER.items():
             if name not in nur:
                 continue
