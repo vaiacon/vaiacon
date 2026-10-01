@@ -389,6 +389,11 @@ picture {
   margin-top: var(--space-11);
 }
 
+/* Knopf unter einem Kartenraster (Begleitung, Preis) */
+.sv-card-grid + .sv-actions {
+  margin-top: var(--space-11);
+}
+
 .sv-card-grid--zwei {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }

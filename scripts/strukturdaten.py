@@ -110,12 +110,12 @@ ANGEBOTE = {
             "@type": "PriceSpecification", "minPrice": 600, "priceCurrency": "CHF",
             "description": "ab CHF 600 pro Automation, Fixpreis"}}),
     "service.html": angebot(
-        "Begleitung (vaiaconService)", "Betreuung von Automatisierungen",
-        "Pflege, Updates, Kontrolle und Weiterentwicklung bestehender Automatisierungen. Drei Pakete: Basic ab CHF 90, Standard ab CHF 190, Premium ab CHF 390 im Monat, monatlich kündbar.",
+        "Begleitung (vaiaconService)", "Betreuung und Support für das gesamte Angebot",
+        "Pflege, Updates, Support und Weiterentwicklung für Automatisierungen, Sichtbarkeit und KI-Kompetenz. Ab CHF 90 im Monat, je nach Umfang, keine festen Pakete, monatlich kündbar.",
         "service", {"priceSpecification": {
             "@type": "UnitPriceSpecification", "minPrice": 90, "priceCurrency": "CHF",
             "unitCode": "MON", "unitText": "Monat",
-            "description": "ab CHF 90 pro Monat, monatlich kündbar"}}),
+            "description": "ab CHF 90 pro Monat je nach Umfang, monatlich kündbar"}}),
 }
 
 SEITEN = [
@@ -148,9 +148,9 @@ Erstanalyse (rund zehn Minuten). Rückruf innerhalb von höchstens 12 Stunden.
 - [Automatisierungen (vaiaconBot)](https://vaiacon.ch/bot): Belege, Offerten,
   Korrespondenz und Anfragen automatisieren. Ab CHF 600 pro Automation,
   Fixpreis.
-- [Begleitung (vaiaconService)](https://vaiacon.ch/service): Pflege, Updates,
-  Kontrolle und Weiterentwicklung bestehender Automatisierungen. Drei Pakete ab
-  CHF 90, 190 und 390 im Monat, monatlich kündbar.
+- [Begleitung (vaiaconService)](https://vaiacon.ch/service): Support für alles,
+  was vaiacon aufgebaut hat: Pflege, Updates, Hilfe bei Fragen und
+  Weiterentwicklung. Ab CHF 90 im Monat, je nach Umfang, monatlich kündbar.
 
 ## Über uns und Fragen
 

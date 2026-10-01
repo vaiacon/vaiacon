@@ -22,9 +22,9 @@ Erstanalyse (rund zehn Minuten). Rückruf innerhalb von höchstens 12 Stunden.
 - [Automatisierungen (vaiaconBot)](https://vaiacon.ch/bot): Belege, Offerten,
   Korrespondenz und Anfragen automatisieren. Ab CHF 600 pro Automation,
   Fixpreis.
-- [Begleitung (vaiaconService)](https://vaiacon.ch/service): Pflege, Updates,
-  Kontrolle und Weiterentwicklung bestehender Automatisierungen. Drei Pakete ab
-  CHF 90, 190 und 390 im Monat, monatlich kündbar.
+- [Begleitung (vaiaconService)](https://vaiacon.ch/service): Support für alles,
+  was vaiacon aufgebaut hat: Pflege, Updates, Hilfe bei Fragen und
+  Weiterentwicklung. Ab CHF 90 im Monat, je nach Umfang, monatlich kündbar.
 
 ## Über uns und Fragen
 

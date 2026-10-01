@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 30.09.2026 · Eintrag 2072b24 Startseite: Karten ueberall Automatisierungen · KI-Kompetenz · Sichtbarkeit
+> Stand: 30.09.2026 · Eintrag 63584c7 Startseite: unterer Knopf «Erstgespraech vereinbaren», Schlagwort zusammen
 
 ## Wie du antwortest
 
@@ -471,45 +471,58 @@ Zurück zur Startseite →
 
 VAIACON SERVICE
 Eingerichtet ist erst der Anfang.
-vaiacon Service hält Ihre Automationen am Laufen: Pflege, Updates, Kontrolle und Weiterentwicklung, passend zu Ihren Abläufen und Ihrem Tempo.
-Kostenlose Erstanalyse →
-Die Pakete ansehen →
+vaiacon Service begleitet alles, was wir für Sie aufgebaut haben. Pflege, Support und Weiterentwicklung, so viel Sie brauchen.
+Beratungsgespräch vereinbaren →
+Was es kostet →
 WARUM BETREUUNG
-Automationen altern, wenn niemand hinschaut.
-Anbieter ändern Schnittstellen, Preise ziehen an, Abläufe im Betrieb verschieben sich. Was heute läuft, läuft in einem Jahr nicht mehr von selbst. Und der Ausfall fällt oft erst auf, wenn etwas fehlt.
+Was läuft, braucht jemanden, der hinschaut.
+Anbieter ändern Schnittstellen, Suchmaschinen und KI-Systeme ändern ihre Regeln, Abläufe im Betrieb verschieben sich. Was heute gut läuft, läuft in einem Jahr nicht mehr von selbst. Und der Ausfall fällt oft erst auf, wenn etwas fehlt.
 Jemand merkt es, bevor Sie es merken.
 Wir prüfen regelmässig, ob alles läuft. Wenn etwas klemmt, hören Sie es von uns, nicht von einem Kunden, der auf eine Antwort wartet.
 Kleine Anpassungen ohne neues Projekt.
-Ein Feld dazu, eine Vorlage geändert, ein Empfänger neu: solche Dinge erledigen wir laufend, statt sie zu einem Auftrag aufzublasen.
+Ein Feld dazu, eine Vorlage geändert, ein Text auf der Website aktualisiert: solche Dinge erledigen wir laufend, statt sie zu einem Auftrag aufzublasen.
 Weiterentwickeln statt stillstehen.
-Was einmal läuft, zeigt oft den nächsten Hebel. Wir bringen die Vorschläge, Sie entscheiden. Nichts wird ohne Ihr Ja gebaut.
-DIE PAKETE
-Drei Stufen, monatlich kündbar.
-Für bestehende Automationen und gemeinsam aufgebaute Lösungen. Sie fangen klein an und wechseln, wenn es mehr braucht.
-BASIC · ab CHF 90 / Monat
-Regelmässige Funktionsprüfung, kleine Anpassungen und E-Mail-Support. Für Betriebe mit ein bis zwei laufenden Automationen.
-STANDARD · ab CHF 190 / Monat
-Laufende Pflege und Updates, Optimierung bestehender Abläufe, Support für Ihr Team und ein periodischer Review-Termin.
-PREMIUM · ab CHF 390 / Monat
-Proaktive Weiterentwicklung, priorisierte Betreuung, Erweiterungen und Integrationen. Für Betriebe, bei denen mehrere Abläufe zusammenspielen.
+Was einmal läuft, zeigt oft den nächsten Hebel. Wir bringen die Vorschläge, Sie entscheiden. Nichts wird ohne Ihre Zustimmung gebaut.
+WAS WIR BETREUEN
+Eine Anlaufstelle für unser ganzes Angebot.
+Wir passen unseren Support individuell auf Ihre Bedürfnisse an. Teilen Sie uns mit, welche Bedürfnisse Sie haben, und wir finden gemeinsam die richtige Lösung.
+Automatisierungen
+Läuft jede Automation noch so, wie sie soll? Wir spielen Updates ein, ziehen geänderte Schnittstellen nach und halten Vorlagen aktuell.
+Sichtbarkeit
+Ihr Auftritt bleibt aktuell. Wir prüfen, wie Sie in Suchmaschinen und KI-Antworten auftauchen, und bessern nach.
+KI-Kompetenz
+Fragen aus dem Alltag nach der Schulung, eine Auffrischung, wenn sich ein Werkzeug ändert: Ihr Team steht damit nicht allein da.
+WAS ES KOSTET
+Ab CHF 90 pro Monat. Je nach Umfang.
+Es gibt keine festen Pakete. Sie sagen uns, wie viel Betreuung Sie brauchen, und wir legen den Umfang gemeinsam fest. Den Monatspreis nennen wir nach dem Beratungsgespräch. Die Betreuung ist monatlich kündbar.
+Wie viel wir betreuen
+Eine Automation oder mehrere, dazu Website und Schulungen. Je mehr zusammenspielt, desto mehr gibt es zu pflegen.
+Wie oft wir hinschauen
+Von der gelegentlichen Kontrolle bis zum festen Rhythmus mit Bericht und Review-Termin .
+Wie viel Support Sie brauchen
+Von der Frage per E-Mail bis zur laufenden Betreuung Ihres Teams, mit kürzeren Reaktionszeiten.
+Beratungsgespräch vereinbaren →
 WAS WIR TUN
-Vier Dinge, immer wieder.
+Fünf Dinge, immer wieder.
 01
 Prüfen
-Läuft jede Automation noch so, wie sie soll? Gab es Ausfälle, und ist dabei etwas liegen geblieben?
+Läuft alles noch so, wie es soll? Gab es Ausfälle, und ist dabei etwas liegen geblieben?
 02
 Pflegen
-Updates einspielen, geänderte Schnittstellen nachziehen, Vorlagen aktuell halten. Meist merken Sie davon nichts. Das ist der Sinn.
+Updates einspielen, geänderte Schnittstellen nachziehen, Vorlagen und Inhalte aktuell halten. Meist merken Sie davon nichts. Das ist der Sinn.
 03
 Anpassen
 Kleine Änderungen aus dem Alltag setzen wir laufend um, ohne dass daraus ein Projekt wird.
 04
+Helfen
+Fragen aus Ihrem Team beantworten wir per E-Mail , verständlich und ohne Fachchinesisch.
+05
 Berichten
-Sie erfahren, was geändert wurde und was aufgefallen ist. Auch dann, wenn wir etwas empfehlen, das Sie Geld spart statt uns Umsatz bringt.
+Sie erfahren, was geändert wurde und was aufgefallen ist. Sie bleiben stets über alle unsere Schritte auf dem Laufenden.
 NÄCHSTER SCHRITT
-Sagen Sie uns, was heute läuft.
-Wir schauen uns Ihre bestehenden Automationen an und sagen, welches Paket passt oder ob Sie vorerst gar keines brauchen.
-Kostenlose Erstanalyse →
+Sagen Sie uns, was bei Ihnen läuft.
+Wir schauen uns gemeinsam an, an welcher Stelle bei Ihnen eine laufende Betreuung Sinn ergibt.
+Beratungsgespräch vereinbaren →
 Zurück zur Startseite →
 
 ### Häufige Fragen
@@ -595,17 +608,19 @@ Erste Verbesserungen an Klarheit und Struktur sieht man sofort auf der Website. 
 Zu Visibility →
 Begleitung
 Was ist vaiaconService? +
-Begleitung bestehender Automatisierungen im Betrieb: Pflege, Updates, Kontrolle und Weiterentwicklung nach Bedarf. Zur Begleitung →
+Support und Betreuung für alles, was wir bei Ihnen aufgebaut haben: Automationen, Sichtbarkeit und KI im Team. Pflege, Updates, Hilfe bei Fragen und Weiterentwicklung, im Umfang, den Sie brauchen. Zur Begleitung →
+Was kostet die Begleitung? +
+Ab CHF 90 pro Monat. Es gibt keine festen Pakete: Der Preis hängt davon ab, wie viel Betreuung Sie brauchen. Den Monatspreis nennen wir nach dem Beratungsgespräch.
 Brauchen wir das überhaupt? +
-Wenn Sie eine einzelne, einfache Automation haben und jemanden im Haus, der sie versteht: eher nicht. Sobald mehrere Abläufe zusammenspielen oder niemand zuständig ist, wird es sinnvoll.
+Wenn Sie eine einzelne, einfache Lösung haben und jemanden im Haus, der sie versteht: eher nicht. Sobald mehrere Abläufe zusammenspielen oder niemand zuständig ist, wird es sinnvoll.
 Betreuen Sie auch, was jemand anderes gebaut hat? +
 Ja, sofern wir hineinsehen dürfen und der Aufbau nachvollziehbar ist. Wir schauen es vorher an und sagen ehrlich, ob wir es verantworten können.
 Wie schnell reagieren Sie? +
-Im Basispaket per E-Mail innert eines Arbeitstages, in den höheren Stufen schneller und mit Vorrang. Verbindliche Zeiten halten wir im Vertrag fest, nicht in einem Werbeversprechen.
+Das legen wir mit dem Umfang fest, den Sie wählen. Verbindliche Zeiten halten wir im Vertrag fest, nicht in einem Werbeversprechen.
 Sind wir an eine Laufzeit gebunden? +
-Nein, alle drei Pakete sind monatlich kündbar. Wer nicht bleiben will, soll nicht bleiben müssen.
+Nein, die Betreuung ist monatlich kündbar. Wer nicht bleiben will, soll nicht bleiben müssen.
 Was ist nicht enthalten? +
-Neue Automationen sind ein eigener Auftrag über vaiaconBot , Schulungen laufen über vaiaconLearning . Lizenzkosten fremder Werkzeuge tragen Sie selbst. Wir sagen vorher, welche nötig sind.
+Neue Lösungen sind ein eigener Auftrag: Automationen über vaiaconBot , Sichtbarkeit über vaiaconVisibility , Schulungen über vaiaconLearning . Lizenzkosten fremder Werkzeuge tragen Sie selbst. Wir sagen vorher, welche nötig sind.
 Zur Begleitung →
 NÄCHSTER SCHRITT
 Ihre Frage steht nicht dabei?

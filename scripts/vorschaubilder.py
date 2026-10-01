@@ -1,6 +1,7 @@
 """Baut die Vorschaubilder fuers Teilen (og:image) und traegt sie in die Seiten ein.
 
     python3 scripts/vorschaubilder.py            # Bilder bauen und Seiten nachfuehren
+    python3 scripts/vorschaubilder.py begleitung # nur dieses Bild bauen (Namen wie in BILDER)
     python3 scripts/vorschaubilder.py --seiten   # nur die Seiten nachfuehren, keine Bilder
 
 Punkt 07f aus Philips Vorschlaegen vom 22.09.2026, Gestaltung von André am
@@ -54,7 +55,7 @@ BILDER = {
                      "vaiacon-buerobot-sichtbarkeit-lupe.png", "Der vaiacon-Roboter mit Lupe"),
     "schulung": ("Schulung im Betrieb", "KI-Schulung für Schweizer KMU.",
                  "vaiacon-buerobot-schulung-zeigestab.png", "Der vaiacon-Roboter mit Zeigestab"),
-    "begleitung": ("Begleitung", "Betreuung für KI und Automationen.",
+    "begleitung": ("Begleitung", "Betreuung für alles, was läuft.",
                    "vaiacon-buerobot-begleitung-kunde.png", "Der vaiacon-Roboter begleitet eine Kundin"),
     "ueber-uns": ("Über uns", "Die Menschen hinter vaiacon.",
                   "vaiacon-buerobot-ueber-uns-willkommen.png", "Der vaiacon-Roboter heisst Sie willkommen"),
@@ -109,11 +110,13 @@ def ganz(text: str) -> str:
     return re.sub(r"(\S+-\S+)", r'<span class="ganz">\1</span>', html.escape(text))
 
 
-def bilder_bauen() -> None:
+def bilder_bauen(nur: list[str]) -> None:
     with tempfile.TemporaryDirectory() as tmp:
         ordner = Path(tmp)
         shutil.copy(WURZEL / "assets/logo-lockup-white.png", ordner)
         for name, (kicker, titel, bot, _) in BILDER.items():
+            if name not in nur:
+                continue
             shutil.copy(WURZEL / "assets" / bot, ordner)
             (ordner / f"{name}.html").write_text(
                 VORLAGE.format(kicker=html.escape(kicker), titel=ganz(titel), bot=bot), encoding="utf-8")
@@ -127,7 +130,7 @@ def bilder_bauen() -> None:
         threading.Thread(target=server.serve_forever, daemon=True).start()
         port = server.server_address[1]
         try:
-            for name in BILDER:
+            for name in nur:
                 roh = ordner / f"{name}-roh.png"
                 subprocess.run(["swift", str(WURZEL / "scripts/webkit_probe.swift"),
                                 f"http://127.0.0.1:{port}/{name}.html", "1200", "630", str(roh)],
@@ -165,7 +168,7 @@ def seiten_nachfuehren() -> None:
 
 def main() -> None:
     if "--seiten" not in sys.argv:
-        bilder_bauen()
+        bilder_bauen([a for a in sys.argv[1:] if a in BILDER] or list(BILDER))
     seiten_nachfuehren()
 
 
