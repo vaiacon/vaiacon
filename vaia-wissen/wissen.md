@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 02.10.2026 · Eintrag 1adca69 Modul 04: Mailzahl korrigiert, Preislogik als Uebung
+> Stand: 02.10.2026 · Eintrag 0d419ff Academy: KI-Bezug in 12 Werkstatt-Lektionen nachgeschaerft
 
 ## Wie du antwortest
 
