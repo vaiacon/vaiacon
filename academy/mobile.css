@@ -6,6 +6,16 @@
     align-items: start !important;
   }
 
+  /* Auf dem Handy stand die Seitenleiste (jetzt das Learning-Journey-Bild)
+     im Quelltext nach der ganzen Lektionsliste und den Vorlagen-Knöpfen —
+     wer nicht bis ganz nach unten scrollte, sah sie nie. Die Spalte
+     rutscht darum vor die Lektionsliste; «order» wirkt im Raster wie im
+     Flexbox. */
+  [data-m="split"] > aside {
+    order: -1;
+    position: static !important;
+  }
+
   section:not(#top):not(.sv-hero) {
     padding-top: 62px !important;
     padding-bottom: 62px !important;
