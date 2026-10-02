@@ -288,32 +288,10 @@
     </div>
   </section>
 
-  <!-- ═══ 03 · ZUGANG ═══ -->
+  <!-- ═══ 03 · LERNWEG ═══ -->
   <section id="zugang" style="background:var(--cream-100); padding:96px 32px">
-    <div style="max-width:1160px; margin:0 auto; display:flex; flex-direction:column; gap:46px">
-      <div style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:20px">
-        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.Kicker" hint-size="auto,20px">ZUGANG</x-import>
-        <h2 style="margin:0; font-size:var(--text-h2); font-weight:600; letter-spacing:-0.03em; line-height:1.06; max-width:22ch; text-wrap:pretty">Alles offen. Für alle.</h2>
-      </div>
-
-      <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr)); gap:24px; align-items:stretch">
-        <article style="background:var(--cream-card); border:1px solid var(--border-strong); border-radius:26px; padding:40px 38px; box-sizing:border-box; display:flex; flex-direction:column; gap:20px">
-          <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.LabelBadge" hint-size="auto,26px">OFFEN · OHNE KONTO</x-import>
-          <div style="display:flex; flex-direction:column; gap:8px">
-            <h3 style="margin:0; font-size:30px; font-weight:600; letter-spacing:-0.02em">Die ganze Academy</h3>
-            <span style="font-size:15px; line-height:1.55; color:var(--text-body)">Reinschauen, ausprobieren, dranbleiben, in Ihrem Tempo.</span>
-          </div>
-          <ul style="display:flex; flex-direction:column; gap:12px; list-style:none; margin:4px 0; padding:0">
-            <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" hint-size="100%,26px">Alle Lernpfade, alle Lektionen</x-import>
-            <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" hint-size="100%,26px">Sämtliche Vorlagen, Prompt-Karten und Checklisten</x-import>
-            <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" hint-size="100%,26px">Neue Lektionen jeden Monat</x-import>
-            <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" hint-size="100%,26px">Erstanalyse für Ihren Betrieb</x-import>
-            <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.CheckItem" hint-size="100%,26px">Merkblatt Datenschutz (revDSG)</x-import>
-          </ul>
-        </article>
-
-        <x-import component-from-global-scope="vaiaconDesignSystem_5f353f.PackageCard" variant="terra" badge="TEAM & BEGLEITUNG" title="Begleitung im Betrieb" subtitle="Für Betriebe, die es gemeinsam einführen wollen. Auf Anfrage." features="{{ teamFeatures }}" hint-size="100%,520px"></x-import>
-      </div>
+    <div style="max-width:1160px; margin:0 auto; display:flex; justify-content:center">
+      <img src="assets/academy-learning-journey.jpg" alt="Beispiel einer Learning Journey: zehn Schritte von der Ausgangslage über Ziele, Pilot und Vor-Ort-Begleitung bis zur Veränderung im Team." style="width:100%; max-width:480px; height:auto; border-radius:26px; display:block">
     </div>
   </section>
 
@@ -380,13 +358,6 @@ class Component extends DCLogic {
           : pl.lessons.length + ' LEKTIONEN · ' + pl.hours,
       })),
 
-      teamFeatures: [
-        'Bis zehn Zugänge, ein Überblick fürs Team',
-        'Kick-off-Workshop mit André oder Philip',
-        'Eine Lektion auf Ihren Betrieb zugeschnitten',
-        'Monatliche Sprechstunde (30 Min)',
-        'Erstanalyse und KI-Richtlinie inklusive',
-      ],
     };
   }
 }
