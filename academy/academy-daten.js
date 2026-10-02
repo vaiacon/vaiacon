@@ -447,7 +447,7 @@ window.ACADEMY_PLANS = [
     lead: 'Website-Texte, Anfragen, Referenzen und ein Rhythmus, den Sie auch im Frühling halten. Alles in Ihrer Sprache und mit einer klaren Grenze, was Chefsache bleibt.',
     bild: 'Bild: Handwerker mit Kunde vor Ort',
     img: 'assets/lernplan-07.png',
-    takeaways: ['Tonalitäts-Profil', 'Textgerüst für Leistungsseiten', 'Referenz-Anfrage (Vorlage)'],
+    takeaways: ['Tonalitäts-Profil', 'Floskel-Filter für Website-Texte', 'Referenz-Anfrage (Vorlage)'],
     lessons: [
       ['Ihre Sprache festhalten: das Tonalitäts-Profil', 'WERKSTATT', '7 Min', {
         absaetze: [
@@ -481,7 +481,7 @@ window.ACADEMY_PLANS = [
         punkte: [
           '3 Fragen, die Sie jeder Anfrage stellen: Was, bis wann, welcher Rahmen?',
           'Wer auf keine davon antwortet, ist noch nicht so weit.',
-          'Lassen Sie eingehende Anfragen zusammenfassen und einordnen.',
+          'Lassen Sie eingehende Anfragen vom Assistenten zusammenfassen und einordnen.',
           'Eine höfliche Absage kostet 2 Minuten und spart 10 Stunden.',
         ],
         uebung: 'Bauen Sie eine Rückfrage-Vorlage mit Ihren 3 Fragen und setzen Sie sie bei der nächsten unklaren Anfrage ein.',
