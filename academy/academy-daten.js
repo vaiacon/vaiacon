@@ -598,6 +598,7 @@ window.ACADEMY_PLANS = [
         absaetze: [
           'Bevor irgendetwas automatisiert wird, muss der Ablauf aufgeschrieben sein. Wer das überspringt, automatisiert das Chaos und wundert sich.',
           'Ein guter Steckbrief passt auf eine Seite und ist auch für jemanden verständlich, der den Ablauf nicht kennt.',
+          'Ein Beispiel: Eine Kundenmail kommt rein (Auslöser). Ein KI-Baustein wie aus Lernplan 03 liest sie und schreibt einen Antwortentwurf, eine Mitarbeiterin prüft und schickt ab (Schritte). Die Mail ist beantwortet (Ergebnis). KI passt genau dort in den Ablauf, wo bisher ein Mensch urteilen oder formulieren musste, nicht dort, wo nur Daten weitergereicht werden.',
         ],
         punkte: [
           'Auslöser: Was passiert, damit es losgeht?',
