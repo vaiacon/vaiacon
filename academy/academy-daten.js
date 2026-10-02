@@ -399,7 +399,7 @@ window.ACADEMY_PLANS = [
           'Was unklar bleibt, markieren Sie als offen, statt es wegzuformulieren.',
           'Personendaten heraus, bevor der Text in ein Werkzeug geht.',
         ],
-        uebung: 'Machen Sie aus den Notizen Ihrer letzten Sitzung ein Protokoll und schicken Sie es den Teilnehmenden.',
+        uebung: 'Machen Sie aus den Notizen Ihrer letzten Sitzung ein Protokoll, schicken Sie es den Teilnehmenden und heben Sie die Gliederung als Vorlage für die nächste Sitzung auf.',
       }],
       ['Aufgaben und Termine herausziehen', 'WERKSTATT', '6 Min', {
         absaetze: [
@@ -411,7 +411,7 @@ window.ACADEMY_PLANS = [
           'Die Liste kommt an den Anfang des Protokolls, nicht ans Ende.',
           'Beim nächsten Mal ist der erste Punkt: Was ist aus der Liste geworden?',
         ],
-        uebung: 'Ziehen Sie aus Ihrem letzten Protokoll alle Aufgaben heraus und ergänzen Sie fehlende Namen und Fristen.',
+        uebung: 'Lassen Sie aus Ihrem letzten Protokoll alle Aufgaben herausziehen und ergänzen Sie fehlende Namen und Fristen. Was funktioniert hat, heben Sie als Prompt auf.',
       }],
       ['Wissen festhalten: das Betriebshandbuch', 'WERKSTATT', '7 Min', {
         absaetze: [
