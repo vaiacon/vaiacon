@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 30.09.2026 · Eintrag 63584c7 Startseite: unterer Knopf «Erstgespraech vereinbaren», Schlagwort zusammen
+> Stand: 01.10.2026 · Eintrag c6bf364 Logo aus Vektor-Master: scharf in jeder Groesse, SVG in den Seiten
 
 ## Wie du antwortest
 
