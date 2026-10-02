@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 02.10.2026 · Eintrag 993948d Academy: Journey-Bild auf dem Handy vor die Lektionen gezogen
+> Stand: 03.10.2026 · Eintrag 9d71a27 Academy: Klick aufs Bot-Bild fuehrt jetzt zu den Lektionen
 
 ## Wie du antwortest
 
