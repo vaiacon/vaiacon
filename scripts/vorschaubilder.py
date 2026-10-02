@@ -56,7 +56,7 @@ BILDER = {
     "schulung": ("Schulung im Betrieb", "KI-Schulung für Schweizer KMU.",
                  "vaiacon-buerobot-schulung-zeigestab.png", "Der vaiacon-Roboter mit Zeigestab"),
     "begleitung": ("Begleitung", "Betreuung für alles, was läuft.",
-                   "vaiacon-buerobot-begleitung-kunde.png", "Der vaiacon-Roboter begleitet eine Kundin"),
+                   "vaiacon-buerobot-begleitung-laptop.png", "Der vaiacon-Roboter sitzt am Laptop"),
     "ueber-uns": ("Über uns", "Die Menschen hinter vaiacon.",
                   "vaiacon-buerobot-ueber-uns-willkommen.png", "Der vaiacon-Roboter heisst Sie willkommen"),
     "academy": ("Kurse", "KI-Weiterbildung für Schweizer KMU.",

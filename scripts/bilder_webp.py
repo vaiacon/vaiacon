@@ -30,7 +30,7 @@ BILDER = {
     "assets/vaiacon-buerobot-automatisierung-zahnrad.png": (616, None),
     "assets/vaiacon-buerobot-sichtbarkeit-lupe.png": (616, None),
     "assets/vaiacon-buerobot-schulung-zeigestab.png": (616, None),
-    "assets/vaiacon-buerobot-begleitung-kunde.png": (616, None),
+    "assets/vaiacon-buerobot-begleitung-laptop.png": (616, None),
     "assets/vaiacon-buerobot-ueber-uns-willkommen.png": (616, None),
     "assets/vaiacon-buerobot-academy-schreibtisch.png": (616, None),
     "assets/andre-ulrich-team.png": (None, 1200),
