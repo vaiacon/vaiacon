@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 01.10.2026 · Eintrag c6bf364 Logo aus Vektor-Master: scharf in jeder Groesse, SVG in den Seiten
+> Stand: 02.10.2026 · Eintrag 1adca69 Modul 04: Mailzahl korrigiert, Preislogik als Uebung
 
 ## Wie du antwortest
 
@@ -80,7 +80,7 @@ Aus 2 Stunden Postfach am Morgen werden 40 Minuten, mit Antworten, die klingen w
 Eine Offerte in 10 Minuten statt in einer Stunde. Wer am selben Tag offeriert, gewinnt mehr Aufträge.
 
 - Offerten aus Stichworten (WERKSTATT, 8 Min)
-- Ihre Preislogik hinterlegen (WERKSTATT, 7 Min)
+- Ihre Preislogik hinterlegen (ÜBUNG, 7 Min)
 - Leistungsbeschriebe, die überzeugen (WERKSTATT, 7 Min)
 - Nachfassen ohne Verkaufsdruck (WERKSTATT, 7 Min)
 - Auftragsbestätigung und Übergabe (WERKSTATT, 6 Min)
