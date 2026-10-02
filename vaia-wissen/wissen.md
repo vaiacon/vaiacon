@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 03.10.2026 · Eintrag 9d71a27 Academy: Klick aufs Bot-Bild fuehrt jetzt zu den Lektionen
+> Stand: 03.10.2026 · Eintrag bbef833 Modul 09: konkretes Beispiel, wo KI im Ablauf sitzt
 
 ## Wie du antwortest
 
@@ -130,8 +130,8 @@ Der vaiaconBot beantwortet die 20 häufigsten Fragen rund um die Uhr. Ihr Telefo
 Ein Ablauf, den Sie einmal bauen, arbeitet jede Woche weiter, typisch ein halber Arbeitstag pro Monat, den Sie zurückbekommen.
 
 - Vom Handgriff zum Prozess: sauber beschreiben (WERKSTATT, 8 Min)
-- Der erste automatische Ablauf (WERKSTATT, 8 Min)
 - Verbindungen ohne Programmieren (WERKSTATT, 8 Min)
+- Der erste automatische Ablauf (WERKSTATT, 8 Min)
 - Daten sauber halten (WERKSTATT, 7 Min)
 - Wenn es schiefgeht: der Rückfallplan (WERKSTATT, 6 Min)
 - Aus einem Ablauf 10 machen (ÜBUNG, 8 Min)
