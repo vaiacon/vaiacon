@@ -195,7 +195,7 @@
       <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr)); gap:24px">
         <sc-for list="{{ tiles }}" as="p" hint-placeholder-count="12">
           <a href="{{ p.href }}" style-hover="transform:translateY(-6px)" style="display:flex; flex-direction:column; background:var(--cream-card); border:1px solid var(--border-strong); border-radius:24px; overflow:hidden; text-decoration:none; color:inherit; transition:transform 0.4s var(--ease-spring)">
-            <div onClick="{{ stopLink }}" style="aspect-ratio:4/3; background:var(--sand-200); border-bottom:1px solid var(--border-strong)">
+            <div style="aspect-ratio:4/3; background:var(--sand-200); border-bottom:1px solid var(--border-strong)">
               <image-slot id="{{ p.slotId }}" src="{{ p.img }}" shape="rect" fit="cover" placeholder="{{ p.bild }}"></image-slot>
             </div>
             <div style="padding:22px 24px 20px; display:flex; flex-direction:column; gap:11px; flex:1">
@@ -338,8 +338,6 @@ class Component extends DCLogic {
     return {
       videoNote: this.state.videoNote,
       toggleVideo: () => this.setState((s) => ({ videoNote: !s.videoNote })),
-
-      stopLink: (ev) => { ev.preventDefault(); ev.stopPropagation(); },
 
       tiles: plans().map((pl) => ({
         n: pl.n,
