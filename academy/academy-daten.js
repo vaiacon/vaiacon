@@ -210,11 +210,11 @@ window.ACADEMY_PLANS = [
       }],
       ['Standardantworten als Bausteine', 'WERKSTATT', '7 Min', {
         absaetze: [
-          '80 % Ihrer Antworten sind Varianten zwischen 5 bis 10 Grundtexten. Wer einmal sauber baut, braucht danach nur noch zu ergänzen.',
+          '80 % Ihrer Antworten sind Varianten zwischen 5 bis 10 Grundtexten. Wer einmal sauber baut, braucht danach nur noch zu ergänzen. Der Assistent übernimmt das Bauen, wenn Sie ihm zeigen, wie Ihre guten Antworten aussehen.',
         ],
         punkte: [
           'Suchen Sie im Gesendet-Ordner nach dem, was Sie am häufigsten schreiben.',
-          'Bauen Sie je einen Baustein mit Platzhaltern: [Kunde], [Termin], [Betrag].',
+          'Legen Sie dem Assistenten 2 bis 3 eigene Beispiele bei und lassen Sie daraus einen Baustein mit Platzhaltern bauen: [Kunde], [Termin], [Betrag].',
           'Ein Baustein ist fertig, wenn er ohne Nachdenken einsetzbar ist.',
           'Legen Sie den Baustein dort ab, wo auch Ihre Stellvertretung ihn findet.',
         ],
@@ -285,16 +285,16 @@ window.ACADEMY_PLANS = [
           'Die meisten Leistungsbeschriebe listen auf, was gemacht wird. Kunden entscheiden aber danach, was sie davon haben. Der Unterschied kostet Aufträge.',
         ],
         punkte: [
-          'Zu jeder Position ein Satz: Was hat der Kunde davon?',
+          'Nennen Sie dem Assistenten die Position und wofür sie gut ist. Er formuliert den Satz dazu.',
           'Fachbegriffe erklären oder weglassen. Nicht stehen lassen.',
           'Was nicht enthalten ist, gehört genauso hinein wie das Enthaltene.',
           'Lassen Sie den Text von jemandem lesen, der Ihr Gewerbe nicht kennt.',
         ],
-        uebung: 'Nehmen Sie 3 Positionen Ihrer letzten Offerte und schreiben Sie zu jeder den Nutzen dazu.',
+        uebung: 'Nehmen Sie 3 Positionen Ihrer letzten Offerte und lassen Sie zu jeder den Nutzen formulieren.',
       }],
       ['Nachfassen ohne Verkaufsdruck', 'WERKSTATT', '7 Min', {
         absaetze: [
-          'Die meisten Offerten werden nicht abgelehnt, sondern vergessen. Ein freundliches Nachfassen nach einer Woche holt einen Teil davon zurück, vorausgesetzt, es klingt nicht nach Verkauf.',
+          'Die meisten Offerten werden nicht abgelehnt, sondern vergessen. Ein freundliches Nachfassen nach einer Woche holt einen Teil davon zurück, vorausgesetzt, es klingt nicht nach Verkauf. Lassen Sie beide Mails vom Assistenten entwerfen, dann klingen sie gleich und Sie müssen nicht jedes Mal neu formulieren.',
         ],
         punkte: [
           'Erste Nachfrage nach 7 Tagen, kurz und ohne Vorwurf.',
@@ -309,12 +309,12 @@ window.ACADEMY_PLANS = [
           'Zwischen dem Ja des Kunden und dem Start der Arbeit gehen die meisten Missverständnisse verloren und tauchen später als Streit wieder auf. Eine Bestätigung, die Umfang, Termin und Ansprechpartner festhält, kostet 5 Minuten.',
         ],
         punkte: [
-          'Halten Sie fest, was vereinbart ist und was ausdrücklich nicht.',
-          'Nennen Sie einen Termin oder wenigstens eine Kalenderwoche.',
+          'Diktieren Sie dem Assistenten die Eckpunkte: Umfang, Termin, Ansprechpartner. Er baut daraus den Text.',
+          'Prüfen Sie, ob alles festgehalten ist, was vereinbart ist, und was ausdrücklich nicht.',
           'Benennen Sie beidseits eine Person, die entscheidet.',
           'Schicken Sie die Bestätigung, bevor Sie anfangen. Nicht danach.',
         ],
-        uebung: 'Bauen Sie eine Vorlage für die Auftragsbestätigung mit Platzhaltern und verwenden Sie sie beim nächsten Auftrag.',
+        uebung: 'Lassen Sie aus Ihren Stichworten eine Vorlage für die Auftragsbestätigung entwerfen und verwenden Sie sie beim nächsten Auftrag.',
       }],
     ],
   },
@@ -332,9 +332,9 @@ window.ACADEMY_PLANS = [
           'Treuhandbüros rechnen nach Aufwand. Ein sortierter Stapel kostet weniger als ein Schuhkarton. Der Unterschied steht am Jahresende auf der Rechnung.',
         ],
         punkte: [
-          'Sortieren Sie nach Monat, dann nach Art: Einkauf, Spesen, Fahrzeug.',
           'Fotografieren Sie Belege am selben Tag. Später findet niemand sie.',
-          'Unklare Belege markieren Sie sofort mit einer Notiz, was es war.',
+          'Lassen Sie Datum, Betrag und Art vom Assistenten aus dem Foto herauslesen und nach Monat sortieren.',
+          'Unklare Belege markieren Sie sofort mit einer Notiz, was es war. Das weiss kein Werkzeug.',
           'Was fehlt, notieren Sie in einer Liste statt es zu suchen.',
         ],
         uebung: 'Sortieren Sie den laufenden Monat nach diesem Muster und fragen Sie Ihr Treuhandbüro, ob es so passt.',
@@ -346,7 +346,7 @@ window.ACADEMY_PLANS = [
         punkte: [
           'Foto der Quittung, dazu ein Satz: Was, für wen, warum.',
           'Ein fester Ort für alles. Nicht 3.',
-          'Einmal pro Woche zusammenfassen lassen und prüfen.',
+          'Einmal pro Woche vom Assistenten zusammenfassen lassen und prüfen.',
           'Was steuerlich zählt, klären Sie einmal mit dem Treuhandbüro, nicht mit dem Assistenten.',
         ],
         uebung: 'Erfassen Sie eine Woche lang jede Ausgabe am selben Tag. Wenn das steht, steht das Wichtigste.',
@@ -359,9 +359,10 @@ window.ACADEMY_PLANS = [
           'Ein fixer Tag im Monat für den Abgleich offener Posten.',
           'Erste Erinnerung freundlich, nach 30 Tagen.',
           'Zweite nach 14 Tagen, mit Frist und Konsequenz.',
-          'Vorlagen für alle Stufen bereithalten, damit es nicht am Formulieren scheitert.',
+          'Dritte nach weiteren 10 Tagen, mit Ankündigung der Betreibung.',
+          'Lassen Sie sich Vorlagen für alle Stufen entwerfen, damit es nicht am Formulieren scheitert.',
         ],
-        uebung: 'Legen Sie die 3 Mahnstufen als Vorlagen an und tragen Sie den monatlichen Termin ein.',
+        uebung: 'Lassen Sie die 3 Mahnstufen als Vorlagen entwerfen und tragen Sie den monatlichen Termin ein.',
       }],
       ['Monatsabschluss in einer halben Stunde', 'WERKSTATT', '8 Min', {
         absaetze: [
@@ -371,7 +372,7 @@ window.ACADEMY_PLANS = [
         punkte: [
           'Belege vollständig? Was fehlt, wird notiert, nicht gesucht.',
           'Offene Rechnungen und Zahlungseingänge gegeneinander halten.',
-          'Auffälligkeiten in 2 Sätzen festhalten.',
+          'Lassen Sie sich Auffälligkeiten in 2 Sätzen zusammenfassen und prüfen Sie sie.',
           'Eine Zahl, die Sie jeden Monat verfolgen. Nur eine.',
         ],
         uebung: 'Machen Sie den Abschluss für den letzten Monat nach diesem Muster und stoppen Sie die Zeit.',
@@ -405,8 +406,8 @@ window.ACADEMY_PLANS = [
           'In jedem Protokoll stecken Aufgaben, aber sie stehen mitten im Text und werden übersehen. Sie gehören herausgezogen, mit Namen und Datum.',
         ],
         punkte: [
-          'Jede Aufgabe braucht eine Person. «Wir» ist niemand.',
-          'Jede Aufgabe braucht ein Datum. «Bald» ist kein Datum.',
+          'Lassen Sie sich aus dem Protokoll alle Aufgaben mit Person und Datum herausziehen.',
+          'Was ohne Person oder Datum herauskommt, ergänzen Sie von Hand. «Wir» ist niemand, «bald» ist kein Datum.',
           'Die Liste kommt an den Anfang des Protokolls, nicht ans Ende.',
           'Beim nächsten Mal ist der erste Punkt: Was ist aus der Liste geworden?',
         ],
@@ -418,7 +419,7 @@ window.ACADEMY_PLANS = [
           'Ein Handbuch entsteht nicht an einem Tag. Es entsteht, indem man jedes Mal aufschreibt, was man ohnehin gerade erklärt.',
         ],
         punkte: [
-          'Beim nächsten Erklären mitschreiben lassen und daraus einen Text machen.',
+          'Beim nächsten Erklären mitschreiben oder aufnehmen, der Assistent macht daraus den sauberen Text.',
           'Ein Ablauf pro Seite. Kurz, mit Bildern wo nötig.',
           'Datum drauf, damit man Veraltetes erkennt.',
           'An einem Ort, den alle finden, nicht auf einem Rechner.',
@@ -459,7 +460,7 @@ window.ACADEMY_PLANS = [
           '2 eigene Texte als Muster, die es gut treffen.',
           'Ein Satz dazu, was uns von den anderen im Gewerbe unterscheidet.',
         ],
-        uebung: 'Schreiben Sie das Profil auf eine halbe Seite und legen Sie es künftig jeder Textaufgabe bei.',
+        uebung: 'Schreiben Sie das Profil auf eine halbe Seite und legen Sie es künftig jeder Textaufgabe für den Assistenten bei.',
       }],
       ['Website-Texte, die nicht nach KI klingen', 'WERKSTATT', '8 Min', {
         absaetze: [
@@ -563,7 +564,7 @@ window.ACADEMY_PLANS = [
         ],
         punkte: [
           'Notieren Sie immer dasselbe: wer, wann, worum, bis wann zurück.',
-          'Lassen Sie die Rohnotiz in einen sauberen Eintrag umschreiben.',
+          'Lassen Sie die Rohnotiz vom Assistenten in einen sauberen Eintrag umschreiben.',
           'Ein Ort für alle Rückrufe, keine Zettel.',
           'Kein Rückruf ohne Frist. «Melde mich» ist keine.',
         ],
