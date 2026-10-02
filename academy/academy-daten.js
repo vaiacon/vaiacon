@@ -254,7 +254,7 @@ window.ACADEMY_PLANS = [
     lead: 'Vom Stichwort zur fertigen Offerte, mit Ihren Positionen, Ihrer Preislogik und Ihrem Schlusssatz. Danach folgen Nachfassen und Auftragsbestätigung, damit nichts liegen bleibt.',
     bild: 'Bild: Offerte auf dem Bürotisch',
     img: 'assets/lernplan-04.png',
-    takeaways: ['Offerten-Gerüst (Word)', 'Preislogik-Beschrieb', 'Nachfass-Sequenz (3 Mails)'],
+    takeaways: ['Offerten-Gerüst (Word)', 'Preislogik-Beschrieb', 'Nachfass-Sequenz (2 Mails)'],
     lessons: [
       ['Offerten aus Stichworten', 'WERKSTATT', '8 Min', {
         absaetze: [
@@ -268,7 +268,7 @@ window.ACADEMY_PLANS = [
         ],
         uebung: 'Nehmen Sie die Stichworte Ihres letzten Termins und lassen Sie eine Offerte entwerfen. Stoppen Sie die Zeit gegenüber sonst.',
       }],
-      ['Ihre Preislogik hinterlegen', 'WERKSTATT', '7 Min', {
+      ['Ihre Preislogik hinterlegen', 'ÜBUNG', '7 Min', {
         absaetze: [
           'Preise entstehen bei Ihnen nicht zufällig: Stundensätze, Zuschläge, Mengenrabatte, Anfahrt. Wenn diese Logik einmal aufgeschrieben ist, rechnet sie der Assistent zuverlässig nach, und Sie sparen sich das Kopfrechnen.',
         ],
