@@ -517,7 +517,7 @@ window.ACADEMY_PLANS = [
     n: '08', title: 'Kundenservice & vaiaconBot', level: 'PRAXIS', hours: '33 Min',
     nutzen: 'Der vaiaconBot beantwortet die 20 häufigsten Fragen rund um die Uhr. Ihr Telefon klingelt deutlich seltener für Auskünfte, die längst auf der Website stehen.',
     tile: 'Ein digitaler Mitarbeiter für die 20 häufigsten Fragen.',
-    lead: 'Der vaiaconBot beantwortet, was sich täglich wiederholt, und gibt sauber an den Menschen ab, wenn es persönlich wird. Sie bauen ihn in dieser Werkstatt selbst.',
+    lead: 'Der vaiaconBot beantwortet, was sich täglich wiederholt, und gibt sauber an den Menschen ab, wenn es persönlich wird. Sie legen in dieser Werkstatt das Wissen dafür an.',
     bild: 'Bild: vaiaconBot am Telefon',
     img: 'assets/vaiacon-buerobot-phone.png',
     takeaways: ['Fragenkatalog (20 Fragen)', 'Übergabe-Regeln an den Menschen', 'Qualitäts-Check zum Mitlesen'],
@@ -537,6 +537,7 @@ window.ACADEMY_PLANS = [
       ['Ein vaiaconBot für die häufigen Fragen', 'WERKSTATT', '8 Min', {
         absaetze: [
           'Ein Bot ersetzt nicht das Gespräch, er nimmt Ihnen die Wiederholung ab. Sein Wissen ist Ihr Seitentext, Ihre Preisliste, Ihre Öffnungszeiten. Nichts, was er nicht hat, darf er erfinden.',
+          'Aufgeschaltet wird der vaiaconBot als Teil der Begleitung. Das Wissen hier ist die Vorarbeit dafür.',
         ],
         punkte: [
           'Antworten kurz halten: 3 Sätze reichen fast immer.',
@@ -606,18 +607,6 @@ window.ACADEMY_PLANS = [
         ],
         uebung: 'Beschreiben Sie einen Ablauf, den Sie wöchentlich machen, nach diesen 4 Punkten.',
       }],
-      ['Der erste automatische Ablauf', 'WERKSTATT', '8 Min', {
-        absaetze: [
-          'Fangen Sie klein an: mit etwas, das oft passiert, wenig Schaden anrichtet und dessen Ergebnis Sie sofort sehen. Nicht mit der Rechnungsstellung.',
-        ],
-        punkte: [
-          'Ein Auslöser, 3 Schritte, ein Ergebnis. Mehr nicht.',
-          'Lassen Sie ihn 2 Wochen neben dem alten Weg laufen.',
-          'Vergleichen Sie die Ergebnisse, bevor Sie den alten Weg abschalten.',
-          'Was der Ablauf tut, muss nachvollziehbar sein, sonst sucht später niemand den Fehler.',
-        ],
-        uebung: 'Wählen Sie den einfachsten Ablauf aus Ihrer Liste und bauen Sie ihn. Klein anfangen ist keine Schwäche.',
-      }],
       ['Verbindungen ohne Programmieren', 'WERKSTATT', '8 Min', {
         absaetze: [
           'Die meisten Werkzeuge lassen sich heute ohne Code verbinden. Was Sie brauchen, ist kein Programmierwissen, sondern Klarheit darüber, welche Angabe von wo nach wo soll.',
@@ -629,6 +618,18 @@ window.ACADEMY_PLANS = [
           'Notieren Sie, wer den Zugang eingerichtet hat, für den Tag, an dem es klemmt.',
         ],
         uebung: 'Zeichnen Sie den Datenfluss Ihres ersten Ablaufs auf und markieren Sie jede Stelle, an der etwas schiefgehen kann.',
+      }],
+      ['Der erste automatische Ablauf', 'WERKSTATT', '8 Min', {
+        absaetze: [
+          'Fangen Sie klein an: mit etwas, das oft passiert, wenig Schaden anrichtet und dessen Ergebnis Sie sofort sehen. Nicht mit der Rechnungsstellung.',
+        ],
+        punkte: [
+          'Ein Auslöser, 3 Schritte, ein Ergebnis. Mehr nicht.',
+          'Lassen Sie ihn 2 Wochen neben dem alten Weg laufen.',
+          'Vergleichen Sie die Ergebnisse, bevor Sie den alten Weg abschalten.',
+          'Was der Ablauf tut, muss nachvollziehbar sein, sonst sucht später niemand den Fehler.',
+        ],
+        uebung: 'Nehmen Sie den Ablauf, den Sie beschrieben und als Datenfluss gezeichnet haben, und bauen Sie ihn. Klein anfangen ist keine Schwäche.',
       }],
       ['Daten sauber halten', 'WERKSTATT', '7 Min', {
         absaetze: [
