@@ -556,7 +556,7 @@ window.ACADEMY_PLANS = [
           'Bei Beschwerden und Geld wird sofort übergeben, ohne Umweg.',
           'Sagen Sie, wann jemand antwortet, und halten Sie es ein.',
         ],
-        uebung: 'Spielen Sie 3 Anfragen durch, bei denen der Bot scheitern muss. Prüfen Sie, ob der Kunde jedes Mal weiterkommt.',
+        uebung: 'Schreiben Sie die Übergabe-Regeln für Ihren Betrieb auf eine halbe Seite und spielen Sie 3 Anfragen durch, bei denen der Bot scheitern muss. Prüfen Sie, ob der Kunde jedes Mal weiterkommt.',
       }],
       ['Telefonnotizen und Rückrufe', 'WERKSTATT', '6 Min', {
         absaetze: [
