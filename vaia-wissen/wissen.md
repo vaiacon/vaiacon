@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 02.10.2026 · Eintrag 0d419ff Academy: KI-Bezug in 12 Werkstatt-Lektionen nachgeschaerft
+> Stand: 02.10.2026 · Eintrag 993948d Academy: Journey-Bild auf dem Handy vor die Lektionen gezogen
 
 ## Wie du antwortest
 
@@ -357,16 +357,6 @@ In der ganzen Deutschschweiz
 Wir kommen in Ihren Betrieb. Oder online, wenn es schneller gehen muss.
 Kostenlose Erstanalyse
 Zu vaiaconLearning
-ZUGANG
-Alles offen. Für alle.
-OFFEN · OHNE KONTO
-Die ganze Academy
-Reinschauen, ausprobieren, dranbleiben, in Ihrem Tempo.
-Alle Lernpfade, alle Lektionen
-Sämtliche Vorlagen, Prompt-Karten und Checklisten
-Neue Lektionen jeden Monat
-Erstanalyse für Ihren Betrieb
-Merkblatt Datenschutz (revDSG)
 VAIACONACADEMY
 Die erste Lektion wartet.
 Beginnen Sie mit der Erstanalyse oder springen Sie direkt in Lernplan 01. Beides kostet nichts und dauert weniger als eine Kaffeepause.
