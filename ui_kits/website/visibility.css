@@ -1669,8 +1669,6 @@ picture {
   align-items: flex-start;
   gap: var(--space-5);
   margin-top: var(--space-8);
-  padding-top: var(--space-6);
-  border-top: 1px solid var(--border-strong);
 }
 
 .sv-check__report-cta p {
