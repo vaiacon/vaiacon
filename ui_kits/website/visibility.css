@@ -1503,7 +1503,7 @@ picture {
    nicht als echtes Angebot zitieren, bevor der Dienst existiert. */
 .sv-check__form {
   width: min(100%, 36rem);
-  margin: var(--space-8) auto 0;
+  margin: var(--space-9) auto 0;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
@@ -1553,7 +1553,7 @@ picture {
 }
 
 .sv-check__hinweis {
-  margin: var(--space-3) 0 0;
+  margin: var(--space-4) 0 0;
   font-size: var(--text-body-sm);
   color: var(--brown-400);
 }
@@ -1632,7 +1632,7 @@ picture {
 }
 
 .sv-check__report .sv-card-grid {
-  margin-top: var(--space-8);
+  margin-top: var(--space-9);
   text-align: left;
 }
 
@@ -1679,7 +1679,7 @@ picture {
   flex-direction: column;
   align-items: flex-start;
   gap: var(--space-5);
-  margin-top: var(--space-8);
+  margin-top: var(--space-9);
 }
 
 .sv-check__report-cta p {
@@ -1694,6 +1694,12 @@ picture {
   .sv-check__form {
     flex-direction: column;
     align-items: stretch;
+    gap: var(--space-5);
+  }
+
+  /* In der Spalte wuerde die Basis 20rem zur Hoehe: ein Loch von 320px zwischen Feld und Knopf */
+  .sv-check__feld {
+    flex: 0 0 auto;
   }
 
   .sv-check__form .sv-button {
