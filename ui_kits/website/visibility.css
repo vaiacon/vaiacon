@@ -1507,11 +1507,12 @@ picture {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
+  justify-content: center;
   gap: var(--space-3);
 }
 
 .sv-check__feld {
-  flex: 1 1 14rem;
+  flex: 0 1 20rem;
   display: flex;
   flex-direction: column;
   gap: 6px;
