@@ -20,7 +20,7 @@
 <title>SEO und GEO für Schweizer KMU · vaiaconVisibility</title>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20260925-ki-kompetenz">
-<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261001-begleitung">
+<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261003-check">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20260926-kopf3">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
@@ -156,6 +156,50 @@
           <figure class="sv-hero__robot sv-hero__robot--frei">
             <picture><source srcset="assets/vaiacon-buerobot-sichtbarkeit-lupe.webp" type="image/webp"><img src="assets/vaiacon-buerobot-sichtbarkeit-lupe.png" alt="Der vaiacon-Roboter hält eine Lupe für Sichtbarkeit und Suche" width="682" height="820" fetchpriority="high"></picture>
           </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="check" class="sv-section">
+      <div class="sv-wrap">
+        <div class="sv-center">
+          <p class="sv-kicker">KOSTENLOSER CHECK</p>
+          <h2 class="sv-title">Wie sichtbar ist Ihre Website heute?</h2>
+          <p class="sv-lead">
+            Domain eingeben: Wir prüfen, ob Google Ihr Angebot versteht und ob KI-Systeme Sie als Quelle erkennen würden, mit konkreten Hebeln statt blossen Kennzahlen.
+          </p>
+        </div>
+
+        <form class="sv-check__form" id="sv-check-form" novalidate>
+          <label class="sv-check__feld">
+            <span class="sv-check__feld-label">Ihre Domain</span>
+            <input type="text" id="sv-check-domain" name="domain" placeholder="ihre-firma.ch" autocomplete="off" inputmode="url" required>
+          </label>
+          <button class="sv-button sv-button--terra" type="submit">Check starten →</button>
+        </form>
+        <p class="sv-check__hinweis">Dauert etwa 20 Sekunden. Kostenlos, unverbindlich.</p>
+
+        <div class="sv-check__ladend" id="sv-check-ladend" hidden>
+          <span class="sv-check__spinner" aria-hidden="true"></span>
+          <span>Prüft <strong id="sv-check-ladend-domain"></strong> …</span>
+        </div>
+
+        <div class="sv-check__report" id="sv-check-report" hidden>
+          <div class="sv-check__report-kopf">
+            <div>
+              <span class="sv-label">BERICHT</span>
+              <h3 id="sv-check-report-domain"></h3>
+            </div>
+            <span class="sv-check__report-datum" id="sv-check-report-datum"></span>
+          </div>
+          <p class="sv-check__report-fazit" id="sv-check-report-fazit"></p>
+
+          <div class="sv-card-grid sv-card-grid--four" id="sv-check-report-karten"></div>
+
+          <div class="sv-check__report-cta">
+            <p>Diese Punkte lassen sich beheben. Im Erstgespräch zeigen wir, wo es am meisten bringt.</p>
+            <a class="sv-button sv-button--light" href="erstanalyse">Kostenlose Erstanalyse →</a>
+          </div>
         </div>
       </div>
     </section>
@@ -365,6 +409,7 @@
   </footer>
 </div>
 <script src="ui_kits/website/visibility.js?v=20260925-ki-kompetenz"></script>
+<script src="ui_kits/website/visibility-check.js?v=20261003-entwurf"></script>
 <script src="ui_kits/website/chat.js?v=20260927-striche"></script>
 </body>
 </html>
