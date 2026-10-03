@@ -19,7 +19,12 @@
   var reportDomain = document.getElementById('sv-check-report-domain');
   var reportDatum = document.getElementById('sv-check-report-datum');
   var reportKarten = document.getElementById('sv-check-report-karten');
+  var fehlerFeld = document.getElementById('sv-check-fehler');
   var SPEICHER_SCHLUESSEL = 'vaiacon-visibility-check';
+
+  // Verlangt eine echte Webadresse mit Endung (ihre-firma.ch, www.firma.com,
+  // shop.firma.co.uk ...). Ein blosses Wort ohne Punkt und Endung faellt durch.
+  var DOMAIN_MUSTER = /^[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?(\.[a-z0-9]([a-z0-9-]{0,61}[a-z0-9])?)*\.[a-z]{2,}$/i;
 
   // Die vier Bereiche, die wir prüfen, mit den Einzelpunkten dazu — ohne
   // jede Aussage zur eingegebenen Domain, das ist bewusst gleich für alle.
@@ -59,8 +64,7 @@
   ];
 
   function saeubern(eingabe) {
-    var wert = eingabe.trim().replace(/^https?:\/\//i, '').replace(/\/.*$/, '');
-    return wert || 'ihre-domain.ch';
+    return eingabe.trim().replace(/^https?:\/\//i, '').replace(/^www\./i, '').replace(/\/.*$/, '');
   }
 
   function karteBauen(bereich) {
@@ -93,6 +97,17 @@
   form.addEventListener('submit', function (ev) {
     ev.preventDefault();
     var domain = saeubern(feldDomain.value);
+
+    if (!DOMAIN_MUSTER.test(domain)) {
+      if (fehlerFeld) fehlerFeld.hidden = false;
+      feldDomain.setAttribute('aria-invalid', 'true');
+      feldDomain.focus();
+      report.hidden = true;
+      ladend.hidden = true;
+      return;
+    }
+    if (fehlerFeld) fehlerFeld.hidden = true;
+    feldDomain.removeAttribute('aria-invalid');
 
     report.hidden = true;
     ladendDomain.textContent = domain;

@@ -173,11 +173,12 @@
         <form class="sv-check__form" id="sv-check-form" novalidate>
           <label class="sv-check__feld">
             <span class="sv-check__feld-label">Ihre Domain</span>
-            <input type="text" id="sv-check-domain" name="domain" placeholder="ihre-firma.ch" autocomplete="off" inputmode="url" required>
+            <input type="text" id="sv-check-domain" name="domain" placeholder="ihre-firma.ch" autocomplete="off" inputmode="url" pattern="^(https?://)?(www\.)?[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(\.[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*\.[a-zA-Z]{2,}(/.*)?$" title="Bitte eine vollständige Webadresse mit Endung eingeben, z. B. ihre-firma.ch" required>
           </label>
           <button class="sv-button sv-button--cta" type="submit">Check starten →</button>
         </form>
         <p class="sv-check__hinweis">Kostenlos, unverbindlich.</p>
+        <p class="sv-check__fehler" id="sv-check-fehler" role="alert" hidden>Bitte eine vollständige Webadresse eingeben, z. B. ihre-firma.ch</p>
 
         <div class="sv-check__ladend" id="sv-check-ladend" hidden>
           <span class="sv-check__spinner" aria-hidden="true"></span>

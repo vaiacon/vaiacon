@@ -1558,6 +1558,17 @@ picture {
   color: var(--brown-400);
 }
 
+.sv-check__fehler {
+  margin: var(--space-3) 0 0;
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-semibold);
+  color: #8C1D18;
+}
+
+.sv-check__feld input[aria-invalid="true"] {
+  border-color: #8C1D18;
+}
+
 .sv-check__ladend:not([hidden]) {
   display: flex;
   align-items: center;
