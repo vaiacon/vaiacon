@@ -86,9 +86,11 @@
       var li = document.createElement('li');
       li.setAttribute('data-art', punkt.art);
       var zeichen = document.createElement('span');
+      zeichen.className = 'sv-check__zeichen';
       zeichen.setAttribute('aria-hidden', 'true');
       zeichen.textContent = punkt.art === 'hebel' ? '→' : '✓';
       var text = document.createElement('span');
+      text.className = 'sv-check__text';
       text.textContent = punkt.text;
       li.appendChild(zeichen);
       li.appendChild(text);
