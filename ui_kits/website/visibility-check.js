@@ -78,7 +78,7 @@
       var li = document.createElement('li');
       var zeichen = document.createElement('span');
       zeichen.setAttribute('aria-hidden', 'true');
-      zeichen.textContent = '✓';
+      zeichen.textContent = '-';
       var text = document.createElement('span');
       text.textContent = punkt;
       li.appendChild(zeichen);
