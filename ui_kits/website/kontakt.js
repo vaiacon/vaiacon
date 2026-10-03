@@ -23,6 +23,45 @@
 
   var knopf = formular.querySelector('button[type="submit"]');
   var meldung = formular.querySelector('.vc-kontakt__meldung');
+  var herkunftFeld = document.getElementById('vc-kontakt-herkunft');
+
+  // Kommt der Besucher vom Visibility-Check (visibility-check.js legt das vor
+  // dem Sprung hierher ab): Nachricht und Betreff vorausfuellen, quelle und
+  // befund gehen beim Senden mit — gleiches Muster wie die Erstanalyse
+  // (siehe erstanalyse-data.js, anfrageZusatz). Der eigentliche Versand als
+  // PDF mit der Ueberschrift «Anfrage Visibility Check» ist Sache des
+  // Dienstes vaiacon-kontakt auf dem Server (kein Repo hier, siehe
+  // vaiacon-offene-serverpunkte) — dieses Skript liefert quelle und befund
+  // nur zu, baut aber kein PDF.
+  var herkunft = null;
+  try {
+    var roh = window.sessionStorage.getItem('vaiacon-visibility-check');
+    if (roh) {
+      herkunft = JSON.parse(roh);
+      window.sessionStorage.removeItem('vaiacon-visibility-check');
+    }
+  } catch (e) { /* kein sessionStorage (privater Modus o.ä.): einfach ohne Vorausfuellung weiter */ }
+
+  function befundAlsText(h) {
+    var zeilen = ['Anfrage Visibility Check · ' + h.domain, '', h.fazit, ''];
+    (h.befund || []).forEach(function (abschnitt) {
+      zeilen.push(abschnitt.titel + ' (' + abschnitt.urteil + ')');
+      abschnitt.punkte.forEach(function (p) {
+        zeilen.push((p.art === 'hebel' ? '→ ' : '✓ ') + p.text);
+      });
+      zeilen.push('');
+    });
+    return zeilen.join('\n').trim();
+  }
+
+  if (herkunft && herkunft.domain) {
+    var nachrichtFeld = formular.querySelector('[name="nachricht"]');
+    if (nachrichtFeld && !nachrichtFeld.value) nachrichtFeld.value = befundAlsText(herkunft);
+    if (herkunftFeld) {
+      herkunftFeld.textContent = 'Vom Visibility-Check für ' + herkunft.domain + ': Ihr Bericht steht unten bereits in der Nachricht. Bitte noch Ihre Kontaktdaten ergänzen.';
+      herkunftFeld.hidden = false;
+    }
+  }
 
   function wert(name) {
     var feld = formular.querySelector('[name="' + name + '"]');
@@ -46,7 +85,9 @@
   }
 
   function insMailprogramm(d) {
-    var betreff = 'Anfrage über vaiacon.ch' + (d.firma ? ' · ' + d.firma : '');
+    var betreff = herkunft && herkunft.domain
+      ? 'Anfrage Visibility Check · ' + herkunft.domain
+      : 'Anfrage über vaiacon.ch' + (d.firma ? ' · ' + d.firma : '');
     window.location.href = 'mailto:' + MAIL
       + '?subject=' + encodeURIComponent(betreff)
       + '&body=' + encodeURIComponent(alsText(d));
@@ -63,6 +104,10 @@
       nachricht: wert('nachricht'),
       fangfrage: wert('fangfrage'),   // Honigtopf, bleibt bei Menschen leer
     };
+    if (herkunft && herkunft.domain) {
+      d.quelle = 'visibility-check';
+      d.befund = { domain: herkunft.domain, fazit: herkunft.fazit, bereiche: herkunft.befund };
+    }
     if (!d.name || !d.mail || !d.nachricht) {
       sagen('Bitte Name, E-Mail und Nachricht ausfüllen.', 'fehler');
       return;

@@ -19,6 +19,7 @@
   var reportDatum = document.getElementById('sv-check-report-datum');
   var reportFazit = document.getElementById('sv-check-report-fazit');
   var reportKarten = document.getElementById('sv-check-report-karten');
+  var SPEICHER_SCHLUESSEL = 'vaiacon-visibility-check';
 
   // Beispiel-Befund — feste Werte, unabhängig von der eingegebenen Domain.
   var BEFUND = [
@@ -120,6 +121,17 @@
 
       report.hidden = false;
       report.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+      // Für den Knopf «Bericht an uns schicken»: den Befund zwischenspeichern,
+      // damit ihn kontakt.js auf der nächsten Seite findet und das Formular
+      // vorausfüllt. Läuft über sessionStorage, bleibt also auf diesem Gerät.
+      try {
+        window.sessionStorage.setItem(SPEICHER_SCHLUESSEL, JSON.stringify({
+          domain: domain,
+          fazit: reportFazit.textContent,
+          befund: BEFUND,
+        }));
+      } catch (e) { /* Privater Modus o.ä.: dann fehlt nur das Vorausfüllen. */ }
     }, 1100);
   });
 })();

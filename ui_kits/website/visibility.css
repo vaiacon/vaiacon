@@ -1235,6 +1235,17 @@ picture {
    stehen dabei, weil sie das Erstgespräch abkürzen — mehr wird nicht
    gefragt. Comic-Rand ist hier nicht erlaubt (der gilt nur für Chat und
    Sprechblasen), darum Haarlinie wie bei den Karten. */
+.vc-kontakt__herkunft {
+  margin: 0;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  background: var(--peach-150);
+  border: 1px solid rgba(28, 22, 19, 0.14);
+  font-size: var(--text-body-sm);
+  color: var(--terra-600);
+  font-weight: var(--weight-semibold);
+}
+
 .vc-kontakt {
   width: min(100%, 40rem);
   margin: var(--space-9) auto 0;
