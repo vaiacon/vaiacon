@@ -21,13 +21,41 @@
   var reportKarten = document.getElementById('sv-check-report-karten');
   var SPEICHER_SCHLUESSEL = 'vaiacon-visibility-check';
 
-  // Die vier Bereiche, die wir prüfen — ohne jede Aussage zur eingegebenen
-  // Domain, das ist bewusst gleich für alle.
+  // Die vier Bereiche, die wir prüfen, mit den Einzelpunkten dazu — ohne
+  // jede Aussage zur eingegebenen Domain, das ist bewusst gleich für alle.
   var BEREICHE = [
-    { titel: 'Technisches SEO', text: 'Ladezeit, mobile Darstellung, Seitentitel und technische Grundlagen.' },
-    { titel: 'Strukturierte Daten', text: 'Ob Google Ihre Firma, Leistungen und Angebote maschinenlesbar versteht.' },
-    { titel: 'KI-Sichtbarkeit (GEO)', text: 'Ob KI-Systeme Ihre Seite als verlässliche Quelle erkennen.' },
-    { titel: 'Inhalt & Vertrauen', text: 'Referenzen, Aktualität und Vertrauenssignale Ihrer Website.' },
+    {
+      titel: 'Technisches SEO',
+      punkte: [
+        'Ladezeit und Darstellung auf dem Handy',
+        'Seitentitel und Beschreibung je Seite',
+        'Sitemap und technische Grundlagen',
+      ],
+    },
+    {
+      titel: 'Strukturierte Daten',
+      punkte: [
+        'Firmendaten als strukturierte Daten hinterlegt',
+        'Leistungen und Angebote maschinenlesbar',
+        'FAQ-Daten für erweiterte Suchergebnisse',
+      ],
+    },
+    {
+      titel: 'KI-Sichtbarkeit (GEO)',
+      punkte: [
+        'Kontaktangaben klar auffindbar',
+        'llms.txt für KI-Systeme vorhanden',
+        'Überprüfbare Aussagen statt Werbefloskeln',
+      ],
+    },
+    {
+      titel: 'Inhalt & Vertrauen',
+      punkte: [
+        'Impressum und Datenschutzerklärung',
+        'Eigene, verständliche Texte statt Stichworte',
+        'Referenzen und Kundenstimmen',
+      ],
+    },
   ];
 
   function saeubern(eingabe) {
@@ -44,10 +72,20 @@
     kicker.textContent = bereich.titel.toUpperCase();
     artikel.appendChild(kicker);
 
-    var text = document.createElement('p');
-    text.className = 'sv-check__karte-text';
-    text.textContent = bereich.text;
-    artikel.appendChild(text);
+    var liste = document.createElement('ul');
+    liste.className = 'sv-check__karte-liste';
+    bereich.punkte.forEach(function (punkt) {
+      var li = document.createElement('li');
+      var zeichen = document.createElement('span');
+      zeichen.setAttribute('aria-hidden', 'true');
+      zeichen.textContent = '✓';
+      var text = document.createElement('span');
+      text.textContent = punkt;
+      li.appendChild(zeichen);
+      li.appendChild(text);
+      liste.appendChild(li);
+    });
+    artikel.appendChild(liste);
 
     return artikel;
   }

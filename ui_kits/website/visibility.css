@@ -1632,11 +1632,35 @@ picture {
   text-align: left;
 }
 
-.sv-check__karte-text {
+.sv-check__karte-liste {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
   margin: 0;
+  padding: 0;
+}
+
+.sv-check__karte-liste li {
+  display: flex;
+  align-items: flex-start;
+  gap: 9px;
+  min-width: 0;
   font-size: var(--text-body-sm);
   line-height: var(--leading-body);
   color: var(--text-body);
+}
+
+.sv-check__karte-liste li span:first-child {
+  flex: 0 0 auto;
+  font-weight: var(--weight-bold);
+  color: var(--accent);
+}
+
+.sv-check__karte-liste li span:last-child {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .sv-check__report-cta {
