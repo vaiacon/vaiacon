@@ -1629,56 +1629,21 @@ picture {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
-}
-
-.sv-check__karte-urteil {
-  font-size: var(--text-body-sm);
-  font-weight: var(--weight-semibold);
-  color: var(--terra-600);
-}
-
-.sv-check__karte ul {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.sv-check__karte li {
-  display: flex;
-  align-items: flex-start;
-  gap: 9px;
-  min-width: 0;
-  font-size: var(--text-body-sm);
-  line-height: var(--leading-body);
-  color: var(--text-body);
   text-align: left;
 }
 
-.sv-check__zeichen {
-  flex: 0 0 auto;
-  font-weight: var(--weight-bold);
-  color: var(--accent);
-}
-
-.sv-check__text {
-  flex: 1 1 auto;
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-
-.sv-check__karte li[data-art="hebel"] .sv-check__zeichen {
-  color: var(--terra-500);
+.sv-check__karte-text {
+  margin: 0;
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-body);
+  color: var(--text-body);
 }
 
 .sv-check__report-cta {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  gap: var(--space-4);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-5);
   margin-top: var(--space-8);
   padding-top: var(--space-6);
   border-top: 1px solid var(--border-strong);
@@ -1686,7 +1651,8 @@ picture {
 
 .sv-check__report-cta p {
   margin: 0;
-  max-width: 44ch;
+  max-width: 58ch;
+  text-align: left;
   font-size: var(--text-body-sm);
   color: var(--text-body);
 }

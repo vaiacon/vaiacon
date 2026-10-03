@@ -43,13 +43,9 @@
   } catch (e) { /* kein sessionStorage (privater Modus o.ä.): einfach ohne Vorausfuellung weiter */ }
 
   function befundAlsText(h) {
-    var zeilen = ['Anfrage Visibility Check · ' + h.domain, '', h.fazit, ''];
-    (h.befund || []).forEach(function (abschnitt) {
-      zeilen.push(abschnitt.titel + ' (' + abschnitt.urteil + ')');
-      abschnitt.punkte.forEach(function (p) {
-        zeilen.push((p.art === 'hebel' ? '→ ' : '✓ ') + p.text);
-      });
-      zeilen.push('');
+    var zeilen = ['Anfrage Visibility Check · ' + h.domain, '', 'Bitte prüfen Sie:'];
+    (h.bereiche || []).forEach(function (titel) {
+      zeilen.push('- ' + titel);
     });
     return zeilen.join('\n').trim();
   }
@@ -106,7 +102,7 @@
     };
     if (herkunft && herkunft.domain) {
       d.quelle = 'visibility-check';
-      d.befund = { domain: herkunft.domain, fazit: herkunft.fazit, bereiche: herkunft.befund };
+      d.befund = { domain: herkunft.domain, bereiche: herkunft.bereiche };
     }
     if (!d.name || !d.mail || !d.nachricht) {
       sagen('Bitte Name, E-Mail und Nachricht ausfüllen.', 'fehler');
