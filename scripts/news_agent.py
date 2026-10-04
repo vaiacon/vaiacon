@@ -263,7 +263,9 @@ GRENZEN, DIE NICHT VERHANDELBAR SIND
 SCHON VEROEFFENTLICHT (nicht noch einmal bringen, auch nicht dieselbe Meldung aus anderer Quelle):
 {bisher}
 
-AKTUELLES WOCHENFAZIT (nur anpassen, wenn der Tag es wirklich aendert; sonst «wochenfazit» weglassen):
+AKTUELLES WOCHENFAZIT (nur anpassen, wenn der Tag es wirklich aendert; sonst «wochenfazit» weglassen.
+Steht hier «(noch keines)» und du schlaegst mindestens einen Beitrag vor, schreibe eines fuer die neue Woche;
+ohne Beitrag bleibt es weg):
 {fazit or '(noch keines)'}
 
 ANGEBOT VON VAIACON (Wissensstand, nur daraus schoepfen):
@@ -486,7 +488,7 @@ def pruefen_datei(pfad: Path) -> int:
         else:
             log("ok       ", b.get("id"))
         gesehen.append(b)
-    if "wochenfazit" in woche:
+    if woche.get("wochenfazit"):
         f = pruefe_fazit(woche["wochenfazit"])
         if f:
             schlecht += 1
@@ -528,15 +530,11 @@ def lauf(tag: date, trocken: bool, kein_push: bool) -> int:
     if datei.is_file():
         woche = lade_json(datei)
     else:
-        # neue Woche: Wochenfazit der letzten Woche mitnehmen
-        fazit = ""
-        frueher = [w for _, w in alle_wochen(wurzel) if (w.get("jahr", 0), w.get("kw", 0)) < (jahr, kw)]
-        if frueher:
-            frueher.sort(key=lambda w: (w.get("jahr", 0), w.get("kw", 0)))
-            fazit = frueher[-1].get("wochenfazit", "")
+        # neue Woche: leeres Fazit. Das Fazit der Vorwoche beschreibt die Vorwoche und waere hier falsch;
+        # solange die Woche leer ist, zeigt news_bauen.py die Beitraege der Vorwoche.
         woche = {"jahr": jahr, "kw": kw, "von": montag.isoformat(), "bis": sonntag.isoformat(),
-                 "wochenfazit": fazit, "beitraege": []}
-        log("Neue Woche %d-KW%02d, Wochenfazit uebernommen (%d Zeichen)" % (jahr, kw, len(fazit)))
+                 "wochenfazit": "", "beitraege": []}
+        log("Neue Woche %d-KW%02d" % (jahr, kw))
 
     bisherige = verlauf(wurzel, tag)
     heute_schon = [b for b in woche["beitraege"] if b.get("datum") == tag.isoformat()]

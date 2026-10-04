@@ -431,13 +431,33 @@ def wochenseite(w: dict, wochen: list[dict], bilder: Bilder, ist_index: bool) ->
     aktiv = "page" if ist_index else "true"
     zaehl = len(w["beitraege"])
     anzahl = f"{zaehl} {'Beitrag' if zaehl == 1 else 'Beiträge'} in dieser Woche"
+    # Leere Woche (Montagmorgen, ruhige Tage): statt einer leeren Seite die Beiträge der Vorwoche zeigen.
+    vorwoche = None
+    if not zaehl:
+        anzahl = "Noch kein Beitrag in dieser Woche"
+        spaeter = wochen[wochen.index(w) + 1:]
+        vorwoche = next((v for v in spaeter if v["beitraege"]), None)
+    if fazit:
+        fazit_html = f'''<p class="nw-hero__fazit-titel">Das Wochenfazit</p>
+          <p class="sv-hero__lead nw-hero__fazit">{fazit}</p>'''
+    elif vorwoche:
+        fazit_html = (f'<p class="sv-hero__lead nw-hero__fazit">Die Woche ist noch jung: Bisher gab es nichts, das für Schweizer KMU '
+                      f'wichtig genug war. Darunter lesen Sie die Beiträge der KW {vorwoche["kw"]}.</p>')
+    else:
+        fazit_html = ('<p class="sv-hero__lead nw-hero__fazit">Bisher gab es in dieser Woche nichts, das für Schweizer KMU '
+                      'wichtig genug war.</p>')
+    liste = vorwoche or w
+    if vorwoche:
+        zuletzt = (f'<p class="nw-zuletzt">Zuletzt erschienen: <a href="{esc(seitenname(vorwoche))}">KW {vorwoche["kw"]}, '
+                   f'{esc(zeitspanne(vorwoche["_von"], vorwoche["_bis"]))}</a></p>')
+    else:
+        zuletzt = ""
     inhalt = f"""    <section id="top" class="sv-hero nw-hero" aria-label="Kopf der Woche">
       <div class="sv-hero__inner">
         <div class="sv-hero__copy">
           <p class="sv-kicker sv-kicker--on-terra">KI-KMU-NEWS · {esc(anzahl).upper()}</p>
           <h1 class="nw-hero__titel"><span class="nw-hero__kw">KW {w['kw']}</span> <span class="nw-hero__datum">{esc(zeitspanne(w['_von'], w['_bis']))}</span></h1>
-          <p class="nw-hero__fazit-titel">Das Wochenfazit</p>
-          <p class="sv-hero__lead nw-hero__fazit">{fazit}</p>
+          {fazit_html}
           <div class="sv-actions">
             <a class="sv-button sv-button--light" href="#beitraege">Zu den Beiträgen →</a>
             <a class="sv-button sv-button--glass" href="archiv.html">Archiv →</a>
@@ -467,9 +487,10 @@ def wochenseite(w: dict, wochen: list[dict], bilder: Bilder, ist_index: bool) ->
             Wir melden nicht nur, was passiert ist. Zu jedem Beitrag steht, was es für ein Schweizer KMU bedeutet, was vaiacon dazu anbieten kann und worauf Sie achten sollten.
           </p>
         </div>
-        {filter_html(w)}
+        {zuletzt}
+        {filter_html(liste)}
         <div class="nw-beitraege">
-{beitraege_html(w, bilder)}
+{beitraege_html(liste, bilder)}
         </div>
       </div>
     </section>
