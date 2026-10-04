@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 04.10.2026 · Eintrag cb4822e Startseite: Domain-Feld «Check starten» statt Erstanalyse, echter Visibility-Check
+> Stand: 04.10.2026 · Eintrag 91a76e8 Visibility-Check: Statuszeile der Auswertung in der Wir-Form
 
 ## Wie du antwortest
 
@@ -161,10 +161,9 @@ Ihre Mitarbeitenden nutzen KI nach klaren Regeln statt heimlich am eigenen Konto
 
 VAIACON · FÜR SCHWEIZER KMU
 Digitale Sichtbarkeit und KI-Kompetenz für Schweizer KMU.
-Für Betriebe mit 5 bis 30 Mitarbeitenden und eigenem Büro: Handwerk, Treuhand, Praxen, Verwaltungen. Wir führen Sie an KI heran: verständlich, persönlich und ohne Verkaufsdruck. Vom ersten Lernen bis zur Automation, die im Alltag trägt.
+Für Betriebe mit 5 bis 30 Mitarbeitenden und eigenem Büro. Wir führen Sie an KI heran: verständlich, persönlich, ohne Verkaufsdruck.
 Ihre Domain
 Check starten →
-Unsere Lösungen →
 WAS WIR ANBIETEN
 Mehr KI-Kompetenz. Mehr Effizienz. Mehr Sichtbarkeit. Starten Sie mit der passenden Lösung.
 Jeder Bereich steht für sich. Sie müssen nicht alles buchen und schon gar nicht in dieser Reihenfolge.
