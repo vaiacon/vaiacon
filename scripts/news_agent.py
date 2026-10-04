@@ -612,7 +612,7 @@ def lauf(tag: date, trocken: bool, kein_push: bool) -> int:
     if git("diff", "--cached", "--quiet", pruefen=False).returncode == 0:
         log("Keine Aenderung im Bestand.")
         return 0
-    namen = "; ".join(e["titel"][:60] for e in angenommen) or "Wochenfazit"
+    namen = "; ".join(e["titel"][:60] for e in angenommen) or ("Wochenfazit" if fazit_ok else "neue Woche")
     git("commit", "-m", "KI-KMU-News %s: %s\n\nAutomatisch durch scripts/news_agent.py." % (tag.isoformat(), namen),
         "--", "ki-kmu-news")
     log("Commit angelegt.")

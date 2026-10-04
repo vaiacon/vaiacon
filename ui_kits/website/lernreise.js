@@ -16,7 +16,7 @@
     training: 'schulung-zeigestab',
     elearning: 'journey-elearning',
     video: 'journey-video',
-    mikro: 'faq-tablet',
+    mikro: 'journey-mikro',
     vorort: 'journey-vor-ort',
     coaching: 'journey-coaching',
     wirkung: 'academy-schreibtisch'
@@ -27,7 +27,7 @@
     training: 'Der vaiacon-Roboter mit Buch und Zeigestab',
     elearning: 'Der vaiacon-Roboter mit Kopfhörern am Laptop',
     video: 'Der vaiacon-Roboter hält eine Filmklappe',
-    mikro: 'Der vaiacon-Roboter mit Tablet und erhobenem Finger',
+    mikro: 'Der vaiacon-Roboter giesst einen Setzling, daneben ein Kalender',
     vorort: 'Der vaiacon-Roboter mit Koffer und Namensschild unterwegs zum Betrieb',
     coaching: 'Der vaiacon-Roboter sitzt mit einer Tasse auf einem Hocker und erklärt',
     wirkung: 'Der vaiacon-Roboter am Schreibtisch'
