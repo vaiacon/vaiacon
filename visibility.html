@@ -20,7 +20,7 @@
 <title>SEO und GEO für Schweizer KMU · vaiaconVisibility</title>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20260925-ki-kompetenz">
-<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261003-check">
+<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261004-check">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20260926-kopf3">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
@@ -148,7 +148,7 @@
             <span class="sv-product">vaiacon<span>Visibility</span></span> hilft Schweizer KMU, online sichtbar und verständlich zu werden: mit SEO für Suchmaschinen und GEO für KI-Antworten.
           </p>
           <div class="sv-actions">
-            <a class="sv-button sv-button--light" href="erstanalyse">Kostenlose Erstanalyse →</a>
+            <a class="sv-button sv-button--light" href="#check">Check starten →</a>
             <a class="sv-button sv-button--glass" href="#einfach-erklaert">SEO und GEO verstehen →</a>
           </div>
         </div>
@@ -173,34 +173,86 @@
         <form class="sv-check__form" id="sv-check-form" novalidate>
           <label class="sv-check__feld">
             <span class="sv-check__feld-label">Ihre Domain</span>
-            <input type="text" id="sv-check-domain" name="domain" placeholder="ihre-firma.ch" autocomplete="off" inputmode="url" pattern="^(https?://)?(www\.)?[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(\.[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*\.[a-zA-Z]{2,}(/.*)?$" title="Bitte eine vollständige Webadresse mit Endung eingeben, z. B. ihre-firma.ch" required>
+            <input type="text" id="sv-check-domain" name="domain" placeholder="ihre-firma.ch" autocomplete="off" autocapitalize="none" spellcheck="false" inputmode="url" required>
           </label>
-          <button class="sv-button sv-button--cta" type="submit">Check starten →</button>
+          <button class="sv-button sv-button--cta" type="submit" id="sv-check-knopf">Check starten →</button>
         </form>
-        <p class="sv-check__hinweis">Kostenlos, unverbindlich.</p>
-        <p class="sv-check__fehler" id="sv-check-fehler" role="alert" hidden>Bitte eine vollständige Webadresse eingeben, z. B. ihre-firma.ch</p>
+        <p class="sv-check__hinweis">Kostenlos, unverbindlich. Wir lesen nur, was Ihre Website ohnehin öffentlich zeigt.</p>
+        <p class="sv-check__fehler" id="sv-check-fehler" role="alert" hidden></p>
 
-        <div class="sv-check__ladend" id="sv-check-ladend" hidden>
-          <span class="sv-check__spinner" aria-hidden="true"></span>
-          <span>Bereitet Ihren Check vor <strong id="sv-check-ladend-domain"></strong> …</span>
+        <!-- Ansagen für Screenreader: ein Satz je Schritt, nicht die ganze Liste -->
+        <p class="sv-check__sr" id="sv-check-ansage" aria-live="polite"></p>
+
+        <!-- Ladeansicht: die sechs Schritte baut visibility-check.js -->
+        <div class="sv-check__ladend" id="sv-check-ladend" aria-busy="false" hidden>
+          <p class="sv-check__ladend-kopf">Wir prüfen <strong id="sv-check-ladend-domain"></strong></p>
+          <ol class="sv-check__schritte" id="sv-check-schritte"></ol>
         </div>
 
-        <div class="sv-check__report" id="sv-check-report" hidden>
+        <div class="sv-check__problem" id="sv-check-problem" role="alert" hidden>
+          <p id="sv-check-problem-text"></p>
+          <button class="sv-button sv-button--cta" type="button" id="sv-check-problem-knopf">Nochmals prüfen</button>
+        </div>
+
+        <!-- Ergebnis: alle Texte kommen vom Server und werden per textContent eingesetzt -->
+        <div class="sv-check__report" id="sv-check-report" tabindex="-1" hidden>
           <div class="sv-check__report-kopf">
-            <div>
+            <svg class="sv-check__ring" id="sv-check-ring" viewBox="0 0 120 120" role="img" aria-label="Gesamtwert">
+              <circle class="sv-check__ring-spur" cx="60" cy="60" r="52"></circle>
+              <circle class="sv-check__ring-wert" id="sv-check-ring-wert" cx="60" cy="60" r="52" transform="rotate(-90 60 60)"></circle>
+              <text class="sv-check__ring-zahl" id="sv-check-gesamt" x="60" y="62" text-anchor="middle" dominant-baseline="middle" aria-hidden="true">0</text>
+              <text class="sv-check__ring-von" x="60" y="86" text-anchor="middle" aria-hidden="true">von 100</text>
+            </svg>
+            <div class="sv-check__report-text">
               <span class="sv-label">IHR CHECK</span>
               <h3 id="sv-check-report-domain"></h3>
+              <p class="sv-check__report-datum" id="sv-check-report-datum"></p>
+              <p class="sv-check__report-fazit" id="sv-check-fazit"></p>
             </div>
-            <span class="sv-check__report-datum" id="sv-check-report-datum"></span>
           </div>
-          <p class="sv-check__report-fazit">Das prüfen wir für Sie:</p>
 
-          <div class="sv-card-grid sv-card-grid--four" id="sv-check-report-karten"></div>
+          <article class="sv-card sv-card--hervor sv-check__potenzial" id="sv-check-potenzial">
+            <p class="sv-card__etikett">Grösstes Potenzial</p>
+            <span class="sv-label" id="sv-check-potenzial-bereich"></span>
+            <h4 id="sv-check-potenzial-titel"></h4>
+            <p id="sv-check-potenzial-text"></p>
+          </article>
 
-          <div class="sv-check__report-cta">
-            <p>Diese Punkte lassen sich optimieren. Schicken Sie uns Ihre kostenlose und unverbindliche Anfrage und Sie erhalten von uns einen detaillierten Report über die Möglichkeiten, Ihren Webauftritt besser sichtbar zu machen.</p>
-            <a class="sv-button sv-button--light" id="sv-check-report-cta" href="kontakt#formular">Bericht anfordern →</a>
-          </div>
+          <div class="sv-check__bereiche" id="sv-check-bereiche"></div>
+
+          <section class="sv-check__bestellen" id="sv-check-bestellen" aria-labelledby="sv-check-bestellen-titel">
+            <h3 id="sv-check-bestellen-titel">Vollständigen Bericht per E-Mail anfordern</h3>
+            <p class="sv-check__bestellen-lead">Alle Befunde und Empfehlungen zu <strong id="sv-check-bestellen-domain"></strong>, in allen vier Bereichen.</p>
+
+            <form class="vc-kontakt sv-check__bestell-form" id="sv-check-bestell-form" novalidate>
+              <div class="vc-kontakt__reihe">
+                <label>Name *
+                  <input type="text" name="name" autocomplete="name" required>
+                </label>
+                <label>E-Mail *
+                  <input type="email" name="mail" autocomplete="email" required>
+                </label>
+              </div>
+              <div class="vc-kontakt__reihe">
+                <label>Firma
+                  <input type="text" name="firma" autocomplete="organization">
+                </label>
+                <label>Telefon
+                  <input type="tel" name="telefon" autocomplete="tel">
+                </label>
+              </div>
+              <label class="sv-check__fangfrage" aria-hidden="true">Fangfrage
+                <input type="text" name="fangfrage" tabindex="-1" autocomplete="off">
+              </label>
+              <div class="vc-kontakt__fuss">
+                <button class="sv-button sv-button--cta" type="submit" id="sv-check-bestell-knopf">Bericht anfordern →</button>
+                <p class="vc-kontakt__hinweis">Wir senden Ihnen den vollständigen Bericht persönlich per E-Mail. Mehr dazu in der <a href="datenschutz#visibility-check">Datenschutzerklärung</a>.</p>
+              </div>
+              <p class="vc-kontakt__meldung" id="sv-check-bestell-meldung" role="status" aria-live="polite"></p>
+            </form>
+
+            <p class="sv-check__danke" id="sv-check-danke" tabindex="-1" hidden></p>
+          </section>
         </div>
       </div>
     </section>
@@ -381,7 +433,7 @@
           Wir schauen mit Ihnen auf Ihre heutige Website und zeigen verständlich, wo SEO und GEO den grössten Hebel haben.
         </p>
         <div class="sv-actions">
-          <a class="sv-button sv-button--light" href="erstanalyse">Kostenlose Erstanalyse →</a>
+          <a class="sv-button sv-button--light" href="#check">Check starten →</a>
           <a class="sv-button sv-button--glass" href="./">Zurück zur Startseite →</a>
         </div>
       </div>
@@ -410,7 +462,7 @@
   </footer>
 </div>
 <script src="ui_kits/website/visibility.js?v=20260925-ki-kompetenz"></script>
-<script src="ui_kits/website/visibility-check.js?v=20261003-entwurf"></script>
+<script src="ui_kits/website/visibility-check.js?v=20261004-check"></script>
 <script src="ui_kits/website/chat.js?v=20260927-striche"></script>
 </body>
 </html>

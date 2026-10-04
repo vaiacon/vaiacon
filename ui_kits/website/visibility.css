@@ -1495,12 +1495,19 @@ picture {
   }
 }
 
-/* ── Visibility-Check (Entwurf, 03.10.2026) ──────────────────────────────
-   Domain eingeben, Beispiel-Bericht ansehen. Die Prüfung selbst läuft noch
-   nicht echt — die Werte in visibility-check.js sind feste Beispieldaten,
-   solange es keinen Dienst auf dem Server gibt, der eine Domain tatsächlich
-   abruft und auswertet. Siehe vaia-wissen falls das als Chat-Wissen auftaucht:
-   nicht als echtes Angebot zitieren, bevor der Dienst existiert. */
+/* ── Visibility-Check (seit 04.10.2026) ──────────────────────────────────
+   Domain eingeben, unser Server ruft die öffentlichen Dateien der Website ab
+   (Startseite, robots.txt, sitemap.xml, llms.txt), prüft sie in sechs
+   Schritten und lässt Claude die Befunde auswerten (visibility-check.js,
+   Dienst hinter /api/sichtbarkeit). Das Ergebnis zeigt den Gesamtwert, das
+   grösste Potenzial und einen Bereich ganz; die drei anderen nur mit
+   Punktzahl, Titeln und Status. Die grauen Balken dort sind Platzhalter,
+   keine verborgenen Texte — die schickt der Server gar nicht. Den ganzen
+   Bericht bestellt man mit dem Formular darunter.
+
+   Ampelfarben gibt es im Design-System keine. Grün, Ocker und Rot hier sind
+   so dunkel gewählt, dass der Punkt auf Creme und Sand mindestens 3:1
+   erreicht; der Status steht immer auch als Wort daneben. */
 .sv-check__form {
   width: min(100%, 36rem);
   margin: var(--space-9) auto 0;
@@ -1524,7 +1531,7 @@ picture {
   font-size: var(--text-overline);
   letter-spacing: var(--tracking-badge);
   text-transform: uppercase;
-  color: var(--brown-400);
+  color: var(--brown-600);
 }
 
 .sv-check__feld input {
@@ -1555,7 +1562,7 @@ picture {
 .sv-check__hinweis {
   margin: var(--space-4) 0 0;
   font-size: var(--text-body-sm);
-  color: var(--brown-400);
+  color: var(--brown-600);
 }
 
 .sv-check__fehler {
@@ -1569,29 +1576,202 @@ picture {
   border-color: #8C1D18;
 }
 
-.sv-check__ladend:not([hidden]) {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: var(--space-3);
-  margin-top: var(--space-6);
-  font-size: var(--text-body-sm);
-  color: var(--text-body);
+/* Sichtbarer Fokus für alles, was man im Check mit der Tastatur erreicht.
+   Die Knöpfe heben sich zwar beim Fokus, das allein ist aber zu leise. */
+#check .sv-button:focus-visible,
+#check a:focus-visible {
+  outline: 2px solid var(--ink-900);
+  outline-offset: 3px;
 }
 
-.sv-check__spinner {
-  width: 18px;
-  height: 18px;
+/* Nur für Screenreader: die Ansage je Schritt */
+.sv-check__sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Ladeansicht: sechs Schritte ── */
+.sv-check__ladend:not([hidden]) {
+  display: block;
+  width: min(100%, 40rem);
+  margin: var(--space-9) auto 0;
+  padding: var(--space-6) var(--space-7);
+  box-sizing: border-box;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--surface-card);
+  text-align: left;
+}
+
+.sv-check__ladend-kopf {
+  margin: 0 0 var(--space-5);
+  font-size: var(--text-body-sm);
+  color: var(--text-body);
+  overflow-wrap: anywhere;
+}
+
+.sv-check__ladend-kopf strong {
+  color: var(--text-strong);
+}
+
+.sv-check__schritte {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sv-check__schritt {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 4px var(--space-3);
+}
+
+.sv-check__schritt-zeichen {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  margin-top: 1px;
+  box-sizing: border-box;
+  border: 2px solid var(--border-strong);
   border-radius: 50%;
-  border: 2px solid var(--border-soft);
+}
+
+.sv-check__schritt[data-zustand="laeuft"] .sv-check__schritt-zeichen {
+  border-color: var(--border-soft);
   border-top-color: var(--terra-500);
-  animation: sv-check-dreh 0.8s linear infinite;
+  border-right-color: var(--terra-500);
+  animation: sv-check-dreh 0.9s linear infinite;
+}
+
+.sv-check__schritt[data-zustand="fertig"] .sv-check__schritt-zeichen {
+  border-color: var(--terra-500);
+  background: var(--terra-500);
+}
+
+/* Haken aus zwei Rändern */
+.sv-check__schritt[data-zustand="fertig"] .sv-check__schritt-zeichen::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--cream-50);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.sv-check__schritt[data-zustand="fehler"] .sv-check__schritt-zeichen {
+  border-color: #8C1D18;
+  background: #8C1D18;
+}
+
+/* Kreuz aus zwei Strichen */
+.sv-check__schritt[data-zustand="fehler"] .sv-check__schritt-zeichen::before,
+.sv-check__schritt[data-zustand="fehler"] .sv-check__schritt-zeichen::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 10px;
+  height: 2px;
+  background: var(--cream-50);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.sv-check__schritt[data-zustand="fehler"] .sv-check__schritt-zeichen::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 
 @keyframes sv-check-dreh {
   to { transform: rotate(360deg); }
 }
 
+.sv-check__schritt-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.sv-check__schritt-titel {
+  font-size: var(--text-ui);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+  color: var(--text-strong);
+}
+
+.sv-check__schritt-unter {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-body);
+  transition: opacity 0.26s ease;
+}
+
+.sv-check__schritt-unter.ist-weg {
+  opacity: 0;
+}
+
+.sv-check__schritt[data-zustand="wartet"] .sv-check__schritt-titel {
+  color: var(--text-body);
+  font-weight: var(--weight-medium);
+}
+
+.sv-check__schritt-wort {
+  padding-top: 3px;
+  font-family: var(--font-mono);
+  font-size: var(--text-overline);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-badge);
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--brown-600);
+}
+
+.sv-check__schritt[data-zustand="laeuft"] .sv-check__schritt-wort { color: var(--terra-600); }
+.sv-check__schritt[data-zustand="fertig"] .sv-check__schritt-wort { color: #1B5E33; }
+.sv-check__schritt[data-zustand="fehler"] .sv-check__schritt-wort { color: #8C1D18; }
+
+/* ── Fehler beim Check: Text und «Nochmals prüfen» ── */
+.sv-check__problem:not([hidden]) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  width: min(100%, 40rem);
+  margin: var(--space-5) auto 0;
+  padding: var(--space-5) var(--space-6);
+  box-sizing: border-box;
+  border: 1px solid #8C1D18;
+  border-radius: var(--radius-lg);
+  background: var(--peach-100);
+}
+
+.sv-check__problem p {
+  margin: 0;
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-body);
+  color: #8C1D18;
+}
+
+.sv-check__problem .sv-button[hidden] {
+  display: none;
+}
+
+/* ── Ergebnis ── */
 .sv-check__report {
   width: min(100%, 64rem);
   margin: var(--space-9) auto 0;
@@ -1600,94 +1780,484 @@ picture {
   text-align: left;
 }
 
-.sv-check__report-kopf {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: var(--space-3);
+.sv-check__report:focus {
+  outline: none;
 }
 
-.sv-check__report-kopf h3 {
-  margin: 4px 0 0;
+.sv-check__report-kopf {
+  display: flex;
+  align-items: center;
+  gap: var(--space-7);
+}
+
+.sv-check__ring {
+  flex: 0 0 auto;
+  width: 8.5rem;
+  height: 8.5rem;
+}
+
+.sv-check__ring-spur {
+  fill: none;
+  stroke: var(--sand-200);
+  stroke-width: 10;
+}
+
+.sv-check__ring-wert {
+  fill: none;
+  stroke: var(--terra-500);
+  stroke-width: 10;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1.1s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.sv-check__ring-zahl {
+  font-family: var(--font-sans);
+  font-size: 36px;
+  font-weight: var(--weight-bold);
+  letter-spacing: -0.02em;
+  fill: var(--text-strong);
+}
+
+.sv-check__ring-von {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  fill: var(--brown-600);
+}
+
+.sv-check__report-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.sv-check__report-text h3 {
+  margin: 2px 0 0;
   font-size: var(--text-h3);
   font-weight: var(--weight-semibold);
   letter-spacing: var(--tracking-tight);
   color: var(--text-strong);
+  overflow-wrap: anywhere;
 }
 
 .sv-check__report-datum {
+  margin: 0;
   font-family: var(--font-mono);
   font-size: var(--text-ui);
-  color: var(--brown-400);
-  white-space: nowrap;
+  color: var(--brown-600);
 }
 
 .sv-check__report-fazit {
   max-width: 62ch;
-  margin: var(--space-5) 0 0;
+  margin: var(--space-3) 0 0;
   font-size: var(--text-lead);
   line-height: var(--leading-relaxed);
   color: var(--text-body);
 }
 
-.sv-check__report .sv-card-grid {
-  margin-top: var(--space-9);
-  text-align: left;
-}
-
-.sv-check__karte {
-  display: flex;
-  flex-direction: column;
+/* «Grösstes Potenzial»: die hervorgehobene Karte mit Etikett, Text links,
+   darum sitzt auch das Etikett links statt mittig. */
+.sv-check__potenzial {
+  margin-top: var(--space-11);
+  align-items: flex-start;
   gap: var(--space-3);
+  padding: 27px 27px 25px;
   text-align: left;
 }
 
-.sv-check__karte-liste {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.sv-check__potenzial[hidden] {
+  display: none;
 }
 
-.sv-check__karte-liste li {
+.sv-check__report .sv-check__potenzial .sv-card__etikett {
+  left: var(--space-6);
+  transform: translateY(-50%);
+}
+
+.sv-check__potenzial h4 {
+  margin: 0;
+  font-size: var(--text-h3);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-strong);
+}
+
+.sv-check__report .sv-check__potenzial p:not(.sv-card__etikett) {
+  max-width: 68ch;
+  font-size: var(--text-size-body);
+  line-height: var(--leading-body);
+  color: var(--text-body);
+}
+
+.sv-check__potenzial .sv-label[hidden] {
+  display: none;
+}
+
+/* Bereiche: der offene über die ganze Breite, die drei anderen daneben */
+.sv-check__bereiche {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: var(--space-5);
+  margin-top: var(--space-7);
+}
+
+.sv-check__bereich {
+  align-items: stretch;
+  gap: var(--space-4);
+  text-align: left;
+}
+
+.sv-check__bereich--offen {
+  grid-column: 1 / -1;
+}
+
+.sv-check__bereich-kopf {
   display: flex;
   align-items: flex-start;
-  gap: 9px;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.sv-check__bereich-kopf > div:first-child {
   min-width: 0;
+}
+
+.sv-check__bereich-kopf h4 {
+  margin: 4px 0 0;
+  font-size: var(--text-h4);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+  color: var(--text-strong);
+  overflow-wrap: break-word;
+}
+
+.sv-check__punkte {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.sv-check__report .sv-check__punkte-zahl {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-ui);
+  color: var(--brown-600);
+  white-space: nowrap;
+}
+
+.sv-check__punkte-zahl strong {
+  font-family: var(--font-sans);
+  font-size: 22px;
+  font-weight: var(--weight-bold);
+  color: var(--text-strong);
+}
+
+.sv-check__balken {
+  display: block;
+  width: 5.5rem;
+  height: 6px;
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+  background: rgba(28, 22, 19, 0.12);
+}
+
+.sv-check__balken span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--terra-500);
+}
+
+.sv-check__report .sv-check__bereich-fazit {
+  max-width: 72ch;
+  font-size: var(--text-size-body);
+  line-height: var(--leading-body);
+  color: var(--text-body);
+}
+
+.sv-check__befunde {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sv-check__bereich--offen .sv-check__befunde {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+  column-gap: var(--space-9);
+}
+
+.sv-check__befund {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: var(--space-3) 0;
+  border-top: 1px solid var(--border-soft);
+}
+
+.sv-check__befund-kopf {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-3);
+}
+
+.sv-check__befund-kopf h5 {
+  min-width: 0;
+  margin: 0;
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+  color: var(--text-strong);
+  overflow-wrap: break-word;
+}
+
+.sv-check__status {
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: var(--text-overline);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-badge);
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--text-strong);
+}
+
+.sv-check__status-punkt {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--brown-600);
+}
+
+.sv-check__status[data-status="gut"] .sv-check__status-punkt     { background: #2E7D4F; }
+.sv-check__status[data-status="mittel"] .sv-check__status-punkt  { background: #9A6A00; }
+.sv-check__status[data-status="schwach"] .sv-check__status-punkt { background: #B3261E; }
+
+.sv-check__report .sv-check__befund-text,
+.sv-check__report .sv-check__empfehlung {
   font-size: var(--text-body-sm);
   line-height: var(--leading-body);
   color: var(--text-body);
 }
 
-.sv-check__karte-liste li span:first-child {
-  flex: 0 0 auto;
-  font-weight: var(--weight-bold);
-  color: var(--accent);
+.sv-check__empfehlung strong {
+  color: var(--text-strong);
 }
 
-.sv-check__karte-liste li span:last-child {
-  flex: 1 1 auto;
-  min-width: 0;
-  overflow-wrap: break-word;
-}
-
-.sv-check__report-cta {
+/* Platzhalter statt Text in den Vorschau-Bereichen — rein dekorativ */
+.sv-check__platzhalter {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: var(--space-5);
-  margin-top: var(--space-9);
+  gap: 6px;
 }
 
-.sv-check__report-cta p {
+.sv-check__platzhalter span {
+  display: block;
+  height: 9px;
+  border-radius: var(--radius-pill);
+  background: rgba(28, 22, 19, 0.10);
+}
+
+.sv-check__platzhalter span:last-child {
+  width: 62%;
+}
+
+.sv-check__schloss {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  font-size: var(--text-ui);
+  font-weight: var(--weight-semibold);
+  color: var(--terra-600);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.sv-check__schloss:hover {
+  color: var(--terra-700);
+}
+
+/* ── Bericht bestellen ── */
+.sv-check__bestellen {
+  margin-top: var(--space-11);
+  padding: var(--card-pad);
+  box-sizing: border-box;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--surface-card-sand);
+  scroll-margin-top: 100px;
+}
+
+.sv-check__bestellen h3 {
   margin: 0;
-  max-width: 58ch;
-  text-align: left;
+  text-align: center;
+  font-size: var(--text-h3);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  color: var(--text-strong);
+}
+
+.sv-check__bestellen-lead {
+  max-width: 52ch;
+  margin: var(--space-3) auto 0;
+  text-align: center;
   font-size: var(--text-body-sm);
+  line-height: var(--leading-body);
   color: var(--text-body);
+  overflow-wrap: anywhere;
+}
+
+.sv-check__bestell-form {
+  margin-top: var(--space-7);
+}
+
+.sv-check__bestell-form[hidden] {
+  display: none;
+}
+
+.sv-check__bestell-form input:focus-visible {
+  box-shadow: 0 0 0 3px rgba(178, 82, 34, 0.28);
+}
+
+.sv-check__bestell-form input[aria-invalid="true"] {
+  border-color: #8C1D18;
+}
+
+.sv-check__bestell-form .vc-kontakt__hinweis a {
+  color: var(--terra-600);
+  text-underline-offset: 3px;
+}
+
+.sv-check__bestell-form .vc-kontakt__meldung:empty {
+  display: none;
+}
+
+.sv-check__bestell-form .vc-kontakt__meldung a {
+  color: inherit;
+}
+
+/* Honigtopf: für Menschen unsichtbar, für Bots ein Feld wie jedes andere */
+.sv-check__bestell-form .sv-check__fangfrage {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+}
+
+.sv-check__danke {
+  max-width: 52ch;
+  margin: var(--space-7) auto 0;
+  text-align: center;
+  font-size: var(--text-lead);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-body);
+  color: #1B5E33;
+}
+
+.sv-check__danke:focus {
+  outline: none;
+}
+
+/* ── Domainfeld im Kopf der Startseite (index.html, check-start.js) ──
+   Auf Terracotta: Feld in Creme wie die hellen Knöpfe daneben, Fokus als
+   heller Ring. Der Hinweis bei falscher Eingabe steht unter der Zeile. */
+.sv-start {
+  width: min(100%, 46rem);
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.sv-start__feld {
+  flex: 0 1 17rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.sv-start__label {
+  padding-left: var(--space-4);
+  font-family: var(--font-mono);
+  font-size: var(--text-overline);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-badge);
+  text-transform: uppercase;
+  color: var(--cream-50);
+}
+
+.sv-start__feld input {
+  width: 100%;
+  min-height: var(--space-13);
+  padding: 0 var(--space-5);
+  box-sizing: border-box;
+  border: 2px solid transparent;
+  border-radius: var(--radius-pill);
+  background: var(--cream-card);
+  box-shadow: var(--shadow-cta);
+  font-family: var(--font-sans);
+  font-size: var(--text-size-body);
+  font-weight: var(--weight-medium);
+  color: var(--text-strong);
+}
+
+.sv-start__feld input::placeholder {
+  color: var(--brown-400);
+}
+
+.sv-start__feld input:focus {
+  outline: 3px solid var(--cream-50);
+  outline-offset: 2px;
+}
+
+.sv-start__feld input[aria-invalid="true"] {
+  border-color: #8C1D18;
+}
+
+.sv-start .sv-button {
+  flex: 0 0 auto;
+}
+
+/* Die Feldbeschriftung macht den Kopf 22px höher; die nimmt der Bot ab,
+   damit der Kopf weiterhin auf den Bildschirm passt (siehe oben, 697px). */
+@media (min-width: 1025px) {
+  .sv-hero:has(.sv-start) .sv-hero__visual:has(.sv-hero__robot--frei) {
+    height: clamp(120px, calc(100vh - 719px), 308px);
+    height: clamp(120px, calc(100svh - 719px), 308px);
+  }
+}
+
+.sv-start .sv-button:focus-visible {
+  outline: 3px solid var(--cream-50);
+  outline-offset: 3px;
+}
+
+.sv-start__fehler {
+  order: 1;   /* auf breiten Schirmen unter die ganze Zeile */
+  flex-basis: 100%;
+  margin: 0;
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-bold);
+  line-height: var(--leading-snug);
+  color: var(--cream-50);
+}
+
+.sv-start__fehler::before {
+  content: "! ";
 }
 
 @media (max-width: 700px) {
@@ -1706,9 +2276,90 @@ picture {
     width: 100%;
   }
 
-  .sv-check__report-cta {
+  .sv-check__ladend:not([hidden]) {
+    padding: var(--space-5) var(--space-4);
+  }
+
+  /* Zustandswort unter den Titel, damit der Text die ganze Breite hat */
+  .sv-check__schritt {
+    grid-template-columns: 22px minmax(0, 1fr);
+  }
+
+  .sv-check__schritt-wort {
+    grid-column: 2;
+    padding-top: 0;
+  }
+
+  .sv-check__problem:not([hidden]) {
+    padding: var(--space-5) var(--space-4);
+  }
+
+  .sv-check__problem .sv-button {
+    width: 100%;
+  }
+
+  .sv-check__report {
+    margin-top: var(--space-7);
+    padding-top: var(--space-7);
+  }
+
+  .sv-check__report-kopf {
     flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-5);
+  }
+
+  .sv-check__ring {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .sv-check__potenzial {
+    padding: 27px 19px 21px;
+  }
+
+  .sv-check__report .sv-check__potenzial .sv-card__etikett {
+    left: var(--space-4);
+  }
+
+  .sv-check__bereich--offen .sv-check__befunde {
+    grid-template-columns: 1fr;
+  }
+
+  .sv-check__befund-kopf {
+    flex-wrap: wrap;
+  }
+
+  .sv-check__bestellen {
+    padding: var(--space-6) var(--space-4);
+  }
+
+  /* In der Spalte volle Breite wie die Knöpfe (.sv-start setzt oben flex-end) */
+  .sv-start {
+    flex-wrap: nowrap;
     align-items: stretch;
-    text-align: center;
+  }
+
+  /* Wie beim Check-Feld: in der Spalte keine Basis als Höhe */
+  .sv-start__feld {
+    flex: 0 0 auto;
+  }
+
+  .sv-start__fehler {
+    order: 0;          /* auf dem Handy direkt unters Feld */
+    flex-basis: auto;  /* 100% hiesse in der Spalte: volle Höhe */
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sv-check__schritt[data-zustand="laeuft"] .sv-check__schritt-zeichen {
+    animation: none;
+    border-color: var(--terra-500);
+  }
+
+  .sv-check__schritt-unter,
+  .sv-check__ring-wert,
+  .sv-check__feld input {
+    transition: none;
   }
 }

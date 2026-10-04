@@ -19,7 +19,7 @@
 <title>KI für Schweizer KMU verständlich einführen · vaiacon</title>
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20260925-ki-kompetenz">
-<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261003-check">
+<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261004-check">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20260926-kopf3">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
@@ -121,10 +121,16 @@
           <p class="sv-hero__lead">
             Wir führen kleine Betriebe an KI heran: verständlich, persönlich und ohne Verkaufsdruck. Vom ersten Lernen bis zur Automation, die im Alltag trägt.
           </p>
-          <div class="sv-actions">
-            <a class="sv-button sv-button--light" href="erstanalyse">Kostenlose Erstanalyse ↗</a>
+          <!-- Visibility-Check direkt aus dem Kopf: springt nach visibility?domain=…#check (check-start.js) -->
+          <form class="sv-actions sv-start" id="sv-start-form" action="visibility" method="get" novalidate>
+            <div class="sv-start__feld">
+              <label class="sv-start__label" for="sv-start-domain">Ihre Domain</label>
+              <input type="text" id="sv-start-domain" name="domain" placeholder="ihre-firma.ch" autocomplete="off" autocapitalize="none" spellcheck="false" inputmode="url" required>
+            </div>
+            <p class="sv-start__fehler" id="sv-start-fehler" role="alert" hidden></p>
+            <button class="sv-button sv-button--light" type="submit">Check starten →</button>
             <a class="sv-button sv-button--glass" href="#bereiche">Unsere Lösungen →</a>
-          </div>
+          </form>
         </div>
         <div class="sv-hero__visual" aria-label="vaiacon Übersicht">
           <figure class="sv-hero__robot sv-hero__robot--frei">
@@ -266,5 +272,6 @@
 </div>
 <script src="ui_kits/website/visibility.js?v=20260925-ki-kompetenz"></script>
 <script src="ui_kits/website/chat.js?v=20260927-striche"></script>
+<script src="ui_kits/website/check-start.js?v=20261004-check"></script>
 </body>
 </html>
