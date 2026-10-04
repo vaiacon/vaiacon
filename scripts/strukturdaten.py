@@ -48,8 +48,9 @@ ORGANISATION = {
     "description": (
         "vaiacon führt Schweizer KMU an KI heran: Sichtbarkeit in Suchmaschinen "
         "und KI-Antworten, Weiterbildung, Automatisierung von Büroarbeit und "
-        "laufende Begleitung. Ohne Fachchinesisch, nach revDSG, auf Schweizer "
-        "Infrastruktur."
+        "laufende Begleitung. Gedacht für Betriebe mit 5 bis 30 Mitarbeitenden "
+        "und eigenem Büro; für Kleinstbetriebe gibt es kostenlose Kurse. Ohne "
+        "Fachchinesisch, nach revDSG, auf Schweizer Infrastruktur."
     ),
     "email": "hallo@vaiacon.ch",
     "foundingDate": "2026",
@@ -131,9 +132,15 @@ LLMS = """# vaiacon
 > und laufende Begleitung. Ohne Fachchinesisch, nach revDSG, auf Schweizer
 > Infrastruktur. Gegründet 2026 von André Ulrich und Philip Krieger.
 
+Für wen: Betriebe mit 5 bis 30 Mitarbeitenden und eigenem Büro (Handwerk,
+Treuhand, Praxen, Verwaltungen). Für Einzel- und Kleinstbetriebe sind die
+kostenlosen Kurse der passende Einstieg.
+
 Kontakt: hallo@vaiacon.ch · Lehenstrasse 74, 8037 Zürich
-Erster Schritt: kostenloses Erstgespräch (eine halbe Stunde) oder kostenlose
-Erstanalyse (rund zehn Minuten). Rückruf innerhalb von höchstens 12 Stunden.
+Erster Schritt: kostenloses Erstgespräch (eine halbe Stunde, am Telefon oder
+am Bildschirm), kostenlose Erstanalyse zur Zeitersparnis (rund zehn Minuten)
+oder kostenloser Visibility-Check der eigenen Website. Rückruf innert eines
+Arbeitstages.
 
 ## Angebote
 

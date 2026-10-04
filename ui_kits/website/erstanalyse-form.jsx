@@ -160,6 +160,8 @@ function EaProgress({ answers }) {
 /* ---- Erfolgs-Screen ---- */
 function EaSuccess({ answers, result, zugestellt }) {
   const vorname = vornameOf(answers['Firma und Name']);
+  /* Kleinstbetriebe: zuerst die kostenlosen Kurse zeigen, das Gespräch bleibt offen. */
+  const kleinst = ['Nur ich', '2–5'].includes(answers['Mitarbeitende']);
   return (
     <div className="ea-success" data-screen-label="Erstanalyse — Erfolg">
       <EaKicker>Kostenlos &amp; unverbindlich</EaKicker>
@@ -185,8 +187,16 @@ function EaSuccess({ answers, result, zugestellt }) {
         {result.vorbehalt ? <p className="ea-result-vorbehalt">{result.vorbehalt}</p> : null}
         <p className="ea-result-vorbehalt">Bewusst konservativ gerechnet: Wir versprechen lieber zu wenig als zu viel. Welche Lösungswege dahinter stecken und was sie kosten, zeigen wir Ihnen im kostenlosen Erstgespräch.</p>
       </div>
+      {kleinst ? (
+        <p className="ea-lead">Für einen Betrieb Ihrer Grösse sind die kostenlosen Kurse oft der schnellste erste Schritt: kurze Lektionen, ohne Anmeldung, im eigenen Tempo. Ein Gespräch mit uns bleibt jederzeit möglich.</p>
+      ) : null}
       <div className="ea-success-ctas">
-        <EaButton variant="cta" arrow="→" href="../../kontakt#formular">Gespräch vereinbaren</EaButton>
+        {kleinst ? (
+          <EaButton variant="cta" arrow="→" href="../../academy/">Zu den kostenlosen Kursen</EaButton>
+        ) : (
+          <EaButton variant="cta" arrow="→" href="../../kontakt#formular">Gespräch vereinbaren</EaButton>
+        )}
+        {kleinst ? <a className="ea-back" href="../../kontakt#formular">Gespräch vereinbaren →</a> : null}
         <a className="ea-back" href="../../">Zurück zur Startseite →</a>
       </div>
     </div>
