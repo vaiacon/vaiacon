@@ -3,8 +3,8 @@
    POST /api/chat mit {messages:[{role,content}]}, Antwort als Strom in
    «data: {...}»-Blöcken. Der Schlüssel liegt auf dem Server, nie hier.
    Das Widget schwebt unten rechts und läuft beim Blättern mit. Kommt die
-   Fusszeile ins Bild, hebt es sich um deren sichtbare Höhe an, damit der
-   unterste Bereich lesbar bleibt. */
+   Fusszeile ins Bild, blendet sich der Knopf aus, damit der unterste Bereich
+   frei bleibt. */
 (function () {
   var BEGRUESSUNG = 'Grüezi, ich bin Vaia! Die digitale Mitarbeiterin von vaiacon. Ich beantworte gerne Ihre Fragen zu vaiacon, unseren Paketen und den ersten Schritten.';
   var AUSWEICHTEXT = 'Das hat gerade nicht geklappt. Schreiben Sie uns bitte an hallo@vaiacon.ch. Wir antworten selbst.';
@@ -66,18 +66,11 @@
     hubBerechnen();   // beim Auf- und Zuklappen neu entscheiden
   }
 
-  /* ── Anheben über der Fusszeile ──────────────────────────────────────────
-     Wir setzen nur die Zahl; ob sie benutzt wird, entscheidet chat.css. So
-     bleibt das Verhalten am Bildschirm unberührt, ohne Fallunterscheidung
-     hier drin. Gerechnet wird, wie weit die Fusszeile ins Bild ragt. */
-  /* Der Deckel war einmal fest bei 170px. Seit die Fusszeile auf dem Handy
-     drei Zeilen und die Netzwerk-Zeichen trägt, ist sie rund 266px hoch — der
-     Knopf wäre darin stehen geblieben. Darum bemisst sich der Deckel jetzt an
-     der Fensterhöhe: genug, um jede Fusszeile freizugeben, und nie so viel,
-     dass der Knopf mitten im Text landet. */
-  function hoechsterHub() {
-    return Math.round(window.innerHeight * 0.45);
-  }
+  /* ── Ausblenden an der Fusszeile (04.10.2026) ────────────────────────────
+     Früher hob sich der Knopf um die sichtbare Höhe der Fusszeile an. Auf dem
+     Handy blieb er dabei mitten im Bild kleben (Deckel 45 % der Fensterhöhe).
+     Jetzt verschwindet er, sobald die Fusszeile ins Bild kommt, und erscheint
+     wieder, wenn man zurückblättert. Offen bleibt der Chat sichtbar. */
   var fusszeile = null;
   var angefordert = false;
 
@@ -86,7 +79,10 @@
      und hebt nie an. Darum bei jedem Lauf nachsehen, bis sie da ist. */
   function fusszeileFinden() {
     if (fusszeile && fusszeile.isConnected) return fusszeile;
-    fusszeile = document.querySelector('.sv-footer') || document.querySelector('footer');
+    /* Die letzte, nicht die erste: Im Lernplan trägt schon die Karte «Was Sie
+       mitnehmen» ein <footer>, die Fusszeile der Seite kommt danach. */
+    var alle = document.querySelectorAll('footer');
+    fusszeile = document.querySelector('.sv-footer') || alle[alle.length - 1] || null;
     return fusszeile;
   }
 
@@ -110,16 +106,11 @@
     angefordert = false;
     kopfPruefen();
     var fuss = fusszeileFinden();
-    if (!fuss) return;
-    // Offen deckt das Fenster ohnehin den unteren Rand — dann nicht verschieben.
-    if (wurzel.getAttribute('data-open') === 'true') {
-      wurzel.style.setProperty('--vc-hub', '0px');
-      return;
+    var amFuss = false;
+    if (fuss && wurzel.getAttribute('data-open') !== 'true') {
+      amFuss = fuss.getBoundingClientRect().top < window.innerHeight - 1;
     }
-    var kasten = fuss.getBoundingClientRect();
-    var sichtbar = window.innerHeight - kasten.top;
-    var hub = Math.max(0, Math.min(sichtbar, kasten.height, hoechsterHub()));
-    wurzel.style.setProperty('--vc-hub', Math.round(hub) + 'px');
+    wurzel.setAttribute('data-am-fuss', amFuss ? 'true' : 'false');
   }
 
   function hubAnfordern() {

@@ -1,14 +1,12 @@
 /* Chat-Widget für die statischen Seiten — ohne React.
    Es schwebt unten rechts und läuft beim Blättern mit, auf dem Handy ebenso.
-   Sobald die Fusszeile ins Bild kommt, hebt es sich um deren sichtbare Höhe an
-   (--vc-hub, von chat.js gesetzt), damit der unterste Bereich lesbar bleibt. */
+   Sobald die Fusszeile ins Bild kommt, blendet chat.js den Knopf aus
+   (data-am-fuss), damit der unterste Bereich frei bleibt (04.10.2026). */
 
 .vc-chat {
   position: fixed;
   right: 24px;
   bottom: 24px;
-  transform: translateY(calc(-1 * var(--vc-hub, 0px)));
-  transition: transform 0.3s cubic-bezier(.22, 1, .36, 1);
   z-index: 60;
   display: flex;
   flex-direction: column;
@@ -37,7 +35,8 @@
 /* Ragt der Kopf der Seite über den unteren Bildschirmrand, blendet chat.js den
    Knopf aus (data-ueber-kopf), bis der Kopf hinausgescrollt ist — sonst läge er
    auf Text oder Knöpfen (26.09.2026). Sanft, wie alles an der Marke. */
-.vc-chat[data-ueber-kopf="true"] .vc-chat__fab {
+.vc-chat[data-ueber-kopf="true"] .vc-chat__fab,
+.vc-chat[data-am-fuss="true"] .vc-chat__fab {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
