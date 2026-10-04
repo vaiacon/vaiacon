@@ -39,13 +39,13 @@
     { schluessel: 'daten', titel: 'Strukturierte Daten', unterzeile: 'Firmendaten, Leistungen und FAQ als maschinenlesbare Angaben' },
     { schluessel: 'geo', titel: 'KI-Sichtbarkeit (GEO)', unterzeile: 'llms.txt und Regeln für KI-Crawler wie GPTBot, ClaudeBot, PerplexityBot' },
     { schluessel: 'inhalt', titel: 'Inhalt & Vertrauen', unterzeile: 'Textumfang, Kontaktangaben, Impressum, Datenschutzerklärung' },
-    { schluessel: 'auswertung', titel: 'Auswertung', unterzeile: 'Claude bewertet alle Befunde und sucht Ihr grösstes Potenzial' },
+    { schluessel: 'auswertung', titel: 'Auswertung', unterzeile: 'Wir bewerten alle Befunde und suchen Ihr grösstes Potenzial' },
   ];
 
   // Die Auswertung dauert real 10–40 s; damit der Schritt nicht stehen
   // geblieben wirkt, wechselt seine Unterzeile ruhig durch diese Sätze.
   var AUSWERTUNG_ZEILEN = [
-    'Claude bewertet alle Befunde und sucht Ihr grösstes Potenzial',
+    'Wir bewerten alle Befunde und suchen Ihr grösstes Potenzial',
     'Seitentitel und Beschreibung bewerten …',
     'Strukturierte Daten einordnen …',
     'KI-Sichtbarkeit einschätzen …',
