@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 03.10.2026 · Eintrag bbef833 Modul 09: konkretes Beispiel, wo KI im Ablauf sitzt
+> Stand: 04.10.2026 · Eintrag cb4822e Startseite: Domain-Feld «Check starten» statt Erstanalyse, echter Visibility-Check
 
 ## Wie du antwortest
 
@@ -161,8 +161,9 @@ Ihre Mitarbeitenden nutzen KI nach klaren Regeln statt heimlich am eigenen Konto
 
 VAIACON · FÜR SCHWEIZER KMU
 Digitale Sichtbarkeit und KI-Kompetenz für Schweizer KMU.
-Wir führen kleine Betriebe an KI heran: verständlich, persönlich und ohne Verkaufsdruck. Vom ersten Lernen bis zur Automation, die im Alltag trägt.
-Kostenlose Erstanalyse ↗
+Für Betriebe mit 5 bis 30 Mitarbeitenden und eigenem Büro: Handwerk, Treuhand, Praxen, Verwaltungen. Wir führen Sie an KI heran: verständlich, persönlich und ohne Verkaufsdruck. Vom ersten Lernen bis zur Automation, die im Alltag trägt.
+Ihre Domain
+Check starten →
 Unsere Lösungen →
 WAS WIR ANBIETEN
 Mehr KI-Kompetenz. Mehr Effizienz. Mehr Sichtbarkeit. Starten Sie mit der passenden Lösung.
@@ -174,7 +175,7 @@ Ab CHF 600 · Fixpreis
 Zu den Automatisierungen →
 Beliebter Einstieg
 KI-Kompetenz
-Selbst lernen: 11 Lernpfade mit 58 kurzen Lektionen, ohne Anmeldung. Oder gemeinsam: Trainings, Coachings und Workshops bei Ihnen im Betrieb.
+Selbst lernen: 11 Lernpfade mit 58 kurzen Lektionen, ohne Anmeldung. Der passende Einstieg für Einzel- und Kleinstbetriebe. Oder gemeinsam: Trainings, Coachings und Workshops bei Ihnen im Betrieb.
 Passt, wenn Sie möchten, dass Sie und Ihre Mitarbeitenden KI verstehen, sinnvoll einsetzen und in ihren Arbeitsalltag integrieren können.
 Kurse kostenlos · Schulung nach Erstgespräch
 Zur Academy → Zur Schulung →
@@ -189,8 +190,8 @@ Passt, wenn Sie bereits auf eine oder mehrere unserer Lösungen setzen und dabei
 Ab CHF 90 / Monat · monatlich kündbar
 Zur Begleitung →
 Noch unsicher?
-Die kostenlose Erstanalyse zeigt in rund zehn Minuten, wo in Ihrem Betrieb der grösste Hebel liegt.
-Erstanalyse starten →
+Zwei kostenlose Analysen zeigen, wo Ihr Betrieb steht. Der Fragebogen rechnet in rund zehn Minuten aus, wie viel Bürozeit sich einsparen lässt. Der Visibility-Check prüft in wenigen Sekunden, wie gut Ihre Website gefunden wird.
+Zeit sparen: Erstanalyse → Gefunden werden: Check starten →
 WOFÜR WIR STEHEN
 KI ist für uns nicht das Produkt, sondern das Werkzeug.
 Wir verkaufen keine Technik, sondern zurückgewonnene Zeit. Wo sich etwas nicht rechnet, sagen wir das. Auch wenn es uns einen Auftrag kostet. Ihre Kundendaten bleiben dort, wo sie hingehören: nach revDSG, auf Schweizer Infrastruktur.
@@ -199,7 +200,7 @@ SO FÄNGT ES AN
 Drei Schritte, ohne Verpflichtung.
 01
 Erstgespräch
-Eine halbe Stunde. Was kostet heute am meisten Zeit, was wurde schon versucht, wo drückt es wirklich? Kostenlos.
+Eine halbe Stunde am Telefon oder am Bildschirm. Was kostet heute am meisten Zeit, was wurde schon versucht, wo drückt es wirklich? Kostenlos.
 02
 Empfehlung
 Sie erhalten schriftlich, was wir vorschlagen, mit Aufwand und Preis. Auch dann, wenn die Empfehlung lautet, vorerst nichts zu tun.
@@ -219,7 +220,7 @@ Wer wir sind ↓
 Wofür wir stehen ↓
 WARUM VAIACON
 Zwei Unternehmer, die den Geschäftsalltag kennen.
-Wir haben erkannt, dass gerade kleine und mittlere Unternehmen Mühe haben, KI und Automatisierungen sinnvoll in ihren Betrieb zu integrieren. Darum haben wir 2026 vaiacon gegründet: Um genau solche Betriebe zu begleiten. Persönlich und auf Augenhöhe.
+Wir haben erkannt, dass gerade kleine und mittlere Unternehmen Mühe haben, KI und Automatisierungen sinnvoll in ihren Betrieb zu integrieren. Darum haben wir 2026 vaiacon gegründet: Um genau solche Betriebe zu begleiten. Persönlich und auf Augenhöhe. Am meisten bewirken wir in Betrieben mit 5 bis 30 Mitarbeitenden und eigenem Büro: Handwerk, Treuhand, Praxen, Verwaltungen. Für Einzel- und Kleinstbetriebe gibt es unsere kostenlosen Kurse .
 André Ulrich
 Mitgründer · Strategie und Marketing
 André führt seit 20 Jahren ein eigenes Unternehmen im Bereich Facility Management und in der Textilreinigung. Dazu war er Verwaltungsrat und Bewirtschafter bei einer kleinen Immobilienfirma in Zürich. Offerten, Auftragsbestätigungen, E-Mails, Dossiers, Beiträge für Social Media: Die Arbeit, die jede Woche wiederkommt, kennt er aus eigener Erfahrung. Bei vaiacon kümmert er sich um Strategie und Marketing.
@@ -227,22 +228,45 @@ Philip Krieger
 Mitgründer · Technik und Coaching
 Philip bringt zehn Jahre Erfahrung als Trainer bei einem der grössten Schweizer Telekommunikationsanbieter mit. Er ist Ausbilder mit eidgenössischem Fachausweis und hat über Jahre Lösungen für die digitale Transformation und die Einführung von KI begleitet. Bei vaiacon ist er für Technik, Coaching und Support zuständig.
 SO ARBEITEN WIR
-Das Erstgespräch führen wir beide. Wer uns schreibt, bekommt innerhalb von höchstens 12 Stunden einen Rückruf von einem von uns. Sie sprechen immer direkt mit einem der Gründer.
+Das Erstgespräch führt einer von uns beiden, am Telefon oder am Bildschirm. Wer uns schreibt, bekommt innert eines Arbeitstages einen Rückruf. Sie sprechen immer direkt mit einem der Gründer.
 WOFÜR WIR STEHEN
 KI ist für uns nicht das Produkt, sondern das Werkzeug.
 Wir verkaufen keine Technik, sondern zurückgewonnene Zeit. Wenn sich etwas für Sie nicht rechnet, sagen wir es Ihnen. Auch dann, wenn es uns einen Auftrag kostet. Ihre Kundendaten bleiben dort, wo sie hingehören: nach revDSG, auf Schweizer Infrastruktur.
 NÄCHSTER SCHRITT
 Lernen wir uns kennen.
 Ein halbstündiges Erstgespräch, kostenlos und ohne Verpflichtung. Danach wissen Sie, ob und wo wir Ihrem Betrieb weiterhelfen.
-Kostenlose Erstanalyse →
+Erstgespräch vereinbaren →
+Zeit sparen: Erstanalyse →
+Gefunden werden: Check starten →
 
 ### vaiaconVisibility — gefunden werden
 
 VAIACON VISIBILITY
 Gefunden werden, wenn Menschen suchen und KI antwortet.
 vaiacon Visibility hilft Schweizer KMU, online sichtbar und verständlich zu werden: mit SEO für Suchmaschinen und GEO für KI-Antworten.
-Kostenlose Erstanalyse →
+Check starten →
 SEO und GEO verstehen →
+KOSTENLOSER CHECK
+Wie sichtbar ist Ihre Website heute?
+Domain eingeben: Wir prüfen, ob Google Ihr Angebot versteht und ob KI-Systeme Sie als Quelle erkennen würden, mit konkreten Hebeln statt blossen Kennzahlen.
+Ihre Domain
+Check starten →
+Kostenlos, unverbindlich. Wir lesen nur, was Ihre Website ohnehin öffentlich zeigt.
+Wir prüfen
+Nochmals prüfen
+0
+von 100
+IHR CHECK
+Grösstes Potenzial
+Vollständigen Bericht per E-Mail anfordern
+Alle Befunde und Empfehlungen zu , in allen vier Bereichen.
+Name *
+E-Mail *
+Firma
+Telefon
+Fangfrage
+Bericht anfordern →
+Wir senden Ihnen den vollständigen Bericht persönlich per E-Mail. Mehr dazu in der Datenschutzerklärung .
 EINFACH ERKLÄRT
 Sichtbarkeit beginnt damit, dass Ihr Angebot verstanden wird.
 Viele Websites sehen gut aus, beantworten aber die Fragen der Kunden nicht klar genug. Dann weiss Google zu wenig, KI-Systeme finden keine sauberen Aussagen und Interessenten bleiben unsicher.
@@ -307,7 +331,7 @@ Regelmässige Prüfung, was sichtbar wird, welche Fragen auftauchen und welche I
 NÄCHSTER SCHRITT
 Lassen Sie prüfen, ob Ihr Angebot online klar verstanden wird.
 Wir schauen mit Ihnen auf Ihre heutige Website und zeigen verständlich, wo SEO und GEO den grössten Hebel haben.
-Kostenlose Erstanalyse →
+Check starten →
 Zurück zur Startseite →
 
 ### vaiaconAcademy — Selbstlernen
@@ -371,7 +395,7 @@ Begleitung durch Menschen
 VAIACON LEARNING
 KI im Team. Verstanden, nicht nur eingeführt.
 vaiacon Learning bringt Ihren Mitarbeitenden bei, KI im Arbeitsalltag sicher anzuwenden: mit Trainings, Coachings und Workshops bei Ihnen im Betrieb.
-Kostenlose Erstanalyse →
+Vorgespräch vereinbaren →
 Die Formate ansehen →
 WARUM SCHULUNG
 Werkzeuge einführen ist einfach. Sie nutzen nicht.
@@ -408,7 +432,7 @@ Vorlagen, Prompt-Karten und eine Seite Spielregeln für den Betrieb. Dazu ein Te
 NÄCHSTER SCHRITT
 Reden wir darüber, wer bei Ihnen lernen soll.
 Ein halbstündiges Vorgespräch, kostenlos und ohne Verpflichtung. Danach wissen Sie, ob und in welcher Form sich eine Schulung für Ihren Betrieb lohnt.
-Kostenlose Erstanalyse →
+Vorgespräch vereinbaren →
 Zurück zur Startseite →
 
 ### vaiaconBot — Automation
@@ -432,6 +456,12 @@ Ab CHF 600 pro Automation. Fixpreis.
 Den genauen Preis nennen wir nach der Erstanalyse. Sie wissen vor der Umsetzung, woran Sie sind. Eine Automation, die eine Stunde pro Woche spart, ist bei den meisten Betrieben in wenigen Monaten bezahlt. Rechnet sie sich nicht, sagen wir das.
 Rechenbeispiel
 Ein Sanitärbetrieb mit sechs Mitarbeitenden schreibt zwölf Offerten im Monat. Heute braucht eine Offerte 90 Minuten, mit Automation 25. Das sind 13 Stunden im Monat, die wieder auf der Baustelle sind.
+Zur Veranschaulichung, kein echter Kunde.
+Rechenbeispiel
+Ein Treuhandbüro mit acht Mitarbeitenden erfasst 600 Belege im Monat. Heute braucht ein Beleg zwei Minuten, mit Automation eine halbe. Das sind 15 Stunden im Monat, die für die Beratung der Mandanten frei werden.
+Zur Veranschaulichung, kein echter Kunde.
+Rechenbeispiel
+Eine Immobilienverwaltung mit zwölf Mitarbeitenden beantwortet 200 Mieteranfragen im Monat. Heute braucht eine Antwort acht Minuten, mit vorbereitetem Entwurf drei. Das sind knapp 17 Stunden im Monat, die nicht mehr im Postfach verschwinden.
 Zur Veranschaulichung, kein echter Kunde.
 Erstanalyse starten →
 SO LÄUFT ES AB
@@ -528,12 +558,14 @@ Die Fragen von allen Seiten, nach Bereich geordnet. Auf den Seiten selbst stehen
 Allgemein
 Was macht vaiacon? +
 vaiacon befähigt Schweizer KMU, KI verständlich, persönlich und wirksam im Unternehmen einzusetzen. Wir verbinden Lernen, Automatisierung und langfristige Begleitung.
+Für wen ist vaiacon gedacht? +
+Am meisten bewirken wir in Betrieben mit 5 bis 30 Mitarbeitenden und eigenem Büro, etwa im Handwerk, in Treuhandbüros, Praxen und Verwaltungen. Dort fällt genug Büroarbeit an, damit sich eine Automation oder eine Schulung rechnet. Für Einzel- und Kleinstbetriebe sind die kostenlosen Kurse der vaiaconAcademy der passende Einstieg.
 Ist vaiacon eine klassische KI-Agentur? +
 Nein. KI ist für uns ein Werkzeug. Im Zentrum stehen verständliche Einführung, konkrete Abläufe und eine Umsetzung, die im Alltag funktioniert.
 Brauche ich technisches Vorwissen? +
 Nein. Die Inhalte und die Umsetzung werden so erklärt, dass Unternehmer und Mitarbeitende ohne technisches Vorwissen mitkommen.
 Wie beginnt eine Zusammenarbeit? +
-Am Anfang steht ein unverbindliches Gespräch. Danach klären wir, ob Sichtbarkeit, Schulung, Automatisierung, Begleitung oder eine Kombination davon sinnvoll ist.
+Am Anfang steht ein unverbindliches Gespräch am Telefon oder am Bildschirm. Danach klären wir, ob Sichtbarkeit, Schulung, Automatisierung, Begleitung oder eine Kombination davon sinnvoll ist.
 Was passiert mit unseren Daten? +
 Wir arbeiten nach dem revDSG. Vor der Umsetzung klären wir mit Ihnen, welche Daten ein Werkzeug überhaupt sehen darf, und halten Kundendaten dort heraus, wo sie nicht hingehören.
 Kurse
@@ -622,8 +654,9 @@ Kostenlose Erstanalyse →
 
 KONTAKT
 Welche vaiacon-Lösung passt zu Ihrem Betrieb?
-Im unverbindlichen Erstgespräch klären wir, ob Sichtbarkeit, Schulung, Automatisierung, Begleitung oder eine Kombination der richtige nächste Schritt ist. Eine halbe Stunde, kostenlos, ohne Verkaufsdruck.
-Kostenlose Erstanalyse →
+Im unverbindlichen Erstgespräch klären wir, ob Sichtbarkeit, Schulung, Automatisierung, Begleitung oder eine Kombination der richtige nächste Schritt ist. Eine halbe Stunde, kostenlos, ohne Verkaufsdruck. Lieber zuerst selbst prüfen? Dafür gibt es zwei kostenlose Analysen.
+Zeit sparen: Erstanalyse →
+Gefunden werden: Check starten →
 WAS SIE ERWARTET
 Ein Gespräch, kein Verkaufstermin.
 Wir hören zu, stellen Fragen und sagen ehrlich, wo wir helfen können und wo nicht. Wenn nichts davon zu Ihnen passt, sagen wir auch das. Das kostet uns eine halbe Stunde und Ihnen nichts.
@@ -632,7 +665,7 @@ Sie melden sich
 Über das Formular unten oder mit einer Mail an hallo@vaiacon.ch . Ein, zwei Sätze zu Ihrem Betrieb genügen.
 02
 Das Erstgespräch
-Eine halbe Stunde am Telefon oder bei Ihnen. Was kostet heute am meisten Zeit, was wurde schon versucht, wo drückt es wirklich?
+Eine halbe Stunde am Telefon oder am Bildschirm. Was kostet heute am meisten Zeit, was wurde schon versucht, wo drückt es wirklich? Zu Ihnen in den Betrieb kommen wir, sobald ein Auftrag steht.
 03
 Unsere Einschätzung
 Sie erhalten schriftlich, was wir empfehlen, mit Aufwand und Preis. Auch dann, wenn die Empfehlung lautet, vorerst nichts zu tun.
@@ -672,11 +705,11 @@ DATENSCHUTZ
 Was mit Ihren Daten geschieht.
 Massgebend ist das revidierte Schweizer Datenschutzgesetz (revDSG). Wir erheben so wenig wie möglich und erklären hier alles, was auf dieser Website und im Kundenportal tatsächlich passiert.
 Kurz gesagt
-Diese Website verlangt kein Konto und führt keine Besucherstatistik. Sie läuft auf einem Schweizer Server. Einiges geht ins Ausland: die Schriften, die Programmbibliotheken und der Chat mit Vaia. Jedes davon ist unten einzeln erklärt, und der Abschnitt «Bekanntgabe ins Ausland» fasst zusammen, auf welcher Grundlage das geschieht.
+Diese Website verlangt kein Konto und führt keine Besucherstatistik. Sie läuft auf einem Schweizer Server. Einiges geht ins Ausland: die Schriften, die Programmbibliotheken, der Chat mit Vaia und die Auswertung im Visibility-Check. Jedes davon ist unten einzeln erklärt, und der Abschnitt «Bekanntgabe ins Ausland» fasst zusammen, auf welcher Grundlage das geschieht.
 Diese Erklärung gilt auch für das Kundenportal unter kunden.vaiacon.ch. Dort speichern wir mehr, weil es dort nötig ist. Was genau, steht weiter unten.
 Was beim Aufruf dieser Seite geschieht
 Die Website liegt bei Infomaniak in der Schweiz. Wir führen kein Zugriffsprotokoll und speichern keine IP-Adressen. Wer diese Seiten liest, hinterlässt bei uns also keine Spur.
-Ausnahmen gibt es zwei: die Sperre im Chat und im Kontaktformular. Beide sind unten beschrieben.
+Ausnahmen gibt es drei: die Sperre im Chat, im Kontaktformular und im Visibility-Check. Alle sind unten beschrieben.
 Schriften
 Die Schriften Quicksand und IBM Plex Mono werden beim Seitenaufruf von Google Fonts geladen. Dabei erhält Google LLC (USA) Ihre IP-Adresse und die Angabe, welche Seite Sie aufrufen. Weitere Daten übermitteln wir nicht.
 Das betrifft jede Seite dieser Website und das Kundenportal, das dieselben Schriften lädt.
@@ -688,6 +721,12 @@ Ihre Eingabe geht zunächst an unseren Server in der Schweiz. Von dort wird sie 
 Wir speichern den Gesprächsverlauf nicht. Er besteht nur in Ihrem Browser und ist verschwunden, sobald Sie die Seite schliessen oder neu laden.
 Bitte geben Sie im Chat keine Personendaten ein: keine Namen, Adressen, Gesundheits- oder Kundendaten. Für persönliche Anliegen sind wir per Mail und im Gespräch da.
 Zum Schutz vor Missbrauch ist die Zahl der Fragen je Besucher begrenzt. Dafür hält der Server Ihre IP-Adresse im Arbeitsspeicher. Wie lange, steht unter «Aufbewahrung und Löschung».
+Visibility-Check
+Beim Visibility-Check geben Sie eine Domain ein. Unser Server ruft dann öffentlich zugängliche Dateien dieser Website ab: die Startseite, robots.txt, sitemap.xml und llms.txt, dazu die Kontakt- und die Impressumsseite, wenn sie verlinkt sind.
+Auszüge daraus gehen zur Auswertung an Anthropic (USA), den Anbieter des Sprachmodells Claude, wie beim Chat mit Vaia.
+Für den Check selbst brauchen wir keine Personendaten. Zum Schutz vor Missbrauch ist die Zahl der Checks je Besucher begrenzt. Dafür nutzt der Server Ihre IP-Adresse kurz und speichert sie nicht dauerhaft.
+Den Bericht bewahren wir 30 Tage auf, danach wird er gelöscht.
+Wer den vollständigen Bericht anfordert, schickt uns Name und E-Mail-Adresse, freiwillig auch Firma und Telefon. Diese Angaben behandeln wir wie eine Anfrage über das Kontaktformular.
 Erstanalyse-Fragebogen
 Die Auswertung wird vollständig in Ihrem Browser berechnet. Ihre Antworten verlassen Ihr Gerät nicht.
 Während Sie den Fragebogen ausfüllen, werden die Antworten im lokalen Speicher Ihres Browsers zwischengelegt, damit nichts verloren geht, wenn Sie zwischendurch weggehen. Sobald Sie die Auswertung anfordern, wird dieser Zwischenspeicher gelöscht. Sie können ihn jederzeit selbst leeren, indem Sie die Websitedaten in Ihrem Browser löschen.
@@ -710,23 +749,24 @@ Unsere Dienstleister
 Diese Firmen arbeiten in unserem Auftrag und kommen dabei mit Daten in Berührung. Mehr sind es nicht:
 Infomaniak (Schweiz) · betreibt den Server für Website und Kundenportal und hostet unser Mail-Konto
 Google LLC (USA) · liefert die Schriften aus
-Anthropic (USA) · stellt das Sprachmodell hinter dem Chat mit Vaia
+Anthropic (USA) · stellt das Sprachmodell hinter dem Chat mit Vaia und dem Visibility-Check
 unpkg.com (USA) · liefert die Programmbibliotheken für Academy und Erstanalyse-Fragebogen
 Keine dieser Firmen darf Ihre Daten für eigene Zwecke verwenden. Wir geben nichts an Werbenetzwerke oder Adresshändler weiter und verkaufen keine Daten.
 Bekanntgabe ins Ausland
 Wohin Daten gehen und auf welcher Grundlage:
 Google Fonts · USA · Swiss-U.S. Data Privacy Framework, aktiv zertifiziert
-Anthropic (Chat mit Vaia) · USA · Standardvertragsklauseln im Data Processing Addendum, das zusammen mit den Commercial Terms automatisch gilt
+Anthropic (Chat mit Vaia, Visibility-Check) · USA · Standardvertragsklauseln im Data Processing Addendum, das zusammen mit den Commercial Terms automatisch gilt
 Infomaniak (Hosting und Mail) · Schweiz · keine Bekanntgabe ins Ausland
-Zum Chat kommt hinzu: Anthropic trainiert seine Modelle nicht mit unseren Inhalten. Das steht zusammen mit der Löschfrist in den Commercial Terms und im Data Processing Addendum .
+Zum Chat und zum Visibility-Check kommt hinzu: Anthropic trainiert seine Modelle nicht mit unseren Inhalten. Das steht zusammen mit der Löschfrist in den Commercial Terms und im Data Processing Addendum .
 Aufbewahrung und Löschung
 Wir behalten nichts länger, als es gebraucht wird. Alle Fristen auf einen Blick:
-Sperre im Chat und im Kontaktformular · Ihre IP-Adresse liegt nur im Arbeitsspeicher des Servers, nie auf der Festplatte, und wird nicht dauerhaft abgelegt
+Sperre im Chat, im Kontaktformular und im Visibility-Check · Ihre IP-Adresse liegt nur im Arbeitsspeicher des Servers, nie auf der Festplatte, und wird nicht dauerhaft abgelegt
 Ihre Eingaben und Vaias Antworten bei Anthropic · 30 Tage
+Bericht aus dem Visibility-Check · 30 Tage auf unserem Server, ebenso lange die Auszüge der geprüften Website bei Anthropic
 Anfragen per Mail oder Formular, aus denen kein Auftrag wird · 30 Tage
 Zugriffsprotokoll im Kundenportal · 90 Tage
 Buchhaltungsunterlagen · 10 Jahre. Das schreibt Art. 958f OR vor. Daran können wir nichts ändern, auch nicht auf Wunsch.
-Auf der Website selbst entsteht nichts, was aufbewahrt werden müsste: kein Zugriffsprotokoll, keine IP-Adressen.
+Sonst entsteht auf der Website nichts, was aufbewahrt werden müsste: kein Zugriffsprotokoll, keine IP-Adressen.
 Ihre Rechte
 Eine Mail an hallo@vaiacon.ch genügt. Wir antworten innert 30 Tagen, und es kostet Sie nichts.
 Auskunft · Sie erfahren, welche Daten wir über Sie bearbeiten und woher sie stammen.
