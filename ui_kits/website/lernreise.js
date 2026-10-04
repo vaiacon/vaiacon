@@ -14,22 +14,22 @@
     standort: 'faq-tablet',
     auftakt: 'ueber-uns-willkommen',
     training: 'schulung-zeigestab',
-    elearning: 'begleitung-laptop',
-    video: 'academy-schreibtisch',
+    elearning: 'journey-elearning',
+    video: 'journey-video',
     mikro: 'faq-tablet',
-    vorort: 'begleitung-kunde',
-    coaching: 'kontakt-telefon',
+    vorort: 'journey-vor-ort',
+    coaching: 'journey-coaching',
     wirkung: 'academy-schreibtisch'
   };
   var ALT = {
     standort: 'Der vaiacon-Roboter hält ein Tablet in der Hand',
     auftakt: 'Der vaiacon-Roboter heisst mit offener Hand willkommen',
     training: 'Der vaiacon-Roboter mit Buch und Zeigestab',
-    elearning: 'Der vaiacon-Roboter am Laptop mit Sprechblase',
-    video: 'Der vaiacon-Roboter am Schreibtisch mit Tasse und Notizbuch',
+    elearning: 'Der vaiacon-Roboter mit Kopfhörern am Laptop',
+    video: 'Der vaiacon-Roboter hält eine Filmklappe',
     mikro: 'Der vaiacon-Roboter mit Tablet und erhobenem Finger',
-    vorort: 'Der vaiacon-Roboter hilft einer Person am Laptop',
-    coaching: 'Der vaiacon-Roboter telefoniert',
+    vorort: 'Der vaiacon-Roboter mit Koffer und Namensschild unterwegs zum Betrieb',
+    coaching: 'Der vaiacon-Roboter sitzt mit einer Tasse auf einem Hocker und erklärt',
     wirkung: 'Der vaiacon-Roboter am Schreibtisch'
   };
 
