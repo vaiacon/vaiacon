@@ -1,0 +1,363 @@
+/* Lernreise, Formate, kleine Schritte (KI-Kompetenz, seit 04.10.2026)
+   Nur für learning.html. Farben, Schriften, Abstände aus tokens/*.css; die
+   Grundklassen (sv-section, sv-wrap, sv-card, sv-button) kommen aus
+   visibility.css. Karten ohne Schatten (Hairline), Schatten nur warm-braun. */
+
+.lr-wrap-links { text-align: left; }
+
+/* ── Auswahl ─────────────────────────────────────────────────────────── */
+.lr-steuerung {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+  margin: var(--space-11) auto 0;
+  width: min(100%, 64rem);
+  text-align: left;
+}
+.lr-steuerung[hidden] { display: none; }
+
+.lr-gruppe {
+  margin: 0;
+  padding: var(--space-5) var(--space-5) var(--space-6);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--surface-card);
+  min-width: 0;
+}
+.lr-gruppe legend {
+  padding: 0 var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-overline);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-badge);
+  text-transform: uppercase;
+  color: var(--terra-600);
+}
+.lr-optionen { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3); }
+.lr-option { position: relative; }
+.lr-option input {
+  position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer;
+}
+.lr-option span {
+  display: inline-block;
+  padding: 9px 15px;
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-pill);
+  background: var(--cream-100);
+  color: var(--text-strong);
+  font-size: var(--text-ui);
+  font-weight: var(--weight-semibold);
+  line-height: 1.25;
+  transition: background var(--duration-fast) var(--ease-spring), color var(--duration-fast) var(--ease-spring), border-color var(--duration-fast) var(--ease-spring);
+}
+.lr-option:hover span { background: var(--peach-150); }
+.lr-option input:checked + span {
+  background: var(--terra-500);
+  border-color: var(--terra-500);
+  color: var(--cream-50);
+}
+.lr-option input:focus-visible + span { outline: 3px solid var(--orange-500); outline-offset: 2px; }
+
+.lr-info {
+  margin: var(--space-6) auto 0;
+  max-width: 60ch;
+  padding: var(--space-3) var(--space-5);
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-md);
+  color: var(--text-body);
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-body);
+  background: var(--peach-100);
+}
+.lr-info strong { color: var(--terra-600); }
+
+/* ── Der Weg ─────────────────────────────────────────────────────────── */
+.lr-weg {
+  position: relative;
+  margin: var(--space-11) auto 0;
+  width: min(100%, 68rem);
+}
+/* Spur und Füllung: eine Linie in der Mitte, die Füllung wächst beim Scrollen */
+.lr-spur {
+  position: absolute;
+  top: 28px; bottom: 28px;
+  left: 50%;
+  width: 6px;
+  margin-left: -3px;
+  border-radius: 999px;
+  background: repeating-linear-gradient(180deg, var(--brown-300) 0 10px, transparent 10px 20px);
+  opacity: 0.9;
+}
+.lr-spur__fuellung {
+  position: absolute; left: 0; top: 0; width: 100%;
+  height: 100%;                       /* ohne JS: ganz gefüllt */
+  border-radius: 999px;
+  background: linear-gradient(180deg, var(--terra-500), var(--orange-500));
+}
+.lr-js .lr-spur__fuellung { height: 0; }
+
+.lr-liste { list-style: none; margin: 0; padding: 0; position: relative; }
+
+.lr-station {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1fr);
+  align-items: center;
+  column-gap: var(--space-4);
+  padding: var(--space-4) 0;
+  text-align: left;
+}
+.lr-station__knoten {
+  grid-column: 2; grid-row: 1;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 2;
+}
+.lr-station__knoten span {
+  display: flex; align-items: center; justify-content: center;
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  border: 3px solid var(--brown-300);
+  background: var(--cream-card);
+  color: var(--brown-400);
+  font-family: var(--font-mono);
+  font-weight: var(--weight-bold);
+  font-size: 16px;
+  transition: background .35s, border-color .35s, color .35s, transform .35s var(--ease-spring);
+}
+/* Ohne JS und ohne Scroll-Messung: alle Knoten sind «erreicht». */
+html:not(.lr-js) .lr-station__knoten span,
+.lr-station.is-erreicht .lr-station__knoten span {
+  background: var(--terra-500); border-color: var(--terra-500); color: var(--cream-50);
+}
+.lr-station.is-erreicht .lr-station__knoten span { transform: scale(1.08); }
+
+.lr-station__karte {
+  grid-row: 1;
+  padding: var(--space-6) var(--space-6);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--surface-card);
+  display: flex; flex-direction: column; gap: var(--space-3);
+  transition: border-color .35s, transform .45s var(--ease-reveal), opacity .45s;
+}
+.lr-station__bild { grid-row: 1; margin: 0; display: flex; align-items: center; justify-content: center; }
+.lr-station__bild picture { display: block; }
+.lr-station__bild img {
+  display: block; height: 190px; width: auto; max-width: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 14px rgba(62, 22, 6, 0.22));
+}
+
+.lr-station--links .lr-station__karte { grid-column: 1; }
+.lr-station--links .lr-station__bild { grid-column: 3; }
+.lr-station--rechts .lr-station__karte { grid-column: 3; }
+.lr-station--rechts .lr-station__bild { grid-column: 1; }
+
+.lr-station.is-erreicht .lr-station__karte { border-color: var(--terra-500); }
+
+.lr-station__zeit {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-overline);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-badge);
+  text-transform: uppercase;
+  color: var(--terra-600);
+}
+.lr-station__karte h3 {
+  margin: 0;
+  color: var(--text-strong);
+  font-size: var(--text-h3);
+  line-height: var(--leading-snug);
+  letter-spacing: var(--tracking-tight);
+  font-weight: var(--weight-semibold);
+}
+.lr-station__karte p { margin: 0; color: var(--text-body); font-size: var(--text-body-sm); line-height: var(--leading-body); }
+.lr-station__karte p.lr-station__zeit { color: var(--terra-600); font-size: var(--text-overline); line-height: 1.4; }
+.lr-station__formate { display: flex; flex-wrap: wrap; gap: 6px; }
+.lr-chip {
+  display: inline-block; padding: 5px 12px;
+  border: 1px solid var(--border-strong); border-radius: var(--radius-pill);
+  background: var(--peach-150); color: var(--terra-600);
+  font-size: 13px; font-weight: var(--weight-bold); text-decoration: none; line-height: 1.3;
+}
+.lr-chip:hover, .lr-chip:focus-visible { background: var(--peach-200); }
+
+/* Mit JS: Stationen blenden beim Erreichen weich ein. Ohne JS stehen sie da. */
+.lr-js .lr-station:not(.is-erreicht) .lr-station__karte { opacity: 0.62; }
+.lr-js .lr-station:not(.is-erreicht) .lr-station__bild { opacity: 0.55; filter: grayscale(0.35); }
+.lr-js .lr-station__bild { transition: opacity .45s, filter .45s; }
+
+@keyframes lr-ein { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: translateY(0); } }
+.lr-umgestellt .lr-station { animation: lr-ein 0.5s var(--ease-reveal) both; }
+.lr-umgestellt .lr-station:nth-child(2) { animation-delay: .04s; }
+.lr-umgestellt .lr-station:nth-child(3) { animation-delay: .08s; }
+.lr-umgestellt .lr-station:nth-child(4) { animation-delay: .12s; }
+.lr-umgestellt .lr-station:nth-child(5) { animation-delay: .16s; }
+.lr-umgestellt .lr-station:nth-child(6) { animation-delay: .20s; }
+.lr-umgestellt .lr-station:nth-child(n+7) { animation-delay: .24s; }
+
+.lr-fuss { margin-top: var(--space-9); display: flex; flex-direction: column; align-items: center; gap: var(--space-3); }
+.lr-fuss p { margin: 0; max-width: 60ch; color: var(--text-body); font-size: var(--text-body-sm); line-height: var(--leading-body); }
+
+/* ── Formate ─────────────────────────────────────────────────────────── */
+.lr-formate {
+  display: flex; flex-wrap: wrap; justify-content: center;
+  gap: var(--space-4);
+  margin-top: var(--space-11);
+}
+.lr-format {
+  --lr-spalten: 4;
+  flex: 0 0 calc((100% - (var(--lr-spalten) - 1) * var(--space-4)) / var(--lr-spalten));
+  min-width: 0;
+  scroll-margin-top: 96px;
+  display: flex; flex-direction: column; align-items: stretch;
+  padding: 0 var(--space-5) var(--space-6);
+  box-sizing: border-box;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--surface-card);
+  text-align: left;
+  overflow: hidden;
+}
+.lr-format__bild {
+  margin: 0 calc(-1 * var(--space-5)) var(--space-4);
+  height: 190px;
+  display: flex; align-items: flex-end; justify-content: center;
+  padding-top: var(--space-4);
+  background: radial-gradient(70% 70% at 50% 60%, var(--peach-200) 0%, var(--peach-150) 55%, var(--sand-200) 100%);
+  border-bottom: 1px solid var(--border-strong);
+  box-sizing: border-box;
+}
+.lr-format__bild img { height: 100%; width: auto; max-width: 92%; object-fit: contain; object-position: center bottom; display: block; }
+.lr-format h3 { margin: 0 0 var(--space-3); color: var(--text-strong); font-size: var(--text-h3); line-height: var(--leading-snug); letter-spacing: var(--tracking-tight); font-weight: var(--weight-semibold); }
+.lr-format p { margin: 0 0 var(--space-3); color: var(--text-body); font-size: var(--text-body-sm); line-height: var(--leading-body); }
+.lr-format p strong { color: var(--terra-600); font-weight: var(--weight-bold); }
+.lr-format__preis {
+  margin: auto 0 0 !important;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-strong);
+  font-family: var(--font-mono);
+  font-size: var(--text-overline) !important;
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-badge);
+  text-transform: uppercase;
+  color: var(--terra-600) !important;
+  line-height: 1.55 !important;
+}
+.lr-format__preis span { white-space: nowrap; }
+.lr-format__preis small { display: block; text-transform: none; letter-spacing: 0; font-family: var(--font-sans); font-weight: var(--weight-medium); color: var(--text-muted); font-size: 12.5px; margin-top: 2px; }
+
+.lr-satz { margin: var(--space-9) auto 0; max-width: 62ch; color: var(--text-body); font-size: var(--text-lead); line-height: var(--leading-relaxed); }
+.lr-satz strong { color: var(--text-strong); }
+
+/* ── Kleine Schritte, jeden Tag ──────────────────────────────────────── */
+.lr-tage { margin: var(--space-11) auto 0; width: min(100%, 64rem); }
+.lr-tage__liste {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: var(--space-3);
+}
+.lr-tag {
+  display: flex; flex-direction: column; gap: 6px;
+  padding: var(--space-4) var(--space-3);
+  min-height: 150px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: var(--radius-md);
+  background: rgba(255, 253, 248, 0.12);
+  text-align: left;
+  color: var(--text-on-terra);
+}
+.lr-tag__name { font-family: var(--font-mono); font-size: var(--text-overline); font-weight: var(--weight-bold); letter-spacing: var(--tracking-badge); text-transform: uppercase; color: var(--peach-200); }
+.lr-tag__min { font-family: var(--font-mono); font-size: 12px; color: rgba(255, 240, 230, 0.8); }
+.lr-tag h3 { margin: 0; font-size: 15.5px; line-height: 1.25; font-weight: var(--weight-bold); color: var(--cream-50); }
+.lr-tag p { margin: 0; font-size: 13.5px; line-height: 1.45; color: var(--text-on-terra-soft); }
+.lr-tag--frei { background: transparent; border-style: dashed; border-color: rgba(255, 255, 255, 0.3); }
+.lr-tag--frei h3 { color: rgba(255, 240, 230, 0.85); font-weight: var(--weight-semibold); }
+
+.lr-kurve {
+  margin: var(--space-11) auto 0;
+  width: min(100%, 56rem);
+  padding: var(--space-6);
+  border: 2px solid var(--border-ink);
+  border-radius: var(--radius-xl);
+  background: var(--surface-card);
+  box-shadow: var(--shadow-comic);
+  color: var(--text-strong);
+  text-align: left;
+  box-sizing: border-box;
+}
+.lr-kurve__kopf { display: flex; flex-wrap: wrap; justify-content: space-between; gap: var(--space-2); align-items: baseline; }
+.lr-kurve__kopf h3 { margin: 0; font-size: var(--text-h3); font-weight: var(--weight-semibold); letter-spacing: var(--tracking-tight); }
+.lr-kurve__etikett {
+  padding: 5px 12px; border: 1px solid var(--border-strong); border-radius: var(--radius-pill);
+  background: var(--peach-150); color: var(--terra-600);
+  font-family: var(--font-mono); font-size: 11px; font-weight: var(--weight-bold); letter-spacing: 0.12em; text-transform: uppercase;
+}
+.lr-kurve svg { display: block; width: 100%; height: auto; margin-top: var(--space-4); }
+.lr-kurve svg text { font-family: var(--font-sans); fill: var(--brown-600); font-size: 13px; }
+.lr-kurve svg .lr-k-achse { stroke: var(--brown-400); stroke-width: 1.5; fill: none; }
+.lr-kurve svg .lr-k-einmal { stroke: var(--brown-400); stroke-width: 3.5; fill: none; stroke-linecap: round; stroke-dasharray: 2 8; }
+.lr-kurve svg .lr-k-taeglich { stroke: var(--terra-500); stroke-width: 4; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.lr-kurve svg .lr-k-punkt { fill: var(--terra-500); }
+.lr-kurve svg .lr-k-tag { fill: var(--terra-600); font-weight: 700; }
+.lr-kurve__fuss { margin: var(--space-3) 0 0; font-size: 13.5px; line-height: 1.5; color: var(--text-body); }
+.lr-kurve__fuss a { color: var(--terra-600); font-weight: var(--weight-bold); }
+.lr-legende { display: flex; flex-wrap: wrap; gap: var(--space-5); margin: var(--space-3) 0 0; padding: 0; list-style: none; font-size: 14px; color: var(--text-strong); font-weight: var(--weight-semibold); }
+.lr-legende li { display: flex; align-items: center; gap: 8px; }
+.lr-legende i { display: inline-block; width: 28px; height: 0; border-top: 4px solid var(--terra-500); border-radius: 4px; }
+.lr-legende i.lr-l-einmal { border-top: 4px dotted var(--brown-400); }
+
+/* ── Für wen / wie wir arbeiten ──────────────────────────────────────── */
+.lr-zwei { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); margin-top: var(--space-11); text-align: left; }
+.lr-zwei .sv-card { align-items: flex-start; text-align: left; }
+.lr-liste-punkte { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.lr-liste-punkte li { position: relative; padding-left: 26px; color: var(--text-body); font-size: var(--text-body-sm); line-height: var(--leading-body); }
+.lr-liste-punkte li::before { content: "→"; position: absolute; left: 0; color: var(--terra-500); font-weight: 700; }
+
+/* ── Handy und Tablet ────────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .lr-format { --lr-spalten: 3; }
+  .lr-tage__liste { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 860px) {
+  .lr-format { --lr-spalten: 2; }
+  .lr-steuerung { grid-template-columns: 1fr; }
+  .lr-tage__liste { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lr-zwei { grid-template-columns: 1fr; }
+}
+@media (max-width: 760px) {
+  /* Weg links, Karte rechts, Bild klein unter der Karte */
+  .lr-spur { left: 22px; margin-left: -3px; }
+  .lr-station,
+  .lr-station--links,
+  .lr-station--rechts {
+    grid-template-columns: 44px minmax(0, 1fr);
+    column-gap: var(--space-3);
+    align-items: start;
+    row-gap: 0;
+  }
+  .lr-station__knoten { grid-column: 1; grid-row: 1; padding-top: 18px; }
+  .lr-station__knoten span { width: 40px; height: 40px; }
+  .lr-station--links .lr-station__karte,
+  .lr-station--rechts .lr-station__karte { grid-column: 2; grid-row: 1; padding: var(--space-5); }
+  .lr-station--links .lr-station__bild,
+  .lr-station--rechts .lr-station__bild {
+    grid-column: 2; grid-row: 2; justify-content: flex-end; margin: -26px 8px 0 0; pointer-events: none;
+  }
+  .lr-station__bild img { height: 96px; }
+}
+@media (max-width: 560px) {
+  .lr-format { --lr-spalten: 1; }
+  .lr-tage__liste { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .lr-tag { min-height: 0; }
+  .lr-kurve { padding: var(--space-4); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lr-umgestellt .lr-station { animation: none; }
+  .lr-station__karte, .lr-station__knoten span, .lr-js .lr-station__bild, .lr-option span { transition: none; }
+  .lr-js .lr-spur__fuellung { height: 100%; }
+  .lr-js .lr-station:not(.is-erreicht) .lr-station__karte,
+  .lr-js .lr-station:not(.is-erreicht) .lr-station__bild { opacity: 1; filter: none; }
+  .lr-js .lr-station:not(.is-erreicht) .lr-station__knoten span { background: var(--terra-500); border-color: var(--terra-500); color: var(--cream-50); }
+}

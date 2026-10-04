@@ -1,0 +1,1106 @@
+/* Startseite: die Bühne mit den drei Bereichen, Wegweiser, News, Preise.
+   Baut auf den Tokens (tokens/*.css) und visibility.css auf.
+
+   Zustände:
+   - ohne JS: drei gleichwertige Karten, alles ausgeschrieben (Spalten ab 1180px, sonst untereinander)
+   - mit JS (html.st-js), ab 1180px: «Spalten», eine breit im Licht, zwei schmal; feste Höhe
+   - mit JS, darunter: «Karten», wischbar, die Reiter darüber                                  */
+
+/* ───────── Bühne ───────── */
+
+.st-buehne {
+  --st-kopfzeile: 82px;
+  --st-aktiv: 2.85fr;
+  --st-schmal: 1fr;
+  --st-luecke: 16px;
+  /* Höhe der Bühne (nur mit JS und ab 1180px): füllt den Bildschirm unter Titel und Reitern */
+  --st-hoehe: clamp(430px, calc(100svh - 462px), 580px);
+  position: relative;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: var(--grad-terra-hero);
+  color: var(--text-on-terra);
+  border-bottom: 2px solid var(--border-ink);
+}
+
+.st-buehne::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--glow-peach);
+  pointer-events: none;
+}
+
+.st-buehne__inner {
+  position: relative;
+  z-index: 2;
+  width: min(100%, 1240px);
+  margin: 0 auto;
+  padding: calc(var(--st-kopfzeile) + 26px) var(--section-pad-x) 34px;
+  box-sizing: border-box;
+}
+
+.st-kopf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 26px;
+  text-align: center;
+}
+
+.st-kopf h1 {
+  max-width: 24ch;
+  margin: 0;
+  color: var(--text-on-terra);
+  font-size: clamp(30px, 3.5vw, 52px);
+  line-height: 1.07;
+  letter-spacing: var(--tracking-display);
+  font-weight: var(--weight-bold);
+  text-wrap: balance;
+}
+
+.st-kopf__lead {
+  max-width: 62ch;
+  margin: 0;
+  font-size: var(--text-lead);
+  line-height: 1.55;
+  color: var(--text-on-terra-soft);
+  text-wrap: balance;
+}
+
+/* ───────── Reiter ───────── */
+
+.st-reiter {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--st-luecke);
+  margin-bottom: 14px;
+}
+
+.st-reiter[hidden] {
+  display: none;
+}
+
+.st-reiter__tab {
+  appearance: none;
+  -webkit-appearance: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  padding: 6px 2px 4px;
+  border: 0;
+  background: none;
+  font-family: var(--font-sans);
+  text-align: left;
+  color: var(--text-on-terra);
+  cursor: pointer;
+  opacity: 0.74;
+  transition: opacity var(--duration-fast) var(--ease-spring);
+}
+
+.st-reiter__tab:hover,
+.st-reiter__tab[aria-selected="true"] {
+  opacity: 1;
+}
+
+.st-reiter__tab:focus-visible {
+  outline: 3px solid var(--cream-50);
+  outline-offset: 4px;
+  border-radius: 6px;
+}
+
+.st-reiter__name {
+  font-size: 15.5px;
+  font-weight: var(--weight-bold);
+  letter-spacing: -0.005em;
+  line-height: 1.2;
+}
+
+.st-reiter__spur {
+  display: block;
+  align-self: stretch;
+  width: 100%;
+  height: 4px;
+  border-radius: 99px;
+  background: rgba(255, 255, 255, 0.26);
+  overflow: hidden;
+}
+
+.st-reiter__spur > span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--peach-200);
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+
+.st-reiter__tab[aria-selected="true"] .st-reiter__spur > span {
+  transform: scaleX(1);   /* JS überschreibt mit dem Fortschritt */
+}
+
+/* ───────── Stage ───────── */
+
+.st-stage {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--st-luecke);
+}
+
+.st-panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-width: 0;
+  padding: 28px 28px 26px;
+  border: 2px solid var(--border-ink);
+  border-radius: 28px;
+  background: var(--cream-card);
+  color: var(--text-strong);
+  box-shadow: 0 24px 50px -18px rgba(40, 12, 2, 0.55);
+  overflow: hidden;
+}
+
+/* Rampenlicht hinter dem Roboter */
+.st-panel::before {
+  content: "";
+  position: absolute;
+  right: -40px;
+  bottom: -60px;
+  width: 440px;
+  height: 440px;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(244, 158, 96, 0.55), rgba(244, 158, 96, 0.16) 62%, rgba(244, 158, 96, 0) 100%);
+  pointer-events: none;
+}
+
+.st-bild {
+  position: relative;
+  display: block;
+  align-self: center;
+  width: min(180px, 52%);
+  margin: 0 0 14px;
+  order: 5;
+  pointer-events: none;
+}
+
+.st-bild img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.st-mini {
+  display: none;
+}
+
+.st-voll {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+  order: 1;
+}
+
+.st-voll__kopf {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.st-voll__titel {
+  margin: 0;
+  font-size: clamp(28px, 2.5vw, 36px);
+  line-height: 1.05;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-display);
+  color: var(--text-strong);
+}
+
+.st-voll__lead {
+  margin: 0;
+  font-size: 16.5px;
+  line-height: 1.5;
+  font-weight: var(--weight-semibold);
+  color: var(--terra-600);
+  text-wrap: balance;
+}
+
+.st-nutzen {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.st-nutzen li {
+  position: relative;
+  padding-left: 26px;
+  font-size: 15px;
+  line-height: 1.45;
+  font-weight: var(--weight-medium);
+  color: var(--text-body);
+}
+
+.st-nutzen li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.3em;
+  width: 11px;
+  height: 6px;
+  border-left: 2.5px solid var(--terra-500);
+  border-bottom: 2.5px solid var(--terra-500);
+  transform: rotate(-45deg);
+}
+
+.st-haken {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+}
+
+.st-haken__hinweis {
+  margin: 0;
+  padding-left: 6px;
+  font-size: 13.5px;
+  line-height: 1.4;
+  font-weight: var(--weight-semibold);
+  color: var(--text-muted);
+}
+
+.st-haken .sv-button {
+  min-height: 50px;
+  padding: 12px 24px;
+}
+
+.st-mehr {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 2px 4px;
+  font-size: 15px;
+  font-weight: var(--weight-bold);
+  color: var(--terra-600);
+  text-decoration: none;
+  border-bottom: 2px solid rgba(178, 82, 34, 0.35);
+  transition: border-color var(--duration-fast) var(--ease-spring), color var(--duration-fast) var(--ease-spring);
+}
+
+.st-mehr:hover,
+.st-mehr:focus-visible {
+  color: var(--terra-700);
+  border-bottom-color: var(--terra-700);
+}
+
+.st-mehr:focus-visible,
+.st-weg__karte:focus-visible,
+.st-haken .sv-button:focus-visible,
+.st-start input:focus-visible {
+  outline: 3px solid var(--terra-500);
+  outline-offset: 3px;
+}
+
+/* Domain-Feld im Sichtbarkeits-Panel (Skript: check-start.js, unverändert) */
+.st-start {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.st-start .sv-start__feld {
+  flex: 1 1 190px;
+  min-width: 0;
+  gap: 5px;
+}
+
+.st-start .sv-start__label {
+  padding-left: 16px;
+  color: var(--text-muted);
+}
+
+.st-start .sv-start__feld input {
+  min-height: 50px;
+  border: 2px solid var(--border-strong);
+  background: #fff;
+  box-shadow: none;
+}
+
+.st-start .sv-start__feld input:focus {
+  outline: 3px solid var(--terra-500);
+  outline-offset: 2px;
+}
+
+.st-start .sv-start__feld input[aria-invalid="true"] {
+  border-color: #8C1D18;
+}
+
+.st-start .sv-button {
+  flex: 0 0 auto;
+}
+
+.st-start .sv-start__fehler {
+  order: 3;
+  flex-basis: 100%;
+  padding-left: 6px;
+  font-size: 13.5px;
+  color: #8C1D18;
+}
+
+/* ───────── Ohne JS: gleichwertig nebeneinander / untereinander ───────── */
+
+@media (min-width: 1180px) {
+  html:not(.st-js) .st-stage {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+  }
+
+  html:not(.st-js) .st-bild {
+    width: 150px;
+  }
+}
+
+/* ───────── Mit JS: Pause-Knopf ───────── */
+
+.st-pause {
+  appearance: none;
+  -webkit-appearance: none;
+  position: absolute;
+  bottom: -46px;
+  left: 4px;
+  z-index: 5;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 34px;
+  padding: 0 14px 0 12px;
+  border: 1.5px solid rgba(28, 22, 19, 0.28);
+  border-radius: 99px;
+  background: rgba(255, 253, 248, 0.92);
+  color: var(--terra-600);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: var(--weight-bold);
+  cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-spring), transform var(--duration-fast) var(--ease-spring);
+}
+
+.st-pause[hidden] {
+  display: none;
+}
+
+.st-pause:hover {
+  background: #fff;
+}
+
+.st-pause:focus-visible {
+  outline: 3px solid var(--terra-500);
+  outline-offset: 2px;
+}
+
+.st-pause__weiter,
+.st-pause[aria-pressed="true"] .st-pause__pause {
+  display: none;
+}
+
+.st-pause[aria-pressed="true"] .st-pause__weiter {
+  display: block;
+}
+
+.st-lauf-hinweis {
+  min-height: 0;
+  margin: 0;
+}
+
+.st-lauf-hinweis:empty {
+  display: none;
+}
+
+/* ───────── Spalten (JS, ab 1180px) ───────── */
+
+@media (min-width: 1180px) {
+  .st-js .st-reiter,
+  .st-js .st-stage {
+    transition: grid-template-columns 0.7s var(--ease-spring);
+  }
+
+  .st-js .st-reiter[data-aktiv="0"], .st-js .st-stage[data-aktiv="0"] { grid-template-columns: var(--st-aktiv) var(--st-schmal) var(--st-schmal); }
+  .st-js .st-reiter[data-aktiv="1"], .st-js .st-stage[data-aktiv="1"] { grid-template-columns: var(--st-schmal) var(--st-aktiv) var(--st-schmal); }
+  .st-js .st-reiter[data-aktiv="2"], .st-js .st-stage[data-aktiv="2"] { grid-template-columns: var(--st-schmal) var(--st-schmal) var(--st-aktiv); }
+
+  .st-js .st-stage {
+    height: var(--st-hoehe);
+    margin-bottom: 50px;
+  }
+
+  .st-js .st-panel {
+    display: block;
+    padding: 0;
+    cursor: pointer;
+    background: rgba(255, 253, 248, 0.1);
+    border-color: rgba(255, 255, 255, 0.4);
+    border-width: 1.5px;
+    color: var(--text-on-terra);
+    box-shadow: none;
+    transition: background 0.5s var(--ease-spring), border-color 0.5s var(--ease-spring), box-shadow 0.5s var(--ease-spring);
+  }
+
+  .st-js .st-panel::before {
+    opacity: 0;
+    transition: opacity 0.6s var(--ease-spring);
+  }
+
+  .st-js .st-panel:not([data-aktiv]):hover {
+    background: rgba(255, 253, 248, 0.2);
+    border-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .st-js .st-panel[data-aktiv] {
+    cursor: default;
+    background: var(--cream-card);
+    border-color: var(--border-ink);
+    border-width: 2px;
+    color: var(--text-strong);
+    box-shadow: 0 28px 60px -20px rgba(40, 12, 2, 0.6);
+  }
+
+  .st-js .st-panel[data-aktiv]::before {
+    opacity: 1;
+  }
+
+  /* Roboter: derselbe, einmal klein unten in der Mitte, einmal gross rechts */
+  .st-js .st-bild {
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    left: 50%;
+    bottom: 22px;
+    width: clamp(104px, 9vw, 132px);
+    transform: translateX(-50%);
+    transition: left 0.7s var(--ease-spring), bottom 0.7s var(--ease-spring), width 0.7s var(--ease-spring), transform 0.7s var(--ease-spring);
+  }
+
+  .st-js .st-panel[data-aktiv] .st-bild {
+    left: calc(100% - 30px);
+    bottom: 0;
+    width: clamp(220px, calc(var(--st-hoehe) * 0.58), 290px);
+    transform: translateX(-100%);
+  }
+
+  /* schmale Spalte */
+  .st-js .st-mini {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 26px 22px;
+    box-sizing: border-box;
+    opacity: 1;
+    transition: opacity 0.3s ease 0.25s;
+  }
+
+  .st-js .st-panel[data-aktiv] .st-mini {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+  }
+
+  .st-mini__name {
+    font-size: clamp(23px, 1.9vw, 27px);
+    font-weight: var(--weight-bold);
+    line-height: 1.08;
+    letter-spacing: var(--tracking-display);
+    color: #fff;
+  }
+
+  .st-mini__kurz {
+    max-width: 17ch;
+    font-size: 14.5px;
+    line-height: 1.45;
+    font-weight: var(--weight-medium);
+    color: var(--text-on-terra-soft);
+  }
+
+  .st-mini__mehr {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 6px;
+    padding: 7px 14px 7px 12px;
+    border: 1.5px solid rgba(255, 255, 255, 0.55);
+    border-radius: 99px;
+    font-size: 13px;
+    font-weight: var(--weight-bold);
+    color: #fff;
+  }
+
+  .st-mini__mehr::before {
+    content: "+";
+    font-size: 17px;
+    line-height: 0.8;
+    font-weight: var(--weight-medium);
+  }
+
+  /* breite Spalte */
+  .st-js .st-voll {
+    position: absolute;
+    inset: 0;
+    box-sizing: border-box;
+    padding: 32px 34px 28px;
+    padding-right: clamp(240px, calc(var(--st-hoehe) * 0.58 + 40px), 330px);
+    gap: 14px;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+    transition: opacity 0.15s ease, visibility 0s linear 0.15s;
+  }
+
+  .st-js .st-panel[data-aktiv] .st-voll {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.4s ease 0.3s, visibility 0s linear 0s;
+  }
+
+  .st-js .st-voll .st-start {
+    flex-wrap: nowrap;
+  }
+
+  .st-js .st-voll .st-start .sv-start__fehler {
+    position: absolute;
+    left: 40px;
+    margin-top: 56px;
+  }
+}
+
+@media (min-width: 1180px) and (max-width: 1360px) {
+  .st-buehne { --st-aktiv: 2.7fr; }
+  .st-js .st-voll { padding-left: 28px; padding-right: 214px; }
+  .st-js .st-panel[data-aktiv] .st-bild { width: 200px; left: calc(100% - 18px); }
+  .st-js .st-start .sv-button { padding: 12px 18px; }
+}
+
+@media (min-width: 1180px) and (max-height: 760px) {
+  .st-nutzen li:nth-child(3) { display: none; }
+}
+
+/* ───────── Karten (JS, unter 1180px) ───────── */
+
+@media (max-width: 1179px) {
+  .st-js .st-reiter {
+    gap: 4px;
+  }
+
+  .st-js .st-reiter__tab {
+    padding: 8px 4px 4px;
+    align-items: center;
+    text-align: center;
+    opacity: 0.7;
+  }
+
+  .st-js .st-reiter__name {
+    font-size: clamp(12.5px, 3.5vw, 15.5px);
+  }
+
+  .st-js .st-stage {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    margin-inline: calc(var(--section-pad-x) * -1);
+    padding: 4px var(--section-pad-x) 22px;
+    scroll-padding-inline: var(--section-pad-x);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .st-js .st-stage::-webkit-scrollbar {
+    display: none;
+  }
+
+  .st-js .st-panel {
+    flex: 0 0 min(100%, 640px);
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    transition: opacity 0.35s ease;
+  }
+
+  .st-js .st-panel:not([data-aktiv]) {
+    opacity: 0.62;
+    cursor: pointer;
+  }
+
+  .st-js .st-voll[inert] {
+    pointer-events: none;
+  }
+
+  .st-js .st-pause {
+    display: none;
+  }
+}
+
+/* Karte auf dem Handy: Roboter neben der Überschrift, Text darunter */
+@media (max-width: 719px) {
+  .st-panel {
+    padding: 22px 20px 24px;
+    border-radius: 24px;
+  }
+
+  .st-panel::before {
+    right: -70px;
+    top: -60px;
+    bottom: auto;
+    width: 300px;
+    height: 300px;
+  }
+
+  .st-bild {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 1;
+    width: 98px;
+    margin: 0;
+  }
+
+  .st-voll {
+    gap: 14px;
+  }
+
+  .st-voll__kopf {
+    min-height: 112px;
+    padding-right: 104px;
+    justify-content: center;
+  }
+
+  .st-voll__lead {
+    font-size: 14.5px;
+  }
+
+  .st-voll__titel {
+    font-size: clamp(22px, 6.4vw, 27px);
+    overflow-wrap: anywhere;
+  }
+
+  .st-mini { display: none; }
+
+  .st-js .st-bild {
+    top: 14px;
+  }
+
+  .st-start .sv-start__feld {
+    flex-basis: 100%;
+  }
+
+  .st-start .sv-button,
+  .st-haken > .sv-button {
+    width: 100%;
+  }
+}
+
+/* Tablet: Roboter rechts neben dem Text */
+@media (min-width: 720px) and (max-width: 1179px) {
+  .st-js .st-panel { flex-basis: min(100%, 780px); }
+  .st-panel {
+    padding: 30px 32px 30px;
+  }
+
+  .st-bild {
+    position: absolute;
+    right: 24px;
+    bottom: 18px;
+    width: 220px;
+    margin: 0;
+    z-index: 1;
+  }
+
+  .st-voll {
+    padding-right: 250px;
+  }
+
+  .st-js .st-start { flex-wrap: wrap; }
+}
+
+/* ───────── Wegweiser ───────── */
+
+.st-weg .sv-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.st-weg__liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  text-align: left;
+}
+
+.st-weg__liste li {
+  display: flex;
+}
+
+.st-weg__karte {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 26px;
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 210px;
+  padding: 26px 24px 22px;
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--cream-card);
+  text-decoration: none;
+  color: var(--text-strong);
+  transition: transform var(--duration-med) var(--ease-spring), border-color var(--duration-med) var(--ease-spring), box-shadow var(--duration-med) var(--ease-spring), background var(--duration-med) var(--ease-spring);
+}
+
+.st-weg__karte:hover,
+.st-weg__karte:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--border-ink);
+  box-shadow: 6px 8px 0 rgba(28, 22, 19, 0.85);
+}
+
+.st-weg__karte--offen {
+  background: var(--peach-100);
+}
+
+.st-weg__satz {
+  font-size: clamp(20px, 1.75vw, 23px);
+  line-height: 1.3;
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-tight);
+  text-wrap: balance;
+}
+
+.st-weg__ziel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 1.5px solid var(--border-soft);
+}
+
+.st-weg__bereich {
+  font-size: 13.5px;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--terra-500);
+}
+
+.st-weg__pfeil {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--terra-500);
+  color: #fff;
+  font-weight: var(--weight-bold);
+  transition: transform var(--duration-med) var(--ease-spring);
+}
+
+.st-weg__karte:hover .st-weg__pfeil,
+.st-weg__karte:focus-visible .st-weg__pfeil {
+  transform: translateX(4px);
+}
+
+.st-weg__fuss {
+  margin: 0;
+  font-size: var(--text-size-body);
+  color: var(--text-body);
+}
+
+.st-weg__fuss a,
+.st-preise__begleitung a,
+.st-news__alle a {
+  font-weight: var(--weight-bold);
+  color: var(--terra-600);
+  text-underline-offset: 3px;
+}
+
+/* ───────── News ───────── */
+
+.st-news .sv-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.st-news__liste {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  text-align: left;
+}
+
+.st-news__karte {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--cream-card);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text-strong);
+  transition: transform var(--duration-med) var(--ease-spring), border-color var(--duration-med) var(--ease-spring), box-shadow var(--duration-med) var(--ease-spring);
+}
+
+.st-news__karte:hover,
+.st-news__karte:focus-visible {
+  transform: translateY(-4px);
+  border-color: var(--border-ink);
+  box-shadow: 6px 8px 0 rgba(28, 22, 19, 0.85);
+}
+
+.st-news__karte:focus-visible {
+  outline: 3px solid var(--terra-500);
+  outline-offset: 3px;
+}
+
+.st-news__bild {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  background: var(--peach-150);
+  padding: 14px 0 0;
+  box-sizing: border-box;
+}
+
+.st-news__text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 22px 24px;
+}
+
+.st-news__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 12px;
+  font-size: 12.5px;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--terra-500);
+}
+
+.st-news__meta time {
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+}
+
+.st-news__titel {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.25;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-tight);
+  text-wrap: balance;
+}
+
+.st-news__kurz {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--text-body);
+}
+
+.st-news__fest {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  padding: 36px 28px;
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--cream-card);
+  text-align: center;
+}
+
+.st-news__fest-text {
+  max-width: 56ch;
+  margin: 0;
+  font-size: var(--text-lead);
+  line-height: 1.6;
+  color: var(--text-body);
+}
+
+.st-news__alle {
+  margin: 0;
+  font-size: var(--text-size-body);
+}
+
+/* ───────── Preise ───────── */
+
+.st-preise .sv-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.st-preise__liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  text-align: left;
+}
+
+.st-preis {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 28px 28px 26px;
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--cream-card);
+}
+
+.st-preis h3 {
+  margin: 0;
+  font-size: 13.5px;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--terra-500);
+}
+
+.st-preis__betrag {
+  margin: 0;
+  font-size: clamp(26px, 2.5vw, 33px);
+  line-height: 1.12;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-display);
+  color: var(--text-strong);
+  text-wrap: balance;
+}
+
+.st-preis__text {
+  margin: 0 0 6px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-body);
+}
+
+.st-preis .st-mehr {
+  margin-top: auto;
+}
+
+.st-preise__fuss {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.st-preise__hinweis,
+.st-preise__begleitung {
+  margin: 0;
+  max-width: 62ch;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--text-body);
+}
+
+.st-preise__begleitung {
+  margin-top: 6px;
+  font-size: 15.5px;
+}
+
+.st-preise__fuss .sv-button--cta:focus-visible {
+  outline: 3px solid var(--terra-500);
+  outline-offset: 3px;
+}
+
+/* ───────── Breiten ───────── */
+
+@media (max-width: 1179px) {
+  .st-weg__liste { grid-template-columns: repeat(2, 1fr); }
+  .st-weg__karte { min-height: 180px; }
+}
+
+@media (max-width: 899px) {
+  .st-news__liste,
+  .st-preise__liste { grid-template-columns: 1fr; }
+  .st-news__karte { flex-direction: row; }
+  .st-news__bild { width: 38%; flex: 0 0 38%; aspect-ratio: auto; padding: 10px; }
+}
+
+@media (max-width: 719px) {
+  .st-buehne__inner {
+    padding-top: calc(66px + 18px);
+    padding-bottom: 14px;
+  }
+
+  .st-kopf { margin-bottom: 18px; gap: 10px; }
+  .st-kopf h1 { font-size: clamp(27px, 7.4vw, 34px); }
+  .st-kopf__lead { font-size: 15.5px; }
+
+  .st-weg__liste { grid-template-columns: 1fr; }
+  .st-weg__karte { min-height: 0; gap: 18px; }
+
+  .st-news__karte { flex-direction: column; }
+  .st-news__bild { width: 100%; flex: none; aspect-ratio: 16 / 9; }
+
+  .st-preis { padding: 24px 22px; }
+}
+
+/* ───────── Bewegung ───────── */
+
+@media (prefers-reduced-motion: reduce) {
+  .st-reiter,
+  .st-stage,
+  .st-panel,
+  .st-panel::before,
+  .st-bild,
+  .st-mini,
+  .st-voll,
+  .st-weg__karte,
+  .st-weg__pfeil,
+  .st-news__karte {
+    transition: none !important;
+  }
+
+  .st-weg__karte:hover,
+  .st-weg__karte:focus-visible,
+  .st-news__karte:hover,
+  .st-news__karte:focus-visible {
+    transform: none;
+  }
+
+  .st-js .st-stage {
+    scroll-behavior: auto;
+  }
+}

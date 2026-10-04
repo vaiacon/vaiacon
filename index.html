@@ -3,27 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="vaiacon führt Schweizer KMU an KI heran: Weiterbildung, Automatisierung von Büroarbeit und laufende Begleitung. Ohne Fachchinesisch, nach revDSG.">
+<meta name="description" content="KI für Schweizer KMU: Lernreise fürs Team, besser gefunden bei Google und in KI-Antworten, Büroarbeit automatisieren. Fixe Preise, nach revDSG.">
 <link rel="canonical" href="https://vaiacon.ch/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="vaiacon">
 <meta property="og:locale" content="de_CH">
-<meta property="og:title" content="KI für Schweizer KMU verständlich einführen · vaiacon">
-<meta property="og:description" content="vaiacon führt Schweizer KMU an KI heran: Weiterbildung, Automatisierung von Büroarbeit und laufende Begleitung. Ohne Fachchinesisch, nach revDSG.">
+<meta property="og:title" content="KI-Kompetenz, Sichtbarkeit, Automationen für KMU · vaiacon">
+<meta property="og:description" content="KI für Schweizer KMU: Lernreise fürs Team, besser gefunden bei Google und in KI-Antworten, Büroarbeit automatisieren. Fixe Preise, nach revDSG.">
 <meta property="og:url" content="https://vaiacon.ch/">
 <meta property="og:image" content="https://vaiacon.ch/assets/vorschau-startseite.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Der vaiacon-Roboter winkt, daneben: Digitale Sichtbarkeit und KI-Kompetenz für Schweizer KMU.">
 <meta name="twitter:card" content="summary_large_image">
-<title>KI für Schweizer KMU verständlich einführen · vaiacon</title>
+<title>KI-Kompetenz, Sichtbarkeit, Automationen für KMU · vaiacon</title>
 <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20260925-ki-kompetenz">
-<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261004-check">
+<link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20261004-umbau">
+<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261004-umbau">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="ui_kits/website/start.css?v=20261004-start">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <!-- Strukturdaten: erzeugt von scripts/strukturdaten.py, nicht von Hand aendern -->
 <script type="application/ld+json">
 {
@@ -35,7 +36,7 @@
   "url": "https://vaiacon.ch/",
   "logo": "https://vaiacon.ch/assets/logo-lockup-terra.png",
   "image": "https://vaiacon.ch/assets/vaiacon-buerobot-startseite.png",
-  "description": "vaiacon führt Schweizer KMU an KI heran: Sichtbarkeit in Suchmaschinen und KI-Antworten, Weiterbildung, Automatisierung von Büroarbeit und laufende Begleitung. Gedacht für Betriebe mit 5 bis 30 Mitarbeitenden und eigenem Büro; für Kleinstbetriebe gibt es kostenlose Kurse. Ohne Fachchinesisch, nach revDSG, auf Schweizer Infrastruktur.",
+  "description": "vaiacon führt Schweizer KMU an KI heran, in drei Bereichen: KI-Kompetenz (Trainings, Coaching, E-Learning), Sichtbarkeit in Suchmaschinen und KI-Antworten und Automationen von Büroarbeit; auf Wunsch mit laufender Begleitung. Gedacht für Betriebe mit 5 bis 30 Mitarbeitenden und eigenem Büro. Preise offen und inklusive MWST, Offerte im Offerten-Tool. Ohne Fachchinesisch, nach revDSG, auf Schweizer Infrastruktur.",
   "email": "hallo@vaiacon.ch",
   "foundingDate": "2026",
   "address": {
@@ -82,108 +83,260 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="mock-header__nav" aria-label="Hauptnavigation">
-        <div class="mock-nav-group">
-          <button class="mock-nav-group__toggle" type="button" aria-expanded="false" aria-controls="mock-nav-ki-kompetenz">KI-Kompetenz<span class="mock-nav-group__indicator" aria-hidden="true"></span></button>
-          <div id="mock-nav-ki-kompetenz" class="mock-nav-group__menu">
-            <a href="academy/">Kurse</a>
-            <a href="learning">Schulung im Betrieb</a>
-          </div>
+        <div class="mock-nav-gruppe mock-nav-gruppe--angebot">
+          <a href="learning">KI-Kompetenz</a>
+          <a href="visibility">Sichtbarkeit</a>
+          <a href="bot">Automationen</a>
         </div>
-        <a href="bot">Automatisierungen</a>
-        <a href="visibility">Sichtbarkeit</a>
-        <a href="service">Begleitung</a>
-        <a href="ueber-uns">Über uns</a>
-        <a href="faq">FAQ</a>
-        <a class="mock-header__contact" href="kontakt">Kontakt</a>
+        <div class="mock-nav-gruppe mock-nav-gruppe--info">
+          <a href="ki-kmu-news/">KI-KMU-News</a>
+          <a href="faq">FAQ</a>
+          <a href="ueber-uns">Über uns</a>
+          <a class="mock-header__contact" href="kontakt">Kontakt</a>
+        </div>
       </nav>
     </div>
     <nav id="mock-mobile-menu" class="mock-mobile-nav" aria-label="Mobile Navigation">
-      <div class="mock-mobile-nav__bereich">
-        <span class="mock-mobile-nav__bereich-titel">KI-Kompetenz</span>
-        <a href="academy/">Kurse</a>
-        <a href="learning">Schulung im Betrieb</a>
+      <div class="mock-mobile-nav__bereich" role="group" aria-labelledby="mock-mnav-angebot">
+        <span class="mock-mobile-nav__bereich-titel" id="mock-mnav-angebot">Angebot</span>
+        <a href="learning">KI-Kompetenz</a>
+        <a href="visibility">Sichtbarkeit</a>
+        <a href="bot">Automationen</a>
       </div>
-      <a href="bot">Automatisierungen</a>
-      <a href="visibility">Sichtbarkeit</a>
-      <a href="service">Begleitung</a>
-      <a href="ueber-uns">Über uns</a>
-      <a href="faq">FAQ</a>
-      <a class="mock-header__contact" href="kontakt">Kontakt</a>
+      <div class="mock-mobile-nav__bereich" role="group" aria-labelledby="mock-mnav-mehr">
+        <span class="mock-mobile-nav__bereich-titel" id="mock-mnav-mehr">Mehr zu vaiacon</span>
+        <a href="ki-kmu-news/">KI-KMU-News</a>
+        <a href="faq">FAQ</a>
+        <a href="ueber-uns">Über uns</a>
+        <a class="mock-header__contact" href="kontakt">Kontakt</a>
+      </div>
     </nav>
   </header>
 
   <main>
-    <section id="top" class="sv-hero" aria-label="Start">
-      <div class="sv-hero__inner">
-        <div class="sv-hero__copy">
-          <p class="sv-kicker sv-kicker--on-terra">VAIACON · FÜR SCHWEIZER KMU</p>
-          <h1>Digitale Sichtbarkeit und KI-Kompetenz für Schweizer KMU.</h1>
-          <p class="sv-hero__lead">
-            Für Betriebe mit 5 bis 30 Mitarbeitenden und eigenem Büro. Wir führen Sie an KI heran: verständlich, persönlich, ohne Verkaufsdruck.
-          </p>
-          <!-- Visibility-Check direkt aus dem Kopf: springt nach visibility?domain=…#check (check-start.js) -->
-          <form class="sv-actions sv-start" id="sv-start-form" action="visibility" method="get" novalidate>
-            <div class="sv-start__feld">
-              <label class="sv-start__label" for="sv-start-domain">Ihre Domain</label>
-              <input type="text" id="sv-start-domain" name="domain" placeholder="ihre-firma.ch" autocomplete="off" autocapitalize="none" spellcheck="false" inputmode="url" required>
+    <section id="top" class="st-buehne" aria-labelledby="st-titel">
+      <div class="st-buehne__inner">
+        <header class="st-kopf">
+          <p class="sv-kicker sv-kicker--on-terra">VAIACON · KI FÜR SCHWEIZER KMU</p>
+          <h1 id="st-titel">KI-Kompetenz, Sichtbarkeit und Automationen für Ihren Betrieb.</h1>
+          <p class="st-kopf__lead">Drei Bereiche, die Sie einzeln oder zusammen nutzen. Für Betriebe mit 5 bis 30 Mitarbeitenden: verständlich, persönlich, ohne Verkaufsdruck.</p>
+        </header>
+
+        <div class="st-reiter" role="tablist" aria-label="Unsere drei Bereiche" hidden>
+          <button class="st-reiter__tab" role="tab" type="button" id="st-reiter-ki" aria-controls="st-voll-ki" aria-selected="true">
+            <span class="st-reiter__name">KI-Kompetenz</span>
+            <span class="st-reiter__spur" aria-hidden="true"><span></span></span>
+          </button>
+          <button class="st-reiter__tab" role="tab" type="button" id="st-reiter-sicht" aria-controls="st-voll-sicht" aria-selected="false" tabindex="-1">
+            <span class="st-reiter__name">Sichtbarkeit</span>
+            <span class="st-reiter__spur" aria-hidden="true"><span></span></span>
+          </button>
+          <button class="st-reiter__tab" role="tab" type="button" id="st-reiter-auto" aria-controls="st-voll-auto" aria-selected="false" tabindex="-1">
+            <span class="st-reiter__name">Automationen</span>
+            <span class="st-reiter__spur" aria-hidden="true"><span></span></span>
+          </button>
+        </div>
+
+        <div class="st-stage" id="st-stage" data-aktiv="0">
+          <button class="st-pause" type="button" id="st-pause" hidden aria-pressed="false">
+            <svg class="st-pause__pause" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="currentColor"><rect x="2.5" y="1.5" width="3" height="11" rx="1"/><rect x="8.5" y="1.5" width="3" height="11" rx="1"/></svg>
+            <svg class="st-pause__weiter" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="currentColor"><path d="M3.5 1.8v10.4a.8.8 0 0 0 1.2.7l8-5.2a.8.8 0 0 0 0-1.4l-8-5.2a.8.8 0 0 0-1.2.7Z"/></svg>
+            <span class="st-pause__text">Anhalten</span>
+          </button>
+
+          <article class="st-panel" id="st-ki" data-bereich="ki-kompetenz" data-aktiv>
+            <picture class="st-bild"><source srcset="assets/vaiacon-buerobot-schulung-zeigestab.webp" type="image/webp"><img src="assets/vaiacon-buerobot-schulung-zeigestab.png" alt="Der vaiacon-Roboter erklärt etwas mit dem Zeigestab" width="512" height="616" fetchpriority="high"></picture>
+            <div class="st-mini" aria-hidden="true">
+              <span class="st-mini__name">KI-Kompetenz</span>
+              <span class="st-mini__kurz">Das Team lernt KI, die zu Ihnen passt.</span>
+              <span class="st-mini__mehr">Ansehen</span>
             </div>
-            <p class="sv-start__fehler" id="sv-start-fehler" role="alert" hidden></p>
-            <button class="sv-button sv-button--light" type="submit">Check starten →</button>
-          </form>
+            <div class="st-voll" id="st-voll-ki" role="tabpanel" aria-labelledby="st-reiter-ki">
+              <div class="st-voll__kopf">
+                <h2 class="st-voll__titel">KI-Kompetenz</h2>
+                <p class="st-voll__lead">Eine Lernreise fürs ganze Team, zugeschnitten auf Ihren Betrieb.</p>
+              </div>
+              <ul class="st-nutzen">
+                <li>E-Learnings, Videos und Trainings mit Ihren eigenen Beispielen</li>
+                <li>Coaching für Führungskräfte und Begleitung bei der Einführung</li>
+                <li>Jeden Tag eine kleine Lerneinheit, die hängen bleibt</li>
+              </ul>
+              <div class="st-haken">
+                <a class="sv-button sv-button--cta" href="learning#standortbestimmung">KI-Standort bestimmen →</a>
+                <p class="st-haken__hinweis">Zwölf Fragen, Ergebnis sofort.</p>
+              </div>
+              <a class="st-mehr" href="learning">Mehr zu KI-Kompetenz <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="st-panel" id="st-sicht" data-bereich="sichtbarkeit">
+            <picture class="st-bild"><source srcset="assets/vaiacon-buerobot-sichtbarkeit-lupe.webp" type="image/webp"><img src="assets/vaiacon-buerobot-sichtbarkeit-lupe.png" alt="Der vaiacon-Roboter hält eine Lupe hoch" width="512" height="616"></picture>
+            <div class="st-mini" aria-hidden="true">
+              <span class="st-mini__name">Sichtbarkeit</span>
+              <span class="st-mini__kurz">Bei Google und in KI-Antworten gefunden.</span>
+              <span class="st-mini__mehr">Ansehen</span>
+            </div>
+            <div class="st-voll" id="st-voll-sicht" role="tabpanel" aria-labelledby="st-reiter-sicht">
+              <div class="st-voll__kopf">
+                <h2 class="st-voll__titel">Sichtbarkeit</h2>
+                <p class="st-voll__lead">Gefunden werden, wenn Ihre Kundschaft bei Google sucht oder eine KI fragt.</p>
+              </div>
+              <ul class="st-nutzen">
+                <li>Google-Check: was Ihre Website heute richtig und falsch macht</li>
+                <li>Auch in den Antworten von KI-Assistenten genannt werden</li>
+                <li>Konkrete Schritte, verständlich erklärt</li>
+              </ul>
+              <div class="st-haken">
+                <form class="sv-start st-start" id="sv-start-form" action="visibility#check" method="get" novalidate>
+                  <div class="sv-start__feld">
+                    <label class="sv-start__label" for="sv-start-domain">Ihre Domain</label>
+                    <input type="text" id="sv-start-domain" name="domain" placeholder="ihre-firma.ch" autocomplete="off" autocapitalize="none" spellcheck="false" inputmode="url" required>
+                  </div>
+                  <button class="sv-button sv-button--cta" type="submit">Check starten →</button>
+                  <p class="sv-start__fehler" id="sv-start-fehler" role="alert" hidden></p>
+                </form>
+                <p class="st-haken__hinweis">Kostenlos, in wenigen Sekunden.</p>
+              </div>
+              <a class="st-mehr" href="visibility">Mehr zu Sichtbarkeit <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="st-panel" id="st-auto" data-bereich="automationen">
+            <picture class="st-bild"><source srcset="assets/vaiacon-buerobot-automatisierung-zahnrad.webp" type="image/webp"><img src="assets/vaiacon-buerobot-automatisierung-zahnrad.png" alt="Der vaiacon-Roboter mit einem Zahnrad" width="512" height="616"></picture>
+            <div class="st-mini" aria-hidden="true">
+              <span class="st-mini__name">Automationen</span>
+              <span class="st-mini__kurz">Wiederkehrende Arbeit abgeben.</span>
+              <span class="st-mini__mehr">Ansehen</span>
+            </div>
+            <div class="st-voll" id="st-voll-auto" role="tabpanel" aria-labelledby="st-reiter-auto">
+              <div class="st-voll__kopf">
+                <h2 class="st-voll__titel">Automationen</h2>
+                <p class="st-voll__lead">Wiederkehrende Arbeit abgeben, damit Ihr Team Zeit für Wichtiges hat.</p>
+              </div>
+              <ul class="st-nutzen">
+                <li>Belege, Offerten und Posteingang laufen von selbst</li>
+                <li>Telefonassistent und Chat beantworten die Standardfragen</li>
+                <li>Fixer Preis pro Ablauf, Start mit einer einzigen Aufgabe</li>
+              </ul>
+              <div class="st-haken">
+                <a class="sv-button sv-button--cta" href="offerte#automationen">Offerte zusammenstellen →</a>
+                <p class="st-haken__hinweis">Preis sehen, bevor Sie anfragen.</p>
+              </div>
+              <a class="st-mehr" href="bot">Mehr zu Automationen <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
         </div>
-        <div class="sv-hero__visual" aria-label="vaiacon Übersicht">
-          <figure class="sv-hero__robot sv-hero__robot--frei">
-            <picture><source srcset="assets/vaiacon-buerobot-startseite.webp" type="image/webp"><img src="assets/vaiacon-buerobot-startseite.png" alt="Der vaiacon-Roboter winkt" width="640" height="769" fetchpriority="high"></picture>
-          </figure>
+        <p class="st-lauf-hinweis" id="st-lauf-hinweis" aria-live="polite"></p>
+      </div>
+    </section>
+    <script>
+    /* Startbereich je Besuch reihum (oder nach #ki-kompetenz|#sichtbarkeit|#automationen). Läuft sofort,
+       damit die Bühne nicht erst im falschen Zustand erscheint. Ohne diese Zeile bleibt es bei KI-Kompetenz. */
+    (function () {
+      var stage = document.getElementById('st-stage');
+      if (!stage) return;
+      document.documentElement.classList.add('st-js');
+      var namen = ['ki-kompetenz', 'sichtbarkeit', 'automationen'];
+      var i = -1, quelle = 'reihum';
+      try { i = namen.indexOf((location.hash || '').replace('#', '')); } catch (e) {}
+      if (i >= 0) { quelle = 'adresse'; }
+      else {
+        i = Math.floor(Math.random() * 3);
+        try {
+          var gemerkt = window.sessionStorage.getItem('vaiacon-start-bereich');
+          if (gemerkt !== null && /^[012]$/.test(gemerkt)) { i = +gemerkt; }
+          else {
+            var zuletzt = window.localStorage.getItem('vaiacon-start-bereich');
+            if (zuletzt !== null && /^[012]$/.test(zuletzt)) i = (+zuletzt + 1) % 3;
+            window.localStorage.setItem('vaiacon-start-bereich', String(i));
+            window.sessionStorage.setItem('vaiacon-start-bereich', String(i));
+          }
+        } catch (e) {}
+      }
+      stage.setAttribute('data-aktiv', String(i));
+      stage.setAttribute('data-quelle', quelle);
+      var p = stage.querySelectorAll('.st-panel');
+      for (var k = 0; k < p.length; k++) { if (k === i) p[k].setAttribute('data-aktiv', ''); else p[k].removeAttribute('data-aktiv'); }
+    })();
+    </script>
+
+    <section id="wegweiser" class="sv-section st-weg">
+      <div class="sv-wrap">
+        <div class="sv-center">
+          <p class="sv-kicker">ORIENTIERUNG</p>
+          <h2 class="sv-title">Wo drückt es gerade?</h2>
+          <p class="sv-lead">Tippen Sie an, was am ehesten stimmt. Wir zeigen Ihnen den passenden Anfang.</p>
         </div>
+        <ul class="st-weg__liste">
+          <li><a class="st-weg__karte" href="learning">
+            <span class="st-weg__satz">«Mein Team nutzt KI kaum oder jeder anders.»</span>
+            <span class="st-weg__ziel"><span class="st-weg__bereich">KI-Kompetenz</span><span class="st-weg__pfeil" aria-hidden="true">→</span></span>
+          </a></li>
+          <li><a class="st-weg__karte" href="visibility">
+            <span class="st-weg__satz">«Man findet uns online schlecht.»</span>
+            <span class="st-weg__ziel"><span class="st-weg__bereich">Sichtbarkeit</span><span class="st-weg__pfeil" aria-hidden="true">→</span></span>
+          </a></li>
+          <li><a class="st-weg__karte" href="bot">
+            <span class="st-weg__satz">«Wir tippen zu viel von Hand ab.»</span>
+            <span class="st-weg__ziel"><span class="st-weg__bereich">Automationen</span><span class="st-weg__pfeil" aria-hidden="true">→</span></span>
+          </a></li>
+          <li><a class="st-weg__karte st-weg__karte--offen" href="learning#standortbestimmung">
+            <span class="st-weg__satz">«Ich weiss nicht, wo anfangen.»</span>
+            <span class="st-weg__ziel"><span class="st-weg__bereich">KI-Standort bestimmen</span><span class="st-weg__pfeil" aria-hidden="true">→</span></span>
+          </a></li>
+        </ul>
+        <p class="st-weg__fuss">Lieber reden? <a href="kontakt#formular">Erstgespräch vereinbaren →</a></p>
       </div>
     </section>
 
-    <section id="bereiche" class="sv-section sv-section--alt">
+    <section id="news" class="sv-section sv-section--alt st-news">
       <div class="sv-wrap">
         <div class="sv-center">
-          <p class="sv-kicker">WAS WIR ANBIETEN</p>
-          <h2 class="sv-title"><span class="sv-ganz">Mehr KI-Kompetenz.</span> <span class="sv-ganz">Mehr Effizienz.</span> <span class="sv-ganz">Mehr Sichtbarkeit.</span> Starten Sie mit der passenden Lösung.</h2>
-          <p class="sv-lead">
-            Jeder Bereich steht für sich. Sie müssen nicht alles buchen und schon gar nicht in dieser Reihenfolge.
-          </p>
+          <p class="sv-kicker">KI-KMU-NEWS</p>
+          <h2 class="sv-title">Neu in der KI, für KMU erklärt.</h2>
+          <p class="sv-lead">Was sich ändert und was es für einen Betrieb Ihrer Grösse bedeutet. Kurz, ohne Fachchinesisch.</p>
         </div>
+        <div class="st-news__liste" id="st-news-liste">
+          <article class="st-news__fest">
+            <p class="st-news__fest-text">Wir ordnen laufend ein, was in der KI für kleine und mittlere Betriebe wichtig wird: neue Werkzeuge, Recht, Sicherheit. In einer Viertelstunde gelesen.</p>
+            <a class="sv-button sv-button--cta" href="ki-kmu-news/">Zur aktuellen Woche →</a>
+          </article>
+        </div>
+        <p class="st-news__alle" id="st-news-alle" hidden><a href="ki-kmu-news/">Alle Beiträge ansehen →</a></p>
+      </div>
+    </section>
 
-        <div class="sv-card-grid sv-card-grid--three">
-          <article class="sv-card">
-            <h3>Automatisierungen</h3>
-            <p>Was sich jede Woche wiederholt, läuft automatisch: Belege, Offerten, Korrespondenz, Anfragen.</p>
-            <p class="sv-card__passt"><strong>Passt, wenn</strong> Sie möchten, dass wiederkehrende Aufgaben weniger Zeit kosten und Prozesse effizienter werden.</p>
-            <p class="sv-card__preis"><span>Ab CHF 600</span> · <span>Fixpreis</span></p>
-            <p><a class="sv-button sv-button--light" href="bot">Zu den Automatisierungen →</a></p>
-          </article>
-          <article class="sv-card sv-card--hervor">
-            <p class="sv-card__etikett">Beliebter Einstieg</p>
+    <section id="preise" class="sv-section st-preise">
+      <div class="sv-wrap">
+        <div class="sv-center">
+          <p class="sv-kicker">PREISE</p>
+          <h2 class="sv-title">Sie wissen vorher, was es kostet.</h2>
+          <p class="sv-lead">Je ein Einstieg pro Bereich. Fixe Preise statt Stundenrätsel; den genauen Betrag stellen Sie sich selbst zusammen.</p>
+        </div>
+        <ul class="st-preise__liste">
+          <li class="st-preis">
             <h3>KI-Kompetenz</h3>
-            <p>Selbst lernen: 11 Lernpfade mit 58 kurzen Lektionen, ohne Anmeldung. Der passende Einstieg für Einzel- und Kleinstbetriebe. Oder gemeinsam: Trainings, Coachings und Workshops bei Ihnen im Betrieb.</p>
-            <p class="sv-card__passt"><strong>Passt, wenn</strong> Sie möchten, dass Sie und Ihre Mitarbeitenden KI verstehen, sinnvoll einsetzen und in ihren Arbeitsalltag integrieren können.</p>
-            <p class="sv-card__preis"><span>Kurse kostenlos</span> · <span>Schulung nach Erstgespräch</span></p>
-            <div class="sv-actions"><a class="sv-button sv-button--light" href="academy/">Zur Academy →</a><a class="sv-button sv-button--light" href="learning">Zur Schulung →</a></div>
-          </article>
-          <article class="sv-card">
+            <p class="st-preis__betrag"><span data-preis="kk-training-halbtag">CHF 1'550 pro Halbtag</span></p>
+            <p class="st-preis__text">Training im Betrieb: Ihr Team übt KI an Ihren eigenen Aufgaben. Pro Gruppe, nicht pro Person.</p>
+            <a class="st-mehr st-mehr--dunkel" href="learning">Mehr zu KI-Kompetenz <span aria-hidden="true">→</span></a>
+          </li>
+          <li class="st-preis">
             <h3>Sichtbarkeit</h3>
-            <p>Gefunden werden, wenn Menschen suchen und KI antwortet. SEO für Suchmaschinen, GEO für <span class="sv-ganz">KI-Antworten</span>.</p>
-            <p class="sv-card__passt"><strong>Passt, wenn</strong> Sie möchten, dass Ihr Unternehmen in klassischen Suchmaschinen und <span class="sv-ganz">KI-Suchsystemen</span> gefunden und empfohlen wird.</p>
-            <p class="sv-card__preis"><span>Preis nach Erstgespräch</span></p>
-            <p><a class="sv-button sv-button--light" href="visibility">Zu Visibility →</a></p>
-          </article>
-          <article class="sv-card">
-            <h3>Begleitung</h3>
-            <p>Betreuung für alles, was läuft: Pflege, Updates, Kontrolle und Weiterentwicklung.</p>
-            <p class="sv-card__passt"><strong>Passt, wenn</strong> Sie bereits auf eine oder mehrere unserer Lösungen setzen und dabei gerne Support erhalten möchten.</p>
-            <p class="sv-card__preis"><span>Ab CHF 90 / Monat</span> · <span>monatlich kündbar</span></p>
-            <p><a class="sv-button sv-button--light" href="service">Zur Begleitung →</a></p>
-          </article>
-<article class="sv-card sv-card--terra sv-card--breit">
-            <h3>Noch unsicher?</h3>
-            <p>Zwei kostenlose Analysen zeigen, wo Ihr Betrieb steht. Der Fragebogen rechnet in rund zehn Minuten aus, wie viel Bürozeit sich einsparen lässt. Der Visibility-Check prüft in wenigen Sekunden, wie gut Ihre Website gefunden wird.</p>
-            <div class="sv-actions"><a class="sv-button sv-button--light" href="erstanalyse">Zeit sparen: Erstanalyse →</a><a class="sv-button sv-button--light" href="visibility#check">Gefunden werden: Check starten →</a></div>
-          </article>
+            <p class="st-preis__betrag"><span data-preis="si-seo-audit">CHF 850</span></p>
+            <p class="st-preis__text">Google-Check: Sie erhalten eine klare Liste der wichtigsten Verbesserungen für Ihre Website.</p>
+            <a class="st-mehr st-mehr--dunkel" href="visibility">Mehr zu Sichtbarkeit <span aria-hidden="true">→</span></a>
+          </li>
+          <li class="st-preis">
+            <h3>Automationen</h3>
+            <p class="st-preis__betrag"><span data-preis="au-ablauf-klein">ab CHF 1'300 pro Ablauf</span></p>
+            <p class="st-preis__text">Ein kleiner, wiederkehrender Ablauf läuft künftig von selbst. Fixpreis nach der Erstanalyse.</p>
+            <a class="st-mehr st-mehr--dunkel" href="bot">Mehr zu Automationen <span aria-hidden="true">→</span></a>
+          </li>
+        </ul>
+        <div class="st-preise__fuss">
+          <a class="sv-button sv-button--cta" href="offerte">Offerte zusammenstellen →</a>
+          <p class="st-preise__hinweis">Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer.</p>
+          <p class="st-preise__begleitung">Danach bleiben wir auf Wunsch an Ihrer Seite, mit Betreuung, Anpassungen und Beratung, <span data-preis="be-betreuung-klein">ab CHF 130 pro Monat</span>, monatlich kündbar. <a href="service">Mehr zur Begleitung →</a></p>
         </div>
       </div>
     </section>
@@ -193,7 +346,7 @@
         <p class="sv-kicker sv-kicker--on-terra">WOFÜR WIR STEHEN</p>
         <h2 class="sv-title sv-title--on-terra">KI ist für uns nicht das Produkt, sondern das Werkzeug.</h2>
         <p class="sv-lead sv-lead--on-terra">
-          Wir verkaufen keine Technik, sondern zurückgewonnene Zeit. Wo sich etwas nicht rechnet, sagen wir das. Auch wenn es uns einen Auftrag kostet. Ihre Kundendaten bleiben dort, wo sie hingehören: nach revDSG, auf Schweizer Infrastruktur.
+          Wir verkaufen keine Technik, sondern Wissen im Team, Auffindbarkeit und zurückgewonnene Zeit. Wo sich etwas nicht rechnet, sagen wir das. Auch wenn es uns einen Auftrag kostet. Ihre Kundendaten bleiben dort, wo sie hingehören: nach revDSG, auf Schweizer Infrastruktur.
         </p>
         <div class="sv-actions">
           <a class="sv-button sv-button--light" href="ueber-uns">Über uns ↗</a>
@@ -226,20 +379,19 @@
             <span class="sv-step__no">03</span>
             <div>
               <h3>Umsetzung in Ihrem Tempo</h3>
-              <p>Wir fangen klein an, mit einer Sache, die trägt. Alles Weitere entscheiden Sie, wenn Sie den Nutzen gesehen haben.</p>
+              <p>Wir fangen klein an, mit einer Sache, die trägt. Alles Weitere entscheiden Sie, wenn Sie den Nutzen gesehen haben. Auf Wunsch <a href="service">begleiten wir Sie danach weiter</a>.</p>
             </div>
           </li>
         </ol>
       </div>
     </section>
 
-
     <section id="kontakt" class="sv-final">
       <div class="sv-wrap sv-center">
         <p class="sv-kicker sv-kicker--on-terra">NÄCHSTER SCHRITT</p>
         <h2 class="sv-title sv-title--on-terra">Welche vaiacon-Lösung passt zu Ihrem Betrieb?</h2>
         <p class="sv-lead sv-lead--on-terra">
-          Im unverbindlichen Gespräch klären wir, ob Sichtbarkeit, Schulung, Automatisierung, Begleitung oder eine Kombination der richtige nächste Schritt ist. <span class="sv-ganz">Simpel · Klar · Persönlich.</span>
+          Im unverbindlichen Gespräch klären wir, ob KI-Kompetenz, Sichtbarkeit, Automationen oder eine Kombination der richtige nächste Schritt ist. <span class="sv-ganz">Simpel · Klar · Persönlich.</span>
         </p>
         <div class="sv-actions">
           <a class="sv-button sv-button--light" href="kontakt#formular">Erstgespräch vereinbaren →</a>
@@ -253,7 +405,10 @@
       <a class="sv-footer__logo" href="#top" aria-label="Zurück nach oben">
         <img src="assets/logo-lockup-white.svg" alt="vaiacon">
       </a>
-      <p class="sv-footer__adresse"><span>vaiacon GmbH</span><span>Lehenstrasse 74, 8037 Zürich</span><span><a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a></span><span><a href="datenschutz">Datenschutz und Impressum</a> · <a href="agb">AGB</a></span></p>
+      <nav class="sv-footer__links" aria-label="Weitere Seiten">
+        <a href="service">Begleitung</a><a href="offerte">Offerte anfragen</a><a href="ki-kmu-news/">KI-KMU-News</a><a href="datenschutz">Datenschutz und Impressum</a><a href="agb">AGB</a>
+      </nav>
+      <p class="sv-footer__adresse"><span>vaiacon GmbH</span><span>Lehenstrasse 74, 8037 Zürich</span><span><a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a></span></p>
       <a class="sv-footer__top" href="#top">↑ Nach oben</a>
       <div class="sv-footer__social">
         <a href="https://www.facebook.com/vaiacon" target="_blank" rel="noopener" aria-label="vaiacon auf Facebook" title="Facebook">
@@ -269,8 +424,11 @@
     </div>
   </footer>
 </div>
-<script src="ui_kits/website/visibility.js?v=20260925-ki-kompetenz"></script>
-<script src="ui_kits/website/chat.js?v=20261004-vaia-fuss"></script>
+<script src="ui_kits/website/api-basis.js?v=20261004-umbau"></script>
+<script src="ui_kits/website/visibility.js?v=20261004-umbau"></script>
+<script src="ui_kits/website/chat.js?v=20261004-umbau"></script>
 <script src="ui_kits/website/check-start.js?v=20261004-check"></script>
+<script src="ui_kits/website/start.js?v=20261004-start" defer></script>
+<script src="ui_kits/website/preise.js?v=20261004-preise" defer></script>
 </body>
 </html>

@@ -18,12 +18,12 @@
 <meta name="twitter:card" content="summary_large_image">
 <title>Kontakt und Erstgespräch · vaiacon, Zürich</title>
 <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20260925-ki-kompetenz">
-<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261004-check">
+<link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20261004-umbau">
+<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261004-umbau">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <!-- Strukturdaten: erzeugt von scripts/strukturdaten.py, nicht von Hand aendern -->
 <script type="application/ld+json">
 {
@@ -35,7 +35,7 @@
   "url": "https://vaiacon.ch/",
   "logo": "https://vaiacon.ch/assets/logo-lockup-terra.png",
   "image": "https://vaiacon.ch/assets/vaiacon-buerobot-startseite.png",
-  "description": "vaiacon führt Schweizer KMU an KI heran: Sichtbarkeit in Suchmaschinen und KI-Antworten, Weiterbildung, Automatisierung von Büroarbeit und laufende Begleitung. Gedacht für Betriebe mit 5 bis 30 Mitarbeitenden und eigenem Büro; für Kleinstbetriebe gibt es kostenlose Kurse. Ohne Fachchinesisch, nach revDSG, auf Schweizer Infrastruktur.",
+  "description": "vaiacon führt Schweizer KMU an KI heran, in drei Bereichen: KI-Kompetenz (Trainings, Coaching, E-Learning), Sichtbarkeit in Suchmaschinen und KI-Antworten und Automationen von Büroarbeit; auf Wunsch mit laufender Begleitung. Gedacht für Betriebe mit 5 bis 30 Mitarbeitenden und eigenem Büro. Preise offen und inklusive MWST, Offerte im Offerten-Tool. Ohne Fachchinesisch, nach revDSG, auf Schweizer Infrastruktur.",
   "email": "hallo@vaiacon.ch",
   "foundingDate": "2026",
   "address": {
@@ -82,33 +82,33 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="mock-header__nav" aria-label="Hauptnavigation">
-        <div class="mock-nav-group">
-          <button class="mock-nav-group__toggle" type="button" aria-expanded="false" aria-controls="mock-nav-ki-kompetenz">KI-Kompetenz<span class="mock-nav-group__indicator" aria-hidden="true"></span></button>
-          <div id="mock-nav-ki-kompetenz" class="mock-nav-group__menu">
-            <a href="academy/">Kurse</a>
-            <a href="learning">Schulung im Betrieb</a>
-          </div>
+        <div class="mock-nav-gruppe mock-nav-gruppe--angebot">
+          <a href="learning">KI-Kompetenz</a>
+          <a href="visibility">Sichtbarkeit</a>
+          <a href="bot">Automationen</a>
         </div>
-        <a href="bot">Automatisierungen</a>
-        <a href="visibility">Sichtbarkeit</a>
-        <a href="service">Begleitung</a>
-        <a href="ueber-uns">Über uns</a>
-        <a href="faq">FAQ</a>
-        <a class="mock-header__contact" href="kontakt" aria-current="page">Kontakt</a>
+        <div class="mock-nav-gruppe mock-nav-gruppe--info">
+          <a href="ki-kmu-news/">KI-KMU-News</a>
+          <a href="faq">FAQ</a>
+          <a href="ueber-uns">Über uns</a>
+          <a class="mock-header__contact" href="kontakt" aria-current="page">Kontakt</a>
+        </div>
       </nav>
     </div>
     <nav id="mock-mobile-menu" class="mock-mobile-nav" aria-label="Mobile Navigation">
-      <div class="mock-mobile-nav__bereich">
-        <span class="mock-mobile-nav__bereich-titel">KI-Kompetenz</span>
-        <a href="academy/">Kurse</a>
-        <a href="learning">Schulung im Betrieb</a>
+      <div class="mock-mobile-nav__bereich" role="group" aria-labelledby="mock-mnav-angebot">
+        <span class="mock-mobile-nav__bereich-titel" id="mock-mnav-angebot">Angebot</span>
+        <a href="learning">KI-Kompetenz</a>
+        <a href="visibility">Sichtbarkeit</a>
+        <a href="bot">Automationen</a>
       </div>
-      <a href="bot">Automatisierungen</a>
-      <a href="visibility">Sichtbarkeit</a>
-      <a href="service">Begleitung</a>
-      <a href="ueber-uns">Über uns</a>
-      <a href="faq">FAQ</a>
-      <a class="mock-header__contact" href="kontakt" aria-current="page">Kontakt</a>
+      <div class="mock-mobile-nav__bereich" role="group" aria-labelledby="mock-mnav-mehr">
+        <span class="mock-mobile-nav__bereich-titel" id="mock-mnav-mehr">Mehr zu vaiacon</span>
+        <a href="ki-kmu-news/">KI-KMU-News</a>
+        <a href="faq">FAQ</a>
+        <a href="ueber-uns">Über uns</a>
+        <a class="mock-header__contact" href="kontakt" aria-current="page">Kontakt</a>
+      </div>
     </nav>
   </header>
 
@@ -119,11 +119,12 @@
           <p class="sv-kicker sv-kicker--on-terra">KONTAKT</p>
           <h1>Welche vaiacon-Lösung passt zu Ihrem Betrieb?</h1>
           <p class="sv-hero__lead">
-            Im unverbindlichen Erstgespräch klären wir, ob Sichtbarkeit, Schulung, Automatisierung, Begleitung oder eine Kombination der richtige nächste Schritt ist. Eine halbe Stunde, kostenlos, ohne Verkaufsdruck. Lieber zuerst selbst prüfen? Dafür gibt es zwei kostenlose Analysen.
+            Im unverbindlichen Erstgespräch klären wir, ob KI-Kompetenz, Sichtbarkeit, Automationen oder eine Kombination der richtige nächste Schritt ist. Eine halbe Stunde, kostenlos, ohne Verkaufsdruck. Lieber zuerst selbst prüfen? Dafür gibt es zwei kostenlose Analysen. Lieber gleich Zahlen sehen? Dann stellen Sie sich Ihre Offerte selbst zusammen.
           </p>
           <div class="sv-actions">
             <a class="sv-button sv-button--light" href="erstanalyse">Zeit sparen: Erstanalyse →</a>
             <a class="sv-button sv-button--light" href="visibility#check">Gefunden werden: Check starten →</a>
+            <a class="sv-button sv-button--glass" href="offerte">Offerte zusammenstellen →</a>
           </div>
         </div>
         <div class="sv-hero__visual" aria-label="Kontakt">
@@ -176,6 +177,9 @@
           <h2 class="sv-title">Ein paar Zeilen genügen.</h2>
           <p class="sv-lead">
             Sagen Sie uns kurz, worum es geht. Wir antworten selbst, in der Regel innert eines Arbeitstages.
+          </p>
+          <p class="sv-lead">
+            Lieber gleich Zahlen sehen? <a href="offerte">Offerte zusammenstellen →</a>
           </p>
         </div>
 
@@ -245,7 +249,10 @@
       <a class="sv-footer__logo" href="#top" aria-label="Zurück nach oben">
         <img src="assets/logo-lockup-white.svg" alt="vaiacon">
       </a>
-      <p class="sv-footer__adresse"><span>vaiacon GmbH</span><span>Lehenstrasse 74, 8037 Zürich</span><span><a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a></span><span><a href="datenschutz">Datenschutz und Impressum</a> · <a href="agb">AGB</a></span></p>
+      <nav class="sv-footer__links" aria-label="Weitere Seiten">
+        <a href="service">Begleitung</a><a href="offerte">Offerte anfragen</a><a href="ki-kmu-news/">KI-KMU-News</a><a href="datenschutz">Datenschutz und Impressum</a><a href="agb">AGB</a>
+      </nav>
+      <p class="sv-footer__adresse"><span>vaiacon GmbH</span><span>Lehenstrasse 74, 8037 Zürich</span><span><a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a></span></p>
       <a class="sv-footer__top" href="#top">↑ Nach oben</a>
       <div class="sv-footer__social">
         <a href="https://www.facebook.com/vaiacon" target="_blank" rel="noopener" aria-label="vaiacon auf Facebook" title="Facebook">
@@ -261,8 +268,9 @@
     </div>
   </footer>
 </div>
-<script src="ui_kits/website/visibility.js?v=20260925-ki-kompetenz"></script>
-<script src="ui_kits/website/chat.js?v=20261004-vaia-fuss"></script>
-<script src="ui_kits/website/kontakt.js?v=20261004-check" defer></script>
+<script src="ui_kits/website/api-basis.js?v=20261004-umbau"></script>
+<script src="ui_kits/website/visibility.js?v=20261004-umbau"></script>
+<script src="ui_kits/website/chat.js?v=20261004-umbau"></script>
+<script src="ui_kits/website/kontakt.js?v=20261004-umbau" defer></script>
 </body>
 </html>

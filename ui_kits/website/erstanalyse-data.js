@@ -4,8 +4,8 @@
 window.ErstanalyseData = (function () {
   // Beide Dienste laufen auf unserem eigenen Server (vaiacon.ch, Caddy → Container):
   // WORKER_URL = KI-Schätzung des Sparpotenzials, ANFRAGE_URL = Mail an hallo@vaiacon.ch.
-  const WORKER_URL = 'https://vaiacon.ch/api/erstanalyse';
-  const ANFRAGE_URL = '/api/kontakt';
+  const WORKER_URL = window.VAIACON_API_BASIS + '/api/erstanalyse';
+  const ANFRAGE_URL = window.VAIACON_API_BASIS + '/api/kontakt';
   const PROD_HOSTS = ['philip1658.github.io', 'vaiacon.ch', 'www.vaiacon.ch', 'buero-bot.ch', 'www.buero-bot.ch', 'localhost', '127.0.0.1'];
 
   const SECTIONS = [

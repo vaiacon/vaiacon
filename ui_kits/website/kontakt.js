@@ -21,7 +21,7 @@
    visibility.html (POST /api/sichtbarkeit/bestellen), die Uebergabe
    hierher ist weg. */
 (function () {
-  var ZIEL = '/api/kontakt';           // unser Server (Dienst vaiacon-kontakt); leer = direkt ins Mailprogramm
+  var ZIEL = window.VAIACON_API_BASIS + '/api/kontakt';           // unser Server (Dienst vaiacon-kontakt); leer wäre: direkt ins Mailprogramm
   var MAIL = 'hallo@vaiacon.ch';
 
   var formular = document.querySelector('.vc-kontakt');

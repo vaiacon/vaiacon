@@ -1,0 +1,245 @@
+/* KI-KMU-News: Wochenkopf, Tagesstreifen, Beitragskarten, Archiv.
+   Baut auf den Tokens und sv-*-Klassen auf; nichts hier ändert bestehende Regeln.
+   Vorsilbe nw- . Ohne JavaScript bleibt alles lesbar (Filter ist dann ausgeblendet). */
+
+html { scroll-padding-top: 88px; }
+@media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
+
+.nw-skip {
+  position: absolute; left: 12px; top: -60px; z-index: 100;
+  padding: 10px 16px; border-radius: var(--radius-pill);
+  background: var(--ink-900); color: var(--cream-50);
+  font-weight: var(--weight-bold); text-decoration: none;
+}
+.nw-skip:focus { top: 12px; }
+
+/* ---------- Wochenkopf ---------- */
+.nw-hero h1.nw-hero__titel {
+  max-width: none;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.1em 0.45em;
+}
+.nw-hero__kw {
+  font-size: clamp(64px, 17vw, 132px);
+  line-height: 0.9; letter-spacing: -0.05em;
+  color: var(--peach-200);
+}
+.nw-hero__datum {
+  font-size: clamp(22px, 4.2vw, 40px);
+  letter-spacing: -0.02em;
+}
+.nw-hero--archiv .nw-hero__kw { font-size: clamp(56px, 14vw, 104px); }
+.nw-hero__fazit-titel {
+  margin: var(--space-6) 0 6px;
+  font-size: var(--text-kicker); font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-kicker); text-transform: uppercase;
+  color: var(--peach-200);
+}
+.nw-hero__fazit { margin-top: 0; max-width: 56ch; }
+
+/* ---------- Tagesstreifen ---------- */
+.nw-streifen {
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border-strong);
+}
+.nw-streifen__innen {
+  width: min(100%, var(--content-max)); margin: 0 auto;
+  padding: var(--space-5) var(--section-pad-x) var(--space-4);
+  box-sizing: border-box;
+}
+.nw-tage ol {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 6px;
+}
+.nw-tag {
+  position: relative;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 74px; padding: 8px 2px; box-sizing: border-box;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--cream-card);
+  color: var(--text-strong); text-decoration: none; text-align: center;
+  font-weight: var(--weight-bold);
+  transition: transform var(--duration-fast) var(--ease-spring), background var(--duration-fast) var(--ease-spring);
+}
+.nw-tag__name { font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--text-body); }
+.nw-tag__zahl { font-size: 20px; line-height: 1.1; }
+.nw-tag__anzahl { display: none; font-size: 11px; font-weight: var(--weight-semibold); color: var(--text-body); }
+a.nw-tag--voll { border: 2px solid var(--border-ink); background: var(--cream-card); }
+a.nw-tag--voll:hover, a.nw-tag--voll:focus-visible { transform: translateY(-3px); background: var(--peach-100); }
+a.nw-tag--voll:focus-visible { outline: 3px solid var(--terra-500); outline-offset: 2px; }
+a.nw-tag--voll::after {
+  content: ""; position: absolute; bottom: 7px; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--terra-500);
+}
+.nw-tag--leer {
+  border-style: dashed; background: transparent; color: var(--text-muted);
+}
+.nw-tag--leer .nw-tag__name, .nw-tag--leer .nw-tag__zahl { color: var(--text-body); opacity: 0.72; }
+.nw-tag.is-heute { box-shadow: 0 0 0 3px var(--terra-500); }
+.nw-tag.is-heute .nw-tag__name::after { content: " · heute"; text-transform: none; letter-spacing: 0; }
+@media (max-width: 560px) { .nw-tag.is-heute .nw-tag__name::after { content: "•"; margin-left: 2px; } }
+@media (min-width: 700px) {
+  .nw-tag { min-height: 92px; }
+  .nw-tag__anzahl { display: block; }
+  a.nw-tag--voll::after { display: none; }
+}
+.nw-wochenwahl {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 22px;
+  margin-top: var(--space-4);
+  font-size: var(--text-ui); font-weight: var(--weight-bold);
+}
+.nw-wochenwahl a { color: var(--terra-600); text-decoration: none; padding: 6px 2px; }
+.nw-wochenwahl a:hover, .nw-wochenwahl a:focus-visible { text-decoration: underline; }
+
+/* ---------- Filter ---------- */
+.nw-filter {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+  margin: 0 0 var(--space-9);
+}
+.nw-filter[hidden] { display: none; }
+.nw-filter__knopf {
+  min-height: 44px; padding: 8px 18px; box-sizing: border-box;
+  border: 2px solid var(--border-ink); border-radius: var(--radius-pill);
+  background: var(--cream-card); color: var(--text-strong);
+  font: inherit; font-size: var(--text-ui); font-weight: var(--weight-bold); cursor: pointer;
+  transition: background var(--duration-fast) var(--ease-spring), color var(--duration-fast) var(--ease-spring);
+}
+.nw-filter__knopf:hover { background: var(--peach-100); }
+.nw-filter__knopf:focus-visible { outline: 3px solid var(--terra-500); outline-offset: 2px; }
+.nw-filter__knopf[aria-pressed="true"] { background: var(--ink-900); color: var(--cream-50); }
+.nw-filter__status { flex-basis: 100%; margin: 4px 0 0; text-align: center; font-size: 14px; color: var(--text-body); min-height: 1.2em; }
+
+/* ---------- Tagesblöcke und Karten ---------- */
+.nw-beitraege { display: grid; gap: var(--space-11); max-width: 960px; margin: 0 auto; }
+.nw-tagesblock { display: grid; gap: var(--space-6); }
+.nw-tagesblock[hidden] { display: none; }
+.nw-tagesblock__titel {
+  margin: 0; padding-bottom: 10px;
+  border-bottom: 2px solid var(--border-ink);
+  font-size: clamp(22px, 3.4vw, 30px); letter-spacing: -0.02em; color: var(--text-strong);
+}
+.nw-leer {
+  padding: var(--space-6); border: 2px dashed var(--border-strong); border-radius: var(--radius-lg);
+  text-align: center; color: var(--text-body);
+}
+
+.nw-karte {
+  text-align: left;
+  display: grid; gap: var(--space-5);
+  padding: var(--space-6) var(--space-5);
+  background: var(--cream-card);
+  border: 2px solid var(--border-ink); border-radius: var(--radius-lg);
+}
+.nw-karte[hidden] { display: none; }
+.nw-karte:target { outline: 4px solid var(--terra-500); outline-offset: 4px; }
+.nw-karte__kopf { display: grid; grid-template-columns: 76px 1fr; gap: var(--space-4); align-items: start; }
+.nw-karte__bild { margin: 0; }
+.nw-karte__bild img {
+  display: block; width: 100%; height: auto;
+  filter: drop-shadow(0 6px 8px rgba(62, 22, 6, 0.28));
+}
+.nw-karte__meta {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; margin: 0 0 8px;
+  font-size: 13px; font-weight: var(--weight-semibold); color: var(--text-body);
+}
+.nw-karte__titel { margin: 0; font-size: clamp(20px, 4.6vw, 26px); line-height: 1.2; letter-spacing: -0.02em; }
+.nw-karte__titel a { color: var(--text-strong); text-decoration: none; }
+.nw-karte__titel a:hover, .nw-karte__titel a:focus-visible { text-decoration: underline; text-decoration-color: var(--terra-500); text-decoration-thickness: 2px; }
+.nw-karte__wichtig {
+  padding: 3px 10px; border-radius: var(--radius-pill);
+  background: var(--ink-900); color: var(--cream-50);
+  font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
+}
+.nw-karte__frage, .nw-feld h4 {
+  margin: 0 0 6px; font-size: var(--text-kicker); line-height: 1.3;
+  letter-spacing: 0.06em; text-transform: uppercase; font-weight: var(--weight-bold);
+}
+.nw-karte__frage { color: var(--text-body); }
+.nw-karte__text p, .nw-feld p { margin: 0; font-size: var(--text-size-body); line-height: var(--leading-body); color: var(--text-body); }
+.nw-karte__text p { color: var(--text-strong); }
+
+.nw-abzeichen {
+  display: inline-block; padding: 3px 11px; border-radius: var(--radius-pill);
+  font-size: 11px; font-weight: var(--weight-bold); letter-spacing: 0.1em; text-transform: uppercase;
+  background: var(--peach-150); color: var(--terra-600); border: 1px solid var(--border-strong);
+}
+.nw-abzeichen--sicherheit { background: #F4DCD4; color: #7A2A10; }
+.nw-abzeichen--recht { background: #E2E4EE; color: #2E3560; }
+.nw-abzeichen--markt { background: #E6E9D2; color: #444B14; }
+.nw-abzeichen--modelle { background: #FBE7C9; color: #6C410A; }
+.nw-abzeichen--werkzeuge { background: #D9ECE8; color: #17504A; }
+.nw-abzeichen--praxis { background: var(--sand-200); color: var(--ink-900); }
+
+/* Drei klar getrennte Felder */
+.nw-felder { display: grid; gap: var(--space-3); }
+.nw-feld {
+  position: relative; padding: var(--space-4) var(--space-4) var(--space-4) 58px;
+  border-radius: var(--radius-md); box-sizing: border-box;
+}
+.nw-feld::before {
+  content: ""; position: absolute; left: 14px; top: 14px;
+  display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%;
+  font-weight: var(--weight-bold); font-size: 17px; line-height: 1;
+}
+.nw-feld--kmu { background: var(--sand-200); border: 1px solid var(--border-strong); }
+.nw-feld--kmu h4 { color: var(--ink-900); }
+.nw-feld--kmu p { color: var(--ink-900); }
+.nw-feld--kmu::before { content: "→"; background: var(--ink-900); color: var(--cream-50); }
+
+.nw-feld--vaiacon { background: linear-gradient(170deg, #A83A08 0%, #B8420E 100%); color: var(--text-on-terra); border: 2px solid var(--border-ink); }
+.nw-feld--vaiacon h4 { color: var(--peach-200); }
+.nw-feld--vaiacon p { color: var(--text-on-terra); }
+.nw-feld--vaiacon::before { content: "✓"; background: var(--peach-100); color: var(--terra-700); }
+.nw-feld__link {
+  display: inline-block; margin-top: 10px; padding: 6px 0;
+  color: var(--cream-50); font-weight: var(--weight-bold); text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.nw-feld__link:hover, .nw-feld__link:focus-visible { text-decoration-thickness: 3px; }
+.nw-feld__link:focus-visible { outline: 3px solid var(--peach-200); outline-offset: 3px; border-radius: 4px; }
+
+.nw-feld--achtung { background: #FFF6DC; border: 2px dashed #8A5A00; }
+.nw-feld--achtung h4 { color: #6B4500; }
+.nw-feld--achtung p { color: var(--ink-900); }
+.nw-feld--achtung::before { content: "!"; background: #8A5A00; color: #FFF6DC; }
+
+.nw-quellen { border-top: 1px solid var(--border-strong); padding-top: var(--space-3); }
+.nw-quellen__titel { margin: 0 0 4px; font-size: 12px; font-weight: var(--weight-bold); letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-body); }
+.nw-quellen ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 2px; }
+.nw-quellen a { display: inline-block; padding: 6px 0; color: var(--terra-600); font-weight: var(--weight-semibold); font-size: 15px; overflow-wrap: anywhere; }
+
+/* Wichtigster Beitrag: grösser */
+.nw-karte--gross { padding: var(--space-7) var(--space-5); box-shadow: var(--shadow-comic); }
+.nw-karte--gross .nw-karte__kopf { grid-template-columns: 96px 1fr; }
+.nw-karte--gross .nw-karte__titel { font-size: clamp(24px, 6vw, 34px); }
+.nw-karte--gross .nw-karte__text p { font-size: 18px; }
+
+@media (min-width: 760px) {
+  .nw-karte { padding: var(--space-9) var(--space-9); gap: var(--space-6); }
+  .nw-karte__kopf { grid-template-columns: 120px 1fr; gap: var(--space-6); }
+  .nw-karte--gross { padding: var(--space-11) var(--space-9); }
+  .nw-karte--gross .nw-karte__kopf { grid-template-columns: 160px 1fr; }
+  .nw-felder { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-4); }
+  .nw-feld { padding: 58px var(--space-4) var(--space-4); }
+  .nw-feld::before { left: var(--space-4); top: var(--space-4); }
+}
+
+/* ---------- Archiv ---------- */
+.nw-archiv__liste { list-style: none; margin: 0 auto; padding: 0; max-width: 860px; display: grid; gap: var(--space-6); }
+.nw-archiv__woche { padding: var(--space-6); background: var(--cream-card); border: 2px solid var(--border-ink); border-radius: var(--radius-lg); }
+.nw-archiv__titel { margin: 0 0 8px; font-size: clamp(22px, 4vw, 30px); letter-spacing: -0.02em; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; }
+.nw-archiv__titel a { color: var(--text-strong); text-decoration: none; }
+.nw-archiv__titel a:hover, .nw-archiv__titel a:focus-visible { text-decoration: underline; text-decoration-color: var(--terra-500); }
+.nw-archiv__fazit { margin: 0 0 12px; color: var(--text-body); line-height: var(--leading-body); }
+.nw-archiv__beitraege { margin: 12px 0 0; padding-left: 20px; display: grid; gap: 4px; }
+.nw-archiv__beitraege a { color: var(--terra-600); font-weight: var(--weight-semibold); padding: 4px 0; display: inline-block; }
+
+/* ---------- Schluss ---------- */
+.nw-schluss__links { margin: var(--space-6) 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; font-weight: var(--weight-bold); }
+.nw-schluss__links a { color: var(--cream-50); padding: 6px 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .nw-tag, .nw-filter__knopf { transition: none; }
+  a.nw-tag--voll:hover, a.nw-tag--voll:focus-visible { transform: none; }
+  .nw-hero .sv-hero__robot img { animation: none; }
+}

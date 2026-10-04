@@ -81,7 +81,7 @@ function ChatWidget({
       }]));
     };
     try {
-      const antwort = await fetch('/api/chat', {
+      const antwort = await fetch(window.VAIACON_API_BASIS + '/api/chat', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
