@@ -74,6 +74,35 @@ Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer. Die Preise gel
 Hinweis: Die KI-Standortanalyse im Betrieb (bezahlt, Begleitung) ist nicht die
 kostenlose KI-Standortbestimmung (Selbsttest für Führungskräfte).
 
+## Referenz
+
+Wenn jemand nach Referenzen oder Erfahrungen anderer Kundinnen fragt: Es gibt eine
+Kundenstimme, die wir veröffentlichen dürfen. Gib sie wörtlich wieder, ergänze nichts
+und nenne keine Zahlen dazu, die hier nicht stehen. Die ganze Geschichte steht auf
+https://vaiacon.ch/referenzen (Seite «Aus der Praxis»).
+Mit «Academy» meint die Kundin ein eigenes Kursangebot ihres Studios, nicht eine
+Academy von vaiacon (die es nicht gibt).
+
+Von: Linda, Inhaberin Züri Glow, Beauty Studio in Zürich-Altstetten
+
+«Mir fehlte das Wissen, um an der Website selbst etwas anzupassen, und ich musste mich auf das Daily Business konzentrieren. Die meisten Termine kamen über eine Buchungsplattform rein. Das hat funktioniert, aber es hat sich nie ganz nach meinem eigenen Studio angefühlt.»
+
+«Philip und André haben deshalb alles Technische für mich eingerichtet. Ich war sehr dankbar, dass ich meine Zeit in mein Unternehmen stecken und mich um meine Kundinnen kümmern konnte. Die beiden haben in der Zwischenzeit proaktiv überlegt, was man technisch noch verbessern kann.»
+
+«Heute habe ich eine neue Website mit eigenem Terminbuch. Meine Kundinnen suchen sich die Behandlung aus, sehen die freien Zeiten und buchen direkt bei mir. Preise, Bilder, Öffnungszeiten und Aktionen ändere ich selbst. Früher musste ich dafür jemanden anschreiben und warten.»
+
+«Auch im Studio hat sich etwas verändert. Wir haben das Zahlungssystem vor Ort optimiert, und meine Einkaufspreise sind heute besser als vorher. Das merke ich direkt am Ende des Monats.»
+
+«Dazu haben sie mich beraten, wie ich mein Geschäft erweitern kann. Wir haben besprochen, ob ein Online-Store für meine Produkte Sinn macht und ob ich später eine eigene Academy anbieten könnte. Es tut gut, wenn jemand nicht nur an die Website denkt, sondern an das ganze Unternehmen.»
+
+«Sie haben auch geschaut, wie man mich bei Google findet. Wenn jemand in Altstetten nach einem Kosmetikstudio sucht, tauche ich jetzt auf, mit richtigen Öffnungszeiten und Fotos, die nach meinem Studio aussehen.»
+
+«Die Bestätigungen und Erinnerungen an die Termine gehen jetzt automatisch raus. Das waren vorher jeden Tag ein paar Nachrichten von Hand.»
+
+«Ich habe einen Zugang für alles, und bei Problemen sind Philip und André immer erreichbar. Wünsche wurden sofort umgesetzt. Um die Technik muss ich mich nicht mehr kümmern. Ich zahle einen festen Betrag im Monat und weiss, woran ich bin.»
+
+«Wenn mich eine Kollegin fragt, sage ich: Redet zuerst mit ihnen. Danach wisst ihr, ob sich etwas lohnt.»
+
 ## Der Text der Website
 
 ### Startseite
@@ -662,15 +691,15 @@ Oder schreiben Sie uns über das Kontaktformular .
 ### KI-KMU-News
 
 Zum Inhalt
-KI-KMU-NEWS · 7 BEITRÄGE IN DIESER WOCHE
-KW 40 28. September – 4. Oktober 2026
-Das Wochenfazit
-Diese Woche drehte sich vieles um KI-Helfer, die selbständig handeln. OpenAI stellt «Dots» vor und pausiert fast gleichzeitig Trainings nach Zwischenfällen mit Agenten, Apple bremst den Vollzugriff auf Macs. Für Ihren Betrieb heisst das: Geben Sie einem Helfer nur so viele Zugänge, wie die Aufgabe braucht. Neue Modellnummern wie Sonnet 5.5 sind dagegen Nebensache.
+KI-KMU-NEWS · NOCH KEIN BEITRAG IN DIESER WOCHE
+KW 41 5. – 11. Oktober 2026
+Die Woche ist noch jung: Bisher gab es nichts, das für Schweizer KMU wichtig genug war. Darunter lesen Sie die Beiträge der KW 40.
 Zu den Beiträgen →
 Archiv →
 TÄGLICH EINGEORDNET
 Was in der KI-Welt geschah, und was es für Sie heisst.
 Wir melden nicht nur, was passiert ist. Zu jedem Beitrag steht, was es für ein Schweizer KMU bedeutet, was vaiacon dazu anbieten kann und worauf Sie achten sollten.
+Zuletzt erschienen: KW 40, 28. September – 4. Oktober 2026
 Alle Modelle Werkzeuge Sicherheit Markt Praxis
 Freitag, 2. Oktober 2026
 Was ist passiert?

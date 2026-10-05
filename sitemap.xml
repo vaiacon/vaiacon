@@ -9,6 +9,7 @@
   <url><loc>https://vaiacon.ch/offerte</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://vaiacon.ch/ki-kmu-news/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://vaiacon.ch/ki-kmu-news/archiv</loc><changefreq>weekly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://vaiacon.ch/referenzen</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://vaiacon.ch/faq</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://vaiacon.ch/kontakt</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://vaiacon.ch/datenschutz</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
