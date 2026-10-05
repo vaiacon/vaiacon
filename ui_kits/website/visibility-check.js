@@ -663,7 +663,9 @@
       return antwort.json().catch(function () { return null; }).then(function (antw) {
         if (antwort.ok && antw && antw.ok !== false) {
           bestellForm.hidden = true;
-          danke.textContent = 'Danke, Ihre Anfrage ist bei uns. Wir senden Ihnen den vollständigen Bericht zu ' + aktuelleDomain + ' persönlich per E-Mail.';
+          danke.textContent = antw.gesendet
+            ? 'Danke. Der vollständige Bericht zu ' + aktuelleDomain + ' ist per E-Mail unterwegs an ' + d.mail + '. Schauen Sie notfalls im Spam-Ordner nach.'
+            : 'Danke, Ihre Anfrage ist bei uns. Wir senden Ihnen den vollständigen Bericht zu ' + aktuelleDomain + ' persönlich per E-Mail.';
           danke.hidden = false;
           danke.focus();
           return;
