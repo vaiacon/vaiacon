@@ -212,7 +212,7 @@ Zwei Unternehmer, die den Geschäftsalltag kennen.
 Wir haben erkannt, dass gerade kleine und mittlere Unternehmen Mühe haben, KI und Automatisierungen sinnvoll in ihren Betrieb zu integrieren. Darum haben wir 2026 vaiacon gegründet: Um genau solche Betriebe zu begleiten. Persönlich und auf Augenhöhe. Am meisten bewirken wir in Betrieben mit 5 bis 30 Mitarbeitenden und eigenem Büro: Handwerk, Treuhand, Praxen, Verwaltungen. Unser Angebot hat drei Bereiche: KI-Kompetenz , Sichtbarkeit und Automationen .
 André Ulrich
 Mitgründer · Strategie und Marketing
-André führt seit 20 Jahren ein eigenes Unternehmen im Bereich Facility Management und in der Textilreinigung. Dazu war er Verwaltungsrat und Bewirtschafter bei einer kleinen Immobilienfirma in Zürich. Offerten, Auftragsbestätigungen, E-Mails, Dossiers, Beiträge für Social Media: Die Arbeit, die jede Woche wiederkommt, kennt er aus eigener Erfahrung. Bei vaiacon kümmert er sich um Strategie und Marketing.
+André führt seit 20 Jahren ein eigenes Unternehmen im Bereich Facility Management und in der Textilreinigung. Dazu war er Verwaltungsrat und Bewirtschafter bei einer kleinen Immobilienfirma in Zürich. Offerten, Auftragsbestätigungen, E-Mails, Dossiers, Beiträge für Social Media: Die Arbeit, die sich jede Woche wiederholt, kennt er aus eigener Erfahrung. Bei vaiacon kümmert er sich um Strategie und Marketing.
 Philip Krieger
 Mitgründer · Technik und Coaching
 Philip bringt zehn Jahre Erfahrung als Trainer bei einem der grössten Schweizer Telekommunikationsanbieter mit. Er ist Ausbilder mit eidgenössischem Fachausweis und hat über Jahre Lösungen für die digitale Transformation und die Einführung von KI begleitet. Bei vaiacon ist er für Technik, Coaching und Support zuständig.
@@ -504,13 +504,13 @@ Kostenlose Erstanalyse →
 So läuft es ab →
 WAS SICH LOHNT
 Nicht alles gehört automatisiert.
-Es lohnt sich dort, wo etwas oft passiert, immer gleich abläuft und heute von Hand gemacht wird. Alles andere lassen wir bewusst in Ruhe, auch wenn es technisch ginge.
+Es lohnt sich bei Arbeiten, die sich ständig wiederholen und heute noch von Hand gemacht werden. Alles andere lassen wir bewusst in Ruhe, auch wenn es technisch ginge.
 Belege und Buchhaltung
-Belege erfassen, sortieren und fürs Treuhandbüro aufbereiten. Der häufigste Einstieg, und der, bei dem die Rechnung am schnellsten aufgeht.
+Belege erfassen, sortieren und fürs Treuhandbüro aufbereiten. Der häufigste Einstieg, weil er sich meist am schnellsten bezahlt macht.
 Offerten und Korrespondenz
-Aus Stichworten wird ein Entwurf mit Ihren Positionen und Ihrer Preislogik. Standardantworten entstehen aus Bausteinen statt jedes Mal neu.
+Wie weit die Automation geht, bestimmen Sie: vom Entwurf, den Sie nur noch prüfen, bis zur Antwort, die von selbst rausgeht.
 Anfragen und Auskünfte
-Die zwanzig Fragen, die täglich kommen, beantwortet ein Assistent rund um die Uhr und gibt sauber an einen Menschen ab, wenn es persönlich wird.
+Die Anfragen, die täglich kommen, beantwortet ein Assistent rund um die Uhr. Er erkennt, wann eine persönliche Beratung Sinn macht, und gibt dann an Sie weiter.
 WAS ES KOSTET
 Was kostet das?
 Festpreise je Ablauf, genannt nach der Erstanalyse. Sie wissen vor der Umsetzung, woran Sie sind. Eine Automation, die eine Stunde pro Woche spart, ist bei den meisten Betrieben in wenigen Monaten bezahlt. Rechnet sie sich nicht, sagen wir das.
@@ -560,7 +560,7 @@ Umsetzung
 Wir richten die Automation bei Ihnen ein und zeigen Ihrem Team, wie sie läuft. Zwei Wochen läuft sie neben dem alten Weg mit, bis klar ist, dass sie trägt.
 05
 Kontrolle
-Regelmässig prüfen, ob es noch passt, auf Wunsch dauerhaft mit unserer Begleitung , ab CHF 130 pro Monat, monatlich kündbar.
+Wir prüfen regelmässig, ob die Automation noch passt, auf Wunsch dauerhaft mit unserer Begleitung , ab CHF 130 pro Monat, monatlich kündbar.
 NÄCHSTER SCHRITT
 Zeigen Sie uns, was jede Woche Zeit frisst.
 Im Erstgespräch schauen wir gemeinsam auf Ihre Abläufe und sagen Ihnen, wo sich eine Automation lohnt und wo nicht. Kostenlos und unverbindlich.
