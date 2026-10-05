@@ -225,7 +225,7 @@
       "positionen": [
         {
           "id": "au-ablauf-klein",
-          "titel": "Kleiner Ablauf automatisieren",
+          "titel": "Kleinen Ablauf automatisieren",
           "beschreibung": "Ein einfacher, wiederkehrender Ablauf, zum Beispiel Anfragen sortieren oder Bestätigungen verschicken.",
           "einheit": "pro Ablauf",
           "preis": 1300,

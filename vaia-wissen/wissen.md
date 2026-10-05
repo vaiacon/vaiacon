@@ -55,7 +55,7 @@ Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer. Die Preise sin
 
 ### Automationen
 
-- Kleiner Ablauf automatisieren: ab CHF 1'300 pro Ablauf (Fixpreis nach der Erstanalyse.)
+- Kleinen Ablauf automatisieren: ab CHF 1'300 pro Ablauf (Fixpreis nach der Erstanalyse.)
 - Belege und Offerten automatisieren: ab CHF 3'000 pro Ablauf (Fixpreis nach der Erstanalyse.)
 - Grosser Ablauf über mehrere Systeme: ab CHF 6'800 pro Ablauf (Fixpreis nach der Erstanalyse.)
 - Chatbot mit Ihrem Firmenwissen: ab CHF 2'450 (Der laufende Betrieb läuft über die Betreuung.)
@@ -514,7 +514,7 @@ Die Anfragen, die täglich kommen, beantwortet ein Assistent rund um die Uhr. Er
 WAS ES KOSTET
 Was kostet das?
 Festpreise je Ablauf, genannt nach der Erstanalyse. Sie wissen vor der Umsetzung, woran Sie sind. Eine Automation, die eine Stunde pro Woche spart, ist bei den meisten Betrieben in wenigen Monaten bezahlt. Rechnet sie sich nicht, sagen wir das.
-Kleiner Ablauf automatisieren
+Kleinen Ablauf automatisieren
 Ein einfacher, wiederkehrender Ablauf, zum Beispiel Anfragen sortieren oder Bestätigungen verschicken.
 ab CHF 1'300 pro Ablauf
 Belege und Offerten automatisieren
