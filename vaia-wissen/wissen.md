@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 04.10.2026 · Eintrag 93424e8 Startseite: Kopf wieder bildschirmhoch, Einleitung kuerzer, ohne «Unsere Loesungen»
+> Stand: 05.10.2026 · Eintrag ddb2ed9 Merge pull request #4 from vaiacon/umbau-drei-bereiche
 
 ## Wie du antwortest
 
@@ -36,21 +36,21 @@ Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer. Die Preise gel
 
 - Training oder Workshop, Halbtag: CHF 1'550 pro Halbtag (Pro Gruppe, nicht pro Person.)
 - Training oder Workshop, ganzer Tag: CHF 2'450 pro Tag (Pro Gruppe, nicht pro Person.)
-- Coaching für Führungskräfte: CHF 190 pro Stunde
+- Coaching für Führungskräfte: CHF 210 pro Stunde
 - E-Learning nach Mass: CHF 380 pro Lernminute (Umfang und Gestaltung klären wir im Erstgespräch.)
-- Lernvideo: ab CHF 3'850 (Preis für ein Video von bis zu etwa drei Minuten.)
+- Lernvideo: ab CHF 4'700 (Preis für ein Video von bis zu etwa drei Minuten.)
 - Tägliche Kleinst-Lerneinheiten: CHF 80 pro Person (Für ein Programm von vier Wochen. Die Inhalte werden auf Ihren Betrieb zugeschnitten.)
 - Change-Begleitung: CHF 1'700 pro Tag
 - Begleitung der Mitarbeitenden vor Ort: CHF 1'300 pro Tag
 
 ### Sichtbarkeit
 
-- Google-Check (SEO-Audit): CHF 850
+- Google-Check (SEO-Audit): CHF 1'300
 - KI-Sichtbarkeits-Check: CHF 1'300
 - Seite überarbeiten: CHF 310 (Preis je Seite.)
-- SEO-Workshop für Ihr Team: CHF 640
+- SEO-Workshop für Ihr Team: CHF 810
 - Laufende Betreuung: lokal gefunden werden: CHF 400 pro Monat (Den ersten Platz kann niemand versprechen.)
-- Laufende Betreuung: Google-Sichtbarkeit: CHF 850 pro Monat (Den ersten Platz kann niemand versprechen.)
+- Laufende Betreuung: Google-Sichtbarkeit: CHF 1'300 pro Monat (Den ersten Platz kann niemand versprechen.)
 - Laufende Betreuung: KI-Sichtbarkeit: CHF 1'300 pro Monat (Den ersten Platz kann niemand versprechen.)
 
 ### Automationen
@@ -142,7 +142,7 @@ CHF 1'550 pro Halbtag
 Training im Betrieb: Ihr Team übt KI an Ihren eigenen Aufgaben. Pro Gruppe, nicht pro Person.
 Mehr zu KI-Kompetenz →
 Sichtbarkeit
-CHF 850
+CHF 1'300
 Google-Check: Sie erhalten eine klare Liste der wichtigsten Verbesserungen für Ihre Website.
 Mehr zu Sichtbarkeit →
 Automationen
@@ -274,11 +274,11 @@ CHF 380 pro Lernminute Umfang klären wir im Erstgespräch.
 Lernvideos
 Was es ist. Ein kurzes Video, das einen Ablauf oder ein Thema aus Ihrem Betrieb erklärt.
 Wann es passt. Wenn dieselbe Frage immer wieder kommt oder ein Ablauf sich besser zeigen als beschreiben lässt.
-ab CHF 3'850 Für ein Video von bis zu etwa drei Minuten.
+ab CHF 4'700 Für ein Video von bis zu etwa drei Minuten.
 Coaching für Führungskräfte
 Was es ist. Einzelgespräche für Personen, die entscheiden: Wie führe ich ein Team, das mit KI arbeitet?
 Wann es passt. Wenn Sie vorangehen wollen, ohne alles selbst zu können, oder wenn im Team Unsicherheit herrscht.
-CHF 190 pro Stunde
+CHF 210 pro Stunde
 Begleitung der Mitarbeitenden vor Ort
 Was es ist. Wir sitzen bei Ihnen im Betrieb und helfen Ihren Leuten direkt am Arbeitsplatz.
 Wann es passt. Wenn das Training vorbei ist und im Alltag die ersten echten Fragen auftauchen.
@@ -439,7 +439,7 @@ Was kostet das?
 Der automatische Check oben ist kostenlos. Wenn wir selbst hinschauen und Ihre Seiten verbessern, gelten feste Preise. Ein Platz auf Platz 1 kann niemand versprechen, wir sagen Ihnen aber genau, was wir tun.
 Google-Check (SEO-Audit)
 Wir prüfen Ihre Website auf das, was bei Google zählt, und geben Ihnen eine klare Liste der wichtigsten Verbesserungen.
-CHF 850
+CHF 1'300
 KI-Sichtbarkeits-Check
 Wir testen, ob und wie ChatGPT und andere KI-Assistenten Ihre Firma nennen, und zeigen, was Sie ändern können.
 CHF 1'300
@@ -448,13 +448,13 @@ Wir überarbeiten eine Seite Ihrer Website so, dass Kundschaft und Suchmaschinen
 CHF 310
 SEO-Workshop für Ihr Team
 Ihre Mitarbeitenden lernen, wie sie Texte und Seiten schreiben, die gefunden werden.
-CHF 640
+CHF 810
 Laufende Betreuung: lokal gefunden werden
 Wir pflegen Ihren Karteneintrag und Ihre Bewertungen und passen Ihre Seite laufend an. Jeden Monat gibt es einen kurzen Bericht.
 CHF 400 pro Monat
 Laufende Betreuung: Google-Sichtbarkeit
 Wir verbessern Ihre Seiten Monat für Monat, schreiben und überarbeiten Inhalte und berichten, was sich getan hat.
-CHF 850 pro Monat
+CHF 1'300 pro Monat
 Laufende Betreuung: KI-Sichtbarkeit
 Wir prüfen regelmässig, wie KI-Assistenten Ihre Firma nennen, und verbessern Inhalte und Angaben, damit es stimmt.
 CHF 1'300 pro Monat
@@ -796,7 +796,7 @@ KI-Kompetenz
 Was bietet KI-Kompetenz? +
 Trainings, Workshops und Coachings bei Ihnen im Betrieb, dazu E-Learning, Lernvideos und kurze tägliche Lerneinheiten: Ihr Team lernt, KI sicher und nützlich einzusetzen, zugeschnitten auf Ihre Abläufe. Zu KI-Kompetenz →
 Welche Lernformate gibt es, und was kosten sie? +
-Training oder Workshop im Betrieb: CHF 1'550 pro Halbtag oder CHF 2'450 pro Tag , je pro Gruppe und nicht pro Person. Coaching für Führungskräfte: CHF 190 pro Stunde . E-Learning nach Mass: CHF 380 pro Lernminute (Abrechnung je fertiger Lernminute). Lernvideo: ab CHF 3'850 für ein Video von bis zu etwa drei Minuten. Tägliche Kleinst-Lerneinheiten: CHF 80 pro Person für ein Programm von vier Wochen. Change-Begleitung: CHF 1'700 pro Tag . Begleitung der Mitarbeitenden vor Ort: CHF 1'300 pro Tag . Ihre Auswahl stellen Sie im Offerten-Tool zusammen.
+Training oder Workshop im Betrieb: CHF 1'550 pro Halbtag oder CHF 2'450 pro Tag , je pro Gruppe und nicht pro Person. Coaching für Führungskräfte: CHF 210 pro Stunde . E-Learning nach Mass: CHF 380 pro Lernminute (Abrechnung je fertiger Lernminute). Lernvideo: ab CHF 4'700 für ein Video von bis zu etwa drei Minuten. Tägliche Kleinst-Lerneinheiten: CHF 80 pro Person für ein Programm von vier Wochen. Change-Begleitung: CHF 1'700 pro Tag . Begleitung der Mitarbeitenden vor Ort: CHF 1'300 pro Tag . Ihre Auswahl stellen Sie im Offerten-Tool zusammen.
 Braucht mein Team Vorkenntnisse? +
 Nein. Wir setzen bei null an: ein Computer, die eigenen Unterlagen, etwas Neugier. Alles andere erklären wir unterwegs, ohne Fachchinesisch.
 Wie lange dauert eine Schulung? +
@@ -826,7 +826,7 @@ Sichtbarkeit
 Was bedeutet Sichtbarkeit? +
 Sichtbarkeit im Netz: SEO für Suchmaschinen und GEO für KI-Antworten, damit Ihr Angebot gefunden und verstanden wird. Zu Sichtbarkeit →
 Was kostet Sichtbarkeit? +
-Der automatische Check auf der Seite ist kostenlos. Wenn wir selbst hinschauen: Google-Check (SEO-Audit) CHF 850 , KI-Sichtbarkeits-Check CHF 1'300 , eine Seite überarbeiten CHF 310 je Seite, SEO-Workshop für Ihr Team CHF 640 . Die laufende Betreuung kostet CHF 400 pro Monat für lokales Gefundenwerden, CHF 850 pro Monat für die Google-Sichtbarkeit und CHF 1'300 pro Monat für die KI-Sichtbarkeit. Eine Offerte stellen Sie im Offerten-Tool zusammen.
+Der automatische Check auf der Seite ist kostenlos. Wenn wir selbst hinschauen: Google-Check (SEO-Audit) CHF 1'300 , KI-Sichtbarkeits-Check CHF 1'300 , eine Seite überarbeiten CHF 310 je Seite, SEO-Workshop für Ihr Team CHF 810 . Die laufende Betreuung kostet CHF 400 pro Monat für lokales Gefundenwerden, CHF 1'300 pro Monat für die Google-Sichtbarkeit und CHF 1'300 pro Monat für die KI-Sichtbarkeit. Eine Offerte stellen Sie im Offerten-Tool zusammen.
 Ist GEO einfach ein neues Wort für SEO? +
 Nein. SEO hilft vor allem bei Suchmaschinenresultaten. GEO ergänzt das: Inhalte werden so erklärt und strukturiert, dass KI-Systeme sie als klare Quelle verstehen können.
 Muss ich dafür Technik verstehen? +

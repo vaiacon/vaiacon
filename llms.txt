@@ -38,7 +38,7 @@ kostenlose Check der eigenen Website. Rückruf innert eines Arbeitstages.
 
 ## Preise
 
-Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer. Die Preise gelten 30 Tage. Stand: 2026-10-04.
+Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer. Die Preise gelten 30 Tage. Stand: 2026-10-05.
 Quelle: https://vaiacon.ch/daten/preise.json. Eine Richtofferte stellen Sie im
 Offerten-Tool zusammen: https://vaiacon.ch/offerte
 
@@ -46,21 +46,21 @@ Offerten-Tool zusammen: https://vaiacon.ch/offerte
 
 - Training oder Workshop, Halbtag: CHF 1'550 pro Halbtag (Pro Gruppe, nicht pro Person.)
 - Training oder Workshop, ganzer Tag: CHF 2'450 pro Tag (Pro Gruppe, nicht pro Person.)
-- Coaching für Führungskräfte: CHF 190 pro Stunde
+- Coaching für Führungskräfte: CHF 210 pro Stunde
 - E-Learning nach Mass: CHF 380 pro Lernminute (Umfang und Gestaltung klären wir im Erstgespräch.)
-- Lernvideo: ab CHF 3'850 (Preis für ein Video von bis zu etwa drei Minuten.)
+- Lernvideo: ab CHF 4'700 (Preis für ein Video von bis zu etwa drei Minuten.)
 - Tägliche Kleinst-Lerneinheiten: CHF 80 pro Person (Für ein Programm von vier Wochen. Die Inhalte werden auf Ihren Betrieb zugeschnitten.)
 - Change-Begleitung: CHF 1'700 pro Tag
 - Begleitung der Mitarbeitenden vor Ort: CHF 1'300 pro Tag
 
 ### Sichtbarkeit
 
-- Google-Check (SEO-Audit): CHF 850
+- Google-Check (SEO-Audit): CHF 1'300
 - KI-Sichtbarkeits-Check: CHF 1'300
 - Seite überarbeiten: CHF 310 (Preis je Seite.)
-- SEO-Workshop für Ihr Team: CHF 640
+- SEO-Workshop für Ihr Team: CHF 810
 - Laufende Betreuung: lokal gefunden werden: CHF 400 pro Monat (Den ersten Platz kann niemand versprechen.)
-- Laufende Betreuung: Google-Sichtbarkeit: CHF 850 pro Monat (Den ersten Platz kann niemand versprechen.)
+- Laufende Betreuung: Google-Sichtbarkeit: CHF 1'300 pro Monat (Den ersten Platz kann niemand versprechen.)
 - Laufende Betreuung: KI-Sichtbarkeit: CHF 1'300 pro Monat (Den ersten Platz kann niemand versprechen.)
 
 ### Automationen
