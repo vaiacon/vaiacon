@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 05.10.2026 · Eintrag 923d88c Merge pull request #5 from vaiacon/kundenstimme-zuriglow
+> Stand: 05.10.2026 · Eintrag 54e6f91 Merge pull request #7 from vaiacon/startseite-preistitel
 
 ## Wie du antwortest
 
@@ -30,7 +30,7 @@ bleiben nach revDSG auf Schweizer Infrastruktur.
 
 ## Preisübersicht (aus dem Katalog daten/preise.json)
 
-Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer. Die Preise gelten 30 Tage. Eine Richtofferte stellt man im Offerten-Tool (vaiacon.ch/offerte) zusammen; verbindlich wird sie erst nach Bestätigung durch vaiacon.
+Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer. Die Preise sind Richtwerte und gelten 30 Tage. Eine Richtofferte stellt man im Offerten-Tool (vaiacon.ch/offerte) zusammen; verbindlich wird sie erst nach Bestätigung durch vaiacon.
 
 ### KI-Kompetenz
 
@@ -465,7 +465,7 @@ Kontrolle.
 Regelmässige Prüfung, was sichtbar wird, welche Fragen auftauchen und welche Inhalte nachziehen sollten.
 WAS ES KOSTET
 Was kostet das?
-Der automatische Check oben ist kostenlos. Wenn wir selbst hinschauen und Ihre Seiten verbessern, gelten feste Preise. Ein Platz auf Platz 1 kann niemand versprechen, wir sagen Ihnen aber genau, was wir tun.
+Der automatische Check oben ist kostenlos. Wenn wir selbst hinschauen und Ihre Seiten verbessern, nennen wir die Preise offen als Richtwerte; den genauen Betrag nennt die Offerte. Ein Platz auf Platz 1 kann niemand versprechen, wir sagen Ihnen aber genau, was wir tun.
 Google-Check (SEO-Audit)
 Wir prüfen Ihre Website auf das, was bei Google zählt, und geben Ihnen eine klare Liste der wichtigsten Verbesserungen.
 CHF 1'300

@@ -50,7 +50,7 @@ def chf(zahl: float) -> str:
 
 
 def preisliste() -> list[str]:
-    z = [f"{KATALOG['mwst_hinweis']} Die Preise gelten {KATALOG['gueltigkeit_tage']} Tage. "
+    z = [f"{KATALOG['mwst_hinweis']} Die Preise sind Richtwerte und gelten {KATALOG['gueltigkeit_tage']} Tage. "
          "Eine Richtofferte stellt man im Offerten-Tool (vaiacon.ch/offerte) zusammen; "
          "verbindlich wird sie erst nach Bestätigung durch vaiacon.", ""]
     for b in KATALOG["bereiche"]:
