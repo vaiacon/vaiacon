@@ -23,7 +23,7 @@
 <link rel="stylesheet" href="../ui_kits/website/mockup-entwurf.css?v=20261005-vorschlag">
 <link rel="stylesheet" href="../ui_kits/website/visibility.css?v=20261005-vorschlag">
 <link rel="stylesheet" href="../ui_kits/website/chat.css?v=20261004-vaia-fuss">
-<link rel="stylesheet" href="../ui_kits/website/news.css?v=20261005-vorschlag">
+<link rel="stylesheet" href="../ui_kits/website/news.css?v=20261005-kopf-schmal3">
 <link rel="icon" href="../favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="../favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
@@ -90,22 +90,16 @@
   <!-- ===== ENDE BAUSTEIN KOPF ===== -->
 
   <main id="inhalt">
-    <section id="top" class="sv-hero nw-hero" aria-label="Kopf der Woche">
-      <div class="sv-hero__inner">
-        <div class="sv-hero__copy">
-          <p class="sv-kicker sv-kicker--on-terra">KI-NEWS FÜR KMU · NOCH KEIN BEITRAG IN DIESER WOCHE</p>
-          <h1 class="nw-hero__titel"><span class="nw-hero__kw">KW 41</span> <span class="nw-hero__datum">5. – 11. Oktober 2026</span></h1>
-          <p class="sv-hero__lead nw-hero__fazit">Die Woche ist noch jung: Bisher gab es nichts, das für Schweizer KMU wichtig genug war. Darunter lesen Sie die Beiträge der KW 40.</p>
-          <div class="sv-actions">
-            <a class="sv-button sv-button--light" href="#beitraege">Zu den Beiträgen →</a>
-            <a class="sv-button sv-button--glass" href="archiv.html">Archiv →</a>
-          </div>
+    <section id="top" class="nw-kopf" aria-label="Kopf der Woche">
+      <div class="nw-kopf__innen">
+        <div class="nw-kopf__text">
+          <p class="nw-kopf__kicker">KI-NEWS FÜR KMU · NOCH KEIN BEITRAG IN DIESER WOCHE</p>
+          <h1 class="nw-kopf__titel"><span class="nw-kopf__kw">KW 41</span> <span class="nw-kopf__datum">5. – 11. Oktober 2026</span></h1>
+          <p class="nw-kopf__fazit">Die Woche ist noch jung: Bisher gab es nichts, das für Schweizer KMU wichtig genug war. Darunter lesen Sie die Beiträge der KW 40.</p>
         </div>
-        <div class="sv-hero__visual" aria-hidden="true">
-          <figure class="sv-hero__robot sv-hero__robot--frei">
-            <picture><source srcset="../assets/vaiacon-buerobot-news-zeitung.webp" type="image/webp"><img src="../assets/vaiacon-buerobot-news-zeitung.png" alt="Der vaiacon-Roboter liest eine Zeitung" width="640" height="769" fetchpriority="high"></picture>
-          </figure>
-        </div>
+        <figure class="nw-kopf__bild" aria-hidden="true">
+          <picture><source srcset="../assets/vaiacon-buerobot-news-zeitung.webp" type="image/webp"><img src="../assets/vaiacon-buerobot-news-zeitung.png" alt="Der vaiacon-Roboter liest eine Zeitung" width="640" height="769" fetchpriority="high"></picture>
+        </figure>
       </div>
     </section>
 
@@ -118,13 +112,7 @@
 
     <section id="beitraege" class="sv-section nw-liste">
       <div class="sv-wrap">
-        <div class="sv-center nw-liste__kopf">
-          <p class="sv-kicker">TÄGLICH EINGEORDNET</p>
-          <h2 class="sv-title">Was in der KI-Welt geschah, und was es für Sie heisst.</h2>
-          <p class="sv-lead">
-            Wir melden nicht nur, was passiert ist. Zu jedem Beitrag steht, was es für ein Schweizer KMU bedeutet, was vaiacon dazu anbieten kann und worauf Sie achten sollten.
-          </p>
-        </div>
+        <h2 class="nw-unsichtbar">Die Beiträge</h2>
         <p class="nw-zuletzt">Zuletzt erschienen: <a href="2026-kw40.html">KW 40, 28. September – 4. Oktober 2026</a></p>
         <div class="nw-filter" role="group" aria-label="Nach Rubrik filtern" hidden><button type="button" class="nw-filter__knopf" data-filter="alle" aria-pressed="true">Alle</button><button type="button" class="nw-filter__knopf" data-filter="modelle" aria-pressed="false">Modelle</button><button type="button" class="nw-filter__knopf" data-filter="werkzeuge" aria-pressed="false">Werkzeuge</button><button type="button" class="nw-filter__knopf" data-filter="sicherheit" aria-pressed="false">Sicherheit</button><button type="button" class="nw-filter__knopf" data-filter="markt" aria-pressed="false">Markt</button><button type="button" class="nw-filter__knopf" data-filter="praxis" aria-pressed="false">Praxis</button><p class="nw-filter__status" role="status" aria-live="polite"></p></div>
         <div class="nw-beitraege">

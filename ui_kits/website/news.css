@@ -36,6 +36,59 @@ html { scroll-padding-top: 88px; }
 }
 .nw-hero__fazit { margin-top: 0; max-width: 56ch; }
 
+/* ---------- Schmaler Wochenkopf (Wochenseiten) ----------
+   Nicht bildschirmhoch wie die übrigen Seiten: Die Beiträge sollen ohne Scrollen
+   sichtbar sein. Platz für die feste Kopfzeile: 82 / 74 / 66px. */
+.nw-kopf {
+  --kopfzeile: 82px;
+  background: var(--grad-terra-hero);
+  color: var(--text-on-terra);
+  padding-top: var(--kopfzeile);
+}
+.nw-kopf__innen {
+  width: min(100%, var(--content-max)); margin: 0 auto;
+  padding: var(--space-5) var(--section-pad-x) var(--space-5);
+  box-sizing: border-box;
+  display: flex; align-items: center; justify-content: space-between; gap: var(--space-6);
+}
+.nw-kopf__text { min-width: 0; }
+.nw-kopf__kicker {
+  margin: 0 0 6px;
+  font-size: var(--text-kicker); font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-kicker); text-transform: uppercase;
+  color: var(--peach-200);
+}
+.nw-kopf__titel {
+  margin: 0;
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0 0.4em;
+  color: var(--cream-50);
+}
+.nw-kopf__kw {
+  font-size: clamp(40px, 6vw, 64px);
+  line-height: 1; letter-spacing: -0.04em;
+  color: var(--peach-200);
+}
+.nw-kopf__datum { font-size: clamp(18px, 2.4vw, 26px); letter-spacing: -0.01em; }
+.nw-kopf__fazit {
+  margin: 10px 0 0; max-width: 72ch;
+  font-size: 15.5px; line-height: 1.55;
+  color: var(--text-on-terra-soft);
+}
+.nw-kopf__fazit-titel {
+  margin-right: 4px;
+  font-weight: var(--weight-bold); color: var(--peach-200);
+}
+.nw-kopf__bild { flex: 0 0 auto; width: 104px; margin: 0; }
+.nw-kopf__bild img { display: block; width: 100%; height: auto; }
+.nw-liste.sv-section { padding-top: var(--space-6); }
+.nw-liste .sv-wrap { padding-top: 0; }
+.nw-unsichtbar {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+@media (max-width: 1080px) { .nw-kopf { --kopfzeile: 74px; } }
+@media (max-width: 1024px) { .nw-kopf { --kopfzeile: 66px; } }
+
 /* ---------- Tagesstreifen ---------- */
 .nw-streifen {
   background: var(--bg-alt);
@@ -94,7 +147,7 @@ a.nw-tag--voll::after {
 /* ---------- Filter ---------- */
 .nw-filter {
   display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
-  margin: 0 0 var(--space-9);
+  margin: 0 0 var(--space-6);
 }
 .nw-filter[hidden] { display: none; }
 .nw-filter__knopf {
@@ -248,4 +301,20 @@ a.nw-tag--voll::after {
   .nw-tag, .nw-filter__knopf { transition: none; }
   a.nw-tag--voll:hover, a.nw-tag--voll:focus-visible { transform: none; }
   .nw-hero .sv-hero__robot img { animation: none; }
+}
+
+/* Schmaler Wochenkopf, Handy: am Ende, damit es die Grundregeln oben schlägt */
+@media (max-width: 599px) {
+  .nw-kopf__bild { display: none; }
+  .nw-kopf__fazit { font-size: 14.5px; }
+  .nw-zuletzt { margin: 0 0 var(--space-4); font-size: 14.5px; }
+  /* Filter in einer Zeile zum Wischen, damit der erste Beitrag früher kommt */
+  .nw-filter {
+    flex-wrap: nowrap; justify-content: flex-start;
+    overflow-x: auto; scrollbar-width: none;
+    margin-inline: -20px; padding: 2px 20px;   /* sv-wrap hat auf dem Handy 20px Rand */
+  }
+  .nw-filter::-webkit-scrollbar { display: none; }
+  .nw-filter__knopf { flex: 0 0 auto; padding: 8px 14px; }
+  .nw-filter__status { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 }

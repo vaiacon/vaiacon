@@ -443,13 +443,12 @@ def wochenseite(w: dict, wochen: list[dict], bilder: Bilder, ist_index: bool) ->
         spaeter = wochen[wochen.index(w) + 1:]
         vorwoche = next((v for v in spaeter if v["beitraege"]), None)
     if fazit:
-        fazit_html = f'''<p class="nw-hero__fazit-titel">Das Wochenfazit</p>
-          <p class="sv-hero__lead nw-hero__fazit">{fazit}</p>'''
+        fazit_html = f'<p class="nw-kopf__fazit"><span class="nw-kopf__fazit-titel">Das Wochenfazit</span> {fazit}</p>'
     elif vorwoche:
-        fazit_html = (f'<p class="sv-hero__lead nw-hero__fazit">Die Woche ist noch jung: Bisher gab es nichts, das für Schweizer KMU '
+        fazit_html = (f'<p class="nw-kopf__fazit">Die Woche ist noch jung: Bisher gab es nichts, das für Schweizer KMU '
                       f'wichtig genug war. Darunter lesen Sie die Beiträge der KW {vorwoche["kw"]}.</p>')
     else:
-        fazit_html = ('<p class="sv-hero__lead nw-hero__fazit">Bisher gab es in dieser Woche nichts, das für Schweizer KMU '
+        fazit_html = ('<p class="nw-kopf__fazit">Bisher gab es in dieser Woche nichts, das für Schweizer KMU '
                       'wichtig genug war.</p>')
     liste = vorwoche or w
     if vorwoche:
@@ -457,22 +456,17 @@ def wochenseite(w: dict, wochen: list[dict], bilder: Bilder, ist_index: bool) ->
                    f'{esc(zeitspanne(vorwoche["_von"], vorwoche["_bis"]))}</a></p>')
     else:
         zuletzt = ""
-    inhalt = f"""    <section id="top" class="sv-hero nw-hero" aria-label="Kopf der Woche">
-      <div class="sv-hero__inner">
-        <div class="sv-hero__copy">
-          <p class="sv-kicker sv-kicker--on-terra">KI-NEWS FÜR KMU · {esc(anzahl).upper()}</p>
-          <h1 class="nw-hero__titel"><span class="nw-hero__kw">KW {w['kw']}</span> <span class="nw-hero__datum">{esc(zeitspanne(w['_von'], w['_bis']))}</span></h1>
+    # Schmaler Kopf (05.10.2026, Philip): Wer auf KI-News klickt, sieht die Beiträge ohne Scrollen.
+    inhalt = f"""    <section id="top" class="nw-kopf" aria-label="Kopf der Woche">
+      <div class="nw-kopf__innen">
+        <div class="nw-kopf__text">
+          <p class="nw-kopf__kicker">KI-NEWS FÜR KMU · {esc(anzahl).upper()}</p>
+          <h1 class="nw-kopf__titel"><span class="nw-kopf__kw">KW {w['kw']}</span> <span class="nw-kopf__datum">{esc(zeitspanne(w['_von'], w['_bis']))}</span></h1>
           {fazit_html}
-          <div class="sv-actions">
-            <a class="sv-button sv-button--light" href="#beitraege">Zu den Beiträgen →</a>
-            <a class="sv-button sv-button--glass" href="archiv.html">Archiv →</a>
-          </div>
         </div>
-        <div class="sv-hero__visual" aria-hidden="true">
-          <figure class="sv-hero__robot sv-hero__robot--frei">
-            {hero_bild}
-          </figure>
-        </div>
+        <figure class="nw-kopf__bild" aria-hidden="true">
+          {hero_bild}
+        </figure>
       </div>
     </section>
 
@@ -485,13 +479,7 @@ def wochenseite(w: dict, wochen: list[dict], bilder: Bilder, ist_index: bool) ->
 
     <section id="beitraege" class="sv-section nw-liste">
       <div class="sv-wrap">
-        <div class="sv-center nw-liste__kopf">
-          <p class="sv-kicker">TÄGLICH EINGEORDNET</p>
-          <h2 class="sv-title">Was in der KI-Welt geschah, und was es für Sie heisst.</h2>
-          <p class="sv-lead">
-            Wir melden nicht nur, was passiert ist. Zu jedem Beitrag steht, was es für ein Schweizer KMU bedeutet, was vaiacon dazu anbieten kann und worauf Sie achten sollten.
-          </p>
-        </div>
+        <h2 class="nw-unsichtbar">Die Beiträge</h2>
         {zuletzt}
         {filter_html(liste)}
         <div class="nw-beitraege">
