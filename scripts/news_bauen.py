@@ -226,6 +226,10 @@ def abzeichen(rubrik: str) -> str:
     return f'<span class="nw-abzeichen nw-abzeichen--{esc(rubrik)}">{esc(RUBRIKEN[rubrik])}</span>'
 
 
+KI_HINWEIS = ('<p class="nw-ki-hinweis">Von KI zusammengestellt. Fehler entdeckt? '
+              '<a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a></p>')
+
+
 def quellen_html(quellen: list[dict]) -> str:
     if not quellen:
         return ""
@@ -279,6 +283,7 @@ def karte_html(b: dict, bilder: Bilder, gross: bool) -> str:
         '    </section>',
         '  </div>',
         '  ' + quellen_html(b["quellen"]),
+        '  ' + KI_HINWEIS,
         '</article>',
     ]
     return "\n".join(t for t in teile if t.strip())
