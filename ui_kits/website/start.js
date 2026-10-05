@@ -13,13 +13,17 @@
   var panels = Array.prototype.slice.call(stage.querySelectorAll('.st-panel'));
   var pauseKnopf = document.getElementById('st-pause');
   var hinweis = document.getElementById('st-lauf-hinweis');
+  var steuer = document.getElementById('st-steuer');
+  var zurueck = document.getElementById('st-zurueck');
+  var vor = document.getElementById('st-vor');
   if (tabs.length !== 3 || panels.length !== 3) return;
 
   var DAUER = 7000;
   var NAMEN = ['ki-kompetenz', 'sichtbarkeit', 'automationen'];
   var HINWEISE = ['KI-Kompetenz', 'Sichtbarkeit', 'Automationen'];
+  var POSITIONEN = ['mitte', 'rechts', 'links'];
 
-  var mqSpalten = window.matchMedia('(min-width: 1180px)');
+  var mqSpalten = window.matchMedia('(min-width: 1024px)');   /* Karussell; darunter wischbar */
   var mqRuhe = window.matchMedia('(prefers-reduced-motion: reduce)');
   var mqHover = window.matchMedia('(hover: hover)');
 
@@ -64,15 +68,14 @@
     for (var k = 0; k < 3; k++) {
       var an = k === i;
       if (an) panels[k].setAttribute('data-aktiv', ''); else panels[k].removeAttribute('data-aktiv');
+      panels[k].setAttribute('data-pos', POSITIONEN[(k - i + 3) % 3]);
       tabs[k].setAttribute('aria-selected', an ? 'true' : 'false');
       tabs[k].setAttribute('tabindex', an ? '0' : '-1');
       var voll = panels[k].querySelector('.st-voll');
-      var mini = panels[k].querySelector('.st-mini');
       if (voll) {
         /* Im Kartenmodus bleibt der Text der Nachbarn sichtbar, aber nicht bedienbar. */
         if (an) voll.removeAttribute('inert'); else voll.setAttribute('inert', '');
       }
-      if (mini) mini.setAttribute('aria-hidden', 'true');
     }
     if (gewechselt || optionen.neuStart) { verstrichen = 0; letzter = 0; }
     balken(0);
@@ -94,7 +97,9 @@
 
   var scrollTimer = 0;
   stage.addEventListener('scroll', function () {
-    if (spalten() || Date.now() < scrollSperre) return;
+    if (spalten()) return;
+    /* Eigenes Scrollen (Pfeil, Reiter) läuft länger als gedacht: Sperre hält, bis es ruht. */
+    if (Date.now() < scrollSperre) { scrollSperre = Date.now() + 150; return; }
     clearTimeout(scrollTimer);
     scrollTimer = setTimeout(function () {
       var mitte = stage.scrollLeft + parseFloat(getComputedStyle(stage).scrollPaddingLeft || 0);
@@ -143,8 +148,8 @@
     });
   });
 
-  /* Zeigt der Link der schmalen Spalte auf den Bereich, soll ein Klick eher öffnen als wechseln:
-     die schmale Spalte hat keinen Link, nur das «+», darum reicht der Panel-Klick. */
+  if (zurueck) zurueck.addEventListener('click', function () { waehle((aktiv + 2) % 3); });
+  if (vor) vor.addEventListener('click', function () { waehle((aktiv + 1) % 3); });
 
   /* ───── Pause ───── */
 
@@ -188,20 +193,6 @@
     hoverTimer = setTimeout(function () { halte('hover', false); }, 250);
   });
 
-  /* Hover über einer schmalen Spalte: nach kurzer Absicht ins Licht holen. */
-  var absichtTimer = 0;
-  panels.forEach(function (panel, i) {
-    panel.addEventListener('pointerenter', function (e) {
-      if (e.pointerType === 'touch' || !spalten() || i === aktiv) return;
-      clearTimeout(absichtTimer);
-      absichtTimer = setTimeout(function () {
-        if (i === aktiv) return;
-        setze(i, { neuStart: true });
-      }, 170);
-    });
-    panel.addEventListener('pointerleave', function () { clearTimeout(absichtTimer); });
-  });
-
   stage.addEventListener('pointerdown', function (e) {
     if (e.pointerType === 'touch') halte('beruehrung', true);
   });
@@ -227,11 +218,11 @@
       if (e.target.value) { nutzerPause = true; knopfZeigen(); }
     }
   });
-  if (reiter) {
-    reiter.addEventListener('focusin', function () { halte('fokus', true); });
-    reiter.addEventListener('focusout', function () {
+  if (steuer) {
+    steuer.addEventListener('focusin', function () { halte('fokus', true); });
+    steuer.addEventListener('focusout', function () {
       setTimeout(function () {
-        if (!stage.contains(document.activeElement) && !reiter.contains(document.activeElement)) halte('fokus', false);
+        if (!stage.contains(document.activeElement) && !steuer.contains(document.activeElement)) halte('fokus', false);
       }, 0);
     });
   }
@@ -307,7 +298,7 @@
 
   /* ───── Start ───── */
 
-  if (reiter) reiter.hidden = false;
+  if (steuer) steuer.hidden = false;
   /* Wer über die Adresse kommt, hat den Bereich gewählt: dort bleiben. */
   if (stage.getAttribute('data-quelle') === 'adresse') nutzerPause = true;
   knopfZeigen();

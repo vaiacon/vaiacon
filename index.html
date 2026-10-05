@@ -22,8 +22,8 @@
 <link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261004-umbau">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
 <link rel="stylesheet" href="ui_kits/website/kundenstimme.css?v=20261005-hell">
-<link rel="stylesheet" href="ui_kits/website/start.css?v=20261004-start">
-<link rel="stylesheet" href="ui_kits/website/start-ruhig.css?v=20261005-ruhig3">
+<link rel="stylesheet" href="ui_kits/website/start.css?v=20261005-ohne-preise">
+<link rel="stylesheet" href="ui_kits/website/start-ruhig.css?v=20261005-ohne-preise">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -118,39 +118,11 @@
   <main>
     <section id="top" class="st-buehne" aria-labelledby="st-titel">
       <div class="st-buehne__inner">
-        <header class="st-kopf">
-          <h1 id="st-titel">KI, die in Ihrem Betrieb ankommt.</h1>
-          <p class="st-kopf__lead">Für Betriebe mit 5 bis 30 Mitarbeitenden. Verständlich, persönlich, ohne Verkaufsdruck.</p>
-        </header>
+        <h1 id="st-titel" class="st-unsichtbar">KI, die in Ihrem Betrieb ankommt: KI-Kompetenz, Sichtbarkeit und Automationen für Betriebe mit 5 bis 30 Mitarbeitenden</h1>
 
-        <div class="st-reiter" role="tablist" aria-label="Unsere drei Bereiche" hidden>
-          <button class="st-reiter__tab" role="tab" type="button" id="st-reiter-ki" aria-controls="st-voll-ki" aria-selected="true">
-            <span class="st-reiter__name">KI-Kompetenz</span>
-            <span class="st-reiter__spur" aria-hidden="true"><span></span></span>
-          </button>
-          <button class="st-reiter__tab" role="tab" type="button" id="st-reiter-sicht" aria-controls="st-voll-sicht" aria-selected="false" tabindex="-1">
-            <span class="st-reiter__name">Sichtbarkeit</span>
-            <span class="st-reiter__spur" aria-hidden="true"><span></span></span>
-          </button>
-          <button class="st-reiter__tab" role="tab" type="button" id="st-reiter-auto" aria-controls="st-voll-auto" aria-selected="false" tabindex="-1">
-            <span class="st-reiter__name">Automationen</span>
-            <span class="st-reiter__spur" aria-hidden="true"><span></span></span>
-          </button>
-        </div>
-
-        <div class="st-stage" id="st-stage" data-aktiv="0">
-          <button class="st-pause" type="button" id="st-pause" hidden aria-pressed="false">
-            <svg class="st-pause__pause" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="currentColor"><rect x="2.5" y="1.5" width="3" height="11" rx="1"/><rect x="8.5" y="1.5" width="3" height="11" rx="1"/></svg>
-            <svg class="st-pause__weiter" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="currentColor"><path d="M3.5 1.8v10.4a.8.8 0 0 0 1.2.7l8-5.2a.8.8 0 0 0 0-1.4l-8-5.2a.8.8 0 0 0-1.2.7Z"/></svg>
-            <span class="st-pause__text">Anhalten</span>
-          </button>
-
-          <article class="st-panel" id="st-ki" data-bereich="ki-kompetenz" data-aktiv>
+        <div class="st-stage" id="st-stage" data-aktiv="0" aria-roledescription="Karussell" aria-label="Unsere drei Bereiche">
+          <article class="st-panel" id="st-ki" data-bereich="ki-kompetenz" data-pos="mitte" data-aktiv>
             <picture class="st-bild"><source srcset="assets/vaiacon-buerobot-schulung-zeigestab.webp" type="image/webp"><img src="assets/vaiacon-buerobot-schulung-zeigestab.png" alt="Der vaiacon-Roboter erklärt etwas mit dem Zeigestab" width="512" height="616" fetchpriority="high"></picture>
-            <div class="st-mini" aria-hidden="true">
-              <span class="st-mini__name">KI-Kompetenz</span>
-              <span class="st-mini__kurz">Das Team lernt KI, die zu Ihnen passt.</span>
-            </div>
             <div class="st-voll" id="st-voll-ki" role="tabpanel" aria-labelledby="st-reiter-ki">
               <div class="st-voll__kopf">
                 <p class="st-voll__nr">01</p>
@@ -158,18 +130,14 @@
                 <p class="st-voll__lead">Ihr Team lernt KI an den eigenen Aufgaben: Trainings, Coaching und kurze tägliche Lerneinheiten.</p>
               </div>
               <div class="st-haken">
-                <a class="sv-button sv-button--cta" href="learning#standortbestimmung">KI-Standort bestimmen →</a>
+                <a class="sv-button sv-button--light" href="learning#standortbestimmung">KI-Standort bestimmen →</a>
                 <a class="st-mehr" href="learning">Mehr erfahren <span aria-hidden="true">→</span></a>
               </div>
             </div>
           </article>
 
-          <article class="st-panel" id="st-sicht" data-bereich="sichtbarkeit">
+          <article class="st-panel" id="st-sicht" data-bereich="sichtbarkeit" data-pos="rechts">
             <picture class="st-bild"><source srcset="assets/vaiacon-buerobot-sichtbarkeit-lupe.webp" type="image/webp"><img src="assets/vaiacon-buerobot-sichtbarkeit-lupe.png" alt="Der vaiacon-Roboter hält eine Lupe hoch" width="512" height="616"></picture>
-            <div class="st-mini" aria-hidden="true">
-              <span class="st-mini__name">Sichtbarkeit</span>
-              <span class="st-mini__kurz">Bei Google und in KI-Antworten gefunden.</span>
-            </div>
             <div class="st-voll" id="st-voll-sicht" role="tabpanel" aria-labelledby="st-reiter-sicht">
               <div class="st-voll__kopf">
                 <p class="st-voll__nr">02</p>
@@ -182,7 +150,7 @@
                     <label class="sv-start__label" for="sv-start-domain">Ihre Domain</label>
                     <input type="text" id="sv-start-domain" name="domain" placeholder="ihre-firma.ch" autocomplete="off" autocapitalize="none" spellcheck="false" inputmode="url" required>
                   </div>
-                  <button class="sv-button sv-button--cta" type="submit">Gratis prüfen →</button>
+                  <button class="sv-button sv-button--light" type="submit">Gratis prüfen →</button>
                   <p class="sv-start__fehler" id="sv-start-fehler" role="alert" hidden></p>
                 </form>
                 <a class="st-mehr" href="visibility">Mehr erfahren <span aria-hidden="true">→</span></a>
@@ -190,12 +158,8 @@
             </div>
           </article>
 
-          <article class="st-panel" id="st-auto" data-bereich="automationen">
+          <article class="st-panel" id="st-auto" data-bereich="automationen" data-pos="links">
             <picture class="st-bild"><source srcset="assets/vaiacon-buerobot-automatisierung-zahnrad.webp" type="image/webp"><img src="assets/vaiacon-buerobot-automatisierung-zahnrad.png" alt="Der vaiacon-Roboter mit einem Zahnrad" width="512" height="616"></picture>
-            <div class="st-mini" aria-hidden="true">
-              <span class="st-mini__name">Automationen</span>
-              <span class="st-mini__kurz">Wiederkehrende Arbeit abgeben.</span>
-            </div>
             <div class="st-voll" id="st-voll-auto" role="tabpanel" aria-labelledby="st-reiter-auto">
               <div class="st-voll__kopf">
                 <p class="st-voll__nr">03</p>
@@ -203,11 +167,39 @@
                 <p class="st-voll__lead">Belege, Offerten und Posteingang laufen von selbst, damit Ihr Team Zeit für Wichtiges hat.</p>
               </div>
               <div class="st-haken">
-                <a class="sv-button sv-button--cta" href="offerte#automationen">Offerte zusammenstellen →</a>
+                <a class="sv-button sv-button--light" href="offerte#automationen">Offerte zusammenstellen →</a>
                 <a class="st-mehr" href="bot">Mehr erfahren <span aria-hidden="true">→</span></a>
               </div>
             </div>
           </article>
+        </div>
+
+        <div class="st-steuer" id="st-steuer" hidden>
+          <button class="st-pfeil" type="button" id="st-zurueck" aria-label="Vorheriger Bereich">
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3 5 8l5 5"/></svg>
+          </button>
+          <div class="st-reiter" role="tablist" aria-label="Unsere drei Bereiche">
+            <button class="st-reiter__tab" role="tab" type="button" id="st-reiter-ki" aria-controls="st-voll-ki" aria-selected="true">
+              <span class="st-reiter__name">KI-Kompetenz</span>
+              <span class="st-reiter__spur" aria-hidden="true"><span></span></span>
+            </button>
+            <button class="st-reiter__tab" role="tab" type="button" id="st-reiter-sicht" aria-controls="st-voll-sicht" aria-selected="false" tabindex="-1">
+              <span class="st-reiter__name">Sichtbarkeit</span>
+              <span class="st-reiter__spur" aria-hidden="true"><span></span></span>
+            </button>
+            <button class="st-reiter__tab" role="tab" type="button" id="st-reiter-auto" aria-controls="st-voll-auto" aria-selected="false" tabindex="-1">
+              <span class="st-reiter__name">Automationen</span>
+              <span class="st-reiter__spur" aria-hidden="true"><span></span></span>
+            </button>
+          </div>
+          <button class="st-pfeil" type="button" id="st-vor" aria-label="Nächster Bereich">
+            <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 3 5 5-5 5"/></svg>
+          </button>
+          <button class="st-pause" type="button" id="st-pause" hidden aria-pressed="false">
+            <svg class="st-pause__pause" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="currentColor"><rect x="2.5" y="1.5" width="3" height="11" rx="1"/><rect x="8.5" y="1.5" width="3" height="11" rx="1"/></svg>
+            <svg class="st-pause__weiter" width="14" height="14" viewBox="0 0 14 14" aria-hidden="true" fill="currentColor"><path d="M3.5 1.8v10.4a.8.8 0 0 0 1.2.7l8-5.2a.8.8 0 0 0 0-1.4l-8-5.2a.8.8 0 0 0-1.2.7Z"/></svg>
+            <span class="st-pause__text">Anhalten</span>
+          </button>
         </div>
         <p class="st-lauf-hinweis" id="st-lauf-hinweis" aria-live="polite"></p>
       </div>
@@ -239,7 +231,11 @@
       stage.setAttribute('data-aktiv', String(i));
       stage.setAttribute('data-quelle', quelle);
       var p = stage.querySelectorAll('.st-panel');
-      for (var k = 0; k < p.length; k++) { if (k === i) p[k].setAttribute('data-aktiv', ''); else p[k].removeAttribute('data-aktiv'); }
+      var pos = ['mitte', 'rechts', 'links'];
+      for (var k = 0; k < p.length; k++) {
+        if (k === i) p[k].setAttribute('data-aktiv', ''); else p[k].removeAttribute('data-aktiv');
+        p[k].setAttribute('data-pos', pos[(k - i + 3) % 3]);
+      }
     })();
     </script>
 
@@ -269,41 +265,6 @@
           </a></li>
         </ul>
         <p class="st-weg__fuss">Lieber reden? <a href="kontakt#formular">Erstgespräch vereinbaren →</a></p>
-      </div>
-    </section>
-
-    <section id="preise" class="sv-section st-preise">
-      <div class="sv-wrap">
-        <div class="sv-center">
-          <p class="sv-kicker">PREISE</p>
-          <h2 class="sv-title">Sie sehen vorher, womit Sie rechnen können.</h2>
-          <p class="sv-lead">Je ein Einstieg pro Bereich. Die Preise sind Richtwerte. Stellen Sie sich Ihre Offerte selbst zusammen, dann haben Sie eine gute Einschätzung, bevor wir miteinander reden.</p>
-        </div>
-        <ul class="st-preise__liste">
-          <li class="st-preis">
-            <h3>KI-Kompetenz</h3>
-            <p class="st-preis__betrag"><span data-preis="kk-training-halbtag">CHF 1'550 pro Halbtag</span></p>
-            <p class="st-preis__text">Training im Betrieb: Ihr Team übt KI an Ihren eigenen Aufgaben. Pro Gruppe, nicht pro Person.</p>
-            <a class="st-mehr st-mehr--dunkel" href="learning">Mehr zu KI-Kompetenz <span aria-hidden="true">→</span></a>
-          </li>
-          <li class="st-preis">
-            <h3>Sichtbarkeit</h3>
-            <p class="st-preis__betrag"><span data-preis="si-seo-audit">CHF 1'300</span></p>
-            <p class="st-preis__text">Google-Check: Sie erhalten eine klare Liste der wichtigsten Verbesserungen für Ihre Website.</p>
-            <a class="st-mehr st-mehr--dunkel" href="visibility">Mehr zu Sichtbarkeit <span aria-hidden="true">→</span></a>
-          </li>
-          <li class="st-preis">
-            <h3>Automationen</h3>
-            <p class="st-preis__betrag"><span data-preis="au-ablauf-klein">ab CHF 1'300 pro Ablauf</span></p>
-            <p class="st-preis__text">Ein kleiner, wiederkehrender Ablauf läuft künftig von selbst. Fixpreis nach der Erstanalyse.</p>
-            <a class="st-mehr st-mehr--dunkel" href="bot">Mehr zu Automationen <span aria-hidden="true">→</span></a>
-          </li>
-        </ul>
-        <div class="st-preise__fuss">
-          <a class="sv-button sv-button--cta" href="offerte">Offerte zusammenstellen →</a>
-          <p class="st-preise__hinweis">Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer.</p>
-          <p class="st-preise__begleitung">Danach bleiben wir auf Wunsch an Ihrer Seite, mit Betreuung, Anpassungen und Beratung, <span data-preis="be-betreuung-klein">ab CHF 130 pro Monat</span>, monatlich kündbar. <a href="service">Mehr zur Begleitung →</a></p>
-        </div>
       </div>
     </section>
 
@@ -409,7 +370,6 @@
 <script src="ui_kits/website/visibility.js?v=20261004-umbau"></script>
 <script src="ui_kits/website/chat.js?v=20261004-umbau"></script>
 <script src="ui_kits/website/check-start.js?v=20261004-check"></script>
-<script src="ui_kits/website/start.js?v=20261004-start" defer></script>
-<script src="ui_kits/website/preise.js?v=20261004-preise" defer></script>
+<script src="ui_kits/website/start.js?v=20261005-ohne-preise" defer></script>
 </body>
 </html>
