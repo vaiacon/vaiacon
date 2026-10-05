@@ -250,3 +250,8 @@
   color: rgba(28, 22, 19, 0.5);
   opacity: 1;
 }
+
+/* «Mehr zur Begleitung →» bricht nur als Ganzes um, nie vor dem Pfeil */
+.st-preise__begleitung a {
+  white-space: nowrap;
+}
