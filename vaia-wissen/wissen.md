@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 05.10.2026 · Eintrag ddb2ed9 Merge pull request #4 from vaiacon/umbau-drei-bereiche
+> Stand: 05.10.2026 · Eintrag 923d88c Merge pull request #5 from vaiacon/kundenstimme-zuriglow
 
 ## Wie du antwortest
 
@@ -164,8 +164,8 @@ Wir ordnen laufend ein, was in der KI für kleine und mittlere Betriebe wichtig 
 Zur aktuellen Woche →
 Alle Beiträge ansehen →
 PREISE
-Sie wissen vorher, was es kostet.
-Je ein Einstieg pro Bereich. Fixe Preise statt Stundenrätsel; den genauen Betrag stellen Sie sich selbst zusammen.
+Sie sehen vorher, womit Sie rechnen können.
+Je ein Einstieg pro Bereich. Die Preise sind Richtwerte. Stellen Sie sich Ihre Offerte selbst zusammen, dann haben Sie eine gute Einschätzung, bevor wir miteinander reden.
 KI-Kompetenz
 CHF 1'550 pro Halbtag
 Training im Betrieb: Ihr Team übt KI an Ihren eigenen Aufgaben. Pro Gruppe, nicht pro Person.
@@ -243,13 +243,13 @@ bis 10
 11 bis 20
 21 bis 30
 Ausgangslage
-Noch kaum KI
+Noch kaum KI
 Einzelne probieren
 Schon im Alltag
 Zeit pro Person und Woche
 rund 30 Minuten
 rund 1 Stunde
-2 Stunden und mehr
+2 Stunden und mehr
 Beispielreise für einen Betrieb mit 11 bis 20 Mitarbeitenden · Ausgangslage: einzelne probieren · rund eine Stunde pro Person und Woche. Dauer: etwa 8 Wochen, 8 Stationen.
 1
 Woche 0 · Standort
