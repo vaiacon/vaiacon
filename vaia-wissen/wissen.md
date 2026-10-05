@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 05.10.2026 · Eintrag 54e6f91 Merge pull request #7 from vaiacon/startseite-preistitel
+> Stand: 05.10.2026 · Eintrag 4710e75 Merge pull request #8 from vaiacon/preise-richtwerte
 
 ## Wie du antwortest
 
@@ -232,7 +232,7 @@ Lieber gleich Zahlen sehen: Offerte →
 
 KI-KOMPETENZ
 Eine Lernreise, die zu Ihrem Betrieb passt.
-Ein Kurstag, nach dem alles beim Alten bleibt? Das wollen wir nicht. Eine Lernreise (auf Englisch: Learning Journey) verbindet Training, kleine tägliche Einheiten, Begleitung am Arbeitsplatz und Coaching der Führung über Wochen. Jede ist massgeschneidert.
+Ein Kurstag, nach dem alles beim Alten bleibt? Das wollen wir nicht. Eine Lernreise verbindet Training, kleine tägliche Einheiten, Begleitung am Arbeitsplatz und Coaching der Führung über Wochen. Jede ist massgeschneidert.
 KI-Standort bestimmen →
 Offerte zusammenstellen →
 DIE LERNREISE
