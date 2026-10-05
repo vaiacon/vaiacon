@@ -211,6 +211,8 @@ a.nw-tag--voll::after {
 .nw-quellen__titel { margin: 0 0 4px; font-size: 12px; font-weight: var(--weight-bold); letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-body); }
 .nw-quellen ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 2px; }
 .nw-quellen a { display: inline-block; padding: 6px 0; color: var(--terra-600); font-weight: var(--weight-semibold); font-size: 15px; overflow-wrap: anywhere; }
+.nw-ki-hinweis { margin: var(--space-3) 0 0; font-size: 13px; color: var(--text-body); }
+.nw-ki-hinweis a { color: inherit; text-decoration: underline; }
 
 /* Wichtigster Beitrag: grösser */
 .nw-karte--gross { padding: var(--space-7) var(--space-5); box-shadow: var(--shadow-comic); }
