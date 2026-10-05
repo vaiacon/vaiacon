@@ -105,12 +105,12 @@ def absaetze(abschnitte: list[dict]) -> list[str]:
 
 # ---------------------------------------------------------------- Bausteine
 
-def karte(abschnitte: list[dict], nennung: dict, mehr: tuple[str, str] | None = None, breit: bool = False, einzug: str = "      ") -> str:
-    """Die dunkle Zitatkarte (Muster components/cards/QuoteCard)."""
+def karte(abschnitte: list[dict], nennung: dict, mehr: tuple[str, str] | None = None, breit: bool = False, einzug: str = "      ", logo: str = "assets/logo-mark-white.png") -> str:
+    """Die Zitatkarte (Muster components/cards/QuoteCard); auf der Startseite hell."""
     ps = "\n".join(f'{einzug}    <p>«{esc(t)}»</p>' for t in absaetze(abschnitte))
     zeilen = [
         f'{einzug}<figure class="ks-karte{" ks-karte--breit" if breit else ""}">',
-        f'{einzug}  <img class="ks-karte__logo" src="assets/logo-mark-white.png" alt="" width="53" height="32" loading="lazy" decoding="async">',
+        f'{einzug}  <img class="ks-karte__logo" src="{logo}" alt="" width="53" height="32" loading="lazy" decoding="async">',
         f'{einzug}  <blockquote class="ks-karte__zitat">',
         ps,
         f'{einzug}  </blockquote>',
@@ -132,7 +132,7 @@ def block_startseite(auswahl, nennung, daten) -> str:
     a = auswahl(daten["orte"]["startseite"])
     if not a:
         return ""
-    return sektion(karte(a, nennung, mehr=("referenzen", "Die ganze Geschichte lesen →")), id_="kundenstimme", label="Eine Kundin erzählt")
+    return sektion(karte(a, nennung, mehr=("referenzen", "Die ganze Geschichte lesen →"), logo="assets/logo-mark-terra.svg"), id_="kundenstimme", label="Eine Kundin erzählt")
 
 
 def block_einfach(ort: str, mehr: tuple[str, str] | None = None):

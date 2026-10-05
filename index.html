@@ -23,6 +23,7 @@
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
 <link rel="stylesheet" href="ui_kits/website/kundenstimme.css?v=20261005-stimme">
 <link rel="stylesheet" href="ui_kits/website/start.css?v=20261004-start">
+<link rel="stylesheet" href="ui_kits/website/start-ruhig.css?v=20261005-ruhig">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -118,9 +119,8 @@
     <section id="top" class="st-buehne" aria-labelledby="st-titel">
       <div class="st-buehne__inner">
         <header class="st-kopf">
-          <p class="sv-kicker sv-kicker--on-terra">VAIACON · KI FÜR SCHWEIZER KMU</p>
-          <h1 id="st-titel">KI-Kompetenz, Sichtbarkeit und Automationen für Ihren Betrieb.</h1>
-          <p class="st-kopf__lead">Drei Bereiche, die Sie einzeln oder zusammen nutzen. Für Betriebe mit 5 bis 30 Mitarbeitenden: verständlich, persönlich, ohne Verkaufsdruck.</p>
+          <h1 id="st-titel">KI, die in Ihrem Betrieb ankommt.</h1>
+          <p class="st-kopf__lead">Für Betriebe mit 5 bis 30 Mitarbeitenden. Verständlich, persönlich, ohne Verkaufsdruck.</p>
         </header>
 
         <div class="st-reiter" role="tablist" aria-label="Unsere drei Bereiche" hidden>
@@ -150,23 +150,17 @@
             <div class="st-mini" aria-hidden="true">
               <span class="st-mini__name">KI-Kompetenz</span>
               <span class="st-mini__kurz">Das Team lernt KI, die zu Ihnen passt.</span>
-              <span class="st-mini__mehr">Ansehen</span>
             </div>
             <div class="st-voll" id="st-voll-ki" role="tabpanel" aria-labelledby="st-reiter-ki">
               <div class="st-voll__kopf">
+                <p class="st-voll__nr">01</p>
                 <h2 class="st-voll__titel">KI-Kompetenz</h2>
-                <p class="st-voll__lead">Eine Lernreise fürs ganze Team, zugeschnitten auf Ihren Betrieb.</p>
+                <p class="st-voll__lead">Ihr Team lernt KI an den eigenen Aufgaben: Trainings, Coaching und kurze tägliche Lerneinheiten.</p>
               </div>
-              <ul class="st-nutzen">
-                <li>E-Learnings, Videos und Trainings mit Ihren eigenen Beispielen</li>
-                <li>Coaching für Führungskräfte und Begleitung bei der Einführung</li>
-                <li>Jeden Tag eine kleine Lerneinheit, die hängen bleibt</li>
-              </ul>
               <div class="st-haken">
                 <a class="sv-button sv-button--cta" href="learning#standortbestimmung">KI-Standort bestimmen →</a>
-                <p class="st-haken__hinweis">Zwölf Fragen, Ergebnis sofort.</p>
+                <a class="st-mehr" href="learning">Mehr erfahren <span aria-hidden="true">→</span></a>
               </div>
-              <a class="st-mehr" href="learning">Mehr zu KI-Kompetenz <span aria-hidden="true">→</span></a>
             </div>
           </article>
 
@@ -175,30 +169,24 @@
             <div class="st-mini" aria-hidden="true">
               <span class="st-mini__name">Sichtbarkeit</span>
               <span class="st-mini__kurz">Bei Google und in KI-Antworten gefunden.</span>
-              <span class="st-mini__mehr">Ansehen</span>
             </div>
             <div class="st-voll" id="st-voll-sicht" role="tabpanel" aria-labelledby="st-reiter-sicht">
               <div class="st-voll__kopf">
+                <p class="st-voll__nr">02</p>
                 <h2 class="st-voll__titel">Sichtbarkeit</h2>
                 <p class="st-voll__lead">Gefunden werden, wenn Ihre Kundschaft bei Google sucht oder eine KI fragt.</p>
               </div>
-              <ul class="st-nutzen">
-                <li>Google-Check: was Ihre Website heute richtig und falsch macht</li>
-                <li>Auch in den Antworten von KI-Assistenten genannt werden</li>
-                <li>Konkrete Schritte, verständlich erklärt</li>
-              </ul>
               <div class="st-haken">
-                <form class="sv-start st-start" id="sv-start-form" action="visibility#check" method="get" novalidate>
+                <form class="sv-start st-start" id="sv-start-form" action="https://vaiacon.ch/visibility#check" method="get" novalidate>
                   <div class="sv-start__feld">
                     <label class="sv-start__label" for="sv-start-domain">Ihre Domain</label>
                     <input type="text" id="sv-start-domain" name="domain" placeholder="ihre-firma.ch" autocomplete="off" autocapitalize="none" spellcheck="false" inputmode="url" required>
                   </div>
-                  <button class="sv-button sv-button--cta" type="submit">Check starten →</button>
+                  <button class="sv-button sv-button--cta" type="submit">Gratis prüfen →</button>
                   <p class="sv-start__fehler" id="sv-start-fehler" role="alert" hidden></p>
                 </form>
-                <p class="st-haken__hinweis">Kostenlos, in wenigen Sekunden.</p>
+                <a class="st-mehr" href="visibility">Mehr erfahren <span aria-hidden="true">→</span></a>
               </div>
-              <a class="st-mehr" href="visibility">Mehr zu Sichtbarkeit <span aria-hidden="true">→</span></a>
             </div>
           </article>
 
@@ -207,23 +195,17 @@
             <div class="st-mini" aria-hidden="true">
               <span class="st-mini__name">Automationen</span>
               <span class="st-mini__kurz">Wiederkehrende Arbeit abgeben.</span>
-              <span class="st-mini__mehr">Ansehen</span>
             </div>
             <div class="st-voll" id="st-voll-auto" role="tabpanel" aria-labelledby="st-reiter-auto">
               <div class="st-voll__kopf">
+                <p class="st-voll__nr">03</p>
                 <h2 class="st-voll__titel">Automationen</h2>
-                <p class="st-voll__lead">Wiederkehrende Arbeit abgeben, damit Ihr Team Zeit für Wichtiges hat.</p>
+                <p class="st-voll__lead">Belege, Offerten und Posteingang laufen von selbst, damit Ihr Team Zeit für Wichtiges hat.</p>
               </div>
-              <ul class="st-nutzen">
-                <li>Belege, Offerten und Posteingang laufen von selbst</li>
-                <li>Telefonassistent und Chat beantworten die Standardfragen</li>
-                <li>Fixer Preis pro Ablauf, Start mit einer einzigen Aufgabe</li>
-              </ul>
               <div class="st-haken">
                 <a class="sv-button sv-button--cta" href="offerte#automationen">Offerte zusammenstellen →</a>
-                <p class="st-haken__hinweis">Preis sehen, bevor Sie anfragen.</p>
+                <a class="st-mehr" href="bot">Mehr erfahren <span aria-hidden="true">→</span></a>
               </div>
-              <a class="st-mehr" href="bot">Mehr zu Automationen <span aria-hidden="true">→</span></a>
             </div>
           </article>
         </div>
@@ -287,23 +269,6 @@
           </a></li>
         </ul>
         <p class="st-weg__fuss">Lieber reden? <a href="kontakt#formular">Erstgespräch vereinbaren →</a></p>
-      </div>
-    </section>
-
-    <section id="news" class="sv-section sv-section--alt st-news">
-      <div class="sv-wrap">
-        <div class="sv-center">
-          <p class="sv-kicker">KI-KMU-NEWS</p>
-          <h2 class="sv-title">Neu in der KI, für KMU erklärt.</h2>
-          <p class="sv-lead">Was sich ändert und was es für einen Betrieb Ihrer Grösse bedeutet. Kurz, ohne Fachchinesisch.</p>
-        </div>
-        <div class="st-news__liste" id="st-news-liste">
-          <article class="st-news__fest">
-            <p class="st-news__fest-text">Wir ordnen laufend ein, was in der KI für kleine und mittlere Betriebe wichtig wird: neue Werkzeuge, Recht, Sicherheit. In einer Viertelstunde gelesen.</p>
-            <a class="sv-button sv-button--cta" href="ki-kmu-news/">Zur aktuellen Woche →</a>
-          </article>
-        </div>
-        <p class="st-news__alle" id="st-news-alle" hidden><a href="ki-kmu-news/">Alle Beiträge ansehen →</a></p>
       </div>
     </section>
 
@@ -391,7 +356,7 @@
     <section id="kundenstimme" class="sv-section sv-section--alt ks-sektion" aria-label="Eine Kundin erzählt">
       <div class="sv-wrap">
       <figure class="ks-karte">
-        <img class="ks-karte__logo" src="assets/logo-mark-white.png" alt="" width="53" height="32" loading="lazy" decoding="async">
+        <img class="ks-karte__logo" src="assets/logo-mark-terra.svg" alt="" width="53" height="32" loading="lazy" decoding="async">
         <blockquote class="ks-karte__zitat">
           <p>«Heute habe ich eine neue Website mit eigenem Terminbuch. Meine Kundinnen suchen sich die Behandlung aus, sehen die freien Zeiten und buchen direkt bei mir. Preise, Bilder, Öffnungszeiten und Aktionen ändere ich selbst.»</p>
         </blockquote>
