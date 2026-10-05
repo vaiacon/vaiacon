@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""KI-KMU-News: baut die statischen Seiten aus den Wochendateien.
+"""KI-News für KMU: baut die statischen Seiten aus den Wochendateien.
 
 Liest   ki-kmu-news/daten/JJJJ-kwNN.json   (eine Datei je Woche)
 Schreibt in ki-kmu-news/:
@@ -400,7 +400,7 @@ def jsonld_woche(w: dict, adresse: str, bilder: Bilder) -> dict:
     return {
         "@context": "https://schema.org",
         "@type": "ItemList",
-        "name": f"KI-KMU-News {woche_titel(w)}",
+        "name": f"KI-News für KMU {woche_titel(w)}",
         "description": beschreibung_woche(w),
         "numberOfItems": len(elemente),
         "itemListElement": elemente,
@@ -460,7 +460,7 @@ def wochenseite(w: dict, wochen: list[dict], bilder: Bilder, ist_index: bool) ->
     inhalt = f"""    <section id="top" class="sv-hero nw-hero" aria-label="Kopf der Woche">
       <div class="sv-hero__inner">
         <div class="sv-hero__copy">
-          <p class="sv-kicker sv-kicker--on-terra">KI-KMU-NEWS · {esc(anzahl).upper()}</p>
+          <p class="sv-kicker sv-kicker--on-terra">KI-NEWS FÜR KMU · {esc(anzahl).upper()}</p>
           <h1 class="nw-hero__titel"><span class="nw-hero__kw">KW {w['kw']}</span> <span class="nw-hero__datum">{esc(zeitspanne(w['_von'], w['_bis']))}</span></h1>
           {fazit_html}
           <div class="sv-actions">
@@ -501,7 +501,7 @@ def wochenseite(w: dict, wochen: list[dict], bilder: Bilder, ist_index: bool) ->
     </section>
 
 {lies_vorlage("schluss.html").rstrip()}"""
-    titel = f"KI-KMU-News {titel_woche_kurz(w)} · vaiacon"
+    titel = f"KI-News für KMU {titel_woche_kurz(w)} · vaiacon"
     return rahmen(titel, beschreibung_woche(w), kanonisch, jsonld_woche(w, adresse or seitenname(w), bilder),
                   aktiv, inhalt, mit_filter_js=True)
 
@@ -533,7 +533,7 @@ def archivseite(wochen: list[dict], bilder: Bilder) -> str:
     inhalt = f"""    <section id="top" class="sv-hero nw-hero nw-hero--archiv" aria-label="Archiv">
       <div class="sv-hero__inner">
         <div class="sv-hero__copy">
-          <p class="sv-kicker sv-kicker--on-terra">KI-KMU-NEWS</p>
+          <p class="sv-kicker sv-kicker--on-terra">KI-NEWS FÜR KMU</p>
           <h1 class="nw-hero__titel"><span class="nw-hero__kw">Archiv</span></h1>
           <p class="sv-hero__lead">Alle bisherigen Wochen auf einen Blick. Jede Woche hat ihre feste Adresse.</p>
           <div class="sv-actions">
@@ -558,11 +558,11 @@ def archivseite(wochen: list[dict], bilder: Bilder) -> str:
     </section>
 
 {lies_vorlage("schluss.html").rstrip()}"""
-    beschr = "Alle Wochen von KI-KMU-News: was KI-Neuigkeiten für Schweizer KMU heissen, nach Kalenderwoche geordnet."
+    beschr = "Alle Wochen von KI-News für KMU: was KI-Neuigkeiten für Schweizer KMU heissen, nach Kalenderwoche geordnet."
     liste = {
         "@context": "https://schema.org",
         "@type": "ItemList",
-        "name": "KI-KMU-News Archiv",
+        "name": "KI-News für KMU Archiv",
         "numberOfItems": len(wochen),
         "itemListElement": [
             {"@type": "ListItem", "position": i + 1,
@@ -571,7 +571,7 @@ def archivseite(wochen: list[dict], bilder: Bilder) -> str:
             for i, w in enumerate(wochen)
         ],
     }
-    return rahmen("KI-KMU-News Archiv · vaiacon", beschr, f"{SEITE}/{ORDNER}/archiv.html", liste,
+    return rahmen("KI-News für KMU Archiv · vaiacon", beschr, f"{SEITE}/{ORDNER}/archiv.html", liste,
                   "true", inhalt, mit_filter_js=False)
 
 
@@ -582,7 +582,7 @@ def feed(wochen: list[dict], bilder: Bilder) -> str:
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
         "<channel>",
-        "<title>KI-KMU-News · vaiacon</title>",
+        "<title>KI-News für KMU · vaiacon</title>",
         f"<link>{SEITE}/{ORDNER}/</link>",
         f'<atom:link href="{SEITE}/{ORDNER}/feed.xml" rel="self" type="application/rss+xml"/>',
         "<description>Was KI-Neuigkeiten für Schweizer KMU heissen: was passiert ist, was es für Ihren Betrieb bedeutet und worauf Sie achten sollten.</description>",

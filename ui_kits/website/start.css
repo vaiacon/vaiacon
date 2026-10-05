@@ -908,8 +908,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 14px;
-  margin: 28px 0 0;
+  gap: 28px;
+  margin: 36px 0 0;
   font-size: var(--text-size-body);
   color: var(--text-body);
 }
@@ -919,8 +919,8 @@
 }
 
 .st-gesichter__foto {
-  width: 64px;
-  height: 64px;
+  width: 128px;
+  height: 128px;
   border-radius: 50%;
   object-fit: cover;
   object-position: 50% 20%;
@@ -929,7 +929,7 @@
 }
 
 .st-gesichter__foto + .st-gesichter__foto {
-  margin-left: -14px;
+  margin-left: -28px;
 }
 
 .st-gesichter__text {
@@ -969,11 +969,95 @@
 @media (max-width: 599px) {
   .st-gesichter {
     flex-direction: column;
-    gap: 10px;
+    gap: 16px;
     text-align: center;
+  }
+
+  .st-gesichter__foto {
+    width: 104px;
+    height: 104px;
+  }
+
+  .st-gesichter__foto + .st-gesichter__foto {
+    margin-left: -22px;
   }
 
   .st-gesichter__text {
     text-align: center;
   }
+}
+
+
+/* Willkommensvideo: Rahmen 16:9 unter dem Karussell. Solange keine Datei da ist, steht ein Platzhalter darin. */
+.st-willkommen__rahmen {
+  position: relative;
+  max-width: 52rem;
+  margin: 32px auto 0;
+  aspect-ratio: 16 / 9;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--terra-500), var(--terra-600));
+  box-shadow: 0 22px 44px -26px rgba(156, 69, 23, 0.7);
+}
+
+.st-willkommen__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: var(--terra-600);
+}
+
+.st-willkommen__platzhalter {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 16px;
+  text-align: center;
+  color: var(--text-on-terra);
+  background:
+    radial-gradient(circle at 20% 15%, rgba(251, 244, 238, 0.22), transparent 55%),
+    linear-gradient(135deg, var(--terra-500), var(--terra-600));
+}
+
+.st-willkommen__gesichter {
+  display: flex;
+}
+
+.st-willkommen__gesichter img {
+  width: clamp(72px, 14vw, 120px);
+  height: clamp(72px, 14vw, 120px);
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  border: 4px solid var(--cream-50);
+  background: var(--cream-50);
+}
+
+.st-willkommen__gesichter img + img {
+  margin-left: calc(clamp(72px, 14vw, 120px) / -4);
+}
+
+.st-willkommen__spiel {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: var(--text-size-body);
+  font-weight: var(--weight-bold);
+}
+
+.st-willkommen__spiel svg {
+  flex: none;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--cream-50);
+  color: var(--terra-600);
+  box-sizing: border-box;
+  padding: 13px 10px 13px 15px;
 }

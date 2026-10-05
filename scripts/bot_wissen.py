@@ -33,7 +33,7 @@ SEITEN = [
     ("bot.html", "Automationen"),
     ("service.html", "Begleitung"),
     ("offerte.html", "Offerten-Tool"),
-    ("ki-kmu-news/index.html", "KI-KMU-News"),
+    ("ki-kmu-news/index.html", "KI-News für KMU"),
     ("faq.html", "Häufige Fragen"),
     ("kontakt.html", "Kontakt"),
     ("datenschutz.html", "Datenschutz und Impressum"),

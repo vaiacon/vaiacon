@@ -309,7 +309,7 @@
   }
   anwerfen();
 
-  /* ───── KI-KMU-News ───── */
+  /* ───── KI-News für KMU ───── */
 
   var liste = document.getElementById('st-news-liste');
   var alle = document.getElementById('st-news-alle');

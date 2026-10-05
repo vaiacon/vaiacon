@@ -1,4 +1,4 @@
-/* KI-KMU-News: Rubrik-Filter, «heute» im Tagesstreifen. Ohne dieses Skript ist die Seite voll lesbar. */
+/* KI-News für KMU: Rubrik-Filter, «heute» im Tagesstreifen. Ohne dieses Skript ist die Seite voll lesbar. */
 (function () {
   'use strict';
 

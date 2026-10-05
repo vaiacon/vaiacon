@@ -22,12 +22,13 @@
 <link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261005-vorschlag">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
 <link rel="stylesheet" href="ui_kits/website/kundenstimme.css?v=20261005-vorschlag">
-<link rel="stylesheet" href="ui_kits/website/start.css?v=20261005-vorschlag">
+<link rel="stylesheet" href="ui_kits/website/start.css?v=20261005-willkommen">
 <link rel="stylesheet" href="ui_kits/website/start-ruhig.css?v=20261005-ohne-preise">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <!-- Strukturdaten: erzeugt von scripts/strukturdaten.py, nicht von Hand aendern -->
+<!-- TELEFON: in den Strukturdaten unten "telephone": "+41 44 ..." ergänzen, sobald die 044-Nummer gebucht ist -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -40,7 +41,6 @@
   "image": "https://vaiacon.ch/assets/vaiacon-buerobot-startseite.png",
   "description": "vaiacon führt Schweizer KMU an KI heran, in drei Bereichen: KI-Kompetenz (Trainings, Coaching, E-Learning), Sichtbarkeit in Suchmaschinen und KI-Antworten und Automationen von Büroarbeit; auf Wunsch mit laufender Begleitung. Gedacht für Betriebe mit 5 bis 30 Mitarbeitenden und eigenem Büro. Preise offen und inklusive MWST, Offerte im Offerten-Tool. Ohne Fachchinesisch, nach revDSG, auf Schweizer Infrastruktur.",
   "email": "hallo@vaiacon.ch",
-  "telephone": "+41 44 000 00 00",
   "foundingDate": "2026",
   "address": {
     "@type": "PostalAddress",
@@ -83,8 +83,9 @@
       <a class="mock-header__logo" href="#top" aria-label="vaiacon Start">
         <img src="assets/logo-lockup-white.svg" alt="vaiacon">
       </a>
-      <!-- PLATZHALTER: echte 044-Nummer einsetzen -->
+      <!-- TELEFON: einkommentieren, sobald die 044-Nummer gebucht ist
       <a class="mock-header__anruf" href="tel:+41440000000" aria-label="Anrufen: 044 000 00 00"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></a>
+      -->
       <button class="mock-menu-toggle" type="button" aria-label="Menü öffnen" aria-controls="mock-mobile-menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -95,11 +96,12 @@
           <a href="bot">Automationen</a>
         </div>
         <div class="mock-nav-gruppe mock-nav-gruppe--info">
-          <a href="ki-kmu-news/">KI-KMU-News</a>
+          <a href="ki-kmu-news/">KI-News für KMU</a>
           <a href="faq">FAQ</a>
           <a href="ueber-uns">Über uns</a>
-          <!-- PLATZHALTER: echte 044-Nummer einsetzen -->
+          <!-- TELEFON: einkommentieren, sobald die 044-Nummer gebucht ist
           <a class="mock-header__tel" href="tel:+41440000000">044 000 00 00</a>
+          -->
           <a class="mock-header__contact" href="kontakt">Kontakt</a>
         </div>
       </nav>
@@ -113,7 +115,7 @@
       </div>
       <div class="mock-mobile-nav__bereich" role="group" aria-labelledby="mock-mnav-mehr">
         <span class="mock-mobile-nav__bereich-titel" id="mock-mnav-mehr">Mehr zu vaiacon</span>
-        <a href="ki-kmu-news/">KI-KMU-News</a>
+        <a href="ki-kmu-news/">KI-News für KMU</a>
         <a href="faq">FAQ</a>
         <a href="ueber-uns">Über uns</a>
         <a class="mock-header__contact" href="kontakt">Kontakt</a>
@@ -242,6 +244,29 @@
     })();
     </script>
 
+    <section id="willkommen" class="sv-section st-willkommen" aria-labelledby="st-willkommen-titel">
+      <div class="sv-wrap">
+        <div class="sv-center">
+          <p class="sv-kicker">WILLKOMMEN</p>
+          <h2 class="sv-title" id="st-willkommen-titel">Wer hinter vaiacon steht</h2>
+          <p class="sv-lead">Philip und André stellen sich in einer Minute vor.</p>
+        </div>
+        <div class="st-willkommen__rahmen">
+          <!-- PLATZHALTER: Video ablegen unter assets/video/willkommen.mp4, dann source einkommentieren und Hinweis entfernen -->
+          <video class="st-willkommen__video" controls preload="none" playsinline poster="assets/philip-krieger-team.png" aria-label="Willkommensvideo von Philip und André">
+            <!-- <source src="assets/video/willkommen.mp4" type="video/mp4"> -->
+          </video>
+          <div class="st-willkommen__platzhalter" aria-hidden="true">
+            <span class="st-willkommen__gesichter">
+              <img src="assets/philip-krieger-team.webp" alt="" width="120" height="120" loading="lazy" decoding="async">
+              <img src="assets/andre-ulrich-team.webp" alt="" width="120" height="120" loading="lazy" decoding="async">
+            </span>
+            <span class="st-willkommen__spiel"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 2.5v19a1 1 0 0 0 1.5.86l16-9.5a1 1 0 0 0 0-1.72l-16-9.5A1 1 0 0 0 4 2.5Z"/></svg>Video folgt</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="wegweiser" class="sv-section st-weg">
       <div class="sv-wrap">
         <div class="sv-center">
@@ -315,8 +340,8 @@
         </ol>
         <p class="st-gesichter">
           <span class="st-gesichter__paar">
-            <picture><source srcset="assets/philip-krieger-team.webp" type="image/webp"><img class="st-gesichter__foto" src="assets/philip-krieger-team.png" alt="Philip Krieger" width="64" height="64" loading="lazy" decoding="async"></picture>
-            <picture><source srcset="assets/andre-ulrich-team.webp" type="image/webp"><img class="st-gesichter__foto" src="assets/andre-ulrich-team.png" alt="André Ulrich" width="64" height="64" loading="lazy" decoding="async"></picture>
+            <picture><source srcset="assets/philip-krieger-team.webp" type="image/webp"><img class="st-gesichter__foto" src="assets/philip-krieger-team.png" alt="Philip Krieger" width="128" height="128" loading="lazy" decoding="async"></picture>
+            <picture><source srcset="assets/andre-ulrich-team.webp" type="image/webp"><img class="st-gesichter__foto" src="assets/andre-ulrich-team.png" alt="André Ulrich" width="128" height="128" loading="lazy" decoding="async"></picture>
           </span>
           <span class="st-gesichter__text">Sie sprechen mit Philip oder André.</span>
         </p>
@@ -360,9 +385,9 @@
         <img src="assets/logo-lockup-white.svg" alt="vaiacon">
       </a>
       <nav class="sv-footer__links" aria-label="Weitere Seiten">
-        <a href="service">Begleitung</a><a href="offerte">Offerte anfragen</a><a href="ki-kmu-news/">KI-KMU-News</a><a href="referenzen">Aus der Praxis</a><a href="datenschutz">Datenschutz</a><a href="impressum">Impressum</a><a href="agb">AGB</a>
+        <a href="service">Begleitung</a><a href="offerte">Offerte anfragen</a><a href="ki-kmu-news/">KI-News für KMU</a><a href="referenzen">Aus der Praxis</a><a href="datenschutz">Datenschutz</a><a href="impressum">Impressum</a><a href="agb">AGB</a>
       </nav>
-      <p class="sv-footer__adresse"><span>vaiacon GmbH</span><span>Lehenstrasse 74, 8037 Zürich</span><span><a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a></span><!-- PLATZHALTER: echte 044-Nummer einsetzen --><span><a href="tel:+41440000000">044 000 00 00</a></span></p>
+      <p class="sv-footer__adresse"><span>vaiacon GmbH</span><span>Lehenstrasse 74, 8037 Zürich</span><span><a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a></span><!-- TELEFON: einkommentieren, sobald die 044-Nummer gebucht ist <span><a href="tel:+41440000000">044 000 00 00</a></span> --></p>
       <a class="sv-footer__top" href="#top">↑ Nach oben</a>
       <div class="sv-footer__social">
         <a href="https://www.facebook.com/vaiacon" target="_blank" rel="noopener" aria-label="vaiacon auf Facebook" title="Facebook">

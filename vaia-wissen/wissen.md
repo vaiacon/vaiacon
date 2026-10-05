@@ -157,7 +157,7 @@ Automationen →
 «Ich weiss nicht, wo anfangen.»
 KI-Standort bestimmen →
 Lieber reden? Erstgespräch vereinbaren →
-KI-KMU-NEWS
+KI-NEWS FÜR KMU
 Neu in der KI, für KMU erklärt.
 Was sich ändert und was es für einen Betrieb Ihrer Grösse bedeutet. Kurz, ohne Fachchinesisch.
 Wir ordnen laufend ein, was in der KI für kleine und mittlere Betriebe wichtig wird: neue Werkzeuge, Recht, Sicherheit. In einer Viertelstunde gelesen.
@@ -688,10 +688,10 @@ Nochmals versuchen
 Auswahl ändern
 Oder schreiben Sie uns über das Kontaktformular .
 
-### KI-KMU-News
+### KI-News für KMU
 
 Zum Inhalt
-KI-KMU-NEWS · NOCH KEIN BEITRAG IN DIESER WOCHE
+KI-NEWS FÜR KMU · NOCH KEIN BEITRAG IN DIESER WOCHE
 KW 41 5. – 11. Oktober 2026
 Die Woche ist noch jung: Bisher gab es nichts, das für Schweizer KMU wichtig genug war. Darunter lesen Sie die Beiträge der KW 40.
 Zu den Beiträgen →
@@ -817,8 +817,8 @@ Sind die Preise inklusive Mehrwertsteuer? +
 Ja. Alle Preise sind in Schweizer Franken angegeben und enthalten die Mehrwertsteuer von 8,1 %.
 Was ist die KI-Standortbestimmung? +
 Ein kostenloser Selbsttest für Führungskräfte: zwölf kurze Fragen, ein ehrliches Ergebnis und eine persönliche Einschätzung, was sich als Nächstes lohnt. Sie finden ihn bei KI-Kompetenz . Nicht zu verwechseln mit der KI-Standortanalyse im Betrieb ( CHF 2'150 ): Dort schauen wir uns Ihren Betrieb an und legen Ihnen einen Bericht mit den besten nächsten Schritten vor.
-Was sind die KI-KMU-News? +
-Unsere Übersicht zu dem, was in der KI für Schweizer KMU gerade zählt, kurz und ohne Fachchinesisch. Die laufende Woche steht auf der Seite KI-KMU-News , frühere Ausgaben liegen im Archiv , und wer möchte, abonniert sie als Feed.
+Was sind die KI-News für KMU? +
+Unsere Übersicht zu dem, was in der KI für Schweizer KMU gerade zählt, kurz und ohne Fachchinesisch. Die laufende Woche steht auf der Seite KI-News für KMU , frühere Ausgaben liegen im Archiv , und wer möchte, abonniert sie als Feed.
 Was passiert mit unseren Daten? +
 Wir arbeiten nach dem revDSG. Vor der Umsetzung klären wir mit Ihnen, welche Daten ein Werkzeug überhaupt sehen darf, und halten Kundendaten dort heraus, wo sie nicht hingehören.
 KI-Kompetenz

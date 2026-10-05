@@ -64,8 +64,8 @@ ORGANISATION = {
         "Schweizer Infrastruktur."
     ),
     "email": "hallo@vaiacon.ch",
-    # PLATZHALTER: echte 044-Nummer einsetzen (auch in allen HTML-Seiten, tel:-Links)
-    "telephone": "+41 44 000 00 00",
+    # TELEFON: einkommentieren, sobald die 044-Nummer gebucht ist (auch in allen HTML-Seiten, tel:-Links)
+    # "telephone": "+41 44 000 00 00",
     "foundingDate": "2026",
     "address": {
         "@type": "PostalAddress",
@@ -253,7 +253,7 @@ KI-Standortbestimmung (Selbsttest für Führungskräfte).
 
 - [Offerte zusammenstellen](https://vaiacon.ch/offerte): Offerten-Tool,
   Richtofferte mit echten Preisen, sofort auf dem Bildschirm und per Mail.
-- [KI-KMU-News](https://vaiacon.ch/ki-kmu-news/): Was in der KI für Schweizer
+- [KI-News für KMU](https://vaiacon.ch/ki-kmu-news/): Was in der KI für Schweizer
   KMU gerade zählt, die laufende Woche.
   [Archiv](https://vaiacon.ch/ki-kmu-news/archiv) ·
   [Feed](https://vaiacon.ch/ki-kmu-news/feed.xml)

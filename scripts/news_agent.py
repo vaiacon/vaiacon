@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""KI-KMU-News: der Tagesagent.
+"""KI-News für KMU: der Tagesagent.
 
 Ein Lauf = ein Tag. Ablauf:
   1. Klon holen (git pull --rebase)
@@ -235,7 +235,7 @@ def baue_prompt(tag: date, bisherige: list, angebot: str, fazit: str) -> str:
                                            ", ".join(q.get("url", "") for q in b.get("quellen", [])))
                        for b in bisherige) or "(noch nichts)"
     von = (tag - timedelta(days=2)).strftime("%d.%m.%Y")
-    return f"""Du bist die Redaktion von «KI-KMU-News» der Vaiacon GmbH in Zuerich. Vaiacon ist ein KI-Dienstleister fuer Schweizer KMU mit 5 bis 30 Mitarbeitenden. Heute ist der {tag.strftime('%d.%m.%Y')}. Suche mit WebSearch und WebFetch, was in der KI-Welt zwischen dem {von} und heute wirklich Neues passiert ist, und uebersetze es fuer unsere Kundschaft.
+    return f"""Du bist die Redaktion von «KI-News für KMU» der Vaiacon GmbH in Zuerich. Vaiacon ist ein KI-Dienstleister fuer Schweizer KMU mit 5 bis 30 Mitarbeitenden. Heute ist der {tag.strftime('%d.%m.%Y')}. Suche mit WebSearch und WebFetch, was in der KI-Welt zwischen dem {von} und heute wirklich Neues passiert ist, und uebersetze es fuer unsere Kundschaft.
 
 AUFTRAG
 1. Suche breit (Modelle, Werkzeuge, Recht und Regulierung auch in der Schweiz und EU, Sicherheit, Markt, Praxis in KMU). Bevorzuge Primaerquellen (Hersteller, Behoerden, Forschungseinrichtungen) und etablierte Fachmedien.
@@ -613,7 +613,7 @@ def lauf(tag: date, trocken: bool, kein_push: bool) -> int:
         log("Keine Aenderung im Bestand.")
         return 0
     namen = "; ".join(e["titel"][:60] for e in angenommen) or ("Wochenfazit" if fazit_ok else "neue Woche")
-    git("commit", "-m", "KI-KMU-News %s: %s\n\nAutomatisch durch scripts/news_agent.py." % (tag.isoformat(), namen),
+    git("commit", "-m", "KI-News für KMU %s: %s\n\nAutomatisch durch scripts/news_agent.py." % (tag.isoformat(), namen),
         "--", "ki-kmu-news")
     log("Commit angelegt.")
     if kein_push:
@@ -627,7 +627,7 @@ def lauf(tag: date, trocken: bool, kein_push: bool) -> int:
 
 def main() -> int:
     global _log_datei
-    ap = argparse.ArgumentParser(description="KI-KMU-News Tagesagent")
+    ap = argparse.ArgumentParser(description="KI-News für KMU Tagesagent")
     ap.add_argument("--datum", help="JJJJ-MM-TT (Standard heute)")
     ap.add_argument("--trocken", action="store_true", help="nichts schreiben, kein git")
     ap.add_argument("--kein-push", action="store_true", help="committen, aber nicht hochladen")
