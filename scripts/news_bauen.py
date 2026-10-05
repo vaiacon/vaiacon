@@ -238,36 +238,32 @@ def quellen_html(quellen: list[dict]) -> str:
         titel = q.get("titel") or q["url"]
         punkte.append(
             f'<li><a href="{esc(q["url"])}" target="_blank" rel="noopener">{esc(titel)} ↗</a></li>')
-    return ('<div class="nw-quellen"><p class="nw-quellen__titel">Quellen</p><ul>'
+    return ('<div class="nw-quellen"><p class="nw-quellen__titel">Quellen:</p><ul>'
             + "".join(punkte) + "</ul></div>")
 
 
-def karte_html(b: dict, bilder: Bilder, gross: bool) -> str:
+def karte_html(b: dict, bilder: Bilder, gross: bool, breit: bool = False) -> str:
     rubrik = b["rubrik"]
-    name = RUBRIK_BILD[rubrik]
-    bild = bilder.picture(name, f"Der vaiacon-Roboter zur Rubrik {RUBRIKEN[rubrik]}", eager=False)
     ziel, label = BEREICHE.get(b.get("bereich", ""), BEREICHE["ki-kompetenz"])
     vaiacon_text = str(b.get("vaiacon", ""))
     link = ""
     if not vaiacon_text.strip().lower().startswith(OHNE_ANGEBOT):
         link = f'<a class="nw-feld__link" href="{esc(ziel)}">Zu {esc(label)} →</a>'
-    klasse = "nw-karte nw-karte--gross" if gross else "nw-karte"
+    klasse = "nw-karte nw-karte--gross" if gross else ("nw-karte nw-karte--breit" if breit else "nw-karte")
     d = b["_datum"]
+    # Zeitungssatz (05.10.2026, Philip): kein Bild, Felder als Absätze mit Stichwort davor.
     teile = [
         f'<article class="{klasse}" id="{esc(b["id"])}" data-rubrik="{esc(rubrik)}" data-datum="{esc(b["datum"])}">',
         '  <header class="nw-karte__kopf">',
-        f'    <figure class="nw-karte__bild">{bild}</figure>',
-        '    <div class="nw-karte__titelblock">',
-        f'      <p class="nw-karte__meta">{abzeichen(rubrik)}<time datetime="{esc(b["datum"])}">{esc(datum_lang(d))}</time>'
+        f'    <p class="nw-karte__meta">{abzeichen(rubrik)}<time datetime="{esc(b["datum"])}">{esc(datum_lang(d))}</time>'
         + ('<span class="nw-karte__wichtig">Wichtigster Beitrag der Woche</span>' if gross else "") + '</p>',
-        f'      <h3 class="nw-karte__titel"><a href="#{esc(b["id"])}">{esc(b["titel"])}</a></h3>',
-        '    </div>',
+        f'    <h3 class="nw-karte__titel"><a href="#{esc(b["id"])}">{esc(b["titel"])}</a></h3>',
         '  </header>',
-        '  <div class="nw-karte__text">',
-        '    <h4 class="nw-karte__frage">Was ist passiert?</h4>',
-        f'    <p>{esc(b["kurz"])}</p>',
-        '  </div>',
-        '  <div class="nw-felder">',
+        '  <div class="nw-karte__inhalt">',
+        '    <div class="nw-karte__text">',
+        '      <h4 class="nw-karte__frage">Was ist passiert?</h4>',
+        f'      <p>{esc(b["kurz"])}</p>',
+        '    </div>',
         '    <section class="nw-feld nw-feld--kmu" aria-labelledby="{0}-kmu">'.format(esc(b["id"])),
         f'      <h4 id="{esc(b["id"])}-kmu">Was heisst das für Ihr KMU?</h4>',
         f'      <p>{esc(b["kmu"])}</p>',
@@ -281,9 +277,9 @@ def karte_html(b: dict, bilder: Bilder, gross: bool) -> str:
         f'      <h4 id="{esc(b["id"])}-achtung">Worauf Sie achten sollten</h4>',
         f'      <p>{esc(b["achtung"])}</p>',
         '    </section>',
+        '    ' + quellen_html(b["quellen"]),
+        '    ' + KI_HINWEIS,
         '  </div>',
-        '  ' + quellen_html(b["quellen"]),
-        '  ' + KI_HINWEIS,
         '</article>',
     ]
     return "\n".join(t for t in teile if t.strip())
@@ -351,7 +347,11 @@ def beitraege_html(w: dict, bilder: Bilder) -> str:
         nach_tag.setdefault(b["_datum"], []).append(b)
     abschnitte = []
     for d in sorted(nach_tag, reverse=True):
-        karten = "\n".join(karte_html(b, bilder, b["id"] == gross_id) for b in sortiere_tag(nach_tag[d]))
+        tag = sortiere_tag(nach_tag[d])
+        # Zweispaltiger Satz: bleibt neben dem Aufmacher ein Beitrag allein, läuft er über die ganze Breite.
+        uebrig = [b for b in tag if b["id"] != gross_id]
+        breit_id = uebrig[-1]["id"] if len(uebrig) % 2 else None
+        karten = "\n".join(karte_html(b, bilder, b["id"] == gross_id, b["id"] == breit_id) for b in tag)
         abschnitte.append(
             f'<section class="nw-tagesblock" id="tag-{d.isoformat()}" aria-labelledby="tag-{d.isoformat()}-titel">\n'
             f'<h2 class="nw-tagesblock__titel" id="tag-{d.isoformat()}-titel">{esc(datum_lang(d))}</h2>\n'
