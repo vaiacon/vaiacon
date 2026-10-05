@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 05.10.2026 · Eintrag 54e6f91 Merge pull request #7 from vaiacon/startseite-preistitel
+> Stand: 05.10.2026 · Eintrag 4710e75 Merge pull request #8 from vaiacon/preise-richtwerte
 
 ## Wie du antwortest
 
@@ -946,11 +946,11 @@ DATENSCHUTZ
 Was mit Ihren Daten geschieht.
 Massgebend ist das revidierte Schweizer Datenschutzgesetz (revDSG). Wir erheben so wenig wie möglich und erklären hier alles, was auf dieser Website und im Kundenportal tatsächlich passiert.
 Kurz gesagt
-Diese Website verlangt kein Konto und führt keine Besucherstatistik. Sie läuft auf einem Schweizer Server. Einiges geht ins Ausland: die Schriften, die Programmbibliotheken, der Chat mit Vaia und die Auswertung im Visibility-Check. Jedes davon ist unten einzeln erklärt, und der Abschnitt «Bekanntgabe ins Ausland» fasst zusammen, auf welcher Grundlage das geschieht.
+Diese Website verlangt kein Konto und führt keine Besucherstatistik. Sie läuft auf einem Schweizer Server. Einiges geht ins Ausland: die Schriften, die Programmbibliotheken und alles, was ein Sprachmodell für Sie auswertet. Das sind der Chat mit Vaia, der Visibility-Check, die Erstanalyse, das Offerten-Tool und die KI-Standortbestimmung. Jedes davon ist unten einzeln erklärt, und der Abschnitt «Bekanntgabe ins Ausland» fasst zusammen, auf welcher Grundlage das geschieht.
 Diese Erklärung gilt auch für das Kundenportal unter kunden.vaiacon.ch. Dort speichern wir mehr, weil es dort nötig ist. Was genau, steht weiter unten.
 Was beim Aufruf dieser Seite geschieht
-Die Website liegt bei Infomaniak in der Schweiz. Wir führen kein Zugriffsprotokoll und speichern keine IP-Adressen. Wer diese Seiten liest, hinterlässt bei uns also keine Spur.
-Ausnahmen gibt es drei: die Sperre im Chat, im Kontaktformular und im Visibility-Check. Alle sind unten beschrieben.
+Die Website liegt bei Infomaniak in der Schweiz. Wir führen kein Zugriffsprotokoll und speichern keine IP-Adressen. Wer diese Seiten nur liest, hinterlässt bei uns also keine Spur.
+Anders ist es dort, wo Sie selbst etwas absenden: im Chat, im Kontaktformular, im Visibility-Check, in der Erstanalyse, im Offerten-Tool und in der KI-Standortbestimmung. Alle sind unten beschrieben.
 Schriften
 Die Schriften Quicksand und IBM Plex Mono werden beim Seitenaufruf von Google Fonts geladen. Dabei erhält Google LLC (USA) Ihre IP-Adresse und die Angabe, welche Seite Sie aufrufen. Weitere Daten übermitteln wir nicht.
 Das betrifft jede Seite dieser Website und das Kundenportal, das dieselben Schriften lädt.
@@ -969,42 +969,58 @@ Für den Check selbst brauchen wir keine Personendaten. Zum Schutz vor Missbrauc
 Den Bericht bewahren wir 30 Tage auf, danach wird er gelöscht.
 Wer den vollständigen Bericht anfordert, schickt uns Name und E-Mail-Adresse, freiwillig auch Firma und Telefon. Diese Angaben behandeln wir wie eine Anfrage über das Kontaktformular.
 Erstanalyse-Fragebogen
-Die Auswertung wird vollständig in Ihrem Browser berechnet. Ihre Antworten verlassen Ihr Gerät nicht.
-Während Sie den Fragebogen ausfüllen, werden die Antworten im lokalen Speicher Ihres Browsers zwischengelegt, damit nichts verloren geht, wenn Sie zwischendurch weggehen. Sobald Sie die Auswertung anfordern, wird dieser Zwischenspeicher gelöscht. Sie können ihn jederzeit selbst leeren, indem Sie die Websitedaten in Ihrem Browser löschen.
-Eine Übermittlung Ihrer Antworten an uns oder an einen Formulardienst findet zurzeit nicht statt. Sollte sich das ändern, ändern wir zuerst diese Erklärung.
+Der Fragebogen fragt nach Ihrem Betrieb: Branche, Grösse, eingesetzte Programme, Abläufe und Zeitaufwand. Dazu kommen Firma und Name sowie E-Mail-Adresse und Telefonnummer, damit wir uns melden können.
+Während Sie den Fragebogen ausfüllen, werden die Antworten im lokalen Speicher Ihres Browsers zwischengelegt, damit nichts verloren geht, wenn Sie zwischendurch weggehen. Nach dem Absenden wird dieser Zwischenspeicher gelöscht. Sie können ihn jederzeit selbst leeren, indem Sie die Websitedaten in Ihrem Browser löschen.
+Beim Absenden geschieht zweierlei. Erstens gehen Ihre Antworten zum Betrieb an unseren Server in der Schweiz und von dort an Anthropic (USA), den Anbieter des Sprachmodells Claude. Es schätzt, wie viel Zeit in Ihrer Administration steckt. Firma, Name, E-Mail-Adresse und Telefonnummer gehen dabei nicht mit. Unser Server speichert bei diesem Schritt nichts.
+Zweitens gehen alle Antworten samt Schätzung als Anfrage an uns. Wir behandeln sie wie eine Anfrage über das Kontaktformular.
+Zum Schutz vor Missbrauch ist die Zahl der Auswertungen je Besucher begrenzt. Dafür hält der Server Ihre IP-Adresse im Arbeitsspeicher. Nur wer die Sperre auslöst, wird mit seiner IP-Adresse im Betriebsprotokoll dieses Dienstes vermerkt. Wie lange, steht unter «Aufbewahrung und Löschung».
+Offerten-Tool
+Im Offerten-Tool kreuzen Sie Angebote an, können Notizen dazuschreiben und einen Wunsch in eigenen Worten ergänzen. Für die Richtofferte fragen wir Name, E-Mail-Adresse und Telefonnummer; die Firma ist freiwillig. Sie bestätigen vor dem Absenden, dass wir diese Angaben für die Offerte bearbeiten und Sie dazu kontaktieren dürfen.
+Ihre Auswahl, Ihre Notizen und Ihr Wunschtext gehen an unseren Server in der Schweiz und von dort an Anthropic (USA), den Anbieter des Sprachmodells Claude. Es schreibt die Begleittexte der Offerte. Name, Firma, E-Mail-Adresse und Telefonnummer gehen nie an Anthropic. Schreiben Sie darum bitte keine Personendaten in die Notizen oder in den Wunschtext.
+Die Offerte und den Wunschtext bewahren wir unter der Offertennummer auf unserem Server auf, ohne Ihre Kontaktdaten. Zusätzlich geht die Offerte zusammen mit Ihren Kontaktdaten als Anfrage an uns; wir behandeln sie wie eine Anfrage über das Kontaktformular. Eine Kopie der Offerte schicken wir an die E-Mail-Adresse, die Sie angegeben haben.
+Solange Sie zusammenstellen, liegt Ihre Auswahl im Sitzungsspeicher Ihres Browsers. Er leert sich, sobald Sie das Fenster schliessen.
+Zum Schutz vor Missbrauch ist die Zahl der Offerten je Besucher begrenzt. Dafür hält der Server Ihre IP-Adresse im Arbeitsspeicher. Alle Fristen stehen unter «Aufbewahrung und Löschung».
+KI-Standortbestimmung
+Die KI-Standortbestimmung stellt zwölf Fragen zum Umgang mit KI. Vorab geben Sie Ihre Rolle, Ihre Branche und die Grösse Ihres Betriebs an. Namen oder Kontaktdaten fragen wir nicht ab.
+Diese Angaben und Ihre Antworten gehen an unseren Server in der Schweiz und von dort an Anthropic (USA), den Anbieter des Sprachmodells Claude. Es schreibt Ihre persönliche Einschätzung.
+Unser Server speichert Ihre Antworten nicht. Er vermerkt nur, dass eine Auswertung stattgefunden hat, mit Stufe und Punktzahl und ohne Bezug zu Ihnen.
+Zum Schutz vor Missbrauch ist die Zahl der Auswertungen je Besucher begrenzt. Dafür hält der Server Ihre IP-Adresse im Arbeitsspeicher. Wie lange, steht unter «Aufbewahrung und Löschung».
 Kundenportal kunden.vaiacon.ch
-Wer bei uns ein Projekt hat, meldet sich im Kundenportal mit einem Zugangscode an und sieht dort die Vorschau seiner Website. Das Portal läuft auf demselben Schweizer Server wie diese Website.
+Wer bei uns ein Projekt hat, meldet sich im Kundenportal mit E-Mail-Adresse und Passwort an und sieht dort die Vorschau seiner Website. Das Portal läuft auf demselben Schweizer Server wie diese Website.
 Anders als hier speichern wir im Portal etwas, und zwar nur das:
 ✓ Firma und Projektname
 ✓ Name und E-Mail-Adresse der Ansprechperson
-✓ Den Zugangscode, und zwar nur verschlüsselt. Im Klartext steht er nirgends. Auch wir können ihn nicht nachlesen.
+✓ Ihr Passwort, und zwar nur als Prüfwert, aus dem es sich nicht zurückrechnen lässt. Im Klartext steht es nirgends. Auch wir können es nicht nachlesen.
 ✓ Ihre Rückmeldungen zu den Vorschauen
 ✓ Ein Zugriffsprotokoll mit IP-Adresse
 Das Zugriffsprotokoll gibt es hier, weil hinter der Anmeldung Kundendaten liegen: Wir müssen nachvollziehen können, wer wann zugegriffen hat. Wie lange es bleibt, steht unter «Aufbewahrung und Löschung».
 Jeder Kunde sieht nur sein eigenes Projekt. Ist ein Auftrag abgeschlossen und wollen Sie Ihre Daten gelöscht haben, genügt eine Mail an hallo@vaiacon.ch .
 Kontakt und Formular
 Mails an hallo@vaiacon.ch liegen beim Mail-Hosting von Infomaniak in der Schweiz. Wir verwenden Ihre Angaben nur, um Ihre Anfrage zu bearbeiten, und geben sie nicht weiter.
-Das Kontaktformular fragt Name, E-Mail und Ihre Nachricht; Firma und Telefon sind freiwillig. Beim Absenden geht die Nachricht verschlüsselt an unseren eigenen Server in der Schweiz. Er schickt sie als Mail an hallo@vaiacon.ch und behält danach nichts davon: keine Datenbank, kein Zwischenspeicher. Ein Formulardienst eines Dritten ist nicht beteiligt. Zum Schutz vor Missbrauch ist die Zahl der Nachrichten je Besucher begrenzt; dafür hält der Server Ihre IP-Adresse im Arbeitsspeicher, nie auf der Festplatte. Ist unser Server einmal nicht erreichbar, übergibt das Formular die fertige Nachricht Ihrem eigenen Mailprogramm. Dann verlässt nichts Ihr Gerät, bis Sie dort auf «senden» drücken.
+Das Kontaktformular fragt Name, E-Mail und Ihre Nachricht; Firma und Telefon sind freiwillig. Beim Absenden geht die Nachricht verschlüsselt an unseren eigenen Server in der Schweiz. Dort legen wir sie als Anfrage in unserem internen System ab und schicken sie zusätzlich als Mail an hallo@vaiacon.ch. Ein Formulardienst eines Dritten ist nicht beteiligt.
+Zum Schutz vor Missbrauch ist die Zahl der Nachrichten je Besucher begrenzt. Dafür speichern wir zur Anfrage nicht Ihre IP-Adresse, sondern ein Kürzel davon. Ohne den geheimen Schlüssel unseres Servers lässt sich daraus die Adresse nicht zurückrechnen.
+Ist unser Server einmal nicht erreichbar, übergibt das Formular die fertige Nachricht Ihrem eigenen Mailprogramm. Dann verlässt nichts Ihr Gerät, bis Sie dort auf «senden» drücken.
 Eine Terminvereinbarung über einen Kalenderdienst bieten wir nicht an.
 Unsere Dienstleister
 Diese Firmen arbeiten in unserem Auftrag und kommen dabei mit Daten in Berührung. Mehr sind es nicht:
-Infomaniak (Schweiz) · betreibt den Server für Website und Kundenportal und hostet unser Mail-Konto
+Infomaniak (Schweiz) · betreibt den Server für Website, Kundenportal und unser internes System und hostet unser Mail-Konto
 Google LLC (USA) · liefert die Schriften aus
-Anthropic (USA) · stellt das Sprachmodell hinter dem Chat mit Vaia und dem Visibility-Check
+Anthropic (USA) · stellt das Sprachmodell hinter dem Chat mit Vaia, dem Visibility-Check, der Erstanalyse, dem Offerten-Tool und der KI-Standortbestimmung
 unpkg.com (USA) · liefert die Programmbibliotheken für den Erstanalyse-Fragebogen
 Keine dieser Firmen darf Ihre Daten für eigene Zwecke verwenden. Wir geben nichts an Werbenetzwerke oder Adresshändler weiter und verkaufen keine Daten.
 Bekanntgabe ins Ausland
 Wohin Daten gehen und auf welcher Grundlage:
 Google Fonts · USA · Swiss-U.S. Data Privacy Framework, aktiv zertifiziert
-Anthropic (Chat mit Vaia, Visibility-Check) · USA · Standardvertragsklauseln im Data Processing Addendum, das zusammen mit den Commercial Terms automatisch gilt
+Anthropic (Chat mit Vaia, Visibility-Check, Erstanalyse, Offerten-Tool, KI-Standortbestimmung) · USA · Standardvertragsklauseln im Data Processing Addendum, das zusammen mit den Commercial Terms automatisch gilt
 Infomaniak (Hosting und Mail) · Schweiz · keine Bekanntgabe ins Ausland
-Zum Chat und zum Visibility-Check kommt hinzu: Anthropic trainiert seine Modelle nicht mit unseren Inhalten. Das steht zusammen mit der Löschfrist in den Commercial Terms und im Data Processing Addendum .
+Für alles, was an Anthropic geht, gilt: Anthropic trainiert seine Modelle nicht mit unseren Inhalten. Das steht zusammen mit der Löschfrist in den Commercial Terms und im Data Processing Addendum .
 Aufbewahrung und Löschung
 Wir behalten nichts länger, als es gebraucht wird. Alle Fristen auf einen Blick:
-Sperre im Chat, im Kontaktformular und im Visibility-Check · Ihre IP-Adresse liegt nur im Arbeitsspeicher des Servers, nie auf der Festplatte, und wird nicht dauerhaft abgelegt
-Ihre Eingaben und Vaias Antworten bei Anthropic · 30 Tage
-Bericht aus dem Visibility-Check · 30 Tage auf unserem Server, ebenso lange die Auszüge der geprüften Website bei Anthropic
-Anfragen per Mail oder Formular, aus denen kein Auftrag wird · 30 Tage
+Sperre im Chat, im Visibility-Check, in der Erstanalyse, im Offerten-Tool und in der KI-Standortbestimmung · Ihre IP-Adresse liegt nur im Arbeitsspeicher des Servers, höchstens 24 Stunden, und wird nicht dauerhaft abgelegt. Ausnahme: Wer die Sperre der Erstanalyse auslöst, steht im Betriebsprotokoll dieses Dienstes, bis er neu aufgesetzt wird
+Was Anthropic für uns auswertet (Chat, Visibility-Check, Erstanalyse, Offerten-Tool, KI-Standortbestimmung) · höchstens 30 Tage bei Anthropic
+Bericht aus dem Visibility-Check · 30 Tage auf unserem Server
+Offerten aus dem Offerten-Tool · 180 Tage auf unserem Server, ohne Kontaktdaten
+Anfragen per Mail, Kontaktformular, Erstanalyse, Offerten-Tool oder Visibility-Check, aus denen kein Auftrag wird · 12 Monate, samt dem Kürzel der IP-Adresse
 Zugriffsprotokoll im Kundenportal · 90 Tage
 Buchhaltungsunterlagen · 10 Jahre. Das schreibt Art. 958f OR vor. Daran können wir nichts ändern, auch nicht auf Wunsch.
 Sonst entsteht auf der Website nichts, was aufbewahrt werden müsste: kein Zugriffsprotokoll, keine IP-Adressen.
@@ -1017,7 +1033,7 @@ Herausgabe Ihrer Daten · Sie erhalten die Daten, die Sie uns gegeben haben, in 
 Widerspruch · Sie können einer Bearbeitung widersprechen. Wir hören dann damit auf, ausser es gibt einen zwingenden Grund dagegen. Den nennen wir Ihnen dann.
 Sind Sie mit unserer Antwort nicht zufrieden, können Sie sich an den Eidgenössischen Datenschutz- und Öffentlichkeitsbeauftragten (EDÖB) in Bern wenden.
 Änderungen
-Ändert sich an dieser Website etwas, das Ihre Daten betrifft, ändern wir diese Erklärung mit. Diese Fassung stammt vom 11. September 2026.
+Ändert sich an dieser Website etwas, das Ihre Daten betrifft, ändern wir diese Erklärung mit. Diese Fassung stammt vom 5. Oktober 2026.
 FRAGEN?
 Etwas ist unklar geblieben?
 Schreiben Sie uns. Wir antworten selbst und erklären gerne, was wir hier meinen.
@@ -1034,15 +1050,24 @@ AGB
 Die Bedingungen im Wortlaut.
 Es gilt Schweizer Recht. Für bestehende Verträge gelten die AGB, die bei Vertragsabschluss vereinbart wurden.
 1. Geltungsbereich
-Diese Allgemeinen Geschäftsbedingungen (AGB) regeln sämtliche Geschäftsbeziehungen zwischen der vaiacon GmbH (nachfolgend «Anbieterin») und ihren Kunden im Zusammenhang mit Beratungsdienstleistungen, Unternehmensentwicklung, Prozessautomatisierung, Digitalisierung, Entwicklung und Implementierung von Software- und KI-Lösungen sowie Support- und Wartungsleistungen. Abweichende Bedingungen des Kunden gelten nur, sofern sie von der Anbieterin ausdrücklich und schriftlich anerkannt wurden.
+Diese Allgemeinen Geschäftsbedingungen (AGB) regeln sämtliche Geschäftsbeziehungen zwischen der vaiacon GmbH (nachfolgend «Anbieterin») und ihren Kunden im Zusammenhang mit Beratungsdienstleistungen, Unternehmensentwicklung, Prozessautomatisierung, Digitalisierung, Entwicklung und Implementierung von Software- und KI-Lösungen, Schulungen und Lerninhalten sowie Support- und Wartungsleistungen. Abweichende Bedingungen des Kunden gelten nur, sofern sie von der Anbieterin ausdrücklich und schriftlich anerkannt wurden.
 2. Vertragsabschluss
 Ein Vertrag kommt durch die schriftliche Annahme einer Offerte, die Unterzeichnung eines Vertrages oder die schriftliche Beauftragung durch den Kunden zustande. Die Anbieterin ist berechtigt, Anfragen ohne Angabe von Gründen abzulehnen.
+Erstgespräch, Erstanalyse, KI-Standortbestimmung, Visibility-Check und die Richtofferte aus dem Offerten-Tool auf vaiacon.ch sind kostenlos und unverbindlich. Durch sie entsteht kein Vertrag.
 3. Leistungsumfang
-Unternehmensentwicklung und Transformation, Analyse und Optimierung von Geschäftsprozessen, Digitalisierung, Automatisierungslösungen, Software- und Schnittstellenentwicklung, KI-Integration, Datenanalysen, Schulungen, Support, Wartung und Projektbegleitung. Der konkrete Leistungsumfang ergibt sich aus Angebot oder Vertrag.
+Die Anbieterin arbeitet in drei Bereichen: KI-Kompetenz (Trainings, Coachings, E-Learnings und Videos nach Mass, Begleitung vor Ort, Change Management), Sichtbarkeit (Auffindbarkeit bei Suchmaschinen und KI-Assistenten) und Automationen (Analyse und Optimierung von Geschäftsprozessen, Automatisierungslösungen, Software- und Schnittstellenentwicklung, KI-Integration). Dazu kommen Support, Wartung und laufende Begleitung. Der konkrete Leistungsumfang ergibt sich aus Offerte oder Vertrag.
 4. Mitwirkungspflichten
 Der Kunde stellt Informationen, Zugänge und Ansprechpartner rechtzeitig bereit und sichert die rechtmässige Bereitstellung sämtlicher Daten zu. Verzögerungen verlängern Fristen entsprechend.
 5. Vergütung
-Gemäss Offerte oder Vertrag. Sofern nichts anderes vereinbart wurde, erfolgt die Abrechnung nach Aufwand. Rechnungen sind innert 30 Tagen zahlbar. Bei Verzug kann die Anbieterin Leistungen aussetzen.
+Es gelten die Preise der Offerte oder des Vertrags. Alle Preise verstehen sich in Schweizer Franken und enthalten die gesetzliche Mehrwertsteuer. Eine Offerte gilt 30 Tage.
+Preise auf vaiacon.ch und Richtofferten aus dem Offerten-Tool sind Richtwerte. Verbindlich wird ein Preis erst mit der Offerte, die die Anbieterin bestätigt hat.
+Ein Festpreis gilt für den vereinbarten Umfang. Mehraufwand kündigt die Anbieterin vorab an und verrechnet ihn nach den Stundensätzen der Offerte. Ist nichts anderes vereinbart, erfolgt die Abrechnung nach Aufwand.
+Projekte und Schulungen stellt die Anbieterin nach der Leistung in Rechnung, laufende Leistungen monatlich im Voraus. Rechnungen sind innert 30 Tagen zahlbar. Bei Verzug kann die Anbieterin Leistungen aussetzen.
+5a. Laufende Leistungen
+Laufende Leistungen wie Begleitung, Betreuung, Wartung und wiederkehrende Arbeiten an der Sichtbarkeit laufen auf unbestimmte Zeit. Beide Parteien können sie schriftlich oder per E-Mail auf das Ende des folgenden Monats kündigen.
+5b. Schulungen und Termine
+Trainings, Coachings und Workshops werden pro Gruppe zum Preis der Offerte verrechnet. Der Kunde kann einen vereinbarten Termin bis 14 Tage vorher kostenlos absagen oder verschieben. Bei späterer Absage sind 50 % des Preises geschuldet, bei einer Absage weniger als 3 Arbeitstage vorher 100 %.
+Muss die Anbieterin einen Termin absagen, wird ein Ersatztermin vereinbart. Weitere Ansprüche bestehen nicht.
 6. Termine
 Termine gelten als Richtwerte, sofern nicht ausdrücklich verbindlich vereinbart. Keine Haftung für Verzögerungen durch Kunden oder Dritte.
 7. Einsatz künstlicher Intelligenz
@@ -1053,8 +1078,10 @@ Bearbeitung personenbezogener Daten erfolgt nach geltendem Datenschutzrecht. Sow
 Beide Parteien behandeln sämtliche vertraulichen Informationen vertraulich. Die Pflicht gilt über das Vertragsende hinaus.
 10. Geistiges Eigentum
 Urheberrechte, Konzepte, Methoden, Frameworks, Bibliotheken, Vorlagen, Prompts, KI-Agenten, Workflows, Automatisierungen, Skripte und wiederverwendbare Komponenten verbleiben bei der Anbieterin. Der Kunde erhält nach vollständiger Zahlung ausschliesslich die vertraglich vereinbarten Nutzungsrechte. Open-Source-Komponenten unterliegen ihren jeweiligen Lizenzen.
+Lerninhalte, die die Anbieterin eigens für den Kunden erstellt (E-Learnings, Videos, Unterlagen), darf der Kunde nach vollständiger Zahlung zeitlich unbeschränkt im eigenen Betrieb nutzen. Die Weitergabe an Dritte und der Weiterverkauf brauchen die schriftliche Zustimmung der Anbieterin.
 11. Gewährleistung
 Die Anbieterin schuldet eine sorgfältige Leistungserbringung, jedoch keinen bestimmten wirtschaftlichen Erfolg.
+Platzierungen in Suchmaschinen und Nennungen durch KI-Assistenten hängen von Dritten ab und werden nicht zugesichert. Analysen, Standortbestimmungen und Berichte sind Einschätzungen und Empfehlungen, keine Zusage eines Erfolgs.
 11a. Projektabnahme
 Nach Abschluss eines Projektes oder einer Projektphase wird der Kunde zur Abnahme aufgefordert. Erfolgt innerhalb von zehn Arbeitstagen weder eine begründete schriftliche Mängelrüge noch eine Ablehnung der Abnahme, gilt die Leistung als abgenommen. Unerhebliche Mängel berechtigen nicht zur Verweigerung der Abnahme.
 11b. Änderungswünsche
@@ -1076,7 +1103,9 @@ Keine Haftung für Ausfälle oder Änderungen externer Cloud-, API-, Hosting- od
 11j. Exportkontrolle und Compliance
 Der Kunde hält sämtliche gesetzlichen Vorgaben ein. Die Anbieterin darf Leistungen einstellen, sofern gesetzliche Gründe dies verlangen.
 12. Haftung
-Haftung nur für Vorsatz oder grobe Fahrlässigkeit, soweit gesetzlich zulässig. Ausgeschlossen sind indirekte Schäden, Folgeschäden, Datenverlust, Betriebsunterbrüche, entgangener Gewinn, entgangene Einsparungen, Reputationsschäden, Cyberangriffe, Hackerangriffe, Ransomware, Schäden aufgrund fehlerhafter Eingabedaten, KI-Halluzinationen und Entscheidungen des Kunden. Die Gesamthaftung ist auf den niedrigeren Betrag aus der Projektvergütung oder CHF 100'000 begrenzt, soweit gesetzlich zulässig.
+Die Anbieterin haftet für Schäden, die sie vorsätzlich oder grobfahrlässig verursacht. Für leichte Fahrlässigkeit ist die Haftung ausgeschlossen, soweit das Gesetz es zulässt.
+Wo sich die Haftung für leichte Fahrlässigkeit nicht ausschliessen lässt, ist sie auf den niedrigeren Betrag aus der Vergütung des betroffenen Auftrags oder CHF 100'000 begrenzt. Sie umfasst dann keine indirekten Schäden und Folgeschäden wie Datenverlust, Betriebsunterbrüche, entgangenen Gewinn, entgangene Einsparungen und Reputationsschäden.
+Für Schäden aus Angriffen Dritter (Hackerangriffe, Ransomware), aus fehlerhaften Eingabedaten, aus unzutreffenden KI-Ausgaben und aus Entscheidungen des Kunden haftet die Anbieterin nur, wenn sie diese vorsätzlich oder grobfahrlässig mitverursacht hat.
 13. Leistungen Dritter
 Einsatz von Unterauftragnehmern und Drittsoftware ist zulässig. Keine Haftung ausserhalb des Einflussbereichs.
 14. Support und Wartung
@@ -1084,9 +1113,9 @@ Nur bei entsprechender Vereinbarung. Service Levels ergeben sich aus dem Vertrag
 15. Höhere Gewalt
 Keine Haftung bei höherer Gewalt.
 16. Änderungen der AGB
-Für bestehende Verträge gelten die bei Vertragsabschluss vereinbarten AGB, sofern nichts anderes vereinbart wird.
+Für bestehende Verträge gelten die bei Vertragsabschluss vereinbarten AGB, sofern nichts anderes vereinbart wird. Diese Fassung stammt vom 5. Oktober 2026.
 17. Anwendbares Recht und Gerichtsstand
-Es gilt Schweizer Recht. Gerichtsstand ist der Sitz der Anbieterin.
+Es gilt Schweizer Recht. Gerichtsstand ist der Sitz der Anbieterin. Zwingende gesetzliche Gerichtsstände bleiben vorbehalten.
 18. Versicherung
 Die Anbieterin unterhält eine angemessene Betriebs- und/oder Berufshaftpflichtversicherung. Eine weitergehende Haftung besteht nicht.
 19. Salvatorische Klausel
