@@ -8,7 +8,7 @@ const REQUIRED = ALL_FIELDS.filter((f) => f.required).map((f) => f.name);
 function toAntworten(answers) {
   const out = {};
   ALL_FIELDS.forEach((f) => {
-    if (f.name === 'E-Mail' || f.name === 'Telefon') return; // Kontaktdaten nur in die Mail, nicht zur KI
+    if (f.name === 'Firma und Name' || f.name === 'E-Mail' || f.name === 'Telefon') return; // Name und Kontaktdaten nur in die Anfrage, nicht zur KI
     const v = answers[f.name];
     const s = Array.isArray(v) ? v.join(', ') : (v || '').trim();
     if (s) out[f.name] = s;
@@ -298,6 +298,7 @@ function ErstanalyseApp() {
                 {busy ? 'Ihre Antworten werden ausgewertet …' : 'Auswertung anfordern'}
               </EaButton>
               {busy ? <p className="ea-busy-note">Einen Moment bitte, das kann bis zu einer halben Minute dauern.</p> : <p className="ea-trust">Klar · Persönlich · Ohne Verkaufsdruck</p>}
+              <p className="ea-hint">Ihre Antworten gehen an unseren Server in der Schweiz. Die Schätzung schreibt ein KI-Dienst, ohne Ihren Namen und Ihre Kontaktdaten. Mehr dazu in der <a href="../../datenschutz#erstanalyse">Datenschutzerklärung</a>.</p>
             </div>
           </React.Fragment>
         )}
