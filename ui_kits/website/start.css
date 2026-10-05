@@ -121,15 +121,6 @@
   gap: 10px;
 }
 
-.st-voll__nr {
-  margin: 0;
-  font-family: var(--font-mono, "IBM Plex Mono", monospace);
-  font-size: 12.5px;
-  font-weight: 600;
-  letter-spacing: 0.16em;
-  color: var(--peach-200);
-}
-
 .st-voll__titel {
   margin: 0;
   font-size: clamp(32px, 3.6vw, 52px);
@@ -484,7 +475,6 @@
   }
 
   /* Nachbarn zeigen nur Roboter und Namen */
-  .st-js .st-panel:not([data-pos="mitte"]) .st-voll__nr,
   .st-js .st-panel:not([data-pos="mitte"]) .st-voll__lead,
   .st-js .st-panel:not([data-pos="mitte"]) .st-haken {
     opacity: 0;
@@ -492,7 +482,6 @@
     transition: opacity 0.2s ease, visibility 0s linear 0.2s;
   }
 
-  .st-js .st-panel[data-pos="mitte"] .st-voll__nr,
   .st-js .st-panel[data-pos="mitte"] .st-voll__lead,
   .st-js .st-panel[data-pos="mitte"] .st-haken {
     opacity: 1;
@@ -846,7 +835,6 @@
   .st-stage,
   .st-panel,
   .st-panel::before,
-  .st-voll__nr,
   .st-voll__lead,
   .st-voll__titel,
   .st-haken,
