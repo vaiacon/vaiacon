@@ -855,3 +855,125 @@
     scroll-behavior: auto;
   }
 }
+
+/* ───────── Vorschlag Oktober 2026 ───────── */
+
+/* Textlinks unter 600 px mindestens 44 px hoch (Desktop unverändert) */
+@media (max-width: 599px) {
+  .st-mehr,
+  .st-weg__fuss a,
+  .st-news__alle a,
+  .st-rueckruf a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
+/* Anhalten-Knopf: Pille mit sichtbarer Schrift statt kleinem Kreis */
+.st-pause {
+  width: auto;
+  height: 40px;
+  gap: 8px;
+  grid-auto-flow: column;
+  padding: 0 16px 0 13px;
+  border-radius: 999px;
+  border-width: 2px;
+  border-color: #fff;
+  background: rgba(28, 22, 19, 0.34);
+}
+
+.st-pause:hover,
+.st-pause:focus-visible {
+  background: rgba(28, 22, 19, 0.55);
+}
+
+.st-pause:focus-visible {
+  outline: 3px solid var(--cream-50);
+  outline-offset: 2px;
+}
+
+.st-pause__text {
+  position: static;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  clip: auto;
+  font-size: 15px;
+  line-height: 1;
+}
+
+/* Gesichter und Preisrahmen im Abschnitt «So fängt es an» */
+.st-gesichter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin: 28px 0 0;
+  font-size: var(--text-size-body);
+  color: var(--text-body);
+}
+
+.st-gesichter__paar {
+  display: flex;
+}
+
+.st-gesichter__foto {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 20%;
+  border: 3px solid var(--cream-50);
+  background: var(--cream-50);
+}
+
+.st-gesichter__foto + .st-gesichter__foto {
+  margin-left: -14px;
+}
+
+.st-gesichter__text {
+  margin: 0;
+  text-align: left;
+}
+
+.st-preisrahmen {
+  max-width: 44rem;
+  margin: 20px auto 0;
+  padding: 16px 22px;
+  border: 2px solid var(--terra-600);
+  border-radius: 18px;
+  text-align: center;
+  font-size: var(--text-size-body);
+  color: var(--text-body);
+}
+
+.st-preisrahmen strong {
+  color: var(--terra-600);
+}
+
+.st-preisrahmen a,
+.st-rueckruf a {
+  font-weight: var(--weight-bold);
+  color: var(--terra-600);
+  text-underline-offset: 3px;
+}
+
+.st-rueckruf {
+  margin: 6px 0 0;
+  font-size: var(--text-size-body);
+  color: var(--text-body);
+  text-align: center;
+}
+
+@media (max-width: 599px) {
+  .st-gesichter {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .st-gesichter__text {
+    text-align: center;
+  }
+}

@@ -90,6 +90,15 @@
   color: var(--terra-500);
 }
 
+/* Unter 600 px mindestens 44 px hoch */
+@media (max-width: 599px) {
+  .ks-karte__mehr {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
 /* Abschnitt mit der Karte allein */
 .ks-sektion .sv-wrap { display: block; }
 

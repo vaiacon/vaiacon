@@ -1,4 +1,4 @@
-// vaiaconVisibility — der Visibility-Check auf visibility.html (seit 04.10.2026).
+// vaiaconVisibility — der Sichtbarkeits-Check auf visibility.html (seit 04.10.2026).
 //
 // Ablauf: Domain eingeben → POST /api/sichtbarkeit. Unser Server ruft die
 // öffentlich zugänglichen Dateien der Domain ab (Startseite, robots.txt,
@@ -618,7 +618,7 @@
     bestellMeldung.setAttribute('data-art', 'fehler');
     bestellMeldung.appendChild(document.createTextNode('Die Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es noch einmal oder schreiben Sie uns an '));
     var a = el('a', null, MAIL);
-    a.href = 'mailto:' + MAIL + '?subject=' + encodeURIComponent('Visibility-Check · ' + aktuelleDomain);
+    a.href = 'mailto:' + MAIL + '?subject=' + encodeURIComponent('Sichtbarkeits-Check · ' + aktuelleDomain);
     bestellMeldung.appendChild(a);
     bestellMeldung.appendChild(document.createTextNode('.'));
   }

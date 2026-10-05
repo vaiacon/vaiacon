@@ -19,20 +19,34 @@
    vom Visibility-Check kam (sessionStorage 'vaiacon-visibility-check').
    Seither bestellt man den Bericht direkt unter dem Ergebnis auf
    visibility.html (POST /api/sichtbarkeit/bestellen), die Uebergabe
-   hierher ist weg. */
+   hierher ist weg.
+
+   Seit Oktober 2026 gibt es zwei Formulare: die Nachricht und den Rückruf
+   (data-art="rueckruf"). Der Rückruf nimmt denselben Weg. Weil der Dienst
+   eine Mailadresse verlangt und kein eigenes Rückruffeld kennt, steht die
+   Angabe im Text der Nachricht, im Feld firma steht «RÜCKRUF» (daran sieht
+   man es im Betreff) und zusätzlich geht art=rueckruf mit; ein Feld, das der
+   Dienst heute noch ignoriert. */
 (function () {
   var ZIEL = window.VAIACON_API_BASIS + '/api/kontakt';           // unser Server (Dienst vaiacon-kontakt); leer wäre: direkt ins Mailprogramm
   var MAIL = 'hallo@vaiacon.ch';
 
-  var formular = document.querySelector('.vc-kontakt');
-  if (!formular) return;
+  var formulare = document.querySelectorAll('.vc-kontakt');
+  Array.prototype.forEach.call(formulare, einrichten);
 
+  function einrichten(formular) {
+  var rueckruf = formular.getAttribute('data-art') === 'rueckruf';
   var knopf = formular.querySelector('button[type="submit"]');
   var meldung = formular.querySelector('.vc-kontakt__meldung');
 
   function wert(name) {
     var feld = formular.querySelector('[name="' + name + '"]');
-    return feld ? feld.value.trim() : '';
+    if (!feld) return '';
+    if (feld.type === 'radio') {
+      var gewaehlt = formular.querySelector('[name="' + name + '"]:checked');
+      return gewaehlt ? gewaehlt.value : '';
+    }
+    return feld.value.trim();
   }
 
   function sagen(text, art) {
@@ -41,6 +55,15 @@
   }
 
   function alsText(d) {
+    if (rueckruf) {
+      return [
+        'RÜCKRUFWUNSCH',
+        'Name: ' + d.name,
+        'Telefon: ' + d.telefon,
+        'Wunschzeit: ' + d.wunschzeit,
+        d.stichwort ? 'Stichwort: ' + d.stichwort : null,
+      ].filter(function (z) { return z !== null; }).join('\n');
+    }
     return [
       'Name: ' + d.name,
       d.firma ? 'Firma: ' + d.firma : null,
@@ -52,7 +75,9 @@
   }
 
   function insMailprogramm(d) {
-    var betreff = 'Anfrage über vaiacon.ch' + (d.firma ? ' · ' + d.firma : '');
+    var betreff = rueckruf
+      ? 'Rückrufwunsch über vaiacon.ch · ' + d.wunschzeit
+      : 'Anfrage über vaiacon.ch' + (d.firma ? ' · ' + d.firma : '');
     window.location.href = 'mailto:' + MAIL
       + '?subject=' + encodeURIComponent(betreff)
       + '&body=' + encodeURIComponent(alsText(d));
@@ -61,20 +86,50 @@
 
   formular.addEventListener('submit', function (ev) {
     ev.preventDefault();
-    var d = {
-      name: wert('name'),
-      firma: wert('firma'),
-      mail: wert('mail'),
-      telefon: wert('telefon'),
-      nachricht: wert('nachricht'),
-      fangfrage: wert('fangfrage'),   // Honigtopf, bleibt bei Menschen leer
-    };
-    if (!d.name || !d.mail || !d.nachricht) {
-      sagen('Bitte Name, E-Mail und Nachricht ausfüllen.', 'fehler');
-      return;
+    var d;
+    if (rueckruf) {
+      d = {
+        name: wert('name'),
+        telefon: wert('telefon'),
+        wunschzeit: wert('wunschzeit') || 'egal',
+        stichwort: wert('stichwort'),
+        fangfrage: wert('fangfrage'),
+      };
+      if (!d.name || !d.telefon) {
+        sagen('Bitte Name und Telefonnummer ausfüllen.', 'fehler');
+        return;
+      }
+    } else {
+      d = {
+        name: wert('name'),
+        firma: wert('firma'),
+        mail: wert('mail'),
+        telefon: wert('telefon'),
+        nachricht: wert('nachricht'),
+        fangfrage: wert('fangfrage'),   // Honigtopf, bleibt bei Menschen leer
+      };
+      if (!d.name || !d.mail || !d.nachricht) {
+        sagen('Bitte Name, E-Mail und Nachricht ausfüllen.', 'fehler');
+        return;
+      }
     }
 
     if (!ZIEL) { insMailprogramm(d); return; }
+
+    // Was an den Dienst geht: beim Rückruf in die bekannten Felder verpackt.
+    var senden = d;
+    if (rueckruf) {
+      senden = {
+        name: d.name,
+        mail: 'keine Angabe',
+        firma: 'RÜCKRUF',
+        telefon: d.telefon,
+        nachricht: alsText(d),
+        fangfrage: d.fangfrage,
+        art: 'rueckruf',
+        wunschzeit: d.wunschzeit,
+      };
+    }
 
     knopf.disabled = true;
     sagen('Wird gesendet …', '');
@@ -82,11 +137,13 @@
     fetch(ZIEL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(d),
+      body: JSON.stringify(senden),
     }).then(function (antwort) {
       if (!antwort.ok) throw new Error('Dienst antwortet mit ' + antwort.status);
       formular.reset();
-      sagen('Danke, Ihre Nachricht ist bei uns. Wir antworten in der Regel innert eines Arbeitstages.', 'gut');
+      sagen(rueckruf
+        ? 'Danke. Wir rufen Sie zurück, zum gewünschten Zeitpunkt.'
+        : 'Danke, Ihre Nachricht ist bei uns. Wir antworten in der Regel innert eines Arbeitstages.', 'gut');
     }).catch(function () {
       // Kein Dienst erreichbar: Weg 2. Kein Fehler für den Besucher, nur ein
       // anderer Weg — die Nachricht ist ja fertig geschrieben.
@@ -95,4 +152,5 @@
       knopf.disabled = false;
     });
   });
+  }
 })();

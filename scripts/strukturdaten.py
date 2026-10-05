@@ -64,6 +64,8 @@ ORGANISATION = {
         "Schweizer Infrastruktur."
     ),
     "email": "hallo@vaiacon.ch",
+    # PLATZHALTER: echte 044-Nummer einsetzen (auch in allen HTML-Seiten, tel:-Links)
+    "telephone": "+41 44 000 00 00",
     "foundingDate": "2026",
     "address": {
         "@type": "PostalAddress",
@@ -158,7 +160,7 @@ MWST_SATZ = "Preise in CHF, inklusive 8,1 % MWST."
 ANGEBOTE = {
     "visibility.html": angebot(
         "Sichtbarkeit", "SEO und GEO",
-        "Von Google gefunden werden und in KI-Antworten vorkommen: SEO und GEO für Schweizer KMU. "
+        "Von Google gefunden werden und in KI-Antworten vorkommen (Fachwörter: SEO und GEO). "
         "Google-Check, KI-Sichtbarkeits-Check, Seiten überarbeiten und laufende Betreuung, mit offen genannten Richtpreisen. " + MWST_SATZ,
         "visibility", "sichtbarkeit"),
     "learning.html": angebot(

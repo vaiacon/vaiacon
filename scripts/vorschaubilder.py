@@ -51,7 +51,7 @@ BILDER = {
                 "vaiacon-buerobot-kontakt-telefon.png", "Der vaiacon-Roboter am Telefon"),
     "automatisierungen": ("Automatisierungen", "Büroarbeit automatisieren für KMU.",
                           "vaiacon-buerobot-automatisierung-zahnrad.png", "Der vaiacon-Roboter mit Zahnrad"),
-    "sichtbarkeit": ("Sichtbarkeit", "SEO und GEO für Schweizer KMU.",
+    "sichtbarkeit": ("Sichtbarkeit", "Sichtbarkeit bei Google und in KI-Antworten.",
                      "vaiacon-buerobot-sichtbarkeit-lupe.png", "Der vaiacon-Roboter mit Lupe"),
     "schulung": ("Schulung im Betrieb", "KI-Schulung für Schweizer KMU.",
                  "vaiacon-buerobot-schulung-zeigestab.png", "Der vaiacon-Roboter mit Zeigestab"),

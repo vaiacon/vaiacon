@@ -104,7 +104,8 @@ body {
   font-weight: var(--weight-bold);
   letter-spacing: var(--tracking-kicker);
   text-transform: uppercase;
-  color: var(--accent);
+  /* dunkleres Terracotta: 5,5:1 auf Creme (vorher 4,4:1, zu schwach für kleine Schrift) */
+  color: var(--terra-600);
 }
 
 .sv-kicker--on-terra {
@@ -1320,6 +1321,7 @@ picture {
 }
 
 .vc-kontakt input,
+.vc-kontakt select,
 .vc-kontakt textarea {
   font-family: var(--font-sans);
   font-size: var(--text-size-body);
@@ -1340,6 +1342,7 @@ picture {
 }
 
 .vc-kontakt input:focus,
+.vc-kontakt select:focus,
 .vc-kontakt textarea:focus {
   outline: none;
   border-color: var(--terra-500);

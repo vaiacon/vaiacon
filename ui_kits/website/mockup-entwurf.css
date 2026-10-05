@@ -1667,3 +1667,60 @@ body {
   text-decoration: none;
   box-shadow: 0 0 0 3px rgba(178, 82, 34, 0.25);
 }
+
+/* ── Zum Inhalt springen ─────────────────────────────────────────────────
+   Erstes Element jeder Seite, nur bei Tastaturfokus sichtbar. */
+.sv-skip {
+  position: fixed;
+  left: 12px;
+  top: -80px;
+  z-index: 1000;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: var(--ink-900);
+  color: var(--cream-50);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.sv-skip:focus,
+.sv-skip:focus-visible {
+  top: 12px;
+  outline: 3px solid var(--peach-200);
+  outline-offset: 2px;
+}
+
+/* ── Telefon im Kopf ─────────────────────────────────────────────────────
+   Desktop: Nummer vor «Kontakt». Mobil: runder Anrufknopf neben dem Menü. */
+.mock-header__tel {
+  white-space: nowrap;
+  font-variant-numeric: tabular-nums;
+}
+
+.mock-header__anruf {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .mock-header__anruf {
+    display: inline-grid;
+    place-items: center;
+    flex: 0 0 auto;
+    width: 44px;
+    height: 44px;
+    margin-left: auto;
+    margin-right: -4px;
+    border: 1.5px solid currentColor;
+    border-radius: 50%;
+    color: var(--cream-50);
+  }
+
+  .mock-header.is-solid .mock-header__anruf {
+    color: var(--terra-600);
+  }
+
+  .mock-header__anruf:hover,
+  .mock-header__anruf:focus-visible {
+    background: rgba(255, 244, 236, 0.16);
+  }
+}
