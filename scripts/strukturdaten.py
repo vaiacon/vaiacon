@@ -181,7 +181,7 @@ ANGEBOTE = {
 SEITEN = [
     "index.html", "visibility.html", "learning.html", "bot.html", "service.html",
     "offerte.html",  # ki-kmu-news/* schreibt scripts/news_bauen.py selbst (eigener ItemList-Block)
-    "ueber-uns.html", "faq.html", "kontakt.html", "agb.html", "datenschutz.html",
+    "ueber-uns.html", "referenzen.html", "faq.html", "kontakt.html", "agb.html", "datenschutz.html",
 ]
 
 
@@ -257,6 +257,8 @@ KI-Standortbestimmung (Selbsttest für Führungskräfte).
   [Feed](https://vaiacon.ch/ki-kmu-news/feed.xml)
 - [Über uns](https://vaiacon.ch/ueber-uns): Die zwei Gründer, wie wir arbeiten
   und wofür wir stehen.
+- [Aus der Praxis](https://vaiacon.ch/referenzen): Eine Kundin erzählt, wie ihr
+  Beauty Studio heute mit vaiacon arbeitet.
 - [Häufige Fragen](https://vaiacon.ch/faq): Kosten und Offerte, Lernformate,
   Datenschutz, Vorwissen, Ablauf einer Zusammenarbeit.
 - [Erstanalyse](https://vaiacon.ch/erstanalyse): Fragebogen mit sofortiger

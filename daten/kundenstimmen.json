@@ -1,0 +1,220 @@
+{
+  "_hinweis": "Einzige Quelle für Kundenstimmen. Seiten und Chat-Wissen werden daraus mit scripts/kundenstimmen.py und scripts/bot_wissen.py erzeugt, nicht von Hand geändert. Lindas Sätze stehen wörtlich; nichts umformulieren, nichts dazuerfinden. Eine Kundenstimme kommt erst hierher, wenn die Kundin sie freigegeben hat.",
+  "freigabe": {
+    "erteilt": true,
+    "datum": "2026-10-05",
+    "nennung": "vorname_studio"
+  },
+  "kundin": {
+    "id": "zuriglow",
+    "vorname": "Linda",
+    "studio": "Züri Glow",
+    "branche": "Beauty Studio",
+    "ort": "Zürich-Altstetten",
+    "nennungen": {
+      "voll": {
+        "attribution": null,
+        "wer": null,
+        "hinweis": "Nicht freigegeben. Erst ausfüllen, wenn die Kundin es wünscht."
+      },
+      "vorname_studio": {
+        "attribution": "Linda, Inhaberin Züri Glow, Beauty Studio in Zürich-Altstetten",
+        "wer": "Linda von Züri Glow"
+      },
+      "branche": {
+        "attribution": "Inhaberin eines Beauty Studios",
+        "wer": "die Inhaberin eines Beauty Studios"
+      }
+    },
+    "gewaehlt": "vorname_studio"
+  },
+  "abschnitte": [
+    {
+      "id": "ausgang",
+      "absatz": "ausgang",
+      "status": "ok",
+      "text": "Mir fehlte das Wissen, um an der Website selbst etwas anzupassen, und ich musste mich auf das Daily Business konzentrieren. Die meisten Termine kamen über eine Buchungsplattform rein. Das hat funktioniert, aber es hat sich nie ganz nach meinem eigenen Studio angefühlt."
+    },
+    {
+      "id": "einrichtung",
+      "absatz": "einrichtung",
+      "status": "ok",
+      "text": "Philip und André haben deshalb alles Technische für mich eingerichtet. Ich war sehr dankbar, dass ich meine Zeit in mein Unternehmen stecken und mich um meine Kundinnen kümmern konnte. Die beiden haben in der Zwischenzeit proaktiv überlegt, was man technisch noch verbessern kann."
+    },
+    {
+      "id": "heute_website",
+      "absatz": "heute",
+      "status": "ok",
+      "text": "Heute habe ich eine neue Website mit eigenem Terminbuch."
+    },
+    {
+      "id": "heute_buchen",
+      "absatz": "heute",
+      "status": "ok",
+      "text": "Meine Kundinnen suchen sich die Behandlung aus, sehen die freien Zeiten und buchen direkt bei mir."
+    },
+    {
+      "id": "heute_selbst",
+      "absatz": "heute",
+      "status": "ok",
+      "text": "Preise, Bilder, Öffnungszeiten und Aktionen ändere ich selbst."
+    },
+    {
+      "id": "heute_frueher",
+      "absatz": "heute",
+      "status": "ok",
+      "text": "Früher musste ich dafür jemanden anschreiben und warten."
+    },
+    {
+      "id": "zahlung",
+      "absatz": "zahlung",
+      "status": "ok",
+      "text": "Auch im Studio hat sich etwas verändert. Wir haben das Zahlungssystem vor Ort optimiert, und meine Einkaufspreise sind heute besser als vorher."
+    },
+    {
+      "id": "monatsende",
+      "absatz": "zahlung",
+      "status": "ok",
+      "text": "Das merke ich direkt am Ende des Monats."
+    },
+    {
+      "id": "beratung",
+      "absatz": "beratung",
+      "status": "ok",
+      "text": "Dazu haben sie mich beraten, wie ich mein Geschäft erweitern kann. Wir haben besprochen, ob ein Online-Store für meine Produkte Sinn macht und ob ich später eine eigene Academy anbieten könnte."
+    },
+    {
+      "id": "ganzes_unternehmen",
+      "absatz": "beratung",
+      "status": "ok",
+      "text": "Es tut gut, wenn jemand nicht nur an die Website denkt, sondern an das ganze Unternehmen."
+    },
+    {
+      "id": "google",
+      "absatz": "google",
+      "status": "ok",
+      "verraet": [
+        "Altstetten"
+      ],
+      "text": "Sie haben auch geschaut, wie man mich bei Google findet. Wenn jemand in Altstetten nach einem Kosmetikstudio sucht, tauche ich jetzt auf, mit richtigen Öffnungszeiten und Fotos, die nach meinem Studio aussehen."
+    },
+    {
+      "id": "erinnerung",
+      "absatz": "erinnerung",
+      "status": "ok",
+      "text": "Die Bestätigungen und Erinnerungen an die Termine gehen jetzt automatisch raus. Das waren vorher jeden Tag ein paar Nachrichten von Hand."
+    },
+    {
+      "id": "zugang",
+      "absatz": "zugang",
+      "status": "ok",
+      "text": "Ich habe einen Zugang für alles, und bei Problemen sind Philip und André immer erreichbar. Wünsche wurden sofort umgesetzt."
+    },
+    {
+      "id": "technik",
+      "absatz": "zugang",
+      "status": "ok",
+      "text": "Um die Technik muss ich mich nicht mehr kümmern."
+    },
+    {
+      "id": "monatsbetrag",
+      "absatz": "zugang",
+      "status": "ok",
+      "text": "Ich zahle einen festen Betrag im Monat und weiss, woran ich bin."
+    },
+    {
+      "id": "schluss",
+      "absatz": "schluss",
+      "status": "ok",
+      "text": "Wenn mich eine Kollegin fragt, sage ich: Redet zuerst mit ihnen. Danach wisst ihr, ob sich etwas lohnt."
+    }
+  ],
+  "nicht_verwendet": [],
+  "orte": {
+    "startseite": [
+      "heute_website",
+      "heute_buchen",
+      "heute_selbst"
+    ],
+    "referenzen": {
+      "ausgangslage": [
+        "ausgang"
+      ],
+      "eingerichtet": [
+        "einrichtung",
+        "zahlung",
+        "monatsende",
+        "beratung",
+        "ganzes_unternehmen",
+        "google",
+        "erinnerung"
+      ],
+      "heute": [
+        "heute_website",
+        "heute_buchen",
+        "heute_selbst",
+        "heute_frueher",
+        "zugang",
+        "technik",
+        "monatsbetrag",
+        "schluss"
+      ]
+    },
+    "service": [
+      "heute_buchen",
+      "erinnerung"
+    ],
+    "visibility": [
+      "google"
+    ],
+    "kontakt": [
+      "schluss"
+    ],
+    "offerte": [
+      "schluss"
+    ],
+    "ueber_uns": [
+      "zugang",
+      "monatsbetrag"
+    ],
+    "faq": [
+      "heute_website"
+    ],
+    "chatbot": [
+      "ausgang",
+      "einrichtung",
+      "heute_website",
+      "heute_buchen",
+      "heute_selbst",
+      "heute_frueher",
+      "zahlung",
+      "monatsende",
+      "beratung",
+      "ganzes_unternehmen",
+      "google",
+      "erinnerung",
+      "zugang",
+      "technik",
+      "monatsbetrag",
+      "schluss"
+    ]
+  },
+  "referenzen_anmerkungen": [],
+  "referenzen_verweise": [
+    {
+      "seite": "bot",
+      "titel": "Automationen",
+      "braucht": "heute_buchen"
+    },
+    {
+      "seite": "visibility",
+      "titel": "Sichtbarkeit",
+      "braucht": "google"
+    },
+    {
+      "seite": "service",
+      "titel": "Begleitung",
+      "braucht": "zugang"
+    }
+  ]
+}

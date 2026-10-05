@@ -1,0 +1,68 @@
+/* Kundenstimmen. Die dunkle Zitatkarte folgt components/cards/QuoteCard;
+   Farben, Abstände und Radien kommen aus den Tokens. Der Text steht im HTML,
+   geschrieben von scripts/kundenstimmen.py. */
+
+.ks-karte {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 46rem;
+  box-sizing: border-box;
+  background: var(--ink-950);
+  border-radius: 24px;
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  text-align: left;
+}
+.ks-karte--breit { max-width: 52rem; }
+.ks-karte__logo { display: block; height: 32px; width: auto; opacity: .95; }
+.ks-karte__zitat { margin: 0; display: flex; flex-direction: column; gap: 16px; }
+.ks-karte__zitat p {
+  margin: 0;
+  font-size: 21px;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  line-height: 1.5;
+  color: #fff;
+  overflow-wrap: anywhere;
+}
+.ks-karte__nennung {
+  margin: 0;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(233, 140, 88, .9);
+}
+.ks-karte__mehr {
+  font-family: var(--font-sans);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--orange-300);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+.ks-karte__mehr:hover, .ks-karte__mehr:focus-visible { color: #fff; }
+.ks-karte__mehr:focus-visible { outline: 3px solid var(--orange-300); outline-offset: 3px; border-radius: 4px; }
+
+/* Abschnitt mit der Karte allein */
+.ks-sektion .sv-wrap { display: block; }
+
+/* Schritte auf der Seite «Aus der Praxis» */
+.ks-schritt .sv-wrap { display: flex; flex-direction: column; align-items: center; gap: var(--space-9); }
+.ks-schritt .sv-center { display: flex; flex-direction: column; }
+/* Text von uns (nicht von der Kundin): ruhiger gesetzt, damit er nicht als Zitat gilt */
+.ks-unser { color: var(--text-muted, inherit); }
+.ks-unser--klein { max-width: 46rem; margin: 0; font-size: 15px; text-align: left; }
+
+/* Unter dem Formular auf Kontakt und Offerte */
+.ks-eingebettet { margin-top: var(--space-11); }
+
+/* Knöpfe am Ende der Seite «Aus der Praxis» */
+.ks-verweise .sv-wrap { display: flex; flex-direction: column; align-items: center; gap: var(--space-5); }
+
+@media (max-width: 700px) {
+  .ks-karte { padding: 28px 22px; border-radius: 20px; }
+  .ks-karte__zitat p { font-size: 18px; }
+}

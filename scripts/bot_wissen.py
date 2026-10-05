@@ -69,6 +69,8 @@ def preisliste() -> list[str]:
 def seitentext(pfad: Path) -> str:
     """Sichtbarer Text einer Seite — ohne Kopfzeile, Menü und Fusszeile."""
     t = pfad.read_text(encoding="utf-8")
+    # Kundenstimmen kommen aus daten/kundenstimmen.json (Abschnitt «Referenz»), nicht aus den Seiten
+    t = re.sub(r"(?s)<!-- kundenstimme:(\w+):anfang -->.*?<!-- kundenstimme:\1:ende -->", " ", t)
     t = re.sub(r"(?s)<(script|style|head|header|footer|nav)\b.*?</\1>", " ", t)
     t = re.sub(r"(?s)<!--.*?-->", " ", t)
     # Absatzgrenzen erhalten, damit der Text lesbar bleibt statt zu einem Block zu verkleben
@@ -77,6 +79,37 @@ def seitentext(pfad: Path) -> str:
     t = html.unescape(t)
     zeilen = [re.sub(r"[ \t]+", " ", z).strip() for z in t.split("\n")]
     return "\n".join(z for z in zeilen if z)
+
+
+def referenz() -> list[str]:
+    """Abschnitt «Referenz» aus der Kundenstimmen-Quelle: nur Status ok, gewählte Nennung."""
+    d = json.loads((WURZEL / "daten" / "kundenstimmen.json").read_text(encoding="utf-8"))
+    k = d["kundin"]
+    n = k["nennungen"][k["gewaehlt"]]
+    if not n.get("attribution"):
+        return []
+    nach_id = {a["id"]: a for a in d["abschnitte"]}
+    sichtbar = [nach_id[i] for i in d["orte"]["chatbot"] if nach_id[i]["status"] == "ok"]
+    if not sichtbar:
+        return []
+    z = ["## Referenz", "",
+         "Wenn jemand nach Referenzen oder Erfahrungen anderer Kundinnen fragt: Es gibt eine",
+         "Kundenstimme, die wir veröffentlichen dürfen. Gib sie wörtlich wieder, ergänze nichts",
+         "und nenne keine Zahlen dazu, die hier nicht stehen. Die ganze Geschichte steht auf",
+         "https://vaiacon.ch/referenzen (Seite «Aus der Praxis»).",
+         "Mit «Academy» meint die Kundin ein eigenes Kursangebot ihres Studios, nicht eine",
+         "Academy von vaiacon (die es nicht gibt).", "",
+         f"Von: {n['attribution']}", ""]
+    gruppen: list[tuple[str, list[str]]] = []
+    for a in sichtbar:
+        if gruppen and gruppen[-1][0] == a["absatz"]:
+            gruppen[-1][1].append(a["text"])
+        else:
+            gruppen.append((a["absatz"], [a["text"]]))
+    for _, texte in gruppen:
+        z.append("«" + " ".join(texte) + "»")
+        z.append("")
+    return z
 
 
 def stand() -> str:
@@ -133,6 +166,8 @@ def bauen() -> tuple[str, list[str]]:
     t.append("Hinweis: Die KI-Standortanalyse im Betrieb (bezahlt, Begleitung) ist nicht die")
     t.append("kostenlose KI-Standortbestimmung (Selbsttest für Führungskräfte).")
     t.append("")
+
+    t.extend(referenz())
 
     t.append("## Der Text der Website")
     t.append("")
