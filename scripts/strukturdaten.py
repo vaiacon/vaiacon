@@ -159,7 +159,7 @@ ANGEBOTE = {
     "visibility.html": angebot(
         "Sichtbarkeit", "SEO und GEO",
         "Von Google gefunden werden und in KI-Antworten vorkommen: SEO und GEO für Schweizer KMU. "
-        "Google-Check, KI-Sichtbarkeits-Check, Seiten überarbeiten und laufende Betreuung zu festen Preisen. " + MWST_SATZ,
+        "Google-Check, KI-Sichtbarkeits-Check, Seiten überarbeiten und laufende Betreuung, mit offen genannten Richtpreisen. " + MWST_SATZ,
         "visibility", "sichtbarkeit"),
     "learning.html": angebot(
         "KI-Kompetenz", "KI-Schulung und Weiterbildung",
