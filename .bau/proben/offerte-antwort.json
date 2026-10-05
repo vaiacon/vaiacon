@@ -1,0 +1,62 @@
+{
+  "nummer": "OFF-20261004-7K3Q",
+  "datum": "2026-10-04",
+  "gueltig_bis": "2026-11-03",
+  "positionen": [
+    {
+      "id": "kk-training-halbtag",
+      "bereich": "KI-Kompetenz",
+      "titel": "Training oder Workshop, Halbtag",
+      "beschreibung": "Ihr Team übt KI an Ihren eigenen Aufgaben. Bei Ihnen im Betrieb, auf Ihre Abläufe zugeschnitten.",
+      "einheit": "pro Halbtag",
+      "menge": 2,
+      "einzelpreis": 1550,
+      "ab": false,
+      "art": "einmalig",
+      "betrag": 3100,
+      "notiz": "Zwei Gruppen mit je acht Personen, Büro und Werkstatt."
+    },
+    {
+      "id": "au-chatbot",
+      "bereich": "Automationen",
+      "titel": "Chatbot für Ihre Website",
+      "beschreibung": "Ein Assistent, der Fragen Ihrer Kundschaft beantwortet und sauber an Ihr Team übergibt.",
+      "einheit": "pauschal",
+      "menge": 1,
+      "einzelpreis": 2450,
+      "ab": true,
+      "art": "einmalig",
+      "betrag": 2450,
+      "notiz": ""
+    },
+    {
+      "id": "si-betreuung-lokal",
+      "bereich": "Sichtbarkeit",
+      "titel": "Laufende Betreuung: lokale Sichtbarkeit",
+      "beschreibung": "Wir halten Ihren Auftritt bei Google und in Karten aktuell.",
+      "einheit": "pro Monat",
+      "menge": 1,
+      "einzelpreis": 400,
+      "ab": false,
+      "art": "monatlich",
+      "betrag": 400,
+      "notiz": ""
+    }
+  ],
+  "summe_einmalig": 5550,
+  "summe_monatlich": 400,
+  "enthaelt_ab_preise": true,
+  "mwst_hinweis": "Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer.",
+  "einleitung": "Vielen Dank für Ihr Interesse. Auf Grundlage Ihrer Auswahl haben wir eine Richtofferte zusammengestellt. Sie zeigt, in welcher Grössenordnung Ihr Vorhaben liegt, und dient als Grundlage für das Gespräch.",
+  "hinweise": [
+    "Mit «ab» gekennzeichnete Preise sind Richtwerte. Der endgültige Preis hängt vom Aufwand ab und wird im Gespräch festgelegt.",
+    "Diese Richtofferte ist unverbindlich und 30 Tage gültig.",
+    "Reisezeit und Spesen sind nicht enthalten."
+  ],
+  "naechste_schritte": "Wir rufen Sie in den nächsten Arbeitstagen kurz an und klären offene Punkte.\nDanach erhalten Sie von uns eine verbindliche Offerte.",
+  "mail_gesendet": true,
+  "mwst_inklusive": true,
+  "mwst_satz": 8.1,
+  "mwst_einmalig": 415.86,
+  "mwst_monatlich": 29.97
+}

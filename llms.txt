@@ -1,43 +1,101 @@
 # vaiacon
 
-> vaiacon GmbH, Zürich, führt Schweizer KMU an KI heran: Sichtbarkeit in
-> Suchmaschinen und KI-Antworten, Weiterbildung, Automatisierung von Büroarbeit
-> und laufende Begleitung. Ohne Fachchinesisch, nach revDSG, auf Schweizer
-> Infrastruktur. Gegründet 2026 von André Ulrich und Philip Krieger.
+> vaiacon GmbH, Zürich, führt Schweizer KMU an KI heran, in drei Bereichen:
+> KI-Kompetenz (Ihr Team lernt, KI sicher einzusetzen), Sichtbarkeit (bei
+> Google gefunden und in KI-Antworten richtig genannt werden) und Automationen
+> (wiederkehrende Büroarbeit läuft von selbst). Auf Wunsch mit laufender
+> Begleitung. Ohne Fachchinesisch, nach revDSG, auf Schweizer Infrastruktur.
+> Gegründet 2026 von André Ulrich und Philip Krieger.
 
 Für wen: Betriebe mit 5 bis 30 Mitarbeitenden und eigenem Büro (Handwerk,
-Treuhand, Praxen, Verwaltungen). Für Einzel- und Kleinstbetriebe sind die
-kostenlosen Kurse der passende Einstieg.
+Treuhand, Praxen, Verwaltungen).
 
 Kontakt: hallo@vaiacon.ch · Lehenstrasse 74, 8037 Zürich
 Erster Schritt: kostenloses Erstgespräch (eine halbe Stunde, am Telefon oder
-am Bildschirm), kostenlose Erstanalyse zur Zeitersparnis (rund zehn Minuten)
-oder kostenloser Visibility-Check der eigenen Website. Rückruf innert eines
-Arbeitstages.
+am Bildschirm), das Offerten-Tool (Richtofferte in zwei Minuten, sofort auf dem
+Bildschirm und per Mail, unverbindlich), die kostenlose KI-Standortbestimmung
+für Führungskräfte, die kostenlose Erstanalyse zur Zeitersparnis oder der
+kostenlose Check der eigenen Website. Rückruf innert eines Arbeitstages.
 
-## Angebote
+## Die drei Bereiche
 
-- [Sichtbarkeit (vaiaconVisibility)](https://vaiacon.ch/visibility): Von Google
-  gefunden werden und in KI-Antworten vorkommen: SEO und GEO für Schweizer KMU.
-  Preis nach Erstgespräch.
-- [Kurse (vaiaconAcademy)](https://vaiacon.ch/academy/): 11 Lernpfade mit
-  58 kurzen Lektionen zu KI im KMU-Alltag. Kostenlos und ohne Konto.
-- [Schulung im Betrieb (vaiaconLearning)](https://vaiacon.ch/learning):
-  Trainings, Coachings und Workshops bei Ihnen im Betrieb. Preis nach
-  Erstgespräch.
-- [Automatisierungen (vaiaconBot)](https://vaiacon.ch/bot): Belege, Offerten,
-  Korrespondenz und Anfragen automatisieren. Ab CHF 600 pro Automation,
-  Fixpreis.
-- [Begleitung (vaiaconService)](https://vaiacon.ch/service): Support für alles,
-  was vaiacon aufgebaut hat: Pflege, Updates, Hilfe bei Fragen und
-  Weiterentwicklung. Ab CHF 90 im Monat, je nach Umfang, monatlich kündbar.
+- [KI-Kompetenz](https://vaiacon.ch/learning): Trainings und Workshops im
+  Betrieb (Halbtag oder ganzer Tag, pro Gruppe), Coaching für Führungskräfte,
+  E-Learning nach Mass, Lernvideos, tägliche Kleinst-Lerneinheiten,
+  Change-Begleitung und Begleitung der Mitarbeitenden vor Ort. Dazu die
+  kostenlose KI-Standortbestimmung für Führungskräfte (Selbsttest mit zwölf
+  Fragen): https://vaiacon.ch/learning#standortbestimmung
+- [Sichtbarkeit](https://vaiacon.ch/visibility): Von Google gefunden werden
+  und in KI-Antworten vorkommen (SEO und GEO). Kostenloser automatischer Check,
+  dazu Google-Check, KI-Sichtbarkeits-Check, Seiten überarbeiten, SEO-Workshop
+  und laufende Betreuung.
+- [Automationen](https://vaiacon.ch/bot): Belege, Offerten, Korrespondenz und
+  Anfragen automatisieren, Chatbot mit Firmenwissen, Telefonassistent,
+  Anbindung an Ihre Software. Fixpreis nach der Erstanalyse.
+- [Begleitung](https://vaiacon.ch/service): Betreuung und Support für alles,
+  was vaiacon aufgebaut hat, Beratung nach Aufwand, Anpassungen und die
+  bezahlte KI-Standortanalyse im Betrieb. Monatlich kündbar.
 
-## Über uns und Fragen
+## Preise
 
+Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer. Die Preise gelten 30 Tage. Stand: 2026-10-04.
+Quelle: https://vaiacon.ch/daten/preise.json. Eine Richtofferte stellen Sie im
+Offerten-Tool zusammen: https://vaiacon.ch/offerte
+
+### KI-Kompetenz
+
+- Training oder Workshop, Halbtag: CHF 1'550 pro Halbtag (Pro Gruppe, nicht pro Person.)
+- Training oder Workshop, ganzer Tag: CHF 2'450 pro Tag (Pro Gruppe, nicht pro Person.)
+- Coaching für Führungskräfte: CHF 190 pro Stunde
+- E-Learning nach Mass: CHF 380 pro Lernminute (Umfang und Gestaltung klären wir im Erstgespräch.)
+- Lernvideo: ab CHF 3'850 (Preis für ein Video von bis zu etwa drei Minuten.)
+- Tägliche Kleinst-Lerneinheiten: CHF 80 pro Person (Für ein Programm von vier Wochen. Die Inhalte werden auf Ihren Betrieb zugeschnitten.)
+- Change-Begleitung: CHF 1'700 pro Tag
+- Begleitung der Mitarbeitenden vor Ort: CHF 1'300 pro Tag
+
+### Sichtbarkeit
+
+- Google-Check (SEO-Audit): CHF 850
+- KI-Sichtbarkeits-Check: CHF 1'300
+- Seite überarbeiten: CHF 310 (Preis je Seite.)
+- SEO-Workshop für Ihr Team: CHF 640
+- Laufende Betreuung: lokal gefunden werden: CHF 400 pro Monat (Den ersten Platz kann niemand versprechen.)
+- Laufende Betreuung: Google-Sichtbarkeit: CHF 850 pro Monat (Den ersten Platz kann niemand versprechen.)
+- Laufende Betreuung: KI-Sichtbarkeit: CHF 1'300 pro Monat (Den ersten Platz kann niemand versprechen.)
+
+### Automationen
+
+- Kleiner Ablauf automatisieren: ab CHF 1'300 pro Ablauf (Fixpreis nach der Erstanalyse.)
+- Belege und Offerten automatisieren: ab CHF 3'000 pro Ablauf (Fixpreis nach der Erstanalyse.)
+- Grosser Ablauf über mehrere Systeme: ab CHF 6'800 pro Ablauf (Fixpreis nach der Erstanalyse.)
+- Chatbot mit Ihrem Firmenwissen: ab CHF 2'450 (Der laufende Betrieb läuft über die Betreuung.)
+- Telefonassistent: ab CHF 2'450 (Der laufende Betrieb läuft über die Betreuung.)
+- Anbindung an Ihre Software: ab CHF 4'250 (Je nach Programm und Umfang.)
+
+### Begleitung
+
+- Betreuung: eine Automation oder ein Assistent: ab CHF 130 pro Monat (Monatlich kündbar.)
+- Betreuung: mehrere Abläufe: ab CHF 290 pro Monat (Monatlich kündbar.)
+- Laufende Begleitung mit festem Zeitbudget: ab CHF 1'300 pro Monat (Umfang nach Erstgespräch. Monatlich kündbar.)
+- KI-Standortanalyse im Betrieb: CHF 2'150
+- Beratung nach Aufwand: CHF 170 pro Stunde
+- Anpassungen und Erweiterungen: CHF 120 pro Stunde
+
+Hinweis: Die KI-Standortanalyse im Betrieb (bezahlt) ist nicht die kostenlose
+KI-Standortbestimmung (Selbsttest für Führungskräfte).
+
+## Weitere Seiten
+
+- [Offerte zusammenstellen](https://vaiacon.ch/offerte): Offerten-Tool,
+  Richtofferte mit echten Preisen, sofort auf dem Bildschirm und per Mail.
+- [KI-KMU-News](https://vaiacon.ch/ki-kmu-news/): Was in der KI für Schweizer
+  KMU gerade zählt, die laufende Woche.
+  [Archiv](https://vaiacon.ch/ki-kmu-news/archiv) ·
+  [Feed](https://vaiacon.ch/ki-kmu-news/feed.xml)
 - [Über uns](https://vaiacon.ch/ueber-uns): Die zwei Gründer, wie wir arbeiten
   und wofür wir stehen.
-- [Häufige Fragen](https://vaiacon.ch/faq): Kosten, Datenschutz, Vorwissen,
-  Ablauf einer Zusammenarbeit.
+- [Häufige Fragen](https://vaiacon.ch/faq): Kosten und Offerte, Lernformate,
+  Datenschutz, Vorwissen, Ablauf einer Zusammenarbeit.
 - [Erstanalyse](https://vaiacon.ch/erstanalyse): Fragebogen mit sofortiger
   Einschätzung, wie viel Zeit in wiederkehrender Büroarbeit steckt.
 - [Kontakt](https://vaiacon.ch/kontakt): Erstgespräch vereinbaren.

@@ -74,115 +74,51 @@ body {
   font-weight: 700;
 }
 
-.mock-header__nav a,
-.mock-nav-group__toggle {
+.mock-header__nav a {
   color: inherit;
   white-space: nowrap;
-}
-
-.mock-header__nav a {
   text-decoration: none;
 }
 
-.mock-nav-group {
-  position: relative;
-}
-
-.mock-nav-group__toggle {
-  display: inline-flex;
+/* ── Zwei Gruppen: die drei Produkte, dann (leiser) der Rest ─────────────
+   Die zweite Gruppe trennt eine feine senkrechte Linie samt Abstand; sie ist
+   etwas dünner geschrieben und blasser, damit die Produkte vorn stehen. */
+.mock-nav-gruppe {
+  display: flex;
   align-items: center;
-  gap: 7px;
-  padding: 8px 0;
-  border: 0;
-  background: transparent;
-  font: inherit;
-  font-weight: inherit;
-  cursor: pointer;
+  gap: clamp(12px, 1.5vw, 22px);
 }
 
-.mock-nav-group__indicator {
-  width: 7px;
-  height: 7px;
-  border-right: 1.5px solid currentColor;
-  border-bottom: 1.5px solid currentColor;
-  transform: translateY(-2px) rotate(45deg);
-  transition: transform 0.2s ease;
+.mock-nav-gruppe--info {
+  position: relative;
+  margin-left: clamp(8px, 1.4vw, 22px);
+  padding-left: clamp(16px, 2vw, 30px);
+  font-weight: 600;
 }
 
-.mock-nav-group__toggle[aria-expanded="true"] .mock-nav-group__indicator {
-  transform: translateY(2px) rotate(225deg);
+.mock-nav-gruppe--info::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 1.5em;
+  border-left: 1px solid currentColor;
+  opacity: 0.38;
+  transform: translateY(-50%);
+}
+
+.mock-nav-gruppe--info a:not(.mock-header__contact) {
+  opacity: 0.86;
 }
 
 .mock-header__nav a:hover,
-.mock-header__nav a:focus-visible,
-.mock-nav-group__toggle:hover,
-.mock-nav-group__toggle:focus-visible {
+.mock-header__nav a:focus-visible {
   color: var(--peach-200);
+  opacity: 1;
 }
 
 .mock-header.is-solid .mock-header__nav a:hover,
-.mock-header.is-solid .mock-header__nav a:focus-visible,
-.mock-header.is-solid .mock-nav-group__toggle:hover,
-.mock-header.is-solid .mock-nav-group__toggle:focus-visible {
-  color: var(--terra-500);
-}
-
-.mock-nav-group__menu {
-  position: absolute;
-  top: calc(100% + 8px);
-  left: 50%;
-  z-index: 1;
-  display: none;
-  min-width: 236px;
-  padding: 8px;
-  border: 1px solid var(--border-strong);
-  border-radius: 8px;
-  background: var(--cream-card);
-  color: var(--ink-900);
-  transform: translateX(-50%);
-}
-
-.mock-nav-group__menu.is-open {
-  display: grid;
-  gap: 2px;
-}
-
-.mock-nav-group__menu a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 44px;
-  padding: 5px 11px;
-  border: 1px solid transparent;
-  border-radius: 6px;
-  color: var(--ink-900);
-  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
-}
-
-.mock-nav-group__menu a::after {
-  content: "→";
-  position: absolute;
-  right: 12px;
-  color: var(--terra-500);
-  opacity: 0;
-  transform: translateX(-4px);
-  transition: opacity 0.18s ease, transform 0.18s ease;
-}
-
-.mock-nav-group__menu a:hover,
-.mock-nav-group__menu a:focus-visible {
-  background: var(--bg-alt);
-  border-color: rgba(178, 82, 34, 0.3);
-  color: var(--terra-500);
-}
-
-.mock-nav-group__menu a:hover::after,
-.mock-nav-group__menu a:focus-visible::after {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.mock-nav-group__menu .mock-nav-accent {
+.mock-header.is-solid .mock-header__nav a:focus-visible {
   color: var(--terra-500);
 }
 
@@ -208,18 +144,20 @@ body {
 .mock-header__contact {
   background: transparent;
   color: inherit;
-  border-radius: 0;
-  padding: 0;
+  border: 1.5px solid currentColor;
+  border-radius: 999px;
+  padding: 7px 17px;
 }
 
 .mock-header__contact:hover,
 .mock-header__contact:focus-visible {
-  background: transparent;
+  background: rgba(255, 244, 236, 0.16);
   color: var(--peach-200);
 }
 
 .mock-header.is-solid .mock-header__contact:hover,
 .mock-header.is-solid .mock-header__contact:focus-visible {
+  background: rgba(178, 82, 34, 0.08);
   color: var(--terra-500);
 }
 
@@ -704,6 +642,10 @@ body {
     font-size: 14px;
   }
 
+  .mock-nav-gruppe {
+    gap: 14px;
+  }
+
   .mock-product-list {
     grid-template-columns: 1fr;
   }
@@ -890,15 +832,21 @@ body {
   }
 
   .mock-mobile-nav .mock-header__contact {
-    background: transparent;
-    color: var(--ink-900);
-    padding: 0;
+    width: auto;
+    min-width: 200px;
+    min-height: 44px;
+    margin-top: 10px;
+    background: var(--terra-500);
+    border-color: var(--terra-500);
+    color: #FFFFFF;
+    padding: 0 28px;
   }
 
   .mock-mobile-nav .mock-header__contact:hover,
   .mock-mobile-nav .mock-header__contact:focus-visible {
-    background: transparent;
-    color: var(--terra-500);
+    background: var(--terra-600, var(--terra-500));
+    border-color: var(--terra-600, var(--terra-500));
+    color: #FFFFFF;
   }
 
   .mock-hero {
@@ -1641,17 +1589,16 @@ body {
 }
 
 /* ── Der Punkt, auf dem man gerade steht ─────────────────────────────────
-   Er verschwindet nicht mehr aus dem Menü, also braucht er ein Zeichen, sonst
+   Er verschwindet nicht aus dem Menü, also braucht er ein Zeichen, sonst
    weiss niemand, wo er ist. Ein Strich darunter, keine zweite Farbe — die
    Marke arbeitet mit Zeichen, nicht mit Auszeichnungsfarben. Der Kontakt-Knopf
-   ist schon eine Pille und bleibt darum aussen vor. */
-.mock-header__nav > a[aria-current="page"]:not(.mock-header__contact),
-.mock-nav-group__toggle.is-current {
+   ist schon eine Pille; aktiv wird er gefüllt statt unterstrichen. */
+.mock-header__nav a[aria-current]:not(.mock-header__contact) {
   position: relative;
+  opacity: 1;
 }
 
-.mock-header__nav > a[aria-current="page"]:not(.mock-header__contact)::after,
-.mock-nav-group__toggle.is-current::after {
+.mock-header__nav a[aria-current]:not(.mock-header__contact)::after {
   content: "";
   position: absolute;
   left: 0;
@@ -1660,32 +1607,28 @@ body {
   height: 2px;
   border-radius: 999px;
   background: currentColor;
-  opacity: 0.9;
 }
 
-/* Der Reiter-Knopf hat 8px Polster; der Strich sitzt trotzdem gleich tief wie
-   bei den Verweisen und läuft nicht unter das Winkelzeichen. */
-.mock-nav-group__toggle.is-current::after {
-  right: 14px;
-  bottom: 2px;
+.mock-header__nav a.mock-header__contact[aria-current] {
+  background: var(--cream-50);
+  border-color: var(--cream-50);
+  color: var(--terra-600, var(--terra-500));
 }
 
-/* ── KI-Kompetenz: Kurse und Schulung im Betrieb unter einem Reiter ───────
-   (25.09.2026). Im Ausklappmenü ist die aktuelle Seite terracotta, der Pfeil
-   steht dauernd. Die Verweise brauchen «relative», sonst sitzt der Pfeil am
-   Menü statt an seiner Zeile. */
-.mock-nav-group__menu a {
-  position: relative;
-  white-space: nowrap;
+.mock-header.is-solid .mock-header__nav a.mock-header__contact[aria-current] {
+  background: var(--terra-500);
+  border-color: var(--terra-500);
+  color: #FFFFFF;
 }
 
-.mock-nav-group__menu a[aria-current="page"] {
-  color: var(--terra-500);
-}
-
-.mock-nav-group__menu a[aria-current="page"]::after {
-  opacity: 1;
-  transform: translateX(0);
+/* ── Handy-Menü: zwei Gruppen mit Trennlinie und kleiner Überschrift ─────
+   Das Menü ist höher als ein kleiner Bildschirm sein kann; es scrollt dann
+   selbst, statt hinter der Kante abzuschneiden. */
+.mock-mobile-nav {
+  max-height: calc(100vh - 66px);
+  max-height: calc(100svh - 66px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .mock-mobile-nav__bereich {
@@ -1693,14 +1636,18 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 4px 0;
-  padding: 6px 0;
-  border-top: 1px solid var(--border-soft);
-  border-bottom: 1px solid var(--border-soft);
+  margin: 0;
+  padding: 6px 0 8px;
+}
+
+.mock-mobile-nav__bereich + .mock-mobile-nav__bereich {
+  margin-top: 6px;
+  padding-top: 10px;
+  border-top: 1px solid var(--border-strong);
 }
 
 .mock-mobile-nav__bereich-titel {
-  padding: 4px 0 2px;
+  padding: 2px 0 4px;
   color: var(--terra-500);
   font-size: 12px;
   font-weight: 700;
@@ -1708,6 +1655,15 @@ body {
   text-transform: uppercase;
 }
 
-.mock-mobile-nav a[aria-current="page"] {
+.mock-mobile-nav a[aria-current] {
   color: var(--terra-500);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 6px;
+}
+
+.mock-mobile-nav a.mock-header__contact[aria-current] {
+  color: #FFFFFF;
+  text-decoration: none;
+  box-shadow: 0 0 0 3px rgba(178, 82, 34, 0.25);
 }

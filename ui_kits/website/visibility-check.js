@@ -20,8 +20,8 @@
   var form = document.getElementById('sv-check-form');
   if (!form) return;
 
-  var ZIEL = '/api/sichtbarkeit';
-  var ZIEL_BESTELLEN = '/api/sichtbarkeit/bestellen';
+  var ZIEL = window.VAIACON_API_BASIS + '/api/sichtbarkeit';
+  var ZIEL_BESTELLEN = window.VAIACON_API_BASIS + '/api/sichtbarkeit/bestellen';
   var MAIL = 'hallo@vaiacon.ch';
   var ZEITGRENZE = 90000;        // ms, dann gibt der Browser auf
   var MIN_LAUF = 700;            // ms, so lange steht jeder Schritt mindestens auf «läuft»

@@ -3,27 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Büroarbeit automatisieren für Schweizer KMU: Belege, Offerten, Korrespondenz und Anfragen. Fixpreis ab CHF 600 pro Automation, nach der Erstanalyse.">
+<meta name="description" content="Büroarbeit automatisieren für Schweizer KMU: Belege, Offerten, Korrespondenz und Anfragen. Fixpreis nach der Erstanalyse, ab CHF 1'300 pro Ablauf, inklusive MWST.">
 <link rel="canonical" href="https://vaiacon.ch/bot">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="vaiacon">
 <meta property="og:locale" content="de_CH">
-<meta property="og:title" content="Büroarbeit automatisieren für KMU · vaiaconBot">
-<meta property="og:description" content="Büroarbeit automatisieren für Schweizer KMU: Belege, Offerten, Korrespondenz und Anfragen. Fixpreis ab CHF 600 pro Automation, nach der Erstanalyse.">
+<meta property="og:title" content="Automationen für Schweizer KMU · vaiacon">
+<meta property="og:description" content="Büroarbeit automatisieren für Schweizer KMU: Belege, Offerten, Korrespondenz und Anfragen. Fixpreis nach der Erstanalyse, ab CHF 1'300 pro Ablauf, inklusive MWST.">
 <meta property="og:url" content="https://vaiacon.ch/bot">
 <meta property="og:image" content="https://vaiacon.ch/assets/vorschau-automatisierungen.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Der vaiacon-Roboter mit Zahnrad, daneben: Büroarbeit automatisieren für KMU.">
 <meta name="twitter:card" content="summary_large_image">
-<title>Büroarbeit automatisieren für KMU · vaiaconBot</title>
+<title>Automationen für Schweizer KMU · vaiacon</title>
 <link rel="stylesheet" href="styles.css">
-<link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20260925-ki-kompetenz">
-<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261004-check">
+<link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20261004-umbau">
+<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261004-umbau">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
-<link rel="icon" href="/favicon.ico" sizes="any">
-<link rel="icon" type="image/png" href="/favicon-32.png" sizes="32x32">
-<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <!-- Strukturdaten: erzeugt von scripts/strukturdaten.py, nicht von Hand aendern -->
 <script type="application/ld+json">
 {
@@ -35,7 +35,7 @@
   "url": "https://vaiacon.ch/",
   "logo": "https://vaiacon.ch/assets/logo-lockup-terra.png",
   "image": "https://vaiacon.ch/assets/vaiacon-buerobot-startseite.png",
-  "description": "vaiacon führt Schweizer KMU an KI heran: Sichtbarkeit in Suchmaschinen und KI-Antworten, Weiterbildung, Automatisierung von Büroarbeit und laufende Begleitung. Gedacht für Betriebe mit 5 bis 30 Mitarbeitenden und eigenem Büro; für Kleinstbetriebe gibt es kostenlose Kurse. Ohne Fachchinesisch, nach revDSG, auf Schweizer Infrastruktur.",
+  "description": "vaiacon führt Schweizer KMU an KI heran, in drei Bereichen: KI-Kompetenz (Trainings, Coaching, E-Learning), Sichtbarkeit in Suchmaschinen und KI-Antworten und Automationen von Büroarbeit; auf Wunsch mit laufender Begleitung. Gedacht für Betriebe mit 5 bis 30 Mitarbeitenden und eigenem Büro. Preise offen und inklusive MWST, Offerte im Offerten-Tool. Ohne Fachchinesisch, nach revDSG, auf Schweizer Infrastruktur.",
   "email": "hallo@vaiacon.ch",
   "foundingDate": "2026",
   "address": {
@@ -73,9 +73,9 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Automatisierungen (vaiaconBot)",
+  "name": "Automationen",
   "serviceType": "Automatisierung von Büroarbeit",
-  "description": "Belege, Offerten, Korrespondenz und Anfragen automatisieren. Fixpreis, genannt nach der Erstanalyse.",
+  "description": "Belege, Offerten, Korrespondenz und Anfragen automatisieren, dazu Chatbot, Telefonassistent und Anbindung an Ihre Software. Fixpreis nach der Erstanalyse. Preise in CHF, inklusive 8,1 % MWST.",
   "url": "https://vaiacon.ch/bot",
   "provider": {
     "@id": "https://vaiacon.ch/#organisation"
@@ -85,14 +85,104 @@
     "name": "Schweiz"
   },
   "offers": {
-    "@type": "Offer",
+    "@type": "AggregateOffer",
     "priceCurrency": "CHF",
-    "priceSpecification": {
-      "@type": "PriceSpecification",
-      "minPrice": 600,
-      "priceCurrency": "CHF",
-      "description": "ab CHF 600 pro Automation, Fixpreis"
-    }
+    "lowPrice": 1300,
+    "highPrice": 6800,
+    "offerCount": 6
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Automationen",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Kleiner Ablauf automatisieren",
+          "description": "Ein einfacher, wiederkehrender Ablauf, zum Beispiel Anfragen sortieren oder Bestätigungen verschicken."
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "CHF",
+          "valueAddedTaxIncluded": true,
+          "minPrice": 1300,
+          "unitText": "Ablauf"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Belege und Offerten automatisieren",
+          "description": "Rechnungen und Belege werden gelesen und abgelegt, Offerten entstehen aus Ihren Vorlagen und Angaben."
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "CHF",
+          "valueAddedTaxIncluded": true,
+          "minPrice": 3000,
+          "unitText": "Ablauf"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Grosser Ablauf über mehrere Systeme",
+          "description": "Ein Ablauf, der mehrere Programme und mehrere Schritte verbindet, zum Beispiel von der Anfrage bis zur Rechnung."
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "CHF",
+          "valueAddedTaxIncluded": true,
+          "minPrice": 6800,
+          "unitText": "Ablauf"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Chatbot mit Ihrem Firmenwissen",
+          "description": "Ein Assistent auf Ihrer Website, der Fragen Ihrer Kundschaft mit Ihren eigenen Angaben beantwortet."
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "CHF",
+          "valueAddedTaxIncluded": true,
+          "minPrice": 2450
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Telefonassistent",
+          "description": "Ein KI-Assistent nimmt Anrufe entgegen, beantwortet Standardfragen und trägt Termine in Ihren Kalender ein."
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "CHF",
+          "valueAddedTaxIncluded": true,
+          "minPrice": 2450
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Anbindung an Ihre Software",
+          "description": "Wir verbinden eine Automation mit Ihrer Branchensoftware, Ihrem Kundenverzeichnis oder Microsoft 365."
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "CHF",
+          "valueAddedTaxIncluded": true,
+          "minPrice": 4250
+        }
+      }
+    ]
   }
 }
 </script>
@@ -109,33 +199,33 @@
         <span></span><span></span><span></span>
       </button>
       <nav class="mock-header__nav" aria-label="Hauptnavigation">
-        <div class="mock-nav-group">
-          <button class="mock-nav-group__toggle" type="button" aria-expanded="false" aria-controls="mock-nav-ki-kompetenz">KI-Kompetenz<span class="mock-nav-group__indicator" aria-hidden="true"></span></button>
-          <div id="mock-nav-ki-kompetenz" class="mock-nav-group__menu">
-            <a href="academy/">Kurse</a>
-            <a href="learning">Schulung im Betrieb</a>
-          </div>
+        <div class="mock-nav-gruppe mock-nav-gruppe--angebot">
+          <a href="learning">KI-Kompetenz</a>
+          <a href="visibility">Sichtbarkeit</a>
+          <a href="bot" aria-current="page">Automationen</a>
         </div>
-        <a href="bot" aria-current="page">Automatisierungen</a>
-        <a href="visibility">Sichtbarkeit</a>
-        <a href="service">Begleitung</a>
-        <a href="ueber-uns">Über uns</a>
-        <a href="faq">FAQ</a>
-        <a class="mock-header__contact" href="kontakt">Kontakt</a>
+        <div class="mock-nav-gruppe mock-nav-gruppe--info">
+          <a href="ki-kmu-news/">KI-KMU-News</a>
+          <a href="faq">FAQ</a>
+          <a href="ueber-uns">Über uns</a>
+          <a class="mock-header__contact" href="kontakt">Kontakt</a>
+        </div>
       </nav>
     </div>
     <nav id="mock-mobile-menu" class="mock-mobile-nav" aria-label="Mobile Navigation">
-      <div class="mock-mobile-nav__bereich">
-        <span class="mock-mobile-nav__bereich-titel">KI-Kompetenz</span>
-        <a href="academy/">Kurse</a>
-        <a href="learning">Schulung im Betrieb</a>
+      <div class="mock-mobile-nav__bereich" role="group" aria-labelledby="mock-mnav-angebot">
+        <span class="mock-mobile-nav__bereich-titel" id="mock-mnav-angebot">Angebot</span>
+        <a href="learning">KI-Kompetenz</a>
+        <a href="visibility">Sichtbarkeit</a>
+        <a href="bot" aria-current="page">Automationen</a>
       </div>
-      <a href="bot" aria-current="page">Automatisierungen</a>
-      <a href="visibility">Sichtbarkeit</a>
-      <a href="service">Begleitung</a>
-      <a href="ueber-uns">Über uns</a>
-      <a href="faq">FAQ</a>
-      <a class="mock-header__contact" href="kontakt">Kontakt</a>
+      <div class="mock-mobile-nav__bereich" role="group" aria-labelledby="mock-mnav-mehr">
+        <span class="mock-mobile-nav__bereich-titel" id="mock-mnav-mehr">Mehr zu vaiacon</span>
+        <a href="ki-kmu-news/">KI-KMU-News</a>
+        <a href="faq">FAQ</a>
+        <a href="ueber-uns">Über uns</a>
+        <a class="mock-header__contact" href="kontakt">Kontakt</a>
+      </div>
     </nav>
   </header>
 
@@ -143,17 +233,17 @@
     <section id="top" class="sv-hero" aria-label="Start">
       <div class="sv-hero__inner">
         <div class="sv-hero__copy">
-          <p class="sv-kicker sv-kicker--on-terra">VAIACON BOT</p>
-          <h1>Die Arbeit, die sich jede Woche wiederholt, macht der Bot.</h1>
+          <p class="sv-kicker sv-kicker--on-terra">AUTOMATIONEN</p>
+          <h1>Die Arbeit, die sich jede Woche wiederholt, läuft von selbst.</h1>
           <p class="sv-hero__lead">
-            <span class="sv-product">vaiacon<span>Bot</span></span> übernimmt, was in Ihrem Betrieb regelmässig Zeit kostet: Belege, Offerten, Korrespondenz, Anfragen. Eingerichtet bei Ihnen, zum Fixpreis.
+            Automationen übernehmen, was in Ihrem Betrieb regelmässig Zeit kostet: Belege, Offerten, Korrespondenz, Anfragen. Eingerichtet bei Ihnen, zum Fixpreis nach der Erstanalyse.
           </p>
           <div class="sv-actions">
             <a class="sv-button sv-button--light" href="erstanalyse">Kostenlose Erstanalyse →</a>
             <a class="sv-button sv-button--glass" href="#ablauf">So läuft es ab →</a>
           </div>
         </div>
-        <div class="sv-hero__visual" aria-label="vaiaconBot Übersicht">
+        <div class="sv-hero__visual" aria-label="Automationen Übersicht">
           <figure class="sv-hero__robot sv-hero__robot--frei">
             <picture><source srcset="assets/vaiacon-buerobot-automatisierung-zahnrad.webp" type="image/webp"><img src="assets/vaiacon-buerobot-automatisierung-zahnrad.png" alt="Der vaiacon-Roboter mit Zahnrad" width="682" height="820" fetchpriority="high"></picture>
           </figure>
@@ -181,7 +271,7 @@
           </article>
           <article class="sv-card">
             <h3>Anfragen und Auskünfte</h3>
-            <p>Die zwanzig Fragen, die täglich kommen, beantwortet der Bot rund um die Uhr und gibt sauber an einen Menschen ab, wenn es persönlich wird.</p>
+            <p>Die zwanzig Fragen, die täglich kommen, beantwortet ein Assistent rund um die Uhr und gibt sauber an einen Menschen ab, wenn es persönlich wird.</p>
           </article>
         </div>
       </div>
@@ -190,10 +280,47 @@
     <section id="preis" class="sv-section sv-section--terra">
       <div class="sv-wrap sv-center">
         <p class="sv-kicker sv-kicker--on-terra">WAS ES KOSTET</p>
-        <h2 class="sv-title sv-title--on-terra">Ab CHF 600 pro Automation. Fixpreis.</h2>
+        <h2 class="sv-title sv-title--on-terra">Was kostet das?</h2>
         <p class="sv-lead sv-lead--on-terra">
-          Den genauen Preis nennen wir nach der Erstanalyse. Sie wissen vor der Umsetzung, woran Sie sind. Eine Automation, die eine Stunde pro Woche spart, ist bei den meisten Betrieben in wenigen Monaten bezahlt. Rechnet sie sich nicht, sagen wir das.
+          Festpreise je Ablauf, genannt nach der Erstanalyse. Sie wissen vor der Umsetzung, woran Sie sind. Eine Automation, die eine Stunde pro Woche spart, ist bei den meisten Betrieben in wenigen Monaten bezahlt. Rechnet sie sich nicht, sagen wir das.
         </p>
+        <div class="sv-card-grid sv-card-grid--three">
+          <article class="sv-card sv-card--sand">
+            <h3>Kleiner Ablauf automatisieren</h3>
+            <p>Ein einfacher, wiederkehrender Ablauf, zum Beispiel Anfragen sortieren oder Bestätigungen verschicken.</p>
+            <p class="sv-card__preis" data-preis="au-ablauf-klein">ab CHF 1'300 pro Ablauf</p>
+          </article>
+          <article class="sv-card sv-card--sand">
+            <h3>Belege und Offerten automatisieren</h3>
+            <p>Rechnungen und Belege werden gelesen und abgelegt, Offerten entstehen aus Ihren Vorlagen und Angaben.</p>
+            <p class="sv-card__preis" data-preis="au-belege-offerten">ab CHF 3'000 pro Ablauf</p>
+          </article>
+          <article class="sv-card sv-card--sand">
+            <h3>Grosser Ablauf über mehrere Systeme</h3>
+            <p>Ein Ablauf, der mehrere Programme und Schritte verbindet, zum Beispiel von der Anfrage bis zur Rechnung.</p>
+            <p class="sv-card__preis" data-preis="au-ablauf-gross">ab CHF 6'800 pro Ablauf</p>
+          </article>
+          <article class="sv-card sv-card--sand">
+            <h3>Chatbot mit Ihrem Firmenwissen</h3>
+            <p>Ein Assistent auf Ihrer Website, der Fragen Ihrer Kundschaft mit Ihren eigenen Angaben beantwortet.</p>
+            <p class="sv-card__preis" data-preis="au-chatbot">ab CHF 2'450</p>
+          </article>
+          <article class="sv-card sv-card--sand">
+            <h3>Telefonassistent</h3>
+            <p>Ein KI-Assistent nimmt Anrufe entgegen, beantwortet Standardfragen und trägt Termine in Ihren Kalender ein.</p>
+            <p class="sv-card__preis" data-preis="au-telefonassistent">ab CHF 2'450</p>
+          </article>
+          <article class="sv-card sv-card--sand">
+            <h3>Anbindung an Ihre Software</h3>
+            <p>Wir verbinden eine Automation mit Ihrer Branchensoftware, Ihrem Kundenverzeichnis oder Microsoft 365.</p>
+            <p class="sv-card__preis" data-preis="au-integration">ab CHF 4'250</p>
+          </article>
+        </div>
+        <p class="sv-lead sv-lead--on-terra" data-preis-mwst>Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer.</p>
+        <div class="sv-actions">
+          <a class="sv-button sv-button--light" href="offerte#automationen">Offerte zusammenstellen →</a>
+          <a class="sv-button sv-button--glass" href="erstanalyse">Erstanalyse starten →</a>
+        </div>
         <div class="sv-beispiel">
           <p class="sv-beispiel__label">Rechenbeispiel</p>
           <p>Ein Sanitärbetrieb mit sechs Mitarbeitenden schreibt zwölf Offerten im Monat. Heute braucht eine Offerte 90 Minuten, mit Automation 25. Das sind 13 Stunden im Monat, die wieder auf der Baustelle sind.</p>
@@ -208,9 +335,6 @@
           <p class="sv-beispiel__label">Rechenbeispiel</p>
           <p>Eine Immobilienverwaltung mit zwölf Mitarbeitenden beantwortet 200 Mieteranfragen im Monat. Heute braucht eine Antwort acht Minuten, mit vorbereitetem Entwurf drei. Das sind knapp 17 Stunden im Monat, die nicht mehr im Postfach verschwinden.</p>
           <p class="sv-beispiel__hinweis">Zur Veranschaulichung, kein echter Kunde.</p>
-        </div>
-        <div class="sv-actions">
-          <a class="sv-button sv-button--light" href="erstanalyse">Erstanalyse starten →</a>
         </div>
       </div>
     </section>
@@ -254,7 +378,7 @@
             <span class="sv-step__no">05</span>
             <div>
               <h3>Kontrolle</h3>
-              <p>Regelmässig prüfen, ob es noch passt, auf Wunsch dauerhaft mit <a href="service">vaiaconService</a>.</p>
+              <p>Regelmässig prüfen, ob es noch passt, auf Wunsch dauerhaft mit unserer <a href="service">Begleitung</a>, <span data-preis="be-betreuung-klein" data-preis-form="betrag">ab CHF 130</span> pro Monat, monatlich kündbar.</p>
             </div>
           </li>
         </ol>
@@ -271,7 +395,7 @@
         </p>
         <div class="sv-actions">
           <a class="sv-button sv-button--light" href="erstanalyse">Kostenlose Erstanalyse →</a>
-          <a class="sv-button sv-button--glass" href="./">Zurück zur Startseite →</a>
+          <a class="sv-button sv-button--glass" href="offerte#automationen">Offerte zusammenstellen →</a>
         </div>
       </div>
     </section>
@@ -282,7 +406,10 @@
       <a class="sv-footer__logo" href="#top" aria-label="Zurück nach oben">
         <img src="assets/logo-lockup-white.svg" alt="vaiacon">
       </a>
-      <p class="sv-footer__adresse"><span>vaiacon GmbH</span><span>Lehenstrasse 74, 8037 Zürich</span><span><a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a></span><span><a href="datenschutz">Datenschutz und Impressum</a> · <a href="agb">AGB</a></span></p>
+      <nav class="sv-footer__links" aria-label="Weitere Seiten">
+        <a href="service">Begleitung</a><a href="offerte">Offerte anfragen</a><a href="ki-kmu-news/">KI-KMU-News</a><a href="datenschutz">Datenschutz und Impressum</a><a href="agb">AGB</a>
+      </nav>
+      <p class="sv-footer__adresse"><span>vaiacon GmbH</span><span>Lehenstrasse 74, 8037 Zürich</span><span><a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a></span></p>
       <a class="sv-footer__top" href="#top">↑ Nach oben</a>
       <div class="sv-footer__social">
         <a href="https://www.facebook.com/vaiacon" target="_blank" rel="noopener" aria-label="vaiacon auf Facebook" title="Facebook">
@@ -298,7 +425,9 @@
     </div>
   </footer>
 </div>
-<script src="ui_kits/website/visibility.js?v=20260925-ki-kompetenz"></script>
-<script src="ui_kits/website/chat.js?v=20261004-vaia-fuss"></script>
+<script src="ui_kits/website/api-basis.js?v=20261004-umbau"></script>
+<script src="ui_kits/website/visibility.js?v=20261004-umbau"></script>
+<script src="ui_kits/website/preise.js?v=20261004-preise"></script>
+<script src="ui_kits/website/chat.js?v=20261004-umbau"></script>
 </body>
 </html>

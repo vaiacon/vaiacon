@@ -1,0 +1,26 @@
+[
+  {
+    "titel": "Apple will den Vollzugriff auf Macs wegen KI-Agenten enger fassen",
+    "datum": "2026-10-02",
+    "rubrik": "sicherheit",
+    "kurz": "Apple hat am 2. Oktober angekündigt, die Einstellung «Full Disk Access» in macOS strenger zu kontrollieren. Manche Entwickler nutzten sie auf eine Weise, die Nutzer gefährden könne. Mit immer selbständigeren KI-Agenten wachse das Risiko. Wer einer App diesen Zugriff geben will, soll es künftig nur durch eine sehr ausdrückliche Handlung können. Ein Datum oder eine macOS-Version nennt Apple nicht.",
+    "adresse": "ki-kmu-news/2026-kw40.html#2026-10-02-apple-festplattenzugriff",
+    "bild": "assets/vaiacon-buerobot-news-sicherheit.png"
+  },
+  {
+    "titel": "Apertus 2.0: das offene Schweizer Sprachmodell soll im ersten Quartal 2027 kommen",
+    "datum": "2026-10-02",
+    "rubrik": "praxis",
+    "kurz": "ETH und EPFL arbeiten laut Blick an Apertus 2.0, der nächsten Fassung des offenen Schweizer Sprachmodells. Die Veröffentlichung ist für das erste Quartal 2027 geplant. Schwerpunkte sind Programmieren, Mathematik und mehrstufige Aufgaben, bei etwa gleichen Betriebskosten. Trainiert wird auf dem Supercomputer Alps in Lugano.",
+    "adresse": "ki-kmu-news/2026-kw40.html#2026-10-02-apertus-2",
+    "bild": "assets/vaiacon-buerobot-news-zeitung.png"
+  },
+  {
+    "titel": "Google zahlt rund 100 Websites für Inhalte in KI-Antworten",
+    "datum": "2026-10-01",
+    "rubrik": "markt",
+    "kurz": "Laut heise zahlt Google in einem Pilotprogramm rund 100 Verlagen, Blogs und Websites für Inhalte, die in den KI-Übersichten der Suche erscheinen. Die Beträge reichen von unter 1000 Dollar über mehrere Monate bis zu über einer Million Dollar. Wie sie berechnet werden, wissen die Teilnehmer nicht. Hintergrund: Die KI-Übersichten haben die Besuche auf den Seiten der Verlage sinken lassen.",
+    "adresse": "ki-kmu-news/2026-kw40.html#2026-10-01-google-zahlt-publisher",
+    "bild": "assets/vaiacon-buerobot-news-markt.png"
+  }
+]
