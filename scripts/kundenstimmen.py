@@ -105,8 +105,8 @@ def absaetze(abschnitte: list[dict]) -> list[str]:
 
 # ---------------------------------------------------------------- Bausteine
 
-def karte(abschnitte: list[dict], nennung: dict, mehr: tuple[str, str] | None = None, breit: bool = False, einzug: str = "      ", logo: str = "assets/logo-mark-white.png") -> str:
-    """Die Zitatkarte (Muster components/cards/QuoteCard); auf der Startseite hell."""
+def karte(abschnitte: list[dict], nennung: dict, mehr: tuple[str, str] | None = None, breit: bool = False, einzug: str = "      ", logo: str = "assets/logo-mark-terra.svg") -> str:
+    """Die helle Zitatkarte (Muster components/cards/QuoteCard)."""
     ps = "\n".join(f'{einzug}    <p>«{esc(t)}»</p>' for t in absaetze(abschnitte))
     zeilen = [
         f'{einzug}<figure class="ks-karte{" ks-karte--breit" if breit else ""}">',

@@ -1,4 +1,4 @@
-/* Kundenstimmen. Die dunkle Zitatkarte folgt components/cards/QuoteCard;
+/* Kundenstimmen. Die Zitatkarte folgt components/cards/QuoteCard, hell auf allen Seiten;
    Farben, Abstände und Radien kommen aus den Tokens. Der Text steht im HTML,
    geschrieben von scripts/kundenstimmen.py. */
 
@@ -45,6 +45,50 @@
 }
 .ks-karte__mehr:hover, .ks-karte__mehr:focus-visible { color: #fff; }
 .ks-karte__mehr:focus-visible { outline: 3px solid var(--orange-300); outline-offset: 3px; border-radius: 4px; }
+
+/* Hell statt schwarz (vorher nur Startseite) */
+
+.ks-karte {
+  position: relative;
+  background: var(--cream-card);
+  border: 1.5px solid var(--peach-150);
+  box-shadow: 0 22px 50px -30px rgba(120, 50, 14, 0.35);
+  padding: 44px 44px 36px;
+  overflow: hidden;
+}
+
+.ks-karte::before {
+  content: "«";
+  position: absolute;
+  top: -34px;
+  right: 26px;
+  font-size: 190px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--peach-150);
+  pointer-events: none;
+}
+
+.ks-karte > * {
+  position: relative;
+}
+
+.ks-karte__zitat p {
+  color: var(--ink-900);
+}
+
+.ks-karte__nennung {
+  color: var(--terra-500);
+}
+
+.ks-karte__mehr,
+.ks-karte__mehr:visited {
+  color: var(--terra-600);
+}
+
+.ks-karte__mehr:hover {
+  color: var(--terra-500);
+}
 
 /* Abschnitt mit der Karte allein */
 .ks-sektion .sv-wrap { display: block; }
