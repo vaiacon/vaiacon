@@ -5,69 +5,89 @@
 
 .lr-wrap-links { text-align: left; }
 
-/* ── Auswahl ─────────────────────────────────────────────────────────── */
+/* ── Auswahl ───────────────────────────────────────────────────────────
+   Ein Kasten, drei Zeilen: links die Frage, rechts drei gleich breite
+   Felder. Darunter hängt die Zusammenfassung als Fuss desselben Kastens. */
 .lr-steuerung {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: var(--space-4);
   margin: var(--space-11) auto 0;
-  width: min(100%, 64rem);
+  box-sizing: border-box;
+  width: min(100%, 54rem);
+  padding: var(--space-2) var(--space-6);
+  border: 1px solid var(--border-strong);
+  border-bottom: 0;
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  background: var(--surface-card);
   text-align: left;
 }
 .lr-steuerung[hidden] { display: none; }
 
 .lr-gruppe {
   margin: 0;
-  padding: var(--space-5) var(--space-5) var(--space-6);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-lg);
-  background: var(--surface-card);
+  padding: var(--space-4) 0;
+  border: 0;
   min-width: 0;
 }
+.lr-gruppe + .lr-gruppe { border-top: 1px solid var(--border-soft); }
+/* Schwebend steht die Frage neben den Feldern statt auf dem Rahmen. */
 .lr-gruppe legend {
-  padding: 0 var(--space-2);
-  font-family: var(--font-mono);
-  font-size: var(--text-overline);
+  float: left;
+  width: 15rem;
+  padding: 21px var(--space-4) 0 0;
+  color: var(--text-strong);
+  font-size: var(--text-body-sm);
   font-weight: var(--weight-semibold);
-  letter-spacing: var(--tracking-badge);
-  text-transform: uppercase;
-  color: var(--terra-600);
+  line-height: 1.3;
 }
-.lr-optionen { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-3); }
-.lr-option { position: relative; }
+.lr-optionen {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-pill);
+  background: var(--cream-100);
+}
+.lr-option { position: relative; display: flex; }
 .lr-option input {
   position: absolute; opacity: 0; inset: 0; width: 100%; height: 100%; margin: 0; cursor: pointer;
 }
 .lr-option span {
-  display: inline-block;
-  padding: 9px 15px;
-  border: 1.5px solid var(--border-strong);
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 6px 10px;
   border-radius: var(--radius-pill);
-  background: var(--cream-100);
   color: var(--text-strong);
   font-size: var(--text-ui);
   font-weight: var(--weight-semibold);
-  line-height: 1.25;
-  transition: background var(--duration-fast) var(--ease-spring), color var(--duration-fast) var(--ease-spring), border-color var(--duration-fast) var(--ease-spring);
+  line-height: 1.2;
+  text-align: center;
+  transition: background var(--duration-fast) var(--ease-spring), color var(--duration-fast) var(--ease-spring);
 }
 .lr-option:hover span { background: var(--peach-150); }
 .lr-option input:checked + span {
   background: var(--terra-500);
-  border-color: var(--terra-500);
   color: var(--cream-50);
 }
 .lr-option input:focus-visible + span { outline: 3px solid var(--orange-500); outline-offset: 2px; }
 
 .lr-info {
   margin: var(--space-6) auto 0;
-  max-width: 60ch;
-  padding: var(--space-3) var(--space-5);
-  border: 1px dashed var(--border-strong);
-  border-radius: var(--radius-md);
+  box-sizing: border-box;
+  max-width: 54rem;
+  padding: var(--space-4) var(--space-6);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
   color: var(--text-body);
   font-size: var(--text-body-sm);
   line-height: var(--leading-body);
   background: var(--peach-100);
+}
+.lr-steuerung:not([hidden]) + .lr-info {
+  margin-top: 0;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
 }
 .lr-info strong { color: var(--terra-600); }
 
@@ -319,13 +339,24 @@ html:not(.lr-js) .lr-station__knoten span,
   .lr-format { --lr-spalten: 3; }
   .lr-tage__liste { grid-template-columns: repeat(4, minmax(0, 1fr)); }
 }
+/* Auswahl: unter 900px reicht der Platz nicht für Frage und drei einzeilige Felder nebeneinander */
+@media (max-width: 900px) {
+  /* bleibt schwebend: sonst setzt der Browser die Frage wieder auf die Trennlinie */
+  .lr-gruppe legend { width: 100%; padding: 0 0 var(--space-2); }
+  .lr-optionen { clear: both; }
+}
+
 @media (max-width: 860px) {
   .lr-format { --lr-spalten: 2; }
-  .lr-steuerung { grid-template-columns: 1fr; }
   .lr-tage__liste { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .lr-zwei { grid-template-columns: 1fr; }
 }
 @media (max-width: 760px) {
+  /* Auswahl: Frage über den Feldern, Felder dürfen zweizeilig werden */
+  .lr-steuerung { padding: var(--space-2) var(--space-4); }
+  .lr-optionen { border-radius: 18px; }
+  .lr-option span { min-height: 46px; padding: 6px 6px; border-radius: 14px; font-size: 13.5px; }
+  .lr-info { padding: var(--space-4); }
   /* Weg links, Karte rechts, Bild klein unter der Karte */
   .lr-spur { left: 22px; margin-left: -3px; }
   .lr-station,
@@ -351,6 +382,11 @@ html:not(.lr-js) .lr-station__knoten span,
   .lr-tage__liste { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .lr-tag { min-height: 0; }
   .lr-kurve { padding: var(--space-4); }
+}
+
+/* kleinste Handys: Felder bis an den Rand nutzen */
+@media (max-width: 360px) {
+  .lr-option span { padding: 6px 3px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
