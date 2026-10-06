@@ -20,7 +20,7 @@
 <link rel="stylesheet" href="styles.css?v=20261005-vorschlag">
 <link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20261005-vorschlag">
 <link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261005-vorschlag">
-<link rel="stylesheet" href="ui_kits/website/lernreise.css?v=20261005-auswahl">
+<link rel="stylesheet" href="ui_kits/website/lernreise.css?v=20261007-ab50">
 <link rel="stylesheet" href="ui_kits/website/standort.css?v=20261004-umbau">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -352,10 +352,11 @@
           <form class="lr-steuerung" id="lernreise-steuerung" hidden onsubmit="return false">
             <fieldset class="lr-gruppe">
               <legend>Mitarbeitende</legend>
-              <div class="lr-optionen">
+              <div class="lr-optionen lr-optionen--vier">
                 <label class="lr-option"><input type="radio" name="groesse" value="klein"><span>bis 10</span></label>
                 <label class="lr-option"><input type="radio" name="groesse" value="mittel" checked><span>11 bis 20</span></label>
-                <label class="lr-option"><input type="radio" name="groesse" value="gross"><span>21 bis 30</span></label>
+                <label class="lr-option"><input type="radio" name="groesse" value="gross"><span>21 bis 50</span></label>
+                <label class="lr-option"><input type="radio" name="groesse" value="sehrgross"><span>ab 50</span></label>
               </div>
             </fieldset>
             <fieldset class="lr-gruppe">
@@ -534,7 +535,7 @@
           <article class="sv-card">
             <h3>Für wen</h3>
             <ul class="lr-liste-punkte">
-              <li>Betriebe mit 5 bis 30 Mitarbeitenden und Büroarbeit am Bildschirm.</li>
+              <li>Betriebe ab 5 Mitarbeitenden mit Büroarbeit am Bildschirm, auch mit 50 und mehr.</li>
               <li>Führungskräfte, die entscheiden müssen, wie KI im Team genutzt wird.</li>
               <li>Teams, in denen einzelne schon probieren und alle auf denselben Stand kommen sollen.</li>
             </ul>
@@ -593,7 +594,7 @@
 </div>
 <script src="ui_kits/website/api-basis.js?v=20261004-umbau"></script>
 <script src="ui_kits/website/visibility.js?v=20261007-logo-svg"></script>
-<script src="ui_kits/website/lernreise.js?v=20261005-bilder2" defer></script>
+<script src="ui_kits/website/lernreise.js?v=20261007-ab50" defer></script>
 <script src="ui_kits/website/preise.js?v=20261004-preise" defer></script>
 <script src="ui_kits/website/standort.js?v=20261004-umbau" defer></script>
 <script src="ui_kits/website/chat.js?v=20261004-umbau"></script>

@@ -34,9 +34,10 @@
   };
 
   var GROESSE = {
-    klein: { label: 'bis 10', gruppen: 1 },
-    mittel: { label: '11 bis 20', gruppen: 1 },
-    gross: { label: '21 bis 30', gruppen: 2 }
+    klein: { label: 'bis 10', satz: 'bis zu 10', gruppen: 1 },
+    mittel: { label: '11 bis 20', satz: '11 bis 20', gruppen: 1 },
+    gross: { label: '21 bis 50', satz: '21 bis 50', gruppen: 2 },
+    sehrgross: { label: 'ab 50', satz: '50 und mehr', gruppen: 'mehrere' }
   };
   var STAND = {
     kaum: { label: 'Noch kaum KI', wochen: 10 },
@@ -70,12 +71,14 @@
   /* Die Stationen für eine Auswahl. Reine Funktion, ohne DOM. */
   function stationen(a) {
     var g = GROESSE[a.groesse], s = a.stand, z = ZEIT[a.zeit];
-    var klein = a.groesse === 'klein', gross = a.groesse === 'gross';
+    var klein = a.groesse === 'klein', sehrgross = a.groesse === 'sehrgross', gross = a.groesse === 'gross' || sehrgross;
     var L = [];
 
     L.push({
       bild: 'standort', rolle: 'Standort', titel: 'Standortbestimmung',
-      text: s === 'kaum'
+      text: sehrgross
+        ? 'Die Führung und, wo es passt, die Abteilungsleitungen beantworten zwölf kurze Fragen. So wird sichtbar, was in den Abteilungen schon trägt und wo sie auseinanderlaufen.'
+        : s === 'kaum'
         ? 'Die Führung beantwortet zwölf kurze Fragen. Sie sehen, wo Ihr Betrieb steht, und wir sehen, wo ein Anfang am meisten bringt.'
         : 'Die Führung beantwortet zwölf kurze Fragen. So wird sichtbar, was schon trägt und wo das Team auseinanderläuft.',
       formate: ['standort'], ids: []
@@ -97,13 +100,13 @@
 
     if (s === 'kaum') {
       L.push({
-        bild: 'training', rolle: 'Training', titel: 'Training im Team' + (gross ? ' (zwei Gruppen)' : ''),
+        bild: 'training', rolle: 'Training', titel: 'Training im Team' + (sehrgross ? ' (mehrere Gruppen)' : gross ? ' (zwei Gruppen)' : ''),
         text: 'Ein ganzer Tag, bei Ihnen im Betrieb, an Ihren eigenen Aufgaben: vom ersten Gespräch mit einem Assistenten bis zu Vorlagen, die danach bleiben.',
         formate: ['kk-training-tag'], ids: ['kk-training-tag']
       });
     } else if (s === 'einzelne') {
       L.push({
-        bild: 'training', rolle: 'Training', titel: 'Training im Team' + (gross ? ' (zwei Gruppen)' : ''),
+        bild: 'training', rolle: 'Training', titel: 'Training im Team' + (sehrgross ? ' (mehrere Gruppen)' : gross ? ' (zwei Gruppen)' : ''),
         text: 'Ein halber Tag, in dem alle auf denselben Stand kommen. Was die Einzelnen schon gefunden haben, wird zum gemeinsamen Wissen.',
         formate: ['kk-training-halbtag'], ids: ['kk-training-halbtag']
       });
@@ -139,9 +142,17 @@
 
     L.push({
       bild: 'vorort', rolle: 'Vor Ort', titel: 'Begleitung am Arbeitsplatz',
-      text: (gross ? 'Zwei Tage, ' : 'Ein Tag, ') + 'an dem wir bei Ihnen sitzen. Wir helfen dort, wo es im Alltag hakt, und beantworten die Fragen, die im Training nicht aufkamen.',
+      text: (sehrgross ? 'Mindestens zwei Tage, ' : gross ? 'Zwei Tage, ' : 'Ein Tag, ') + 'an dem wir bei Ihnen sitzen. Wir helfen dort, wo es im Alltag hakt, und beantworten die Fragen, die im Training nicht aufkamen.',
       formate: ['kk-begleitung-vor-ort'], ids: ['kk-begleitung-vor-ort']
     });
+
+    if (sehrgross) {
+      L.push({
+        bild: 'wirkung', rolle: 'Ansprechpersonen', titel: 'KI-Ansprechpersonen je Abteilung',
+        text: 'Pro Abteilung bestimmen wir eine Person, die nach dem Training weiterhilft. Wir bereiten sie darauf vor, Fragen im Alltag aufzufangen. Umfang nach Absprache.',
+        formate: [], ids: []
+      });
+    }
 
     L.push({
       bild: 'coaching', rolle: 'Coaching', titel: 'Coaching der Führungskräfte',
@@ -183,7 +194,7 @@
 
   function zusammenfassung(a) {
     var n = stationen(a).length;
-    return 'Beispielreise für einen Betrieb mit ' + GROESSE[a.groesse].label.replace(/^bis /, 'bis zu ') + ' Mitarbeitenden · Ausgangslage: ' +
+    return 'Beispielreise für einen Betrieb mit ' + GROESSE[a.groesse].satz + ' Mitarbeitenden · Ausgangslage: ' +
       STAND[a.stand].label.replace(/^./, function (z) { return z.toLowerCase(); }) + ' · ' + ZEIT[a.zeit].woche + '. Dauer: etwa ' + wochen(a) + ' Wochen, ' + n + ' Stationen.';
   }
 
