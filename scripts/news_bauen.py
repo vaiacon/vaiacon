@@ -244,6 +244,7 @@ def quellen_html(quellen: list[dict]) -> str:
 def karte_html(b: dict, bilder: Bilder, gross: bool, breit: bool = False) -> str:
     rubrik = b["rubrik"]
     ziel, label = BEREICHE.get(b.get("bereich", ""), BEREICHE["ki-kompetenz"])
+    vaiacon_text = str(b.get("vaiacon", ""))
     link = f'<a class="nw-feld__link" href="{esc(ziel)}">Zu {esc(label)} →</a>'
     klasse = "nw-karte nw-karte--gross" if gross else ("nw-karte nw-karte--breit" if breit else "nw-karte")
     d = b["_datum"]
