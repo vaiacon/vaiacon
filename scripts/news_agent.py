@@ -243,7 +243,7 @@ AUFTRAG
 3. Oeffne jede Quelle mit WebFetch und stuetze dich nur auf das, was dort steht. Jeder Beitrag braucht mindestens eine echte https-Quelle, die du geoeffnet hast. Erfinde nie eine Adresse.
 4. Schreibe pro Beitrag drei getrennte Uebersetzungen:
    - kmu: Was bedeutet das fuer ein Schweizer KMU? Direkt an die Leserin oder den Leser, Sie-Form.
-   - vaiacon: Was bietet Vaiacon dazu? Nur Leistungen aus der Angebotsliste unten, nichts erfinden. Wenn nichts passt, sag es offen und beginne mit «Dazu brauchen Sie uns nicht —».
+   - vaiacon: Was bietet Vaiacon dazu? Immer positiv: welche Leistung aus der Angebotsliste unten konkret hilft und was die Kundin oder der Kunde davon hat. Nur Leistungen aus der Liste, nichts erfinden. Ist die Neuigkeit noch nicht erhaeltlich, zeige, wie sich der Betrieb jetzt darauf vorbereitet (etwa im Training oder in der Standortanalyse). Schreibe nie, wofuer man Vaiacon nicht braucht, und beginne nie mit einer Verneinung.
    - achtung: Worauf sollten Kundinnen und Kunden achten?
    Dazu «kurz» (Was ist passiert, sachlich, 2 bis 3 Saetze) und «titel».
 
@@ -410,6 +410,9 @@ def pruefe_beitrag(b: dict, tag: date, bisherige: list, quellen_live: bool = Tru
                 fehler.append("%s: %s" % (feld, grund))
         if "!" in t:
             fehler.append("%s: Ausrufezeichen" % feld)
+    # Philip 06.10.2026: nie schreiben, wofuer man uns nicht braucht.
+    if isinstance(b.get("vaiacon"), str) and re.search(r"brauchen sie uns\b[^.]*\bnicht|ohne uns\b", b["vaiacon"].lower()):
+        fehler.append("vaiacon: sagt, wofuer man uns nicht braucht")
     if isinstance(b["kmu"], str) and not re.search(r"\b(Sie|Ihr\w*|Ihnen)\b", b["kmu"]):
         fehler.append("kmu spricht nicht in der Sie-Form")
     if b["rubrik"] == "recht" and not RECHT_HINWEIS.search(b["achtung"]):

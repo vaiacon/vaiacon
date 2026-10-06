@@ -60,7 +60,6 @@ BEREICHE = {
     "sichtbarkeit": ("../visibility", "Sichtbarkeit"),
     "automationen": ("../bot", "Automationen"),
 }
-OHNE_ANGEBOT = "dazu brauchen sie uns"
 
 
 # ---------------------------------------------------------------- Hilfen
@@ -245,10 +244,7 @@ def quellen_html(quellen: list[dict]) -> str:
 def karte_html(b: dict, bilder: Bilder, gross: bool, breit: bool = False) -> str:
     rubrik = b["rubrik"]
     ziel, label = BEREICHE.get(b.get("bereich", ""), BEREICHE["ki-kompetenz"])
-    vaiacon_text = str(b.get("vaiacon", ""))
-    link = ""
-    if not vaiacon_text.strip().lower().startswith(OHNE_ANGEBOT):
-        link = f'<a class="nw-feld__link" href="{esc(ziel)}">Zu {esc(label)} →</a>'
+    link = f'<a class="nw-feld__link" href="{esc(ziel)}">Zu {esc(label)} →</a>'
     klasse = "nw-karte nw-karte--gross" if gross else ("nw-karte nw-karte--breit" if breit else "nw-karte")
     d = b["_datum"]
     # Zeitungssatz (05.10.2026, Philip): kein Bild, Felder als Absätze mit Stichwort davor.
