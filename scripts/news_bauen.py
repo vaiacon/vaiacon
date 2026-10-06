@@ -113,6 +113,11 @@ def seitenname(w: dict) -> str:
     return f"{w['jahr']}-kw{int(w['kw']):02d}.html"
 
 
+def ohne_endung(name: str) -> str:
+    """Adresse ohne «.html», so wie der Server sie ausliefert (Links, canonical)."""
+    return name[:-5] if name.endswith(".html") else name
+
+
 def rfc822(d: date) -> str:
     z = datetime.combine(d, time(7, 0), tzinfo=ZEITZONE)
     tag = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"][z.weekday()]
@@ -323,10 +328,10 @@ def wochenwahl_html(w: dict, wochen: list[dict], ist_index: bool) -> str:
     aelter = wochen[nummer + 1] if nummer + 1 < len(wochen) else None
     neuer = wochen[nummer - 1] if nummer > 0 else None
     if aelter:
-        teile.append(f'<a href="{esc(seitenname(aelter))}">← KW {aelter["kw"]}</a>')
-    teile.append('<a href="archiv.html">Archiv</a>')
+        teile.append(f'<a href="{esc(ohne_endung(seitenname(aelter)))}">← KW {aelter["kw"]}</a>')
+    teile.append('<a href="archiv">Archiv</a>')
     if neuer:
-        ziel = "./" if wochen.index(neuer) == 0 else seitenname(neuer)
+        ziel = "./" if wochen.index(neuer) == 0 else ohne_endung(seitenname(neuer))
         teile.append(f'<a href="{esc(ziel)}">KW {neuer["kw"]} →</a>')
     if not ist_index and nummer == 0:
         teile.append('<a href="./">Zur aktuellen Woche</a>')
@@ -373,7 +378,7 @@ def jsonld_woche(w: dict, adresse: str, bilder: Bilder) -> dict:
     elemente = []
     paare = sorted(w["beitraege"], key=lambda b: (b["_datum"], b["wichtigkeit"]), reverse=True)
     for i, b in enumerate(paare, 1):
-        url = f"{SEITE}/{ORDNER}/{adresse}#{b['id']}"
+        url = f"{SEITE}/{ORDNER}/{ohne_endung(adresse)}#{b['id']}"
         elemente.append({
             "@type": "ListItem",
             "position": i,
@@ -427,7 +432,7 @@ def rahmen(titel: str, beschreibung: str, kanonisch: str, jsonld: dict, aktiv: s
 def wochenseite(w: dict, wochen: list[dict], bilder: Bilder, ist_index: bool) -> str:
     titel_woche = woche_titel(w)
     adresse = "" if ist_index else seitenname(w)
-    kanonisch = f"{SEITE}/{ORDNER}/{adresse}"
+    kanonisch = f"{SEITE}/{ORDNER}/{ohne_endung(adresse)}"
     hero_bild = bilder.picture(WOCHENBILD, "Der vaiacon-Roboter liest eine Zeitung", "", eager=True)
     fazit = esc(w.get("wochenfazit", ""))
     aktiv = "page" if ist_index else "true"
@@ -449,7 +454,7 @@ def wochenseite(w: dict, wochen: list[dict], bilder: Bilder, ist_index: bool) ->
                       'wichtig genug war.</p>')
     liste = vorwoche or w
     if vorwoche:
-        zuletzt = (f'<p class="nw-zuletzt">Zuletzt erschienen: <a href="{esc(seitenname(vorwoche))}">KW {vorwoche["kw"]}, '
+        zuletzt = (f'<p class="nw-zuletzt">Zuletzt erschienen: <a href="{esc(ohne_endung(seitenname(vorwoche)))}">KW {vorwoche["kw"]}, '
                    f'{esc(zeitspanne(vorwoche["_von"], vorwoche["_bis"]))}</a></p>')
     else:
         zuletzt = ""
@@ -498,13 +503,13 @@ def titel_woche_kurz(w: dict) -> str:
 def archivseite(wochen: list[dict], bilder: Bilder) -> str:
     eintraege = []
     for i, w in enumerate(wochen):
-        ziel = "./" if i == 0 else seitenname(w)
+        ziel = "./" if i == 0 else ohne_endung(seitenname(w))
         rubriken = []
         for r in RUBRIKEN:
             if any(b["rubrik"] == r for b in w["beitraege"]):
                 rubriken.append(abzeichen(r))
         titel_liste = "".join(
-            f'<li><a href="{esc(seitenname(w))}#{esc(b["id"])}">{esc(b["titel"])}</a></li>'
+            f'<li><a href="{esc(ohne_endung(seitenname(w)))}#{esc(b["id"])}">{esc(b["titel"])}</a></li>'
             for b in sorted(w["beitraege"], key=lambda b: (b["_datum"], b["wichtigkeit"]), reverse=True))
         n = len(w["beitraege"])
         aktuell = '<span class="nw-karte__wichtig">Aktuelle Woche</span>' if i == 0 else ""
@@ -551,12 +556,12 @@ def archivseite(wochen: list[dict], bilder: Bilder) -> str:
         "numberOfItems": len(wochen),
         "itemListElement": [
             {"@type": "ListItem", "position": i + 1,
-             "url": f"{SEITE}/{ORDNER}/" + ("" if i == 0 else seitenname(w)),
+             "url": f"{SEITE}/{ORDNER}/" + ("" if i == 0 else ohne_endung(seitenname(w))),
              "name": woche_titel(w)}
             for i, w in enumerate(wochen)
         ],
     }
-    return rahmen("KI-News für KMU Archiv · vaiacon", beschr, f"{SEITE}/{ORDNER}/archiv.html", liste,
+    return rahmen("KI-News für KMU Archiv · vaiacon", beschr, f"{SEITE}/{ORDNER}/archiv", liste,
                   "true", inhalt, mit_filter_js=False)
 
 

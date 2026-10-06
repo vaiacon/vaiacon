@@ -126,7 +126,7 @@
   <header class="mock-header sv-header">
     <div class="mock-header__inner">
       <a class="mock-header__logo" href="#top" aria-label="vaiacon Start">
-        <img src="assets/logo-lockup-white.svg" alt="vaiacon">
+        <img src="assets/logo-lockup-white.svg" alt="vaiacon" width="214" height="39">
       </a>
       <!-- TELEFON: einkommentieren, sobald die 044-Nummer gebucht ist
       <a class="mock-header__anruf" href="tel:+41440000000" aria-label="Anrufen: 044 000 00 00"><svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z"/></svg></a>
@@ -298,13 +298,13 @@
         </div>
         <div class="st-willkommen__rahmen">
           <!-- PLATZHALTER: Video ablegen unter assets/video/willkommen.mp4, dann source einkommentieren und Hinweis entfernen -->
-          <video class="st-willkommen__video" controls preload="none" playsinline poster="assets/philip-krieger-team.png" aria-label="Willkommensvideo von Philip und André">
+          <video class="st-willkommen__video" controls preload="none" playsinline poster="assets/philip-krieger-team.webp" aria-label="Willkommensvideo von Philip und André">
             <!-- <source src="assets/video/willkommen.mp4" type="video/mp4"> -->
           </video>
           <div class="st-willkommen__platzhalter" aria-hidden="true">
             <span class="st-willkommen__gesichter">
-              <img src="assets/philip-krieger-team.webp" alt="" width="120" height="120" loading="lazy" decoding="async">
-              <img src="assets/andre-ulrich-team.webp" alt="" width="120" height="120" loading="lazy" decoding="async">
+              <img src="assets/philip-krieger-team-klein.webp" alt="" width="120" height="120" loading="lazy" decoding="async">
+              <img src="assets/andre-ulrich-team-klein.webp" alt="" width="120" height="120" loading="lazy" decoding="async">
             </span>
             <span class="st-willkommen__spiel"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 2.5v19a1 1 0 0 0 1.5.86l16-9.5a1 1 0 0 0 0-1.72l-16-9.5A1 1 0 0 0 4 2.5Z"/></svg>Video folgt</span>
           </div>
@@ -385,8 +385,8 @@
         </ol>
         <p class="st-gesichter">
           <span class="st-gesichter__paar">
-            <picture><source srcset="assets/philip-krieger-team.webp" type="image/webp"><img class="st-gesichter__foto" src="assets/philip-krieger-team.png" alt="Philip Krieger" width="128" height="128" loading="lazy" decoding="async"></picture>
-            <picture><source srcset="assets/andre-ulrich-team.webp" type="image/webp"><img class="st-gesichter__foto" src="assets/andre-ulrich-team.png" alt="André Ulrich" width="128" height="128" loading="lazy" decoding="async"></picture>
+            <picture><source srcset="assets/philip-krieger-team-klein.webp" type="image/webp"><img class="st-gesichter__foto" src="assets/philip-krieger-team.png" alt="Philip Krieger" width="128" height="128" loading="lazy" decoding="async"></picture>
+            <picture><source srcset="assets/andre-ulrich-team-klein.webp" type="image/webp"><img class="st-gesichter__foto" src="assets/andre-ulrich-team.png" alt="André Ulrich" width="128" height="128" loading="lazy" decoding="async"></picture>
           </span>
           <span class="st-gesichter__text">Sie sprechen mit Philip oder André.</span>
         </p>
@@ -451,7 +451,7 @@
   <footer class="sv-footer">
     <div class="sv-footer__inner">
       <a class="sv-footer__logo" href="#top" aria-label="Zurück nach oben">
-        <img src="assets/logo-lockup-white.svg" alt="vaiacon">
+        <img src="assets/logo-lockup-white.svg" alt="vaiacon" width="214" height="39">
       </a>
       <nav class="sv-footer__links" aria-label="Weitere Seiten">
         <a href="service">Begleitung</a><a href="offerte">Offerte anfragen</a><a href="ki-kmu-news/">KI-News für KMU</a><a href="referenzen">Aus der Praxis</a><a href="datenschutz">Datenschutz</a><a href="impressum">Impressum</a><a href="agb">AGB</a>
@@ -472,10 +472,10 @@
     </div>
   </footer>
 </div>
-<script src="ui_kits/website/api-basis.js?v=20261004-umbau"></script>
-<script src="ui_kits/website/visibility.js?v=20261004-umbau"></script>
-<script src="ui_kits/website/chat.js?v=20261004-umbau"></script>
-<script src="ui_kits/website/check-start.js?v=20261004-check"></script>
+<script src="ui_kits/website/api-basis.js?v=20261004-umbau" defer></script>
+<script src="ui_kits/website/visibility.js?v=20261007-logo-svg" defer></script>
+<script src="ui_kits/website/chat.js?v=20261004-umbau" defer></script>
+<script src="ui_kits/website/check-start.js?v=20261004-check" defer></script>
 <script src="ui_kits/website/start.js?v=20261005-ohne-preise" defer></script>
 </body>
 </html>

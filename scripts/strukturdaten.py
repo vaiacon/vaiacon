@@ -322,7 +322,7 @@ KI-Standortbestimmung (Selbsttest für Führungskräfte).
   Beauty Studio heute mit vaiacon arbeitet.
 - [Häufige Fragen](https://vaiacon.ch/faq): Kosten und Offerte, Lernformate,
   Datenschutz, Vorwissen, Ablauf einer Zusammenarbeit.
-- [Erstanalyse](https://vaiacon.ch/erstanalyse): Fragebogen mit sofortiger
+- [Erstanalyse](https://vaiacon.ch/erstanalyse/): Fragebogen mit sofortiger
   Einschätzung, wie viel Zeit in wiederkehrender Büroarbeit steckt.
 - [Kontakt](https://vaiacon.ch/kontakt): Erstgespräch vereinbaren.
 
