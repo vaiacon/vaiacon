@@ -204,6 +204,101 @@ html:not(.lr-js) .lr-station__knoten span,
 }
 .lr-chip:hover, .lr-chip:focus-visible { background: var(--peach-200); }
 
+/* Messpunkte: wo gemessen und geprüft wird. Knoten mit zweitem Ring. */
+.lr-station--mess .lr-station__knoten span {
+  box-shadow: 0 0 0 4px var(--cream-card), 0 0 0 6px var(--terra-500);
+}
+.lr-mess {
+  padding: var(--space-3) var(--space-4);
+  border-left: 3px solid var(--terra-500);
+  border-radius: 0 12px 12px 0;
+  background: var(--peach-150);
+  display: flex; flex-direction: column; gap: 4px;
+}
+.lr-station__karte .lr-mess p { font-size: 14px; }
+.lr-station__karte .lr-mess p.lr-mess__art {
+  font-family: var(--font-mono);
+  font-size: var(--text-overline);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-badge);
+  text-transform: uppercase;
+  color: var(--terra-600);
+  line-height: 1.4;
+}
+.lr-mess__art::before {
+  content: ""; display: inline-block; vertical-align: -1px;
+  width: 9px; height: 9px; margin-right: 7px;
+  border-radius: 50%; border: 2px solid var(--terra-500);
+  box-shadow: inset 0 0 0 2px var(--peach-150), inset 0 0 0 5px var(--terra-500);
+}
+
+/* Wirkung: vier Fragen und Muster des Zielchecks unter der Reise. */
+.lr-wirkung {
+  margin: var(--space-11) auto 0;
+  width: min(100%, 60rem);
+  text-align: left;
+}
+.lr-wirkung__kopf { text-align: center; margin-bottom: var(--space-6); }
+.lr-wirkung__kopf h3 {
+  margin: var(--space-2) 0 var(--space-3);
+  color: var(--text-strong); font-size: var(--text-h3); font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-tight); line-height: var(--leading-snug);
+}
+.lr-wirkung__kopf p { margin: 0 auto; max-width: 60ch; color: var(--text-body); font-size: var(--text-body-sm); line-height: var(--leading-body); }
+.lr-ebenen {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-4);
+}
+.lr-ebene {
+  padding: var(--space-5);
+  border: 1px solid var(--border-strong); border-radius: var(--radius-lg);
+  background: var(--surface-card);
+  display: flex; flex-direction: column; gap: var(--space-2);
+}
+.lr-ebene__nr {
+  margin: 0; font-family: var(--font-mono); font-size: var(--text-overline);
+  font-weight: var(--weight-bold); letter-spacing: var(--tracking-badge);
+  text-transform: uppercase; color: var(--terra-600);
+}
+.lr-ebene h4 { margin: 0; color: var(--text-strong); font-size: 17px; font-weight: var(--weight-semibold); line-height: var(--leading-snug); }
+.lr-ebene p { margin: 0; color: var(--text-body); font-size: 14px; line-height: var(--leading-body); }
+.lr-ebene p.lr-ebene__wann { margin-top: auto; padding-top: var(--space-2); border-top: 1px solid var(--border-soft); font-size: 13px; color: var(--text-muted, var(--text-body)); }
+
+.lr-zielcheck {
+  margin-top: var(--space-6);
+  border: 1px solid var(--border-strong); border-radius: var(--radius-lg);
+  background: var(--surface-card);
+  overflow: hidden;
+}
+.lr-zielcheck__titel {
+  margin: 0; padding: var(--space-3) var(--space-5);
+  border-bottom: 1px solid var(--border-soft);
+  font-family: var(--font-mono); font-size: var(--text-overline); font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-badge); text-transform: uppercase; color: var(--terra-600);
+}
+.lr-zielcheck table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.lr-zielcheck th, .lr-zielcheck td { padding: var(--space-3) var(--space-5); text-align: left; vertical-align: top; color: var(--text-body); }
+.lr-zielcheck th { font-weight: var(--weight-semibold); color: var(--text-strong); font-size: 13px; }
+.lr-zielcheck tbody tr { border-top: 1px solid var(--border-soft); }
+.lr-ampel { display: inline-flex; align-items: center; gap: 7px; font-weight: var(--weight-semibold); color: var(--text-strong); white-space: nowrap; }
+.lr-ampel::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: currentColor; }
+.lr-ampel--gruen::before { background: #3d8a5a; }
+.lr-ampel--gelb::before { background: #d9a227; }
+.lr-ampel--offen::before { background: transparent; border: 2px solid var(--brown-300); width: 6px; height: 6px; }
+.lr-zielcheck__fuss { margin: 0; padding: var(--space-3) var(--space-5); border-top: 1px solid var(--border-soft); font-size: 13px; color: var(--text-body); line-height: var(--leading-body); }
+
+@media (max-width: 900px) {
+  .lr-ebenen { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  .lr-ebenen { grid-template-columns: 1fr; }
+  .lr-zielcheck table, .lr-zielcheck tbody, .lr-zielcheck tr, .lr-zielcheck td { display: block; }
+  .lr-zielcheck thead { display: none; }
+  .lr-zielcheck tbody tr { padding: var(--space-3) 0; }
+  .lr-zielcheck td { padding: 2px var(--space-5); }
+  .lr-zielcheck td[data-k]::before { content: attr(data-k) ": "; font-weight: var(--weight-semibold); color: var(--text-strong); }
+}
+
 /* Mit JS: Stationen blenden beim Erreichen weich ein. Ohne JS stehen sie da. */
 .lr-js .lr-station:not(.is-erreicht) .lr-station__karte { opacity: 0.62; }
 .lr-js .lr-station:not(.is-erreicht) .lr-station__bild { opacity: 0.55; filter: grayscale(0.35); }

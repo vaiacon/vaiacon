@@ -81,6 +81,7 @@
         : s === 'kaum'
         ? 'Die Führung beantwortet zwölf kurze Fragen. Sie sehen, wo Ihr Betrieb steht, und wir sehen, wo ein Anfang am meisten bringt.'
         : 'Die Führung beantwortet zwölf kurze Fragen. So wird sichtbar, was schon trägt und wo das Team auseinanderläuft.',
+      mess: { art: 'Nullmessung', text: 'Dazu zwei Minuten Umfrage im Team: Wer nutzt KI, wofür, wie sicher. Und eine Aufgabe, die oft vorkommt, mit der Zeit, die sie heute braucht.' },
       formate: ['standort'], ids: []
     });
 
@@ -88,12 +89,14 @@
       L.push({
         bild: 'auftakt', rolle: 'Auftakt', titel: 'Auftakt mit der Geschäftsleitung',
         text: 'In zwei Stunden klären wir, was Sie erreichen wollen und welche Regeln im Betrieb gelten sollen. In einem kleinen Team genügt dafür ein Gespräch.',
+        mess: { art: 'Ziele festlegen', text: 'Zwei bis drei Ziele, die man zählen kann, zum Beispiel: ' + (s === 'kaum' ? 'drei von vier im Team nutzen KI jede Woche' : s === 'einzelne' ? 'alle arbeiten mit denselben geprüften Vorlagen' : 'Offerten in der halben Zeit') + '. Zu jedem Ziel: woran wir es messen und bis wann.' },
         formate: ['kk-coaching-fuehrung'], ids: ['kk-coaching-fuehrung']
       });
     } else {
       L.push({
         bild: 'auftakt', rolle: 'Auftakt', titel: 'Auftakt mit der Führung',
         text: 'Die Leitung klärt Ziel, Rollen und Spielregeln, bevor das Team startet. Wir begleiten das Gespräch und sagen, was wir aus anderen Betrieben kennen.',
+        mess: { art: 'Ziele festlegen', text: 'Zwei bis drei Ziele, die man zählen kann, zum Beispiel: ' + (s === 'kaum' ? 'drei von vier im Team nutzen KI jede Woche' : s === 'einzelne' ? 'alle arbeiten mit denselben geprüften Vorlagen' : 'Offerten in der halben Zeit') + '. Zu jedem Ziel: woran wir es messen und bis wann.' },
         formate: ['kk-change-begleitung'], ids: ['kk-change-begleitung']
       });
     }
@@ -129,6 +132,7 @@
     L.push({
       bild: 'mikro', rolle: 'Täglich', titel: 'Tägliche Kleinst-Lerneinheiten',
       text: 'Jeden Arbeitstag ' + z.taeglich + ': ein Tipp, eine Übung am eigenen Fall, eine Frage vom Roboter. Vier Wochen lang, direkt am Arbeitsplatz oder auf dem Smartphone.',
+      mess: { art: 'Zwischenstand', text: 'Die Antworten auf die tägliche Frage zeigen laufend, was sitzt. Nach zwei Wochen sehen Sie, wo das Team steht, und wir stellen nach, wo es hakt.' },
       formate: ['kk-mikro-lerneinheiten'], ids: ['kk-mikro-lerneinheiten']
     });
 
@@ -161,8 +165,9 @@
     });
 
     L.push({
-      bild: 'wirkung', rolle: 'Wirkung', titel: 'Wirkung prüfen und nachschärfen',
-      text: 'Die Führung beantwortet die Standortbestimmung noch einmal. Wir vergleichen, hören auf das Team und stellen die nächsten Wochen darauf ein.',
+      bild: 'wirkung', rolle: 'Wirkung', titel: 'Wirkung messen, Ziele prüfen',
+      text: 'Dieselben Fragen wie am Anfang, an die Führung und ans Team, dazu dieselbe Aufgabe noch einmal mit der Uhr. Wir legen Vorher und Nachher nebeneinander.',
+      mess: { art: 'Zielcheck', text: 'Jedes Ziel aus dem Auftakt bekommt ein Ergebnis: erreicht, teilweise oder offen. Was offen ist, wird zur nächsten Etappe.' },
       formate: ['standort'], ids: []
     });
 
@@ -208,12 +213,16 @@
         var f = FORMATE[k];
         return '<a class="lr-chip" href="' + f.href + '">' + esc(f.name) + '</a>';
       }).join('');
-      h += '<li class="lr-station lr-station--' + seite + '" data-station>' +
+      var mess = st.mess
+        ? '<div class="lr-mess"><p class="lr-mess__art">Messpunkt · ' + esc(st.mess.art) + '</p><p>' + esc(st.mess.text) + '</p></div>'
+        : '';
+      h += '<li class="lr-station lr-station--' + seite + (st.mess ? ' lr-station--mess' : '') + '" data-station>' +
         '<div class="lr-station__knoten" aria-hidden="true"><span>' + (i + 1) + '</span></div>' +
         '<article class="lr-station__karte">' +
           '<p class="lr-station__zeit">' + esc(wochenLabel(i, L.length, total)) + ' · ' + esc(st.rolle) + '</p>' +
           '<h3>' + esc(st.titel) + '</h3>' +
           '<p>' + esc(st.text) + '</p>' +
+          mess +
           '<p class="lr-station__formate">' + chips + '</p>' +
         '</article>' +
         '<figure class="lr-station__bild"><picture>' +

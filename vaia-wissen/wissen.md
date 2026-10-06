@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 07.10.2026 · Eintrag ff1eb84 Lernreise-Knopf führt ins Kontaktformular, gewählte Reise steht vorausgefüllt; Kontakt bietet Anrufen an
+> Stand: 07.10.2026 · Eintrag be2fe7b Kontakt: vorausgefüllte Lernreise aus Sicht des Betriebs statt doppelter Ausgangspunkt/Ausgangslage
 
 ## Wie du antwortest
 
@@ -231,11 +231,15 @@ Beispielreise für einen Betrieb mit 11 bis 20 Mitarbeitenden · Ausgangslage: e
 Woche 0 · Standort
 Standortbestimmung
 Die Führung beantwortet zwölf kurze Fragen. So wird sichtbar, was schon trägt und wo das Team auseinanderläuft.
+Messpunkt · Nullmessung
+Dazu zwei Minuten Umfrage im Team: Wer nutzt KI, wofür, wie sicher. Und eine Aufgabe, die oft vorkommt, mit der Zeit, die sie heute braucht.
 Standortbestimmung
 2
 Woche 1 · Auftakt
 Auftakt mit der Führung
 Die Leitung klärt Ziel, Rollen und Spielregeln, bevor das Team startet. Wir begleiten das Gespräch und sagen, was wir aus anderen Betrieben kennen.
+Messpunkt · Ziele festlegen
+Zwei bis drei Ziele, die man zählen kann, zum Beispiel: alle arbeiten mit denselben geprüften Vorlagen. Zu jedem Ziel: woran wir es messen und bis wann.
 Change-Begleitung
 3
 Woche 2 · Training
@@ -251,6 +255,8 @@ Lernvideo
 Woche 5 · Täglich
 Tägliche Kleinst-Lerneinheiten
 Jeden Arbeitstag zehn Minuten: ein Tipp, eine Übung am eigenen Fall, eine Frage vom Roboter. Vier Wochen lang, direkt am Arbeitsplatz oder auf dem Smartphone.
+Messpunkt · Zwischenstand
+Die Antworten auf die tägliche Frage zeigen laufend, was sitzt. Nach zwei Wochen sehen Sie, wo das Team steht, und wir stellen nach, wo es hakt.
 Kleinst-Lerneinheiten
 6
 Woche 6 · Vor Ort
@@ -264,9 +270,37 @@ In Einzelgesprächen geht es um das, was Führung jetzt anders macht: Wer entsch
 Coaching für Führungskräfte
 8
 ab Woche 8 · Wirkung
-Wirkung prüfen und nachschärfen
-Die Führung beantwortet die Standortbestimmung noch einmal. Wir vergleichen, hören auf das Team und stellen die nächsten Wochen darauf ein.
+Wirkung messen, Ziele prüfen
+Dieselben Fragen wie am Anfang, an die Führung und ans Team, dazu dieselbe Aufgabe noch einmal mit der Uhr. Wir legen Vorher und Nachher nebeneinander.
+Messpunkt · Zielcheck
+Jedes Ziel aus dem Auftakt bekommt ein Ergebnis: erreicht, teilweise oder offen. Was offen ist, wird zur nächsten Etappe.
 Standortbestimmung
+WIRKUNG UND ZIELE
+Am Ende wissen Sie, ob es gewirkt hat.
+An vier Stellen der Reise wird gemessen, immer gleich: vorher, unterwegs und nachher. Ausgewertet wird nur für die Gruppe, nie für einzelne Personen.
+1 · Wissen
+Sitzt es?
+Die Antworten auf die täglichen Fragen zeigen, was das Team verstanden hat und wo es noch wackelt.
+Laufend, ab der ersten Woche
+2 · Anwenden
+Wird es genutzt?
+Eine Umfrage von zwei Minuten: Wer nutzt KI, wie oft, wofür und wie sicher.
+Woche 0 und am Ende
+3 · Zeit
+Spart es etwas?
+Eine Aufgabe, die oft vorkommt, wird vorher und nachher mit der Uhr gemessen, zum Beispiel eine Offerte oder ein Protokoll.
+Woche 0 und am Ende
+4 · Ziele
+Ist erreicht, was wir wollten?
+Die Ziele aus dem Auftakt bekommen ein klares Ergebnis. Was offen bleibt, wird zur nächsten Etappe.
+Am Ende, im Zielcheck
+So sieht der Zielcheck aus · Muster mit erfundenen Werten
+Ziel aus dem Auftakt Vorher Nachher Ergebnis
+Alle im Team nutzen KI mindestens einmal pro Woche 4 von 15 13 von 15 teilweise
+Eine Offerte entsteht in der halben Zeit 45 Minuten 20 Minuten erreicht
+Alle arbeiten mit denselben geprüften Vorlagen keine 6 Vorlagen, in Gebrauch erreicht
+Kundendaten gehen nur in freigegebene Werkzeuge keine Regel Regel steht, noch nicht überall offen, nächste Etappe
+Den Zielcheck erhalten Sie am Ende als eine Seite, mit Vorher und Nachher und einem Vorschlag für die nächsten Wochen.
 Das ist eine Beispielreise, kein fester Plan. Welche Stationen Sie wirklich brauchen, legen wir im Erstgespräch mit Ihnen fest.
 Bauen Sie mit uns Ihre eigene Reise →
 DIE FORMATE
@@ -772,8 +806,6 @@ Telefon
 Unsere Zürcher Nummer (044) folgt bald. Bis dahin rufen wir Sie gern zurück. Rückruf anfordern →
 Rückruf
 Lassen Sie sich zurückrufen, zum Zeitpunkt, der Ihnen passt. Rückruf anfordern →
-Adresse
-vaiacon GmbH Lehenstrasse 74 8037 Zürich
 
 ### Datenschutz und Impressum
 
