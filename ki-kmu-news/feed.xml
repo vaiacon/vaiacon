@@ -6,7 +6,21 @@
 <atom:link href="https://vaiacon.ch/ki-kmu-news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>Was KI-Neuigkeiten für Schweizer KMU heissen: was passiert ist, was es für Ihren Betrieb bedeutet und worauf Sie achten sollten.</description>
 <language>de-CH</language>
-<lastBuildDate>Fri, 02 Oct 2026 07:00:00 +0200</lastBuildDate>
+<lastBuildDate>Tue, 06 Oct 2026 07:00:00 +0200</lastBuildDate>
+<item>
+<title>OpenAI versieht Texte aus ChatGPT in der EU mit unsichtbarem Wasserzeichen</title>
+<link>https://vaiacon.ch/ki-kmu-news/2026-kw41.html#2026-10-06-openai-versieht-texte-aus-chatgpt</link>
+<guid isPermaLink="true">https://vaiacon.ch/ki-kmu-news/2026-kw41.html#2026-10-06-openai-versieht-texte-aus-chatgpt</guid>
+<pubDate>Tue, 06 Oct 2026 07:00:00 +0200</pubDate>
+<category>Recht</category>
+<description>OpenAI hat am 5. Oktober «textGrain» vorgestellt. Das Verfahren legt ein unsichtbares Muster in die Wortwahl. In der EU wird es in den kommenden Wochen für ChatGPT und Codex Pflicht. API-Kunden weltweit können es freiwillig einschalten.
+
+Was heisst das für Ihr KMU? Die Regel stammt aus dem EU-Gesetz über künstliche Intelligenz. Für die Schweiz gibt es dazu keine Angabe in den geprüften Quellen. Rechnen Sie damit, dass Texte, die Ihr Team mit ChatGPT in der EU erstellt, künftig technisch erkennbar sind. Das betrifft Webseiten, Newsletter und Offerten. Sie müssen nichts einstellen. Es lohnt sich aber, im Betrieb kurz zu klären, welche Texte von KI stammen und wer sie prüft.
+
+Was vaiacon dazu bietet: Wir zeigen Ihrem Team im Training oder Workshop (Halbtag), wie Sie KI-Texte sauber prüfen, überarbeiten und kennzeichnen. In der KI-Standortanalyse im Betrieb schauen wir, wo bei Ihnen KI-Texte entstehen und ob ein einfacher Umgang damit genügt. Bauen Sie Assistenten über die API, klären wir mit Ihnen, ob das Wasserzeichen sinnvoll ist.
+
+Worauf Sie achten sollten: Das Wasserzeichen ist ein schwaches Signal. Bei kurzen oder umgeschriebenen Texten wird es schlecht erkannt. Ein fehlendes Zeichen beweist keine menschliche Autorschaft. Prüfen Sie KI-Texte weiterhin selbst. Ob und wie die Regel für Ihren Betrieb gilt, hängt vom Einzelfall ab. Das ersetzt keine Rechtsauskunft.</description>
+</item>
 <item>
 <title>Apple will den Vollzugriff auf Macs wegen KI-Agenten enger fassen</title>
 <link>https://vaiacon.ch/ki-kmu-news/2026-kw40.html#2026-10-02-apple-festplattenzugriff</link>

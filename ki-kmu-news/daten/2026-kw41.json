@@ -3,6 +3,29 @@
   "kw": 41,
   "von": "2026-10-05",
   "bis": "2026-10-11",
-  "wochenfazit": "",
-  "beitraege": []
+  "wochenfazit": "Diese Woche zeigt, dass die EU-Regeln für KI im Alltag ankommen. Anbieter kennzeichnen Texte nun technisch. Für Schweizer KMU heisst das: Klären Sie intern, wo KI-Texte entstehen und wer sie prüft. Ein grosser Umbau ist dafür nicht nötig.",
+  "beitraege": [
+    {
+      "id": "2026-10-06-openai-versieht-texte-aus-chatgpt",
+      "datum": "2026-10-06",
+      "rubrik": "recht",
+      "titel": "OpenAI versieht Texte aus ChatGPT in der EU mit unsichtbarem Wasserzeichen",
+      "kurz": "OpenAI hat am 5. Oktober «textGrain» vorgestellt. Das Verfahren legt ein unsichtbares Muster in die Wortwahl. In der EU wird es in den kommenden Wochen für ChatGPT und Codex Pflicht. API-Kunden weltweit können es freiwillig einschalten.",
+      "kmu": "Die Regel stammt aus dem EU-Gesetz über künstliche Intelligenz. Für die Schweiz gibt es dazu keine Angabe in den geprüften Quellen. Rechnen Sie damit, dass Texte, die Ihr Team mit ChatGPT in der EU erstellt, künftig technisch erkennbar sind. Das betrifft Webseiten, Newsletter und Offerten. Sie müssen nichts einstellen. Es lohnt sich aber, im Betrieb kurz zu klären, welche Texte von KI stammen und wer sie prüft.",
+      "vaiacon": "Wir zeigen Ihrem Team im Training oder Workshop (Halbtag), wie Sie KI-Texte sauber prüfen, überarbeiten und kennzeichnen. In der KI-Standortanalyse im Betrieb schauen wir, wo bei Ihnen KI-Texte entstehen und ob ein einfacher Umgang damit genügt. Bauen Sie Assistenten über die API, klären wir mit Ihnen, ob das Wasserzeichen sinnvoll ist.",
+      "bereich": "ki-kompetenz",
+      "achtung": "Das Wasserzeichen ist ein schwaches Signal. Bei kurzen oder umgeschriebenen Texten wird es schlecht erkannt. Ein fehlendes Zeichen beweist keine menschliche Autorschaft. Prüfen Sie KI-Texte weiterhin selbst. Ob und wie die Regel für Ihren Betrieb gilt, hängt vom Einzelfall ab. Das ersetzt keine Rechtsauskunft.",
+      "quellen": [
+        {
+          "titel": "AI Weekly: OpenAI to watermark ChatGPT, Codex text in EU under AI Act",
+          "url": "https://aiweekly.co/alerts/openai-to-watermark-chatgpt-codex-text-in-eu-under-ai-act"
+        },
+        {
+          "titel": "AI Weekly: OpenAI to watermark EU ChatGPT text, opens API opt-in worldwide",
+          "url": "https://aiweekly.co/alerts/openai-to-watermark-eu-chatgpt-text-opens-api-opt-in-worldwide"
+        }
+      ],
+      "wichtigkeit": 2
+    }
+  ]
 }
