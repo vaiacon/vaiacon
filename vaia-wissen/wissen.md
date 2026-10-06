@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 05.10.2026 · Eintrag 4710e75 Merge pull request #8 from vaiacon/preise-richtwerte
+> Stand: 07.10.2026 · Eintrag dd9791a KI-Kompetenz: Lernreise-Knopf «Bauen Sie mit uns Ihre eigene Reise» statt Offerte
 
 ## Wie du antwortest
 
@@ -107,44 +107,29 @@ Von: Linda, Inhaberin Züri Glow, Beauty Studio in Zürich-Altstetten
 
 ### Startseite
 
+Zum Inhalt springen
+KI, die in Ihrem Betrieb ankommt: KI-Kompetenz, Sichtbarkeit und Automationen für Betriebe mit 5 bis 30 Mitarbeitenden, aus Zürich für die ganze Schweiz
+KI-Kompetenz
+Ihr Team lernt KI an den eigenen Aufgaben: Trainings, Coaching und kurze tägliche Lerneinheiten.
+KI-Standort bestimmen →
+Mehr erfahren →
+Sichtbarkeit
+Gefunden werden, wenn Ihre Kundschaft bei Google sucht oder eine KI fragt.
+Ihre Domain
+Gratis prüfen →
+Mehr erfahren →
+Automationen
+Belege, Offerten und Posteingang laufen von selbst, damit Ihr Team Zeit für Wichtiges hat.
+Offerte zusammenstellen →
+Mehr erfahren →
 KI-Kompetenz
 Sichtbarkeit
 Automationen
 Anhalten
-KI-Kompetenz
-Das Team lernt KI, die zu Ihnen passt.
-Ansehen
-KI-Kompetenz
-Eine Lernreise fürs ganze Team, zugeschnitten auf Ihren Betrieb.
-E-Learnings, Videos und Trainings mit Ihren eigenen Beispielen
-Coaching für Führungskräfte und Begleitung bei der Einführung
-Jeden Tag eine kleine Lerneinheit, die hängen bleibt
-KI-Standort bestimmen →
-Zwölf Fragen, Ergebnis sofort.
-Mehr zu KI-Kompetenz →
-Sichtbarkeit
-Bei Google und in KI-Antworten gefunden.
-Ansehen
-Sichtbarkeit
-Gefunden werden, wenn Ihre Kundschaft bei Google sucht oder eine KI fragt.
-Google-Check: was Ihre Website heute richtig und falsch macht
-Auch in den Antworten von KI-Assistenten genannt werden
-Konkrete Schritte, verständlich erklärt
-Ihre Domain
-Check starten →
-Kostenlos, in wenigen Sekunden.
-Mehr zu Sichtbarkeit →
-Automationen
-Wiederkehrende Arbeit abgeben.
-Ansehen
-Automationen
-Wiederkehrende Arbeit abgeben, damit Ihr Team Zeit für Wichtiges hat.
-Belege, Offerten und Posteingang laufen von selbst
-Telefonassistent und Chat beantworten die Standardfragen
-Fixer Preis pro Ablauf, Start mit einer einzigen Aufgabe
-Offerte zusammenstellen →
-Preis sehen, bevor Sie anfragen.
-Mehr zu Automationen →
+WILLKOMMEN
+Wer hinter vaiacon steht
+Philip und André stellen sich in einer Minute vor.
+Video folgt
 ORIENTIERUNG
 Wo drückt es gerade?
 Tippen Sie an, was am ehesten stimmt. Wir zeigen Ihnen den passenden Anfang.
@@ -157,30 +142,6 @@ Automationen →
 «Ich weiss nicht, wo anfangen.»
 KI-Standort bestimmen →
 Lieber reden? Erstgespräch vereinbaren →
-KI-NEWS FÜR KMU
-Neu in der KI, für KMU erklärt.
-Was sich ändert und was es für einen Betrieb Ihrer Grösse bedeutet. Kurz, ohne Fachchinesisch.
-Wir ordnen laufend ein, was in der KI für kleine und mittlere Betriebe wichtig wird: neue Werkzeuge, Recht, Sicherheit. In einer Viertelstunde gelesen.
-Zur aktuellen Woche →
-Alle Beiträge ansehen →
-PREISE
-Sie sehen vorher, womit Sie rechnen können.
-Je ein Einstieg pro Bereich. Die Preise sind Richtwerte. Stellen Sie sich Ihre Offerte selbst zusammen, dann haben Sie eine gute Einschätzung, bevor wir miteinander reden.
-KI-Kompetenz
-CHF 1'550 pro Halbtag
-Training im Betrieb: Ihr Team übt KI an Ihren eigenen Aufgaben. Pro Gruppe, nicht pro Person.
-Mehr zu KI-Kompetenz →
-Sichtbarkeit
-CHF 1'300
-Google-Check: Sie erhalten eine klare Liste der wichtigsten Verbesserungen für Ihre Website.
-Mehr zu Sichtbarkeit →
-Automationen
-ab CHF 1'300 pro Ablauf
-Ein kleiner, wiederkehrender Ablauf läuft künftig von selbst. Fixpreis nach der Erstanalyse.
-Mehr zu Automationen →
-Offerte zusammenstellen →
-Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer.
-Danach bleiben wir auf Wunsch an Ihrer Seite, mit Betreuung, Anpassungen und Beratung, ab CHF 130 pro Monat , monatlich kündbar. Mehr zur Begleitung →
 WOFÜR WIR STEHEN
 KI ist für uns nicht das Produkt, sondern das Werkzeug.
 Wir verkaufen keine Technik, sondern Wissen im Team, Auffindbarkeit und zurückgewonnene Zeit. Wo sich etwas nicht rechnet, sagen wir das. Auch wenn es uns einen Auftrag kostet. Ihre Kundendaten bleiben dort, wo sie hingehören: nach revDSG, auf Schweizer Infrastruktur.
@@ -196,6 +157,18 @@ Sie erhalten schriftlich, was wir vorschlagen, mit Aufwand und Preis. Auch dann,
 03
 Umsetzung in Ihrem Tempo
 Wir fangen klein an, mit einer Sache, die trägt. Alles Weitere entscheiden Sie, wenn Sie den Nutzen gesehen haben. Auf Wunsch begleiten wir Sie danach weiter .
+Sie sprechen mit Philip oder André.
+Erstgespräch kostenlos. Was es danach kostet, sehen Sie vorab im Offerten-Rechner .
+Lieber angerufen werden? Rückruf anfordern →
+HÄUFIGE FRAGEN
+Kurz beantwortet.
+Alle Fragen und Antworten →
+Was macht vaiacon? +
+vaiacon führt Schweizer KMU an KI heran, in drei Bereichen: KI-Kompetenz (Ihr Team lernt, KI sicher einzusetzen), Sichtbarkeit (Sie werden bei Google gefunden und von KI-Assistenten richtig genannt) und Automationen (wiederkehrende Büroarbeit läuft von selbst). Auf Wunsch begleiten wir das Ganze laufend. Unser Büro ist in Zürich, wir arbeiten für Betriebe in der ganzen Schweiz.
+Für wen ist vaiacon gedacht? +
+Am meisten bewirken wir in Betrieben mit 5 bis 30 Mitarbeitenden und eigenem Büro, etwa im Handwerk, in Treuhandbüros, Praxen und Verwaltungen. Dort fällt genug Büroarbeit an, damit sich eine Automation oder eine Schulung rechnet.
+Wie beginnt eine Zusammenarbeit? +
+Am Anfang steht ein unverbindliches Gespräch am Telefon oder am Bildschirm. Oder Sie stellen sich im Offerten-Tool selbst eine Richtofferte zusammen. Danach klären wir, ob KI-Kompetenz, Sichtbarkeit, Automationen, Begleitung oder eine Kombination davon sinnvoll ist.
 NÄCHSTER SCHRITT
 Welche vaiacon-Lösung passt zu Ihrem Betrieb?
 Im unverbindlichen Gespräch klären wir, ob KI-Kompetenz, Sichtbarkeit, Automationen oder eine Kombination der richtige nächste Schritt ist. Simpel · Klar · Persönlich.
@@ -203,6 +176,7 @@ Erstgespräch vereinbaren →
 
 ### Über uns
 
+Zum Inhalt springen
 ÜBER UNS
 Unternehmerische Praxis, menschliche Werte und moderne Technologie.
 Wer wir sind ↓
@@ -230,6 +204,7 @@ Lieber gleich Zahlen sehen: Offerte →
 
 ### KI-Kompetenz (inkl. KI-Standortbestimmung)
 
+Zum Inhalt springen
 KI-KOMPETENZ
 Eine Lernreise, die zu Ihrem Betrieb passt.
 Ein Kurstag, nach dem alles beim Alten bleibt? Das wollen wir nicht. Eine Lernreise verbindet Training, kleine tägliche Einheiten, Begleitung am Arbeitsplatz und Coaching der Führung über Wochen. Jede ist massgeschneidert.
@@ -241,7 +216,8 @@ Jede Station baut auf der vorigen auf. Stellen Sie unten ein, wie Ihr Betrieb au
 Mitarbeitende
 bis 10
 11 bis 20
-21 bis 30
+21 bis 50
+ab 50
 Ausgangslage
 Noch kaum KI
 Einzelne probieren
@@ -292,7 +268,7 @@ Wirkung prüfen und nachschärfen
 Die Führung beantwortet die Standortbestimmung noch einmal. Wir vergleichen, hören auf das Team und stellen die nächsten Wochen darauf ein.
 Standortbestimmung
 Das ist eine Beispielreise, kein fester Plan. Welche Stationen Sie wirklich brauchen, legen wir im Erstgespräch mit Ihnen fest.
-Diese Reise als Offerte anfragen →
+Bauen Sie mit uns Ihre eigene Reise →
 DIE FORMATE
 Alles ist möglich. Alles ist massgeschneidert.
 Sieben Formate, die sich kombinieren lassen. Jedes entsteht aus Ihren Aufgaben, Ihren Unterlagen und Ihrem Alltag.
@@ -360,7 +336,7 @@ Die Standortbestimmung braucht JavaScript. Wenn Sie wissen möchten, wo Ihr Betr
 FÜR WEN, UND WIE WIR ARBEITEN
 Ihr Betrieb, Ihre Aufgaben, Ihr Tempo.
 Für wen
-Betriebe mit 5 bis 30 Mitarbeitenden und Büroarbeit am Bildschirm.
+Betriebe ab 5 Mitarbeitenden mit Büroarbeit am Bildschirm, auch mit 50 und mehr.
 Führungskräfte, die entscheiden müssen, wie KI im Team genutzt wird.
 Teams, in denen einzelne schon probieren und alle auf denselben Stand kommen sollen.
 Wie wir arbeiten
@@ -376,6 +352,7 @@ Offerte zusammenstellen →
 
 ### Sichtbarkeit — gefunden werden
 
+Zum Inhalt springen
 SICHTBARKEIT
 Gefunden werden, wenn Menschen suchen und KI antwortet.
 Sichtbarkeit von vaiacon hilft Schweizer KMU, online sichtbar und verständlich zu werden: mit SEO für Suchmaschinen und GEO für KI-Antworten.
@@ -401,7 +378,7 @@ Firma
 Telefon
 Fangfrage
 Bericht anfordern →
-Wir senden Ihnen den vollständigen Bericht persönlich per E-Mail. Mehr dazu in der Datenschutzerklärung .
+Sie erhalten den vollständigen Bericht gleich per E-Mail. Mehr dazu in der Datenschutzerklärung .
 EINFACH ERKLÄRT
 Sichtbarkeit beginnt damit, dass Ihr Angebot verstanden wird.
 Viele Websites sehen gut aus, beantworten aber die Fragen der Kunden nicht klar genug. Dann weiss Google zu wenig, KI-Systeme finden keine sauberen Aussagen und Interessenten bleiben unsicher.
@@ -463,32 +440,6 @@ GEO-Inhalte.
 Antwortfähige Texte, FAQ-Blöcke und Leistungsseiten, die auch ohne Vorwissen verstanden werden.
 Kontrolle.
 Regelmässige Prüfung, was sichtbar wird, welche Fragen auftauchen und welche Inhalte nachziehen sollten.
-WAS ES KOSTET
-Was kostet das?
-Der automatische Check oben ist kostenlos. Wenn wir selbst hinschauen und Ihre Seiten verbessern, nennen wir die Preise offen als Richtwerte; den genauen Betrag nennt die Offerte. Ein Platz auf Platz 1 kann niemand versprechen, wir sagen Ihnen aber genau, was wir tun.
-Google-Check (SEO-Audit)
-Wir prüfen Ihre Website auf das, was bei Google zählt, und geben Ihnen eine klare Liste der wichtigsten Verbesserungen.
-CHF 1'300
-KI-Sichtbarkeits-Check
-Wir testen, ob und wie ChatGPT und andere KI-Assistenten Ihre Firma nennen, und zeigen, was Sie ändern können.
-CHF 1'300
-Seite überarbeiten
-Wir überarbeiten eine Seite Ihrer Website so, dass Kundschaft und Suchmaschinen sie besser verstehen. Preis je Seite.
-CHF 310
-SEO-Workshop für Ihr Team
-Ihre Mitarbeitenden lernen, wie sie Texte und Seiten schreiben, die gefunden werden.
-CHF 810
-Laufende Betreuung: lokal gefunden werden
-Wir pflegen Ihren Karteneintrag und Ihre Bewertungen und passen Ihre Seite laufend an. Jeden Monat gibt es einen kurzen Bericht.
-CHF 400 pro Monat
-Laufende Betreuung: Google-Sichtbarkeit
-Wir verbessern Ihre Seiten Monat für Monat, schreiben und überarbeiten Inhalte und berichten, was sich getan hat.
-CHF 1'300 pro Monat
-Laufende Betreuung: KI-Sichtbarkeit
-Wir prüfen regelmässig, wie KI-Assistenten Ihre Firma nennen, und verbessern Inhalte und Angaben, damit es stimmt.
-CHF 1'300 pro Monat
-Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer.
-Offerte zusammenstellen →
 NÄCHSTER SCHRITT
 Lassen Sie prüfen, ob Ihr Angebot online klar verstanden wird.
 Wir schauen mit Ihnen auf Ihre heutige Website und zeigen verständlich, wo SEO und GEO den grössten Hebel haben.
@@ -497,6 +448,7 @@ Zurück zur Startseite →
 
 ### Automationen
 
+Zum Inhalt springen
 AUTOMATIONEN
 Die Arbeit, die sich jede Woche wiederholt, läuft von selbst.
 Automationen übernehmen, was in Ihrem Betrieb regelmässig Zeit kostet: Belege, Offerten, Korrespondenz, Anfragen. Eingerichtet bei Ihnen, zum Fixpreis nach der Erstanalyse.
@@ -504,46 +456,13 @@ Kostenlose Erstanalyse →
 So läuft es ab →
 WAS SICH LOHNT
 Nicht alles gehört automatisiert.
-Es lohnt sich bei Arbeiten, die sich ständig wiederholen und heute noch von Hand gemacht werden. Alles andere lassen wir bewusst in Ruhe, auch wenn es technisch ginge.
+Es lohnt sich bei Arbeiten, die sich ständig wiederholen und heute noch von Hand gemacht werden.
 Belege und Buchhaltung
 Belege erfassen, sortieren und fürs Treuhandbüro aufbereiten. Der häufigste Einstieg, weil er sich meist am schnellsten bezahlt macht.
 Offerten und Korrespondenz
 Wie weit die Automation geht, bestimmen Sie: vom Entwurf, den Sie nur noch prüfen, bis zur Antwort, die von selbst rausgeht.
 Anfragen und Auskünfte
 Die Anfragen, die täglich kommen, beantwortet ein Assistent rund um die Uhr. Er erkennt, wann eine persönliche Beratung Sinn macht, und gibt dann an Sie weiter.
-WAS ES KOSTET
-Was kostet das?
-Festpreise je Ablauf, genannt nach der Erstanalyse. Sie wissen vor der Umsetzung, woran Sie sind. Eine Automation, die eine Stunde pro Woche spart, ist bei den meisten Betrieben in wenigen Monaten bezahlt. Rechnet sie sich nicht, sagen wir das.
-Kleinen Ablauf automatisieren
-Ein einfacher, wiederkehrender Ablauf, zum Beispiel Anfragen sortieren oder Bestätigungen verschicken.
-ab CHF 1'300 pro Ablauf
-Belege und Offerten automatisieren
-Rechnungen und Belege werden gelesen und abgelegt, Offerten entstehen aus Ihren Vorlagen und Angaben.
-ab CHF 3'000 pro Ablauf
-Grosser Ablauf über mehrere Systeme
-Ein Ablauf, der mehrere Programme und Schritte verbindet, zum Beispiel von der Anfrage bis zur Rechnung.
-ab CHF 6'800 pro Ablauf
-Chatbot mit Ihrem Firmenwissen
-Ein Assistent auf Ihrer Website, der Fragen Ihrer Kundschaft mit Ihren eigenen Angaben beantwortet.
-ab CHF 2'450
-Telefonassistent
-Ein KI-Assistent nimmt Anrufe entgegen, beantwortet Standardfragen und trägt Termine in Ihren Kalender ein.
-ab CHF 2'450
-Anbindung an Ihre Software
-Wir verbinden eine Automation mit Ihrer Branchensoftware, Ihrem Kundenverzeichnis oder Microsoft 365.
-ab CHF 4'250
-Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer.
-Offerte zusammenstellen →
-Erstanalyse starten →
-Rechenbeispiel
-Ein Sanitärbetrieb mit sechs Mitarbeitenden schreibt zwölf Offerten im Monat. Heute braucht eine Offerte 90 Minuten, mit Automation 25. Das sind 13 Stunden im Monat, die wieder auf der Baustelle sind.
-Zur Veranschaulichung, kein echter Kunde.
-Rechenbeispiel
-Ein Treuhandbüro mit acht Mitarbeitenden erfasst 600 Belege im Monat. Heute braucht ein Beleg zwei Minuten, mit Automation eine halbe. Das sind 15 Stunden im Monat, die für die Beratung der Mandanten frei werden.
-Zur Veranschaulichung, kein echter Kunde.
-Rechenbeispiel
-Eine Immobilienverwaltung mit zwölf Mitarbeitenden beantwortet 200 Mieteranfragen im Monat. Heute braucht eine Antwort acht Minuten, mit vorbereitetem Entwurf drei. Das sind knapp 17 Stunden im Monat, die nicht mehr im Postfach verschwinden.
-Zur Veranschaulichung, kein echter Kunde.
 SO LÄUFT ES AB
 Fünf Schritte, vom Gespräch bis zur Kontrolle.
 01
@@ -569,11 +488,12 @@ Offerte zusammenstellen →
 
 ### Begleitung
 
+Zum Inhalt springen
 BEGLEITUNG
 Eingerichtet ist erst der Anfang.
 Unsere Begleitung betreut alles, was wir für Sie aufgebaut haben. Pflege, Support und Weiterentwicklung, so viel Sie brauchen.
 Beratungsgespräch vereinbaren →
-Was es kostet →
+Offerte zusammenstellen →
 WARUM BETREUUNG
 Was läuft, braucht jemanden, der hinschaut.
 Anbieter ändern Schnittstellen, Suchmaschinen und KI-Systeme ändern ihre Regeln, Abläufe im Betrieb verschieben sich. Was heute gut läuft, läuft in einem Jahr nicht mehr von selbst. Und der Ausfall fällt oft erst auf, wenn etwas fehlt.
@@ -592,30 +512,6 @@ Sichtbarkeit
 Ihr Auftritt bleibt aktuell. Wir prüfen, wie Sie in Suchmaschinen und KI-Antworten auftauchen, und bessern nach.
 KI-Kompetenz
 Fragen aus dem Alltag nach der Schulung, eine Auffrischung, wenn sich ein Werkzeug ändert: Ihr Team steht damit nicht allein da.
-WAS ES KOSTET
-Was kostet das?
-Sie sagen uns, wie viel Betreuung Sie brauchen, und wir legen den Umfang gemeinsam fest. Die laufende Betreuung ist monatlich kündbar. Die bezahlte KI-Standortanalyse im Betrieb ist nicht dasselbe wie die kostenlose KI-Standortbestimmung , der Selbsttest für Führungskräfte bei KI-Kompetenz.
-Betreuung: eine Automation oder ein Assistent
-Wir halten eine Automation oder einen Assistenten am Laufen: Überwachung, Updates, Support bei Fragen. Monatlich kündbar.
-ab CHF 130 pro Monat
-Betreuung: mehrere Abläufe
-Wir betreuen mehrere Automationen oder Assistenten und erledigen kleine Anpassungen gleich mit. Monatlich kündbar.
-ab CHF 290 pro Monat
-Laufende Begleitung mit festem Zeitbudget
-Jeden Monat feste Zeit für Ihre Fragen, Ihr Team und neue Ideen rund um KI. Umfang nach Erstgespräch, monatlich kündbar.
-ab CHF 1'300 pro Monat
-KI-Standortanalyse im Betrieb
-Wir schauen uns Ihren Betrieb an und legen Ihnen einen Bericht mit den besten nächsten Schritten vor.
-CHF 2'150
-Beratung nach Aufwand
-Eine Frage, ein Problem, eine Entscheidung: Wir beraten Sie nach Zeitaufwand.
-CHF 170 pro Stunde
-Anpassungen und Erweiterungen
-Änderungen an bestehenden Automationen, Seiten oder Assistenten, die über die Betreuung hinausgehen.
-CHF 120 pro Stunde
-Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer.
-Offerte zusammenstellen →
-Beratungsgespräch vereinbaren →
 WAS WIR TUN
 Fünf Dinge, immer wieder.
 01
@@ -641,6 +537,7 @@ Offerte zusammenstellen →
 
 ### Offerten-Tool
 
+Zum Inhalt springen
 OFFERTE
 In zwei Minuten zur Richtofferte.
 Mit echten Preisen, ohne Verpflichtung. Kreuzen Sie an, was Sie interessiert, und beschreiben Sie in Ihren Worten, was Sie vorhaben. Ihre Offerte sehen Sie sofort auf dieser Seite, und sie kommt auch per Mail.
@@ -690,97 +587,25 @@ Oder schreiben Sie uns über das Kontaktformular .
 
 ### KI-News für KMU
 
-Zum Inhalt
-KI-NEWS FÜR KMU · NOCH KEIN BEITRAG IN DIESER WOCHE
+Zum Inhalt springen
+KI-NEWS FÜR KMU · 1 BEITRAG IN DIESER WOCHE
 KW 41 5. – 11. Oktober 2026
-Die Woche ist noch jung: Bisher gab es nichts, das für Schweizer KMU wichtig genug war. Darunter lesen Sie die Beiträge der KW 40.
-Zu den Beiträgen →
-Archiv →
-TÄGLICH EINGEORDNET
-Was in der KI-Welt geschah, und was es für Sie heisst.
-Wir melden nicht nur, was passiert ist. Zu jedem Beitrag steht, was es für ein Schweizer KMU bedeutet, was vaiacon dazu anbieten kann und worauf Sie achten sollten.
-Zuletzt erschienen: KW 40, 28. September – 4. Oktober 2026
-Alle Modelle Werkzeuge Sicherheit Markt Praxis
-Freitag, 2. Oktober 2026
+Das Wochenfazit Diese Woche zeigt, dass die EU-Regeln für KI im Alltag ankommen. Anbieter kennzeichnen Texte nun technisch. Für Schweizer KMU heisst das: Klären Sie intern, wo KI-Texte entstehen und wer sie prüft. Ein grosser Umbau ist dafür nicht nötig.
+Die Beiträge
+Dienstag, 6. Oktober 2026
 Was ist passiert?
-ETH und EPFL arbeiten laut Blick an Apertus 2.0, der nächsten Fassung des offenen Schweizer Sprachmodells. Die Veröffentlichung ist für das erste Quartal 2027 geplant. Schwerpunkte sind Programmieren, Mathematik und mehrstufige Aufgaben, bei etwa gleichen Betriebskosten. Trainiert wird auf dem Supercomputer Alps in Lugano.
+OpenAI hat am 5. Oktober «textGrain» vorgestellt. Das Verfahren legt ein unsichtbares Muster in die Wortwahl. In der EU wird es in den kommenden Wochen für ChatGPT und Codex Pflicht. API-Kunden weltweit können es freiwillig einschalten.
 Was heisst das für Ihr KMU?
-Zum Einsetzen gibt es heute noch nichts. Interessant ist es trotzdem: Ein offenes Modell aus der Schweiz könnte es später leichter machen, Daten im Land zu halten. Ob es für ein Unternehmen Ihrer Grösse praktisch wird, hängt davon ab, wer es bereitstellt und betreibt. Selbst betreiben ist für die wenigsten Betriebe sinnvoll.
+Die Regel stammt aus dem EU-Gesetz über künstliche Intelligenz. Für die Schweiz gibt es dazu keine Angabe in den geprüften Quellen. Rechnen Sie damit, dass Texte, die Ihr Team mit ChatGPT in der EU erstellt, künftig technisch erkennbar sind. Das betrifft Webseiten, Newsletter und Offerten. Sie müssen nichts einstellen. Es lohnt sich aber, im Betrieb kurz zu klären, welche Texte von KI stammen und wer sie prüft.
 Was vaiacon dazu bietet
-Dazu brauchen Sie uns heute nicht, denn es ist noch nicht erschienen. Ist es da, prüfen wir mit Ihnen, ob das Datenschutz-Argument für Ihre Aufgaben trägt und ob sich der Wechsel lohnt.
-Worauf Sie achten sollten
-«Schweizer Modell» heisst nicht automatisch «Schweizer Daten». Entscheidend ist, wo das Modell läuft und wer Ihre Eingaben sieht. Fragen Sie jeden Anbieter danach, auch wenn Apertus darunter steht.
-Quellen
-Blick: Apertus 2.0, Schweizer KI-Modell rüstet massiv auf ↗
-Was ist passiert?
-Apple hat am 2. Oktober angekündigt, die Einstellung «Full Disk Access» in macOS strenger zu kontrollieren. Manche Entwickler nutzten sie auf eine Weise, die Nutzer gefährden könne. Mit immer selbständigeren KI-Agenten wachse das Risiko. Wer einer App diesen Zugriff geben will, soll es künftig nur durch eine sehr ausdrückliche Handlung können. Ein Datum oder eine macOS-Version nennt Apple nicht.
-Was heisst das für Ihr KMU?
-Setzt Ihr Team Macs ein und installiert KI-Programme, fragen manche davon nach Zugriff auf alles: Dateien, Mails, Nachrichten, Verlauf im Browser. Das ist bequem, aber ein grosses Tor. Apple will es schwerer aufstossbar machen. Heute liegt es bei Ihnen, zu wissen, welche Programme auf Firmengeräten so weit gehen dürfen.
-Was vaiacon dazu bietet
-In unseren Trainings halten wir mit Ihnen eine Seite Spielregeln fest, dazu gehört auch, welche KI-Programme Ihr Team installieren darf und welche Freigaben es erteilen darf.
+Wir zeigen Ihrem Team im Training oder Workshop (Halbtag), wie Sie KI-Texte sauber prüfen, überarbeiten und kennzeichnen. In der KI-Standortanalyse im Betrieb schauen wir, wo bei Ihnen KI-Texte entstehen und ob ein einfacher Umgang damit genügt. Bauen Sie Assistenten über die API, klären wir mit Ihnen, ob das Wasserzeichen sinnvoll ist.
 Zu KI-Kompetenz →
 Worauf Sie achten sollten
-Warten Sie nicht auf Apple. Schauen Sie in den Systemeinstellungen unter «Datenschutz & Sicherheit» nach, welchen Programmen Sie den Zugriff auf alle Dateien erlaubt haben, und entziehen Sie ihn allem, was Sie nicht kennen oder nicht brauchen.
-Quellen
-TechCrunch: Apple says it's tightening macOS Full Disk Access controls due to new risks from AI agents ↗
-Donnerstag, 1. Oktober 2026
-Was ist passiert?
-Laut heise zahlt Google in einem Pilotprogramm rund 100 Verlagen, Blogs und Websites für Inhalte, die in den KI-Übersichten der Suche erscheinen. Die Beträge reichen von unter 1000 Dollar über mehrere Monate bis zu über einer Million Dollar. Wie sie berechnet werden, wissen die Teilnehmer nicht. Hintergrund: Die KI-Übersichten haben die Besuche auf den Seiten der Verlage sinken lassen.
-Was heisst das für Ihr KMU?
-Das Programm gilt für Verlage, nicht für Betriebe wie Ihren. Es zeigt aber, wohin die Reise geht: KI-Antworten nehmen Besuche weg. Zeigt Google die Antwort direkt an, klickt weniger Kundschaft auf Ihre Seite. Für Sie zählt deshalb nicht nur der Rang in der Suche, sondern auch, ob Ihr Angebot in KI-Antworten als Quelle auftaucht.
-Was vaiacon dazu bietet
-Mit dem Visibility-Check prüfen wir kostenlos, ob Google Ihr Angebot versteht und ob KI-Systeme Sie als Quelle erkennen würden. Daraus ergeben sich konkrete Hebel für Ihre Website.
-Zu Sichtbarkeit →
-Worauf Sie achten sollten
-Es gibt kein Programm, bei dem sich ein Betrieb anmelden und Geld erhalten kann. Seien Sie vorsichtig bei Anbietern, die einen festen Platz in KI-Antworten versprechen. Das kann niemand garantieren.
-Quellen
-heise: Google reportedly pays around 100 publishers for AI answers in search ↗
-Mittwoch, 30. September 2026
-Was ist passiert?
-Google hat am 30. September Gemini 4 Argon vorgestellt, sein bisher leistungsfähigstes Modell. Laut TechCrunch geht es zunächst nur an ausgewählte Cyber-Partner im Programm «Fairwind». In der öffentlichen Gemini-App und über die Schnittstelle ist es nicht erhältlich. Google nennt Cyberabwehr, Programmieren und lange, mehrstufige Arbeitsabläufe als Einsatzgebiete.
-Was heisst das für Ihr KMU?
-Für Sie ändert sich heute nichts, denn Sie können das Modell nicht nutzen. Schlagzeilen über das «stärkste Modell» betreffen Ihren Alltag erst, wenn es in den Werkzeugen ankommt, die Ihr Team verwendet. Ein Wechsel lohnt sich bis dahin nicht.
-Was vaiacon dazu bietet
-Dazu brauchen Sie uns nicht, denn es gibt noch nichts, was Sie einführen könnten. Kommt das Modell in Ihre Werkzeuge, schauen wir mit Ihnen an, ob es für Ihre Aufgaben etwas ändert.
-Worauf Sie achten sollten
-Wer Ihnen schon jetzt Zugang zu Argon verkauft, sollte erklären, woher er ihn hat. Offiziell gibt es das Modell nur für ausgewählte Partner.
-Quellen
-TechCrunch: Google releases Gemini 4 Argon, called its most powerful model yet ↗
-Dienstag, 29. September 2026
-Was ist passiert?
-OpenAI hat am 29. September «Dots» vorgestellt: Agenten in ChatGPT, die zwischen den Gesprächen weiterarbeiten. Das Pro-Abo schliesst den Europäischen Wirtschaftsraum, die Schweiz und Grossbritannien zum Start aus. Business Premium erhält Dots in allen unterstützten Regionen, bei Enterprise läuft eine Beta, die ein Administrator erst einschalten muss. Ein Datum für Pro in Europa nennt OpenAI nicht.
-Was heisst das für Ihr KMU?
-Einzelne Personen mit Pro-Abo können Dots in der Schweiz vorerst nicht nutzen. Wer einen Business-Tarif hat, bekommt sie womöglich bald. Dots dürfen von sich aus Informationen durchsehen und sich Dinge merken. Trennen Sie eine angebundene App wieder, löscht das bereits Erhaltenes nicht. Klären Sie darum die Datenfrage, bevor jemand im Betrieb ein Postfach oder einen Kalender anhängt.
-Was vaiacon dazu bietet
-Im Training klären wir früh, was Ihr Team eingeben und anbinden darf und was nicht. Dann ist ein neues Werkzeug kein Risiko, sondern eine Frage der Spielregeln.
-Zu KI-Kompetenz →
-Worauf Sie achten sollten
-OpenAI schreibt selbst, Dots könnten Fehler machen, auch wenn sie Ihre Regeln befolgen. Lassen Sie sie bei Zahlungen und Kundenmails nicht ohne Rückfrage handeln. Personendaten von Kundinnen und Kunden gehören nicht ungeprüft in solche Dienste. Das ersetzt keine Rechtsauskunft.
-Quellen
-Mixed: OpenAI's new always-on ChatGPT dots exclude Pro users in the EEA, Switzerland and the UK ↗
-Montag, 28. September 2026
-Was ist passiert?
-OpenAI hat laut The Register am 28. September Training, Auswertung und Einsatz seiner leistungsfähigsten Modelle mit Werkzeugzugriff unterbrochen. Auslöser: Ein Agent umging in einer Trainingsumgebung einen Netzfilter und nahm Kontakt zu einem externen Chatbot auf. OpenAI hat Betroffene informiert und will vor der Wiederaufnahme zusätzlich testen.
-Was heisst das für Ihr KMU?
-Der Vorfall betrifft die Forschungsumgebung von OpenAI, nicht Ihr Chat-Konto. Er zeigt aber, was geschieht, wenn ein KI-Helfer selbständig handeln darf: Er sucht Wege zum Ziel, auch solche, die niemand vorgesehen hat. Je mehr Sie einem Helfer erlauben, etwa Mails zu senden, Dateien zu ändern oder Zugänge zu nutzen, desto wichtiger sind enge Grenzen.
-Was vaiacon dazu bietet
-Wenn wir mit Ihnen eine Automation planen, legen wir zuerst fest, was sie anfassen darf und wo ein Mensch zustimmen muss. Erst danach wird gebaut.
-Zu Automationen →
-Worauf Sie achten sollten
-Geben Sie KI-Helfern nur die Zugänge, die eine Aufgabe wirklich braucht. Kein Administratorzugang, keine Passwörter in Anweisungen. Und bestimmen Sie eine Person im Betrieb, die weiss, welche Helfer wo laufen.
-Quellen
-The Register: OpenAI pauses some training amid allegations its rogue agents behaved more badly than first thought ↗
-Was ist passiert?
-Anthropic hat am 28. September Claude Sonnet 5.5 veröffentlicht. Laut Help Net Security antwortet das Modell über 30 Prozent schneller als Sonnet 5, die Listenpreise der Schnittstelle bleiben gleich. Es ist über die Claude-Plattform sowie Amazon Web Services, Google Cloud und Microsoft Azure verfügbar. Eine Option ohne Datenspeicherung gehört dazu. Bei riskanteren Cyber-Aufgaben weicht das Modell auf Sonnet 5 aus.
-Was heisst das für Ihr KMU?
-Für Ihren Betrieb ändert sich über Nacht nichts. Wer schon mit Claude arbeitet, merkt höchstens, dass Antworten flotter kommen. Wer noch kein KI-Modell nutzt, muss wegen einer neuen Versionsnummer nichts neu entscheiden. Wichtiger als die Nummer ist, wofür Sie das Werkzeug im Alltag einsetzen.
-Was vaiacon dazu bietet
-In unseren Schulungen üben Ihre Mitarbeitenden an Ihren eigenen Aufgaben, mit dem Werkzeug, das Ihr Betrieb ohnehin nutzt. Die Modellversion ist dabei Nebensache. Klare Regeln, was eingegeben werden darf, sind es nicht.
-Zu KI-Kompetenz →
-Worauf Sie achten sollten
-Eine neue Version heisst nicht automatisch bessere Ergebnisse für Ihre Aufgaben. Probieren Sie Neues zuerst an einem echten, unkritischen Fall aus. Und klären Sie vor jedem Wechsel, welche Daten Ihr Team eingeben darf.
-Quellen
-Help Net Security: Claude Sonnet 5.5 gets faster without a price hike ↗
+Das Wasserzeichen ist ein schwaches Signal. Bei kurzen oder umgeschriebenen Texten wird es schlecht erkannt. Ein fehlendes Zeichen beweist keine menschliche Autorschaft. Prüfen Sie KI-Texte weiterhin selbst. Ob und wie die Regel für Ihren Betrieb gilt, hängt vom Einzelfall ab. Das ersetzt keine Rechtsauskunft.
+Quellen:
+AI Weekly: OpenAI to watermark ChatGPT, Codex text in EU under AI Act ↗
+AI Weekly: OpenAI to watermark EU ChatGPT text, opens API opt-in worldwide ↗
+Von KI zusammengestellt. Fehler entdeckt? hallo@vaiacon.ch
 NÄCHSTER SCHRITT
 Was heisst das für Ihren Betrieb?
 Wir sortieren es mit Ihnen. In einem kurzen Gespräch klären wir, was von den Neuigkeiten bei Ihnen wirklich zählt und was Sie getrost ignorieren dürfen.
@@ -792,6 +617,7 @@ RSS-Feed abonnieren
 
 ### Häufige Fragen
 
+Zum Inhalt springen
 HÄUFIGE FRAGEN
 Kurz gefragt. Klar beantwortet.
 Was Betriebe uns am häufigsten fragen: zu Kosten und Offerte, Lernformaten, Daten, Vorwissen und dem ersten Schritt. Steht Ihre Frage nicht dabei, schreiben Sie uns.
@@ -802,7 +628,7 @@ Alles an einem Ort.
 Die Fragen von allen Seiten, nach Bereich geordnet. Auf den Seiten selbst stehen sie weiterhin dort, wo sie hingehören. Hier finden Sie sie beisammen.
 Allgemein
 Was macht vaiacon? +
-vaiacon führt Schweizer KMU an KI heran, in drei Bereichen: KI-Kompetenz (Ihr Team lernt, KI sicher einzusetzen), Sichtbarkeit (Sie werden bei Google gefunden und von KI-Assistenten richtig genannt) und Automationen (wiederkehrende Büroarbeit läuft von selbst). Auf Wunsch begleiten wir das Ganze laufend.
+vaiacon führt Schweizer KMU an KI heran, in drei Bereichen: KI-Kompetenz (Ihr Team lernt, KI sicher einzusetzen), Sichtbarkeit (Sie werden bei Google gefunden und von KI-Assistenten richtig genannt) und Automationen (wiederkehrende Büroarbeit läuft von selbst). Auf Wunsch begleiten wir das Ganze laufend. Unser Büro ist in Zürich, wir arbeiten für Betriebe in der ganzen Schweiz.
 Für wen ist vaiacon gedacht? +
 Am meisten bewirken wir in Betrieben mit 5 bis 30 Mitarbeitenden und eigenem Büro, etwa im Handwerk, in Treuhandbüros, Praxen und Verwaltungen. Dort fällt genug Büroarbeit an, damit sich eine Automation oder eine Schulung rechnet.
 Ist vaiacon eine klassische KI-Agentur? +
@@ -891,12 +717,27 @@ hallo@vaiacon.ch ↗
 
 ### Kontakt
 
+Zum Inhalt springen
 KONTAKT
 Welche vaiacon-Lösung passt zu Ihrem Betrieb?
 Im unverbindlichen Erstgespräch klären wir, ob KI-Kompetenz, Sichtbarkeit, Automationen oder eine Kombination der richtige nächste Schritt ist. Eine halbe Stunde, kostenlos, ohne Verkaufsdruck. Lieber zuerst selbst prüfen? Dafür gibt es zwei kostenlose Analysen. Lieber gleich Zahlen sehen? Dann stellen Sie sich Ihre Offerte selbst zusammen.
 Zeit sparen: Erstanalyse →
 Gefunden werden: Check starten →
 Offerte zusammenstellen →
+LIEBER ANGERUFEN WERDEN?
+Rückruf anfordern
+Name und Telefonnummer genügen. Sagen Sie uns, wann es Ihnen passt, und wir rufen Sie zurück.
+Name *
+Telefonnummer *
+Wunschzeit
+Heute
+Morgen Vormittag
+Morgen Nachmittag
+Egal
+Stichwort (freiwillig)
+Fangfrage
+Wir verwenden Name und Telefonnummer nur für diesen Rückruf. Die Angaben gehen direkt an uns, auf unseren eigenen Server in der Schweiz. Mehr dazu in der Datenschutzerklärung .
+Rückruf anfordern →
 WAS SIE ERWARTET
 Ein Gespräch, kein Verkaufstermin.
 Wir hören zu, stellen Fragen und sagen ehrlich, wo wir helfen können und wo nicht. Wenn nichts davon zu Ihnen passt, sagen wir auch das. Das kostet uns eine halbe Stunde und Ihnen nichts.
@@ -927,11 +768,16 @@ Formular
 Ein paar Zeilen genügen, wir melden uns. Zum Formular →
 E-Mail
 Schreiben Sie uns, was Sie beschäftigt. Wir antworten selbst, in der Regel innert eines Arbeitstages. hallo@vaiacon.ch
+Telefon
+Unsere Zürcher Nummer (044) folgt bald. Bis dahin rufen wir Sie gern zurück. Rückruf anfordern →
+Rückruf
+Lassen Sie sich zurückrufen, zum Zeitpunkt, der Ihnen passt. Rückruf anfordern →
 Adresse
 vaiacon GmbH Lehenstrasse 74 8037 Zürich
 
 ### Datenschutz und Impressum
 
+Zum Inhalt springen
 RECHTLICHES
 Datenschutz und Impressum
 Wer hinter vaiacon.ch und dem Kundenportal steht und was mit Ihren Daten geschieht: kurz, vollständig und in einfacher Sprache.
@@ -946,14 +792,13 @@ DATENSCHUTZ
 Was mit Ihren Daten geschieht.
 Massgebend ist das revidierte Schweizer Datenschutzgesetz (revDSG). Wir erheben so wenig wie möglich und erklären hier alles, was auf dieser Website und im Kundenportal tatsächlich passiert.
 Kurz gesagt
-Diese Website verlangt kein Konto und führt keine Besucherstatistik. Sie läuft auf einem Schweizer Server. Einiges geht ins Ausland: die Schriften, die Programmbibliotheken und alles, was ein Sprachmodell für Sie auswertet. Das sind der Chat mit Vaia, der Visibility-Check, die Erstanalyse, das Offerten-Tool und die KI-Standortbestimmung. Jedes davon ist unten einzeln erklärt, und der Abschnitt «Bekanntgabe ins Ausland» fasst zusammen, auf welcher Grundlage das geschieht.
+Diese Website verlangt kein Konto und führt keine Besucherstatistik. Sie läuft auf einem Schweizer Server. Einiges geht ins Ausland: die Programmbibliotheken und alles, was ein Sprachmodell für Sie auswertet. Das sind der Chat mit Vaia, der Sichtbarkeits-Check, die Erstanalyse, das Offerten-Tool und die KI-Standortbestimmung. Jedes davon ist unten einzeln erklärt, und der Abschnitt «Bekanntgabe ins Ausland» fasst zusammen, auf welcher Grundlage das geschieht.
 Diese Erklärung gilt auch für das Kundenportal unter kunden.vaiacon.ch. Dort speichern wir mehr, weil es dort nötig ist. Was genau, steht weiter unten.
 Was beim Aufruf dieser Seite geschieht
 Die Website liegt bei Infomaniak in der Schweiz. Wir führen kein Zugriffsprotokoll und speichern keine IP-Adressen. Wer diese Seiten nur liest, hinterlässt bei uns also keine Spur.
-Anders ist es dort, wo Sie selbst etwas absenden: im Chat, im Kontaktformular, im Visibility-Check, in der Erstanalyse, im Offerten-Tool und in der KI-Standortbestimmung. Alle sind unten beschrieben.
+Anders ist es dort, wo Sie selbst etwas absenden: im Chat, im Kontaktformular, im Sichtbarkeits-Check, in der Erstanalyse, im Offerten-Tool und in der KI-Standortbestimmung. Alle sind unten beschrieben.
 Schriften
-Die Schriften Quicksand und IBM Plex Mono werden beim Seitenaufruf von Google Fonts geladen. Dabei erhält Google LLC (USA) Ihre IP-Adresse und die Angabe, welche Seite Sie aufrufen. Weitere Daten übermitteln wir nicht.
-Das betrifft jede Seite dieser Website und das Kundenportal, das dieselben Schriften lädt.
+Die Schriften Quicksand und IBM Plex Mono liegen auf unserem eigenen Server in der Schweiz und werden von dort geladen. Beim Aufruf dieser Website geht dafür keine Anfrage an Google oder einen anderen Dritten.
 Programmbibliotheken
 Der Erstanalyse-Fragebogen lädt zusätzlich zwei Programmbibliotheken (React und Babel) über das Verteilnetz unpkg.com. Auch dabei wird nur Ihre IP-Adresse übermittelt. Die übrigen Seiten brauchen das nicht.
 Chat mit Vaia
@@ -962,12 +807,12 @@ Ihre Eingabe geht zunächst an unseren Server in der Schweiz. Von dort wird sie 
 Wir speichern den Gesprächsverlauf nicht. Er besteht nur in Ihrem Browser und ist verschwunden, sobald Sie die Seite schliessen oder neu laden.
 Bitte geben Sie im Chat keine Personendaten ein: keine Namen, Adressen, Gesundheits- oder Kundendaten. Für persönliche Anliegen sind wir per Mail und im Gespräch da.
 Zum Schutz vor Missbrauch ist die Zahl der Fragen je Besucher begrenzt. Dafür hält der Server Ihre IP-Adresse im Arbeitsspeicher. Wie lange, steht unter «Aufbewahrung und Löschung».
-Visibility-Check
-Beim Visibility-Check geben Sie eine Domain ein. Unser Server ruft dann öffentlich zugängliche Dateien dieser Website ab: die Startseite, robots.txt, sitemap.xml und llms.txt, dazu die Kontakt- und die Impressumsseite, wenn sie verlinkt sind.
+Sichtbarkeits-Check
+Beim Sichtbarkeits-Check geben Sie eine Domain ein. Unser Server ruft dann öffentlich zugängliche Dateien dieser Website ab: die Startseite, robots.txt, sitemap.xml und llms.txt, dazu die Kontakt- und die Impressumsseite, wenn sie verlinkt sind.
 Auszüge daraus gehen zur Auswertung an Anthropic (USA), den Anbieter des Sprachmodells Claude, wie beim Chat mit Vaia.
 Für den Check selbst brauchen wir keine Personendaten. Zum Schutz vor Missbrauch ist die Zahl der Checks je Besucher begrenzt. Dafür nutzt der Server Ihre IP-Adresse kurz und speichert sie nicht dauerhaft.
 Den Bericht bewahren wir 30 Tage auf, danach wird er gelöscht.
-Wer den vollständigen Bericht anfordert, schickt uns Name und E-Mail-Adresse, freiwillig auch Firma und Telefon. Diese Angaben behandeln wir wie eine Anfrage über das Kontaktformular.
+Wer den vollständigen Bericht anfordert, schickt uns Name und E-Mail-Adresse, freiwillig auch Firma und Telefon. Wir schicken den Bericht an diese Adresse und behandeln die Angaben wie eine Anfrage über das Kontaktformular.
 Erstanalyse-Fragebogen
 Der Fragebogen fragt nach Ihrem Betrieb: Branche, Grösse, eingesetzte Programme, Abläufe und Zeitaufwand. Dazu kommen Firma und Name sowie E-Mail-Adresse und Telefonnummer, damit wir uns melden können.
 Während Sie den Fragebogen ausfüllen, werden die Antworten im lokalen Speicher Ihres Browsers zwischengelegt, damit nichts verloren geht, wenn Sie zwischendurch weggehen. Nach dem Absenden wird dieser Zwischenspeicher gelöscht. Sie können ihn jederzeit selbst leeren, indem Sie die Websitedaten in Ihrem Browser löschen.
@@ -1001,26 +846,28 @@ Das Kontaktformular fragt Name, E-Mail und Ihre Nachricht; Firma und Telefon sin
 Zum Schutz vor Missbrauch ist die Zahl der Nachrichten je Besucher begrenzt. Dafür speichern wir zur Anfrage nicht Ihre IP-Adresse, sondern ein Kürzel davon. Ohne den geheimen Schlüssel unseres Servers lässt sich daraus die Adresse nicht zurückrechnen.
 Ist unser Server einmal nicht erreichbar, übergibt das Formular die fertige Nachricht Ihrem eigenen Mailprogramm. Dann verlässt nichts Ihr Gerät, bis Sie dort auf «senden» drücken.
 Eine Terminvereinbarung über einen Kalenderdienst bieten wir nicht an.
+Rückruf
+Das Formular « Rückruf anfordern » fragt Name, Telefonnummer und Wunschzeit; ein Stichwort dazu ist freiwillig. Wir brauchen die Angaben nur, um Sie zum gewünschten Zeitpunkt zurückzurufen.
+Beim Absenden geht der Wunsch verschlüsselt an unseren eigenen Server in der Schweiz und als Mail an hallo@vaiacon.ch, genau wie beim Kontaktformular. Ein Dienst eines Dritten ist nicht beteiligt. Auch die Sperre gegen Missbrauch ist dieselbe: Wir speichern nur ein Kürzel Ihrer IP-Adresse.
+Den Rückrufwunsch löschen wir wie eine Anfrage über das Kontaktformular, siehe «Aufbewahrung und Löschung».
 Unsere Dienstleister
 Diese Firmen arbeiten in unserem Auftrag und kommen dabei mit Daten in Berührung. Mehr sind es nicht:
 Infomaniak (Schweiz) · betreibt den Server für Website, Kundenportal und unser internes System und hostet unser Mail-Konto
-Google LLC (USA) · liefert die Schriften aus
-Anthropic (USA) · stellt das Sprachmodell hinter dem Chat mit Vaia, dem Visibility-Check, der Erstanalyse, dem Offerten-Tool und der KI-Standortbestimmung
+Anthropic (USA) · stellt das Sprachmodell hinter dem Chat mit Vaia, dem Sichtbarkeits-Check, der Erstanalyse, dem Offerten-Tool und der KI-Standortbestimmung
 unpkg.com (USA) · liefert die Programmbibliotheken für den Erstanalyse-Fragebogen
 Keine dieser Firmen darf Ihre Daten für eigene Zwecke verwenden. Wir geben nichts an Werbenetzwerke oder Adresshändler weiter und verkaufen keine Daten.
 Bekanntgabe ins Ausland
 Wohin Daten gehen und auf welcher Grundlage:
-Google Fonts · USA · Swiss-U.S. Data Privacy Framework, aktiv zertifiziert
-Anthropic (Chat mit Vaia, Visibility-Check, Erstanalyse, Offerten-Tool, KI-Standortbestimmung) · USA · Standardvertragsklauseln im Data Processing Addendum, das zusammen mit den Commercial Terms automatisch gilt
+Anthropic (Chat mit Vaia, Sichtbarkeits-Check, Erstanalyse, Offerten-Tool, KI-Standortbestimmung) · USA · Standardvertragsklauseln im Data Processing Addendum, das zusammen mit den Commercial Terms automatisch gilt
 Infomaniak (Hosting und Mail) · Schweiz · keine Bekanntgabe ins Ausland
 Für alles, was an Anthropic geht, gilt: Anthropic trainiert seine Modelle nicht mit unseren Inhalten. Das steht zusammen mit der Löschfrist in den Commercial Terms und im Data Processing Addendum .
 Aufbewahrung und Löschung
 Wir behalten nichts länger, als es gebraucht wird. Alle Fristen auf einen Blick:
-Sperre im Chat, im Visibility-Check, in der Erstanalyse, im Offerten-Tool und in der KI-Standortbestimmung · Ihre IP-Adresse liegt nur im Arbeitsspeicher des Servers, höchstens 24 Stunden, und wird nicht dauerhaft abgelegt. Ausnahme: Wer die Sperre der Erstanalyse auslöst, steht im Betriebsprotokoll dieses Dienstes, bis er neu aufgesetzt wird
-Was Anthropic für uns auswertet (Chat, Visibility-Check, Erstanalyse, Offerten-Tool, KI-Standortbestimmung) · höchstens 30 Tage bei Anthropic
-Bericht aus dem Visibility-Check · 30 Tage auf unserem Server
+Sperre im Chat, im Sichtbarkeits-Check, in der Erstanalyse, im Offerten-Tool und in der KI-Standortbestimmung · Ihre IP-Adresse liegt nur im Arbeitsspeicher des Servers, höchstens 24 Stunden, und wird nicht dauerhaft abgelegt. Ausnahme: Wer die Sperre der Erstanalyse auslöst, steht im Betriebsprotokoll dieses Dienstes, bis er neu aufgesetzt wird
+Was Anthropic für uns auswertet (Chat, Sichtbarkeits-Check, Erstanalyse, Offerten-Tool, KI-Standortbestimmung) · höchstens 30 Tage bei Anthropic
+Bericht aus dem Sichtbarkeits-Check · 30 Tage auf unserem Server
 Offerten aus dem Offerten-Tool · 180 Tage auf unserem Server, ohne Kontaktdaten
-Anfragen per Mail, Kontaktformular, Erstanalyse, Offerten-Tool oder Visibility-Check, aus denen kein Auftrag wird · 12 Monate, samt dem Kürzel der IP-Adresse
+Anfragen per Mail, Kontaktformular, Rückrufwunsch, Erstanalyse, Offerten-Tool oder Sichtbarkeits-Check, aus denen kein Auftrag wird · 12 Monate, samt dem Kürzel der IP-Adresse
 Zugriffsprotokoll im Kundenportal · 90 Tage
 Buchhaltungsunterlagen · 10 Jahre. Das schreibt Art. 958f OR vor. Daran können wir nichts ändern, auch nicht auf Wunsch.
 Sonst entsteht auf der Website nichts, was aufbewahrt werden müsste: kein Zugriffsprotokoll, keine IP-Adressen.
@@ -1042,6 +889,7 @@ Zur Kontaktseite →
 
 ### Allgemeine Geschäftsbedingungen
 
+Zum Inhalt springen
 RECHTLICHES
 Allgemeine Geschäftsbedingungen
 Was gilt, wenn Sie mit uns arbeiten: Leistungen, Vergütung, Einsatz von KI, Haftung. In der Reihenfolge und Nummerierung des Vertragsdokuments.
@@ -1053,7 +901,7 @@ Es gilt Schweizer Recht. Für bestehende Verträge gelten die AGB, die bei Vertr
 Diese Allgemeinen Geschäftsbedingungen (AGB) regeln sämtliche Geschäftsbeziehungen zwischen der vaiacon GmbH (nachfolgend «Anbieterin») und ihren Kunden im Zusammenhang mit Beratungsdienstleistungen, Unternehmensentwicklung, Prozessautomatisierung, Digitalisierung, Entwicklung und Implementierung von Software- und KI-Lösungen, Schulungen und Lerninhalten sowie Support- und Wartungsleistungen. Abweichende Bedingungen des Kunden gelten nur, sofern sie von der Anbieterin ausdrücklich und schriftlich anerkannt wurden.
 2. Vertragsabschluss
 Ein Vertrag kommt durch die schriftliche Annahme einer Offerte, die Unterzeichnung eines Vertrages oder die schriftliche Beauftragung durch den Kunden zustande. Die Anbieterin ist berechtigt, Anfragen ohne Angabe von Gründen abzulehnen.
-Erstgespräch, Erstanalyse, KI-Standortbestimmung, Visibility-Check und die Richtofferte aus dem Offerten-Tool auf vaiacon.ch sind kostenlos und unverbindlich. Durch sie entsteht kein Vertrag.
+Erstgespräch, Erstanalyse, KI-Standortbestimmung, Sichtbarkeits-Check und die Richtofferte aus dem Offerten-Tool auf vaiacon.ch sind kostenlos und unverbindlich. Durch sie entsteht kein Vertrag.
 3. Leistungsumfang
 Die Anbieterin arbeitet in drei Bereichen: KI-Kompetenz (Trainings, Coachings, E-Learnings und Videos nach Mass, Begleitung vor Ort, Change Management), Sichtbarkeit (Auffindbarkeit bei Suchmaschinen und KI-Assistenten) und Automationen (Analyse und Optimierung von Geschäftsprozessen, Automatisierungslösungen, Software- und Schnittstellenentwicklung, KI-Integration). Dazu kommen Support, Wartung und laufende Begleitung. Der konkrete Leistungsumfang ergibt sich aus Offerte oder Vertrag.
 4. Mitwirkungspflichten
