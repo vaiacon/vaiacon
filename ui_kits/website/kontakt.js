@@ -32,6 +32,22 @@
   var MAIL = 'hallo@vaiacon.ch';
 
   var formulare = document.querySelectorAll('.vc-kontakt');
+
+  /* Von der Lernreise (learning.html, Knopf «Bauen Sie mit uns Ihre eigene
+     Reise») kommt die gewählte Beispielreise als Ausgangspunkt mit. */
+  try {
+    var reise = window.sessionStorage.getItem('vaiacon-lernreise');
+    var feld = document.querySelector('.vc-kontakt:not([data-art="rueckruf"]) [name="nachricht"]');
+    var herkunft = document.getElementById('vc-kontakt-herkunft');
+    if (reise && feld && !feld.value) {
+      feld.value = 'Wir möchten mit Ihnen unsere eigene KI-Lernreise bauen.\n\nAusgangspunkt: ' + reise + '\n\nBei uns ist wichtig: ';
+      if (herkunft) {
+        herkunft.textContent = 'Ihre Beispielreise ist schon eingetragen. Ergänzen Sie, was bei Ihnen anders ist, oder rufen Sie uns an.';
+        herkunft.hidden = false;
+      }
+      window.sessionStorage.removeItem('vaiacon-lernreise');
+    }
+  } catch (e) { /* ohne Speicher bleibt das Formular leer */ }
   Array.prototype.forEach.call(formulare, einrichten);
 
   function einrichten(formular) {

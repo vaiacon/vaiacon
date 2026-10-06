@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 07.10.2026 · Eintrag dd9791a KI-Kompetenz: Lernreise-Knopf «Bauen Sie mit uns Ihre eigene Reise» statt Offerte
+> Stand: 07.10.2026 · Eintrag 15e6bd9 Vaia-Wissen neu erzeugt (Stand Website 07.10.)
 
 ## Wie du antwortest
 
@@ -753,7 +753,7 @@ Sie erhalten schriftlich, was wir empfehlen, mit Aufwand und Preis. Auch dann, w
 SCHREIBEN SIE UNS
 Ein paar Zeilen genügen.
 Sagen Sie uns kurz, worum es geht. Wir antworten selbst, in der Regel innert eines Arbeitstages.
-Lieber gleich Zahlen sehen? Offerte zusammenstellen →
+Lieber reden? Unsere Zürcher Nummer (044) folgt bald, bis dahin rufen wir Sie zurück → · Zahlen sehen? Offerte zusammenstellen →
 Name *
 Firma
 E-Mail *

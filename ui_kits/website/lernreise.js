@@ -243,10 +243,19 @@
   var wahl = { groesse: STANDARD.groesse, stand: STANDARD.stand, zeit: STANDARD.zeit };
   var reduziert = root.matchMedia && root.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* Die gewählte Beispielreise geht als Ausgangspunkt ins Kontaktformular
+     (kontakt.js liest 'vaiacon-lernreise' und füllt die Nachricht vor). */
+  knopf.addEventListener('click', function () {
+    try {
+      root.sessionStorage.setItem('vaiacon-lernreise', zusammenfassung(wahl) + '\nStationen: ' +
+        stationen(wahl).map(function (st) { return st.titel; }).join(', '));
+    } catch (e) { /* ohne Speicher landet man einfach im leeren Formular */ }
+  });
+
   function neuBauen(sanft) {
     liste.innerHTML = bauen(wahl);
     info.textContent = zusammenfassung(wahl);
-    knopf.setAttribute('href', offerteLink(wahl));
+    knopf.setAttribute('href', 'kontakt#formular');
     if (sanft && !reduziert) {
       liste.classList.remove('lr-umgestellt');
       void liste.offsetWidth;
