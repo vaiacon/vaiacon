@@ -249,6 +249,7 @@ AUFTRAG
 
 STIL
 Deutsch mit Schweizer Schreibweise (ss statt ß, «Guillemets»), Sie-Form, kurze Saetze, moeglichst keine Fremdwoerter, ruhiger Ton: kein Hype, keine Angstmache, keine Ausrufezeichen.
+Titel mit Doppelpunkt: Folgt ein ganzer Satz, beginnt er gross («Apertus 2.0: Das offene Modell soll 2027 kommen»). Klein nur ohne ganzen Satz («Claude Sonnet 5.5: schneller, Listenpreise unveraendert»).
 Laengen in Zeichen: titel {GRENZEN['titel'][0]}-{GRENZEN['titel'][1]}, kurz {GRENZEN['kurz'][0]}-{GRENZEN['kurz'][1]}, kmu {GRENZEN['kmu'][0]}-{GRENZEN['kmu'][1]}, vaiacon {GRENZEN['vaiacon'][0]}-{GRENZEN['vaiacon'][1]}, achtung {GRENZEN['achtung'][0]}-{GRENZEN['achtung'][1]}.
 bereich: ki-kompetenz (Schulung), sichtbarkeit (gefunden werden), automationen (Bot, Prozesse) — der Bereich, der am besten zur Meldung passt.
 wichtigkeit: 1 (gut zu wissen), 2 (wichtig), 3 (sehr wichtig).
@@ -339,6 +340,18 @@ def normiere_url(u: str) -> str:
     u = re.sub(r"^https?://(www\.)?", "", u)
     u = re.sub(r"[?#].*$", "", u)
     return u.rstrip("/")
+
+
+# Woerter, mit denen nach einem Doppelpunkt fast immer ein ganzer Satz beginnt -> gross.
+SATZANFANG = {"der", "die", "das", "ein", "eine", "einen", "einem", "dem", "den", "des",
+              "es", "er", "sie", "wir", "man", "wer", "was", "wie", "warum", "wo", "wann"}
+
+
+def gross_nach_doppelpunkt(t: str) -> str:
+    """Amtliche Regel: nach dem Doppelpunkt gross, wenn ein ganzer Satz folgt."""
+    return re.sub(r"^([^:]+:\s+)(\w+)",
+                  lambda m: m.group(1) + (m.group(2)[:1].upper() + m.group(2)[1:]
+                                          if m.group(2) in SATZANFANG else m.group(2)), t, count=1)
 
 
 def titel_schluessel(t: str) -> str:
@@ -560,7 +573,7 @@ def lauf(tag: date, trocken: bool, kein_push: bool) -> int:
             "id": eindeutige_id(tag, b["titel"], ids),
             "datum": tag.isoformat(),
             "rubrik": b["rubrik"],
-            "titel": b["titel"].strip(),
+            "titel": gross_nach_doppelpunkt(b["titel"].strip()),
             "kurz": b["kurz"].strip(),
             "kmu": b["kmu"].strip(),
             "vaiacon": b["vaiacon"].strip(),
