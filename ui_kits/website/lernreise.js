@@ -247,8 +247,15 @@
      (kontakt.js liest 'vaiacon-lernreise' und füllt die Nachricht vor). */
   knopf.addEventListener('click', function () {
     try {
-      root.sessionStorage.setItem('vaiacon-lernreise', zusammenfassung(wahl) + '\nStationen: ' +
-        stationen(wahl).map(function (st) { return st.titel; }).join(', '));
+      /* Aus Sicht des Betriebs geschrieben, nicht als Beschreibung der Beispielreise. */
+      var L = stationen(wahl);
+      root.sessionStorage.setItem('vaiacon-lernreise', [
+        'Unser Betrieb: ' + GROESSE[wahl.groesse].satz + ' Mitarbeitende',
+        'Stand bei KI: ' + STAND[wahl.stand].label.replace(/\u00a0/g, ' '),
+        'Zeit zum Lernen: ' + ZEIT[wahl.zeit].woche,
+        'Ausgangspunkt: Ihre Beispielreise, etwa ' + wochen(wahl) + ' Wochen mit ' + L.length + ' Stationen (' +
+          L.map(function (st) { return st.titel; }).join(', ') + ')'
+      ].join('\n'));
     } catch (e) { /* ohne Speicher landet man einfach im leeren Formular */ }
   });
 
