@@ -42,7 +42,7 @@
     if (reise && feld && !feld.value) {
       feld.value = 'Wir möchten mit Ihnen unsere eigene KI-Lernreise bauen.\n\nAusgangspunkt: ' + reise + '\n\nBei uns ist wichtig: ';
       if (herkunft) {
-        herkunft.textContent = 'Ihre Beispielreise ist schon eingetragen. Ergänzen Sie, was bei Ihnen anders ist, oder rufen Sie uns an.';
+        herkunft.textContent = 'Eine Beispielreise ist bereits eingetragen. Passen Sie sie ganz nach Ihren Wünschen an.';
         herkunft.hidden = false;
       }
       window.sessionStorage.removeItem('vaiacon-lernreise');
