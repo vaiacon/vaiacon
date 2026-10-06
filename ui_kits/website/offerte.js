@@ -171,7 +171,7 @@
       extra.appendChild(el('div', { class: 'of-menge' }, [
         el('label', { for: mid, class: 'of-menge__label', text: 'Menge' }),
         el('div', { class: 'of-menge__steuer' }, [minus, menge, plus]),
-        el('span', { class: 'of-menge__einheit', text: p.einheit + ' · höchstens ' + p.menge_max })
+        el('span', { class: 'of-menge__einheit', text: p.einheit })
       ]));
       var setze = function (v) {
         if (!auswahl[id]) return;

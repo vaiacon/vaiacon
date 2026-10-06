@@ -22,7 +22,7 @@
           "art": "einmalig",
           "menge_waehlbar": true,
           "menge_standard": 1,
-          "menge_max": 10,
+          "menge_max": 30,
           "hinweis": "Pro Gruppe, nicht pro Person."
         },
         {
@@ -35,7 +35,7 @@
           "art": "einmalig",
           "menge_waehlbar": true,
           "menge_standard": 1,
-          "menge_max": 10,
+          "menge_max": 30,
           "hinweis": "Pro Gruppe, nicht pro Person."
         },
         {
@@ -87,7 +87,7 @@
           "art": "einmalig",
           "menge_waehlbar": true,
           "menge_standard": 10,
-          "menge_max": 30,
+          "menge_max": 250,
           "hinweis": "Für ein Programm von vier Wochen. Die Inhalte werden auf Ihren Betrieb zugeschnitten."
         },
         {
