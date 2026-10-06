@@ -280,6 +280,9 @@ def karte_html(b: dict, bilder: Bilder, gross: bool, breit: bool = False) -> str
         f'      <p>{esc(b["achtung"])}</p>',
         '    </section>',
         '    ' + quellen_html(b["quellen"]),
+        # Nachträgliche Berichtigung sichtbar machen (Feld «praezisiert»: JJJJ-MM-TT).
+        ('    <p class="nw-ki-hinweis">Präzisiert am ' + '.'.join(reversed(b["praezisiert"].split('-'))) + '.</p>')
+        if b.get("praezisiert") else '',
         '    ' + KI_HINWEIS,
         '  </div>',
         '</article>',
@@ -582,7 +585,8 @@ def feed(wochen: list[dict], bilder: Bilder) -> str:
     for w, b in paare:
         url = f"{SEITE}/{ORDNER}/{seitenname(w)}#{b['id']}"
         text = (f"{b['kurz']}\n\nWas heisst das für Ihr KMU? {b['kmu']}\n\n"
-                f"Was vaiacon dazu bietet: {b['vaiacon']}\n\nWorauf Sie achten sollten: {b['achtung']}")
+                f"Was vaiacon dazu bietet: {b['vaiacon']}\n\nWorauf Sie achten sollten: {b['achtung']}\n\n"
+                "Von KI aus den genannten Quellen zusammengestellt. Fehler melden: hallo@vaiacon.ch")
         zeilen += [
             "<item>",
             f"<title>{esc(b['titel'])}</title>",

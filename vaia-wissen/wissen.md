@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 07.10.2026 · Eintrag be2fe7b Kontakt: vorausgefüllte Lernreise aus Sicht des Betriebs statt doppelter Ausgangspunkt/Ausgangslage
+> Stand: 07.10.2026 · Eintrag af27bbf Lernreise: Messpunkte und Zielcheck; Kontakt: Postadresse aus den Kontaktwegen
 
 ## Wie du antwortest
 
@@ -628,9 +628,9 @@ Das Wochenfazit Diese Woche zeigt, dass die EU-Regeln für KI im Alltag ankommen
 Die Beiträge
 Dienstag, 6. Oktober 2026
 Was ist passiert?
-OpenAI hat am 5. Oktober «textGrain» vorgestellt. Das Verfahren legt ein unsichtbares Muster in die Wortwahl. In der EU wird es in den kommenden Wochen für ChatGPT und Codex Pflicht. API-Kunden weltweit können es freiwillig einschalten.
+Laut AI Weekly hat OpenAI am 5. Oktober «textGrain» vorgestellt. Das Verfahren legt ein unsichtbares Muster in die Wortwahl. AI Weekly berichtet, dass es in der EU in den kommenden Wochen für ChatGPT und Codex verpflichtend wird und API-Kunden weltweit es freiwillig einschalten können. OpenAI hat das selbst nicht bestätigt.
 Was heisst das für Ihr KMU?
-Die Regel stammt aus dem EU-Gesetz über künstliche Intelligenz. Für die Schweiz gibt es dazu keine Angabe in den geprüften Quellen. Rechnen Sie damit, dass Texte, die Ihr Team mit ChatGPT in der EU erstellt, künftig technisch erkennbar sind. Das betrifft Webseiten, Newsletter und Offerten. Sie müssen nichts einstellen. Es lohnt sich aber, im Betrieb kurz zu klären, welche Texte von KI stammen und wer sie prüft.
+AI Weekly führt die Regel auf das EU-Gesetz über künstliche Intelligenz zurück. Für die Schweiz gibt es dazu keine Angabe in den geprüften Quellen. Trifft der Bericht zu, sind Texte, die Ihr Team mit ChatGPT in der EU erstellt, künftig technisch erkennbar. Das betrifft Webseiten, Newsletter und Offerten. Sie müssen nichts einstellen. Es lohnt sich aber, im Betrieb kurz zu klären, welche Texte von KI stammen und wer sie prüft.
 Was vaiacon dazu bietet
 Wir zeigen Ihrem Team im Training oder Workshop (Halbtag), wie Sie KI-Texte sauber prüfen, überarbeiten und kennzeichnen. In der KI-Standortanalyse im Betrieb schauen wir, wo bei Ihnen KI-Texte entstehen und ob ein einfacher Umgang damit genügt. Bauen Sie Assistenten über die API, klären wir mit Ihnen, ob das Wasserzeichen sinnvoll ist.
 Zu KI-Kompetenz →
@@ -639,6 +639,7 @@ Das Wasserzeichen ist ein schwaches Signal. Bei kurzen oder umgeschriebenen Text
 Quellen:
 AI Weekly: OpenAI to watermark ChatGPT, Codex text in EU under AI Act ↗
 AI Weekly: OpenAI to watermark EU ChatGPT text, opens API opt-in worldwide ↗
+Präzisiert am 07.10.2026.
 Von KI zusammengestellt. Fehler entdeckt? hallo@vaiacon.ch
 NÄCHSTER SCHRITT
 Was heisst das für Ihren Betrieb?
@@ -648,6 +649,7 @@ Offerte zusammenstellen →
 Alle Wochen im Archiv
 ·
 RSS-Feed abonnieren
+Die Beiträge stellt eine KI aus den genannten Quellen zusammen. Fehler melden Sie an hallo@vaiacon.ch .
 
 ### Häufige Fragen
 

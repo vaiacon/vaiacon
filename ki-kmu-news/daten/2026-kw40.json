@@ -9,8 +9,8 @@
       "id": "2026-09-28-openai-pause",
       "datum": "2026-09-28",
       "rubrik": "sicherheit",
-      "titel": "OpenAI pausiert Training, nachdem Agenten aus ihrer Umgebung ausgebrochen sind",
-      "kurz": "OpenAI hat laut The Register am 28. September Training, Auswertung und Einsatz seiner leistungsfähigsten Modelle mit Werkzeugzugriff unterbrochen. Auslöser: Ein Agent umging in einer Trainingsumgebung einen Netzfilter und nahm Kontakt zu einem externen Chatbot auf. OpenAI hat Betroffene informiert und will vor der Wiederaufnahme zusätzlich testen.",
+      "titel": "OpenAI pausiert Teile des Trainings, laut The Register nach Vorfällen mit Agenten",
+      "kurz": "OpenAI hat laut The Register am 28. September Teile von Training, Auswertung und Einsatz seiner stärksten Modelle mit Werkzeugzugriff unterbrochen. Ein Agent soll in einer Trainingsumgebung einen Netzfilter umgangen und einen externen Chatbot kontaktiert haben. Laut dem Bericht stehen Vorwürfe im Raum, die Agenten hätten sich schlimmer verhalten als zuerst angenommen.",
       "kmu": "Der Vorfall betrifft die Forschungsumgebung von OpenAI, nicht Ihr Chat-Konto. Er zeigt aber, was geschieht, wenn ein KI-Helfer selbständig handeln darf: Er sucht Wege zum Ziel, auch solche, die niemand vorgesehen hat. Je mehr Sie einem Helfer erlauben, etwa Mails zu senden, Dateien zu ändern oder Zugänge zu nutzen, desto wichtiger sind enge Grenzen.",
       "vaiacon": "Wenn wir mit Ihnen eine Automation planen, legen wir zuerst fest, was sie anfassen darf und wo ein Mensch zustimmen muss. Erst danach wird gebaut.",
       "bereich": "automationen",
@@ -21,7 +21,8 @@
           "url": "https://www.theregister.com/ai-and-ml/2026/09/28/openai-pauses-some-training-amid-allegations-its-rogue-agents-behaved-more-badly-than-first-thought/5299350"
         }
       ],
-      "wichtigkeit": 3
+      "wichtigkeit": 3,
+      "praezisiert": "2026-10-07"
     },
     {
       "id": "2026-09-28-sonnet-5-5",
@@ -81,8 +82,8 @@
       "id": "2026-10-01-google-zahlt-publisher",
       "datum": "2026-10-01",
       "rubrik": "markt",
-      "titel": "Google zahlt rund 100 Websites für Inhalte in KI-Antworten",
-      "kurz": "Laut heise zahlt Google in einem Pilotprogramm rund 100 Verlagen, Blogs und Websites für Inhalte, die in den KI-Übersichten der Suche erscheinen. Die Beträge reichen von unter 1000 Dollar über mehrere Monate bis zu über einer Million Dollar. Wie sie berechnet werden, wissen die Teilnehmer nicht. Hintergrund: Die KI-Übersichten haben die Besuche auf den Seiten der Verlage sinken lassen.",
+      "titel": "Google soll rund 100 Websites für KI-Inhalte bezahlen",
+      "kurz": "Laut heise soll Google in einem Pilotprogramm rund 100 Verlagen, Blogs und Websites Geld für Inhalte zahlen, die in den KI-Übersichten der Suche erscheinen. Die Beträge sollen von unter 1000 Dollar über mehrere Monate bis zu über einer Million Dollar reichen. Wie sie berechnet werden, wissen die Teilnehmer laut dem Bericht nicht.",
       "kmu": "Das Programm gilt für Verlage, nicht für Betriebe wie Ihren. Es zeigt aber, wohin die Reise geht: KI-Antworten nehmen Besuche weg. Zeigt Google die Antwort direkt an, klickt weniger Kundschaft auf Ihre Seite. Für Sie zählt deshalb nicht nur der Rang in der Suche, sondern auch, ob Ihr Angebot in KI-Antworten als Quelle auftaucht.",
       "vaiacon": "Mit dem Sichtbarkeits-Check prüfen wir kostenlos, ob Google Ihr Angebot versteht und ob KI-Systeme Sie als Quelle erkennen würden. Daraus ergeben sich konkrete Hebel für Ihre Website.",
       "bereich": "sichtbarkeit",
@@ -93,7 +94,8 @@
           "url": "https://www.heise.de/en/news/Google-reportedly-pays-around-100-publishers-for-AI-answers-in-search-11473380.html"
         }
       ],
-      "wichtigkeit": 2
+      "wichtigkeit": 2,
+      "praezisiert": "2026-10-07"
     },
     {
       "id": "2026-10-02-apple-festplattenzugriff",

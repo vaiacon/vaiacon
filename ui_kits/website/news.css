@@ -264,6 +264,8 @@ a.nw-tag--voll:focus-visible { outline: 3px solid var(--terra-500); outline-offs
 /* ---------- Schluss ---------- */
 .nw-schluss__links { margin: var(--space-6) 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px; font-weight: var(--weight-bold); }
 .nw-schluss__links a { color: var(--cream-50); padding: 6px 2px; }
+.nw-schluss__ki { margin: var(--space-4) auto 0; max-width: 46ch; font-size: 14px; color: var(--cream-50); opacity: .85; }
+.nw-schluss__ki a { color: inherit; text-decoration: underline; }
 
 @media (prefers-reduced-motion: reduce) {
   .nw-tag, .nw-filter__knopf { transition: none; }
