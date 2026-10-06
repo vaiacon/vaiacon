@@ -13,6 +13,8 @@ Was hineinkommt:
   dem Impressum, E-Mail, Gruender, Profile. Telefon und UID fehlen bewusst,
   solange sie nirgends auf der Website stehen.
 - Auf den Angebotsseiten ein Block «Service», wo es einen Preis gibt mit Preis.
+- Im Firmenblock zusaetzlich die Angebotsbereiche (hasOfferCatalog).
+- `sitemap.xml` mit lastmod je Seite (letzter Commit, sonst heute).
 - Auf der FAQ-Seite alle Fragen als «FAQPage», gelesen aus der Seite selbst.
   Darum das Skript nach jeder Aenderung an den Fragen laufen lassen, genau wie
   `bot_wissen.py`, sonst sagen die Strukturdaten etwas anderes als die Seite.
@@ -37,7 +39,9 @@ from __future__ import annotations
 import html
 import json
 import re
+import subprocess
 import sys
+from datetime import date
 from pathlib import Path
 
 WURZEL = Path(__file__).resolve().parents[1]
@@ -184,7 +188,62 @@ SEITEN = [
     "index.html", "visibility.html", "learning.html", "bot.html", "service.html",
     "offerte.html",  # ki-kmu-news/* schreibt scripts/news_bauen.py selbst (eigener ItemList-Block)
     "ueber-uns.html", "referenzen.html", "faq.html", "kontakt.html", "agb.html", "datenschutz.html",
+    "impressum.html",
 ]
+
+# Die Angebotsbereiche auch im Firmenblock, damit schon die Startseite sie maschinenlesbar nennt
+# (Visibility-Check 05.10.2026: «Leistungen nicht als Service hinterlegt»).
+ORGANISATION["hasOfferCatalog"] = {
+    "@type": "OfferCatalog",
+    "name": "Angebot von vaiacon",
+    "itemListElement": [
+        {"@type": "Offer", "itemOffered": {
+            "@type": "Service", "name": a["name"], "serviceType": a["serviceType"], "url": a["url"],
+            "description": a["description"].replace(" " + MWST_SATZ, ""),
+        }}
+        for a in ANGEBOTE.values()
+    ],
+}
+
+# Sitemap: Pfad, Datei, changefreq, priority. lastmod = letzter Commit der Datei,
+# bei ungespeicherten Aenderungen heute.
+SITEMAP = [
+    ("", "index.html", "weekly", "1.0"),
+    ("ueber-uns", "ueber-uns.html", "monthly", "0.6"),
+    ("visibility", "visibility.html", "monthly", "0.8"),
+    ("learning", "learning.html", "monthly", "0.8"),
+    ("bot", "bot.html", "monthly", "0.8"),
+    ("service", "service.html", "monthly", "0.8"),
+    ("offerte", "offerte.html", "monthly", "0.8"),
+    ("ki-kmu-news/", "ki-kmu-news/index.html", "weekly", "0.7"),
+    ("ki-kmu-news/archiv", "ki-kmu-news/archiv.html", "weekly", "0.4"),
+    ("referenzen", "referenzen.html", "monthly", "0.6"),
+    ("faq", "faq.html", "monthly", "0.8"),
+    ("kontakt", "kontakt.html", "monthly", "0.8"),
+    ("impressum", "impressum.html", "yearly", "0.3"),
+    ("datenschutz", "datenschutz.html", "yearly", "0.3"),
+    ("agb", "agb.html", "yearly", "0.3"),
+]
+
+
+def zuletzt_geaendert(datei: str) -> str:
+    def git(*a):
+        return subprocess.run(["git", "-C", str(WURZEL), *a], capture_output=True, text=True).stdout.strip()
+    if git("status", "--porcelain", "--", datei):
+        return date.today().isoformat()
+    return git("log", "-1", "--format=%cs", "--", datei) or date.today().isoformat()
+
+
+def sitemap_text() -> str:
+    zeilen = ['<?xml version="1.0" encoding="UTF-8"?>',
+              '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for pfad, datei, freq, prio in SITEMAP:
+        if (WURZEL / datei).exists():
+            zeilen.append(f"  <url><loc>{BASIS}/{pfad}</loc><lastmod>{zuletzt_geaendert(datei)}</lastmod>"
+                          f"<changefreq>{freq}</changefreq><priority>{prio}</priority></url>")
+    zeilen.append("</urlset>")
+    return "\n".join(zeilen) + "\n"
+
 
 
 def preisliste_llms() -> str:
@@ -269,7 +328,8 @@ KI-Standortbestimmung (Selbsttest für Führungskräfte).
 
 ## Rechtliches
 
-- [Datenschutz und Impressum](https://vaiacon.ch/datenschutz)
+- [Impressum](https://vaiacon.ch/impressum): Firma, Anschrift, Kontakt.
+- [Datenschutz](https://vaiacon.ch/datenschutz)
 - [AGB](https://vaiacon.ch/agb)
 """
 
@@ -345,6 +405,13 @@ def main() -> None:
             geaendert.append("llms.txt")
             if not probe:
                 llms.write_text(llms_text(), encoding="utf-8")
+
+    if nur is None or "sitemap.xml" in nur:
+        karte = WURZEL / "sitemap.xml"
+        if not karte.exists() or karte.read_text(encoding="utf-8") != sitemap_text():
+            geaendert.append("sitemap.xml")
+            if not probe:
+                karte.write_text(sitemap_text(), encoding="utf-8")
 
     wort = "Wuerde aendern" if probe else "Geschrieben"
     print(f"{wort}: " + (", ".join(geaendert) if geaendert else "nichts, alles aktuell."))

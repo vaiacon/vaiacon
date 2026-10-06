@@ -104,5 +104,6 @@ KI-Standortbestimmung (Selbsttest für Führungskräfte).
 
 ## Rechtliches
 
-- [Datenschutz und Impressum](https://vaiacon.ch/datenschutz)
+- [Impressum](https://vaiacon.ch/impressum): Firma, Anschrift, Kontakt.
+- [Datenschutz](https://vaiacon.ch/datenschutz)
 - [AGB](https://vaiacon.ch/agb)

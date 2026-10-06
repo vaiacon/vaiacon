@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://vaiacon.ch/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://vaiacon.ch/ueber-uns</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://vaiacon.ch/visibility</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vaiacon.ch/learning</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vaiacon.ch/bot</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vaiacon.ch/service</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vaiacon.ch/offerte</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vaiacon.ch/ki-kmu-news/</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://vaiacon.ch/ki-kmu-news/archiv</loc><changefreq>weekly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://vaiacon.ch/referenzen</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://vaiacon.ch/faq</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vaiacon.ch/kontakt</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://vaiacon.ch/datenschutz</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
-  <url><loc>https://vaiacon.ch/agb</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://vaiacon.ch/</loc><lastmod>2026-10-06</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://vaiacon.ch/ueber-uns</loc><lastmod>2026-10-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vaiacon.ch/visibility</loc><lastmod>2026-10-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vaiacon.ch/learning</loc><lastmod>2026-10-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vaiacon.ch/bot</loc><lastmod>2026-10-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vaiacon.ch/service</loc><lastmod>2026-10-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vaiacon.ch/offerte</loc><lastmod>2026-10-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vaiacon.ch/ki-kmu-news/</loc><lastmod>2026-10-06</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://vaiacon.ch/ki-kmu-news/archiv</loc><lastmod>2026-10-06</lastmod><changefreq>weekly</changefreq><priority>0.4</priority></url>
+  <url><loc>https://vaiacon.ch/referenzen</loc><lastmod>2026-10-06</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://vaiacon.ch/faq</loc><lastmod>2026-10-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vaiacon.ch/kontakt</loc><lastmod>2026-10-06</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://vaiacon.ch/impressum</loc><lastmod>2026-10-06</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://vaiacon.ch/datenschutz</loc><lastmod>2026-10-06</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://vaiacon.ch/agb</loc><lastmod>2026-10-06</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 </urlset>

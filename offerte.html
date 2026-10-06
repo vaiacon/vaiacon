@@ -27,7 +27,6 @@
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <!-- Strukturdaten: erzeugt von scripts/strukturdaten.py, nicht von Hand aendern -->
-<!-- TELEFON: in den Strukturdaten unten "telephone": "+41 44 ..." ergänzen, sobald die 044-Nummer gebucht ist -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -69,7 +68,53 @@
     "https://www.facebook.com/vaiacon",
     "https://www.instagram.com/vaiacon",
     "https://www.linkedin.com/company/vaiacon"
-  ]
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Angebot von vaiacon",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Sichtbarkeit",
+          "serviceType": "SEO und GEO",
+          "url": "https://vaiacon.ch/visibility",
+          "description": "Von Google gefunden werden und in KI-Antworten vorkommen (Fachwörter: SEO und GEO). Google-Check, KI-Sichtbarkeits-Check, Seiten überarbeiten und laufende Betreuung, mit offen genannten Richtpreisen."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "KI-Kompetenz",
+          "serviceType": "KI-Schulung und Weiterbildung",
+          "url": "https://vaiacon.ch/learning",
+          "description": "Trainings, Workshops, Coaching für Führungskräfte, E-Learning, Lernvideos und tägliche Kleinst-Lerneinheiten, zugeschnitten auf Ihren Betrieb. Dazu eine kostenlose KI-Standortbestimmung für Führungskräfte."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Automationen",
+          "serviceType": "Automatisierung von Büroarbeit",
+          "url": "https://vaiacon.ch/bot",
+          "description": "Belege, Offerten, Korrespondenz und Anfragen automatisieren, dazu Chatbot, Telefonassistent und Anbindung an Ihre Software. Fixpreis nach der Erstanalyse."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Begleitung",
+          "serviceType": "Betreuung und Support für das gesamte Angebot",
+          "url": "https://vaiacon.ch/service",
+          "description": "Pflege, Updates, Support und Weiterentwicklung für Automationen, Sichtbarkeit und KI-Kompetenz, monatlich kündbar; dazu Beratung nach Aufwand und die KI-Standortanalyse im Betrieb."
+        }
+      }
+    ]
+  }
 }
 </script>
 <!-- Strukturdaten Ende -->
@@ -312,7 +357,7 @@
       <nav class="sv-footer__links" aria-label="Weitere Seiten">
         <a href="service">Begleitung</a><a href="offerte">Offerte anfragen</a><a href="ki-kmu-news/">KI-News für KMU</a><a href="referenzen">Aus der Praxis</a><a href="datenschutz">Datenschutz</a><a href="impressum">Impressum</a><a href="agb">AGB</a>
       </nav>
-      <p class="sv-footer__adresse"><span>vaiacon GmbH</span><span>Lehenstrasse 74, 8037 Zürich</span><span><a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a></span><!-- TELEFON: einkommentieren, sobald die 044-Nummer gebucht ist <span><a href="tel:+41440000000">044 000 00 00</a></span> --></p>
+      <p class="sv-footer__adresse"><span>vaiacon GmbH</span><span>Lehenstrasse 74, 8037 Zürich</span><span><a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a></span><span data-telefon-platzhalter>Telefon 044 … folgt bald</span><!-- TELEFON: einkommentieren, sobald die 044-Nummer gebucht ist <span><a href="tel:+41440000000">044 000 00 00</a></span> --></p>
       <a class="sv-footer__top" href="#top">↑ Nach oben</a>
       <div class="sv-footer__social">
         <a href="https://www.facebook.com/vaiacon" target="_blank" rel="noopener" aria-label="vaiacon auf Facebook" title="Facebook">
