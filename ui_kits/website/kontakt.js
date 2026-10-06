@@ -40,7 +40,7 @@
     var feld = document.querySelector('.vc-kontakt:not([data-art="rueckruf"]) [name="nachricht"]');
     var herkunft = document.getElementById('vc-kontakt-herkunft');
     if (reise && feld && !feld.value) {
-      feld.value = 'Wir möchten mit Ihnen unsere eigene KI-Lernreise bauen.\n\nAusgangspunkt: ' + reise + '\n\nBei uns ist wichtig: ';
+      feld.value = 'Wir möchten mit Ihnen eine massgeschneiderte Lernreise bauen.\n\nAusgangspunkt: ' + reise + '\n\nBei uns ist wichtig: ';
       if (herkunft) {
         herkunft.textContent = 'Eine Beispielreise ist bereits eingetragen. Passen Sie sie ganz nach Ihren Wünschen an.';
         herkunft.hidden = false;
