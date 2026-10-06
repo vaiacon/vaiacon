@@ -30,7 +30,7 @@
       "titel": "Claude Sonnet 5.5: schneller, Listenpreise unverändert",
       "kurz": "Anthropic hat am 28. September Claude Sonnet 5.5 veröffentlicht. Laut Help Net Security antwortet das Modell über 30 Prozent schneller als Sonnet 5, die Listenpreise der Schnittstelle bleiben gleich. Es ist über die Claude-Plattform sowie Amazon Web Services, Google Cloud und Microsoft Azure verfügbar. Eine Option ohne Datenspeicherung gehört dazu. Bei riskanteren Cyber-Aufgaben weicht das Modell auf Sonnet 5 aus.",
       "kmu": "Für Ihren Betrieb ändert sich über Nacht nichts. Wer schon mit Claude arbeitet, merkt höchstens, dass Antworten flotter kommen. Wer noch kein KI-Modell nutzt, muss wegen einer neuen Versionsnummer nichts neu entscheiden. Wichtiger als die Nummer ist, wofür Sie das Werkzeug im Alltag einsetzen.",
-      "vaiacon": "In unseren Schulungen üben Ihre Mitarbeitenden an Ihren eigenen Aufgaben, mit dem Werkzeug, das Ihr Betrieb ohnehin nutzt. Die Modellversion ist dabei Nebensache. Klare Regeln, was eingegeben werden darf, sind es nicht.",
+      "vaiacon": "In unseren Schulungen üben Ihre Mitarbeitenden an Ihren eigenen Aufgaben, mit dem Werkzeug, das Ihr Betrieb ohnehin nutzt. Dabei halten wir klare Regeln fest, was eingegeben werden darf. Die Modellversion ist Nebensache.",
       "bereich": "ki-kompetenz",
       "achtung": "Eine neue Version heisst nicht automatisch bessere Ergebnisse für Ihre Aufgaben. Probieren Sie Neues zuerst an einem echten, unkritischen Fall aus. Und klären Sie vor jedem Wechsel, welche Daten Ihr Team eingeben darf.",
       "quellen": [
@@ -48,7 +48,7 @@
       "titel": "ChatGPT «Dots»: Dauerhelfer, die in der Schweiz vorerst nicht im Pro-Abo laufen",
       "kurz": "OpenAI hat am 29. September «Dots» vorgestellt: Agenten in ChatGPT, die zwischen den Gesprächen weiterarbeiten. Das Pro-Abo schliesst den Europäischen Wirtschaftsraum, die Schweiz und Grossbritannien zum Start aus. Business Premium erhält Dots in allen unterstützten Regionen, bei Enterprise läuft eine Beta, die ein Administrator erst einschalten muss. Ein Datum für Pro in Europa nennt OpenAI nicht.",
       "kmu": "Einzelne Personen mit Pro-Abo können Dots in der Schweiz vorerst nicht nutzen. Wer einen Business-Tarif hat, bekommt sie womöglich bald. Dots dürfen von sich aus Informationen durchsehen und sich Dinge merken. Trennen Sie eine angebundene App wieder, löscht das bereits Erhaltenes nicht. Klären Sie darum die Datenfrage, bevor jemand im Betrieb ein Postfach oder einen Kalender anhängt.",
-      "vaiacon": "Im Training klären wir früh, was Ihr Team eingeben und anbinden darf und was nicht. Dann ist ein neues Werkzeug kein Risiko, sondern eine Frage der Spielregeln.",
+      "vaiacon": "Im Training klären wir früh, was Ihr Team eingeben und anbinden darf. Dann ist ein neues Werkzeug kein Risiko, sondern eine Frage der Spielregeln.",
       "bereich": "ki-kompetenz",
       "achtung": "OpenAI schreibt selbst, Dots könnten Fehler machen, auch wenn sie Ihre Regeln befolgen. Lassen Sie sie bei Zahlungen und Kundenmails nicht ohne Rückfrage handeln. Personendaten von Kundinnen und Kunden gehören nicht ungeprüft in solche Dienste. Das ersetzt keine Rechtsauskunft.",
       "quellen": [
@@ -101,8 +101,8 @@
       "rubrik": "sicherheit",
       "titel": "Apple will den Vollzugriff auf Macs wegen KI-Agenten enger fassen",
       "kurz": "Apple hat am 2. Oktober angekündigt, die Einstellung «Full Disk Access» in macOS strenger zu kontrollieren. Manche Entwickler nutzten sie auf eine Weise, die Nutzer gefährden könne. Mit immer selbständigeren KI-Agenten wachse das Risiko. Wer einer App diesen Zugriff geben will, soll es künftig nur durch eine sehr ausdrückliche Handlung können. Ein Datum oder eine macOS-Version nennt Apple nicht.",
-      "kmu": "Setzt Ihr Team Macs ein und installiert KI-Programme, fragen manche davon nach Zugriff auf alles: Dateien, Mails, Nachrichten, Verlauf im Browser. Das ist bequem, aber ein grosses Tor. Apple will es schwerer aufstossbar machen. Heute liegt es bei Ihnen, zu wissen, welche Programme auf Firmengeräten so weit gehen dürfen.",
-      "vaiacon": "In unseren Trainings halten wir mit Ihnen Spielregeln fest, dazu gehört auch, welche KI-Programme Ihr Team installieren darf und welche Freigaben es erteilen darf.",
+      "kmu": "Setzt Ihr Team Macs ein und installiert KI-Programme, fragen manche davon nach Zugriff auf alles: Dateien, Mails, Nachrichten, Browserverlauf. Das ist bequem, aber ein grosses Tor. Apple will den Zugang erschweren. Heute liegt es bei Ihnen, zu wissen, welche Programme auf Firmengeräten so weit gehen dürfen.",
+      "vaiacon": "In unseren Trainings halten wir mit Ihnen Spielregeln fest. Dazu gehört auch, welche KI-Programme Ihr Team installieren und welche Freigaben es erteilen darf.",
       "bereich": "ki-kompetenz",
       "achtung": "Warten Sie nicht auf Apple. Schauen Sie in den Systemeinstellungen unter «Datenschutz & Sicherheit» nach, welchen Programmen Sie den Zugriff auf alle Dateien erlaubt haben, und entziehen Sie ihn allem, was Sie nicht kennen oder nicht brauchen.",
       "quellen": [
@@ -119,8 +119,8 @@
       "rubrik": "praxis",
       "titel": "Apertus 2.0: Das offene Schweizer Sprachmodell soll im ersten Quartal 2027 kommen",
       "kurz": "ETH und EPFL arbeiten laut Blick an Apertus 2.0, der nächsten Fassung des offenen Schweizer Sprachmodells. Die Veröffentlichung ist für das erste Quartal 2027 geplant. Schwerpunkte sind Programmieren, Mathematik und mehrstufige Aufgaben, bei etwa gleichen Betriebskosten. Trainiert wird auf dem Supercomputer Alps in Lugano.",
-      "kmu": "Zum Einsetzen gibt es heute noch nichts. Interessant ist es trotzdem: Ein offenes Modell aus der Schweiz könnte es später leichter machen, Daten im Land zu halten. Ob es für ein Unternehmen Ihrer Grösse praktisch wird, hängt davon ab, wer es bereitstellt und betreibt. Selbst betreiben ist für die wenigsten Betriebe sinnvoll.",
-      "vaiacon": "In der KI-Standortanalyse klären wir mit Ihnen, welche Ihrer Aufgaben heikle Daten berühren. Erscheint Apertus 2.0, wissen Sie sofort, wo ein Schweizer Modell Ihnen wirklich etwas bringt und wo sich der Wechsel lohnt.",
+      "kmu": "Zum Einsetzen gibt es heute noch nichts. Einen Blick ist es trotzdem wert: Ein offenes Modell aus der Schweiz könnte es später leichter machen, Daten im Land zu halten. Ob es für ein Unternehmen Ihrer Grösse praktisch wird, hängt davon ab, wer es bereitstellt und betreibt. Selbst betreiben ist für die wenigsten Betriebe sinnvoll.",
+      "vaiacon": "In der KI-Standortanalyse klären wir mit Ihnen, welche Ihrer Aufgaben heikle Daten berühren. Erscheint Apertus 2.0, wissen Sie sofort, wo ein Schweizer Modell Ihnen etwas bringt und wo sich der Wechsel lohnt.",
       "bereich": "ki-kompetenz",
       "achtung": "«Schweizer Modell» heisst nicht automatisch «Schweizer Daten». Entscheidend ist, wo das Modell läuft und wer Ihre Eingaben sieht. Fragen Sie jeden Anbieter danach, auch wenn Apertus darunter steht.",
       "quellen": [
