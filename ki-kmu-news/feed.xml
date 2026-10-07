@@ -6,7 +6,39 @@
 <atom:link href="https://vaiacon.ch/ki-kmu-news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>Was KI-Neuigkeiten für Schweizer KMU heissen: was passiert ist, was es für Ihren Betrieb bedeutet und worauf Sie achten sollten.</description>
 <language>de-CH</language>
-<lastBuildDate>Tue, 06 Oct 2026 07:00:00 +0200</lastBuildDate>
+<lastBuildDate>Wed, 07 Oct 2026 07:00:00 +0200</lastBuildDate>
+<item>
+<title>KI-Agenten vor verschlossener Tür: Viele Websites lassen persönliche Assistenten nicht hinein</title>
+<link>https://vaiacon.ch/ki-kmu-news/2026-kw41.html#2026-10-07-ki-agenten-vor-verschlossener-tuer</link>
+<guid isPermaLink="true">https://vaiacon.ch/ki-kmu-news/2026-kw41.html#2026-10-07-ki-agenten-vor-verschlossener-tuer</guid>
+<pubDate>Wed, 07 Oct 2026 07:00:00 +0200</pubDate>
+<category>Markt</category>
+<description>Persönliche KI-Agenten sollen Flüge buchen, Tische reservieren oder einkaufen. Laut TechCrunch blockieren aber viele Websites solche Agenten, teils gewollt, teils durch normalen Bot-Schutz. Meta und Partner arbeiten an einem Standard, mit dem sich Agenten und Websites klar verständigen können.
+
+Was heisst das für Ihr KMU? Immer mehr Menschen lassen Assistenten für sich suchen und bestellen. Ihre Website entscheidet mit, ob diese Agenten Ihr Angebot sehen und nutzen können. Prüfen Sie, ob Ihr Bot-Schutz echte Kundenagenten unbeabsichtigt abweist. Entscheiden Sie bewusst, welche Agenten Sie zulassen wollen, etwa für Terminbuchung oder Anfragen.
+
+Was vaiacon dazu bietet: Mit dem KI-Sichtbarkeits-Check zeigen wir Ihnen, wie KI-Assistenten Ihren Betrieb heute sehen und nennen. Bei Bedarf überarbeiten wir Ihre Seite, damit Angebot, Öffnungszeiten und Kontakt klar lesbar sind. So werden Sie auch dann gefunden, wenn Kundschaft einen Assistenten fragt.
+
+Worauf Sie achten sollten: Der gemeinsame Standard ist noch in Arbeit. Ändern Sie Ihren Bot-Schutz nicht übereilt, sondern klären Sie mit Ihrer Webagentur, was er heute blockiert.
+
+Von KI aus den genannten Quellen zusammengestellt. Fehler melden: hallo@vaiacon.ch</description>
+</item>
+<item>
+<title>Mistral Large 4: Das europäische Grossmodell ist da, offene Gewichte sollen folgen</title>
+<link>https://vaiacon.ch/ki-kmu-news/2026-kw41.html#2026-10-07-mistral-large-4-das-europaeische</link>
+<guid isPermaLink="true">https://vaiacon.ch/ki-kmu-news/2026-kw41.html#2026-10-07-mistral-large-4-das-europaeische</guid>
+<pubDate>Wed, 07 Oct 2026 07:00:00 +0200</pubDate>
+<category>Modelle</category>
+<description>Das französische Unternehmen Mistral hat am 6. Oktober «Mistral Large 4» vorgestellt, ein Modell mit rund einer Billion Parametern. Es ist vorerst nur über einen öffentlichen Zugang mit Schutzmassnahmen nutzbar. Eine offene Version ist nach Sicherheitstests in etwa drei Wochen geplant.
+
+Was heisst das für Ihr KMU? Mit Mistral wächst die Auswahl an KI-Modellen aus Europa. Für Sie heisst das: Sie sind nicht auf wenige US-Anbieter angewiesen. Gerade wenn Kundendaten im Spiel sind, kann ein europäischer Anbieter oder ein offenes Modell eine Option sein. Noch ist das Modell neu, und die offene Version fehlt. Beobachten Sie die Entwicklung, ohne jetzt etwas umzustellen.
+
+Was vaiacon dazu bietet: In der KI-Standortanalyse im Betrieb prüfen wir mit Ihnen, welche Aufgaben ein Modell erfüllen muss und welcher Anbieter dazu passt. Neue Modelle wie dieses nehmen wir dabei als Vergleich auf. Sie erhalten eine klare Empfehlung, die zu Ihrem Betrieb und Ihren Daten passt.
+
+Worauf Sie achten sollten: Die offene Version ist erst angekündigt und noch nicht erhältlich. Prüfen Sie vor einem Einsatz, wo Ihre Daten verarbeitet werden. Welcher Anbieter passt, hängt von Ihrer Aufgabe ab, nicht vom Modellnamen.
+
+Von KI aus den genannten Quellen zusammengestellt. Fehler melden: hallo@vaiacon.ch</description>
+</item>
 <item>
 <title>OpenAI soll Texte aus ChatGPT in der EU mit unsichtbarem Wasserzeichen versehen</title>
 <link>https://vaiacon.ch/ki-kmu-news/2026-kw41.html#2026-10-06-openai-versieht-texte-aus-chatgpt</link>

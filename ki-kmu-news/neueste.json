@@ -1,26 +1,26 @@
 [
   {
+    "titel": "KI-Agenten vor verschlossener Tür: Viele Websites lassen persönliche Assistenten nicht hinein",
+    "datum": "2026-10-07",
+    "rubrik": "markt",
+    "kurz": "Persönliche KI-Agenten sollen Flüge buchen, Tische reservieren oder einkaufen. Laut TechCrunch blockieren aber viele Websites solche Agenten, teils gewollt, teils durch normalen Bot-Schutz. Meta und Partner arbeiten an einem Standard, mit dem sich Agenten und Websites klar verständigen können.",
+    "adresse": "ki-kmu-news/2026-kw41.html#2026-10-07-ki-agenten-vor-verschlossener-tuer",
+    "bild": "assets/vaiacon-buerobot-news-markt.png"
+  },
+  {
+    "titel": "Mistral Large 4: Das europäische Grossmodell ist da, offene Gewichte sollen folgen",
+    "datum": "2026-10-07",
+    "rubrik": "modelle",
+    "kurz": "Das französische Unternehmen Mistral hat am 6. Oktober «Mistral Large 4» vorgestellt, ein Modell mit rund einer Billion Parametern. Es ist vorerst nur über einen öffentlichen Zugang mit Schutzmassnahmen nutzbar. Eine offene Version ist nach Sicherheitstests in etwa drei Wochen geplant.",
+    "adresse": "ki-kmu-news/2026-kw41.html#2026-10-07-mistral-large-4-das-europaeische",
+    "bild": "assets/vaiacon-buerobot-news-modelle.png"
+  },
+  {
     "titel": "OpenAI soll Texte aus ChatGPT in der EU mit unsichtbarem Wasserzeichen versehen",
     "datum": "2026-10-06",
     "rubrik": "recht",
     "kurz": "Laut AI Weekly hat OpenAI am 5. Oktober «textGrain» vorgestellt. Das Verfahren legt ein unsichtbares Muster in die Wortwahl. AI Weekly berichtet, dass es in der EU in den kommenden Wochen für ChatGPT und Codex verpflichtend wird und API-Kunden weltweit es freiwillig einschalten können. OpenAI hat das selbst nicht bestätigt.",
     "adresse": "ki-kmu-news/2026-kw41.html#2026-10-06-openai-versieht-texte-aus-chatgpt",
     "bild": "assets/vaiacon-buerobot-news-recht.png"
-  },
-  {
-    "titel": "Apple will den Vollzugriff auf Macs wegen KI-Agenten enger fassen",
-    "datum": "2026-10-02",
-    "rubrik": "sicherheit",
-    "kurz": "Apple hat am 2. Oktober angekündigt, die Einstellung «Full Disk Access» in macOS strenger zu kontrollieren. Manche Entwickler nutzten sie auf eine Weise, die Nutzer gefährden könne. Mit immer selbständigeren KI-Agenten wachse das Risiko. Wer einer App diesen Zugriff geben will, soll es künftig nur durch eine sehr ausdrückliche Handlung können. Ein Datum oder eine macOS-Version nennt Apple nicht.",
-    "adresse": "ki-kmu-news/2026-kw40.html#2026-10-02-apple-festplattenzugriff",
-    "bild": "assets/vaiacon-buerobot-news-sicherheit.png"
-  },
-  {
-    "titel": "Apertus 2.0: Das offene Schweizer Sprachmodell soll im ersten Quartal 2027 kommen",
-    "datum": "2026-10-02",
-    "rubrik": "praxis",
-    "kurz": "ETH und EPFL arbeiten laut Blick an Apertus 2.0, der nächsten Fassung des offenen Schweizer Sprachmodells. Die Veröffentlichung ist für das erste Quartal 2027 geplant. Schwerpunkte sind Programmieren, Mathematik und mehrstufige Aufgaben, bei etwa gleichen Betriebskosten. Trainiert wird auf dem Supercomputer Alps in Lugano.",
-    "adresse": "ki-kmu-news/2026-kw40.html#2026-10-02-apertus-2",
-    "bild": "assets/vaiacon-buerobot-news-zeitung.png"
   }
 ]

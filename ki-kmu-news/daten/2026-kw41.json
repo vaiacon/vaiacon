@@ -27,6 +27,42 @@
       ],
       "wichtigkeit": 2,
       "praezisiert": "2026-10-07"
+    },
+    {
+      "id": "2026-10-07-ki-agenten-vor-verschlossener-tuer",
+      "datum": "2026-10-07",
+      "rubrik": "markt",
+      "titel": "KI-Agenten vor verschlossener Tür: Viele Websites lassen persönliche Assistenten nicht hinein",
+      "kurz": "Persönliche KI-Agenten sollen Flüge buchen, Tische reservieren oder einkaufen. Laut TechCrunch blockieren aber viele Websites solche Agenten, teils gewollt, teils durch normalen Bot-Schutz. Meta und Partner arbeiten an einem Standard, mit dem sich Agenten und Websites klar verständigen können.",
+      "kmu": "Immer mehr Menschen lassen Assistenten für sich suchen und bestellen. Ihre Website entscheidet mit, ob diese Agenten Ihr Angebot sehen und nutzen können. Prüfen Sie, ob Ihr Bot-Schutz echte Kundenagenten unbeabsichtigt abweist. Entscheiden Sie bewusst, welche Agenten Sie zulassen wollen, etwa für Terminbuchung oder Anfragen.",
+      "vaiacon": "Mit dem KI-Sichtbarkeits-Check zeigen wir Ihnen, wie KI-Assistenten Ihren Betrieb heute sehen und nennen. Bei Bedarf überarbeiten wir Ihre Seite, damit Angebot, Öffnungszeiten und Kontakt klar lesbar sind. So werden Sie auch dann gefunden, wenn Kundschaft einen Assistenten fragt.",
+      "bereich": "sichtbarkeit",
+      "achtung": "Der gemeinsame Standard ist noch in Arbeit. Ändern Sie Ihren Bot-Schutz nicht übereilt, sondern klären Sie mit Ihrer Webagentur, was er heute blockiert.",
+      "quellen": [
+        {
+          "titel": "The next hurdle for AI agents: getting websites to let them in (TechCrunch)",
+          "url": "https://techcrunch.com/2026/10/06/the-next-hurdle-for-ai-agents-getting-websites-to-let-them-in/"
+        }
+      ],
+      "wichtigkeit": 2
+    },
+    {
+      "id": "2026-10-07-mistral-large-4-das-europaeische",
+      "datum": "2026-10-07",
+      "rubrik": "modelle",
+      "titel": "Mistral Large 4: Das europäische Grossmodell ist da, offene Gewichte sollen folgen",
+      "kurz": "Das französische Unternehmen Mistral hat am 6. Oktober «Mistral Large 4» vorgestellt, ein Modell mit rund einer Billion Parametern. Es ist vorerst nur über einen öffentlichen Zugang mit Schutzmassnahmen nutzbar. Eine offene Version ist nach Sicherheitstests in etwa drei Wochen geplant.",
+      "kmu": "Mit Mistral wächst die Auswahl an KI-Modellen aus Europa. Für Sie heisst das: Sie sind nicht auf wenige US-Anbieter angewiesen. Gerade wenn Kundendaten im Spiel sind, kann ein europäischer Anbieter oder ein offenes Modell eine Option sein. Noch ist das Modell neu, und die offene Version fehlt. Beobachten Sie die Entwicklung, ohne jetzt etwas umzustellen.",
+      "vaiacon": "In der KI-Standortanalyse im Betrieb prüfen wir mit Ihnen, welche Aufgaben ein Modell erfüllen muss und welcher Anbieter dazu passt. Neue Modelle wie dieses nehmen wir dabei als Vergleich auf. Sie erhalten eine klare Empfehlung, die zu Ihrem Betrieb und Ihren Daten passt.",
+      "bereich": "automationen",
+      "achtung": "Die offene Version ist erst angekündigt und noch nicht erhältlich. Prüfen Sie vor einem Einsatz, wo Ihre Daten verarbeitet werden. Welcher Anbieter passt, hängt von Ihrer Aufgabe ab, nicht vom Modellnamen.",
+      "quellen": [
+        {
+          "titel": "Mistral's new 1T model aims to leapfrog closed and open rivals (TechCrunch)",
+          "url": "https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/"
+        }
+      ],
+      "wichtigkeit": 1
     }
   ]
 }
