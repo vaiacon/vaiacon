@@ -28,6 +28,7 @@ FP = "/opt/homebrew/bin/ffprobe"
 BREITE = 480          # Ausgabebreite des Bot-Kastens (2x der grössten Anzeige)
 ROH_QUADRAT = 1080    # so gross war das Startbild auf Grün
 HOEHE_ANTEIL = 0.86
+BUEHNE = np.array([184.0, 92.0, 40.0])   # Terracotta der Startseiten-Bühne
 
 
 def lies_video(pfad):
@@ -52,8 +53,8 @@ def freistellen(bild):
     # Das 4:2:0-Video verschmiert das Grün ein, zwei Pixel in die Figur hinein; diese
     # angegrünten Pixel sind nicht zu retten. Darum den Rand um zwei Pixel einziehen
     # und wieder weich machen, sonst steht ein heller, rosa Saum um den Bot.
-    a = ndimage.grey_erosion(a, size=(5, 5))
-    a = ndimage.gaussian_filter(a, 0.8)
+    a = ndimage.grey_erosion(a, size=(7, 7))
+    a = ndimage.gaussian_filter(a, 0.7)
     a[a < 0.04] = 0
     a[a > 0.96] = 1
     # Flecken am Videorand (Kling lässt dort manchmal einzelne Pixel stehen)
@@ -68,6 +69,10 @@ def freistellen(bild):
     if innen.any():
         iy, ix = ndimage.distance_transform_edt(~innen, return_distances=False, return_indices=True)
         farbe = farbe[iy, ix]
+    # Die Bots stehen immer auf der Terracotta-Bühne: die weiche Kante bekommt die
+    # Bühnenfarbe halb beigemischt, dann hebt sie sich in der Bewegung nicht mehr ab.
+    rand = (a < 0.9)[..., None]
+    farbe = np.where(rand, 0.5 * farbe + 0.5 * BUEHNE, farbe)
     farbe = np.clip(farbe, 0, 255)
     return np.dstack([farbe, a * 255]).astype(np.uint8)
 
