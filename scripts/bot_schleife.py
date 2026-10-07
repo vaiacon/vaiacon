@@ -121,7 +121,7 @@ def main(roh, bildpfad, ziel):
         "-crf", "34", "-row-mt", "1", "-deadline", "good", "-cpu-used", "1",
         "-an", f"{ziel}.webm"], input=aus, check=True)
     subprocess.run(eingang + ["-vf", "format=bgra", "-c:v", "hevc_videotoolbox",
-        "-alpha_quality", "0.8", "-b:v", "700k", "-tag:v", "hvc1", "-allow_sw", "1",
+        "-alpha_quality", "1.0", "-b:v", "700k", "-tag:v", "hvc1", "-allow_sw", "1",
         "-movflags", "+faststart", "-an", f"{ziel}.mp4"], input=aus, check=True)
     zuschnitt(rgba[0]).save(f"{ziel}-pruef.png")
     print(json.dumps({"ziel": ziel, "groesse": [ow, oh], "bilder": len(rgba),
