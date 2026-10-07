@@ -93,6 +93,17 @@ ORGANISATION = {
 
 
 
+# Nur auf der Startseite: die Website als Ganzes, verknuepft mit dem Firmenblock (Visibility-Check 07.10.2026).
+WEBSITE = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": f"{BASIS}/#website",
+    "name": "vaiacon",
+    "url": f"{BASIS}/",
+    "inLanguage": "de-CH",
+    "publisher": {"@id": f"{BASIS}/#organisation"},
+}
+
 KATALOG = json.loads((WURZEL / "daten" / "preise.json").read_text(encoding="utf-8"))
 BEREICHE = {b["id"]: b for b in KATALOG["bereiche"]}
 POSITIONEN = {p["id"]: p for b in KATALOG["bereiche"] for p in b["positionen"]}
@@ -388,7 +399,9 @@ def main() -> None:
         bloecke = [ORGANISATION]
         if name in ANGEBOTE:
             bloecke.append(ANGEBOTE[name])
-        if name == "faq.html":
+        if name == "index.html":
+            bloecke.append(WEBSITE)
+        if name in ("faq.html", "index.html"):
             bloecke.append(faq_block(ohne))
         einschub = ANFANG + "\n" + "\n".join(als_skript(b) for b in bloecke) + "\n" + ENDE + "\n"
         if ohne.count("</head>") != 1:
