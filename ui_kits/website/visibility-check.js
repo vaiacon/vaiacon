@@ -22,6 +22,20 @@
 
   var ZIEL = window.VAIACON_API_BASIS + '/api/sichtbarkeit';
   var ZIEL_BESTELLEN = window.VAIACON_API_BASIS + '/api/sichtbarkeit/bestellen';
+
+  // Zufällige Browser-Kennung, damit der Server Kollegen hinter derselben Firmen-Adresse
+  // getrennt zählt. Keine Personendaten, nur Zufall; liegt im localStorage.
+  function besucherKennung() {
+    try {
+      var k = localStorage.getItem('vc-besucher');
+      if (!k || !/^[A-Za-z0-9_-]{8,64}$/.test(k)) {
+        var b = new Uint8Array(16); crypto.getRandomValues(b);
+        k = Array.prototype.map.call(b, function (x) { return ('0' + x.toString(16)).slice(-2); }).join('');
+        localStorage.setItem('vc-besucher', k);
+      }
+      return k;
+    } catch (e) { return ''; }
+  }
   var MAIL = 'hallo@vaiacon.ch';
   var ZEITGRENZE = 90000;        // ms, dann gibt der Browser auf
   var MIN_LAUF = 700;            // ms, so lange steht jeder Schritt mindestens auf «läuft»
@@ -326,7 +340,7 @@
 
     var optionen = {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/x-ndjson, application/json' },
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/x-ndjson, application/json', 'X-Besucher': besucherKennung() },
       body: JSON.stringify({ domain: domain }),
     };
     if (steuerung) optionen.signal = steuerung.signal;
