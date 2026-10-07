@@ -325,7 +325,7 @@ def filter_html(w: dict) -> str:
             + "".join(knoepfe) + '<p class="nw-filter__status" role="status" aria-live="polite"></p></div>')
 
 
-def wochenwahl_html(w: dict, wochen: list[dict], ist_index: bool) -> str:
+def wochenwahl_html(w: dict, wochen: list[dict]) -> str:
     teile = []
     nummer = wochen.index(w)
     aelter = wochen[nummer + 1] if nummer + 1 < len(wochen) else None
@@ -334,10 +334,9 @@ def wochenwahl_html(w: dict, wochen: list[dict], ist_index: bool) -> str:
         teile.append(f'<a href="{esc(ohne_endung(seitenname(aelter)))}">← KW {aelter["kw"]}</a>')
     teile.append('<a href="archiv">Archiv</a>')
     if neuer:
-        ziel = "./" if wochen.index(neuer) == 0 else ohne_endung(seitenname(neuer))
-        teile.append(f'<a href="{esc(ziel)}">KW {neuer["kw"]} →</a>')
-    if not ist_index and nummer == 0:
-        teile.append('<a href="./">Zur aktuellen Woche</a>')
+        teile.append(f'<a href="{esc(ohne_endung(seitenname(neuer)))}">KW {neuer["kw"]} →</a>')
+    # Die Übersicht ist seit 07.10.2026 eine eigene Seite (Anrisse + Wochenliste), keine Kopie der Woche mehr.
+    teile.append('<a href="./">Übersicht</a>')
     return '<nav class="nw-wochenwahl" aria-label="Wochen">' + "".join(teile) + "</nav>"
 
 
@@ -371,6 +370,33 @@ def beschreibung_woche(w: dict) -> str:
     return text or "Was KI-Neuigkeiten für Schweizer KMU heissen: täglich eingeordnet von vaiacon."
 
 
+# Sichtbare Redaktion (07.10.2026): KI-Antworten und Suchmaschinen werten Beiträge mit benannten,
+# verantwortlichen Personen höher als anonyme. Die Angaben decken sich mit ueber-uns.html.
+REDAKTION = [
+    ("Philip Krieger", "Mitgründer, Technik und Coaching"),
+    ("André Ulrich", "Mitgründer, Strategie und Marketing"),
+]
+REDAKTION_JSONLD = [
+    {"@type": "Person", "name": name, "jobTitle": rolle, "url": SEITE + "/ueber-uns",
+     "worksFor": {"@type": "Organization", "name": "Vaiacon GmbH"}}
+    for name, rolle in REDAKTION
+]
+
+
+def redaktion_html() -> str:
+    personen = " und ".join(f'<a href="../ueber-uns">{esc(n)}</a> ({esc(r)})' for n, r in REDAKTION)
+    return f"""    <section class="sv-section nw-redaktion" aria-labelledby="redaktion-titel">
+      <div class="sv-wrap">
+        <h2 class="nw-redaktion__titel" id="redaktion-titel">Wer hinter diesen News steht</h2>
+        <p class="nw-redaktion__text">Verantwortlich: {personen}, vaiacon GmbH, Zürich.
+          Die Beiträge stellt eine KI nach festen Regeln aus den verlinkten Quellen zusammen: nur erreichbare
+          Quellen, keine Preise, keine Namen von Privatpersonen, jeder Beitrag mit der Frage, was er für ein
+          Schweizer KMU heisst. Die Redaktion legt die Regeln fest, prüft Hinweise und korrigiert; Korrekturen
+          sind im Beitrag als «Präzisiert am» markiert. Hinweise an <a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a>.</p>
+      </div>
+    </section>"""
+
+
 def jsonld_woche(w: dict, adresse: str, bilder: Bilder) -> dict:
     herausgeber = {
         "@type": "Organization",
@@ -391,13 +417,14 @@ def jsonld_woche(w: dict, adresse: str, bilder: Bilder) -> dict:
                 "headline": b["titel"],
                 "description": b["kurz"],
                 "datePublished": b["datum"],
-                "dateModified": b["datum"],
+                "dateModified": b.get("praezisiert") or b["datum"],
                 "inLanguage": "de-CH",
                 "articleSection": RUBRIKEN[b["rubrik"]],
                 "url": url,
                 "mainEntityOfPage": url,
                 "image": f"{SEITE}/" + bilder.pfad_ab_wurzel(RUBRIK_BILD[b["rubrik"]]),
                 "author": {"@type": "Organization", "name": "Vaiacon GmbH"},
+                "editor": REDAKTION_JSONLD,
                 "publisher": herausgeber,
                 "citation": [q["url"] for q in b["quellen"]],
             },
@@ -432,13 +459,13 @@ def rahmen(titel: str, beschreibung: str, kanonisch: str, jsonld: dict, aktiv: s
     return seite
 
 
-def wochenseite(w: dict, wochen: list[dict], bilder: Bilder, ist_index: bool) -> str:
+def wochenseite(w: dict, wochen: list[dict], bilder: Bilder) -> str:
     titel_woche = woche_titel(w)
-    adresse = "" if ist_index else seitenname(w)
+    adresse = seitenname(w)
     kanonisch = f"{SEITE}/{ORDNER}/{ohne_endung(adresse)}"
     hero_bild = bilder.picture(WOCHENBILD, "Der vaiacon-Roboter liest eine Zeitung", "", eager=True)
     fazit = esc(w.get("wochenfazit", ""))
-    aktiv = "page" if ist_index else "true"
+    aktiv = "true"
     zaehl = len(w["beitraege"])
     anzahl = f"{zaehl} {'Beitrag' if zaehl == 1 else 'Beiträge'} in dieser Woche"
     # Leere Woche (Montagmorgen, ruhige Tage): statt einer leeren Seite die Beiträge der Vorwoche zeigen.
@@ -448,7 +475,7 @@ def wochenseite(w: dict, wochen: list[dict], bilder: Bilder, ist_index: bool) ->
         spaeter = wochen[wochen.index(w) + 1:]
         vorwoche = next((v for v in spaeter if v["beitraege"]), None)
     if fazit:
-        fazit_html = f'<p class="nw-kopf__fazit"><span class="nw-kopf__fazit-titel">Das Wochenfazit</span> {fazit}</p>'
+        fazit_html = f'<p class="nw-kopf__fazit"><span class="nw-kopf__fazit-titel">Das Wochenfazit für Schweizer KMU</span> {fazit}</p>'
     elif vorwoche:
         fazit_html = (f'<p class="nw-kopf__fazit">Die Woche ist noch jung: Bisher gab es nichts, das für Schweizer KMU '
                       f'wichtig genug war. Darunter lesen Sie die Beiträge der KW {vorwoche["kw"]}.</p>')
@@ -478,7 +505,7 @@ def wochenseite(w: dict, wochen: list[dict], bilder: Bilder, ist_index: bool) ->
     <section class="nw-streifen" aria-label="Wochenübersicht">
       <div class="nw-streifen__innen">
         {tagesstreifen_html(w)}
-        {wochenwahl_html(w, wochen, ist_index)}
+        {wochenwahl_html(w, wochen)}
       </div>
     </section>
 
@@ -493,10 +520,91 @@ def wochenseite(w: dict, wochen: list[dict], bilder: Bilder, ist_index: bool) ->
       </div>
     </section>
 
+{redaktion_html()}
+
 {lies_vorlage("schluss.html").rstrip()}"""
     titel = f"KI-News für KMU {titel_woche_kurz(w)} · vaiacon"
-    return rahmen(titel, beschreibung_woche(w), kanonisch, jsonld_woche(w, adresse or seitenname(w), bilder),
+    return rahmen(titel, beschreibung_woche(w), kanonisch, jsonld_woche(w, adresse, bilder),
                   aktiv, inhalt, mit_filter_js=True)
+
+
+def anriss_html(w: dict, b: dict, gross: bool) -> str:
+    """Kurzfassung eines Beitrags für die Übersicht: Titel, «Was ist passiert?», Link zur Wochenseite."""
+    ziel = f"{ohne_endung(seitenname(w))}#{b['id']}"
+    klasse = "nw-karte nw-karte--anriss" + (" nw-karte--gross" if gross else "")
+    return "\n".join([
+        f'<article class="{klasse}" data-rubrik="{esc(b["rubrik"])}" data-datum="{esc(b["datum"])}">',
+        '  <header class="nw-karte__kopf">',
+        f'    <p class="nw-karte__meta">{abzeichen(b["rubrik"])}<time datetime="{esc(b["datum"])}">{esc(datum_lang(b["_datum"]))}</time></p>',
+        f'    <h3 class="nw-karte__titel"><a href="{esc(ziel)}">{esc(b["titel"])}</a></h3>',
+        '  </header>',
+        f'  <p class="nw-karte__anriss">{esc(b["kurz"])}</p>',
+        f'  <a class="nw-feld__link" href="{esc(ziel)}">Was das für Ihr KMU heisst →</a>',
+        '</article>',
+    ])
+
+
+def hubseite(wochen: list[dict], bilder: Bilder) -> str:
+    """Die Übersicht /ki-kmu-news/: Anrisse der aktuellen Woche und die Wochenliste.
+
+    Bis 07.10.2026 war sie eine Kopie der neuesten Wochenseite mit eigenem Canonical, also ein
+    Doppel für Suchmaschinen. Jetzt steht jeder Beitrag nur auf seiner Wochenseite."""
+    aktuell = next((w for w in wochen if w["beitraege"]), wochen[0])
+    hero_bild = bilder.picture(WOCHENBILD, "Der vaiacon-Roboter liest eine Zeitung", "", eager=True)
+    fazit = esc(aktuell.get("wochenfazit", ""))
+    fazit_html = (f'<p class="nw-kopf__fazit"><span class="nw-kopf__fazit-titel">Das Wochenfazit für Schweizer KMU, KW {aktuell["kw"]}</span> {fazit}</p>'
+                  if fazit else '')
+    paare = sorted(aktuell["beitraege"], key=lambda b: (b["_datum"], b["wichtigkeit"]), reverse=True)
+    wichtigster = max(aktuell["beitraege"], key=lambda b: (b["wichtigkeit"], b["_datum"]), default=None)
+    gross_id = wichtigster["id"] if wichtigster and wichtigster["wichtigkeit"] >= 2 else None
+    anrisse = "\n".join(anriss_html(aktuell, b, b["id"] == gross_id) for b in paare) or (
+        '<p class="nw-leer">In dieser Woche gab es noch nichts, das für Schweizer KMU wichtig genug war.</p>')
+    wochenliste = "\n".join(
+        f'<li><a href="{esc(ohne_endung(seitenname(w)))}">{esc(woche_titel(w))}</a>'
+        f'<span class="nw-wochen__zahl">{len(w["beitraege"])} {"Beitrag" if len(w["beitraege"]) == 1 else "Beiträge"}</span></li>'
+        for w in wochen[:8])
+    inhalt = f"""    <section id="top" class="nw-kopf" aria-label="Kopf">
+      <div class="nw-kopf__innen">
+        <div class="nw-kopf__text">
+          <p class="nw-kopf__kicker">KI-NEWS FÜR KMU · JEDE WOCHE NEU</p>
+          <h1 class="nw-kopf__titel"><span class="nw-kopf__datum">KI-News für Schweizer KMU: was Neuigkeiten für Ihren Betrieb heissen</span></h1>
+          <p class="nw-kopf__lead">Täglich eingeordnet: Was ist passiert, was heisst das für ein KMU mit 5 bis 30 Mitarbeitenden, worauf sollten Sie achten. Mit Quellen, ohne Fachchinesisch.</p>
+          {fazit_html}
+        </div>
+        <figure class="nw-kopf__bild" aria-hidden="true">
+          {hero_bild}
+        </figure>
+      </div>
+    </section>
+
+    <section id="beitraege" class="sv-section nw-liste">
+      <div class="sv-wrap">
+        <h2 class="nw-tagesblock__titel">Aktuelle Woche: KW {aktuell['kw']} · {esc(zeitspanne(aktuell['_von'], aktuell['_bis']))} · <a href="{esc(ohne_endung(seitenname(aktuell)))}">ganze Woche lesen →</a></h2>
+        <div class="nw-beitraege">
+{anrisse}
+        </div>
+      </div>
+    </section>
+
+    <section class="sv-section nw-wochen" aria-labelledby="wochen-titel">
+      <div class="sv-wrap">
+        <h2 class="nw-tagesblock__titel" id="wochen-titel">Die letzten Wochen</h2>
+        <ul class="nw-wochen__liste">
+{wochenliste}
+        </ul>
+        <p class="nw-wochen__links"><a href="archiv">Alle Wochen im Archiv</a> <span aria-hidden="true">·</span> <a href="feed.xml">RSS-Feed abonnieren</a></p>
+      </div>
+    </section>
+
+{redaktion_html()}
+
+{lies_vorlage("schluss.html").rstrip()}"""
+    beschr = ("KI-News für Schweizer KMU, jede Woche neu: was passiert ist, was es für Ihren Betrieb heisst und "
+              "worauf Sie achten sollten. Mit Quellen, eingeordnet von vaiacon in Zürich.")
+    jsonld = jsonld_woche(aktuell, seitenname(aktuell), bilder)
+    jsonld["name"] = "KI-News für KMU: aktuelle Woche"
+    return rahmen("KI-News für Schweizer KMU · vaiacon", beschr, f"{SEITE}/{ORDNER}/", jsonld,
+                  "page", inhalt, mit_filter_js=False)
 
 
 def titel_woche_kurz(w: dict) -> str:
@@ -506,7 +614,7 @@ def titel_woche_kurz(w: dict) -> str:
 def archivseite(wochen: list[dict], bilder: Bilder) -> str:
     eintraege = []
     for i, w in enumerate(wochen):
-        ziel = "./" if i == 0 else ohne_endung(seitenname(w))
+        ziel = ohne_endung(seitenname(w))
         rubriken = []
         for r in RUBRIKEN:
             if any(b["rubrik"] == r for b in w["beitraege"]):
@@ -559,7 +667,7 @@ def archivseite(wochen: list[dict], bilder: Bilder) -> str:
         "numberOfItems": len(wochen),
         "itemListElement": [
             {"@type": "ListItem", "position": i + 1,
-             "url": f"{SEITE}/{ORDNER}/" + ("" if i == 0 else ohne_endung(seitenname(w))),
+             "url": f"{SEITE}/{ORDNER}/{ohne_endung(seitenname(w))}",
              "name": woche_titel(w)}
             for i, w in enumerate(wochen)
         ],
@@ -583,7 +691,7 @@ def feed(wochen: list[dict], bilder: Bilder) -> str:
         f"<lastBuildDate>{stand}</lastBuildDate>",
     ]
     for w, b in paare:
-        url = f"{SEITE}/{ORDNER}/{seitenname(w)}#{b['id']}"
+        url = f"{SEITE}/{ORDNER}/{ohne_endung(seitenname(w))}#{b['id']}"
         text = (f"{b['kurz']}\n\nWas heisst das für Ihr KMU? {b['kmu']}\n\n"
                 f"Was vaiacon dazu bietet: {b['vaiacon']}\n\nWorauf Sie achten sollten: {b['achtung']}\n\n"
                 "Von KI aus den genannten Quellen zusammengestellt. Fehler melden: hallo@vaiacon.ch")
@@ -609,7 +717,7 @@ def neueste(wochen: list[dict], bilder: Bilder) -> str:
             "datum": b["datum"],
             "rubrik": b["rubrik"],
             "kurz": b["kurz"],
-            "adresse": f"{ORDNER}/{seitenname(w)}#{b['id']}",
+            "adresse": f"{ORDNER}/{ohne_endung(seitenname(w))}#{b['id']}",
             "bild": bilder.pfad_ab_wurzel(RUBRIK_BILD[b["rubrik"]]),
         })
     return json.dumps(eintraege, ensure_ascii=False, indent=2) + "\n"
@@ -625,9 +733,9 @@ def baue(wurzel: Path, still: bool = False) -> int:
     bilder = Bilder(wurzel)
     ziel = wurzel / ORDNER
     geaendert = 0
-    geaendert += schreibe(ziel / "index.html", wochenseite(wochen[0], wochen, bilder, True), still)
+    geaendert += schreibe(ziel / "index.html", hubseite(wochen, bilder), still)
     for w in wochen:
-        geaendert += schreibe(ziel / seitenname(w), wochenseite(w, wochen, bilder, False), still)
+        geaendert += schreibe(ziel / seitenname(w), wochenseite(w, wochen, bilder), still)
     geaendert += schreibe(ziel / "archiv.html", archivseite(wochen, bilder), still)
     geaendert += schreibe(ziel / "feed.xml", feed(wochen, bilder), still)
     geaendert += schreibe(ziel / "neueste.json", neueste(wochen, bilder), still)

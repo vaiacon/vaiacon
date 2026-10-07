@@ -216,24 +216,23 @@ ORGANISATION["hasOfferCatalog"] = {
     ],
 }
 
-# Sitemap: Pfad, Datei, changefreq, priority. lastmod = letzter Commit der Datei,
-# bei ungespeicherten Aenderungen heute.
+# Sitemap: Pfad, Datei. lastmod = letzter Commit der Datei, bei ungespeicherten Aenderungen heute.
+# Seit 07.10.2026 ohne priority/changefreq: Google wertet beides nicht, nur ein stimmiges lastmod zaehlt.
+# Die News-Wochen kommen aus ki-kmu-news/daten/*.json dazu, lastmod = juengste Beitragsaenderung.
 SITEMAP = [
-    ("", "index.html", "weekly", "1.0"),
-    ("ueber-uns", "ueber-uns.html", "monthly", "0.6"),
-    ("visibility", "visibility.html", "monthly", "0.8"),
-    ("learning", "learning.html", "monthly", "0.8"),
-    ("bot", "bot.html", "monthly", "0.8"),
-    ("service", "service.html", "monthly", "0.8"),
-    ("offerte", "offerte.html", "monthly", "0.8"),
-    ("ki-kmu-news/", "ki-kmu-news/index.html", "weekly", "0.7"),
-    ("ki-kmu-news/archiv", "ki-kmu-news/archiv.html", "weekly", "0.4"),
-    ("referenzen", "referenzen.html", "monthly", "0.6"),
-    ("faq", "faq.html", "monthly", "0.8"),
-    ("kontakt", "kontakt.html", "monthly", "0.8"),
-    ("impressum", "impressum.html", "yearly", "0.3"),
-    ("datenschutz", "datenschutz.html", "yearly", "0.3"),
-    ("agb", "agb.html", "yearly", "0.3"),
+    ("", "index.html"),
+    ("ueber-uns", "ueber-uns.html"),
+    ("visibility", "visibility.html"),
+    ("learning", "learning.html"),
+    ("bot", "bot.html"),
+    ("service", "service.html"),
+    ("offerte", "offerte.html"),
+    ("referenzen", "referenzen.html"),
+    ("faq", "faq.html"),
+    ("kontakt", "kontakt.html"),
+    ("impressum", "impressum.html"),
+    ("datenschutz", "datenschutz.html"),
+    ("agb", "agb.html"),
 ]
 
 
@@ -245,13 +244,34 @@ def zuletzt_geaendert(datei: str) -> str:
     return git("log", "-1", "--format=%cs", "--", datei) or date.today().isoformat()
 
 
+def news_eintraege() -> list[tuple[str, str]]:
+    """(Pfad, lastmod) fuer Uebersicht, Archiv und jede Woche. Datum = juengster Beitrag oder dessen Praezisierung."""
+    wochen = []
+    for datei in sorted((WURZEL / "ki-kmu-news" / "daten").glob("*.json")):
+        try:
+            w = json.loads(datei.read_text(encoding="utf-8"))
+        except (OSError, ValueError):
+            continue
+        beitraege = w.get("beitraege") or []
+        stand = max([b.get("praezisiert") or b.get("datum") or "" for b in beitraege] + [str(w.get("von", ""))])
+        if w.get("jahr") and w.get("kw") and stand:
+            wochen.append((f"ki-kmu-news/{w['jahr']}-kw{int(w['kw']):02d}", stand, bool(beitraege)))
+    wochen.sort(key=lambda e: e[1], reverse=True)
+    if not wochen:
+        return []
+    neuestes = max(stand for _, stand, _ in wochen)
+    eintraege = [("ki-kmu-news/", neuestes), ("ki-kmu-news/archiv", neuestes)]
+    eintraege += [(pfad, stand) for pfad, stand, hat_beitraege in wochen if hat_beitraege]
+    return eintraege
+
+
 def sitemap_text() -> str:
     zeilen = ['<?xml version="1.0" encoding="UTF-8"?>',
               '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
-    for pfad, datei, freq, prio in SITEMAP:
-        if (WURZEL / datei).exists():
-            zeilen.append(f"  <url><loc>{BASIS}/{pfad}</loc><lastmod>{zuletzt_geaendert(datei)}</lastmod>"
-                          f"<changefreq>{freq}</changefreq><priority>{prio}</priority></url>")
+    eintraege = [(pfad, zuletzt_geaendert(datei)) for pfad, datei in SITEMAP if (WURZEL / datei).exists()]
+    eintraege += news_eintraege()
+    for pfad, stand in eintraege:
+        zeilen.append(f"  <url><loc>{BASIS}/{pfad}</loc><lastmod>{stand}</lastmod></url>")
     zeilen.append("</urlset>")
     return "\n".join(zeilen) + "\n"
 

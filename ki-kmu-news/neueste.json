@@ -4,7 +4,7 @@
     "datum": "2026-10-07",
     "rubrik": "markt",
     "kurz": "Persönliche KI-Agenten sollen Flüge buchen, Tische reservieren oder einkaufen. Laut TechCrunch blockieren aber viele Websites solche Agenten, teils gewollt, teils durch normalen Bot-Schutz. Meta und Partner arbeiten an einem Standard, mit dem sich Agenten und Websites klar verständigen können.",
-    "adresse": "ki-kmu-news/2026-kw41.html#2026-10-07-ki-agenten-vor-verschlossener-tuer",
+    "adresse": "ki-kmu-news/2026-kw41#2026-10-07-ki-agenten-vor-verschlossener-tuer",
     "bild": "assets/vaiacon-buerobot-news-markt.png"
   },
   {
@@ -12,7 +12,7 @@
     "datum": "2026-10-07",
     "rubrik": "modelle",
     "kurz": "Das französische Unternehmen Mistral hat am 6. Oktober «Mistral Large 4» vorgestellt, ein Modell mit rund einer Billion Parametern. Es ist vorerst nur über einen öffentlichen Zugang mit Schutzmassnahmen nutzbar. Eine offene Version ist nach Sicherheitstests in etwa drei Wochen geplant.",
-    "adresse": "ki-kmu-news/2026-kw41.html#2026-10-07-mistral-large-4-das-europaeische",
+    "adresse": "ki-kmu-news/2026-kw41#2026-10-07-mistral-large-4-das-europaeische",
     "bild": "assets/vaiacon-buerobot-news-modelle.png"
   },
   {
@@ -20,7 +20,7 @@
     "datum": "2026-10-06",
     "rubrik": "recht",
     "kurz": "Laut AI Weekly hat OpenAI am 5. Oktober «textGrain» vorgestellt. Das Verfahren legt ein unsichtbares Muster in die Wortwahl. AI Weekly berichtet, dass es in der EU in den kommenden Wochen für ChatGPT und Codex verpflichtend wird und API-Kunden weltweit es freiwillig einschalten können. OpenAI hat das selbst nicht bestätigt.",
-    "adresse": "ki-kmu-news/2026-kw41.html#2026-10-06-openai-versieht-texte-aus-chatgpt",
+    "adresse": "ki-kmu-news/2026-kw41#2026-10-06-openai-versieht-texte-aus-chatgpt",
     "bild": "assets/vaiacon-buerobot-news-recht.png"
   }
 ]

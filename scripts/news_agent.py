@@ -791,14 +791,19 @@ def lauf(tag: date, trocken: bool, kein_push: bool) -> int:
         git("clean", "-fd", "ki-kmu-news", pruefen=False)
         raise RuntimeError("news_bauen.py fehlgeschlagen: %s" % (bau.stderr or bau.stdout)[-300:])
     log("Gebaut:", (bau.stdout.strip().splitlines() or ["ok"])[-1])
+    # Sitemap nachfuehren (07.10.2026): jede Woche hat ihre eigene Adresse, die Suchmaschinen kennen sollen.
+    karte = subprocess.run([PYTHON, str(KLON / "scripts" / "strukturdaten.py"), "--nur", "sitemap.xml"],
+                           capture_output=True, text=True, timeout=60)
+    if karte.returncode != 0:
+        log("WARNUNG: Sitemap nicht nachgefuehrt:", (karte.stderr or karte.stdout)[-200:])
 
-    git("add", "ki-kmu-news")
+    git("add", "ki-kmu-news", "sitemap.xml")
     if git("diff", "--cached", "--quiet", pruefen=False).returncode == 0:
         log("Keine Aenderung im Bestand.")
         return 0
     namen = "; ".join(e["titel"][:60] for e in angenommen) or ("Wochenfazit" if fazit_ok else "neue Woche")
     git("commit", "-m", "KI-News für KMU %s: %s\n\nAutomatisch durch scripts/news_agent.py." % (tag.isoformat(), namen),
-        "--", "ki-kmu-news")
+        "--", "ki-kmu-news", "sitemap.xml")
     log("Commit angelegt.")
     if kein_push:
         log("--kein-push: nicht hochgeladen.")

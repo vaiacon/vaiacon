@@ -299,3 +299,20 @@ a.nw-tag--voll:focus-visible { outline: 3px solid var(--terra-500); outline-offs
   .nw-wochenwahl a { padding: 2px; }
   .nw-karte__text p, .nw-feld p { font-size: 15px; }
 }
+
+/* Übersicht und Redaktion (07.10.2026): /ki-kmu-news/ zeigt Anrisse statt einer Kopie der Woche. */
+.nw-kopf__lead { margin: 6px 0 10px; color: var(--text-body); line-height: var(--leading-body); max-width: 60ch; }
+.nw-karte--anriss .nw-karte__anriss { margin: 8px 0 10px; color: var(--text-body); line-height: var(--leading-body); }
+.nw-tagesblock__titel a { color: var(--terra-600); text-transform: none; letter-spacing: 0; }
+.nw-wochen__liste { list-style: none; margin: 12px 0 0; padding: 0; }
+.nw-wochen__liste li { display: flex; justify-content: space-between; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--border-ink); }
+.nw-wochen__liste a { font-weight: var(--weight-bold); color: var(--terra-600); }
+.nw-wochen__zahl { color: var(--text-body); font-size: 14px; white-space: nowrap; }
+.nw-redaktion { padding-top: 0; }
+.nw-redaktion .sv-wrap { border-top: 3px double var(--border-ink); padding-top: 14px; }
+.nw-redaktion__titel { margin: 0 0 6px; font-size: 12.5px; font-weight: var(--weight-bold); letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-body); }
+.nw-redaktion__text { margin: 0; max-width: 72ch; font-size: 14.5px; color: var(--text-body); line-height: var(--leading-body); }
+.nw-redaktion__text a { color: var(--terra-600); }
+.nw-wochen__links { margin: var(--space-4) 0 0; display: flex; flex-wrap: wrap; gap: 6px 14px; font-weight: var(--weight-bold); }
+.nw-wochen__links a { color: var(--terra-600); }
+.nw-redaktion .sv-wrap, .nw-wochen .sv-wrap { text-align: left; }
