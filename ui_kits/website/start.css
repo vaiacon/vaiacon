@@ -50,7 +50,21 @@
   box-sizing: border-box;
 }
 
-/* Die Überschrift bleibt für Suchmaschinen und Vorleseprogramme, sichtbar ist sie nicht mehr. */
+/* Die H1 ist seit 07.10.2026 sichtbar (SEO: eine versteckte H1 zählt kaum): eine ruhige Zeile über dem Karussell. */
+.st-titel {
+  margin: 0 auto 14px;
+  max-width: 64ch;
+  text-align: center;
+  font-size: clamp(13px, 1.1vw, 15px);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.4;
+  color: var(--cream-50);
+  opacity: .9;
+}
+
+/* Für Suchmaschinen und Vorleseprogramme, sichtbar ist es nicht. */
 .st-unsichtbar {
   position: absolute;
   width: 1px;
