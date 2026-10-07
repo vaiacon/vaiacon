@@ -69,10 +69,12 @@ def freistellen(bild):
     if innen.any():
         iy, ix = ndimage.distance_transform_edt(~innen, return_distances=False, return_indices=True)
         farbe = farbe[iy, ix]
-    # Die Bots stehen immer auf der Terracotta-Bühne: die weiche Kante bekommt die
-    # Bühnenfarbe halb beigemischt, dann hebt sie sich in der Bewegung nicht mehr ab.
-    rand = (a < 0.9)[..., None]
-    farbe = np.where(rand, 0.5 * farbe + 0.5 * BUEHNE, farbe)
+    # Die Bots stehen immer auf der Terracotta-Bühne. Alles, was nicht sicher deckt,
+    # wird mit der Bühnenfarbe gemischt, und die durchsichtige Fläche ist ganz Terracotta:
+    # Leckt der verlustbehaftete Alpha-Kanal (HEVC auf iPhone/Safari) einen Hauch nach
+    # aussen, zeigt sich dort Bühnenfarbe statt eines hellen Saums.
+    w = np.where(a < 0.9, a, 1.0)[..., None]
+    farbe = farbe * w + BUEHNE * (1 - w)
     farbe = np.clip(farbe, 0, 255)
     return np.dstack([farbe, a * 255]).astype(np.uint8)
 

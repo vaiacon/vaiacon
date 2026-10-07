@@ -43,7 +43,7 @@
     v.style.width = (100 + r[1] + r[3]) + '%';
     v.style.height = (100 + r[0] + r[2]) + '%';
     v.addEventListener('playing', function () { bild.classList.add('st-bild--lebt'); });
-    v.src = bild.getAttribute('data-schleife') + endung;
+    v.src = bild.getAttribute('data-schleife') + endung + '?f=' + (bild.getAttribute('data-fassung') || '1');
     bild.appendChild(v);
     videos.push(v);
     return v;
