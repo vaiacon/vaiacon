@@ -2415,3 +2415,48 @@ picture {
     transition: none;
   }
 }
+
+/* Faktenblock «Kurz gesagt» unter dem Hero der Angebotsseiten */
+.sv-fakten {
+  width: min(100%, 60rem);
+  margin: 0 auto;
+  padding: var(--space-6);
+  box-sizing: border-box;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--surface-card);
+  text-align: left;
+}
+
+.sv-fakten__titel {
+  margin: 0 0 var(--space-4);
+  font-size: 1.125rem;
+  color: var(--text-strong);
+}
+
+.sv-fakten dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4) var(--space-6);
+  margin: 0;
+}
+
+.sv-fakten dt {
+  margin: 0 0 4px;
+  font-weight: 700;
+  color: var(--text-strong);
+}
+
+.sv-fakten dd {
+  margin: 0;
+}
+
+@media (max-width: 480px) {
+  .sv-fakten {
+    padding: var(--space-5);
+  }
+
+  .sv-fakten dl {
+    grid-template-columns: 1fr;
+  }
+}
