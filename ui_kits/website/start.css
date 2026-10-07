@@ -105,6 +105,19 @@
   height: auto;
 }
 
+/* Bewegter Bot (bot-schleife.js): das Video liegt deckungsgleich über dem Standbild,
+   blendet ein, sobald es läuft, und erst danach verschwindet das Bild darunter. */
+.st-bild video {
+  position: absolute;
+  display: block;
+  object-fit: fill;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.st-bild--lebt video { opacity: 1; }
+.st-bild--lebt img { opacity: 0; transition: opacity 0s linear 0.35s; }
+
 .st-voll {
   position: relative;
   display: flex;
