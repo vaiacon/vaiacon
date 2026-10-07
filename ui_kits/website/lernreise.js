@@ -244,7 +244,6 @@
   doc.documentElement.classList.add('lr-js');
 
   var liste = doc.getElementById('lernreise-liste');
-  var info = doc.getElementById('lernreise-info');
   var knopf = doc.getElementById('lernreise-offerte');
   var weg = doc.getElementById('lernreise-weg');
   var fuellung = doc.getElementById('lernreise-fuellung');
@@ -270,7 +269,6 @@
 
   function neuBauen(sanft) {
     liste.innerHTML = bauen(wahl);
-    info.textContent = zusammenfassung(wahl);
     knopf.setAttribute('href', 'kontakt#formular');
     if (sanft && !reduziert) {
       liste.classList.remove('lr-umgestellt');

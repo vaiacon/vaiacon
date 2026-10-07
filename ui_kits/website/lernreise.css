@@ -14,8 +14,7 @@
   width: min(100%, 54rem);
   padding: var(--space-2) var(--space-6);
   border: 1px solid var(--border-strong);
-  border-bottom: 0;
-  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  border-radius: var(--radius-lg);
   background: var(--surface-card);
   text-align: left;
 }
@@ -74,23 +73,6 @@
 }
 .lr-option input:focus-visible + span { outline: 3px solid var(--orange-500); outline-offset: 2px; }
 
-.lr-info {
-  margin: var(--space-6) auto 0;
-  box-sizing: border-box;
-  max-width: 54rem;
-  padding: var(--space-4) var(--space-6);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-lg);
-  color: var(--text-body);
-  font-size: var(--text-body-sm);
-  line-height: var(--leading-body);
-  background: var(--peach-100);
-}
-.lr-steuerung:not([hidden]) + .lr-info {
-  margin-top: 0;
-  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-}
-.lr-info strong { color: var(--terra-600); }
 
 /* ── Der Weg ─────────────────────────────────────────────────────────── */
 .lr-weg {
@@ -452,7 +434,6 @@ html:not(.lr-js) .lr-station__knoten span,
   .lr-steuerung { padding: var(--space-2) var(--space-4); }
   .lr-optionen { border-radius: 18px; }
   .lr-option span { min-height: 46px; padding: 6px 6px; border-radius: 14px; font-size: 13.5px; }
-  .lr-info { padding: var(--space-4); }
   /* Weg links, Karte rechts, Bild klein unter der Karte */
   .lr-spur { left: 22px; margin-left: -3px; }
   .lr-station,

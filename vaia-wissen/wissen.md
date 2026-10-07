@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 07.10.2026 · Eintrag af27bbf Lernreise: Messpunkte und Zielcheck; Kontakt: Postadresse aus den Kontaktwegen
+> Stand: 07.10.2026 · Eintrag 540774e KI-News für KMU 2026-10-07: Mistral Large 4: Das europäische Grossmodell ist da, offene ; KI-Agenten vor verschlossener Tür: Viele Websites lassen per
 
 ## Wie du antwortest
 
@@ -226,7 +226,6 @@ Zeit pro Person und Woche
 rund 30 Minuten
 rund 1 Stunde
 2 Stunden und mehr
-Beispielreise für einen Betrieb mit 11 bis 20 Mitarbeitenden · Ausgangslage: einzelne probieren · rund eine Stunde pro Person und Woche. Dauer: etwa 8 Wochen, 8 Stationen.
 1
 Woche 0 · Standort
 Standortbestimmung
@@ -622,10 +621,36 @@ Oder schreiben Sie uns über das Kontaktformular .
 ### KI-News für KMU
 
 Zum Inhalt springen
-KI-NEWS FÜR KMU · 1 BEITRAG IN DIESER WOCHE
+KI-NEWS FÜR KMU · 3 BEITRÄGE IN DIESER WOCHE
 KW 41 5. – 11. Oktober 2026
 Das Wochenfazit Diese Woche zeigt, dass die EU-Regeln für KI im Alltag ankommen. Anbieter kennzeichnen Texte nun technisch. Für Schweizer KMU heisst das: Klären Sie intern, wo KI-Texte entstehen und wer sie prüft. Ein grosser Umbau ist dafür nicht nötig.
 Die Beiträge
+Alle Modelle Recht Markt
+Mittwoch, 7. Oktober 2026
+Was ist passiert?
+Persönliche KI-Agenten sollen Flüge buchen, Tische reservieren oder einkaufen. Laut TechCrunch blockieren aber viele Websites solche Agenten, teils gewollt, teils durch normalen Bot-Schutz. Meta und Partner arbeiten an einem Standard, mit dem sich Agenten und Websites klar verständigen können.
+Was heisst das für Ihr KMU?
+Immer mehr Menschen lassen Assistenten für sich suchen und bestellen. Ihre Website entscheidet mit, ob diese Agenten Ihr Angebot sehen und nutzen können. Prüfen Sie, ob Ihr Bot-Schutz echte Kundenagenten unbeabsichtigt abweist. Entscheiden Sie bewusst, welche Agenten Sie zulassen wollen, etwa für Terminbuchung oder Anfragen.
+Was vaiacon dazu bietet
+Mit dem KI-Sichtbarkeits-Check zeigen wir Ihnen, wie KI-Assistenten Ihren Betrieb heute sehen und nennen. Bei Bedarf überarbeiten wir Ihre Seite, damit Angebot, Öffnungszeiten und Kontakt klar lesbar sind. So werden Sie auch dann gefunden, wenn Kundschaft einen Assistenten fragt.
+Zu Sichtbarkeit →
+Worauf Sie achten sollten
+Der gemeinsame Standard ist noch in Arbeit. Ändern Sie Ihren Bot-Schutz nicht übereilt, sondern klären Sie mit Ihrer Webagentur, was er heute blockiert.
+Quellen:
+The next hurdle for AI agents: getting websites to let them in (TechCrunch) ↗
+Von KI zusammengestellt. Fehler entdeckt? hallo@vaiacon.ch
+Was ist passiert?
+Das französische Unternehmen Mistral hat am 6. Oktober «Mistral Large 4» vorgestellt, ein Modell mit rund einer Billion Parametern. Es ist vorerst nur über einen öffentlichen Zugang mit Schutzmassnahmen nutzbar. Eine offene Version ist nach Sicherheitstests in etwa drei Wochen geplant.
+Was heisst das für Ihr KMU?
+Mit Mistral wächst die Auswahl an KI-Modellen aus Europa. Für Sie heisst das: Sie sind nicht auf wenige US-Anbieter angewiesen. Gerade wenn Kundendaten im Spiel sind, kann ein europäischer Anbieter oder ein offenes Modell eine Option sein. Noch ist das Modell neu, und die offene Version fehlt. Beobachten Sie die Entwicklung, ohne jetzt etwas umzustellen.
+Was vaiacon dazu bietet
+In der KI-Standortanalyse im Betrieb prüfen wir mit Ihnen, welche Aufgaben ein Modell erfüllen muss und welcher Anbieter dazu passt. Neue Modelle wie dieses nehmen wir dabei als Vergleich auf. Sie erhalten eine klare Empfehlung, die zu Ihrem Betrieb und Ihren Daten passt.
+Zu Automationen →
+Worauf Sie achten sollten
+Die offene Version ist erst angekündigt und noch nicht erhältlich. Prüfen Sie vor einem Einsatz, wo Ihre Daten verarbeitet werden. Welcher Anbieter passt, hängt von Ihrer Aufgabe ab, nicht vom Modellnamen.
+Quellen:
+Mistral's new 1T model aims to leapfrog closed and open rivals (TechCrunch) ↗
+Von KI zusammengestellt. Fehler entdeckt? hallo@vaiacon.ch
 Dienstag, 6. Oktober 2026
 Was ist passiert?
 Laut AI Weekly hat OpenAI am 5. Oktober «textGrain» vorgestellt. Das Verfahren legt ein unsichtbares Muster in die Wortwahl. AI Weekly berichtet, dass es in der EU in den kommenden Wochen für ChatGPT und Codex verpflichtend wird und API-Kunden weltweit es freiwillig einschalten können. OpenAI hat das selbst nicht bestätigt.
