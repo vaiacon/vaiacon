@@ -552,7 +552,7 @@ def hubseite(wochen: list[dict], bilder: Bilder) -> str:
     aktuell = next((w for w in wochen if w["beitraege"]), wochen[0])
     hero_bild = bilder.picture(WOCHENBILD, "Der vaiacon-Roboter liest eine Zeitung", "", eager=True)
     fazit = esc(aktuell.get("wochenfazit", ""))
-    fazit_html = (f'<p class="nw-kopf__fazit"><span class="nw-kopf__fazit-titel">Das Wochenfazit für Schweizer KMU, KW {aktuell["kw"]}</span> {fazit}</p>'
+    fazit_html = (f'<p class="nw-kopf__fazit nw-kopf__fazit--kasten"><span class="nw-kopf__fazit-titel">Wochenfazit KW {aktuell["kw"]}</span> {fazit}</p>'
                   if fazit else '')
     paare = sorted(aktuell["beitraege"], key=lambda b: (b["_datum"], b["wichtigkeit"]), reverse=True)
     wichtigster = max(aktuell["beitraege"], key=lambda b: (b["wichtigkeit"], b["_datum"]), default=None)
@@ -563,11 +563,11 @@ def hubseite(wochen: list[dict], bilder: Bilder) -> str:
         f'<li><a href="{esc(ohne_endung(seitenname(w)))}">{esc(woche_titel(w))}</a>'
         f'<span class="nw-wochen__zahl">{len(w["beitraege"])} {"Beitrag" if len(w["beitraege"]) == 1 else "Beiträge"}</span></li>'
         for w in wochen[:8])
-    inhalt = f"""    <section id="top" class="nw-kopf" aria-label="Kopf">
+    inhalt = f"""    <section id="top" class="nw-kopf nw-kopf--uebersicht" aria-label="Kopf">
       <div class="nw-kopf__innen">
         <div class="nw-kopf__text">
           <p class="nw-kopf__kicker">KI-NEWS FÜR KMU · JEDE WOCHE NEU</p>
-          <h1 class="nw-kopf__titel"><span class="nw-kopf__datum">KI-News für Schweizer KMU: was Neuigkeiten für Ihren Betrieb heissen</span></h1>
+          <h1 class="nw-kopf__titel nw-kopf__titel--uebersicht">KI-News für Schweizer KMU: <span class="nw-kopf__titel-zeile">was Neuigkeiten für Ihren Betrieb heissen</span></h1>
           <p class="nw-kopf__lead">Täglich eingeordnet: Was ist passiert, was heisst das für ein KMU mit 5 bis 30 Mitarbeitenden, worauf sollten Sie achten. Mit Quellen, ohne Fachchinesisch.</p>
           {fazit_html}
         </div>

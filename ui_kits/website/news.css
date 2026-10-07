@@ -301,7 +301,25 @@ a.nw-tag--voll:focus-visible { outline: 3px solid var(--terra-500); outline-offs
 }
 
 /* Übersicht und Redaktion (07.10.2026): /ki-kmu-news/ zeigt Anrisse statt einer Kopie der Woche. */
-.nw-kopf__lead { margin: 6px 0 10px; color: var(--text-body); line-height: var(--leading-body); max-width: 60ch; }
+.nw-kopf--uebersicht .nw-kopf__innen { align-items: flex-end; padding-bottom: var(--space-6); }
+.nw-kopf__titel--uebersicht {
+  display: block; max-width: 24ch;
+  font-size: clamp(30px, 3.8vw, 46px); line-height: 1.08; letter-spacing: -0.025em;
+}
+.nw-kopf__titel-zeile { color: var(--peach-200); }
+.nw-kopf__lead {
+  margin: 14px 0 0; max-width: 58ch;
+  font-size: clamp(16px, 1.3vw, 18px); line-height: 1.5;
+  color: var(--text-on-terra-soft);
+}
+.nw-kopf__fazit--kasten {
+  margin-top: 18px; padding: 12px 16px; max-width: 64ch;
+  background: rgba(255, 255, 255, .10); border-left: 3px solid var(--peach-200); border-radius: 0 8px 8px 0;
+  color: var(--cream-50);
+}
+.nw-kopf__fazit--kasten .nw-kopf__fazit-titel { display: block; margin: 0 0 2px; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+.nw-kopf--uebersicht .nw-kopf__bild { width: 168px; }
+@media (max-width: 720px) { .nw-kopf__titel--uebersicht { max-width: none; } .nw-kopf__fazit--kasten { max-width: none; } }
 .nw-karte--anriss .nw-karte__anriss { margin: 8px 0 10px; color: var(--text-body); line-height: var(--leading-body); }
 .nw-tagesblock__titel a { color: var(--terra-600); text-transform: none; letter-spacing: 0; }
 .nw-wochen__liste { list-style: none; margin: 12px 0 0; padding: 0; }
