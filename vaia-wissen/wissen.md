@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 07.10.2026 · Eintrag 540774e KI-News für KMU 2026-10-07: Mistral Large 4: Das europäische Grossmodell ist da, offene ; KI-Agenten vor verschlossener Tür: Viele Websites lassen per
+> Stand: 07.10.2026 · Eintrag 52dd085 Lernreise: Zusammenfassungszeile unter der Auswahl entfernt
 
 ## Wie du antwortest
 
@@ -295,10 +295,10 @@ Die Ziele aus dem Auftakt bekommen ein klares Ergebnis. Was offen bleibt, wird z
 Am Ende, im Zielcheck
 So sieht der Zielcheck aus · Muster mit erfundenen Werten
 Ziel aus dem Auftakt Vorher Nachher Ergebnis
-Alle im Team nutzen KI mindestens einmal pro Woche 4 von 15 13 von 15 teilweise
-Eine Offerte entsteht in der halben Zeit 45 Minuten 20 Minuten erreicht
-Alle arbeiten mit denselben geprüften Vorlagen keine 6 Vorlagen, in Gebrauch erreicht
-Kundendaten gehen nur in freigegebene Werkzeuge keine Regel Regel steht, noch nicht überall offen, nächste Etappe
+Alle erledigen mindestens eine wiederkehrende Aufgabe regelmässig mit KI 4 von 15 13 von 15 teilweise
+Eine Offerte ist in 5 statt 45 Minuten fertig, ohne zusätzliche Korrekturen 45 Minuten 5 Minuten, Korrekturen wie bisher erreicht
+Offerten, Protokolle und Kundenmails entstehen aus geprüften Vorlagen keine 6 Vorlagen, in 4 von 5 Offerten genutzt erreicht
+Alle wissen, welche Werkzeuge Kundendaten bekommen dürfen keine Regel Regel steht, 11 von 15 kennen sie offen, nächste Etappe
 Den Zielcheck erhalten Sie am Ende als eine Seite, mit Vorher und Nachher und einem Vorschlag für die nächsten Wochen.
 Das ist eine Beispielreise, kein fester Plan. Welche Stationen Sie wirklich brauchen, legen wir im Erstgespräch mit Ihnen fest.
 Bauen Sie mit uns Ihre eigene Reise →
