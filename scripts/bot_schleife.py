@@ -5,7 +5,8 @@
 
 Eingang: ein Video, das aus <bild.png> entstanden ist (Bot mittig auf einem 1080er-Quadrat
 in #00FF00, Höhe 86 %, Start- und Endbild = dieses Bild; so gebaut von Hand bzw. in
-ElevenLabs mit Kling 3 Pro). Ausgabe:
+ElevenLabs mit Kling 3 Pro; die Rohvideos liegen in
+~/Vaiacon/Marketing/Video/bot-schleifen/roh/). Ausgabe:
 
     <ziel>.webm  VP9 mit Alpha     — Chrome, Firefox, Edge
     <ziel>.mp4   HEVC mit Alpha    — Safari und alle Browser auf iPhone/iPad
@@ -20,6 +21,7 @@ import sys
 
 import numpy as np
 from PIL import Image
+from scipy import ndimage
 
 FF = "/opt/homebrew/bin/ffmpeg"
 FP = "/opt/homebrew/bin/ffprobe"
@@ -38,7 +40,7 @@ def lies_video(pfad):
 
 
 def freistellen(bild):
-    """Alpha aus dem Grünüberschuss, dann Grün aus den Randpixeln herausrechnen."""
+    """Alpha aus dem Grünüberschuss, Rand um ein Pixel enger, Randfarbe aus dem Inneren."""
     f = bild.astype(np.float32)
     r, g, b = f[..., 0], f[..., 1], f[..., 2]
     # Hintergrundfarbe aus den Ecken schätzen
@@ -47,16 +49,26 @@ def freistellen(bild):
     k = g - np.maximum(r, b)
     k_grund = grund[1] - max(grund[0], grund[2])
     a = 1.0 - np.clip((k - 22.0) / (k_grund * 0.62 - 22.0), 0, 1)
+    # Das 4:2:0-Video verschmiert das Grün ein, zwei Pixel in die Figur hinein; diese
+    # angegrünten Pixel sind nicht zu retten. Darum den Rand um zwei Pixel einziehen
+    # und wieder weich machen, sonst steht ein heller, rosa Saum um den Bot.
+    a = ndimage.grey_erosion(a, size=(5, 5))
+    a = ndimage.gaussian_filter(a, 0.8)
     a[a < 0.04] = 0
     a[a > 0.96] = 1
     # Flecken am Videorand (Kling lässt dort manchmal einzelne Pixel stehen)
     a[:16], a[-16:], a[:, :16], a[:, -16:] = 0, 0, 0, 0
-    # C = a*F + (1-a)*Grund  ->  F
-    sicher = np.maximum(a, 0.05)[..., None]
-    farbe = (f - (1 - a)[..., None] * grund) / sicher
-    farbe = np.clip(farbe, 0, 255)
     # Rest-Grün weg (die Figur hat kein Grün)
+    farbe = f.copy()
     farbe[..., 1] = np.minimum(farbe[..., 1], np.maximum(farbe[..., 0], farbe[..., 2]) + 6)
+    # Halbdurchsichtige und durchsichtige Pixel bekommen die Farbe des nächsten sicher
+    # deckenden Pixels. So trägt kein Randpixel Grün oder Rechenrauschen, und das
+    # Farb-Unterabtasten des Encoders zieht keine fremde Farbe in die Kante.
+    innen = a >= 0.9
+    if innen.any():
+        iy, ix = ndimage.distance_transform_edt(~innen, return_distances=False, return_indices=True)
+        farbe = farbe[iy, ix]
+    farbe = np.clip(farbe, 0, 255)
     return np.dstack([farbe, a * 255]).astype(np.uint8)
 
 
@@ -101,10 +113,10 @@ def main(roh, bildpfad, ziel):
     eingang = [FF, "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgba",
                "-s", f"{ow}x{oh}", "-r", "24", "-i", "-"]
     subprocess.run(eingang + ["-c:v", "libvpx-vp9", "-pix_fmt", "yuva420p", "-b:v", "0",
-        "-crf", "40", "-row-mt", "1", "-deadline", "good", "-cpu-used", "1",
+        "-crf", "34", "-row-mt", "1", "-deadline", "good", "-cpu-used", "1",
         "-an", f"{ziel}.webm"], input=aus, check=True)
     subprocess.run(eingang + ["-vf", "format=bgra", "-c:v", "hevc_videotoolbox",
-        "-alpha_quality", "0.6", "-b:v", "500k", "-tag:v", "hvc1", "-allow_sw", "1",
+        "-alpha_quality", "0.8", "-b:v", "700k", "-tag:v", "hvc1", "-allow_sw", "1",
         "-movflags", "+faststart", "-an", f"{ziel}.mp4"], input=aus, check=True)
     zuschnitt(rgba[0]).save(f"{ziel}-pruef.png")
     print(json.dumps({"ziel": ziel, "groesse": [ow, oh], "bilder": len(rgba),
