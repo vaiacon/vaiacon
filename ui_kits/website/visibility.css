@@ -2416,47 +2416,64 @@ picture {
   }
 }
 
-/* Faktenblock «Kurz gesagt» unter dem Hero der Angebotsseiten */
+/* Faktenblock «Kurz gesagt» unter dem Hero der Angebotsseiten (07.10.2026, Philip:
+   schlicht statt weisser Kasten). Kein Rahmen, keine Fläche: ein Mono-Kicker als
+   Titel, darunter drei Spalten mit je zwei Paaren, jedes Paar mit einer Haarlinie
+   darüber. Die Paare laufen spaltenweise (dt, dd, dt, dd = vier Zeilen je Spalte). */
 .sv-fakten {
   width: min(100%, 60rem);
   margin: 0 auto;
-  padding: var(--space-6);
-  box-sizing: border-box;
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-lg);
-  background: var(--surface-card);
+  padding: 0;
   text-align: left;
 }
 
 .sv-fakten__titel {
-  margin: 0 0 var(--space-4);
-  font-size: 1.125rem;
-  color: var(--text-strong);
+  margin: 0 0 var(--space-5);
+  font-family: var(--font-mono);
+  font-size: var(--text-kicker);
+  line-height: var(--leading-snug);
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--terra-600);
 }
 
 .sv-fakten dl {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: var(--space-4) var(--space-6);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-rows: repeat(4, auto);
+  grid-auto-flow: column;
+  column-gap: var(--space-8);
   margin: 0;
 }
 
 .sv-fakten dt {
-  margin: 0 0 4px;
-  font-weight: 700;
-  color: var(--text-strong);
+  margin: 0;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--border-strong);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  line-height: var(--leading-snug);
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--terra-600);
 }
 
 .sv-fakten dd {
-  margin: 0;
+  margin: 6px 0 var(--space-6);
+  color: var(--text-body);
+  line-height: var(--leading-body);
 }
 
-@media (max-width: 480px) {
-  .sv-fakten {
-    padding: var(--space-5);
-  }
-
+@media (max-width: 760px) {
   .sv-fakten dl {
     grid-template-columns: 1fr;
+    grid-template-rows: none;
+    grid-auto-flow: row;
+  }
+
+  .sv-fakten dd {
+    margin-bottom: var(--space-5);
   }
 }
