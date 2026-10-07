@@ -24,6 +24,13 @@
   overflow: hidden;
   background: var(--grad-terra-hero);
   color: var(--text-on-terra);
+  /* Füllt den ersten Bildschirm ganz; der nächste Abschnitt kommt erst beim Scrollen.
+     svh = Höhe bei eingeblendeter Adressleiste, damit auf dem Handy nichts hervorlugt. */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  min-height: 100svh;
 }
 
 .st-buehne::after {
