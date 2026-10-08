@@ -972,24 +972,46 @@ button.st-knopf-zweit:focus-visible {
     order: -1;
     flex-direction: row;
     align-items: flex-end;
-    gap: var(--space-4);
+    justify-content: center;
+    gap: var(--space-5);
+    min-width: 0;
   }
 
   .st-auftakt__bild .st-roboter {
-    width: 7.5rem;
+    width: 6rem;
     flex: 0 0 auto;
   }
 
+  /* Die Blase ist ein Absatz im Karteninneren; `.st-auftakt p` würde sie
+     sonst auf Textgrösse ziehen. Klein halten, damit der Roboter zählt. */
   .st-auftakt__bild .st-blase {
-    flex: 1 1 auto;
-    margin-bottom: 44px;
+    flex: 1 1 0;
+    min-width: 0;
+    margin-bottom: 36px;
+    padding: 10px 14px;
+    font-size: 15px;
+    line-height: 1.4;
+    border-width: 1.5px;
+    border-radius: var(--radius-sm) var(--radius-sm) 4px var(--radius-sm);
+    box-shadow: 3px 3px 0 rgba(28, 22, 19, 0.85);
   }
 
   .st-auftakt__bild .st-blase::after {
     left: auto;
-    right: -9px;
-    bottom: 18px;
+    right: -7px;
+    bottom: 14px;
+    width: 11px;
+    height: 11px;
+    border-width: 0 1.5px 1.5px 0;
     transform: rotate(-45deg);
+  }
+
+  /* Schmale Handys (320 bis 359 px): Roboter und Schrift eine Stufe kleiner,
+     sonst bricht «Prüfungsstress» aus der Blase. */
+  @media (max-width: 359px) {
+    .st-auftakt__bild { gap: var(--space-4); }
+    .st-auftakt__bild .st-roboter { width: 5rem; }
+    .st-auftakt__bild .st-blase { font-size: 14px; padding: 9px 12px; margin-bottom: 30px; }
   }
 
   .st-karte,
