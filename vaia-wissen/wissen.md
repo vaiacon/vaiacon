@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 07.10.2026 · Eintrag 52dd085 Lernreise: Zusammenfassungszeile unter der Auswahl entfernt
+> Stand: 08.10.2026 · Eintrag 2e490c7 Add Vaia Offerten product page with support and usage policies
 
 ## Wie du antwortest
 
@@ -108,7 +108,7 @@ Von: Linda, Inhaberin Züri Glow, Beauty Studio in Zürich-Altstetten
 ### Startseite
 
 Zum Inhalt springen
-KI, die in Ihrem Betrieb ankommt: KI-Kompetenz, Sichtbarkeit und Automationen für Betriebe mit 5 bis 30 Mitarbeitenden, aus Zürich für die ganze Schweiz
+KI-Beratung für Schweizer KMU: Schulung, Sichtbarkeit und Automatisierung
 KI-Kompetenz
 Ihr Team lernt KI an den eigenen Aufgaben: Trainings, Coaching und kurze tägliche Lerneinheiten.
 KI-Standort bestimmen →
@@ -120,7 +120,7 @@ Gratis prüfen →
 Mehr erfahren →
 Automationen
 Belege, Offerten und Posteingang laufen von selbst, damit Ihr Team Zeit für Wichtiges hat.
-Offerte zusammenstellen →
+Offerte erfassen →
 Mehr erfahren →
 KI-Kompetenz
 Sichtbarkeit
@@ -131,15 +131,15 @@ Wer hinter vaiacon steht
 Philip und André stellen sich in einer Minute vor.
 Video folgt
 ORIENTIERUNG
-Wo drückt es gerade?
-Tippen Sie an, was am ehesten stimmt. Wir zeigen Ihnen den passenden Anfang.
-«Mein Team nutzt KI kaum oder jeder anders.»
+Wo ist der Bedarf am grössten?
+Wählen Sie die passende Option für Ihren Betrieb. Wir zeigen Ihnen den passenden Anfang.
+«Mein Team nutzt KI selten und nicht gezielt.»
 KI-Kompetenz →
-«Man findet uns online schlecht.»
+«Wir sind online unsichtbar.»
 Sichtbarkeit →
-«Wir tippen zu viel von Hand ab.»
+«Wir verlieren viel Zeit mit repetitiven Tätigkeiten.»
 Automationen →
-«Ich weiss nicht, wo anfangen.»
+«Ich weiss nicht, wo ich anfangen soll.»
 KI-Standort bestimmen →
 Lieber reden? Erstgespräch vereinbaren →
 WOFÜR WIR STEHEN
@@ -150,13 +150,13 @@ SO FÄNGT ES AN
 Drei Schritte, ohne Verpflichtung.
 01
 Erstgespräch
-Eine halbe Stunde am Telefon oder am Bildschirm. Was kostet heute am meisten Zeit, was wurde schon versucht, wo drückt es wirklich? Kostenlos.
+Eine halbe Stunde am Telefon oder am Bildschirm. Was kostet heute am meisten Zeit, was wurde schon versucht, wo ist der grösste Handlungsbedarf? Kostenlos.
 02
 Empfehlung
-Sie erhalten schriftlich, was wir vorschlagen, mit Aufwand und Preis. Auch dann, wenn die Empfehlung lautet, vorerst nichts zu tun.
+Sie erhalten von uns einen schriftlichen Vorschlag, was wir umsetzen würden. Wenn wir zum Schluss kommen, dass es keine sinnvollen Massnahmen gibt, werden wir Ihnen dies ebenfalls mitteilen.
 03
 Umsetzung in Ihrem Tempo
-Wir fangen klein an, mit einer Sache, die trägt. Alles Weitere entscheiden Sie, wenn Sie den Nutzen gesehen haben. Auf Wunsch begleiten wir Sie danach weiter .
+Wir fangen klein an, mit einer Massnahme, die trägt. Alles Weitere entscheiden Sie, wenn Sie den Nutzen gesehen haben. Auf Wunsch begleiten wir Sie danach weiter .
 Sie sprechen mit Philip oder André.
 Erstgespräch kostenlos. Was es danach kostet, sehen Sie vorab im Offerten-Rechner .
 Lieber angerufen werden? Rückruf anfordern →
@@ -206,10 +206,23 @@ Lieber gleich Zahlen sehen: Offerte →
 
 Zum Inhalt springen
 KI-KOMPETENZ
-Eine Lernreise, die zu Ihrem Betrieb passt.
-Ein Kurstag, nach dem alles beim Alten bleibt? Das wollen wir nicht. Eine Lernreise verbindet Training, kleine tägliche Einheiten, Begleitung am Arbeitsplatz und Coaching der Führung über Wochen. Jede ist massgeschneidert.
+KI-Schulungen für Schweizer KMU, die im Arbeitsalltag funktionieren
+Eine Lernreise, die zu Ihrem Betrieb passt. Ein Kurstag, nach dem alles beim Alten bleibt? Das wollen wir nicht. Eine Lernreise verbindet Training, kleine tägliche Einheiten, Begleitung am Arbeitsplatz und Coaching der Führung über Wochen. Jede ist massgeschneidert.
 KI-Standort bestimmen →
-Offerte zusammenstellen →
+Offerte erfassen →
+Kurz gesagt
+Für wen
+Betriebe, deren Team und Führungskräfte KI sicher und nützlich einsetzen sollen.
+Problem
+Ein einzelner Kurstag ändert wenig: Danach bleibt im Arbeitsalltag alles beim Alten.
+Was Sie bekommen
+Eine massgeschneiderte Lernreise aus Training, täglichen Kleinst-Lerneinheiten, Begleitung am Arbeitsplatz und Führungscoaching.
+Preisrahmen
+Training CHF 1'550 pro Halbtag oder CHF 2'450 pro Tag und Gruppe, inkl. MWST.
+Ablauf
+Kostenloses halbstündiges Erstgespräch, danach eine Lernreise über mehrere Wochen mit Stationen nach Ihrem Bedarf.
+Region
+Zürich, für die ganze Schweiz.
 DIE LERNREISE
 Formate, die über Wochen ineinandergreifen.
 Jede Station baut auf der vorigen auf. Stellen Sie unten ein, wie Ihr Betrieb aussieht, und die Reise passt sich an.
@@ -334,7 +347,7 @@ Was es ist. Jeden Arbeitstag ein paar Minuten Lernstoff zu Ihren Themen, aufs Sm
 Wann es passt. Wenn Gelerntes im Alltag haften bleiben soll, statt nach dem Kurstag zu verpuffen.
 CHF 80 pro Person Für ein Programm von vier Wochen.
 Jede Reise ist eine Kombination. Sie zahlen nur, was Ihr Betrieb braucht. Preise inklusive Mehrwertsteuer.
-Offerte zusammenstellen →
+Offerte erfassen →
 KLEINE SCHRITTE, JEDEN TAG
 Ein Kurstag verpufft. Fünf Minuten am Tag bleiben.
 Unsere Überzeugung: Kleine Interventionen, jeden Tag, steigern den Lernerfolg und damit die Effizienz nachhaltig. Wer täglich an der eigenen Aufgabe übt, behält mehr als jemand, der einmal einen langen Tag besucht hat.
@@ -381,16 +394,29 @@ NÄCHSTER SCHRITT
 Reden wir darüber, wie Ihre Lernreise aussieht.
 Ein halbstündiges Erstgespräch, kostenlos und ohne Verpflichtung. Danach wissen Sie, welche Stationen sich für Ihren Betrieb lohnen.
 Erstgespräch vereinbaren →
-Offerte zusammenstellen →
+Offerte erfassen →
 
 ### Sichtbarkeit — gefunden werden
 
 Zum Inhalt springen
 SICHTBARKEIT
-Gefunden werden, wenn Menschen suchen und KI antwortet.
-Sichtbarkeit von vaiacon hilft Schweizer KMU, online sichtbar und verständlich zu werden: mit SEO für Suchmaschinen und GEO für KI-Antworten.
+SEO und GEO für Schweizer KMU: bei Google und in KI-Antworten sichtbar
+Gefunden werden, wenn Menschen suchen und KI antwortet. Sichtbarkeit von vaiacon hilft Schweizer KMU, online sichtbar und verständlich zu werden: mit SEO für Suchmaschinen und GEO für KI-Antworten.
 Check starten →
 SEO und GEO verstehen →
+Kurz gesagt
+Für wen
+Schweizer KMU, die bei Google gefunden und in KI-Antworten genannt werden wollen.
+Problem
+Ohne klare Struktur und verständliche Antworten bleibt Ihr Angebot für Suchmaschinen und KI unscharf.
+Was Sie bekommen
+Sichtbarkeits-Audit, SEO-Roadmap, GEO-Inhalte und Kontrolle.
+Preisrahmen
+Google-Check und KI-Sichtbarkeits-Check je CHF 1'300, laufende Betreuung ab CHF 400 pro Monat, inkl. MWST.
+Ablauf
+Wir verstehen Ihr Angebot, prüfen Ihre Sichtbarkeit, setzen Prioritäten und verbessern Seiten und Inhalte.
+Region
+Zürich, für die ganze Schweiz.
 KOSTENLOSER CHECK
 Wie sichtbar ist Ihre Website heute?
 Domain eingeben: Wir prüfen, ob Google Ihr Angebot versteht und ob KI-Systeme Sie als Quelle erkennen würden, mit konkreten Hebeln statt blossen Kennzahlen.
@@ -483,10 +509,23 @@ Zurück zur Startseite →
 
 Zum Inhalt springen
 AUTOMATIONEN
-Die Arbeit, die sich jede Woche wiederholt, läuft von selbst.
-Automationen übernehmen, was in Ihrem Betrieb regelmässig Zeit kostet: Belege, Offerten, Korrespondenz, Anfragen. Eingerichtet bei Ihnen, zum Fixpreis nach der Erstanalyse.
+Büroarbeit mit KI automatisieren – für Schweizer KMU
+Die Arbeit, die sich jede Woche wiederholt, läuft von selbst. Automationen übernehmen, was in Ihrem Betrieb regelmässig Zeit kostet: Belege, Offerten, Korrespondenz, Anfragen. Eingerichtet bei Ihnen, zum Fixpreis nach der Erstanalyse.
 Kostenlose Erstanalyse →
 So läuft es ab →
+Kurz gesagt
+Für wen
+Schweizer KMU mit wiederkehrender Büroarbeit wie Belegen, Offerten, Korrespondenz und Anfragen.
+Problem
+Regelmässige Büroarbeit kostet jede Woche Zeit und wird heute noch von Hand gemacht.
+Was Sie bekommen
+Bei Ihnen eingerichtete Automationen, auf Wunsch mit Chatbot, Telefonassistent und Anbindung an Ihre Software.
+Preisrahmen
+Fixpreis nach der Erstanalyse, ab CHF 1'300 pro Ablauf, inkl. MWST.
+Ablauf
+Fünf Schritte vom Gespräch bis zur Kontrolle: Empfehlung, Priorisierung, Planung, Umsetzung, Kontrolle.
+Region
+Zürich, für die ganze Schweiz.
 WAS SICH LOHNT
 Nicht alles gehört automatisiert.
 Es lohnt sich bei Arbeiten, die sich ständig wiederholen und heute noch von Hand gemacht werden.
@@ -517,7 +556,7 @@ NÄCHSTER SCHRITT
 Zeigen Sie uns, was jede Woche Zeit frisst.
 Im Erstgespräch schauen wir gemeinsam auf Ihre Abläufe und sagen Ihnen, wo sich eine Automation lohnt und wo nicht. Kostenlos und unverbindlich.
 Kostenlose Erstanalyse →
-Offerte zusammenstellen →
+Offerte erfassen →
 
 ### Begleitung
 
@@ -526,7 +565,7 @@ BEGLEITUNG
 Eingerichtet ist erst der Anfang.
 Unsere Begleitung betreut alles, was wir für Sie aufgebaut haben. Pflege, Support und Weiterentwicklung, so viel Sie brauchen.
 Beratungsgespräch vereinbaren →
-Offerte zusammenstellen →
+Offerte erfassen →
 WARUM BETREUUNG
 Was läuft, braucht jemanden, der hinschaut.
 Anbieter ändern Schnittstellen, Suchmaschinen und KI-Systeme ändern ihre Regeln, Abläufe im Betrieb verschieben sich. Was heute gut läuft, läuft in einem Jahr nicht mehr von selbst. Und der Ausfall fällt oft erst auf, wenn etwas fehlt.
@@ -566,7 +605,7 @@ NÄCHSTER SCHRITT
 Sagen Sie uns, was bei Ihnen läuft.
 Wir schauen uns gemeinsam an, an welcher Stelle bei Ihnen eine laufende Betreuung Sinn ergibt.
 Beratungsgespräch vereinbaren →
-Offerte zusammenstellen →
+Offerte erfassen →
 
 ### Offerten-Tool
 
@@ -621,56 +660,32 @@ Oder schreiben Sie uns über das Kontaktformular .
 ### KI-News für KMU
 
 Zum Inhalt springen
-KI-NEWS FÜR KMU · 3 BEITRÄGE IN DIESER WOCHE
-KW 41 5. – 11. Oktober 2026
-Das Wochenfazit Diese Woche zeigt, dass die EU-Regeln für KI im Alltag ankommen. Anbieter kennzeichnen Texte nun technisch. Für Schweizer KMU heisst das: Klären Sie intern, wo KI-Texte entstehen und wer sie prüft. Ein grosser Umbau ist dafür nicht nötig.
-Die Beiträge
-Alle Modelle Recht Markt
-Mittwoch, 7. Oktober 2026
-Was ist passiert?
+KI-NEWS FÜR KMU · JEDE WOCHE NEU
+KI-News für Schweizer KMU: was Neuigkeiten für Ihren Betrieb heissen
+Täglich eingeordnet: Was ist passiert, was heisst das für ein KMU mit 5 bis 30 Mitarbeitenden, worauf sollten Sie achten. Mit Quellen, ohne Fachchinesisch.
+Wochenfazit KW 41 Diese Woche zeigt, dass die EU-Regeln für KI im Alltag ankommen. Anbieter kennzeichnen Texte nun technisch. Für Schweizer KMU heisst das: Klären Sie intern, wo KI-Texte entstehen und wer sie prüft. Ein grosser Umbau ist dafür nicht nötig.
+Aktuelle Woche: KW 41 · 5. – 11. Oktober 2026 · ganze Woche lesen →
 Persönliche KI-Agenten sollen Flüge buchen, Tische reservieren oder einkaufen. Laut TechCrunch blockieren aber viele Websites solche Agenten, teils gewollt, teils durch normalen Bot-Schutz. Meta und Partner arbeiten an einem Standard, mit dem sich Agenten und Websites klar verständigen können.
-Was heisst das für Ihr KMU?
-Immer mehr Menschen lassen Assistenten für sich suchen und bestellen. Ihre Website entscheidet mit, ob diese Agenten Ihr Angebot sehen und nutzen können. Prüfen Sie, ob Ihr Bot-Schutz echte Kundenagenten unbeabsichtigt abweist. Entscheiden Sie bewusst, welche Agenten Sie zulassen wollen, etwa für Terminbuchung oder Anfragen.
-Was vaiacon dazu bietet
-Mit dem KI-Sichtbarkeits-Check zeigen wir Ihnen, wie KI-Assistenten Ihren Betrieb heute sehen und nennen. Bei Bedarf überarbeiten wir Ihre Seite, damit Angebot, Öffnungszeiten und Kontakt klar lesbar sind. So werden Sie auch dann gefunden, wenn Kundschaft einen Assistenten fragt.
-Zu Sichtbarkeit →
-Worauf Sie achten sollten
-Der gemeinsame Standard ist noch in Arbeit. Ändern Sie Ihren Bot-Schutz nicht übereilt, sondern klären Sie mit Ihrer Webagentur, was er heute blockiert.
-Quellen:
-The next hurdle for AI agents: getting websites to let them in (TechCrunch) ↗
-Von KI zusammengestellt. Fehler entdeckt? hallo@vaiacon.ch
-Was ist passiert?
+Was das für Ihr KMU heisst →
 Das französische Unternehmen Mistral hat am 6. Oktober «Mistral Large 4» vorgestellt, ein Modell mit rund einer Billion Parametern. Es ist vorerst nur über einen öffentlichen Zugang mit Schutzmassnahmen nutzbar. Eine offene Version ist nach Sicherheitstests in etwa drei Wochen geplant.
-Was heisst das für Ihr KMU?
-Mit Mistral wächst die Auswahl an KI-Modellen aus Europa. Für Sie heisst das: Sie sind nicht auf wenige US-Anbieter angewiesen. Gerade wenn Kundendaten im Spiel sind, kann ein europäischer Anbieter oder ein offenes Modell eine Option sein. Noch ist das Modell neu, und die offene Version fehlt. Beobachten Sie die Entwicklung, ohne jetzt etwas umzustellen.
-Was vaiacon dazu bietet
-In der KI-Standortanalyse im Betrieb prüfen wir mit Ihnen, welche Aufgaben ein Modell erfüllen muss und welcher Anbieter dazu passt. Neue Modelle wie dieses nehmen wir dabei als Vergleich auf. Sie erhalten eine klare Empfehlung, die zu Ihrem Betrieb und Ihren Daten passt.
-Zu Automationen →
-Worauf Sie achten sollten
-Die offene Version ist erst angekündigt und noch nicht erhältlich. Prüfen Sie vor einem Einsatz, wo Ihre Daten verarbeitet werden. Welcher Anbieter passt, hängt von Ihrer Aufgabe ab, nicht vom Modellnamen.
-Quellen:
-Mistral's new 1T model aims to leapfrog closed and open rivals (TechCrunch) ↗
-Von KI zusammengestellt. Fehler entdeckt? hallo@vaiacon.ch
-Dienstag, 6. Oktober 2026
-Was ist passiert?
+Was das für Ihr KMU heisst →
 Laut AI Weekly hat OpenAI am 5. Oktober «textGrain» vorgestellt. Das Verfahren legt ein unsichtbares Muster in die Wortwahl. AI Weekly berichtet, dass es in der EU in den kommenden Wochen für ChatGPT und Codex verpflichtend wird und API-Kunden weltweit es freiwillig einschalten können. OpenAI hat das selbst nicht bestätigt.
-Was heisst das für Ihr KMU?
-AI Weekly führt die Regel auf das EU-Gesetz über künstliche Intelligenz zurück. Für die Schweiz gibt es dazu keine Angabe in den geprüften Quellen. Trifft der Bericht zu, sind Texte, die Ihr Team mit ChatGPT in der EU erstellt, künftig technisch erkennbar. Das betrifft Webseiten, Newsletter und Offerten. Sie müssen nichts einstellen. Es lohnt sich aber, im Betrieb kurz zu klären, welche Texte von KI stammen und wer sie prüft.
-Was vaiacon dazu bietet
-Wir zeigen Ihrem Team im Training oder Workshop (Halbtag), wie Sie KI-Texte sauber prüfen, überarbeiten und kennzeichnen. In der KI-Standortanalyse im Betrieb schauen wir, wo bei Ihnen KI-Texte entstehen und ob ein einfacher Umgang damit genügt. Bauen Sie Assistenten über die API, klären wir mit Ihnen, ob das Wasserzeichen sinnvoll ist.
-Zu KI-Kompetenz →
-Worauf Sie achten sollten
-Das Wasserzeichen ist ein schwaches Signal. Bei kurzen oder umgeschriebenen Texten wird es schlecht erkannt. Ein fehlendes Zeichen beweist keine menschliche Autorschaft. Prüfen Sie KI-Texte weiterhin selbst. Ob und wie die Regel für Ihren Betrieb gilt, hängt vom Einzelfall ab. Das ersetzt keine Rechtsauskunft.
-Quellen:
-AI Weekly: OpenAI to watermark ChatGPT, Codex text in EU under AI Act ↗
-AI Weekly: OpenAI to watermark EU ChatGPT text, opens API opt-in worldwide ↗
-Präzisiert am 07.10.2026.
-Von KI zusammengestellt. Fehler entdeckt? hallo@vaiacon.ch
+Was das für Ihr KMU heisst →
+Die letzten Wochen
+KW 41 · 5. – 11. Oktober 2026 3 Beiträge
+KW 40 · 28. September – 4. Oktober 2026 7 Beiträge
+Alle Wochen im Archiv · RSS-Feed abonnieren
+Wer hinter diesen News steht
+Verantwortlich: Philip Krieger (Mitgründer, Technik und Coaching) und André Ulrich (Mitgründer, Strategie und Marketing), vaiacon GmbH, Zürich.
+Die Beiträge stellt eine KI nach festen Regeln aus den verlinkten Quellen zusammen: nur erreichbare
+Quellen, keine Preise, keine Namen von Privatpersonen, jeder Beitrag mit der Frage, was er für ein
+Schweizer KMU heisst. Die Redaktion legt die Regeln fest, prüft Hinweise und korrigiert; Korrekturen
+sind im Beitrag als «Präzisiert am» markiert. Hinweise an hallo@vaiacon.ch .
 NÄCHSTER SCHRITT
 Was heisst das für Ihren Betrieb?
 Wir sortieren es mit Ihnen. In einem kurzen Gespräch klären wir, was von den Neuigkeiten bei Ihnen wirklich zählt und was Sie getrost ignorieren dürfen.
 Gespräch anfragen →
-Offerte zusammenstellen →
+Offerte erfassen →
 Alle Wochen im Archiv
 ·
 RSS-Feed abonnieren
@@ -699,7 +714,7 @@ Nein. Die Inhalte und die Umsetzung werden so erklärt, dass Unternehmer und Mit
 Wie beginnt eine Zusammenarbeit? +
 Am Anfang steht ein unverbindliches Gespräch am Telefon oder am Bildschirm. Oder Sie stellen sich im Offerten-Tool selbst eine Richtofferte zusammen. Danach klären wir, ob KI-Kompetenz, Sichtbarkeit, Automationen, Begleitung oder eine Kombination davon sinnvoll ist.
 Was kostet es, und wie komme ich zu einer Offerte? +
-Die Preise stehen offen auf den Seiten der drei Bereiche. Im Offerten-Tool kreuzen Sie an, was Sie interessiert, beschreiben Ihre Wünsche und erhalten die Offerte sofort auf dem Bildschirm und per Mail. Das ist unverbindlich und braucht rund zwei Minuten. Die Preise im Katalog gelten 30 Tage. Offerte zusammenstellen →
+Die Preise stehen offen auf den Seiten der drei Bereiche. Im Offerten-Tool kreuzen Sie an, was Sie interessiert, beschreiben Ihre Wünsche und erhalten die Offerte sofort auf dem Bildschirm und per Mail. Das ist unverbindlich und braucht rund zwei Minuten. Die Preise im Katalog gelten 30 Tage. Offerte erfassen →
 Sind die Preise inklusive Mehrwertsteuer? +
 Ja. Alle Preise sind in Schweizer Franken angegeben und enthalten die Mehrwertsteuer von 8,1 %.
 Was ist die KI-Standortbestimmung? +
@@ -773,7 +788,7 @@ Zur Begleitung →
 NÄCHSTER SCHRITT
 Ihre Frage steht nicht dabei?
 Schreiben Sie uns. Wir antworten selbst, nicht aus einem Chatfenster, sondern als die zwei Menschen, die hier arbeiten.
-Offerte zusammenstellen →
+Offerte erfassen →
 hallo@vaiacon.ch ↗
 
 ### Kontakt
@@ -784,7 +799,7 @@ Welche vaiacon-Lösung passt zu Ihrem Betrieb?
 Im unverbindlichen Erstgespräch klären wir, ob KI-Kompetenz, Sichtbarkeit, Automationen oder eine Kombination der richtige nächste Schritt ist. Eine halbe Stunde, kostenlos, ohne Verkaufsdruck. Lieber zuerst selbst prüfen? Dafür gibt es zwei kostenlose Analysen. Lieber gleich Zahlen sehen? Dann stellen Sie sich Ihre Offerte selbst zusammen.
 Zeit sparen: Erstanalyse →
 Gefunden werden: Check starten →
-Offerte zusammenstellen →
+Offerte erfassen →
 LIEBER ANGERUFEN WERDEN?
 Rückruf anfordern
 Name und Telefonnummer genügen. Sagen Sie uns, wann es Ihnen passt, und wir rufen Sie zurück.
@@ -814,7 +829,7 @@ Sie erhalten schriftlich, was wir empfehlen, mit Aufwand und Preis. Auch dann, w
 SCHREIBEN SIE UNS
 Ein paar Zeilen genügen.
 Sagen Sie uns kurz, worum es geht. Wir antworten selbst, in der Regel innert eines Arbeitstages.
-Lieber reden? Unsere Zürcher Nummer (044) folgt bald, bis dahin rufen wir Sie zurück → · Zahlen sehen? Offerte zusammenstellen →
+Lieber reden? Unsere Zürcher Nummer (044) folgt bald, bis dahin rufen wir Sie zurück → · Zahlen sehen? Offerte erfassen →
 Name *
 Firma
 E-Mail *
@@ -978,7 +993,7 @@ Muss die Anbieterin einen Termin absagen, wird ein Ersatztermin vereinbart. Weit
 6. Termine
 Termine gelten als Richtwerte, sofern nicht ausdrücklich verbindlich vereinbart. Keine Haftung für Verzögerungen durch Kunden oder Dritte.
 7. Einsatz künstlicher Intelligenz
-Die Anbieterin kann KI-Systeme einsetzen. KI-Ergebnisse beruhen auf Wahrscheinlichkeiten und können Fehler enthalten. Der Kunde prüft sämtliche Ergebnisse eigenständig. Eine Garantie für bestimmte Resultate besteht nicht.
+Die Anbieterin kann KI-Systeme einsetzen. KI-Ergebnisse beruhen auf Wahrscheinlichkeiten und können Fehler enthalten. Der Kunde prüft sämtliche Ergebnisse eigenständig. Eine Garantie für bestimmte Resultate besteht nicht, mit Ausnahme der Sichtbarkeits-Garantie nach Ziffer 11k.
 8. Datenschutz
 Bearbeitung personenbezogener Daten erfolgt nach geltendem Datenschutzrecht. Soweit erforderlich wird ein Auftragsbearbeitungsvertrag abgeschlossen. Es gilt zusätzlich die Datenschutzerklärung .
 9. Vertraulichkeit
@@ -1009,6 +1024,8 @@ Es gelten ausschliesslich die jeweiligen Lizenzbedingungen.
 Keine Haftung für Ausfälle oder Änderungen externer Cloud-, API-, Hosting- oder KI-Dienste.
 11j. Exportkontrolle und Compliance
 Der Kunde hält sämtliche gesetzlichen Vorgaben ein. Die Anbieterin darf Leistungen einstellen, sofern gesetzliche Gründe dies verlangen.
+11k. Sichtbarkeits-Garantie
+Sichert die Anbieterin im Sichtbarkeits-Bericht oder in der Offerte schriftlich einen Vaiacon-Sichtbarkeits-Score zu, gilt: Erreicht die Website des Kunden innert 30 Tagen nach Freigabe der vorgeschlagenen Änderungen nicht mindestens den zugesicherten Score, erstattet die Anbieterin das Honorar für die Umsetzung vollständig. Der Score wird mit der Prüfliste gemessen, die dem Bericht zugrunde liegt, und bezieht sich ausschliesslich auf Kriterien, die der Kunde selbst beeinflussen kann. Voraussetzung ist, dass der Kunde die Änderungen freigibt, den nötigen Zugang zur Website gewährt und während der Umsetzung keine gegenläufigen Änderungen vornimmt. Platzierungen in Suchmaschinen und Nennungen durch KI-Assistenten sind von der Garantie nicht erfasst (Ziffer 11).
 12. Haftung
 Die Anbieterin haftet für Schäden, die sie vorsätzlich oder grobfahrlässig verursacht. Für leichte Fahrlässigkeit ist die Haftung ausgeschlossen, soweit das Gesetz es zulässt.
 Wo sich die Haftung für leichte Fahrlässigkeit nicht ausschliessen lässt, ist sie auf den niedrigeren Betrag aus der Vergütung des betroffenen Auftrags oder CHF 100'000 begrenzt. Sie umfasst dann keine indirekten Schäden und Folgeschäden wie Datenverlust, Betriebsunterbrüche, entgangenen Gewinn, entgangene Einsparungen und Reputationsschäden.
@@ -1020,7 +1037,7 @@ Nur bei entsprechender Vereinbarung. Service Levels ergeben sich aus dem Vertrag
 15. Höhere Gewalt
 Keine Haftung bei höherer Gewalt.
 16. Änderungen der AGB
-Für bestehende Verträge gelten die bei Vertragsabschluss vereinbarten AGB, sofern nichts anderes vereinbart wird. Diese Fassung stammt vom 5. Oktober 2026.
+Für bestehende Verträge gelten die bei Vertragsabschluss vereinbarten AGB, sofern nichts anderes vereinbart wird. Diese Fassung stammt vom 7. Oktober 2026.
 17. Anwendbares Recht und Gerichtsstand
 Es gilt Schweizer Recht. Gerichtsstand ist der Sitz der Anbieterin. Zwingende gesetzliche Gerichtsstände bleiben vorbehalten.
 18. Versicherung

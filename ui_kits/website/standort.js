@@ -858,7 +858,7 @@
       d.warum_gespraech ? el('p', { text: d.warum_gespraech }) : null,
       el('div', { class: 'st-gespraech__knoepfe' }, [
         el('a', { class: 'sv-button sv-button--light', href: href('kontakt#formular'), text: 'Erstgespräch vereinbaren →' }),
-        el('a', { class: 'sv-button sv-button--glass', href: href('offerte'), text: 'Offerte zusammenstellen →' })
+        el('a', { class: 'sv-button sv-button--glass', href: href('offerte'), text: 'Offerte erfassen →' })
       ])
     ]));
 
