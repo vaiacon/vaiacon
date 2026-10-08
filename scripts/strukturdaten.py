@@ -180,7 +180,7 @@ ANGEBOTE = {
         "visibility", "sichtbarkeit"),
     "learning.html": angebot(
         "KI-Kompetenz", "KI-Schulung und Weiterbildung",
-        "Trainings, Workshops, Coaching für Führungskräfte, E-Learning, Lernvideos und tägliche Kleinst-Lerneinheiten, "
+        "Trainings, Workshops, Coaching für Führungskräfte, E-Learning, Lernvideos und tägliche kleine Lerneinheiten, "
         "zugeschnitten auf Ihren Betrieb. Dazu eine kostenlose KI-Standortbestimmung für Führungskräfte. " + MWST_SATZ,
         "learning", "ki-kompetenz"),
     "bot.html": angebot(
@@ -313,7 +313,7 @@ kostenlose Check der eigenen Website. Rückruf innert eines Arbeitstages.
 
 - [KI-Kompetenz](https://vaiacon.ch/learning): Trainings und Workshops im
   Betrieb (Halbtag oder ganzer Tag, pro Gruppe), Coaching für Führungskräfte,
-  E-Learning nach Mass, Lernvideos, tägliche Kleinst-Lerneinheiten,
+  E-Learning nach Mass, Lernvideos, tägliche kleine Lerneinheiten,
   Change-Begleitung und Begleitung der Mitarbeitenden vor Ort. Dazu die
   kostenlose KI-Standortbestimmung für Führungskräfte (Selbsttest mit zwölf
   Fragen): https://vaiacon.ch/learning#standortbestimmung

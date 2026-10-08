@@ -59,7 +59,7 @@
     'kk-coaching-fuehrung': { name: 'Coaching für Führungskräfte', href: '#format-coaching' },
     'kk-elearning-lernminute': { name: 'E-Learning nach Mass', href: '#format-elearning' },
     'kk-lernvideo': { name: 'Lernvideo', href: '#format-video' },
-    'kk-mikro-lerneinheiten': { name: 'Kleinst-Lerneinheiten', href: '#format-mikro' },
+    'kk-mikro-lerneinheiten': { name: 'Kleine Lerneinheiten', href: '#format-mikro' },
     'kk-change-begleitung': { name: 'Change-Begleitung', href: '#format-change' },
     'kk-begleitung-vor-ort': { name: 'Begleitung vor Ort', href: '#format-vor-ort' }
   };
@@ -80,8 +80,8 @@
         ? 'Die Führung und, wo es passt, die Abteilungsleitungen beantworten zwölf kurze Fragen. So wird sichtbar, was in den Abteilungen schon trägt und wo sie auseinanderlaufen.'
         : s === 'kaum'
         ? 'Die Führung beantwortet zwölf kurze Fragen. Sie sehen, wo Ihr Betrieb steht, und wir sehen, wo ein Anfang am meisten bringt.'
-        : 'Die Führung beantwortet zwölf kurze Fragen. So wird sichtbar, was schon trägt und wo das Team auseinanderläuft.',
-      mess: { art: 'Nullmessung', text: 'Dazu zwei Minuten Umfrage im Team: Wer nutzt KI, wofür, wie sicher. Und eine Aufgabe, die oft vorkommt, mit der Zeit, die sie heute braucht.' },
+        : 'Beantworten Sie einige Fragen zur Standortbestimmung. So wird sichtbar, was schon trägt und wo Handlungsbedarf herrscht.',
+      mess: { art: 'Wo stehen wir?', text: 'Machen Sie eine Umfrage im Team: Wer nutzt KI, wofür, wie sicher. Und eine Aufgabe, die oft vorkommt, mit der Zeit, die sie heute braucht.' },
       formate: ['standort'], ids: []
     });
 
@@ -89,14 +89,14 @@
       L.push({
         bild: 'auftakt', rolle: 'Auftakt', titel: 'Auftakt mit der Geschäftsleitung',
         text: 'In zwei Stunden klären wir, was Sie erreichen wollen und welche Regeln im Betrieb gelten sollen. In einem kleinen Team genügt dafür ein Gespräch.',
-        mess: { art: 'Ziele festlegen', text: 'Zwei bis drei Ziele, die man zählen kann, zum Beispiel: ' + (s === 'kaum' ? 'drei von vier im Team nutzen KI jede Woche' : s === 'einzelne' ? 'alle arbeiten mit denselben geprüften Vorlagen' : 'Offerten in der halben Zeit') + '. Zu jedem Ziel: woran wir es messen und bis wann.' },
+        mess: { art: 'Ziele festlegen', text: 'Zwei bis drei Ziele, welche greifbar sind. Zum Beispiel: ' + (s === 'kaum' ? 'drei von vier im Team nutzen KI jede Woche' : s === 'einzelne' ? 'alle arbeiten mit denselben geprüften Vorlagen' : 'Offerten in der halben Zeit') + '. Zu jedem Ziel: woran wir es messen und bis wann wir es erreicht haben wollen.' },
         formate: ['kk-coaching-fuehrung'], ids: ['kk-coaching-fuehrung']
       });
     } else {
       L.push({
-        bild: 'auftakt', rolle: 'Auftakt', titel: 'Auftakt mit der Führung',
-        text: 'Die Leitung klärt Ziel, Rollen und Spielregeln, bevor das Team startet. Wir begleiten das Gespräch und sagen, was wir aus anderen Betrieben kennen.',
-        mess: { art: 'Ziele festlegen', text: 'Zwei bis drei Ziele, die man zählen kann, zum Beispiel: ' + (s === 'kaum' ? 'drei von vier im Team nutzen KI jede Woche' : s === 'einzelne' ? 'alle arbeiten mit denselben geprüften Vorlagen' : 'Offerten in der halben Zeit') + '. Zu jedem Ziel: woran wir es messen und bis wann.' },
+        bild: 'auftakt', rolle: 'Auftakt', titel: 'Gespräch mit der Teamleitung',
+        text: 'Die Teamleitung klärt Ziel, Rollen und Spielregeln, bevor das Team startet. Wir begleiten das Gespräch und bringen uns dort mit ein, wo unsere Erfahrung helfen kann.',
+        mess: { art: 'Ziele festlegen', text: 'Zwei bis drei Ziele, welche greifbar sind. Zum Beispiel: ' + (s === 'kaum' ? 'drei von vier im Team nutzen KI jede Woche' : s === 'einzelne' ? 'alle arbeiten mit denselben geprüften Vorlagen' : 'Offerten in der halben Zeit') + '. Zu jedem Ziel: woran wir es messen und bis wann wir es erreicht haben wollen.' },
         formate: ['kk-change-begleitung'], ids: ['kk-change-begleitung']
       });
     }
@@ -110,7 +110,7 @@
     } else if (s === 'einzelne') {
       L.push({
         bild: 'training', rolle: 'Training', titel: 'Training im Team' + (sehrgross ? ' (mehrere Gruppen)' : gross ? ' (zwei Gruppen)' : ''),
-        text: 'Ein halber Tag, in dem alle auf denselben Stand kommen. Was die Einzelnen schon gefunden haben, wird zum gemeinsamen Wissen.',
+        text: 'Ein halber Tag, in dem alle auf denselben Stand gebracht werden. Was Einzelne bereits gefunden haben, wird zum gemeinsamen Wissen.',
         formate: ['kk-training-halbtag'], ids: ['kk-training-halbtag']
       });
     } else {
@@ -124,13 +124,13 @@
     if (s !== 'kaum') {
       L.push({
         bild: 'video', rolle: 'Video', titel: 'Lernvideo aus Ihrem Alltag',
-        text: 'Was Ihre Vorreiter schon gut können, wird zu einem kurzen Video. Neue Mitarbeitende holen es später jederzeit ab.',
+        text: 'Was Ihre Mitarbeiter bereits beherrschen, wird zu einem kurzen Video. Neue Mitarbeiter können es später jederzeit abholen und aneignen.',
         formate: ['kk-lernvideo'], ids: ['kk-lernvideo']
       });
     }
 
     L.push({
-      bild: 'mikro', rolle: 'Täglich', titel: 'Tägliche Kleinst-Lerneinheiten',
+      bild: 'mikro', rolle: 'Täglich', titel: 'Tägliche kleine Lerneinheiten',
       text: 'Jeden Arbeitstag ' + z.taeglich + ': ein Tipp, eine Übung am eigenen Fall, eine Frage vom Roboter. Vier Wochen lang, direkt am Arbeitsplatz oder auf dem Smartphone.',
       mess: { art: 'Zwischenstand', text: 'Die Antworten auf die tägliche Frage zeigen laufend, was sitzt. Nach zwei Wochen sehen Sie, wo das Team steht, und wir stellen nach, wo es hakt.' },
       formate: ['kk-mikro-lerneinheiten'], ids: ['kk-mikro-lerneinheiten']
@@ -146,7 +146,7 @@
 
     L.push({
       bild: 'vorort', rolle: 'Vor Ort', titel: 'Begleitung am Arbeitsplatz',
-      text: (sehrgross ? 'Mindestens zwei Tage, ' : gross ? 'Zwei Tage, ' : 'Ein Tag, ') + 'an dem wir bei Ihnen sitzen. Wir helfen dort, wo es im Alltag hakt, und beantworten die Fragen, die im Training nicht aufkamen.',
+      text: (sehrgross ? 'Mindestens zwei Tage, an denen' : gross ? 'Zwei Tage, an denen' : 'Ein Tag, an dem') + ' wir Sie im Betrieb besuchen. Wir helfen dort, wo es im Alltag hakt, und beantworten die Fragen, die im Training nicht aufkamen.',
       formate: ['kk-begleitung-vor-ort'], ids: ['kk-begleitung-vor-ort']
     });
 
@@ -160,13 +160,13 @@
 
     L.push({
       bild: 'coaching', rolle: 'Coaching', titel: 'Coaching der Führungskräfte',
-      text: 'In Einzelgesprächen geht es um das, was Führung jetzt anders macht: Wer entscheidet was, wie sprechen Sie über KI im Team, wo setzen Sie Grenzen.',
+      text: 'In Einzelgesprächen geht es darum, was Führung jetzt anders macht: Wer entscheidet was, wie sprechen Sie über KI im Team, wo setzen Sie Grenzen.',
       formate: ['kk-coaching-fuehrung'], ids: ['kk-coaching-fuehrung']
     });
 
     L.push({
       bild: 'wirkung', rolle: 'Wirkung', titel: 'Wirkung messen, Ziele prüfen',
-      text: 'Dieselben Fragen wie am Anfang, an die Führung und ans Team, dazu dieselbe Aufgabe noch einmal mit der Uhr. Wir legen Vorher und Nachher nebeneinander.',
+      text: 'Dieselben Fragen wie zu Beginn. An die Führung und an das Team. Wir legen Vorher und Nachher nebeneinander.',
       mess: { art: 'Zielcheck', text: 'Jedes Ziel aus dem Auftakt bekommt ein Ergebnis: erreicht, teilweise oder offen. Was offen ist, wird zur nächsten Etappe.' },
       formate: ['standort'], ids: []
     });

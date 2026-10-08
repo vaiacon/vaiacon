@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 08.10.2026 · Eintrag 2e490c7 Add Vaia Offerten product page with support and usage policies
+> Stand: 08.10.2026 · Eintrag d7646f8 Startseite: Texte der Orientierung und der Schritte, Knopf «Offerte erfassen» auf allen Seiten
 
 ## Wie du antwortest
 
@@ -39,7 +39,7 @@ Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer. Die Preise sin
 - Coaching für Führungskräfte: CHF 210 pro Stunde
 - E-Learning nach Mass: CHF 380 pro Lernminute (Umfang und Gestaltung klären wir im Erstgespräch.)
 - Lernvideo: ab CHF 4'700 (Preis für ein Video von bis zu etwa drei Minuten.)
-- Tägliche Kleinst-Lerneinheiten: CHF 80 pro Person (Für ein Programm von vier Wochen. Die Inhalte werden auf Ihren Betrieb zugeschnitten.)
+- Tägliche kleine Lerneinheiten: CHF 80 pro Person (Für ein Programm von vier Wochen. Die Inhalte werden auf Ihren Betrieb zugeschnitten.)
 - Change-Begleitung: CHF 1'700 pro Tag
 - Begleitung der Mitarbeitenden vor Ort: CHF 1'300 pro Tag
 
@@ -164,7 +164,7 @@ HÄUFIGE FRAGEN
 Kurz beantwortet.
 Alle Fragen und Antworten →
 Was macht vaiacon? +
-vaiacon führt Schweizer KMU an KI heran, in drei Bereichen: KI-Kompetenz (Ihr Team lernt, KI sicher einzusetzen), Sichtbarkeit (Sie werden bei Google gefunden und von KI-Assistenten richtig genannt) und Automationen (wiederkehrende Büroarbeit läuft von selbst). Auf Wunsch begleiten wir das Ganze laufend. Unser Büro ist in Zürich, wir arbeiten für Betriebe in der ganzen Schweiz.
+vaiacon führt Schweizer KMU an KI heran, in drei Bereichen: KI-Kompetenz (Ihr Team lernt, KI sicher einzusetzen), Sichtbarkeit (Sie werden bei Google gefunden und von KI-Assistenten richtig genannt) und Automationen (wiederkehrende Büroarbeit läuft von selbst). Auf Wunsch begleiten wir das Ganze laufend. Unser Büro ist in Zürich, wir arbeiten für Betriebe in der gesamten Deutschschweiz.
 Für wen ist vaiacon gedacht? +
 Am meisten bewirken wir in Betrieben mit 5 bis 30 Mitarbeitenden und eigenem Büro, etwa im Handwerk, in Treuhandbüros, Praxen und Verwaltungen. Dort fällt genug Büroarbeit an, damit sich eine Automation oder eine Schulung rechnet.
 Wie beginnt eine Zusammenarbeit? +
@@ -211,21 +211,21 @@ Eine Lernreise, die zu Ihrem Betrieb passt. Ein Kurstag, nach dem alles beim Alt
 KI-Standort bestimmen →
 Offerte erfassen →
 Kurz gesagt
-Für wen
+Für wen ist es geeignet
 Betriebe, deren Team und Führungskräfte KI sicher und nützlich einsetzen sollen.
 Problem
 Ein einzelner Kurstag ändert wenig: Danach bleibt im Arbeitsalltag alles beim Alten.
 Was Sie bekommen
-Eine massgeschneiderte Lernreise aus Training, täglichen Kleinst-Lerneinheiten, Begleitung am Arbeitsplatz und Führungscoaching.
+Eine massgeschneiderte Lernreise aus Training, täglichen kleinen Lerneinheiten, Begleitung am Arbeitsplatz und Führungscoaching.
 Preisrahmen
 Training CHF 1'550 pro Halbtag oder CHF 2'450 pro Tag und Gruppe, inkl. MWST.
 Ablauf
 Kostenloses halbstündiges Erstgespräch, danach eine Lernreise über mehrere Wochen mit Stationen nach Ihrem Bedarf.
 Region
-Zürich, für die ganze Schweiz.
+Gesamte Deutschschweiz
 DIE LERNREISE
 Formate, die über Wochen ineinandergreifen.
-Jede Station baut auf der vorigen auf. Stellen Sie unten ein, wie Ihr Betrieb aussieht, und die Reise passt sich an.
+Jede Station baut auf der vorigen auf. Klicken Sie dort darauf, wo es mit Ihrem Betrieb übereinstimmt, und die Reise passt sich entsprechend an.
 Mitarbeitende
 bis 10
 11 bis 20
@@ -242,48 +242,48 @@ rund 1 Stunde
 1
 Woche 0 · Standort
 Standortbestimmung
-Die Führung beantwortet zwölf kurze Fragen. So wird sichtbar, was schon trägt und wo das Team auseinanderläuft.
-Messpunkt · Nullmessung
-Dazu zwei Minuten Umfrage im Team: Wer nutzt KI, wofür, wie sicher. Und eine Aufgabe, die oft vorkommt, mit der Zeit, die sie heute braucht.
+Beantworten Sie einige Fragen zur Standortbestimmung. So wird sichtbar, was schon trägt und wo Handlungsbedarf herrscht.
+Messpunkt · Wo stehen wir?
+Machen Sie eine Umfrage im Team: Wer nutzt KI, wofür, wie sicher. Und eine Aufgabe, die oft vorkommt, mit der Zeit, die sie heute braucht.
 Standortbestimmung
 2
 Woche 1 · Auftakt
-Auftakt mit der Führung
-Die Leitung klärt Ziel, Rollen und Spielregeln, bevor das Team startet. Wir begleiten das Gespräch und sagen, was wir aus anderen Betrieben kennen.
+Gespräch mit der Teamleitung
+Die Teamleitung klärt Ziel, Rollen und Spielregeln, bevor das Team startet. Wir begleiten das Gespräch und bringen uns dort mit ein, wo unsere Erfahrung helfen kann.
 Messpunkt · Ziele festlegen
-Zwei bis drei Ziele, die man zählen kann, zum Beispiel: alle arbeiten mit denselben geprüften Vorlagen. Zu jedem Ziel: woran wir es messen und bis wann.
+Zwei bis drei Ziele, welche greifbar sind. Zum Beispiel: alle arbeiten mit denselben geprüften Vorlagen. Zu jedem Ziel: woran wir es messen und bis wann wir es erreicht haben wollen.
 Change-Begleitung
 3
 Woche 2 · Training
 Training im Team
-Ein halber Tag, in dem alle auf denselben Stand kommen. Was die Einzelnen schon gefunden haben, wird zum gemeinsamen Wissen.
+Ein halber Tag, in dem alle auf denselben Stand gebracht werden. Was Einzelne bereits gefunden haben, wird zum gemeinsamen Wissen.
 Training, Halbtag
 4
 Woche 3 · Video
 Lernvideo aus Ihrem Alltag
-Was Ihre Vorreiter schon gut können, wird zu einem kurzen Video. Neue Mitarbeitende holen es später jederzeit ab.
+Was Ihre Mitarbeiter bereits beherrschen, wird zu einem kurzen Video. Neue Mitarbeiter können es später jederzeit abholen und aneignen.
 Lernvideo
 5
 Woche 5 · Täglich
-Tägliche Kleinst-Lerneinheiten
+Tägliche kleine Lerneinheiten
 Jeden Arbeitstag zehn Minuten: ein Tipp, eine Übung am eigenen Fall, eine Frage vom Roboter. Vier Wochen lang, direkt am Arbeitsplatz oder auf dem Smartphone.
 Messpunkt · Zwischenstand
 Die Antworten auf die tägliche Frage zeigen laufend, was sitzt. Nach zwei Wochen sehen Sie, wo das Team steht, und wir stellen nach, wo es hakt.
-Kleinst-Lerneinheiten
+Kleine Lerneinheiten
 6
 Woche 6 · Vor Ort
 Begleitung am Arbeitsplatz
-Ein Tag, an dem wir bei Ihnen sitzen. Wir helfen dort, wo es im Alltag hakt, und beantworten die Fragen, die im Training nicht aufkamen.
+Ein Tag, an dem wir Sie im Betrieb besuchen. Wir helfen dort, wo es im Alltag hakt, und beantworten die Fragen, die im Training nicht aufkamen.
 Begleitung vor Ort
 7
 Woche 7 · Coaching
 Coaching der Führungskräfte
-In Einzelgesprächen geht es um das, was Führung jetzt anders macht: Wer entscheidet was, wie sprechen Sie über KI im Team, wo setzen Sie Grenzen.
+In Einzelgesprächen geht es darum, was Führung jetzt anders macht: Wer entscheidet was, wie sprechen Sie über KI im Team, wo setzen Sie Grenzen.
 Coaching für Führungskräfte
 8
 ab Woche 8 · Wirkung
 Wirkung messen, Ziele prüfen
-Dieselben Fragen wie am Anfang, an die Führung und ans Team, dazu dieselbe Aufgabe noch einmal mit der Uhr. Wir legen Vorher und Nachher nebeneinander.
+Dieselben Fragen wie zu Beginn. An die Führung und an das Team. Wir legen Vorher und Nachher nebeneinander.
 Messpunkt · Zielcheck
 Jedes Ziel aus dem Auftakt bekommt ein Ergebnis: erreicht, teilweise oder offen. Was offen ist, wird zur nächsten Etappe.
 Standortbestimmung
@@ -342,7 +342,7 @@ Change Management
 Was es ist. Wir begleiten Leitung und Team durch die Veränderung: Kommunikation, Rollen, Widerstände, Tempo.
 Wann es passt. Wenn KI nicht nur ein Werkzeug ist, sondern verändert, wie bei Ihnen gearbeitet wird.
 CHF 1'700 pro Tag
-Tägliche Kleinst-Lerneinheiten
+Tägliche kleine Lerneinheiten
 Was es ist. Jeden Arbeitstag ein paar Minuten Lernstoff zu Ihren Themen, aufs Smartphone oder an den Arbeitsplatz.
 Wann es passt. Wenn Gelerntes im Alltag haften bleiben soll, statt nach dem Kurstag zu verpuffen.
 CHF 80 pro Person Für ein Programm von vier Wochen.
@@ -374,7 +374,7 @@ Start
 Ein Kurstag, danach nichts
 Kleine Einheiten, jeden Tag
 Die Skizze zeigt ein Prinzip, keine gemessenen Werte. Dass der Abstand zwischen Lerneinheiten beeinflusst, wie lange etwas haften bleibt, ist gut untersucht, etwa in einer Auswertung von 317 Experimenten ( Cepeda et al., 2006, Psychological Bulletin ; dort ging es um Gedächtnisaufgaben, nicht um Betriebsschulungen). Wie stark es bei Ihnen wirkt, wissen wir erst, wenn wir es gemeinsam messen.
-Kleinst-Lerneinheiten anfragen →
+Kleine Lerneinheiten anfragen →
 Standortbestimmung
 Wo steht Ihr Betrieb mit KI?
 Zwölf kurze Fragen, ein ehrliches Ergebnis und eine persönliche Einschätzung, was sich als Nächstes lohnt.
@@ -416,7 +416,7 @@ Google-Check und KI-Sichtbarkeits-Check je CHF 1'300, laufende Betreuung ab CHF 
 Ablauf
 Wir verstehen Ihr Angebot, prüfen Ihre Sichtbarkeit, setzen Prioritäten und verbessern Seiten und Inhalte.
 Region
-Zürich, für die ganze Schweiz.
+Gesamte Deutschschweiz
 KOSTENLOSER CHECK
 Wie sichtbar ist Ihre Website heute?
 Domain eingeben: Wir prüfen, ob Google Ihr Angebot versteht und ob KI-Systeme Sie als Quelle erkennen würden, mit konkreten Hebeln statt blossen Kennzahlen.
@@ -525,7 +525,7 @@ Fixpreis nach der Erstanalyse, ab CHF 1'300 pro Ablauf, inkl. MWST.
 Ablauf
 Fünf Schritte vom Gespräch bis zur Kontrolle: Empfehlung, Priorisierung, Planung, Umsetzung, Kontrolle.
 Region
-Zürich, für die ganze Schweiz.
+Gesamte Deutschschweiz
 WAS SICH LOHNT
 Nicht alles gehört automatisiert.
 Es lohnt sich bei Arbeiten, die sich ständig wiederholen und heute noch von Hand gemacht werden.
@@ -704,7 +704,7 @@ Alles an einem Ort.
 Die Fragen von allen Seiten, nach Bereich geordnet. Auf den Seiten selbst stehen sie weiterhin dort, wo sie hingehören. Hier finden Sie sie beisammen.
 Allgemein
 Was macht vaiacon? +
-vaiacon führt Schweizer KMU an KI heran, in drei Bereichen: KI-Kompetenz (Ihr Team lernt, KI sicher einzusetzen), Sichtbarkeit (Sie werden bei Google gefunden und von KI-Assistenten richtig genannt) und Automationen (wiederkehrende Büroarbeit läuft von selbst). Auf Wunsch begleiten wir das Ganze laufend. Unser Büro ist in Zürich, wir arbeiten für Betriebe in der ganzen Schweiz.
+vaiacon führt Schweizer KMU an KI heran, in drei Bereichen: KI-Kompetenz (Ihr Team lernt, KI sicher einzusetzen), Sichtbarkeit (Sie werden bei Google gefunden und von KI-Assistenten richtig genannt) und Automationen (wiederkehrende Büroarbeit läuft von selbst). Auf Wunsch begleiten wir das Ganze laufend. Unser Büro ist in Zürich, wir arbeiten für Betriebe in der gesamten Deutschschweiz.
 Für wen ist vaiacon gedacht? +
 Am meisten bewirken wir in Betrieben mit 5 bis 30 Mitarbeitenden und eigenem Büro, etwa im Handwerk, in Treuhandbüros, Praxen und Verwaltungen. Dort fällt genug Büroarbeit an, damit sich eine Automation oder eine Schulung rechnet.
 Ist vaiacon eine klassische KI-Agentur? +
@@ -727,7 +727,7 @@ KI-Kompetenz
 Was bietet KI-Kompetenz? +
 Trainings, Workshops und Coachings bei Ihnen im Betrieb, dazu E-Learning, Lernvideos und kurze tägliche Lerneinheiten: Ihr Team lernt, KI sicher und nützlich einzusetzen, zugeschnitten auf Ihre Abläufe. Zu KI-Kompetenz →
 Welche Lernformate gibt es, und was kosten sie? +
-Training oder Workshop im Betrieb: CHF 1'550 pro Halbtag oder CHF 2'450 pro Tag , je pro Gruppe und nicht pro Person. Coaching für Führungskräfte: CHF 210 pro Stunde . E-Learning nach Mass: CHF 380 pro Lernminute (Abrechnung je fertiger Lernminute). Lernvideo: ab CHF 4'700 für ein Video von bis zu etwa drei Minuten. Tägliche Kleinst-Lerneinheiten: CHF 80 pro Person für ein Programm von vier Wochen. Change-Begleitung: CHF 1'700 pro Tag . Begleitung der Mitarbeitenden vor Ort: CHF 1'300 pro Tag . Ihre Auswahl stellen Sie im Offerten-Tool zusammen.
+Training oder Workshop im Betrieb: CHF 1'550 pro Halbtag oder CHF 2'450 pro Tag , je pro Gruppe und nicht pro Person. Coaching für Führungskräfte: CHF 210 pro Stunde . E-Learning nach Mass: CHF 380 pro Lernminute (Abrechnung je fertiger Lernminute). Lernvideo: ab CHF 4'700 für ein Video von bis zu etwa drei Minuten. Tägliche kleine Lerneinheiten: CHF 80 pro Person für ein Programm von vier Wochen. Change-Begleitung: CHF 1'700 pro Tag . Begleitung der Mitarbeitenden vor Ort: CHF 1'300 pro Tag . Ihre Auswahl stellen Sie im Offerten-Tool zusammen.
 Braucht mein Team Vorkenntnisse? +
 Nein. Wir setzen bei null an: ein Computer, die eigenen Unterlagen, etwas Neugier. Alles andere erklären wir unterwegs, ohne Fachchinesisch.
 Wie lange dauert eine Schulung? +
@@ -735,7 +735,7 @@ Ein Training oder Workshop dauert einen halben oder einen ganzen Tag, ein Coachi
 Können wir zuerst unverbindlich reinschauen? +
 Ja. Im kostenlosen Erstgespräch (eine halbe Stunde, unverbindlich) klären wir, wer lernen soll und was heute am meisten Zeit kostet. Danach entscheiden Sie, ob und in welcher Form sich eine Schulung lohnt. Erstgespräch vereinbaren →
 Und wenn es nach der Schulung wieder einschläft? +
-Dagegen helfen tägliche Kleinst-Lerneinheiten und die Begleitung der Mitarbeitenden vor Ort. Wer darüber hinaus Unterstützung will, findet sie bei der Begleitung .
+Dagegen helfen tägliche kleine Lerneinheiten und die Begleitung der Mitarbeitenden vor Ort. Wer darüber hinaus Unterstützung will, findet sie bei der Begleitung .
 Zu KI-Kompetenz →
 Automationen
 Was sind Automationen? +
