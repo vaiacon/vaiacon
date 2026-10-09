@@ -1,5 +1,5 @@
 {
-  "stand": "2026-10-05",
+  "stand": "2026-10-09",
   "waehrung": "CHF",
   "mwst_inklusive": true,
   "mwst_satz": 8.1,
@@ -14,8 +14,8 @@
       "positionen": [
         {
           "id": "kk-training-halbtag",
-          "titel": "Training oder Workshop, Halbtag",
-          "beschreibung": "Ihr Team übt KI an Ihren eigenen Aufgaben. Bei Ihnen im Betrieb, auf Ihre Abläufe zugeschnitten.",
+          "titel": "Training oder Workshop im Betrieb, Halbtag",
+          "beschreibung": "Ihr Team übt KI an Ihren eigenen Aufgaben. Thema nach Wahl: KI im Büro, Sichtbarkeit, Texte und Offerten.",
           "einheit": "pro Halbtag",
           "preis": 1550,
           "ab": false,
@@ -23,11 +23,11 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 30,
-          "hinweis": "Pro Gruppe, nicht pro Person."
+          "hinweis": "Pro Gruppe bis 15 Personen, Vorbereitung und Unterlagen inklusive. Grössere Teams in zwei Gruppen."
         },
         {
           "id": "kk-training-tag",
-          "titel": "Training oder Workshop, ganzer Tag",
+          "titel": "Training oder Workshop im Betrieb, ganzer Tag",
           "beschreibung": "Ein ganzer Tag für Ihr Team: Grundlagen, Übungen an Ihren Fällen und konkrete nächste Schritte.",
           "einheit": "pro Tag",
           "preis": 2450,
@@ -36,7 +36,7 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 30,
-          "hinweis": "Pro Gruppe, nicht pro Person."
+          "hinweis": "Pro Gruppe bis 15 Personen, Vorbereitung und Unterlagen inklusive."
         },
         {
           "id": "kk-coaching-fuehrung",
@@ -49,25 +49,25 @@
           "menge_waehlbar": true,
           "menge_standard": 6,
           "menge_max": 40,
-          "hinweis": ""
+          "hinweis": "Sechs Stunden als Paket: CHF 1'190."
         },
         {
           "id": "kk-elearning-lernminute",
-          "titel": "E-Learning nach Mass",
-          "beschreibung": "Ein Online-Kurs mit Ihren Inhalten, Ihren Beispielen und Ihrem Auftritt. Abgerechnet wird je fertiger Lernminute.",
+          "titel": "Online-Kurs nach Mass",
+          "beschreibung": "Ein Kurs mit Ihren Inhalten, Ihren Beispielen, Quiz und Ihrem Auftritt. Ihr Team lernt, wann es passt.",
           "einheit": "pro Lernminute",
-          "preis": 380,
+          "preis": 290,
           "ab": false,
           "art": "einmalig",
           "menge_waehlbar": true,
-          "menge_standard": 20,
+          "menge_standard": 10,
           "menge_max": 120,
-          "hinweis": "Umfang und Gestaltung klären wir im Erstgespräch."
+          "hinweis": "Eine Lernminute ist eine Minute fertiger Kurs. Zehn Lernminuten: CHF 2'900."
         },
         {
           "id": "kk-lernvideo",
           "titel": "Lernvideo",
-          "beschreibung": "Ein kurzes Video, das einen Ablauf oder ein Thema aus Ihrem Betrieb erklärt. Ihr Team kann es jederzeit abrufen.",
+          "beschreibung": "Ein kurzes Video, gefilmt oder animiert, mit Sprecherstimme, das einen Ablauf aus Ihrem Betrieb erklärt.",
           "einheit": "pauschal",
           "preis": 4700,
           "ab": true,
@@ -75,20 +75,33 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 10,
-          "hinweis": "Preis für ein Video von bis zu etwa drei Minuten."
+          "hinweis": "Bis etwa drei Minuten. Jedes weitere Video ab CHF 3'500."
+        },
+        {
+          "id": "kk-mikro-einrichtung",
+          "titel": "Tägliche kleine Lerneinheiten: Zuschnitt",
+          "beschreibung": "Wir bauen das Vier-Wochen-Programm auf Ihre Themen und Ihren Betrieb.",
+          "einheit": "pauschal",
+          "preis": 900,
+          "ab": false,
+          "art": "einmalig",
+          "menge_waehlbar": false,
+          "menge_standard": 1,
+          "menge_max": 1,
+          "hinweis": "Einmalig je Programm."
         },
         {
           "id": "kk-mikro-lerneinheiten",
-          "titel": "Tägliche kleine Lerneinheiten",
-          "beschreibung": "Jeden Arbeitstag ein paar Minuten Lernstoff zu Ihren Themen, direkt aufs Smartphone oder an den Arbeitsplatz.",
+          "titel": "Tägliche kleine Lerneinheiten: Teilnahme",
+          "beschreibung": "Jeden Arbeitstag ein paar Minuten Lernstoff, direkt aufs Smartphone oder an den Arbeitsplatz.",
           "einheit": "pro Person",
-          "preis": 80,
+          "preis": 60,
           "ab": false,
           "art": "einmalig",
           "menge_waehlbar": true,
           "menge_standard": 10,
           "menge_max": 250,
-          "hinweis": "Für ein Programm von vier Wochen. Die Inhalte werden auf Ihren Betrieb zugeschnitten."
+          "hinweis": "Für vier Wochen, ab zehn Personen."
         },
         {
           "id": "kk-change-begleitung",
@@ -101,20 +114,33 @@
           "menge_waehlbar": true,
           "menge_standard": 2,
           "menge_max": 20,
-          "hinweis": ""
+          "hinweis": "Inklusive Vorbereitung und Nachbereitung."
         },
         {
-          "id": "kk-begleitung-vor-ort",
-          "titel": "Begleitung der Mitarbeitenden vor Ort",
-          "beschreibung": "Wir sind bei Ihnen im Betrieb und helfen Ihren Leuten direkt am Arbeitsplatz, KI im Alltag einzusetzen.",
-          "einheit": "pro Tag",
-          "preis": 1300,
+          "id": "kk-begleitung-vor-ort-halbtag",
+          "titel": "Begleitung am Arbeitsplatz, Halbtag",
+          "beschreibung": "Wir sind bei Ihnen im Betrieb und helfen Ihren Leuten direkt an ihren Aufgaben.",
+          "einheit": "pro Halbtag",
+          "preis": 700,
           "ab": false,
           "art": "einmalig",
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 20,
-          "hinweis": ""
+          "hinweis": "Ohne Vorbereitung: wir sind da und helfen."
+        },
+        {
+          "id": "kk-begleitung-vor-ort",
+          "titel": "Begleitung am Arbeitsplatz, ganzer Tag",
+          "beschreibung": "Wir sind bei Ihnen im Betrieb und helfen Ihren Leuten direkt an ihren Aufgaben.",
+          "einheit": "pro Tag",
+          "preis": 1250,
+          "ab": false,
+          "art": "einmalig",
+          "menge_waehlbar": true,
+          "menge_standard": 1,
+          "menge_max": 20,
+          "hinweis": "Ohne Vorbereitung: wir sind da und helfen."
         }
       ]
     },
@@ -129,13 +155,13 @@
           "titel": "Google-Check (SEO-Audit)",
           "beschreibung": "Wir prüfen Ihre Website auf das, was bei Google zählt, und geben Ihnen eine klare Liste der wichtigsten Verbesserungen.",
           "einheit": "pauschal",
-          "preis": 1300,
+          "preis": 990,
           "ab": false,
           "art": "einmalig",
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": ""
+          "hinweis": "Der Einstieg."
         },
         {
           "id": "si-geo-check",
@@ -148,14 +174,27 @@
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": ""
+          "hinweis": "Die nächste Stufe."
+        },
+        {
+          "id": "si-check-beides",
+          "titel": "Google-Check und KI-Check zusammen",
+          "beschreibung": "Beide Prüfungen in einem Bericht, mit einer Liste, was zuerst dran ist.",
+          "einheit": "pauschal",
+          "preis": 1990,
+          "ab": false,
+          "art": "einmalig",
+          "menge_waehlbar": false,
+          "menge_standard": 1,
+          "menge_max": 1,
+          "hinweis": "Statt CHF 2'290 einzeln."
         },
         {
           "id": "si-inhalt-optimierung",
           "titel": "Seite überarbeiten",
-          "beschreibung": "Wir überarbeiten eine Seite Ihrer Website so, dass Kundschaft und Suchmaschinen sie besser verstehen.",
+          "beschreibung": "Wir überarbeiten eine Seite Ihrer Website so, dass Kundschaft, Google und KI-Assistenten sie verstehen.",
           "einheit": "pauschal",
-          "preis": 310,
+          "preis": 280,
           "ab": false,
           "art": "einmalig",
           "menge_waehlbar": true,
@@ -164,22 +203,9 @@
           "hinweis": "Preis je Seite."
         },
         {
-          "id": "si-seo-workshop",
-          "titel": "SEO-Workshop für Ihr Team",
-          "beschreibung": "Ihre Mitarbeitenden lernen, wie sie Texte und Seiten schreiben, die gefunden werden.",
-          "einheit": "pauschal",
-          "preis": 810,
-          "ab": false,
-          "art": "einmalig",
-          "menge_waehlbar": true,
-          "menge_standard": 1,
-          "menge_max": 5,
-          "hinweis": ""
-        },
-        {
           "id": "si-betreuung-lokal",
           "titel": "Laufende Betreuung: lokal gefunden werden",
-          "beschreibung": "Wir pflegen Ihren Karteneintrag und Ihre Bewertungen und passen Ihre Seite laufend an. Jeden Monat gibt es einen kurzen Bericht.",
+          "beschreibung": "Wir pflegen Ihren Karteneintrag und Ihre Bewertungen und passen Ihre Seite laufend an. Jeden Monat ein kurzer Bericht.",
           "einheit": "pro Monat",
           "preis": 400,
           "ab": false,
@@ -187,25 +213,25 @@
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": "Den ersten Platz kann niemand versprechen."
+          "hinweis": "Kündbar auf Ende Folgemonat. Den ersten Platz kann niemand versprechen."
         },
         {
           "id": "si-betreuung-seo",
           "titel": "Laufende Betreuung: Google-Sichtbarkeit",
-          "beschreibung": "Wir verbessern Ihre Seiten Monat für Monat, schreiben und überarbeiten Inhalte und berichten, was sich getan hat.",
+          "beschreibung": "Alles aus «lokal gefunden werden», dazu jeden Monat zwei Seiten neu oder überarbeitet und ein Bericht, was sich getan hat.",
           "einheit": "pro Monat",
-          "preis": 1300,
+          "preis": 950,
           "ab": false,
           "art": "monatlich",
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": "Den ersten Platz kann niemand versprechen."
+          "hinweis": "Kündbar auf Ende Folgemonat. Enthält die lokale Betreuung."
         },
         {
           "id": "si-betreuung-geo",
-          "titel": "Laufende Betreuung: KI-Sichtbarkeit",
-          "beschreibung": "Wir prüfen regelmässig, wie KI-Assistenten Ihre Firma nennen, und verbessern Inhalte und Angaben, damit es stimmt.",
+          "titel": "Laufende Betreuung: Google und KI",
+          "beschreibung": "Alles aus der Google-Betreuung, dazu prüfen wir jeden Monat, wie KI-Assistenten Ihre Firma nennen, und bessern nach.",
           "einheit": "pro Monat",
           "preis": 1300,
           "ab": false,
@@ -213,7 +239,7 @@
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": "Den ersten Platz kann niemand versprechen."
+          "hinweis": "Kündbar auf Ende Folgemonat. Enthält Google und lokal."
         }
       ]
     },
@@ -226,7 +252,7 @@
         {
           "id": "au-ablauf-klein",
           "titel": "Kleinen Ablauf automatisieren",
-          "beschreibung": "Ein einfacher, wiederkehrender Ablauf, zum Beispiel Anfragen sortieren oder Bestätigungen verschicken.",
+          "beschreibung": "Ein einfacher, wiederkehrender Ablauf in einem Programm, zum Beispiel Anfragen sortieren oder Bestätigungen verschicken.",
           "einheit": "pro Ablauf",
           "preis": 1300,
           "ab": true,
@@ -234,7 +260,7 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 10,
-          "hinweis": "Fixpreis nach der Erstanalyse."
+          "hinweis": "Fixpreis nach der Erstanalyse. Ohne Anbindung an weitere Programme."
         },
         {
           "id": "au-belege-offerten",
@@ -247,12 +273,12 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 5,
-          "hinweis": "Fixpreis nach der Erstanalyse."
+          "hinweis": "Fixpreis nach der Erstanalyse. Anbindung an Ihr Buchhaltungs- oder Offertenprogramm inklusive."
         },
         {
           "id": "au-ablauf-gross",
           "titel": "Grosser Ablauf über mehrere Systeme",
-          "beschreibung": "Ein Ablauf, der mehrere Programme und mehrere Schritte verbindet, zum Beispiel von der Anfrage bis zur Rechnung.",
+          "beschreibung": "Ein Ablauf, der mehrere Programme und Schritte verbindet, zum Beispiel von der Anfrage bis zur Rechnung.",
           "einheit": "pro Ablauf",
           "preis": 6800,
           "ab": true,
@@ -260,7 +286,7 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 5,
-          "hinweis": "Fixpreis nach der Erstanalyse."
+          "hinweis": "Fixpreis nach der Erstanalyse. Anbindung an bis zu drei Programme inklusive."
         },
         {
           "id": "au-chatbot",
@@ -273,32 +299,32 @@
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": "Der laufende Betrieb läuft über die Betreuung."
+          "hinweis": "Betrieb: CHF 130 im Monat (Begleitung)."
         },
         {
           "id": "au-telefonassistent",
           "titel": "Telefonassistent",
           "beschreibung": "Ein KI-Assistent nimmt Anrufe entgegen, beantwortet Standardfragen und trägt Termine in Ihren Kalender ein.",
           "einheit": "pauschal",
-          "preis": 2450,
+          "preis": 2900,
           "ab": true,
           "art": "einmalig",
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": "Der laufende Betrieb läuft über die Betreuung."
+          "hinweis": "Mit eigener Nummer und Kalenderanbindung. Betrieb: CHF 190 im Monat (Begleitung)."
         },
         {
           "id": "au-integration",
-          "titel": "Anbindung an Ihre Software",
-          "beschreibung": "Wir verbinden eine Automation mit Ihrer Branchensoftware, Ihrem Kundenverzeichnis oder Microsoft 365.",
-          "einheit": "pauschal",
-          "preis": 4250,
+          "titel": "Zusätzliche Anbindung",
+          "beschreibung": "Wir verbinden eine bestehende Automation mit einem weiteren Programm: Branchensoftware, Kundenverzeichnis oder Microsoft 365.",
+          "einheit": "pro Programm",
+          "preis": 1900,
           "ab": true,
           "art": "einmalig",
-          "menge_waehlbar": false,
+          "menge_waehlbar": true,
           "menge_standard": 1,
-          "menge_max": 1,
+          "menge_max": 5,
           "hinweis": "Je nach Programm und Umfang."
         }
       ]
@@ -311,47 +337,73 @@
       "positionen": [
         {
           "id": "be-betreuung-klein",
-          "titel": "Betreuung: eine Automation oder ein Assistent",
+          "titel": "Betreuung: eine Automation oder ein Chatbot",
           "beschreibung": "Wir halten eine Automation oder einen Assistenten am Laufen: Überwachung, Updates, Support bei Fragen.",
           "einheit": "pro Monat",
           "preis": 130,
-          "ab": true,
+          "ab": false,
           "art": "monatlich",
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": "Monatlich kündbar."
+          "hinweis": "Kündbar auf Ende Folgemonat."
+        },
+        {
+          "id": "be-betreuung-telefon",
+          "titel": "Betreuung: Telefonassistent",
+          "beschreibung": "Überwachung, Updates und Support, dazu die Telefonnummer und 200 Gesprächsminuten im Monat.",
+          "einheit": "pro Monat",
+          "preis": 190,
+          "ab": false,
+          "art": "monatlich",
+          "menge_waehlbar": false,
+          "menge_standard": 1,
+          "menge_max": 1,
+          "hinweis": "Kündbar auf Ende Folgemonat. Weitere Minuten CHF 0.40 je Minute."
         },
         {
           "id": "be-betreuung-mittel",
           "titel": "Betreuung: mehrere Abläufe",
-          "beschreibung": "Wir betreuen mehrere Automationen oder Assistenten und erledigen kleine Anpassungen gleich mit.",
+          "beschreibung": "Wir betreuen bis zu fünf Automationen oder Assistenten und erledigen kleine Anpassungen gleich mit.",
           "einheit": "pro Monat",
           "preis": 290,
-          "ab": true,
+          "ab": false,
           "art": "monatlich",
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": "Monatlich kündbar."
+          "hinweis": "Kündbar auf Ende Folgemonat. Eine Stunde Anpassung im Monat inklusive."
         },
         {
-          "id": "be-retainer",
-          "titel": "Laufende Begleitung mit festem Zeitbudget",
-          "beschreibung": "Jeden Monat feste Zeit für Ihre Fragen, Ihr Team und neue Ideen rund um KI.",
+          "id": "be-zeitbudget-4",
+          "titel": "Laufende Begleitung, 4 Stunden im Monat",
+          "beschreibung": "Feste Zeit für Ihre Fragen, Ihr Team und neue Ideen rund um KI.",
           "einheit": "pro Monat",
-          "preis": 1300,
-          "ab": true,
+          "preis": 650,
+          "ab": false,
           "art": "monatlich",
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": "Umfang nach Erstgespräch. Monatlich kündbar."
+          "hinweis": "Kündbar auf Ende Folgemonat. Statt CHF 680 nach Aufwand."
+        },
+        {
+          "id": "be-zeitbudget-8",
+          "titel": "Laufende Begleitung, 8 Stunden im Monat",
+          "beschreibung": "Feste Zeit für Ihre Fragen, Ihr Team und neue Ideen rund um KI.",
+          "einheit": "pro Monat",
+          "preis": 1250,
+          "ab": false,
+          "art": "monatlich",
+          "menge_waehlbar": false,
+          "menge_standard": 1,
+          "menge_max": 1,
+          "hinweis": "Kündbar auf Ende Folgemonat. Statt CHF 1'360 nach Aufwand."
         },
         {
           "id": "be-standortbestimmung",
           "titel": "KI-Standortanalyse im Betrieb",
-          "beschreibung": "Wir schauen uns Ihren Betrieb an und legen Ihnen einen Bericht mit den besten nächsten Schritten vor.",
+          "beschreibung": "Ein halber Tag bei Ihnen, danach ein Bericht mit den besten nächsten Schritten und eine Besprechung.",
           "einheit": "pauschal",
           "preis": 2150,
           "ab": false,
@@ -359,7 +411,7 @@
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": ""
+          "hinweis": "Bei einem Folgeauftrag über CHF 5'000 wird der Betrag ganz angerechnet."
         },
         {
           "id": "be-beratung-stunde",
@@ -379,7 +431,7 @@
           "titel": "Anpassungen und Erweiterungen",
           "beschreibung": "Änderungen an bestehenden Automationen, Seiten oder Assistenten, die über die Betreuung hinausgehen.",
           "einheit": "pro Stunde",
-          "preis": 120,
+          "preis": 150,
           "ab": false,
           "art": "einmalig",
           "menge_waehlbar": true,
