@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag eebc64e Matrix und Beispiele: einfache Sprache, drei Sprossen Einfach/Verbunden/Ganzer Ablauf, Nutzenzeile für die Chefin
+> Stand: 09.10.2026 · Eintrag d6be0e4 Offerte: Knopf «Richtpreis anfordern» wieder sichtbar
 
 ## Wie du antwortest
 
@@ -583,9 +583,9 @@ Postfach mit KI
 ab CHF 5'200
 Kundendossier
 ab CHF 6'800
-Grosser Ablauf
+Ganzer Bereich
 Katalog
-Zelle antippen: Sie sehen, was passiert, was es bringt und was es im ersten Jahr kostet.
+Antippen: Sie sehen, was passiert, was es bringt und was es im ersten Jahr kostet.
 Einfach · Tage
 Kleiner Ablauf
 Eine feste Regel: Kommt ein Beleg per Mail, legen wir ihn von selbst richtig ab.

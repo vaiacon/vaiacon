@@ -317,3 +317,74 @@
 @media (max-width: 860px) {
   .pm-leiter { grid-template-columns: 1fr; }
 }
+
+/* Handy-Bausteine: am Desktop unsichtbar */
+.pm-schritt, .pm-cell__dauer, .pm-cell__satz { display: none; }
+
+/* Handy (bis 700 px): Schrittwahl + Karten statt Raster */
+@media (max-width: 700px) {
+  .pm-scroll { overflow: visible; margin-top: var(--space-6); }
+  .pm-matrix { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+  .pm-corner, .pm-row, .pm-col { display: none; }
+
+  .pm-schritt { display: block; }
+  .pm-schritt__leiste {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+    padding: 4px;
+    background: var(--bg-alt);
+    border: 1.5px solid var(--border-ink);
+    border-radius: var(--radius-md);
+  }
+  .pm-schritt__leiste button {
+    font: inherit;
+    font-weight: var(--weight-bold);
+    font-size: 15px;
+    line-height: 1.2;
+    min-height: 48px;
+    padding: 6px 4px;
+    color: var(--text-strong);
+    background: transparent;
+    border: 0;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+  }
+  .pm-schritt__leiste button.ist-an {
+    background: var(--grad-package);
+    color: var(--text-on-terra);
+    box-shadow: var(--shadow-soft);
+  }
+  .pm-schritt__leiste button:focus-visible { outline: 3px solid var(--orange-500); outline-offset: 2px; }
+  .pm-schritt__hilfe { margin: 12px 2px 14px; font-size: 15px; line-height: 1.4; color: var(--text-body); min-height: 3em; }
+
+  .pm-matrix[data-spalte="Einfach"] .pm-cell:not([data-komplexitaet="Einfach"]),
+  .pm-matrix[data-spalte="Verbunden"] .pm-cell:not([data-komplexitaet="Verbunden"]),
+  .pm-matrix[data-spalte="Ganzer Ablauf"] .pm-cell:not([data-komplexitaet="Ganzer Ablauf"]) { display: none; }
+
+  .pm-cell {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "dauer dauer" "name preis" "satz satz";
+    column-gap: 12px;
+    row-gap: 4px;
+    align-items: baseline;
+    min-height: 0;
+    padding: 14px 16px;
+    scroll-margin-top: 12px;
+  }
+  .pm-cell:hover { transform: none; box-shadow: none; }
+  .pm-cell.ist-gewaehlt { transform: none; box-shadow: none; }
+  .pm-cell__dauer, .pm-cell__satz { display: block; }
+  .pm-cell__dauer { grid-area: dauer; font-size: 14px; font-weight: var(--weight-semibold); color: var(--terra-600); }
+  .pm-cell__name { grid-area: name; font-size: 19px; font-weight: var(--weight-bold); color: var(--text-strong); }
+  .pm-cell__preis { grid-area: preis; font-size: 20px; text-align: right; white-space: nowrap; }
+  .pm-cell__satz { grid-area: satz; font-size: 15px; line-height: 1.4; color: var(--text-body); margin-top: 2px; }
+  .pm-cell__tag { display: none; }
+  .pm-cell.ist-gewaehlt .pm-cell__dauer { color: var(--peach-200); }
+  .pm-cell.ist-gewaehlt .pm-cell__name { color: var(--text-on-terra); }
+  .pm-cell.ist-gewaehlt .pm-cell__satz { color: var(--text-on-terra-soft); }
+
+  .pm-matrix > .pm-detail { margin-top: 0; gap: 12px; }
+  .pm-card { padding: 20px 18px; }
+}
