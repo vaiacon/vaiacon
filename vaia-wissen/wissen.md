@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag 3b3f8df Mahnlauf ohne Ziffern
+> Stand: 09.10.2026 · Eintrag 2cfbce5 Lernwoche: nur Montag bis Freitag, Wochenende raus
 
 ## Wie du antwortest
 
@@ -384,17 +384,6 @@ Standortbestimmung
 Wo steht Ihr Betrieb mit KI?
 Zwölf kurze Fragen, ein ehrliches Ergebnis und eine persönliche Einschätzung, was sich als Nächstes lohnt.
 Die Standortbestimmung braucht JavaScript. Wenn Sie wissen möchten, wo Ihr Betrieb mit KI steht, schreiben Sie uns kurz über die Kontaktseite . Wir melden uns persönlich.
-FÜR WEN, UND WIE WIR ARBEITEN
-Ihr Betrieb, Ihre Aufgaben, Ihr Tempo.
-Für wen
-Betriebe ab 5 Mitarbeitenden mit Büroarbeit am Bildschirm, auch mit 50 und mehr.
-Führungskräfte, die entscheiden müssen, wie KI im Team genutzt wird.
-Teams, in denen einzelne schon probieren und alle auf denselben Stand kommen sollen.
-Wie wir arbeiten
-Wir kommen zu Ihnen und arbeiten mit Ihren echten Fällen, nicht mit Lehrbuchbeispielen.
-Sie sagen uns, welche Unterlagen wir verwenden dürfen und welche nicht. Die Grenzen klären wir früh, damit Ihr Team sich traut.
-Am Ende bleibt Festgehaltenes: Vorlagen, Prompt-Karten und eine Seite Spielregeln für den Betrieb.
-Nach vier Wochen schauen wir gemeinsam, was im Alltag hakt, und schärfen nach.
 NÄCHSTER SCHRITT
 Reden wir darüber, wie Ihre Lernreise aussieht.
 Ein halbstündiges Erstgespräch, kostenlos und ohne Verpflichtung. Danach wissen Sie, welche Stationen sich für Ihren Betrieb lohnen.
