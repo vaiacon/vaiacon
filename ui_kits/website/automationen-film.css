@@ -1,4 +1,4 @@
-/* Automationen (bot.html): Kurzfilm und Bildergalerie der neun Beispiele.
+/* Automationen (bot.html): Kurzfilm und Übersichtstabelle der Beispiele.
    Farben, Schriften, Radien aus tokens/. */
 
 .af-film {
@@ -13,67 +13,57 @@
 }
 .af-film video { display: block; width: 100%; height: 100%; object-fit: cover; }
 
-.af-galerie {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
-  margin: 36px 0 0;
-  padding: 0;
-  list-style: none;
-}
-.af-galerie li { min-width: 0; }
-.af-galerie a {
-  display: grid;
-  gap: 12px;
-  height: 100%;
-  padding: 10px 10px 16px;
-  background: var(--surface-card);
-  border: 1.5px solid var(--border-ink);
-  border-radius: var(--radius-lg);
-  color: var(--text-strong);
-  text-decoration: none;
-  transition: transform .14s ease, box-shadow .14s ease;
-}
-.af-galerie a:hover, .af-galerie a:focus-visible {
-  transform: translate(-3px, -3px);
-  box-shadow: 5px 5px 0 var(--border-ink);
-  color: var(--text-strong);
-}
-.af-galerie figure { margin: 0; min-width: 0; }
-.af-galerie picture {
-  display: block;
-  position: relative;
-  width: 100%;
-  aspect-ratio: 5 / 3;
-  overflow: hidden;
-  border-radius: var(--radius-md);
-  background: var(--surface-card-sand);
-}
-.af-galerie img {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.af-galerie figcaption { display: grid; gap: 4px; padding: 0 6px; }
-.af-galerie figcaption b {
-  font-size: var(--text-overline);
-  letter-spacing: var(--tracking-badge);
-  text-transform: uppercase;
-  font-weight: var(--weight-bold);
-  color: var(--accent);
-}
-.af-galerie figcaption span {
-  font-size: 16px;
-  line-height: 1.3;
-  font-weight: var(--weight-semibold);
-  text-wrap: balance;
-}
-.af-galerie figcaption small { font-size: 14px; color: var(--text-muted); font-weight: var(--weight-medium); }
-
 .af-mehr { margin-top: 28px; }
 
-@media (max-width: 900px) { .af-galerie { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 560px) { .af-galerie { grid-template-columns: 1fr; } }
-@media (prefers-reduced-motion: reduce) { .af-galerie a { transition: none; } }
+
+/* Übersichtstabelle der sieben Beispiele */
+.bsp-tabelle { text-align: left; margin: 36px 0 0; border-top: 1.5px solid var(--border-ink); }
+.bsp-tabelle__kopf, .bsp-tabelle__zeile {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 2fr 1.5fr .8fr;
+  gap: 8px 22px;
+  align-items: baseline;
+  padding: 14px 6px;
+  border-bottom: 1px solid var(--border-strong);
+}
+.bsp-tabelle__kopf {
+  font-family: var(--font-mono, "IBM Plex Mono", monospace);
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding-top: 10px; padding-bottom: 10px;
+}
+.bsp-tabelle__zeile { font-size: 15.5px; line-height: 1.4; color: var(--text-body); transition: background .12s ease; }
+.bsp-tabelle__zeile:hover { background: var(--cream-card); }
+.bsp-tabelle__name { font-weight: var(--weight-bold); color: var(--text-strong); text-decoration: none; }
+.bsp-tabelle__name:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+.bsp-tabelle__preis { font-family: var(--font-mono, "IBM Plex Mono", monospace); font-size: 14px; color: var(--text-strong); white-space: nowrap; }
+.bsp-tag {
+  display: inline-block;
+  font-style: normal;
+  font-size: 12.5px;
+  font-weight: var(--weight-semibold);
+  padding: 2px 10px;
+  border: 1.5px solid var(--terra-500, #B25222);
+  border-radius: var(--radius-pill);
+  color: var(--terra-600);
+  background: transparent;
+  white-space: nowrap;
+}
+.bsp-tag--g { background: var(--peach-150); }
+@media (max-width: 820px) {
+  .bsp-tabelle__kopf { display: none; }
+  .bsp-tabelle__zeile { display: block; padding: 16px 4px; }
+  .bsp-tabelle__zeile > * { display: block; margin-bottom: 6px; }
+  .bsp-tabelle__zeile > [data-label="Beispiel"] { font-size: 17px; }
+  .bsp-tabelle__zeile > [data-label]:not([data-label="Beispiel"]):not([data-label="Sprosse"])::before {
+    content: attr(data-label);
+    display: block;
+    font-family: var(--font-mono, "IBM Plex Mono", monospace);
+    font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .bsp-tabelle__preis { white-space: normal; }
+}
+@media (prefers-reduced-motion: reduce) { .bsp-tabelle__zeile { transition: none; } }
