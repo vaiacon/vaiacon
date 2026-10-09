@@ -225,3 +225,15 @@
 @media (max-width: 960px) { body.of-offen .vc-chat { display: none; } }
 .of-tabelle th:nth-child(3), .of-tabelle td:nth-child(3) { padding-left: 14px; }
 @media (max-width: 700px) { .of-tabelle td:nth-child(3) { padding-left: 0; } }
+
+/* Richtpreis (09.10.2026): Beschreibung zuerst, Katalog im Aufklapper */
+.of-frei { margin-bottom: var(--space-5); }
+.of-frei textarea { font-size: 1.05rem; line-height: 1.5; }
+.of-klapp { margin: var(--space-4) 0 var(--space-6); border-top: 1px solid var(--border-strong); padding-top: var(--space-4); }
+.of-klapp__kopf { cursor: pointer; font-weight: var(--weight-semibold); color: var(--terra-600); list-style: none; padding: var(--space-2) 0; }
+.of-klapp__kopf::-webkit-details-marker { display: none; }
+.of-klapp__kopf::before { content: "▸ "; }
+.of-klapp[open] > .of-klapp__kopf::before { content: "▾ "; }
+.of-klapp__kopf:focus-visible { outline: 3px solid var(--terra-600); outline-offset: 2px; }
+.of-klapp__hilfe { margin: 0 0 var(--space-4); font-size: .9rem; color: var(--brown-600); }
+.of-richtpreis { margin: var(--space-3) 0 var(--space-5); padding: var(--space-3) var(--space-4); background: var(--cream-card); border-left: 4px solid var(--terra-600); border-radius: 6px; }

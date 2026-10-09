@@ -316,17 +316,17 @@
   function anfordern() {
     wunsch = $('of-wunsch').value;
     var s = summen();
-    if (s.anzahl === 0 && !wunsch.trim()) {
+    if (s.anzahl === 0 && wunsch.trim().length < 20) {
       var m = $('of-anfordern-meldung');
-      m.textContent = 'Bitte kreuzen Sie mindestens eine Position an oder beschreiben Sie unten in Ihren Worten, was Sie suchen.';
-      $('of-summary').classList.add('is-offen');
-      $('of-summary-toggle').setAttribute('aria-expanded', 'true');
+      m.textContent = wunsch.trim() ? 'Bitte beschreiben Sie Ihr Vorhaben in ein, zwei ganzen Sätzen.' : 'Bitte beschreiben Sie oben in Ihren Worten, was Sie vorhaben.';
+      $('of-wunsch-fehler').textContent = m.textContent;
+      $('of-wunsch').focus();
       return;
     }
     var teile = [];
-    if (s.anzahl) teile.push(s.anzahl === 1 ? '1 Position' : s.anzahl + ' Positionen');
-    if (wunsch.trim()) teile.push('Ihr Freitext');
-    $('of-recap').textContent = 'Ihre Auswahl: ' + teile.join(' und ') + '.';
+    if (wunsch.trim()) teile.push('Ihre Beschreibung');
+    if (s.anzahl) teile.push(s.anzahl === 1 ? '1 angekreuzte Position' : s.anzahl + ' angekreuzte Positionen');
+    $('of-recap').textContent = 'Grundlage: ' + teile.join(' und ') + '.';
     ['name', 'firma', 'mail', 'telefon'].forEach(function (k) { $('of-' + k).value = kontakt[k]; });
     loescheFehler();
     $('of-form-meldung').textContent = '';
@@ -463,7 +463,7 @@
     if (feld === 'auswahl' || feld === 'wunsch') {
       zeige('auswahl');
       var t = feld === 'wunsch' ? $('of-wunsch-fehler') : $('of-anfordern-meldung');
-      t.textContent = feld === 'wunsch' ? 'Dieser Text konnte nicht verarbeitet werden. Bitte kürzen oder ändern Sie ihn.' : 'Mit dieser Auswahl konnte keine Offerte erstellt werden. Bitte prüfen Sie Ihre Angaben.';
+      t.textContent = feld === 'wunsch' ? 'Bitte beschreiben Sie Ihr Vorhaben in ein, zwei ganzen Sätzen.' : 'Mit dieser Auswahl konnte keine Offerte erstellt werden. Bitte prüfen Sie Ihre Angaben.';
       var z = feld === 'wunsch' ? $('of-wunsch') : null; if (z) z.focus();
       return;
     }
@@ -501,7 +501,7 @@
     return t.length > 1800 ? t.slice(0, 1790) + ' …' : t;
   }
   function zeigeAusfall() {
-    $('of-mailto').setAttribute('href', 'mailto:' + MAIL + '?subject=' + encodeURIComponent('Offerte-Anfrage über vaiacon.ch') + '&body=' + encodeURIComponent(mailtoText()));
+    $('of-mailto').setAttribute('href', 'mailto:' + MAIL + '?subject=' + encodeURIComponent('Richtpreis-Anfrage über vaiacon.ch') + '&body=' + encodeURIComponent(mailtoText()));
     zeige('fehler');
   }
 
@@ -556,6 +556,7 @@
           el('strong', { text: String(p.titel || '') })
         ]);
         if (p.notiz) pos.appendChild(el('span', { class: 'of-tabelle__notiz', text: 'Ihre Notiz: ' + p.notiz }));
+        if (p.begruendung) pos.appendChild(el('span', { class: 'of-tabelle__notiz', text: 'Darum: ' + p.begruendung }));
         tb.appendChild(el('tr', null, [
           pos,
           el('td', { class: 'zahl', 'data-label': 'Menge', text: String(p.menge) }),
@@ -569,13 +570,18 @@
     }
 
     if (a.positionen.length === 0) {
-      dok.appendChild(el('p', { class: 'of-dokument__leer', text: 'Es wurden keine Positionen angekreuzt. Wir melden uns zu Ihrem Anliegen persönlich.' }));
+      dok.appendChild(el('p', { class: 'of-dokument__leer', text: a.ki_zuordnung ? 'Ihre Beschreibung konnten wir noch keiner Leistung sicher zuordnen. Wir melden uns persönlich bei Ihnen.' : 'Es wurden keine Positionen angekreuzt. Wir melden uns zu Ihrem Anliegen persönlich.' }));
     }
     if (wunsch.trim()) {
       dok.appendChild(el('div', { class: 'of-dokument__wunsch' }, [
-        el('strong', { text: 'Ihr Anliegen' }),
+        el('strong', { text: a.ki_zuordnung ? 'Ihre Beschreibung' : 'Ihr Anliegen' }),
         el('p', { text: wunsch.trim() })
       ]));
+    }
+    var unklar = Array.isArray(a.unklar) ? a.unklar.filter(Boolean) : [];
+    if (unklar.length) {
+      dok.appendChild(el('h4', { class: 'of-dokument__zwischen', text: 'Das klären wir mit Ihnen' }));
+      dok.appendChild(el('ul', { class: 'of-dokument__liste' }, unklar.map(function (u) { return el('li', { text: String(u) }); })));
     }
 
     var inkl = a.mwst_inklusive === true && a.mwst_satz != null;
@@ -603,7 +609,7 @@
       dok.appendChild(el('h4', { class: 'of-dokument__zwischen', text: 'Nächste Schritte' }));
       dok.appendChild(el('div', { class: 'of-dokument__text' }, schritte));
     }
-    dok.appendChild(el('p', { class: 'of-dokument__fuss', text: 'Dies ist eine unverbindliche Richtofferte. Verbindlich wird erst die schriftliche Offerte nach unserem Gespräch.' }));
+    dok.appendChild(el('p', { class: 'of-dokument__fuss', text: 'Dies ist ein Richtpreis, keine verbindliche Offerte. Verbindlich wird erst die schriftliche Offerte nach unserem Gespräch. Wir melden uns bei Ihnen.' }));
     platz.appendChild(dok);
 
     var ms = $('of-mailstatus');
@@ -614,7 +620,7 @@
       ms.hidden = true;
     }
     $('of-probe').hidden = !probe;
-    document.title = 'Offerte ' + (a.nummer || '') + ' · vaiacon';
+    document.title = 'Richtpreis ' + (a.nummer || '') + ' · vaiacon';
     zeige('ergebnis');
   }
 
@@ -623,7 +629,7 @@
     $('of-anfordern').addEventListener('click', anfordern);
     $('of-form').addEventListener('submit', senden);
     $('of-zurueck').addEventListener('click', function () { zeige('auswahl'); });
-    $('of-aendern').addEventListener('click', function () { document.title = 'Richtofferte zusammenstellen · vaiacon, Zürich'; zeige('auswahl'); });
+    $('of-aendern').addEventListener('click', function () { document.title = 'Richtpreis in zwei Minuten · vaiacon, Zürich'; zeige('auswahl'); });
     $('of-fehler-aendern').addEventListener('click', function () { zeige('auswahl'); });
     $('of-nochmals').addEventListener('click', function () { senden(); });
     $('of-drucken').addEventListener('click', function () { window.print(); });
@@ -670,6 +676,8 @@
       vorwahl();
       zeichneKatalog();
       Object.keys(auswahl).forEach(karteSync);
+      var klapp = $('of-klapp');
+      if (klapp && (Object.keys(auswahl).length || (location.hash && k.bereiche.some(function (b) { return '#' + b.id === location.hash; })))) klapp.open = true;
       document.body.classList.add('of-leiste');
       aktualisiere();
       zumBereich();

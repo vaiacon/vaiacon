@@ -3,26 +3,26 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Stellen Sie sich in zwei Minuten eine Richtofferte zusammen: Angebote ankreuzen, Wünsche beschreiben, Offerte mit echten Preisen sofort erhalten. Unverbindlich. vaiacon GmbH, Zürich.">
+<meta name="description" content="Beschreiben Sie in Ihren Worten, was Sie vorhaben. Wir gleichen es im Hintergrund mit unserer Preisliste ab und zeigen Ihnen sofort einen Richtpreis. Unverbindlich, wir melden uns bei Ihnen. vaiacon, Zürich.">
 <link rel="canonical" href="https://vaiacon.ch/offerte">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="vaiacon">
 <meta property="og:locale" content="de_CH">
 <meta property="og:title" content="Richtofferte zusammenstellen · vaiacon, Zürich">
-<meta property="og:description" content="Stellen Sie sich in zwei Minuten eine Richtofferte zusammen: Angebote ankreuzen, Wünsche beschreiben, Offerte mit echten Preisen sofort erhalten. Unverbindlich. vaiacon GmbH, Zürich.">
+<meta property="og:description" content="Beschreiben Sie in Ihren Worten, was Sie vorhaben. Wir gleichen es im Hintergrund mit unserer Preisliste ab und zeigen Ihnen sofort einen Richtpreis. Unverbindlich, wir melden uns bei Ihnen. vaiacon, Zürich.">
 <meta property="og:url" content="https://vaiacon.ch/offerte">
 <meta property="og:image" content="https://vaiacon.ch/assets/vorschau-begleitung.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Der vaiacon-Roboter mit Klemmbrett: Richtofferte in zwei Minuten.">
 <meta name="twitter:card" content="summary_large_image">
-<title>Richtofferte zusammenstellen · vaiacon, Zürich</title>
+<title>Richtpreis in zwei Minuten · vaiacon, Zürich</title>
 <link rel="stylesheet" href="styles.css?v=20261005-vorschlag">
 <link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20261005-vorschlag">
 <link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261009-fakten-versteckt">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
 <link rel="stylesheet" href="ui_kits/website/kundenstimme.css?v=20261005-vorschlag">
-<link rel="stylesheet" href="ui_kits/website/offerte.css?v=20261004-offerte2">
+<link rel="stylesheet" href="ui_kits/website/offerte.css?v=20261009-richtpreis">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -174,7 +174,7 @@
           <p class="sv-kicker sv-kicker--on-terra">OFFERTE</p>
           <h1>In zwei Minuten zur Richtofferte.</h1>
           <p class="sv-hero__lead">
-            Mit echten Preisen, ohne Verpflichtung. Kreuzen Sie an, was Sie interessiert, und beschreiben Sie in Ihren Worten, was Sie vorhaben. Ihre Offerte sehen Sie sofort auf dieser Seite, und sie kommt auch per Mail.
+            Beschreiben Sie in Ihren Worten, was Sie vorhaben. Im Hintergrund gleichen wir das mit unserer Preisliste ab. Sie sehen sofort einen Richtpreis, hier und per Mail. Danach melden wir uns bei Ihnen.
           </p>
         </div>
         <figure class="of-hero__bot">
@@ -194,31 +194,34 @@
     <section id="of-auswahl" class="sv-section of-ansicht" data-ansicht="auswahl" hidden aria-labelledby="of-auswahl-titel">
       <div class="sv-wrap of-wrap">
         <div class="of-kopf">
-          <p class="sv-kicker">IHRE AUSWAHL</p>
-          <h2 class="sv-title" id="of-auswahl-titel" tabindex="-1">Was interessiert Sie?</h2>
-          <p class="sv-lead">Kreuzen Sie an, was Sie sich vorstellen können. Bei den meisten Angeboten stellen Sie die Menge selbst ein. Mit «Was sollen wir dazu wissen?» ergänzen Sie, was uns bei der Offerte hilft.</p>
+          <p class="sv-kicker">IHR VORHABEN</p>
+          <h2 class="sv-title" id="of-auswahl-titel" tabindex="-1">Was soll bei Ihnen einfacher werden?</h2>
+          <p class="sv-lead">Schreiben Sie es so, wie Sie es einer Kollegin erzählen würden: Was macht Ihr Betrieb, was kostet heute Zeit, wie viele Personen betrifft es. Mehr braucht es nicht.</p>
         </div>
 
         <div class="of-layout">
           <div class="of-haupt">
+            <div class="of-frei" id="of-frei">
+              <h3 class="of-frei__titel"><label for="of-wunsch">Ihre Beschreibung</label></h3>
+              <p class="of-frei__hilfe" id="of-wunsch-hilfe">Ein paar Sätze genügen. Die KI ordnet Ihrer Beschreibung die passenden Leistungen aus unserer Preisliste zu. Sie sehen danach einen Richtpreis, keine verbindliche Offerte.</p>
+              <textarea id="of-wunsch" name="wunsch" maxlength="3000" rows="8" aria-describedby="of-wunsch-hilfe of-wunsch-zaehler of-wunsch-fehler" placeholder="Zum Beispiel: Wir sind ein Malerbetrieb mit zwölf Personen. Rechnungen kommen per Mail und werden von Hand abgelegt und gebucht, das kostet jede Woche einen halben Tag. Das soll von selbst laufen, und das Team soll lernen, KI im Alltag zu nutzen."></textarea>
+              <p class="of-zaehler" id="of-wunsch-zaehler"><span id="of-wunsch-n">0</span> von 3000 Zeichen</p>
+              <p class="of-fehler" id="of-wunsch-fehler" role="alert"></p>
+            </div>
+          <details class="of-klapp" id="of-klapp">
+            <summary class="of-klapp__kopf">Sie wissen schon genau, welche Leistungen Sie wollen? Positionen selbst ankreuzen</summary>
+            <p class="of-klapp__hilfe">Angekreuzte Positionen gelten dann so, wie Sie sie gewählt haben. Die Beschreibung ergänzt sie.</p>
             <nav class="of-chips" id="of-chips" aria-label="Bereiche" hidden></nav>
             <div id="of-katalog" aria-live="polite">
               <p class="of-laden" role="status">Angebote werden geladen …</p>
             </div>
-
-            <div class="of-frei" id="of-frei" hidden>
-              <h3 class="of-frei__titel"><label for="of-wunsch">Etwas anderes im Kopf? Beschreiben Sie es in Ihren Worten.</label></h3>
-              <p class="of-frei__hilfe" id="of-wunsch-hilfe">Auch ohne angekreuzte Position können Sie uns hier schreiben, was Sie vorhaben. Wir stellen Ihnen dazu eine Offerte zusammen.</p>
-              <textarea id="of-wunsch" name="wunsch" maxlength="3000" rows="6" aria-describedby="of-wunsch-hilfe of-wunsch-zaehler of-wunsch-fehler" placeholder="Zum Beispiel: Wir sind ein Treuhandbüro mit zwölf Personen und möchten Offerten schneller schreiben."></textarea>
-              <p class="of-zaehler" id="of-wunsch-zaehler"><span id="of-wunsch-n">0</span> von 3000 Zeichen</p>
-              <p class="of-fehler" id="of-wunsch-fehler" role="alert"></p>
-            </div>
+          </details>
           </div>
 
           <aside class="of-summary" id="of-summary" aria-label="Zusammenfassung" hidden>
             <div class="of-summary__body" id="of-summary-body">
-              <h3 class="of-summary__titel">Ihre Auswahl</h3>
-              <p class="of-summary__leer" id="of-summary-leer">Noch nichts angekreuzt. Sie können auch nur unten beschreiben, was Sie suchen.</p>
+              <h3 class="of-summary__titel">Ihr Richtpreis</h3>
+              <p class="of-summary__leer" id="of-summary-leer">Erscheint, sobald Sie Ihre Beschreibung abgeschickt haben. Wer Positionen ankreuzt, sieht hier schon die Vorschau.</p>
               <ul class="of-summary__liste" id="of-summary-liste"></ul>
               <div class="of-summe" id="of-summe" aria-live="polite" aria-atomic="true">
                 <p class="of-summe__zeile"><span>Einmalig <small class="of-inkl" data-inkl></small></span><strong id="of-summe-einmalig">CHF 0</strong></p>
@@ -226,14 +229,14 @@
                 <p class="of-summe__ab" id="of-summe-ab" hidden>Enthält «ab»-Preise: Der endgültige Preis hängt vom Aufwand ab.</p>
               </div>
               <p class="of-summary__mwst" id="of-mwst"></p>
-              <p class="of-summary__hilfe">Das ist eine Vorschau. Die verbindlichen Zahlen stehen in der Offerte, die wir Ihnen danach erstellen.</p>
+              <p class="of-summary__hilfe">Das ist eine Vorschau. Verbindlich wird ein Preis erst nach unserem Gespräch.</p>
             </div>
             <button type="button" class="of-summary__toggle" id="of-summary-toggle" aria-expanded="false" aria-controls="of-summary-body">
-              <span class="of-summary__anzahl" id="of-summary-anzahl">Nichts gewählt</span>
+              <span class="of-summary__anzahl" id="of-summary-anzahl">Noch nichts gewählt</span>
               <span class="of-summary__kurz" id="of-summary-kurz">CHF 0</span>
             </button>
             <div class="of-summary__aktion">
-              <button type="button" class="sv-button sv-button--cta" id="of-anfordern">Offerte anfordern →</button>
+              <button type="button" class="sv-button sv-button--cta" id="of-anfordern">Richtpreis anfordern →</button>
               <p class="of-meldung" id="of-anfordern-meldung" role="alert"></p>
             </div>
           </aside>
@@ -246,8 +249,8 @@
       <div class="sv-wrap of-wrap of-wrap--schmal">
         <div class="of-kopf">
           <p class="sv-kicker">LETZTER SCHRITT</p>
-          <h2 class="sv-title" id="of-kontakt-titel" tabindex="-1">Wohin dürfen wir die Offerte schicken?</h2>
-          <p class="sv-lead">Sie erhalten die Offerte sofort hier und per Mail. Wir rufen Sie danach kurz an, um offene Punkte zu klären.</p>
+          <h2 class="sv-title" id="of-kontakt-titel" tabindex="-1">Wohin dürfen wir den Richtpreis schicken?</h2>
+          <p class="sv-lead">Sie sehen den Richtpreis sofort hier und erhalten ihn per Mail. Danach melden wir uns bei Ihnen und klären, was offen ist.</p>
         </div>
         <p class="of-recap" id="of-recap"></p>
 
@@ -279,13 +282,13 @@
           <div class="of-einwilligung">
             <label class="of-einwilligung__label" for="of-einwilligung">
               <input type="checkbox" id="of-einwilligung" name="einwilligung" required aria-describedby="of-einwilligung-fehler">
-              <span>Ich bin einverstanden, dass vaiacon meine Angaben zur Erstellung der Offerte bearbeitet und mich dazu kontaktiert. <a href="datenschutz" target="_blank" rel="noopener">Datenschutz</a></span>
+              <span>Ich bin einverstanden, dass vaiacon meine Angaben zur Erstellung des Richtpreises bearbeitet und mich dazu kontaktiert. <a href="datenschutz" target="_blank" rel="noopener">Datenschutz</a></span>
             </label>
             <p class="of-fehler" id="of-einwilligung-fehler"></p>
           </div>
           <div class="vc-kontakt__fuss of-form__fuss">
-            <button class="sv-button sv-button--ghost" type="button" id="of-zurueck">← Auswahl ändern</button>
-            <button class="sv-button sv-button--cta" type="submit" id="of-senden">Offerte erstellen →</button>
+            <button class="sv-button sv-button--ghost" type="button" id="of-zurueck">← Beschreibung ändern</button>
+            <button class="sv-button sv-button--cta" type="submit" id="of-senden">Richtpreis anzeigen →</button>
           </div>
           <p class="vc-kontakt__meldung of-form__meldung" id="of-form-meldung" role="alert"></p>
         </form>
@@ -308,7 +311,7 @@
       <div class="sv-wrap of-wrap of-wrap--schmal">
         <div class="of-laden-box" role="status">
           <span class="of-spinner" aria-hidden="true"></span>
-          <h2 class="of-laden-titel" id="of-laden-titel" tabindex="-1">Vaia stellt Ihre Offerte zusammen …</h2>
+          <h2 class="of-laden-titel" id="of-laden-titel" tabindex="-1">Vaia gleicht Ihre Beschreibung mit unserer Preisliste ab …</h2>
           <p>Das dauert meist nur wenige Sekunden.</p>
         </div>
       </div>
@@ -318,15 +321,16 @@
     <section id="of-ergebnis" class="sv-section of-ansicht" data-ansicht="ergebnis" hidden aria-labelledby="of-ergebnis-titel">
       <div class="sv-wrap of-wrap of-wrap--dok">
         <div class="of-kopf of-kopf--ergebnis">
-          <p class="sv-kicker">IHRE OFFERTE</p>
-          <h2 class="sv-title" id="of-ergebnis-titel" tabindex="-1">Hier ist Ihre Richtofferte.</h2>
+          <p class="sv-kicker">IHR RICHTPREIS</p>
+          <h2 class="sv-title" id="of-ergebnis-titel" tabindex="-1">Hier ist Ihr Richtpreis.</h2>
           <p class="of-probe" id="of-probe" hidden>Probelauf: Dies ist eine Beispielantwort. Es wurde nichts gesendet.</p>
+          <p class="of-richtpreis" id="of-richtpreis"><strong>Das ist ein Richtpreis, keine verbindliche Offerte.</strong> Wir melden uns bei Ihnen, prüfen die Zuordnung gemeinsam und passen den Preis an, wo nötig.</p>
         </div>
         <div id="of-dokument-platz" aria-live="polite"></div>
         <p class="of-mailstatus" id="of-mailstatus" hidden></p>
         <div class="of-aktionen">
           <button type="button" class="sv-button sv-button--cta" id="of-drucken">Drucken / als PDF sichern</button>
-          <button type="button" class="sv-button sv-button--ghost" id="of-aendern">Auswahl ändern</button>
+          <button type="button" class="sv-button sv-button--ghost" id="of-aendern">Beschreibung ändern</button>
           <a class="sv-button sv-button--ghost" href="kontakt#formular">Erstgespräch vereinbaren →</a>
         </div>
       </div>
@@ -337,11 +341,11 @@
       <div class="sv-wrap of-wrap of-wrap--schmal">
         <div class="of-hinweis" role="alert">
           <h2 class="sv-title" id="of-fehler-titel" tabindex="-1">Das hat gerade nicht geklappt.</h2>
-          <p class="sv-lead">Ihre Auswahl ist noch da, es ist nichts verloren. Wir konnten die Offerte im Moment nicht erstellen. Sie können es gleich noch einmal versuchen oder uns Ihre Auswahl per Mail schicken. Dann melden wir uns bei Ihnen.</p>
+          <p class="sv-lead">Ihre Beschreibung ist noch da, es ist nichts verloren. Wir konnten den Richtpreis im Moment nicht rechnen. Sie können es gleich noch einmal versuchen oder uns Ihre Beschreibung per Mail schicken. Dann melden wir uns bei Ihnen.</p>
           <div class="sv-actions">
             <a class="sv-button sv-button--cta" id="of-mailto" href="mailto:hallo@vaiacon.ch">Per Mail senden →</a>
             <button type="button" class="sv-button sv-button--ghost" id="of-nochmals">Nochmals versuchen</button>
-            <button type="button" class="sv-button sv-button--ghost" id="of-fehler-aendern">Auswahl ändern</button>
+            <button type="button" class="sv-button sv-button--ghost" id="of-fehler-aendern">Beschreibung ändern</button>
           </div>
           <p class="of-hinweis__klein">Oder schreiben Sie uns über das <a href="kontakt">Kontaktformular</a>.</p>
         </div>
@@ -375,7 +379,7 @@
 </div>
 <script src="ui_kits/website/api-basis.js?v=20261004-umbau"></script>
 <script src="ui_kits/website/visibility.js?v=20261007-logo-svg"></script>
-<script src="ui_kits/website/offerte.js?v=20261007-mengen" defer></script>
+<script src="ui_kits/website/offerte.js?v=20261009-richtpreis" defer></script>
 <script src="ui_kits/website/chat.js?v=20261004-umbau"></script>
 </body>
 </html>
