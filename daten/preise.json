@@ -250,6 +250,32 @@
           "hinweis": "Fixpreis nach der Erstanalyse. Ohne Anbindung an weitere Programme."
         },
         {
+          "id": "au-offerte-formular",
+          "titel": "Offerte aus dem Formular",
+          "beschreibung": "Ihr Team füllt ein Formular aus, Preise werden nach Ihren Regeln gerechnet, die fertige Offerte liegt als PDF in Ihrem Design bereit.",
+          "einheit": "pro Ablauf",
+          "preis": 2200,
+          "ab": true,
+          "art": "einmalig",
+          "menge_waehlbar": true,
+          "menge_standard": 1,
+          "menge_max": 5,
+          "hinweis": "Fixpreis nach der Erstanalyse. Ihre Regeln halten wir gemeinsam fest, zwei Probeläufe inklusive."
+        },
+        {
+          "id": "au-freigabe-schleife",
+          "titel": "Freigabe-Schleife",
+          "beschreibung": "Grosse Beträge oder wichtige Schritte gehen erst weiter, wenn Sie auf dem Handy «Freigeben» drücken, mit Erinnerung und Meldung bei Ausnahmen.",
+          "einheit": "pro Ablauf",
+          "preis": 2600,
+          "ab": true,
+          "art": "einmalig",
+          "menge_waehlbar": true,
+          "menge_standard": 1,
+          "menge_max": 5,
+          "hinweis": "Fixpreis nach der Erstanalyse. Freigabe per Mail oder Telegram."
+        },
+        {
           "id": "au-belege-offerten",
           "titel": "Belege und Offerten automatisieren",
           "beschreibung": "Rechnungen und Belege werden gelesen und abgelegt, Offerten entstehen aus Ihren Vorlagen und Angaben.",
@@ -261,6 +287,45 @@
           "menge_standard": 1,
           "menge_max": 5,
           "hinweis": "Fixpreis nach der Erstanalyse. Anbindung an Ihr Buchhaltungs- oder Offertenprogramm inklusive."
+        },
+        {
+          "id": "au-postfach-ki",
+          "titel": "Postfach mit KI",
+          "beschreibung": "Das Postfach sortiert sich selbst, Antworten stehen als Entwurf bereit, Liegengebliebenes wird nachgefasst.",
+          "einheit": "pro Ablauf",
+          "preis": 3800,
+          "ab": true,
+          "art": "einmalig",
+          "menge_waehlbar": true,
+          "menge_standard": 1,
+          "menge_max": 5,
+          "hinweis": "Fixpreis nach der Erstanalyse. Anbindung an Ihr Mailprogramm inklusive."
+        },
+        {
+          "id": "au-auftragsablauf",
+          "titel": "Auftragsablauf von der Anfrage bis zur Rechnung",
+          "beschreibung": "Anfrage, Offerte, Auftrag und Rechnung laufen in einem Fluss über alle beteiligten Programme; die Rechnung geht am Tag des Abschlusses raus.",
+          "einheit": "pro Ablauf",
+          "preis": 4200,
+          "ab": true,
+          "art": "einmalig",
+          "menge_waehlbar": true,
+          "menge_standard": 1,
+          "menge_max": 5,
+          "hinweis": "Fixpreis nach der Erstanalyse. Anbindung an bis zu drei Programme inklusive."
+        },
+        {
+          "id": "au-kundendossier",
+          "titel": "Kundendossier mit KI-Kurzfassung",
+          "beschreibung": "Zu jedem Kunden liegt alles an einem Ort: Mails, Rechnungen, Termine, mit einer Kurzfassung der KI und offenen Punkten zuoberst.",
+          "einheit": "pro Ablauf",
+          "preis": 5200,
+          "ab": true,
+          "art": "einmalig",
+          "menge_waehlbar": true,
+          "menge_standard": 1,
+          "menge_max": 5,
+          "hinweis": "Fixpreis nach der Erstanalyse. Daten aus zwei Programmen zusammengeführt."
         },
         {
           "id": "au-ablauf-gross",

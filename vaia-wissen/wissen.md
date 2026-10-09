@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag 50853c0 Offerte: alter Banner weg, Nummer und Datum nur noch im Metablock
+> Stand: 09.10.2026 · Eintrag 470face Merge pull request #25 from vaiacon/preise-handy-leiste
 
 ## Wie du antwortest
 
@@ -57,7 +57,12 @@ Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer. Die Preise sin
 ### Automationen
 
 - Kleinen Ablauf automatisieren: ab CHF 1'300 pro Ablauf (Fixpreis nach der Erstanalyse. Ohne Anbindung an weitere Programme.)
+- Offerte aus dem Formular: ab CHF 2'200 pro Ablauf (Fixpreis nach der Erstanalyse. Ihre Regeln halten wir gemeinsam fest, zwei Probeläufe inklusive.)
+- Freigabe-Schleife: ab CHF 2'600 pro Ablauf (Fixpreis nach der Erstanalyse. Freigabe per Mail oder Telegram.)
 - Belege und Offerten automatisieren: ab CHF 3'000 pro Ablauf (Fixpreis nach der Erstanalyse. Anbindung an Ihr Buchhaltungs- oder Offertenprogramm inklusive.)
+- Postfach mit KI: ab CHF 3'800 pro Ablauf (Fixpreis nach der Erstanalyse. Anbindung an Ihr Mailprogramm inklusive.)
+- Auftragsablauf von der Anfrage bis zur Rechnung: ab CHF 4'200 pro Ablauf (Fixpreis nach der Erstanalyse. Anbindung an bis zu drei Programme inklusive.)
+- Kundendossier mit KI-Kurzfassung: ab CHF 5'200 pro Ablauf (Fixpreis nach der Erstanalyse. Daten aus zwei Programmen zusammengeführt.)
 - Grosser Ablauf über mehrere Systeme: ab CHF 6'800 pro Ablauf (Fixpreis nach der Erstanalyse. Anbindung an bis zu drei Programme inklusive.)
 - Chatbot mit Ihrem Firmenwissen: ab CHF 2'450 (Betrieb: CHF 130 im Monat (Begleitung).)
 - Telefonassistent: ab CHF 2'900 (Mit eigener Nummer und Kalenderanbindung. Betrieb: CHF 190 im Monat (Begleitung).)
