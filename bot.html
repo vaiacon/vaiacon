@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261009-fakten-versteckt">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
 <link rel="stylesheet" href="ui_kits/website/preismatrix.css?v=20261010-kacheln4">
-<link rel="stylesheet" href="ui_kits/website/automationen.css?v=20261010-ihrfall">
+<link rel="stylesheet" href="ui_kits/website/automationen.css?v=20261010-mail">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -398,7 +398,7 @@
             <dt>Bausteine</dt>
             <dd>Jede Automation besteht aus fünf Teilen: Etwas kommt rein, die KI versteht es, es wird entschieden, etwas passiert, Sie erfahren davon.</dd>
             <dt>Ihr Fall</dt>
-            <dd>Auf der Seite beschreiben Sie Ihren Fall in zwei Sätzen, die KI nennt die Sprosse und einen Richtpreis. Die Beschreibung wird nicht gespeichert.</dd>
+            <dd>Auf der Seite beschreiben Sie Ihren Fall in zwei Sätzen und geben E-Mail und Telefon an. Die Einordnung mit Sprosse und Richtpreis kommt per E-Mail, nicht auf der Seite. Die Beschreibung wird nicht gespeichert.</dd>
             <dt>Region</dt>
             <dd>Gesamte Deutschschweiz</dd>
           </dl>
@@ -652,12 +652,12 @@
           <p class="sv-kicker">IHR FALL</p>
           <h2 class="sv-title" id="if-titel">Ihr Fall in zwei Sätzen.</h2>
           <p class="sv-lead">
-            Beschreiben Sie, was bei Ihnen jede Woche Zeit frisst. Die KI sagt Ihnen, welche Sprosse das ist und was es ungefähr kostet.
+            Beschreiben Sie, was bei Ihnen jede Woche Zeit frisst. Unsere Einordnung bekommen Sie per E-Mail: welche Sprosse das ist und was es ungefähr kostet.
           </p>
           <ol class="if__schritte" aria-label="So läuft es">
             <li><span>1</span>Beschreiben</li>
             <li><span>2</span>E-Mail und Telefon</li>
-            <li><span>3</span>Einordnung mit Richtpreis</li>
+            <li><span>3</span>Einordnung mit Richtpreis per E-Mail</li>
           </ol>
         </div>
         <form class="if" id="if-form" novalidate>
@@ -667,7 +667,7 @@
           </div>
           <textarea id="if-text" name="wunsch" rows="4" maxlength="1500" aria-describedby="if-zaehler if-hinweis" placeholder="Bei uns kommen Rechnungen per Mail, jemand druckt sie aus und tippt sie in die Buchhaltung …"></textarea>
           <div class="if__kontakt" id="if-kontakt" hidden>
-            <p class="if__kontakt-satz">Damit wir uns melden können, falls etwas unklar ist:</p>
+            <p class="if__kontakt-satz">An diese Adresse schicken wir die Einordnung. Die Telefonnummer brauchen wir, falls etwas unklar ist:</p>
             <div class="if__felder">
               <label class="if__feld"><span>E-Mail</span><input type="email" id="if-mail" name="mail" autocomplete="email" inputmode="email" maxlength="160" placeholder="name@firma.ch"></label>
               <label class="if__feld"><span>Telefon</span><input type="tel" id="if-telefon" name="telefon" autocomplete="tel" inputmode="tel" maxlength="60" placeholder="044 123 45 67"></label>
@@ -677,19 +677,13 @@
             <p class="if__zaehler" id="if-zaehler"><span id="if-n">0</span> Zeichen, mindestens 20</p>
             <button type="submit" class="sv-button sv-button--cta" id="if-knopf">Einordnung anfordern</button>
           </div>
-          <p class="if__hinweis" id="if-hinweis">Ihre Beschreibung geht zusammen mit Ihrer Kontaktangabe an uns. Wir melden uns nur, wenn etwas offen ist.</p>
+          <p class="if__hinweis" id="if-hinweis">Ihre Beschreibung geht zusammen mit Ihrer Kontaktangabe an uns. Die Einordnung schicken wir an Ihre E-Mail, meist innert Minuten.</p>
           <p class="if__fehler" id="if-fehler" role="alert" hidden></p>
         </form>
-        <div class="if__ergebnis" id="if-ergebnis" hidden>
-          <p class="if__kopf"><span class="if__kicker">Unsere Einordnung</span><em class="bsp-tag" id="if-tag"></em></p>
-          <p class="if__satz" id="if-satz"></p>
-          <ul class="if__positionen" id="if-positionen" aria-label="Passende Leistungen"></ul>
-          <p class="if__summe"><span>Richtpreis, einmalig</span><strong id="if-summe"></strong></p>
-          <p class="if__monat" id="if-monat" hidden></p>
-          <div class="if__unklar" id="if-unklar" hidden>
-            <h3>Das klären wir mit Ihnen</h3>
-            <ul id="if-unklar-liste"></ul>
-          </div>
+        <div class="if__danke" id="if-danke" hidden role="status">
+          <p class="if__kopf"><span class="if__kicker">Unterwegs</span></p>
+          <p class="if__satz">Die Einordnung ist unterwegs.</p>
+          <p class="if__danke-text">Sie bekommen sie in wenigen Minuten an <strong id="if-danke-mail"></strong>. Wir melden uns, wenn etwas offen ist.</p>
           <p class="if__fuss">Richtpreis, keine verbindliche Offerte. Die Einstufung machen wir in der Erstanalyse, danach steht der Fixpreis.</p>
         </div>
       </div>
@@ -739,7 +733,7 @@
 <script src="ui_kits/website/preise.js?v=20261004-preise"></script>
 <script src="ui_kits/website/preismatrix.js?v=20261010-eine-seite"></script>
 <script src="ui_kits/website/branchen.js?v=20261010-ico"></script>
-<script src="ui_kits/website/ihrfall.js?v=20261010-kontakt"></script>
+<script src="ui_kits/website/ihrfall.js?v=20261010-mail"></script>
 <script src="ui_kits/website/chat.js?v=20261004-umbau"></script>
 </body>
 </html>

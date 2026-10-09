@@ -1,15 +1,1 @@
-{
-  "sprosse": "verbunden",
-  "satz": "Belege kommen per Mail und sollen ohne Abtippen in der Buchhaltung landen: Das ist eine Verbindung von Postfach und Buchhaltungsprogramm.",
-  "positionen": [
-    { "id": "au-ablauf-klein", "titel": "Kleinen Ablauf automatisieren", "menge": 1, "einheit": "pro Ablauf", "betrag": 1300, "ab": true },
-    { "id": "au-integration", "titel": "Zusätzliche Anbindung", "menge": 1, "einheit": "pro Programm", "betrag": 1900, "ab": true }
-  ],
-  "summe_einmalig": 3200,
-  "summe_monatlich": 0,
-  "enthaelt_ab_preise": true,
-  "unklar": [
-    "Welches Buchhaltungsprogramm Sie nutzen.",
-    "Ob Belege auch auf Papier kommen."
-  ]
-}
+{ "gemeldet": true, "gesendet": true, "kennung": "EIN-20261010-PR0B" }
