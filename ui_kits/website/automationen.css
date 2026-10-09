@@ -419,6 +419,14 @@
 }
 .if textarea:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .if textarea::placeholder { color: var(--text-muted); }
+.if__kontakt { display: grid; gap: 10px; padding: 14px 16px; background: var(--surface-card); border: 1.5px solid var(--border-ink); border-radius: var(--radius-md); }
+.if__kontakt-satz { margin: 0; font-size: 14.5px; color: var(--text-body); }
+.if__felder { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.if__feld { display: grid; gap: 4px; }
+.if__feld span { font-size: var(--text-overline, 12px); letter-spacing: .06em; text-transform: uppercase; color: var(--text-muted); font-family: var(--font-mono, "IBM Plex Mono", monospace); }
+.if__feld input { width: 100%; box-sizing: border-box; padding: 11px 13px; font: inherit; font-size: 16px; color: var(--text-strong); background: var(--surface-page, #fff); border: 1.5px solid var(--border-ink); border-radius: var(--radius-sm, 8px); }
+.if__feld input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+@media (max-width: 600px) { .if__felder { grid-template-columns: 1fr; } }
 .if__leiste { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 16px; }
 .if__zaehler { margin: 0; font-family: var(--font-mono, "IBM Plex Mono", monospace); font-size: 12.5px; color: var(--text-muted); }
 .if.ist-bereit .if__zaehler { color: var(--text-body); }

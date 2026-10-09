@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag 1001ae9 KI-Kompetenz: Lernreise-Vorbefüllung hängt am Erstgespräch-Knopf, JS ohne Knopf abgesichert
+> Stand: 09.10.2026 · Eintrag 16bfce3 Automationen: Beispiel-Tabelle mit sieben Artikeln entfernt, Film bleibt
 
 ## Wie du antwortest
 
@@ -600,9 +600,12 @@ IHR FALL
 Ihr Fall in zwei Sätzen.
 Beschreiben Sie, was bei Ihnen jede Woche Zeit frisst. Die KI sagt Ihnen, welche Sprosse das ist und was es ungefähr kostet. Ohne Namen und Kundendaten, bitte.
 Was frisst bei Ihnen Zeit?
+Damit wir uns melden können, falls etwas unklar ist:
+E-Mail
+Telefon
 0 Zeichen, mindestens 20
-Einordnen
-Wir speichern Ihre Beschreibung nicht.
+Einordnung anfordern
+Ihre Beschreibung geht zusammen mit Ihrer Kontaktangabe an uns. Wir melden uns nur, wenn etwas offen ist.
 Unsere Einordnung
 Richtpreis, einmalig
 Das klären wir mit Ihnen

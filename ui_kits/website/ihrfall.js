@@ -24,6 +24,8 @@
   var $ = function (id) { return document.getElementById(id); };
   var text = $('if-text'), n = $('if-n'), knopf = $('if-knopf'), fehler = $('if-fehler');
   var ergebnis = $('if-ergebnis');
+  var kontakt = $('if-kontakt'), mailFeld = $('if-mail'), telFeld = $('if-telefon');
+  var RE_MAIL = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
   var probe = '';
   try { probe = new URLSearchParams(location.search).get('probe') || ''; } catch (e) { /* ohne */ }
 
@@ -55,10 +57,10 @@
   function zustand(z) {
     form.setAttribute('data-zustand', z);
     knopf.disabled = z === 'laedt';
-    knopf.textContent = z === 'laedt' ? 'Wird eingeordnet …' : 'Einordnen';
+    knopf.textContent = z === 'laedt' ? 'Wird eingeordnet …' : (kontakt && !kontakt.hidden ? 'Einordnung anzeigen' : 'Einordnung anfordern');
   }
 
-  function anfrage(wunsch) {
+  function anfrage(wunsch, daten) {
     if (probe) {
       return new Promise(function (r) { setTimeout(r, 900); }).then(function () {
         if (probe === 'fehler') throw new Error('netz');
@@ -73,7 +75,7 @@
     return fetch(API, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ wunsch: wunsch }),
+      body: JSON.stringify({ wunsch: wunsch, kontakt: daten }),
       signal: steuer ? steuer.signal : undefined
     }).then(function (r) {
       clearTimeout(zeit);
@@ -134,8 +136,19 @@
       text.focus();
       return;
     }
+    /* Erst die Beschreibung, dann die Kontaktangabe, dann die Einordnung (Philip 09.10.). */
+    if (kontakt && kontakt.hidden) {
+      kontakt.hidden = false;
+      zustand('kontakt');
+      if (mailFeld) mailFeld.focus();
+      return;
+    }
+    var mail = mailFeld ? mailFeld.value.trim() : '';
+    var telefon = telFeld ? telFeld.value.trim() : '';
+    if (!RE_MAIL.test(mail)) { zeigeFehler('Bitte geben Sie eine gültige E-Mail-Adresse an.'); if (mailFeld) mailFeld.focus(); return; }
+    if (telefon.replace(/\D/g, '').length < 6) { zeigeFehler('Bitte geben Sie Ihre Telefonnummer an.'); if (telFeld) telFeld.focus(); return; }
     zustand('laedt');
-    anfrage(wunsch).then(function (a) {
+    anfrage(wunsch, { mail: mail, telefon: telefon }).then(function (a) {
       zustand('fertig');
       if (!a || !a.sprosse) {
         ergebnis.hidden = true;
@@ -147,7 +160,7 @@
       zustand('fehler');
       ergebnis.hidden = true;
       zeigeFehler(err && err.message === 'eingabe'
-        ? 'Bitte beschreiben Sie Ihren Fall etwas genauer, mindestens ' + MINDESTENS + ' Zeichen.'
+        ? 'Bitte prüfen Sie Beschreibung, E-Mail und Telefon.'
         : FEHLER_TEXT);
     });
   });

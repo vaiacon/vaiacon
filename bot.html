@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261009-fakten-versteckt">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
 <link rel="stylesheet" href="ui_kits/website/preismatrix.css?v=20261010-preise-leise">
-<link rel="stylesheet" href="ui_kits/website/automationen.css?v=20261010-spalten">
+<link rel="stylesheet" href="ui_kits/website/automationen.css?v=20261010-kontakt">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -663,11 +663,18 @@
         <form class="if" id="if-form" novalidate>
           <label class="if__label" for="if-text">Was frisst bei Ihnen Zeit?</label>
           <textarea id="if-text" name="wunsch" rows="4" maxlength="1500" aria-describedby="if-zaehler if-hinweis" placeholder="Bei uns kommen Rechnungen per Mail, jemand druckt sie aus und tippt sie in die Buchhaltung …"></textarea>
+          <div class="if__kontakt" id="if-kontakt" hidden>
+            <p class="if__kontakt-satz">Damit wir uns melden können, falls etwas unklar ist:</p>
+            <div class="if__felder">
+              <label class="if__feld"><span>E-Mail</span><input type="email" id="if-mail" name="mail" autocomplete="email" inputmode="email" maxlength="160" placeholder="name@firma.ch"></label>
+              <label class="if__feld"><span>Telefon</span><input type="tel" id="if-telefon" name="telefon" autocomplete="tel" inputmode="tel" maxlength="60" placeholder="044 123 45 67"></label>
+            </div>
+          </div>
           <div class="if__leiste">
             <p class="if__zaehler" id="if-zaehler"><span id="if-n">0</span> Zeichen, mindestens 20</p>
-            <button type="submit" class="sv-button sv-button--cta" id="if-knopf">Einordnen</button>
+            <button type="submit" class="sv-button sv-button--cta" id="if-knopf">Einordnung anfordern</button>
           </div>
-          <p class="if__hinweis" id="if-hinweis">Wir speichern Ihre Beschreibung nicht.</p>
+          <p class="if__hinweis" id="if-hinweis">Ihre Beschreibung geht zusammen mit Ihrer Kontaktangabe an uns. Wir melden uns nur, wenn etwas offen ist.</p>
           <p class="if__fehler" id="if-fehler" role="alert" hidden></p>
         </form>
         <div class="if__ergebnis" id="if-ergebnis" hidden>
@@ -780,7 +787,7 @@
 <script src="ui_kits/website/preise.js?v=20261004-preise"></script>
 <script src="ui_kits/website/preismatrix.js?v=20261010-eine-seite"></script>
 <script src="ui_kits/website/branchen.js?v=20261010-usecases"></script>
-<script src="ui_kits/website/ihrfall.js?v=20261010-sprossen"></script>
+<script src="ui_kits/website/ihrfall.js?v=20261010-kontakt"></script>
 <script src="ui_kits/website/chat.js?v=20261004-umbau"></script>
 </body>
 </html>
