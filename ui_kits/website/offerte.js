@@ -110,14 +110,20 @@
       }
       if (d && typeof d.wunsch === 'string') wunsch = d.wunsch.slice(0, 3000);
     } catch (e) { /* ohne */ }
-    /* Übergabe von «Ihr Fall in zwei Sätzen» (bot.html): einmal lesen, gleich löschen. */
+  }
+  /* Übergabe von «Ihr Fall in zwei Sätzen» (bot.html): einmal lesen, gleich löschen, sofort ins Feld –
+     unabhängig vom Katalog, damit der Text auch bei langsamem oder fehlendem Katalog da ist. */
+  function uebergabeLesen() {
+    var t = '';
     try {
-      var uebergabe = sessionStorage.getItem('vaiacon_wunsch');
-      if (uebergabe) {
-        wunsch = String(uebergabe).slice(0, 3000);
-        sessionStorage.removeItem('vaiacon_wunsch');
-      }
+      t = sessionStorage.getItem('vaiacon_wunsch') || '';
+      if (t) sessionStorage.removeItem('vaiacon_wunsch');
     } catch (e) { /* ohne */ }
+    if (!t) return;
+    wunsch = String(t).slice(0, 3000);
+    var feld = $('of-wunsch');
+    if (feld) { feld.value = wunsch; if ($('of-wunsch-n')) $('of-wunsch-n').textContent = String(wunsch.length); }
+    sichern();
   }
 
   // ── Katalog zeichnen ────────────────────────────────────────────────────
@@ -718,6 +724,7 @@
   function start() {
     ansichten.auswahl.hidden = false;
     verdrahten();
+    uebergabeLesen();
     fetch(KATALOG, { cache: 'no-cache' }).then(function (r) {
       if (!r.ok) throw new Error('Katalog ' + r.status);
       return r.json();
