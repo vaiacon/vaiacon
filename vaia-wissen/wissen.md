@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag d0ecae9 Ihr Fall: Kontaktfelder bleiben bis zur Anforderung verborgen
+> Stand: 09.10.2026 · Eintrag 98b0f7e Automationen: Sinnbilder mit Versionszusatz, damit Browser neu laden
 
 ## Wie du antwortest
 
@@ -532,9 +532,8 @@ Das Ergebnis landet dort, wo Sie arbeiten: im Programm, im Ordner, beim Kunden.
 5 Sie erfahren davon
 Sie behalten den Überblick, ohne nachschauen zu müssen.
 Jedes Beispiel weiter unten ist eine Kombination aus diesen Teilen. Ihres auch.
-WAS ES KOSTET
-Wie gross ist der Schritt?
-Alles, was sich in Ihrem Betrieb wiederholt, lässt sich automatisieren: von der einen festen Regel bis zum ganzen Bereich. Der Preis hängt nur davon ab, wie gross der Schritt ist. Wie schnell er bei Ihnen fertig ist, sagen wir Ihnen dazu – das ändert am Preis nichts. Die Einstufung machen wir in der Erstanalyse, danach steht der Fixpreis. Alle Preise pro Ablauf, einmalig, inklusive MWST.
+AUS DER PRAXIS
+Was sind typische Beispiele in Ihrer Branche?
 1 Einfache Automation Eine feste Regel in einem Programm
 Eine Rechnung kommt per Mail und liegt Sekunden später im richtigen Ordner.
 Was Sie davon haben Nichts geht verloren, niemand sucht am Monatsende.
