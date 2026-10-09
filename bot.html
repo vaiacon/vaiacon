@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261009-fakten-versteckt">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
 <link rel="stylesheet" href="ui_kits/website/preismatrix.css?v=20261009-handy">
-<link rel="stylesheet" href="ui_kits/website/automationen-film.css?v=20261009-straffen">
+<link rel="stylesheet" href="ui_kits/website/automationen-film.css?v=20261009-sachlich">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -344,36 +344,58 @@
             <source src="assets/automationen-reel.mp4" type="video/mp4">
           </video>
         </div>
-        <ul class="af-galerie" aria-label="Sieben Beispiele aus dem Alltag">
-          <li><a href="beispiele#belege"><figure>
-            <picture><source srcset="assets/beispiele/belege-ablegen.webp" type="image/webp"><img src="assets/beispiele/belege-ablegen.jpg" alt="Der vaiacon-Roboter fotografiert einen Beleg mit dem Handy, dahinter Ordner" width="1280" height="768" loading="lazy"></picture>
-            <figcaption><b>Beispiel 1 · Einfach bis Verbunden · Belege in drei Stufen</b><span>Ablegen, buchen, aus Anfragen Offerten machen. Sie fangen klein an.</span></figcaption>
-          </figure></a></li>
-          <li><a href="beispiele#offerten-vorlage"><figure>
-            <picture><source srcset="assets/beispiele/offerten-vorlage.webp" type="image/webp"><img src="assets/beispiele/offerten-vorlage.jpg" alt="Der vaiacon-Roboter setzt ein Dokument aus Bausteinen zusammen" width="1280" height="768" loading="lazy"></picture>
-            <figcaption><b>Beispiel 2 · Einfach · Offerte aus dem Formular</b><span>Formular ausfüllen, fertige PDF-Offerte zur Kontrolle.</span></figcaption>
-          </figure></a></li>
-          <li><a href="beispiele#freigabe-schleife"><figure>
-            <picture><source srcset="assets/beispiele/freigabe-schleife.webp" type="image/webp"><img src="assets/beispiele/freigabe-schleife.jpg" alt="Der vaiacon-Roboter mit Klemmbrett und Wegweiser" width="1280" height="768" loading="lazy"></picture>
-            <figcaption><b>Beispiel 3 · Ganzer Ablauf · Freigabe-Schleife</b><span>Grosse Beträge gehen erst nach Ihrer Freigabe weiter, vom Handy aus.</span></figcaption>
-          </figure></a></li>
-          <li><a href="beispiele#auftragsablauf"><figure>
-            <picture><source srcset="assets/beispiele/auftragsablauf.webp" type="image/webp"><img src="assets/beispiele/auftragsablauf.jpg" alt="Der vaiacon-Roboter neben einem Förderband mit Papierflieger, Paket und Münze" width="1280" height="768" loading="lazy"></picture>
-            <figcaption><b>Beispiel 4 · Ganzer Ablauf · Von der Anfrage zur Rechnung</b><span>Offerte, Auftrag, Rechnung in einem Fluss. Rechnung am Tag des Abschlusses.</span></figcaption>
-          </figure></a></li>
-          <li><a href="beispiele#postfach-ki"><figure>
-            <picture><source srcset="assets/beispiele/postfach-ki.webp" type="image/webp"><img src="assets/beispiele/postfach-ki.jpg" alt="Der vaiacon-Roboter sortiert Briefe in Postfächer" width="1280" height="768" loading="lazy"></picture>
-            <figcaption><b>Beispiel 5 · Einfach · Postfach mit KI</b><span>Das Postfach sortiert sich selbst und schlägt Antworten vor.</span></figcaption>
-          </figure></a></li>
-          <li><a href="beispiele#kundendossier"><figure>
-            <picture><source srcset="assets/beispiele/kundendossier.webp" type="image/webp"><img src="assets/beispiele/kundendossier.jpg" alt="Der vaiacon-Roboter hält einen Ordner, um ihn schweben Karten" width="1280" height="768" loading="lazy"></picture>
-            <figcaption><b>Beispiel 6 · Verbunden · Kundendossier</b><span>Zu jedem Kunden alles an einem Ort, mit Kurzfassung.</span></figcaption>
-          </figure></a></li>
-          <li><a href="beispiele#ganzer-bereich"><figure>
-            <picture><source srcset="assets/beispiele/ganzer-bereich.webp" type="image/webp"><img src="assets/beispiele/ganzer-bereich.jpg" alt="Der vaiacon-Roboter vor einer Tafel mit verbundenen Stationen" width="1280" height="768" loading="lazy"></picture>
-            <figcaption><b>Beispiel 7 · Ganzer Ablauf · Ganzer Bereich</b><span>Einkauf oder Rapportierung laufen von selbst, mit Freigaben.</span></figcaption>
-          </figure></a></li>
-        </ul>
+        <div class="bsp-tabelle" role="table" aria-label="Sieben Beispiele im Überblick">
+          <div class="bsp-tabelle__kopf" role="row"><span role="columnheader">Beispiel</span><span role="columnheader">Sprosse</span><span role="columnheader">Was von selbst läuft</span><span role="columnheader">Was Sie davon haben</span><span role="columnheader">Preis</span></div>
+          <div class="bsp-tabelle__zeile" role="row">
+            <a role="cell" data-label="Beispiel" class="bsp-tabelle__name" href="beispiele#belege">Belege in drei Stufen</a>
+            <span role="cell" data-label="Sprosse"><em class="bsp-tag bsp-tag--mix">Einfach bis Verbunden</em></span>
+            <span role="cell" data-label="Was von selbst läuft">Belege werden abgelegt, gebucht, aus Anfragen werden Offerten-Entwürfe.</span>
+            <span role="cell" data-label="Was Sie davon haben">Etwa ein halber Tag pro Woche zurück.</span>
+            <span role="cell" data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-ablauf-klein" data-preis-form="betrag">ab CHF 1'300</span></span>
+          </div>
+          <div class="bsp-tabelle__zeile" role="row">
+            <a role="cell" data-label="Beispiel" class="bsp-tabelle__name" href="beispiele#offerten-vorlage">Offerte aus dem Formular</a>
+            <span role="cell" data-label="Sprosse"><em class="bsp-tag bsp-tag--e">Einfach</em></span>
+            <span role="cell" data-label="Was von selbst läuft">Aus einem kurzen Formular entsteht die fertige PDF-Offerte.</span>
+            <span role="cell" data-label="Was Sie davon haben">Minuten statt einer Stunde je Offerte.</span>
+            <span role="cell" data-label="Preis" class="bsp-tabelle__preis">ab CHF 2'200</span>
+          </div>
+          <div class="bsp-tabelle__zeile" role="row">
+            <a role="cell" data-label="Beispiel" class="bsp-tabelle__name" href="beispiele#freigabe-schleife">Freigabe-Schleife</a>
+            <span role="cell" data-label="Sprosse"><em class="bsp-tag bsp-tag--g">Ganzer Ablauf</em></span>
+            <span role="cell" data-label="Was von selbst läuft">Grosse Rechnungen gehen erst nach Ihrer Freigabe weiter.</span>
+            <span role="cell" data-label="Was Sie davon haben">Freigabe vom Handy, nachvollziehbar.</span>
+            <span role="cell" data-label="Preis" class="bsp-tabelle__preis">ab CHF 2'600</span>
+          </div>
+          <div class="bsp-tabelle__zeile" role="row">
+            <a role="cell" data-label="Beispiel" class="bsp-tabelle__name" href="beispiele#auftragsablauf">Von der Anfrage zur Rechnung</a>
+            <span role="cell" data-label="Sprosse"><em class="bsp-tag bsp-tag--g">Ganzer Ablauf</em></span>
+            <span role="cell" data-label="Was von selbst läuft">Offerte, Auftrag und Rechnung laufen in einem Fluss.</span>
+            <span role="cell" data-label="Was Sie davon haben">Rechnung am Tag des Abschlusses.</span>
+            <span role="cell" data-label="Preis" class="bsp-tabelle__preis">ab CHF 4'200</span>
+          </div>
+          <div class="bsp-tabelle__zeile" role="row">
+            <a role="cell" data-label="Beispiel" class="bsp-tabelle__name" href="beispiele#postfach-ki">Postfach mit KI</a>
+            <span role="cell" data-label="Sprosse"><em class="bsp-tag bsp-tag--e">Einfach</em></span>
+            <span role="cell" data-label="Was von selbst läuft">Mails werden eingeordnet, Antwortentwürfe stehen bereit.</span>
+            <span role="cell" data-label="Was Sie davon haben">Weniger Sortieren, schnellere Antworten.</span>
+            <span role="cell" data-label="Preis" class="bsp-tabelle__preis">ab CHF 3'800</span>
+          </div>
+          <div class="bsp-tabelle__zeile" role="row">
+            <a role="cell" data-label="Beispiel" class="bsp-tabelle__name" href="beispiele#kundendossier">Kundendossier</a>
+            <span role="cell" data-label="Sprosse"><em class="bsp-tag bsp-tag--v">Verbunden</em></span>
+            <span role="cell" data-label="Was von selbst läuft">Mails, Rechnungen, Offerten und Termine je Kunde an einem Ort.</span>
+            <span role="cell" data-label="Was Sie davon haben">Alles zum Kunden in einem Blick.</span>
+            <span role="cell" data-label="Preis" class="bsp-tabelle__preis">ab CHF 5'200</span>
+          </div>
+          <div class="bsp-tabelle__zeile" role="row">
+            <a role="cell" data-label="Beispiel" class="bsp-tabelle__name" href="beispiele#ganzer-bereich">Ganzer Bereich</a>
+            <span role="cell" data-label="Sprosse"><em class="bsp-tag bsp-tag--g">Ganzer Ablauf</em></span>
+            <span role="cell" data-label="Was von selbst läuft">Einkauf oder Rapportierung laufen von selbst, mit Freigaben.</span>
+            <span role="cell" data-label="Was Sie davon haben">Ein Bereich ohne Handarbeit.</span>
+            <span role="cell" data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-ablauf-gross" data-preis-form="betrag">ab CHF 6'800</span></span>
+          </div>
+        </div>
         <div class="sv-actions sv-center af-mehr">
           <a class="sv-button sv-button--cta" href="beispiele">Alle Beispiele mit Heute, Danach und Nutzen →</a>
         </div>

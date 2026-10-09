@@ -220,29 +220,9 @@
   .bsp-sprung a { transition: none; }
 }
 
-/* Kopf mit Bild */
-.bsp__oben {
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 28px;
-  align-items: center;
-}
-.bsp__bild {
-  margin: 0;
-  min-width: 0;
-  border: 1.5px solid var(--border-ink);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-comic);
-  background: var(--surface-card-sand);
-  aspect-ratio: 5 / 3;
-}
-.bsp__bild img { display: block; width: 100%; height: 100%; object-fit: cover; }
+/* Kopf */
 .bsp-intro { margin: 0 auto; max-width: 62ch; text-align: center; }
 .bsp-intro .sv-lead { margin-top: 10px; }
-@media (max-width: 820px) {
-  .bsp__oben { grid-template-columns: 1fr; }
-}
 
 /* Ausbaustufen (Beispiel «Belege») */
 .bsp__stufen {
@@ -263,8 +243,7 @@
   border: 1.5px solid var(--border-ink);
   border-radius: var(--radius-lg);
   background: var(--surface-card);
-  box-shadow: var(--shadow-comic);
-}
+  }
 .bsp__stufen li:target { outline: 3px solid var(--accent); outline-offset: 2px; }
 .bsp__stufen p { margin: 0; font-size: 15px; color: var(--text-body); }
 .bsp__stufe-kopf { display: grid; gap: 6px; }
@@ -312,3 +291,93 @@
   color: var(--text-strong);
 }
 .bsp__chef b { color: var(--terra-600); }
+
+/* Sachliche Fassung: Ablauf-Streifen statt Bild */
+.bsp__oben { display: block; }
+.bsp__nutzen { margin-top: 6px; }
+.bsp__nutzen li {
+  background: var(--cream-card);
+  color: var(--text-strong);
+  box-shadow: none;
+  border: 1px solid var(--border-strong);
+  border-left: 3px solid var(--terra-500, #B25222);
+  border-radius: var(--radius-sm, 6px);
+}
+.bsp__nutzen b { font-size: 15.5px; }
+.bsp__vergleich {
+  grid-template-columns: minmax(0, .8fr) minmax(0, 2.6fr);
+  gap: 26px;
+  align-items: stretch;
+}
+.bsp__heute, .bsp__danach { border-radius: var(--radius-md); }
+.bsp__heute { position: relative; }
+.bsp__heute::after {
+  content: "";
+  position: absolute;
+  right: -17px; top: 50%;
+  width: 9px; height: 9px;
+  border-top: 2px solid var(--terra-500, #B25222);
+  border-right: 2px solid var(--terra-500, #B25222);
+  transform: translateY(-50%) rotate(45deg);
+}
+.bsp__heute li { font-size: 14.5px; }
+.bsp__danach { border-width: 1px; border-color: var(--border-strong); background: var(--cream-card); padding: 16px 20px; }
+.bsp__danach ol { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+.bsp__danach li {
+  position: relative;
+  display: block;
+  padding-top: 40px;
+  font-size: 14.5px;
+  line-height: 1.4;
+}
+.bsp__danach li b { display: block; font-size: 15.5px; margin-bottom: 2px; }
+.bsp__danach li i {
+  position: absolute;
+  left: 0; top: 0;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--cream-card);
+  border: 1.5px solid var(--terra-500, #B25222);
+  color: var(--terra-600);
+  font-family: var(--font-mono, "IBM Plex Mono", monospace);
+  margin: 0;
+}
+.bsp__danach li:not(:last-child)::before {
+  content: "";
+  position: absolute;
+  left: 36px; right: -14px; top: 13px;
+  height: 1.5px;
+  background: var(--terra-500, #B25222);
+}
+.bsp__danach li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  right: -14px; top: 9.5px;
+  width: 7px; height: 7px;
+  border-top: 1.5px solid var(--terra-500, #B25222);
+  border-right: 1.5px solid var(--terra-500, #B25222);
+  transform: rotate(45deg);
+}
+@media (max-width: 820px) {
+  .bsp__heute::after { right: auto; left: 50%; top: auto; bottom: -17px; transform: translateX(-50%) rotate(135deg); }
+  .bsp__vergleich { grid-template-columns: 1fr; gap: 24px; }
+  .bsp__danach ol { grid-template-columns: 1fr; gap: 16px; }
+  .bsp__danach li { padding: 0 0 0 42px; min-height: 30px; }
+  .bsp__danach li:not(:last-child)::before { left: 13.5px; right: auto; top: 30px; bottom: -14px; width: 1.5px; height: auto; }
+  .bsp__danach li:not(:last-child)::after { right: auto; left: 10px; top: auto; bottom: -14px; transform: rotate(135deg); }
+}
+
+/* Kopf zweispaltig: Text links, Zeile für die Chefin rechts */
+.bsp__kopf {
+  max-width: none;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr);
+  column-gap: 40px;
+  align-items: start;
+}
+.bsp__kopf > .bsp__nr, .bsp__kopf > .bsp__nutzen { grid-column: 1 / -1; }
+.bsp__kopf > h3, .bsp__kopf > .bsp__lead { grid-column: 1; }
+.bsp__kopf > .bsp__chef { grid-column: 2; grid-row: 2 / 4; margin: 6px 0 0; align-self: start; }
+@media (max-width: 820px) {
+  .bsp__kopf { grid-template-columns: 1fr; }
+  .bsp__kopf > .bsp__chef { grid-column: 1; grid-row: auto; }
+}

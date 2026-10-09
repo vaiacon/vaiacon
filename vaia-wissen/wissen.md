@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag d6be0e4 Offerte: Knopf «Richtpreis anfordern» wieder sichtbar
+> Stand: 09.10.2026 · Eintrag af92a87 Merge pull request #22 from vaiacon/matrix-handy
 
 ## Wie du antwortest
 
@@ -533,13 +533,42 @@ Gesamte Deutschschweiz
 IN 22 SEKUNDEN
 So sieht Büroarbeit aus, die von selbst läuft.
 Von einfach bis gross: Beleg ablegen, Rechnung buchen, ganzer Einkauf von selbst. Es lohnt sich überall, wo heute jemand von Hand dasselbe macht. Der Kurzfilm zeigt es ohne Ton.
-Beispiel 1 · Einfach bis Verbunden · Belege in drei Stufen Ablegen, buchen, aus Anfragen Offerten machen. Sie fangen klein an.
-Beispiel 2 · Einfach · Offerte aus dem Formular Formular ausfüllen, fertige PDF-Offerte zur Kontrolle.
-Beispiel 3 · Ganzer Ablauf · Freigabe-Schleife Grosse Beträge gehen erst nach Ihrer Freigabe weiter, vom Handy aus.
-Beispiel 4 · Ganzer Ablauf · Von der Anfrage zur Rechnung Offerte, Auftrag, Rechnung in einem Fluss. Rechnung am Tag des Abschlusses.
-Beispiel 5 · Einfach · Postfach mit KI Das Postfach sortiert sich selbst und schlägt Antworten vor.
-Beispiel 6 · Verbunden · Kundendossier Zu jedem Kunden alles an einem Ort, mit Kurzfassung.
-Beispiel 7 · Ganzer Ablauf · Ganzer Bereich Einkauf oder Rapportierung laufen von selbst, mit Freigaben.
+Beispiel Sprosse Was von selbst läuft Was Sie davon haben Preis
+Belege in drei Stufen
+Einfach bis Verbunden
+Belege werden abgelegt, gebucht, aus Anfragen werden Offerten-Entwürfe.
+Etwa ein halber Tag pro Woche zurück.
+ab CHF 1'300
+Offerte aus dem Formular
+Einfach
+Aus einem kurzen Formular entsteht die fertige PDF-Offerte.
+Minuten statt einer Stunde je Offerte.
+ab CHF 2'200
+Freigabe-Schleife
+Ganzer Ablauf
+Grosse Rechnungen gehen erst nach Ihrer Freigabe weiter.
+Freigabe vom Handy, nachvollziehbar.
+ab CHF 2'600
+Von der Anfrage zur Rechnung
+Ganzer Ablauf
+Offerte, Auftrag und Rechnung laufen in einem Fluss.
+Rechnung am Tag des Abschlusses.
+ab CHF 4'200
+Postfach mit KI
+Einfach
+Mails werden eingeordnet, Antwortentwürfe stehen bereit.
+Weniger Sortieren, schnellere Antworten.
+ab CHF 3'800
+Kundendossier
+Verbunden
+Mails, Rechnungen, Offerten und Termine je Kunde an einem Ort.
+Alles zum Kunden in einem Blick.
+ab CHF 5'200
+Ganzer Bereich
+Ganzer Ablauf
+Einkauf oder Rapportierung laufen von selbst, mit Freigaben.
+Ein Bereich ohne Handarbeit.
+ab CHF 6'800
 Alle Beispiele mit Heute, Danach und Nutzen →
 WAS ES KOSTET
 Wie gross ist der Schritt, und wie schnell ist er fertig?
