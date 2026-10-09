@@ -134,9 +134,9 @@
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "CHF",
-    "lowPrice": 120,
+    "lowPrice": 130,
     "highPrice": 2150,
-    "offerCount": 6
+    "offerCount": 8
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -146,14 +146,29 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Betreuung: eine Automation oder ein Assistent",
+          "name": "Betreuung: eine Automation oder ein Chatbot",
           "description": "Wir halten eine Automation oder einen Assistenten am Laufen: Überwachung, Updates, Support bei Fragen."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
           "priceCurrency": "CHF",
           "valueAddedTaxIncluded": true,
-          "minPrice": 130,
+          "price": 130,
+          "unitText": "Monat"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Betreuung: Telefonassistent",
+          "description": "Überwachung, Updates und Support, dazu die Telefonnummer und 200 Gesprächsminuten im Monat."
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "CHF",
+          "valueAddedTaxIncluded": true,
+          "price": 190,
           "unitText": "Monat"
         }
       },
@@ -162,13 +177,13 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Betreuung: mehrere Abläufe",
-          "description": "Wir betreuen mehrere Automationen oder Assistenten und erledigen kleine Anpassungen gleich mit."
+          "description": "Wir betreuen bis zu fünf Automationen oder Assistenten und erledigen kleine Anpassungen gleich mit."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
           "priceCurrency": "CHF",
           "valueAddedTaxIncluded": true,
-          "minPrice": 290,
+          "price": 290,
           "unitText": "Monat"
         }
       },
@@ -176,14 +191,29 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Laufende Begleitung mit festem Zeitbudget",
-          "description": "Jeden Monat feste Zeit für Ihre Fragen, Ihr Team und neue Ideen rund um KI."
+          "name": "Laufende Begleitung, 4 Stunden im Monat",
+          "description": "Feste Zeit für Ihre Fragen, Ihr Team und neue Ideen rund um KI."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
           "priceCurrency": "CHF",
           "valueAddedTaxIncluded": true,
-          "minPrice": 1300,
+          "price": 650,
+          "unitText": "Monat"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Laufende Begleitung, 8 Stunden im Monat",
+          "description": "Feste Zeit für Ihre Fragen, Ihr Team und neue Ideen rund um KI."
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "CHF",
+          "valueAddedTaxIncluded": true,
+          "price": 1250,
           "unitText": "Monat"
         }
       },
@@ -192,7 +222,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "KI-Standortanalyse im Betrieb",
-          "description": "Wir schauen uns Ihren Betrieb an und legen Ihnen einen Bericht mit den besten nächsten Schritten vor."
+          "description": "Ein halber Tag bei Ihnen, danach ein Bericht mit den besten nächsten Schritten und eine Besprechung."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -227,7 +257,7 @@
           "@type": "UnitPriceSpecification",
           "priceCurrency": "CHF",
           "valueAddedTaxIncluded": true,
-          "price": 120,
+          "price": 150,
           "unitText": "Stunde"
         }
       }
