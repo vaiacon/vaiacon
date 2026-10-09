@@ -362,7 +362,7 @@
           </div>
           <div class="bsp-tabelle__zeile" role="row">
             <a role="cell" data-label="Beispiel" class="bsp-tabelle__name" href="beispiele#freigabe-schleife">Freigabe-Schleife</a>
-            <span role="cell" data-label="Sprosse"><em class="bsp-tag bsp-tag--g">Ganzer Ablauf</em></span>
+            <span role="cell" data-label="Sprosse"><em class="bsp-tag bsp-tag--v">Verbunden</em></span>
             <span role="cell" data-label="Was von selbst läuft">Grosse Rechnungen gehen erst nach Ihrer Freigabe weiter.</span>
             <span role="cell" data-label="Was Sie davon haben">Freigabe vom Handy, nachvollziehbar.</span>
             <span role="cell" data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-freigabe-schleife" data-preis-form="betrag">ab CHF 2'600</span></span>
@@ -370,20 +370,20 @@
           <div class="bsp-tabelle__zeile" role="row">
             <a role="cell" data-label="Beispiel" class="bsp-tabelle__name" href="beispiele#auftragsablauf">Von der Anfrage zur Rechnung</a>
             <span role="cell" data-label="Sprosse"><em class="bsp-tag bsp-tag--g">Ganzer Ablauf</em></span>
-            <span role="cell" data-label="Was von selbst läuft">Offerte, Auftrag und Rechnung laufen in einem Fluss.</span>
+            <span role="cell" data-label="Was von selbst läuft">Anfrage, Offerte, Auftrag und Rechnung laufen in einem Fluss.</span>
             <span role="cell" data-label="Was Sie davon haben">Rechnung am Tag des Abschlusses.</span>
             <span role="cell" data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-auftragsablauf" data-preis-form="betrag">ab CHF 4'200</span></span>
           </div>
           <div class="bsp-tabelle__zeile" role="row">
             <a role="cell" data-label="Beispiel" class="bsp-tabelle__name" href="beispiele#postfach-ki">Postfach mit KI</a>
-            <span role="cell" data-label="Sprosse"><em class="bsp-tag bsp-tag--e">Einfach</em></span>
+            <span role="cell" data-label="Sprosse"><em class="bsp-tag bsp-tag--v">Verbunden</em></span>
             <span role="cell" data-label="Was von selbst läuft">Mails werden eingeordnet, Antwortentwürfe stehen bereit.</span>
             <span role="cell" data-label="Was Sie davon haben">Weniger Sortieren, schnellere Antworten.</span>
             <span role="cell" data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-postfach-ki" data-preis-form="betrag">ab CHF 3'800</span></span>
           </div>
           <div class="bsp-tabelle__zeile" role="row">
             <a role="cell" data-label="Beispiel" class="bsp-tabelle__name" href="beispiele#kundendossier">Kundendossier</a>
-            <span role="cell" data-label="Sprosse"><em class="bsp-tag bsp-tag--v">Verbunden</em></span>
+            <span role="cell" data-label="Sprosse"><em class="bsp-tag bsp-tag--g">Ganzer Ablauf</em></span>
             <span role="cell" data-label="Was von selbst läuft">Mails, Rechnungen, Offerten und Termine je Kunde an einem Ort.</span>
             <span role="cell" data-label="Was Sie davon haben">Alles zum Kunden in einem Blick.</span>
             <span role="cell" data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-kundendossier" data-preis-form="betrag">ab CHF 5'200</span></span>
@@ -441,15 +441,6 @@
                 <span class="pm-cell__preis" data-preis="au-offerte-formular" data-preis-form="betrag">ab CHF 2'200</span>
                 <span class="pm-cell__name">Ablauf mit eigenen Regeln</span>
               </button>
-              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#postfach-ki"
-                data-komplexitaet="Einfach" data-zeit="Wochen" data-dauer="Bei Ihnen fertig in 6 bis 12 Arbeitstagen" data-betreuung="be-betreuung-mittel"
-                data-text="Das Postfach sortiert sich selbst, Antworten stehen als Entwurf bereit, Liegengebliebenes wird nachgefasst."
-                data-nutzen="Kein Kunde geht vergessen, und Wichtiges steht zuoberst."
-                data-umfang="Viele Regeln und Sonderfälle|Schulung des Teams|Begleitung der ersten Durchläufe"
-                data-beispiel="Von achtzig Mails am Tag stehen die fünfzehn wichtigen zuoberst. Zu jeder Anfrage wartet ein Antwort-Entwurf.">
-                <span class="pm-cell__preis" data-preis="au-postfach-ki" data-preis-form="betrag">ab CHF 3'800</span>
-                <span class="pm-cell__name">Postfach mit KI</span>
-              </button>
               </div>
               <div class="pm-spalte">
                 <div class="pm-col"><span class="pm-col__kopf"><i>2</i><b>Verbunden</b></span><small>Zwei Programme reden miteinander, oder die KI entscheidet</small>
@@ -466,6 +457,15 @@
                 <span class="pm-cell__name">Anbindung</span>
                 <span class="pm-cell__tag">Katalog</span>
               </button>
+              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#freigabe-schleife"
+                data-komplexitaet="Verbunden" data-zeit="Tage" data-dauer="Bei Ihnen fertig in 1 bis 2 Arbeitstagen" data-betreuung="be-betreuung-klein"
+                data-text="Grosse Beträge gehen erst weiter, wenn Sie auf dem Handy «Freigeben» drücken."
+                data-nutzen="Nichts geht ohne Sie raus, und Sie müssen dafür nicht im Büro sein."
+                data-umfang="Freigabe per Mail oder Telegram|Erinnerung, wenn niemand antwortet|Meldung bei Ausnahmen"
+                data-beispiel="Eine Rechnung über CHF 2'000 geht zur Inhaberin aufs Handy. Erst nach ihrem Klick geht sie in die Zahlung.">
+                <span class="pm-cell__preis" data-preis="au-freigabe-schleife" data-preis-form="betrag">ab CHF 2'600</span>
+                <span class="pm-cell__name">Freigabe-Schleife</span>
+              </button>
               <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#belege-offerten"
                 data-komplexitaet="Verbunden" data-zeit="Woche" data-dauer="Bei Ihnen fertig in 3 bis 5 Arbeitstagen" data-betreuung="be-betreuung-mittel"
                 data-text="Die KI liest Belege und Anfragen: Belege werden gebucht, aus Anfragen werden Offerten."
@@ -476,30 +476,21 @@
                 <span class="pm-cell__name">Belege und Offerten</span>
                 <span class="pm-cell__tag">Katalog</span>
               </button>
-              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#kundendossier"
+              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#postfach-ki"
                 data-komplexitaet="Verbunden" data-zeit="Wochen" data-dauer="Bei Ihnen fertig in 6 bis 12 Arbeitstagen" data-betreuung="be-betreuung-mittel"
-                data-text="Zu jedem Kunden liegt alles an einem Ort, mit einer Kurzfassung der KI."
-                data-nutzen="In dreissig Sekunden im Bild, auch wenn jemand in den Ferien ist."
-                data-umfang="Daten aus zwei Programmen zusammengeführt|KI fasst je Kunde zusammen|Schulung und Begleitung"
-                data-beispiel="Mails, Rechnungen und Termine eines Kunden stehen untereinander, offene Punkte zuoberst.">
-                <span class="pm-cell__preis" data-preis="au-kundendossier" data-preis-form="betrag">ab CHF 5'200</span>
-                <span class="pm-cell__name">Kundendossier</span>
+                data-text="Das Postfach sortiert sich selbst, Antworten stehen als Entwurf bereit, Liegengebliebenes wird nachgefasst."
+                data-nutzen="Kein Kunde geht vergessen, und Wichtiges steht zuoberst."
+                data-umfang="Viele Regeln und Sonderfälle|Schulung des Teams|Begleitung der ersten Durchläufe"
+                data-beispiel="Von achtzig Mails am Tag stehen die fünfzehn wichtigen zuoberst. Zu jeder Anfrage wartet ein Antwort-Entwurf.">
+                <span class="pm-cell__preis" data-preis="au-postfach-ki" data-preis-form="betrag">ab CHF 3'800</span>
+                <span class="pm-cell__name">Postfach mit KI</span>
               </button>
               </div>
               <div class="pm-spalte">
                 <div class="pm-col"><span class="pm-col__kopf"><i>3</i><b>Ganzer Ablauf</b></span><small>Mehrere Schritte, Freigaben, Ausnahmen: ein Bereich läuft von selbst</small>
                   <span class="pm-col__bsp">Von der Anfrage bis zur Rechnung, ohne dass jemand etwas weiterreicht.</span>
                   <span class="pm-col__gewinn"><em>Was Sie davon haben</em>Der Bereich hängt nicht mehr an einer Person, Rechnungen gehen am Tag des Abschlusses raus.</span>
-                  <span class="pm-col__ab"><em>Preis</em><span data-preis="au-freigabe-schleife" data-preis-form="betrag">ab CHF 2'600</span></span></div>
-              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#freigabe-schleife"
-                data-komplexitaet="Ganzer Ablauf" data-zeit="Tage" data-dauer="Bei Ihnen fertig in 1 bis 2 Arbeitstagen" data-betreuung="be-betreuung-klein"
-                data-text="Grosse Beträge gehen erst weiter, wenn Sie auf dem Handy «Freigeben» drücken."
-                data-nutzen="Nichts geht ohne Sie raus, und Sie müssen dafür nicht im Büro sein."
-                data-umfang="Freigabe per Mail oder Telegram|Erinnerung, wenn niemand antwortet|Meldung bei Ausnahmen"
-                data-beispiel="Eine Rechnung über CHF 2'000 geht zur Inhaberin aufs Handy. Erst nach ihrem Klick geht sie in die Zahlung.">
-                <span class="pm-cell__preis" data-preis="au-freigabe-schleife" data-preis-form="betrag">ab CHF 2'600</span>
-                <span class="pm-cell__name">Freigabe-Schleife</span>
-              </button>
+                  <span class="pm-col__ab"><em>Preis</em><span data-preis="au-auftragsablauf" data-preis-form="betrag">ab CHF 4'200</span></span></div>
               <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#auftragsablauf"
                 data-komplexitaet="Ganzer Ablauf" data-zeit="Woche" data-dauer="Bei Ihnen fertig in 3 bis 5 Arbeitstagen" data-betreuung="be-betreuung-mittel"
                 data-text="Von der Anfrage bis zur Rechnung in einem Fluss, über alle beteiligten Programme."
@@ -508,6 +499,15 @@
                 data-beispiel="Anfrage kommt rein, Offerte geht raus, Auftrag wird angelegt, Rechnung folgt nach Abschluss. Ein Mensch gibt frei.">
                 <span class="pm-cell__preis" data-preis="au-auftragsablauf" data-preis-form="betrag">ab CHF 4'200</span>
                 <span class="pm-cell__name">Auftragsablauf</span>
+              </button>
+              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#kundendossier"
+                data-komplexitaet="Ganzer Ablauf" data-zeit="Wochen" data-dauer="Bei Ihnen fertig in 6 bis 12 Arbeitstagen" data-betreuung="be-betreuung-mittel"
+                data-text="Zu jedem Kunden liegt alles an einem Ort, mit einer Kurzfassung der KI."
+                data-nutzen="In dreissig Sekunden im Bild, auch wenn jemand in den Ferien ist."
+                data-umfang="Daten aus zwei Programmen zusammengeführt|KI fasst je Kunde zusammen|Schulung und Begleitung"
+                data-beispiel="Mails, Rechnungen und Termine eines Kunden stehen untereinander, offene Punkte zuoberst.">
+                <span class="pm-cell__preis" data-preis="au-kundendossier" data-preis-form="betrag">ab CHF 5'200</span>
+                <span class="pm-cell__name">Kundendossier</span>
               </button>
               <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#ganzer-bereich"
                 data-komplexitaet="Ganzer Ablauf" data-zeit="Wochen" data-dauer="Bei Ihnen fertig in 6 bis 12 Arbeitstagen" data-betreuung="be-betreuung-mittel"

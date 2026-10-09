@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag 470face Merge pull request #25 from vaiacon/preise-handy-leiste
+> Stand: 09.10.2026 · Eintrag cf7a7da Fünf Beispielpreise aus preise.json statt fest im Markup
 
 ## Wie du antwortest
 
@@ -550,22 +550,22 @@ Aus einem kurzen Formular entsteht die fertige PDF-Offerte.
 Minuten statt einer Stunde je Offerte.
 ab CHF 2'200
 Freigabe-Schleife
-Ganzer Ablauf
+Verbunden
 Grosse Rechnungen gehen erst nach Ihrer Freigabe weiter.
 Freigabe vom Handy, nachvollziehbar.
 ab CHF 2'600
 Von der Anfrage zur Rechnung
 Ganzer Ablauf
-Offerte, Auftrag und Rechnung laufen in einem Fluss.
+Anfrage, Offerte, Auftrag und Rechnung laufen in einem Fluss.
 Rechnung am Tag des Abschlusses.
 ab CHF 4'200
 Postfach mit KI
-Einfach
+Verbunden
 Mails werden eingeordnet, Antwortentwürfe stehen bereit.
 Weniger Sortieren, schnellere Antworten.
 ab CHF 3'800
 Kundendossier
-Verbunden
+Ganzer Ablauf
 Mails, Rechnungen, Offerten und Termine je Kunde an einem Ort.
 Alles zum Kunden in einem Blick.
 ab CHF 5'200
@@ -587,8 +587,6 @@ Kleiner Ablauf
 Katalog
 ab CHF 2'200
 Ablauf mit eigenen Regeln
-ab CHF 3'800
-Postfach mit KI
 2 Verbunden Zwei Programme reden miteinander, oder die KI entscheidet
 Der Beleg geht aus der Mail direkt in die Buchhaltung.
 Was Sie davon haben Kein Abtippen mehr, die Zahlen stimmen.
@@ -596,19 +594,21 @@ Preis ab CHF 1'900
 ab CHF 1'900
 Anbindung
 Katalog
+ab CHF 2'600
+Freigabe-Schleife
 ab CHF 3'000
 Belege und Offerten
 Katalog
-ab CHF 5'200
-Kundendossier
+ab CHF 3'800
+Postfach mit KI
 3 Ganzer Ablauf Mehrere Schritte, Freigaben, Ausnahmen: ein Bereich läuft von selbst
 Von der Anfrage bis zur Rechnung, ohne dass jemand etwas weiterreicht.
 Was Sie davon haben Der Bereich hängt nicht mehr an einer Person, Rechnungen gehen am Tag des Abschlusses raus.
-Preis ab CHF 2'600
-ab CHF 2'600
-Freigabe-Schleife
+Preis ab CHF 4'200
 ab CHF 4'200
 Auftragsablauf
+ab CHF 5'200
+Kundendossier
 ab CHF 6'800
 Ganzer Bereich
 Katalog
@@ -671,10 +671,10 @@ Suchen Sie sich aus, was bei Ihnen jede Woche Zeit frisst.
 Von einfach bis gross: «Einfach» ist eine feste Regel, «Verbunden» heisst, zwei Programme arbeiten zusammen, «Ganzer Ablauf» heisst, ein ganzer Bereich läuft von selbst. Jedes Beispiel zeigt, was heute liegen bleibt, was danach von selbst läuft und was Sie als Chefin oder Chef davon haben. Und ehrlich, wann es nicht passt.
 1 Einfach bis Verbunden · Belege in drei Stufen
 2 Einfach · Offerte aus dem Formular
-3 Ganzer Ablauf · Freigabe-Schleife
+3 Verbunden · Freigabe-Schleife
 4 Ganzer Ablauf · Von der Anfrage zur Rechnung
-5 Einfach · Postfach mit KI
-6 Verbunden · Kundendossier
+5 Verbunden · Postfach mit KI
+6 Ganzer Ablauf · Kundendossier
 7 Ganzer Ablauf · Ganzer Bereich
 BEREICH 1
 Belege und Buchhaltung
@@ -728,7 +728,7 @@ Mehrere Personen schreiben Offerten.
 Passt nicht, wenn
 Preise entstehen erst im Gespräch.
 Einstufung: Einfach · bei Ihnen fertig in 3 bis 5 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 2'200 Zu den Preisen →
-3 Ganzer Ablauf · Freigabe-Schleife
+3 Verbunden · Freigabe-Schleife
 Grosse Beträge gehen erst nach Ihrer Freigabe weiter.
 Rechnungen über einem Betrag, den Sie festlegen, gehen per Mail oder Handy-Nachricht zur Freigabe. Erst dann werden sie bezahlt.
 Für die Chefin, den Chef: Sie behalten die Hand auf dem Geld, auch wenn Sie unterwegs sind.
@@ -745,7 +745,7 @@ Klare Regel: Betrag, Lieferant oder Kostenstelle.
 Die freigebende Person ist oft unterwegs.
 Passt nicht, wenn
 Jede Rechnung soll persönlich angeschaut werden.
-Einstufung: Ganzer Ablauf · bei Ihnen fertig in 1 bis 2 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 2'600 Zu den Preisen →
+Einstufung: Verbunden · bei Ihnen fertig in 1 bis 2 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 2'600 Zu den Preisen →
 4 Ganzer Ablauf · Von der Anfrage zur Rechnung
 Von der Anfrage bis zur Rechnung in einem Fluss.
 Eine Anfrage kommt rein, die Offerte geht raus, der Auftrag wird angelegt, nach Abschluss folgt die Rechnung. Alle beteiligten Programme arbeiten dabei zusammen.
@@ -767,7 +767,7 @@ Projekte dauern Monate und ändern sich ständig.
 Einstufung: Ganzer Ablauf · bei Ihnen fertig in 3 bis 5 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 4'200 Zu den Preisen →
 BEREICH 3
 Postfach, Kunden und ganze Bereiche
-5 Einfach · Postfach mit KI
+5 Verbunden · Postfach mit KI
 Das Postfach sortiert sich selbst und schlägt Antworten vor.
 Jede Mail wird eingeordnet, für Anfragen steht ein Antwortentwurf in Ihrem Ton bereit.
 Für die Chefin, den Chef: Keine Anfrage geht mehr unter, und Ihr Team beginnt den Tag mit dem Wichtigen.
@@ -783,8 +783,8 @@ Viele ähnliche Anfragen: Preis, Verfügbarkeit, Termin.
 Mail ist Ihr Hauptkanal.
 Passt nicht, wenn
 Jede Antwort ist ein Beratungsgespräch.
-Einstufung: Einfach · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 3'800 Zu den Preisen →
-6 Verbunden · Kundendossier
+Einstufung: Verbunden · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 3'800 Zu den Preisen →
+6 Ganzer Ablauf · Kundendossier
 Zu jedem Kunden alles an einem Ort, mit Kurzfassung.
 Mails, Rechnungen, Offerten und Termine je Kunde aus zwei Programmen, mit Kurzfassung von der KI.
 Für die Chefin, den Chef: Wer ausfällt oder in den Ferien ist, reisst keine Lücke: Der Stand zu jedem Kunden ist jederzeit da.
@@ -802,7 +802,7 @@ Stammkunden mit längerer Beziehung.
 Daten liegen in zwei Programmen.
 Passt nicht, wenn
 Alles ist schon sauber in einem CRM.
-Einstufung: Verbunden · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 5'200 Zu den Preisen →
+Einstufung: Ganzer Ablauf · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 5'200 Zu den Preisen →
 7 Ganzer Ablauf · Ganzer Bereich
 Ein ganzer Bereich läuft von selbst, mit Freigaben, wo sie hingehören.
 Einkauf oder Rapportierung komplett: Bestellung, Lieferschein, Rechnung, Freigabe, Buchung, Auswertung.
