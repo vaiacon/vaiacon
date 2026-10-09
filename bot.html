@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20261005-vorschlag">
 <link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261009-fakten-versteckt">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
-<link rel="stylesheet" href="ui_kits/website/preismatrix.css?v=20261009-handy">
+<link rel="stylesheet" href="ui_kits/website/preismatrix.css?v=20261009-ohne-dauer">
 <link rel="stylesheet" href="ui_kits/website/automationen-film.css?v=20261009-sachlich">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
@@ -408,42 +408,20 @@
       <div class="sv-wrap">
         <div class="sv-center">
           <p class="sv-kicker">WAS ES KOSTET</p>
-          <h2 class="sv-title" id="pm-titel">Wie gross ist der Schritt, und wie schnell ist er fertig?</h2>
+          <h2 class="sv-title" id="pm-titel">Wie gross ist der Schritt?</h2>
           <p class="sv-lead">
-            Alles, was sich in Ihrem Betrieb wiederholt, lässt sich automatisieren: von der einen festen Regel bis zum ganzen Bereich. Zwei Fragen bestimmen den Preis: Wie gross ist der Schritt, und wie lange brauchen wir dafür? Die Einstufung machen wir in der Erstanalyse, danach steht der Fixpreis. Alle Preise pro Ablauf, einmalig, inklusive MWST.
+            Alles, was sich in Ihrem Betrieb wiederholt, lässt sich automatisieren: von der einen festen Regel bis zum ganzen Bereich. Der Preis hängt nur davon ab, wie gross der Schritt ist. Wie schnell er bei Ihnen fertig ist, sagen wir Ihnen dazu – das ändert am Preis nichts. Die Einstufung machen wir in der Erstanalyse, danach steht der Fixpreis. Alle Preise pro Ablauf, einmalig, inklusive MWST.
           </p>
         </div>
-
-        <ol class="pm-leiter" aria-label="Drei Grössen von Automation">
-          <li>
-            <p class="pm-leiter__kopf"><i>1</i><b>Einfach</b></p>
-            <p>Eine feste Regel nimmt Ihnen eine Handarbeit ab. Wie ein Türöffner: Wenn dies passiert, geschieht das.</p>
-            <p class="pm-leiter__bsp">Eine Rechnung kommt per Mail und liegt Sekunden später im richtigen Ordner.</p>
-            <p class="pm-leiter__gewinn"><span>Was Sie davon haben</span>Nichts geht verloren, niemand sucht am Monatsende.</p>
-          </li>
-          <li>
-            <p class="pm-leiter__kopf"><i>2</i><b>Verbunden</b></p>
-            <p>Zwei Programme reden miteinander, oder die KI liest etwas und entscheidet. Was Sie heute abtippen, geschieht von selbst.</p>
-            <p class="pm-leiter__bsp">Der Beleg geht aus der Mail direkt in die Buchhaltung.</p>
-            <p class="pm-leiter__gewinn"><span>Was Sie davon haben</span>Kein Abtippen mehr, die Zahlen stimmen.</p>
-          </li>
-          <li>
-            <p class="pm-leiter__kopf"><i>3</i><b>Ganzer Ablauf</b></p>
-            <p>Mehrere Schritte, Freigaben und Ausnahmen: ein ganzer Bereich läuft von selbst. Sie geben nur frei, wo es Sie braucht.</p>
-            <p class="pm-leiter__bsp">Von der Anfrage bis zur Rechnung, ohne dass jemand etwas weiterreicht.</p>
-            <p class="pm-leiter__gewinn"><span>Was Sie davon haben</span>Der Bereich hängt nicht mehr an einer Person, Rechnungen gehen am Tag des Abschlusses raus.</p>
-          </li>
-        </ol>
 
         <div class="pm-wrap" id="pm-preise">
           <div class="pm-scroll">
             <div class="pm-matrix" id="pm-matrix">
-              <div class="pm-corner"><span>Dauer ↓</span><span class="pm-ax">Grösse des Schritts →</span></div>
-              <div class="pm-col">Einfach<small>Eine feste Regel in einem Programm</small></div>
-              <div class="pm-col">Verbunden<small>Zwei Programme reden miteinander, oder die KI entscheidet</small></div>
-              <div class="pm-col">Ganzer Ablauf<small>Mehrere Schritte, Freigaben, Ausnahmen: ein Bereich läuft von selbst</small></div>
-
-              <div class="pm-row">Tage<small>Bei Ihnen fertig in 1 bis 2 Tagen</small></div>
+              <div class="pm-spalte">
+                <div class="pm-col"><span class="pm-col__kopf"><i>1</i><b>Einfach</b></span><small>Eine feste Regel in einem Programm</small>
+                  <span class="pm-col__bsp">Eine Rechnung kommt per Mail und liegt Sekunden später im richtigen Ordner.</span>
+                  <span class="pm-col__gewinn"><em>Was Sie davon haben</em>Nichts geht verloren, niemand sucht am Monatsende.</span>
+                  <span class="pm-col__ab"><em>Preis</em><span data-preis="au-ablauf-klein" data-preis-form="betrag">ab CHF 1'300</span></span></div>
               <button type="button" class="pm-cell ist-gewaehlt" aria-pressed="true" data-mehr="beispiele#belege-ablegen"
                 data-komplexitaet="Einfach" data-zeit="Tage" data-dauer="Bei Ihnen fertig in 1 bis 2 Arbeitstagen" data-betreuung="be-betreuung-klein"
                 data-text="Eine feste Regel: Kommt ein Beleg per Mail, legen wir ihn von selbst richtig ab."
@@ -454,6 +432,30 @@
                 <span class="pm-cell__name">Kleiner Ablauf</span>
                 <span class="pm-cell__tag">Katalog</span>
               </button>
+              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#offerten-vorlage"
+                data-komplexitaet="Einfach" data-zeit="Woche" data-dauer="Bei Ihnen fertig in 3 bis 5 Arbeitstagen" data-betreuung="be-betreuung-klein"
+                data-text="Ihr Team füllt ein Formular aus, die fertige Offerte liegt als PDF bereit."
+                data-nutzen="Jede Offerte ist gleich gut, und sie ist in Minuten fertig."
+                data-umfang="Ihre Regeln gemeinsam mit dem Team festhalten|Zwei Probeläufe|Anleitung und kurze Einführung"
+                data-beispiel="Aus einem Formular wird eine Offerte in Ihrem Design. Sie schauen drüber, dann geht sie raus.">
+                <span class="pm-cell__preis">ab CHF 2'200</span>
+                <span class="pm-cell__name">Ablauf mit eigenen Regeln</span>
+              </button>
+              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#postfach-ki"
+                data-komplexitaet="Einfach" data-zeit="Wochen" data-dauer="Bei Ihnen fertig in 6 bis 12 Arbeitstagen" data-betreuung="be-betreuung-mittel"
+                data-text="Das Postfach sortiert sich selbst, Antworten stehen als Entwurf bereit, Liegengebliebenes wird nachgefasst."
+                data-nutzen="Kein Kunde geht vergessen, und Wichtiges steht zuoberst."
+                data-umfang="Viele Regeln und Sonderfälle|Schulung des Teams|Begleitung der ersten Durchläufe"
+                data-beispiel="Von achtzig Mails am Tag stehen die fünfzehn wichtigen zuoberst. Zu jeder Anfrage wartet ein Antwort-Entwurf.">
+                <span class="pm-cell__preis">ab CHF 3'800</span>
+                <span class="pm-cell__name">Postfach mit KI</span>
+              </button>
+              </div>
+              <div class="pm-spalte">
+                <div class="pm-col"><span class="pm-col__kopf"><i>2</i><b>Verbunden</b></span><small>Zwei Programme reden miteinander, oder die KI entscheidet</small>
+                  <span class="pm-col__bsp">Der Beleg geht aus der Mail direkt in die Buchhaltung.</span>
+                  <span class="pm-col__gewinn"><em>Was Sie davon haben</em>Kein Abtippen mehr, die Zahlen stimmen.</span>
+                  <span class="pm-col__ab"><em>Preis</em><span data-preis="au-integration" data-preis-form="betrag">ab CHF 1'900</span></span></div>
               <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#belege-buchhaltung"
                 data-komplexitaet="Verbunden" data-zeit="Tage" data-dauer="Bei Ihnen fertig in 1 bis 2 Arbeitstagen" data-betreuung="be-betreuung-klein"
                 data-text="Zwei Programme reden miteinander: Der Beleg aus der Mail steht in der Buchhaltung als Buchung bereit."
@@ -463,26 +465,6 @@
                 <span class="pm-cell__preis" data-preis="au-integration" data-preis-form="betrag">ab CHF 1'900</span>
                 <span class="pm-cell__name">Anbindung</span>
                 <span class="pm-cell__tag">Katalog</span>
-              </button>
-              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#freigabe-schleife"
-                data-komplexitaet="Ganzer Ablauf" data-zeit="Tage" data-dauer="Bei Ihnen fertig in 1 bis 2 Arbeitstagen" data-betreuung="be-betreuung-klein"
-                data-text="Grosse Beträge gehen erst weiter, wenn Sie auf dem Handy «Freigeben» drücken."
-                data-nutzen="Nichts geht ohne Sie raus, und Sie müssen dafür nicht im Büro sein."
-                data-umfang="Freigabe per Mail oder Telegram|Erinnerung, wenn niemand antwortet|Meldung bei Ausnahmen"
-                data-beispiel="Eine Rechnung über CHF 2'000 geht zur Inhaberin aufs Handy. Erst nach ihrem Klick geht sie in die Zahlung.">
-                <span class="pm-cell__preis">ab CHF 2'600</span>
-                <span class="pm-cell__name">Freigabe-Schleife</span>
-              </button>
-
-              <div class="pm-row">Woche<small>Bei Ihnen fertig in etwa einer Woche</small></div>
-              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#offerten-vorlage"
-                data-komplexitaet="Einfach" data-zeit="Woche" data-dauer="Bei Ihnen fertig in 3 bis 5 Arbeitstagen" data-betreuung="be-betreuung-klein"
-                data-text="Ihr Team füllt ein Formular aus, die fertige Offerte liegt als PDF bereit."
-                data-nutzen="Jede Offerte ist gleich gut, und sie ist in Minuten fertig."
-                data-umfang="Ihre Regeln gemeinsam mit dem Team festhalten|Zwei Probeläufe|Anleitung und kurze Einführung"
-                data-beispiel="Aus einem Formular wird eine Offerte in Ihrem Design. Sie schauen drüber, dann geht sie raus.">
-                <span class="pm-cell__preis">ab CHF 2'200</span>
-                <span class="pm-cell__name">Ablauf mit eigenen Regeln</span>
               </button>
               <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#belege-offerten"
                 data-komplexitaet="Verbunden" data-zeit="Woche" data-dauer="Bei Ihnen fertig in 3 bis 5 Arbeitstagen" data-betreuung="be-betreuung-mittel"
@@ -494,26 +476,6 @@
                 <span class="pm-cell__name">Belege und Offerten</span>
                 <span class="pm-cell__tag">Katalog</span>
               </button>
-              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#auftragsablauf"
-                data-komplexitaet="Ganzer Ablauf" data-zeit="Woche" data-dauer="Bei Ihnen fertig in 3 bis 5 Arbeitstagen" data-betreuung="be-betreuung-mittel"
-                data-text="Von der Anfrage bis zur Rechnung in einem Fluss, über alle beteiligten Programme."
-                data-nutzen="Die Rechnung geht am Tag des Abschlusses raus, das Geld ist früher auf dem Konto."
-                data-umfang="Bis 3 Programme verbunden|Freigaben und Ausnahmen|Zwei Probeläufe, Einführung"
-                data-beispiel="Anfrage kommt rein, Offerte geht raus, Auftrag wird angelegt, Rechnung folgt nach Abschluss. Ein Mensch gibt frei.">
-                <span class="pm-cell__preis">ab CHF 4'200</span>
-                <span class="pm-cell__name">Auftragsablauf</span>
-              </button>
-
-              <div class="pm-row">Wochen<small>Bei Ihnen fertig in 2 bis 3 Wochen</small></div>
-              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#postfach-ki"
-                data-komplexitaet="Einfach" data-zeit="Wochen" data-dauer="Bei Ihnen fertig in 6 bis 12 Arbeitstagen" data-betreuung="be-betreuung-mittel"
-                data-text="Das Postfach sortiert sich selbst, Antworten stehen als Entwurf bereit, Liegengebliebenes wird nachgefasst."
-                data-nutzen="Kein Kunde geht vergessen, und Wichtiges steht zuoberst."
-                data-umfang="Viele Regeln und Sonderfälle|Schulung des Teams|Begleitung der ersten Durchläufe"
-                data-beispiel="Von achtzig Mails am Tag stehen die fünfzehn wichtigen zuoberst. Zu jeder Anfrage wartet ein Antwort-Entwurf.">
-                <span class="pm-cell__preis">ab CHF 3'800</span>
-                <span class="pm-cell__name">Postfach mit KI</span>
-              </button>
               <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#kundendossier"
                 data-komplexitaet="Verbunden" data-zeit="Wochen" data-dauer="Bei Ihnen fertig in 6 bis 12 Arbeitstagen" data-betreuung="be-betreuung-mittel"
                 data-text="Zu jedem Kunden liegt alles an einem Ort, mit einer Kurzfassung der KI."
@@ -522,6 +484,30 @@
                 data-beispiel="Mails, Rechnungen und Termine eines Kunden stehen untereinander, offene Punkte zuoberst.">
                 <span class="pm-cell__preis">ab CHF 5'200</span>
                 <span class="pm-cell__name">Kundendossier</span>
+              </button>
+              </div>
+              <div class="pm-spalte">
+                <div class="pm-col"><span class="pm-col__kopf"><i>3</i><b>Ganzer Ablauf</b></span><small>Mehrere Schritte, Freigaben, Ausnahmen: ein Bereich läuft von selbst</small>
+                  <span class="pm-col__bsp">Von der Anfrage bis zur Rechnung, ohne dass jemand etwas weiterreicht.</span>
+                  <span class="pm-col__gewinn"><em>Was Sie davon haben</em>Der Bereich hängt nicht mehr an einer Person, Rechnungen gehen am Tag des Abschlusses raus.</span>
+                  <span class="pm-col__ab"><em>Preis</em><span>ab CHF 2'600</span></span></div>
+              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#freigabe-schleife"
+                data-komplexitaet="Ganzer Ablauf" data-zeit="Tage" data-dauer="Bei Ihnen fertig in 1 bis 2 Arbeitstagen" data-betreuung="be-betreuung-klein"
+                data-text="Grosse Beträge gehen erst weiter, wenn Sie auf dem Handy «Freigeben» drücken."
+                data-nutzen="Nichts geht ohne Sie raus, und Sie müssen dafür nicht im Büro sein."
+                data-umfang="Freigabe per Mail oder Telegram|Erinnerung, wenn niemand antwortet|Meldung bei Ausnahmen"
+                data-beispiel="Eine Rechnung über CHF 2'000 geht zur Inhaberin aufs Handy. Erst nach ihrem Klick geht sie in die Zahlung.">
+                <span class="pm-cell__preis">ab CHF 2'600</span>
+                <span class="pm-cell__name">Freigabe-Schleife</span>
+              </button>
+              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#auftragsablauf"
+                data-komplexitaet="Ganzer Ablauf" data-zeit="Woche" data-dauer="Bei Ihnen fertig in 3 bis 5 Arbeitstagen" data-betreuung="be-betreuung-mittel"
+                data-text="Von der Anfrage bis zur Rechnung in einem Fluss, über alle beteiligten Programme."
+                data-nutzen="Die Rechnung geht am Tag des Abschlusses raus, das Geld ist früher auf dem Konto."
+                data-umfang="Bis 3 Programme verbunden|Freigaben und Ausnahmen|Zwei Probeläufe, Einführung"
+                data-beispiel="Anfrage kommt rein, Offerte geht raus, Auftrag wird angelegt, Rechnung folgt nach Abschluss. Ein Mensch gibt frei.">
+                <span class="pm-cell__preis">ab CHF 4'200</span>
+                <span class="pm-cell__name">Auftragsablauf</span>
               </button>
               <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#ganzer-bereich"
                 data-komplexitaet="Ganzer Ablauf" data-zeit="Wochen" data-dauer="Bei Ihnen fertig in 6 bis 12 Arbeitstagen" data-betreuung="be-betreuung-mittel"
@@ -533,13 +519,14 @@
                 <span class="pm-cell__name">Ganzer Bereich</span>
                 <span class="pm-cell__tag">Katalog</span>
               </button>
+              </div>
             </div>
           </div>
           <p class="pm-hinweis">Antippen: Sie sehen, was passiert, was es bringt und was es im ersten Jahr kostet.</p>
 
           <div class="pm-detail" aria-live="polite">
             <div class="pm-card">
-              <p class="sv-kicker" id="pm-d-kicker">Einfach · Tage</p>
+              <p class="sv-kicker" id="pm-d-kicker">Einfach</p>
               <h3 id="pm-d-titel">Kleiner Ablauf</h3>
               <p id="pm-d-text">Eine feste Regel: Kommt ein Beleg per Mail, legen wir ihn von selbst richtig ab.</p>
               <div class="pm-nutzen"><b>Was Sie davon haben</b><p id="pm-d-nutzen">Niemand sucht mehr am Monatsende, und kein Beleg geht verloren.</p></div>
@@ -671,7 +658,7 @@
 <script src="ui_kits/website/api-basis.js?v=20261004-umbau"></script>
 <script src="ui_kits/website/visibility.js?v=20261007-logo-svg"></script>
 <script src="ui_kits/website/preise.js?v=20261004-preise"></script>
-<script src="ui_kits/website/preismatrix.js?v=20261009-handy"></script>
+<script src="ui_kits/website/preismatrix.js?v=20261009-ohne-dauer"></script>
 <script src="ui_kits/website/chat.js?v=20261004-umbau"></script>
 </body>
 </html>
