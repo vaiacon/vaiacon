@@ -36,6 +36,7 @@
     setze('pm-d-kicker', zelle.getAttribute('data-komplexitaet') + ' · ' + zelle.getAttribute('data-zeit'));
     setze('pm-d-titel', zelle.querySelector('.pm-cell__name').textContent.trim());
     setze('pm-d-text', zelle.getAttribute('data-text') || '');
+    setze('pm-d-nutzen', zelle.getAttribute('data-nutzen') || '');
     setze('pm-d-beispiel', zelle.getAttribute('data-beispiel') || '');
     setze('pm-d-preis', preisText);
     setze('pm-d-dauer', zelle.getAttribute('data-dauer') || '');

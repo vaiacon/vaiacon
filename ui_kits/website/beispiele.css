@@ -300,3 +300,15 @@
   .bsp__stufen { grid-template-columns: 1fr; }
   .bsp__passt--nur-nein ul { display: grid; }
 }
+
+/* Zeile für die Chefin, den Chef: was es dem Betrieb bringt */
+.bsp__chef {
+  margin: var(--space-3) 0 0;
+  padding: 10px 16px;
+  background: var(--cream-card);
+  border-left: 4px solid var(--terra-600);
+  border-radius: 6px;
+  font-size: var(--text-lead);
+  color: var(--text-strong);
+}
+.bsp__chef b { color: var(--terra-600); }
