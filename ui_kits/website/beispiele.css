@@ -98,7 +98,7 @@
 }
 .bsp__heute, .bsp__danach {
   min-width: 0;
-  padding: 22px 24px;
+  padding: 16px 18px;
   border-radius: var(--radius-lg);
 }
 .bsp__heute { background: var(--surface-card-sand); border: 1px solid var(--border-strong); }
@@ -150,14 +150,14 @@
 .bsp__nutzen {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-  margin: 0;
+  gap: 10px;
+  margin: 10px 0 0;
   padding: 0;
   list-style: none;
 }
 .bsp__nutzen li {
   min-width: 0;
-  padding: 14px 18px;
+  padding: 12px 14px;
   border-radius: var(--radius-md);
   background: var(--grad-package);
   color: var(--text-on-terra);
@@ -165,7 +165,7 @@
 }
 .bsp__nutzen b {
   display: block;
-  font-size: 19px;
+  font-size: 16px;
   line-height: 1.2;
   letter-spacing: var(--tracking-tight);
   font-weight: var(--weight-bold);
