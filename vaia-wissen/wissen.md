@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag a23f754 Branchen-Umschalter zeigt realistische Use Cases statt Einzelsätze
+> Stand: 09.10.2026 · Eintrag 425a373 Beispiel-Tabelle: feste Spalten, lange Sprossen-Pille verschiebt nichts mehr
 
 ## Wie du antwortest
 
@@ -1320,134 +1320,134 @@ Realistische Use Cases je Branche, geordnet nach den drei Sprossen (Einfache, Mi
 
 #### Malerbetrieb
 
-Das nervt: Aufmass, Rapport und Offerte werden mehrfach abgetippt, bis am Ende die Rechnung rausgeht. Offerten bleiben liegen, weil das Nachfassen an Notizzetteln und am Gedächtnis hängt. Arbeitszeiten von der Baustelle kommen spät oder lückenhaft im Büro an.
+Das nervt: Mehrfach abtippen: Aufmass, Rapport, Offerte Offerten liegen, Nachfassen vergessen Arbeitszeiten kommen spät von der Baustelle
 
 Einfache Automation:
-- Bewertungsbitte nach Abnahme: Nach der Abnahme geht eine Nachricht mit Google-Bewertungslink an den Kunden, Ihre Referenzen wachsen ohne Nachfragen.
-- Rapport-Foto ablegen: Fotos von Rapport und Lieferschein per WhatsApp landen automatisch im richtigen Projektordner, mit Datum und Kundennamen benannt.
-- Zahlungseingang abgleichen: Eingehende QR-Zahlungen werden der offenen Rechnung zugeordnet und als bezahlt markiert, ohne dass jemand Kontoauszüge durchgeht.
+- Bewertungsbitte nach Abnahme: Abnahme → Nachricht mit Bewertungslink → Referenz
+- Rapport-Foto ablegen: WhatsApp-Foto → Projektordner, benannt
+- Zahlungseingang abgleichen: QR-Zahlung → offene Rechnung → bezahlt
 
 Mittelgrosse Automation:
-- Offerte mit Nachfassen: Nach jedem Versand erinnert das System nach einer Woche und schreibt einen Nachfass-Entwurf, den Sie nur freigeben.
-- Aufmass zu Offertenentwurf: Aus Raumfotos, Massen und Wunschfarbe entsteht ein Offertenentwurf mit Flächen und Material, den Sie prüfen und anpassen.
-- Terminabgleich mit Kunden: Kunden wählen online einen freien Besichtigungstermin; er erscheint in Ihrem Kalender samt Adresse und Anfahrtszeit.
+- Offerte mit Nachfassen: Offerte versandt → nach einer Woche Nachfass-Entwurf
+- Aufmass zu Offertenentwurf: Raumfotos + Masse → Offertenentwurf
+- Terminabgleich mit Kunden: Online-Termin → Kalender mit Adresse und Anfahrt
 
 Komplette Automation:
-- Von Anfrage bis Rechnung: Von der Anfrage über Besichtigung, Offerte und Rapport bis zur QR-Rechnung; Sie geben nur frei, der Mahnlauf läuft mit.
-- Mahnlauf von selbst: Offene Rechnungen bekommen Erinnerung, erste und zweite Mahnung zur richtigen Zeit; bei Streit stoppt es und fragt Sie.
-- Social-Media-Funnel Anfrage: Ein Beitrag mit Vorher-nachher-Bildern führt über ein Formular zur Anfrage; die KI ordnet sie ein und bucht die Besichtigung.
+- Von Anfrage bis Rechnung: Anfrage → Besichtigung → Offerte → Rapport → QR-Rechnung
+- Mahnlauf von selbst: Erinnerung → 1. Mahnung → 2. Mahnung, Stopp bei Streit
+- Social-Media-Funnel: Beitrag → Formular → KI-Einordnung → Besichtigung
 
 #### Treuhand
 
-Das nervt: Mandanten liefern Belege zu spät, unvollständig oder per Post und Mail durcheinander. Fehlende Unterlagen müssen immer wieder von Hand nachgefragt werden. Fristen für MWST, Lohn und Abschluss laufen als einzelne Termine statt als sauberer Prozess.
+Das nervt: Belege kommen spät, unvollständig, durcheinander Fehlende Unterlagen von Hand nachfragen Fristen als einzelne Termine statt Ablauf
 
 Einfache Automation:
-- Belege von selbst ablegen: Belege per Mail oder App werden erkannt, benannt und im richtigen Mandantenordner abgelegt, statt von Hand sortiert zu werden.
-- Fristen-Erinnerung an Mandanten: Vor MWST- und Abschlussterminen geht automatisch eine Liste der benötigten Unterlagen an die Mandanten, mit Datum und Upload-Link.
-- Zahlungen zu Debitoren: Eingehende Zahlungen werden anhand der QR-Referenz den offenen Posten zugeordnet, sodass die Debitorenliste immer aktuell ist.
+- Belege von selbst ablegen: Beleg per Mail oder App → benannt → Mandantenordner
+- Fristen-Erinnerung an Mandanten: Vor Frist → Unterlagenliste → Upload-Link
+- Zahlungen zu Debitoren: QR-Zahlung → offener Posten → Debitorenliste aktuell
 
 Mittelgrosse Automation:
-- Rückfrage bei fehlenden Belegen: Das System erkennt Bankbuchungen ohne Beleg und fragt den Mandanten gezielt per Mail oder WhatsApp, bis der Beleg da ist.
-- Kontierungsvorschlag mit Prüfung: Die KI liest Lieferantenrechnungen und schlägt Konto, MWST und Kostenstelle vor; Sie prüfen nur Ausnahmen.
-- Beratungstermin buchen lassen: Mandanten buchen Besprechungen online im Kalender; Erinnerung und Unterlagenliste gehen automatisch mit.
+- Rückfrage bei fehlenden Belegen: Buchung ohne Beleg → Rückfrage per Mail oder WhatsApp
+- Kontierungsvorschlag mit Prüfung: Lieferantenrechnung → Kontovorschlag → Ausnahmen prüfen
+- Beratungstermin buchen lassen: Online-Termin → Erinnerung + Unterlagenliste
 
 Komplette Automation:
-- MWST-Abrechnung ohne Jagd: Belege einsammeln, kontieren, Abstimmung vorbereiten und Entwurf der MWST-Abrechnung erstellen; Sie prüfen und reichen ein.
-- Mandanten-Onboarding komplett: Neuer Mandant: Formular, Vollmacht, Checkliste, Ordnerstruktur und Buchhaltungs-Zugang entstehen automatisch, Sie unterschreiben nur.
-- Honorarrechnung bis Mahnung: Aus erfasster Zeit entsteht die Honorarrechnung, danach folgen Zahlungsabgleich und Mahnstufen, die Sie nur freigeben.
+- MWST-Abrechnung ohne Jagd: Belege → Kontierung → Abstimmung → MWST-Entwurf
+- Mandanten-Onboarding komplett: Formular → Vollmacht → Checkliste → Ordner → Zugang
+- Honorarrechnung bis Mahnung: Zeiterfassung → Honorarrechnung → Zahlungsabgleich → Mahnung
 
 #### Arztpraxis
 
-Das nervt: Nicht abgesagte Termine lassen Stühle leer und kosten Geld. Das Telefon an der Rezeption bindet das Team, auch bei Rezepten und Terminwünschen. Dokumentation und Berichte fressen Zeit, die für Patienten fehlt.
+Das nervt: Leere Stühle durch nicht abgesagte Termine Telefon bindet das Team: Rezepte, Termine Berichte und Dokumentation fressen Zeit
 
 Einfache Automation:
-- Terminerinnerung mit Absagelink: Patienten erhalten 24 Stunden vorher eine Mail oder SMS mit Absagelink, sodass freie Termine früh wieder vergeben werden können.
-- Recall für Vorsorge: Wer seit einem Jahr keinen Check hatte oder eine Impfauffrischung braucht, bekommt automatisch eine Einladung zur Terminbuchung.
-- Rezeptwunsch per Formular: Rezeptbestellungen kommen über ein Formular statt Telefon und landen sortiert beim Team, das nur noch freigibt.
+- Terminerinnerung mit Absagelink: Tag vorher → Mail oder SMS → Absagelink
+- Recall für Vorsorge: Kein Check seit einem Jahr → Einladung → Termin
+- Rezeptwunsch per Formular: Rezeptwunsch → Formular statt Telefon → Freigabe
 
 Mittelgrosse Automation:
-- Nachrückerliste für Absagen: Wird ein Termin abgesagt, fragt das System Wartende per SMS an und trägt die erste Zusage in den Kalender ein.
-- Praxis-Chat für Standardfragen: Ein Chat auf der Website beantwortet Fragen zu Öffnungszeiten, Anfahrt und Ablauf und leitet Terminwünsche weiter.
-- Berichtsentwurf aus Diktat: Aus dem Diktat entsteht ein Berichtsentwurf in Ihrem Stil; Sie korrigieren nur noch, statt alles abzutippen.
+- Nachrückerliste für Absagen: Absage → SMS an Wartende → erste Zusage im Kalender
+- Praxis-Chat für Standardfragen: Website-Chat → Fragen beantwortet → Terminwunsch weiter
+- Berichtsentwurf aus Diktat: Diktat → Berichtsentwurf im eigenen Stil → Korrektur
 
 Komplette Automation:
-- Terminweg bis zum Recall: Online-Buchung, Erinnerung, Absage, Nachrücken und Folgetermin laufen durch; das Team greift nur bei Sonderfällen ein.
-- Rechnung und Zahlungsabgleich: Leistungen werden zur Rechnung, QR-Zahlungen automatisch zugeordnet und Zahlungserinnerungen verschickt; Sie geben nur frei.
-- Neupatienten-Aufnahme digital: Neue Patienten füllen vor dem Besuch Formular und Einwilligung online aus; die Daten gehen direkt ins Dossier.
+- Terminweg bis zum Recall: Buchung → Erinnerung → Absage → Nachrücken → Folgetermin
+- Rechnung und Zahlungsabgleich: Leistung → Rechnung → QR-Zahlung → Zahlungserinnerung
+- Neupatienten-Aufnahme digital: Formular + Einwilligung vorab → direkt ins Dossier
 
 #### Sanitär und Heizung
 
-Das nervt: Regierapporte müssen täglich erfasst und vom Kunden unterschrieben werden, sonst fehlt später der Beleg. Wartungstermine und Serviceverträge werden von Hand verwaltet und vergessen. Arbeitszeiten und Material landen spät im Büro, die Rechnung dadurch auch.
+Das nervt: Regierapport täglich erfassen und unterschreiben Wartungsverträge von Hand, Termine vergessen Zeit und Material spät im Büro, Rechnung auch
 
 Einfache Automation:
-- Wartungserinnerung an Kunden: Vor dem Wartungsintervall geht automatisch eine Terminanfrage an den Kunden, sodass Serviceverträge nicht mehr vergessen werden.
-- Regierapport per Handy: Monteure erfassen Zeit und Material auf dem Handy, Kunde unterschreibt digital, der Rapport liegt sofort im Projekt.
-- Bewertungsbitte nach Einsatz: Nach dem Einsatz geht eine Nachricht mit Google-Bewertungslink an den Kunden, ohne dass jemand daran denken muss.
+- Wartungserinnerung an Kunden: Vor Intervall → Terminanfrage an Kunden
+- Regierapport per Handy: Zeit + Material am Handy → digitale Unterschrift → Projekt
+- Bewertungsbitte nach Einsatz: Einsatz erledigt → Nachricht mit Bewertungslink
 
 Mittelgrosse Automation:
-- Notfallanfrage sortieren: Die KI liest Mails und Formulare, erkennt Notfälle wie Rohrbruch, alarmiert den Pikettdienst und schlägt Normalfällen einen Termin vor.
-- Einsatzplan mit Kalenderabgleich: Neue Aufträge werden mit Monteur-Kalender, Anfahrt und Material abgeglichen; Sie erhalten einen Terminvorschlag zur Freigabe.
-- Rapport zu Rechnung: Aus dem unterschriebenen Rapport entsteht ein Rechnungsentwurf mit QR-Zahlteil, den Sie nur noch prüfen.
+- Notfallanfrage sortieren: Mail → Notfall erkannt → Pikettdienst; sonst Terminvorschlag
+- Einsatzplan mit Kalenderabgleich: Auftrag → Monteur-Kalender + Material → Terminvorschlag
+- Rapport zu Rechnung: Unterschriebener Rapport → Rechnungsentwurf mit QR-Teil
 
 Komplette Automation:
-- Servicevertrag im Kreis: Vertrag, Wartungsplan, Terminanfrage, Rapport, Rechnung und Mahnung laufen von selbst; Sie geben Ausnahmen und Rechnungen frei.
-- Von Anfrage bis Rechnung: Anfrage wird zu Besichtigung, Offerte, Auftrag, Regierapport und Rechnung; Sie geben jeweils nur frei.
-- Social-Media-Funnel Heizungsersatz: Beitrag zum Heizungsersatz führt über Formular zur Anfrage, Vorqualifizierung und Beratungstermin im Kalender.
+- Servicevertrag im Kreis: Wartungsplan → Termin → Rapport → Rechnung → Mahnung
+- Von Anfrage bis Rechnung: Anfrage → Besichtigung → Offerte → Rapport → Rechnung
+- Social-Media-Funnel Heizungsersatz: Beitrag → Formular → Vorprüfung → Beratungstermin
 
 #### Agentur
 
-Das nervt: Monatsberichte für Kunden zusammenzutragen frisst Stunden, obwohl die Daten schon in den Tools liegen. Korrekturschleifen und Feedback verteilen sich auf Mails, Chats und PDFs. Verrechenbare Stunden werden zu spät erfasst, und Projektbudgets laufen unbemerkt über.
+Das nervt: Monatsberichte zusammentragen frisst Stunden Feedback verstreut auf Mail, Chat, PDF Stunden spät erfasst, Budget läuft unbemerkt über
 
 Einfache Automation:
-- Monatsbericht automatisch: Kennzahlen aus Social Media und Analytics werden gesammelt und als fertiger Bericht an den Kunden versandt.
-- Zeiterfassung per Erinnerung: Jeden Freitag erinnert eine Nachricht an fehlende Stunden, sodass verrechenbare Zeit nicht verloren geht.
-- Briefing-Formular zu Aufgabe: Kunden füllen ein Briefing-Formular aus, daraus entsteht automatisch eine Aufgabe mit Frist im Projektboard.
+- Monatsbericht automatisch: Social Media + Analytics → fertiger Bericht → Kunde
+- Zeiterfassung per Erinnerung: Freitag → Erinnerung an fehlende Stunden
+- Briefing-Formular zu Aufgabe: Briefing-Formular → Aufgabe mit Frist im Board
 
 Mittelgrosse Automation:
-- Feedback bündeln: Kommentare aus Mail und Chat werden zu einer Korrekturliste pro Projekt zusammengefasst, damit nichts untergeht.
-- Budgetwarnung im Projekt: Sind fast alle geplanten Stunden verbraucht, warnt das System die Projektleitung und schlägt eine Nachofferte vor.
-- Neukunden über Social Media: Beitrag führt zu Formular, die KI prüft die Passung, Interessenten buchen direkt ein Erstgespräch im Kalender.
+- Feedback bündeln: Mail + Chat → eine Korrekturliste pro Projekt
+- Budgetwarnung im Projekt: Stunden fast verbraucht → Warnung → Nachofferte-Vorschlag
+- Neukunden über Social Media: Beitrag → Formular → KI-Prüfung → Erstgespräch gebucht
 
 Komplette Automation:
-- Vom Briefing zur Rechnung: Briefing, Offerte, Projektstart, Zeiterfassung, Rechnung und Mahnung laufen verbunden; Sie geben Offerte und Rechnung frei.
-- Content-Pipeline mit Freigabe: Ideen, Entwürfe, Kundenfreigabe, Veröffentlichung und Reporting laufen über einen Ablauf; der Kunde gibt per Klick frei.
-- Retainer-Abrechnung automatisch: Monatliche Retainer-Rechnungen mit Stundennachweis entstehen automatisch, werden gesendet und bei Verzug gemahnt.
+- Vom Briefing zur Rechnung: Briefing → Offerte → Start → Zeiten → Rechnung → Mahnung
+- Content-Pipeline mit Freigabe: Idee → Entwurf → Kundenfreigabe → Veröffentlichung → Report
+- Retainer-Abrechnung automatisch: Retainer-Rechnung mit Stundennachweis → Versand → Mahnung
 
 #### Restaurant
 
-Das nervt: Reservierte Tische bleiben leer, gerade freitags und samstags. Schlechte Google-Bewertungen bleiben unbeantwortet, weil niemand Zeit hat. Für Administration bleibt im knappen Dienstplan keine Zeit.
+Das nervt: Reservierte Tische bleiben leer Schlechte Google-Bewertungen unbeantwortet Keine Zeit für Administration im Dienstplan
 
 Einfache Automation:
-- Reservations-Bestätigung: Gäste erhalten sofort eine Bestätigung und am Vortag eine Erinnerung mit Absagelink, damit weniger Tische leer bleiben.
-- Antwortentwurf auf Bewertungen: Neue Google-Bewertungen werden gemeldet, die KI schreibt einen höflichen Antwortentwurf, den Sie nur noch freigeben.
-- Gutschein per TWINT: Gutscheine werden online bestellt, per TWINT bezahlt und als PDF automatisch an Schenker oder Beschenkte versandt.
+- Reservations-Bestätigung: Reservation → Bestätigung → Erinnerung mit Absagelink
+- Antwortentwurf auf Bewertungen: Neue Bewertung → KI-Antwortentwurf → Freigabe
+- Gutschein per TWINT: Online bestellt → TWINT → Gutschein-PDF per Mail
 
 Mittelgrosse Automation:
-- Anzahlung bei grossen Gruppen: Ab einer Gruppengrösse verlangt das System eine Anzahlung per TWINT oder Karte, und die Reservation gilt erst nach Zahlung.
-- Catering-Anfragen beantworten: Anfragen per Mail oder WhatsApp werden eingeordnet, die KI entwirft Angebot und Rückfragen, und Sie geben nur frei.
-- Dienstplan per WhatsApp: Schichten werden aus Reservationen und Personalverfügbarkeit vorgeschlagen und per WhatsApp bestätigt.
+- Anzahlung bei grossen Gruppen: Grosse Gruppe → Anzahlung per TWINT oder Karte → gilt
+- Catering-Anfragen beantworten: Mail oder WhatsApp → Angebotsentwurf → Freigabe
+- Dienstplan per WhatsApp: Reservationen + Verfügbarkeit → Schichtvorschlag → WhatsApp
 
 Komplette Automation:
-- Reservation bis Nachfassen: Buchung, Erinnerung, Absage, Wartelisten-Nachrücken und Dankesnachricht mit Bewertungslink laufen von selbst ab.
-- Social-Media-Funnel Events: Beitrag zu Event oder Menü führt zur Reservation oder Anzahlung per TWINT, mit Erinnerung und Nachfass nach dem Besuch.
-- Lieferantenrechnungen verbuchen: Lieferantenrechnungen werden gelesen, kontiert, zur Zahlung vorbereitet und verbucht; Sie geben die Zahlung frei.
+- Reservation bis Nachfassen: Buchung → Erinnerung → Nachrücken → Dank mit Bewertungslink
+- Social-Media-Funnel Events: Beitrag → Reservation oder TWINT-Anzahlung → Nachfass
+- Lieferantenrechnungen verbuchen: Rechnung per Mail → kontieren → Zahlung → verbucht
 
 #### Für alle Branchen
 
 Einfache Automation:
-- Bewertungen einholen: Nach Auftrag oder Besuch geht automatisch eine Nachricht mit Bewertungslink raus, ohne dass jemand daran denken muss.
-- Nachfassen bei Offerten: Nach einer Woche ohne Antwort erinnert das System und schreibt einen Nachfass-Entwurf, den Sie nur freigeben.
-- Zeiterfassung ohne Aufwand: Arbeitszeiten werden per Handy erfasst, wöchentlich nachgefragt und ohne Abtippen in Rapport und Rechnung übernommen.
-- Wartungserinnerungen: Vor fälligen Wartungen oder Services erhalten Kunden automatisch eine Terminanfrage, sodass Folgeaufträge planbar werden.
+- Bewertungen einholen: Auftrag erledigt → Nachricht mit Bewertungslink
+- Nachfassen bei Offerten: Offerte → nach einer Woche Nachfass-Entwurf → Freigabe
+- Zeiterfassung ohne Aufwand: Zeit am Handy → Wochenerinnerung → Rapport + Rechnung
+- Wartungserinnerungen: Wartung fällig → Terminanfrage an Kunden
 
 Mittelgrosse Automation:
-- Zahlung per TWINT oder QR: Kunden zahlen online per TWINT oder QR-Rechnung, und die Zahlung wird automatisch der Rechnung zugeordnet und verbucht.
-- Mahnwesen mit Stufen: Offene Rechnungen erhalten zur richtigen Zeit Erinnerung und Mahnungen; bei Ausnahmen stoppt es und fragt Sie.
-- Kalenderabgleich: Anfragen für Termine werden mit Outlook oder Google Kalender abgeglichen; freie Zeiten werden angeboten und Doppelbuchungen vermieden.
-- Bewerbungen vorsortieren: Eingehende Bewerbungen werden gelesen, mit Ihrem Profil verglichen und mit Kurzzusammenfassung und Rangfolge vorsortiert.
-- Spesen und Lohn: Spesenbelege per Foto werden erfasst, geprüft und für die Lohnabrechnung vorbereitet; Sie geben nur frei.
-- Chat auf der Website: Ein Chat beantwortet Fragen rund um die Uhr und leitet echte Anfragen mit Zusammenfassung an Sie weiter.
+- Zahlung per TWINT oder QR: TWINT oder QR-Rechnung → Zahlung → Rechnung bezahlt
+- Mahnwesen mit Stufen: Erinnerung → Mahnung → Stopp bei Ausnahmen
+- Kalenderabgleich: Terminanfrage → Outlook oder Google Kalender → freie Zeiten
+- Bewerbungen vorsortieren: Bewerbung → Profilvergleich → Kurzfassung + Rangfolge
+- Spesen und Lohn: Spesenfoto → Prüfung → Lohnabrechnung vorbereitet
+- Chat auf der Website: Website-Chat rund um die Uhr → Anfrage mit Zusammenfassung
 
 Komplette Automation:
-- Social-Media-Funnel: Ein Beitrag führt über Formular oder WhatsApp zur Anfrage; die KI beantwortet Rückfragen und bucht direkt einen Termin in Ihrem Kalender.
-- Lieferantenrechnungen verarbeiten: Rechnungen per Mail werden gelesen, kontiert, zur Zahlung vorbereitet und verbucht; Sie geben die Zahlung frei.
+- Social-Media-Funnel: Beitrag → Formular oder WhatsApp → KI → Termin im Kalender
+- Lieferantenrechnungen verarbeiten: Rechnung per Mail → kontieren → Zahlung → verbucht

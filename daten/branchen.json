@@ -1,395 +1,395 @@
 {
- "malerbetrieb": {
-  "name": "Malerbetrieb",
-  "nervt": [
-   "Aufmass, Rapport und Offerte werden mehrfach abgetippt, bis am Ende die Rechnung rausgeht.",
-   "Offerten bleiben liegen, weil das Nachfassen an Notizzetteln und am Gedächtnis hängt.",
-   "Arbeitszeiten von der Baustelle kommen spät oder lückenhaft im Büro an."
-  ],
-  "einfach": [
-   {
-    "titel": "Bewertungsbitte nach Abnahme",
-    "satz": "Nach der Abnahme geht eine Nachricht mit Google-Bewertungslink an den Kunden, Ihre Referenzen wachsen ohne Nachfragen."
-   },
-   {
-    "titel": "Rapport-Foto ablegen",
-    "satz": "Fotos von Rapport und Lieferschein per WhatsApp landen automatisch im richtigen Projektordner, mit Datum und Kundennamen benannt."
-   },
-   {
-    "titel": "Zahlungseingang abgleichen",
-    "satz": "Eingehende QR-Zahlungen werden der offenen Rechnung zugeordnet und als bezahlt markiert, ohne dass jemand Kontoauszüge durchgeht."
-   }
-  ],
-  "verbunden": [
-   {
-    "titel": "Offerte mit Nachfassen",
-    "satz": "Nach jedem Versand erinnert das System nach einer Woche und schreibt einen Nachfass-Entwurf, den Sie nur freigeben."
-   },
-   {
-    "titel": "Aufmass zu Offertenentwurf",
-    "satz": "Aus Raumfotos, Massen und Wunschfarbe entsteht ein Offertenentwurf mit Flächen und Material, den Sie prüfen und anpassen."
-   },
-   {
-    "titel": "Terminabgleich mit Kunden",
-    "satz": "Kunden wählen online einen freien Besichtigungstermin; er erscheint in Ihrem Kalender samt Adresse und Anfahrtszeit."
-   }
-  ],
-  "ganzer_ablauf": [
-   {
-    "titel": "Von Anfrage bis Rechnung",
-    "satz": "Von der Anfrage über Besichtigung, Offerte und Rapport bis zur QR-Rechnung; Sie geben nur frei, der Mahnlauf läuft mit."
-   },
-   {
-    "titel": "Mahnlauf von selbst",
-    "satz": "Offene Rechnungen bekommen Erinnerung, erste und zweite Mahnung zur richtigen Zeit; bei Streit stoppt es und fragt Sie."
-   },
-   {
-    "titel": "Social-Media-Funnel Anfrage",
-    "satz": "Ein Beitrag mit Vorher-nachher-Bildern führt über ein Formular zur Anfrage; die KI ordnet sie ein und bucht die Besichtigung."
-   }
-  ],
-  "_quellen": [
-   "https://baunex.ch/blog/malersoftware-schweiz-vergleich/",
-   "https://werkli.ch/",
-   "https://baunex.ch/blog/regierapport-digital-handwerker-schweiz/",
-   "https://www.bidoli-it.ch/automatisierung-kmu-schweiz.php"
-  ]
- },
- "treuhand": {
-  "name": "Treuhand",
-  "nervt": [
-   "Mandanten liefern Belege zu spät, unvollständig oder per Post und Mail durcheinander.",
-   "Fehlende Unterlagen müssen immer wieder von Hand nachgefragt werden.",
-   "Fristen für MWST, Lohn und Abschluss laufen als einzelne Termine statt als sauberer Prozess."
-  ],
-  "einfach": [
-   {
-    "titel": "Belege von selbst ablegen",
-    "satz": "Belege per Mail oder App werden erkannt, benannt und im richtigen Mandantenordner abgelegt, statt von Hand sortiert zu werden."
-   },
-   {
-    "titel": "Fristen-Erinnerung an Mandanten",
-    "satz": "Vor MWST- und Abschlussterminen geht automatisch eine Liste der benötigten Unterlagen an die Mandanten, mit Datum und Upload-Link."
-   },
-   {
-    "titel": "Zahlungen zu Debitoren",
-    "satz": "Eingehende Zahlungen werden anhand der QR-Referenz den offenen Posten zugeordnet, sodass die Debitorenliste immer aktuell ist."
-   }
-  ],
-  "verbunden": [
-   {
-    "titel": "Rückfrage bei fehlenden Belegen",
-    "satz": "Das System erkennt Bankbuchungen ohne Beleg und fragt den Mandanten gezielt per Mail oder WhatsApp, bis der Beleg da ist."
-   },
-   {
-    "titel": "Kontierungsvorschlag mit Prüfung",
-    "satz": "Die KI liest Lieferantenrechnungen und schlägt Konto, MWST und Kostenstelle vor; Sie prüfen nur Ausnahmen."
-   },
-   {
-    "titel": "Beratungstermin buchen lassen",
-    "satz": "Mandanten buchen Besprechungen online im Kalender; Erinnerung und Unterlagenliste gehen automatisch mit."
-   }
-  ],
-  "ganzer_ablauf": [
-   {
-    "titel": "MWST-Abrechnung ohne Jagd",
-    "satz": "Belege einsammeln, kontieren, Abstimmung vorbereiten und Entwurf der MWST-Abrechnung erstellen; Sie prüfen und reichen ein."
-   },
-   {
-    "titel": "Mandanten-Onboarding komplett",
-    "satz": "Neuer Mandant: Formular, Vollmacht, Checkliste, Ordnerstruktur und Buchhaltungs-Zugang entstehen automatisch, Sie unterschreiben nur."
-   },
-   {
-    "titel": "Honorarrechnung bis Mahnung",
-    "satz": "Aus erfasster Zeit entsteht die Honorarrechnung, danach folgen Zahlungsabgleich und Mahnstufen, die Sie nur freigeben."
-   }
-  ],
-  "_quellen": [
-   "https://www.bdo.ch/de-ch/publikationen/digitale-transformation-treuhand",
-   "https://treuflow.ch/",
-   "https://treuflow.ch/fristen",
-   "https://www.abrechnungen.ch/2018/09/10/welche-dokumente-und-belege-braucht-mein-treuhaender/"
-  ]
- },
- "arztpraxis": {
-  "name": "Arztpraxis",
-  "nervt": [
-   "Nicht abgesagte Termine lassen Stühle leer und kosten Geld.",
-   "Das Telefon an der Rezeption bindet das Team, auch bei Rezepten und Terminwünschen.",
-   "Dokumentation und Berichte fressen Zeit, die für Patienten fehlt."
-  ],
-  "einfach": [
-   {
-    "titel": "Terminerinnerung mit Absagelink",
-    "satz": "Patienten erhalten 24 Stunden vorher eine Mail oder SMS mit Absagelink, sodass freie Termine früh wieder vergeben werden können."
-   },
-   {
-    "titel": "Recall für Vorsorge",
-    "satz": "Wer seit einem Jahr keinen Check hatte oder eine Impfauffrischung braucht, bekommt automatisch eine Einladung zur Terminbuchung."
-   },
-   {
-    "titel": "Rezeptwunsch per Formular",
-    "satz": "Rezeptbestellungen kommen über ein Formular statt Telefon und landen sortiert beim Team, das nur noch freigibt."
-   }
-  ],
-  "verbunden": [
-   {
-    "titel": "Nachrückerliste für Absagen",
-    "satz": "Wird ein Termin abgesagt, fragt das System Wartende per SMS an und trägt die erste Zusage in den Kalender ein."
-   },
-   {
-    "titel": "Praxis-Chat für Standardfragen",
-    "satz": "Ein Chat auf der Website beantwortet Fragen zu Öffnungszeiten, Anfahrt und Ablauf und leitet Terminwünsche weiter."
-   },
-   {
-    "titel": "Berichtsentwurf aus Diktat",
-    "satz": "Aus dem Diktat entsteht ein Berichtsentwurf in Ihrem Stil; Sie korrigieren nur noch, statt alles abzutippen."
-   }
-  ],
-  "ganzer_ablauf": [
-   {
-    "titel": "Terminweg bis zum Recall",
-    "satz": "Online-Buchung, Erinnerung, Absage, Nachrücken und Folgetermin laufen durch; das Team greift nur bei Sonderfällen ein."
-   },
-   {
-    "titel": "Rechnung und Zahlungsabgleich",
-    "satz": "Leistungen werden zur Rechnung, QR-Zahlungen automatisch zugeordnet und Zahlungserinnerungen verschickt; Sie geben nur frei."
-   },
-   {
-    "titel": "Neupatienten-Aufnahme digital",
-    "satz": "Neue Patienten füllen vor dem Besuch Formular und Einwilligung online aus; die Daten gehen direkt ins Dossier."
-   }
-  ],
-  "_quellen": [
-   "https://www.fonea.ch/blog/no-shows-reduzieren-praxis-ki-telefon",
-   "https://www.doctena.com/de-ch/blog/non-classifiee-de-ch/no-shows-arztpraxis-reduzieren",
-   "https://avenios.ch/ratgeber/ki-arztpraxis-schweiz-2026",
-   "https://tomedo.ch/wissenswertes-ch/ki-arztpraxis/"
-  ]
- },
- "sanitaer-heizung": {
-  "name": "Sanitär und Heizung",
-  "nervt": [
-   "Regierapporte müssen täglich erfasst und vom Kunden unterschrieben werden, sonst fehlt später der Beleg.",
-   "Wartungstermine und Serviceverträge werden von Hand verwaltet und vergessen.",
-   "Arbeitszeiten und Material landen spät im Büro, die Rechnung dadurch auch."
-  ],
-  "einfach": [
-   {
-    "titel": "Wartungserinnerung an Kunden",
-    "satz": "Vor dem Wartungsintervall geht automatisch eine Terminanfrage an den Kunden, sodass Serviceverträge nicht mehr vergessen werden."
-   },
-   {
-    "titel": "Regierapport per Handy",
-    "satz": "Monteure erfassen Zeit und Material auf dem Handy, Kunde unterschreibt digital, der Rapport liegt sofort im Projekt."
-   },
-   {
-    "titel": "Bewertungsbitte nach Einsatz",
-    "satz": "Nach dem Einsatz geht eine Nachricht mit Google-Bewertungslink an den Kunden, ohne dass jemand daran denken muss."
-   }
-  ],
-  "verbunden": [
-   {
-    "titel": "Notfallanfrage sortieren",
-    "satz": "Die KI liest Mails und Formulare, erkennt Notfälle wie Rohrbruch, alarmiert den Pikettdienst und schlägt Normalfällen einen Termin vor."
-   },
-   {
-    "titel": "Einsatzplan mit Kalenderabgleich",
-    "satz": "Neue Aufträge werden mit Monteur-Kalender, Anfahrt und Material abgeglichen; Sie erhalten einen Terminvorschlag zur Freigabe."
-   },
-   {
-    "titel": "Rapport zu Rechnung",
-    "satz": "Aus dem unterschriebenen Rapport entsteht ein Rechnungsentwurf mit QR-Zahlteil, den Sie nur noch prüfen."
-   }
-  ],
-  "ganzer_ablauf": [
-   {
-    "titel": "Servicevertrag im Kreis",
-    "satz": "Vertrag, Wartungsplan, Terminanfrage, Rapport, Rechnung und Mahnung laufen von selbst; Sie geben Ausnahmen und Rechnungen frei."
-   },
-   {
-    "titel": "Von Anfrage bis Rechnung",
-    "satz": "Anfrage wird zu Besichtigung, Offerte, Auftrag, Regierapport und Rechnung; Sie geben jeweils nur frei."
-   },
-   {
-    "titel": "Social-Media-Funnel Heizungsersatz",
-    "satz": "Beitrag zum Heizungsersatz führt über Formular zur Anfrage, Vorqualifizierung und Beratungstermin im Kalender."
-   }
-  ],
-  "_quellen": [
-   "https://suissetec.ch/de/web-app-wartung-und-instandhaltung.html",
-   "https://baunex.ch/blog/regierapport-digital-handwerker-schweiz/",
-   "https://www.logico.ch/post/wartungsvertraege-digital-verwalten",
-   "https://suissetec.ch/de/software-digitalisierung.html"
-  ]
- },
- "agentur": {
-  "name": "Agentur",
-  "nervt": [
-   "Monatsberichte für Kunden zusammenzutragen frisst Stunden, obwohl die Daten schon in den Tools liegen.",
-   "Korrekturschleifen und Feedback verteilen sich auf Mails, Chats und PDFs.",
-   "Verrechenbare Stunden werden zu spät erfasst, und Projektbudgets laufen unbemerkt über."
-  ],
-  "einfach": [
-   {
-    "titel": "Monatsbericht automatisch",
-    "satz": "Kennzahlen aus Social Media und Analytics werden gesammelt und als fertiger Bericht an den Kunden versandt."
-   },
-   {
-    "titel": "Zeiterfassung per Erinnerung",
-    "satz": "Jeden Freitag erinnert eine Nachricht an fehlende Stunden, sodass verrechenbare Zeit nicht verloren geht."
-   },
-   {
-    "titel": "Briefing-Formular zu Aufgabe",
-    "satz": "Kunden füllen ein Briefing-Formular aus, daraus entsteht automatisch eine Aufgabe mit Frist im Projektboard."
-   }
-  ],
-  "verbunden": [
-   {
-    "titel": "Feedback bündeln",
-    "satz": "Kommentare aus Mail und Chat werden zu einer Korrekturliste pro Projekt zusammengefasst, damit nichts untergeht."
-   },
-   {
-    "titel": "Budgetwarnung im Projekt",
-    "satz": "Sind fast alle geplanten Stunden verbraucht, warnt das System die Projektleitung und schlägt eine Nachofferte vor."
-   },
-   {
-    "titel": "Neukunden über Social Media",
-    "satz": "Beitrag führt zu Formular, die KI prüft die Passung, Interessenten buchen direkt ein Erstgespräch im Kalender."
-   }
-  ],
-  "ganzer_ablauf": [
-   {
-    "titel": "Vom Briefing zur Rechnung",
-    "satz": "Briefing, Offerte, Projektstart, Zeiterfassung, Rechnung und Mahnung laufen verbunden; Sie geben Offerte und Rechnung frei."
-   },
-   {
-    "titel": "Content-Pipeline mit Freigabe",
-    "satz": "Ideen, Entwürfe, Kundenfreigabe, Veröffentlichung und Reporting laufen über einen Ablauf; der Kunde gibt per Klick frei."
-   },
-   {
-    "titel": "Retainer-Abrechnung automatisch",
-    "satz": "Monatliche Retainer-Rechnungen mit Stundennachweis entstehen automatisch, werden gesendet und bei Verzug gemahnt."
-   }
-  ],
-  "_quellen": [
-   "https://metricool.com/de/social-media-report-erstellen/",
-   "https://filestage.io/de/blog/freigabeprozess/",
-   "https://www.zep.de/branche/agenturen",
-   "https://prowebsolutions.ch/leistungen/automatisierung/"
-  ]
- },
- "restaurant": {
-  "name": "Restaurant",
-  "nervt": [
-   "Reservierte Tische bleiben leer, gerade freitags und samstags.",
-   "Schlechte Google-Bewertungen bleiben unbeantwortet, weil niemand Zeit hat.",
-   "Für Administration bleibt im knappen Dienstplan keine Zeit."
-  ],
-  "einfach": [
-   {
-    "titel": "Reservations-Bestätigung",
-    "satz": "Gäste erhalten sofort eine Bestätigung und am Vortag eine Erinnerung mit Absagelink, damit weniger Tische leer bleiben."
-   },
-   {
-    "titel": "Antwortentwurf auf Bewertungen",
-    "satz": "Neue Google-Bewertungen werden gemeldet, die KI schreibt einen höflichen Antwortentwurf, den Sie nur noch freigeben."
-   },
-   {
-    "titel": "Gutschein per TWINT",
-    "satz": "Gutscheine werden online bestellt, per TWINT bezahlt und als PDF automatisch an Schenker oder Beschenkte versandt."
-   }
-  ],
-  "verbunden": [
-   {
-    "titel": "Anzahlung bei grossen Gruppen",
-    "satz": "Ab einer Gruppengrösse verlangt das System eine Anzahlung per TWINT oder Karte, und die Reservation gilt erst nach Zahlung."
-   },
-   {
-    "titel": "Catering-Anfragen beantworten",
-    "satz": "Anfragen per Mail oder WhatsApp werden eingeordnet, die KI entwirft Angebot und Rückfragen, und Sie geben nur frei."
-   },
-   {
-    "titel": "Dienstplan per WhatsApp",
-    "satz": "Schichten werden aus Reservationen und Personalverfügbarkeit vorgeschlagen und per WhatsApp bestätigt."
-   }
-  ],
-  "ganzer_ablauf": [
-   {
-    "titel": "Reservation bis Nachfassen",
-    "satz": "Buchung, Erinnerung, Absage, Wartelisten-Nachrücken und Dankesnachricht mit Bewertungslink laufen von selbst ab."
-   },
-   {
-    "titel": "Social-Media-Funnel Events",
-    "satz": "Beitrag zu Event oder Menü führt zur Reservation oder Anzahlung per TWINT, mit Erinnerung und Nachfass nach dem Besuch."
-   },
-   {
-    "titel": "Lieferantenrechnungen verbuchen",
-    "satz": "Lieferantenrechnungen werden gelesen, kontiert, zur Zahlung vorbereitet und verbucht; Sie geben die Zahlung frei."
-   }
-  ],
-  "_quellen": [
-   "https://www.nzz.ch/zuerich/in-schweizer-restaurants-bleiben-hunderttausende-tische-leer-trotz-reservation-das-gastgewerbe-reagiert-empfindlich-sagt-ein-experte-ld.1879710",
-   "https://www.htr.ch/story/gastronomie/fachkraeftemangel-wirkt-sich-auf-online-bewertungen-aus-37445",
-   "https://www.blick.ch/wirtschaft/wirte-kaempfen-gegen-no-shows-750-franken-fuer-restaurant-schwaenzer-ich-greife-durch-wenn-reservierte-plaetze-leer-bleiben-id21821142.html",
-   "https://www.twint.ch/geschaeftskunden/unsere-loesungen/gastronomie/"
-  ]
- },
- "alle": {
-  "name": "Für alle Branchen",
-  "einfach": [
-   {
-    "titel": "Bewertungen einholen",
-    "satz": "Nach Auftrag oder Besuch geht automatisch eine Nachricht mit Bewertungslink raus, ohne dass jemand daran denken muss."
-   },
-   {
-    "titel": "Nachfassen bei Offerten",
-    "satz": "Nach einer Woche ohne Antwort erinnert das System und schreibt einen Nachfass-Entwurf, den Sie nur freigeben."
-   },
-   {
-    "titel": "Zeiterfassung ohne Aufwand",
-    "satz": "Arbeitszeiten werden per Handy erfasst, wöchentlich nachgefragt und ohne Abtippen in Rapport und Rechnung übernommen."
-   },
-   {
-    "titel": "Wartungserinnerungen",
-    "satz": "Vor fälligen Wartungen oder Services erhalten Kunden automatisch eine Terminanfrage, sodass Folgeaufträge planbar werden."
-   }
-  ],
-  "verbunden": [
-   {
-    "titel": "Zahlung per TWINT oder QR",
-    "satz": "Kunden zahlen online per TWINT oder QR-Rechnung, und die Zahlung wird automatisch der Rechnung zugeordnet und verbucht."
-   },
-   {
-    "titel": "Mahnwesen mit Stufen",
-    "satz": "Offene Rechnungen erhalten zur richtigen Zeit Erinnerung und Mahnungen; bei Ausnahmen stoppt es und fragt Sie."
-   },
-   {
-    "titel": "Kalenderabgleich",
-    "satz": "Anfragen für Termine werden mit Outlook oder Google Kalender abgeglichen; freie Zeiten werden angeboten und Doppelbuchungen vermieden."
-   },
-   {
-    "titel": "Bewerbungen vorsortieren",
-    "satz": "Eingehende Bewerbungen werden gelesen, mit Ihrem Profil verglichen und mit Kurzzusammenfassung und Rangfolge vorsortiert."
-   },
-   {
-    "titel": "Spesen und Lohn",
-    "satz": "Spesenbelege per Foto werden erfasst, geprüft und für die Lohnabrechnung vorbereitet; Sie geben nur frei."
-   },
-   {
-    "titel": "Chat auf der Website",
-    "satz": "Ein Chat beantwortet Fragen rund um die Uhr und leitet echte Anfragen mit Zusammenfassung an Sie weiter."
-   }
-  ],
-  "ganzer_ablauf": [
-   {
-    "titel": "Social-Media-Funnel",
-    "satz": "Ein Beitrag führt über Formular oder WhatsApp zur Anfrage; die KI beantwortet Rückfragen und bucht direkt einen Termin in Ihrem Kalender."
-   },
-   {
-    "titel": "Lieferantenrechnungen verarbeiten",
-    "satz": "Rechnungen per Mail werden gelesen, kontiert, zur Zahlung vorbereitet und verbucht; Sie geben die Zahlung frei."
-   }
-  ]
- }
+  "malerbetrieb": {
+    "name": "Malerbetrieb",
+    "nervt": [
+      "Mehrfach abtippen: Aufmass, Rapport, Offerte",
+      "Offerten liegen, Nachfassen vergessen",
+      "Arbeitszeiten kommen spät von der Baustelle"
+    ],
+    "einfach": [
+      {
+        "titel": "Bewertungsbitte nach Abnahme",
+        "satz": "Abnahme → Nachricht mit Bewertungslink → Referenz"
+      },
+      {
+        "titel": "Rapport-Foto ablegen",
+        "satz": "WhatsApp-Foto → Projektordner, benannt"
+      },
+      {
+        "titel": "Zahlungseingang abgleichen",
+        "satz": "QR-Zahlung → offene Rechnung → bezahlt"
+      }
+    ],
+    "verbunden": [
+      {
+        "titel": "Offerte mit Nachfassen",
+        "satz": "Offerte versandt → nach einer Woche Nachfass-Entwurf"
+      },
+      {
+        "titel": "Aufmass zu Offertenentwurf",
+        "satz": "Raumfotos + Masse → Offertenentwurf"
+      },
+      {
+        "titel": "Terminabgleich mit Kunden",
+        "satz": "Online-Termin → Kalender mit Adresse und Anfahrt"
+      }
+    ],
+    "ganzer_ablauf": [
+      {
+        "titel": "Von Anfrage bis Rechnung",
+        "satz": "Anfrage → Besichtigung → Offerte → Rapport → QR-Rechnung"
+      },
+      {
+        "titel": "Mahnlauf von selbst",
+        "satz": "Erinnerung → 1. Mahnung → 2. Mahnung, Stopp bei Streit"
+      },
+      {
+        "titel": "Social-Media-Funnel",
+        "satz": "Beitrag → Formular → KI-Einordnung → Besichtigung"
+      }
+    ],
+    "_quellen": [
+      "https://baunex.ch/blog/malersoftware-schweiz-vergleich/",
+      "https://werkli.ch/",
+      "https://baunex.ch/blog/regierapport-digital-handwerker-schweiz/",
+      "https://www.bidoli-it.ch/automatisierung-kmu-schweiz.php"
+    ]
+  },
+  "treuhand": {
+    "name": "Treuhand",
+    "nervt": [
+      "Belege kommen spät, unvollständig, durcheinander",
+      "Fehlende Unterlagen von Hand nachfragen",
+      "Fristen als einzelne Termine statt Ablauf"
+    ],
+    "einfach": [
+      {
+        "titel": "Belege von selbst ablegen",
+        "satz": "Beleg per Mail oder App → benannt → Mandantenordner"
+      },
+      {
+        "titel": "Fristen-Erinnerung an Mandanten",
+        "satz": "Vor Frist → Unterlagenliste → Upload-Link"
+      },
+      {
+        "titel": "Zahlungen zu Debitoren",
+        "satz": "QR-Zahlung → offener Posten → Debitorenliste aktuell"
+      }
+    ],
+    "verbunden": [
+      {
+        "titel": "Rückfrage bei fehlenden Belegen",
+        "satz": "Buchung ohne Beleg → Rückfrage per Mail oder WhatsApp"
+      },
+      {
+        "titel": "Kontierungsvorschlag mit Prüfung",
+        "satz": "Lieferantenrechnung → Kontovorschlag → Ausnahmen prüfen"
+      },
+      {
+        "titel": "Beratungstermin buchen lassen",
+        "satz": "Online-Termin → Erinnerung + Unterlagenliste"
+      }
+    ],
+    "ganzer_ablauf": [
+      {
+        "titel": "MWST-Abrechnung ohne Jagd",
+        "satz": "Belege → Kontierung → Abstimmung → MWST-Entwurf"
+      },
+      {
+        "titel": "Mandanten-Onboarding komplett",
+        "satz": "Formular → Vollmacht → Checkliste → Ordner → Zugang"
+      },
+      {
+        "titel": "Honorarrechnung bis Mahnung",
+        "satz": "Zeiterfassung → Honorarrechnung → Zahlungsabgleich → Mahnung"
+      }
+    ],
+    "_quellen": [
+      "https://www.bdo.ch/de-ch/publikationen/digitale-transformation-treuhand",
+      "https://treuflow.ch/",
+      "https://treuflow.ch/fristen",
+      "https://www.abrechnungen.ch/2018/09/10/welche-dokumente-und-belege-braucht-mein-treuhaender/"
+    ]
+  },
+  "arztpraxis": {
+    "name": "Arztpraxis",
+    "nervt": [
+      "Leere Stühle durch nicht abgesagte Termine",
+      "Telefon bindet das Team: Rezepte, Termine",
+      "Berichte und Dokumentation fressen Zeit"
+    ],
+    "einfach": [
+      {
+        "titel": "Terminerinnerung mit Absagelink",
+        "satz": "Tag vorher → Mail oder SMS → Absagelink"
+      },
+      {
+        "titel": "Recall für Vorsorge",
+        "satz": "Kein Check seit einem Jahr → Einladung → Termin"
+      },
+      {
+        "titel": "Rezeptwunsch per Formular",
+        "satz": "Rezeptwunsch → Formular statt Telefon → Freigabe"
+      }
+    ],
+    "verbunden": [
+      {
+        "titel": "Nachrückerliste für Absagen",
+        "satz": "Absage → SMS an Wartende → erste Zusage im Kalender"
+      },
+      {
+        "titel": "Praxis-Chat für Standardfragen",
+        "satz": "Website-Chat → Fragen beantwortet → Terminwunsch weiter"
+      },
+      {
+        "titel": "Berichtsentwurf aus Diktat",
+        "satz": "Diktat → Berichtsentwurf im eigenen Stil → Korrektur"
+      }
+    ],
+    "ganzer_ablauf": [
+      {
+        "titel": "Terminweg bis zum Recall",
+        "satz": "Buchung → Erinnerung → Absage → Nachrücken → Folgetermin"
+      },
+      {
+        "titel": "Rechnung und Zahlungsabgleich",
+        "satz": "Leistung → Rechnung → QR-Zahlung → Zahlungserinnerung"
+      },
+      {
+        "titel": "Neupatienten-Aufnahme digital",
+        "satz": "Formular + Einwilligung vorab → direkt ins Dossier"
+      }
+    ],
+    "_quellen": [
+      "https://www.fonea.ch/blog/no-shows-reduzieren-praxis-ki-telefon",
+      "https://www.doctena.com/de-ch/blog/non-classifiee-de-ch/no-shows-arztpraxis-reduzieren",
+      "https://avenios.ch/ratgeber/ki-arztpraxis-schweiz-2026",
+      "https://tomedo.ch/wissenswertes-ch/ki-arztpraxis/"
+    ]
+  },
+  "sanitaer-heizung": {
+    "name": "Sanitär und Heizung",
+    "nervt": [
+      "Regierapport täglich erfassen und unterschreiben",
+      "Wartungsverträge von Hand, Termine vergessen",
+      "Zeit und Material spät im Büro, Rechnung auch"
+    ],
+    "einfach": [
+      {
+        "titel": "Wartungserinnerung an Kunden",
+        "satz": "Vor Intervall → Terminanfrage an Kunden"
+      },
+      {
+        "titel": "Regierapport per Handy",
+        "satz": "Zeit + Material am Handy → digitale Unterschrift → Projekt"
+      },
+      {
+        "titel": "Bewertungsbitte nach Einsatz",
+        "satz": "Einsatz erledigt → Nachricht mit Bewertungslink"
+      }
+    ],
+    "verbunden": [
+      {
+        "titel": "Notfallanfrage sortieren",
+        "satz": "Mail → Notfall erkannt → Pikettdienst; sonst Terminvorschlag"
+      },
+      {
+        "titel": "Einsatzplan mit Kalenderabgleich",
+        "satz": "Auftrag → Monteur-Kalender + Material → Terminvorschlag"
+      },
+      {
+        "titel": "Rapport zu Rechnung",
+        "satz": "Unterschriebener Rapport → Rechnungsentwurf mit QR-Teil"
+      }
+    ],
+    "ganzer_ablauf": [
+      {
+        "titel": "Servicevertrag im Kreis",
+        "satz": "Wartungsplan → Termin → Rapport → Rechnung → Mahnung"
+      },
+      {
+        "titel": "Von Anfrage bis Rechnung",
+        "satz": "Anfrage → Besichtigung → Offerte → Rapport → Rechnung"
+      },
+      {
+        "titel": "Social-Media-Funnel Heizungsersatz",
+        "satz": "Beitrag → Formular → Vorprüfung → Beratungstermin"
+      }
+    ],
+    "_quellen": [
+      "https://suissetec.ch/de/web-app-wartung-und-instandhaltung.html",
+      "https://baunex.ch/blog/regierapport-digital-handwerker-schweiz/",
+      "https://www.logico.ch/post/wartungsvertraege-digital-verwalten",
+      "https://suissetec.ch/de/software-digitalisierung.html"
+    ]
+  },
+  "agentur": {
+    "name": "Agentur",
+    "nervt": [
+      "Monatsberichte zusammentragen frisst Stunden",
+      "Feedback verstreut auf Mail, Chat, PDF",
+      "Stunden spät erfasst, Budget läuft unbemerkt über"
+    ],
+    "einfach": [
+      {
+        "titel": "Monatsbericht automatisch",
+        "satz": "Social Media + Analytics → fertiger Bericht → Kunde"
+      },
+      {
+        "titel": "Zeiterfassung per Erinnerung",
+        "satz": "Freitag → Erinnerung an fehlende Stunden"
+      },
+      {
+        "titel": "Briefing-Formular zu Aufgabe",
+        "satz": "Briefing-Formular → Aufgabe mit Frist im Board"
+      }
+    ],
+    "verbunden": [
+      {
+        "titel": "Feedback bündeln",
+        "satz": "Mail + Chat → eine Korrekturliste pro Projekt"
+      },
+      {
+        "titel": "Budgetwarnung im Projekt",
+        "satz": "Stunden fast verbraucht → Warnung → Nachofferte-Vorschlag"
+      },
+      {
+        "titel": "Neukunden über Social Media",
+        "satz": "Beitrag → Formular → KI-Prüfung → Erstgespräch gebucht"
+      }
+    ],
+    "ganzer_ablauf": [
+      {
+        "titel": "Vom Briefing zur Rechnung",
+        "satz": "Briefing → Offerte → Start → Zeiten → Rechnung → Mahnung"
+      },
+      {
+        "titel": "Content-Pipeline mit Freigabe",
+        "satz": "Idee → Entwurf → Kundenfreigabe → Veröffentlichung → Report"
+      },
+      {
+        "titel": "Retainer-Abrechnung automatisch",
+        "satz": "Retainer-Rechnung mit Stundennachweis → Versand → Mahnung"
+      }
+    ],
+    "_quellen": [
+      "https://metricool.com/de/social-media-report-erstellen/",
+      "https://filestage.io/de/blog/freigabeprozess/",
+      "https://www.zep.de/branche/agenturen",
+      "https://prowebsolutions.ch/leistungen/automatisierung/"
+    ]
+  },
+  "restaurant": {
+    "name": "Restaurant",
+    "nervt": [
+      "Reservierte Tische bleiben leer",
+      "Schlechte Google-Bewertungen unbeantwortet",
+      "Keine Zeit für Administration im Dienstplan"
+    ],
+    "einfach": [
+      {
+        "titel": "Reservations-Bestätigung",
+        "satz": "Reservation → Bestätigung → Erinnerung mit Absagelink"
+      },
+      {
+        "titel": "Antwortentwurf auf Bewertungen",
+        "satz": "Neue Bewertung → KI-Antwortentwurf → Freigabe"
+      },
+      {
+        "titel": "Gutschein per TWINT",
+        "satz": "Online bestellt → TWINT → Gutschein-PDF per Mail"
+      }
+    ],
+    "verbunden": [
+      {
+        "titel": "Anzahlung bei grossen Gruppen",
+        "satz": "Grosse Gruppe → Anzahlung per TWINT oder Karte → gilt"
+      },
+      {
+        "titel": "Catering-Anfragen beantworten",
+        "satz": "Mail oder WhatsApp → Angebotsentwurf → Freigabe"
+      },
+      {
+        "titel": "Dienstplan per WhatsApp",
+        "satz": "Reservationen + Verfügbarkeit → Schichtvorschlag → WhatsApp"
+      }
+    ],
+    "ganzer_ablauf": [
+      {
+        "titel": "Reservation bis Nachfassen",
+        "satz": "Buchung → Erinnerung → Nachrücken → Dank mit Bewertungslink"
+      },
+      {
+        "titel": "Social-Media-Funnel Events",
+        "satz": "Beitrag → Reservation oder TWINT-Anzahlung → Nachfass"
+      },
+      {
+        "titel": "Lieferantenrechnungen verbuchen",
+        "satz": "Rechnung per Mail → kontieren → Zahlung → verbucht"
+      }
+    ],
+    "_quellen": [
+      "https://www.nzz.ch/zuerich/in-schweizer-restaurants-bleiben-hunderttausende-tische-leer-trotz-reservation-das-gastgewerbe-reagiert-empfindlich-sagt-ein-experte-ld.1879710",
+      "https://www.htr.ch/story/gastronomie/fachkraeftemangel-wirkt-sich-auf-online-bewertungen-aus-37445",
+      "https://www.blick.ch/wirtschaft/wirte-kaempfen-gegen-no-shows-750-franken-fuer-restaurant-schwaenzer-ich-greife-durch-wenn-reservierte-plaetze-leer-bleiben-id21821142.html",
+      "https://www.twint.ch/geschaeftskunden/unsere-loesungen/gastronomie/"
+    ]
+  },
+  "alle": {
+    "name": "Für alle Branchen",
+    "einfach": [
+      {
+        "titel": "Bewertungen einholen",
+        "satz": "Auftrag erledigt → Nachricht mit Bewertungslink"
+      },
+      {
+        "titel": "Nachfassen bei Offerten",
+        "satz": "Offerte → nach einer Woche Nachfass-Entwurf → Freigabe"
+      },
+      {
+        "titel": "Zeiterfassung ohne Aufwand",
+        "satz": "Zeit am Handy → Wochenerinnerung → Rapport + Rechnung"
+      },
+      {
+        "titel": "Wartungserinnerungen",
+        "satz": "Wartung fällig → Terminanfrage an Kunden"
+      }
+    ],
+    "verbunden": [
+      {
+        "titel": "Zahlung per TWINT oder QR",
+        "satz": "TWINT oder QR-Rechnung → Zahlung → Rechnung bezahlt"
+      },
+      {
+        "titel": "Mahnwesen mit Stufen",
+        "satz": "Erinnerung → Mahnung → Stopp bei Ausnahmen"
+      },
+      {
+        "titel": "Kalenderabgleich",
+        "satz": "Terminanfrage → Outlook oder Google Kalender → freie Zeiten"
+      },
+      {
+        "titel": "Bewerbungen vorsortieren",
+        "satz": "Bewerbung → Profilvergleich → Kurzfassung + Rangfolge"
+      },
+      {
+        "titel": "Spesen und Lohn",
+        "satz": "Spesenfoto → Prüfung → Lohnabrechnung vorbereitet"
+      },
+      {
+        "titel": "Chat auf der Website",
+        "satz": "Website-Chat rund um die Uhr → Anfrage mit Zusammenfassung"
+      }
+    ],
+    "ganzer_ablauf": [
+      {
+        "titel": "Social-Media-Funnel",
+        "satz": "Beitrag → Formular oder WhatsApp → KI → Termin im Kalender"
+      },
+      {
+        "titel": "Lieferantenrechnungen verarbeiten",
+        "satz": "Rechnung per Mail → kontieren → Zahlung → verbucht"
+      }
+    ]
+  }
 }
