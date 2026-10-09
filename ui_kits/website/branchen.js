@@ -72,7 +72,12 @@
       b.setAttribute('role', 'tab');
       b.setAttribute('data-branche', id);
       b.setAttribute('aria-selected', 'false');
-      b.textContent = daten[id].name || id;
+      var bild = document.createElement('img');
+      bild.className = 'pm-branchen__ico';
+      bild.src = 'assets/branchen/' + id + '.webp?v=20261010-ico';
+      bild.alt = ''; bild.width = 24; bild.height = 24; bild.loading = 'lazy'; bild.decoding = 'async';
+      b.appendChild(bild);
+      b.appendChild(document.createTextNode(daten[id].name || id));
       b.addEventListener('click', function () { zeige(id); merken(id); });
       b.addEventListener('keydown', function (e) {
         var n = knoepfe.indexOf(b);
