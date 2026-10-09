@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag 3f007d7 KI-News für KMU 2026-10-09: Gemini-Agent: Google bringt einen Helfer, der Aufgaben selbs; SynthID: Googles Prüfseite zeigt, ob Bilder, Videos oder Aud
+> Stand: 09.10.2026 · Eintrag dd8f949 Merge pull request #12 from vaiacon/preise-2026-10
 
 ## Wie du antwortest
 
@@ -47,9 +47,7 @@ Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer. Die Preise sin
 
 ### Sichtbarkeit
 
-- Google-Check (SEO-Audit): CHF 990 (Der Einstieg.)
-- KI-Sichtbarkeits-Check: CHF 1'300 (Die nächste Stufe.)
-- Google-Check und KI-Check zusammen: CHF 1'990 (Statt CHF 2'290 einzeln.)
+- KI-Sichtbarkeits-Check: CHF 1'300 (Der Einstieg nach dem kostenlosen Check auf der Seite.)
 - Seite überarbeiten: CHF 280 (Preis je Seite.)
 - Laufende Betreuung: lokal gefunden werden: CHF 400 pro Monat (Kündbar auf Ende Folgemonat. Den ersten Platz kann niemand versprechen.)
 - Laufende Betreuung: Google-Sichtbarkeit: CHF 950 pro Monat (Kündbar auf Ende Folgemonat. Enthält die lokale Betreuung.)
@@ -416,7 +414,7 @@ Ohne klare Struktur und verständliche Antworten bleibt Ihr Angebot für Suchmas
 Was Sie bekommen
 Sichtbarkeits-Audit, SEO-Roadmap, GEO-Inhalte und Kontrolle.
 Preisrahmen
-Google-Check CHF 990, KI-Sichtbarkeits-Check CHF 1'300, beide zusammen CHF 1'990; laufende Betreuung ab CHF 400 pro Monat, inkl. MWST.
+Google-Check kostenlos, KI-Sichtbarkeits-Check CHF 1'300, Seite überarbeiten CHF 280; laufende Betreuung ab CHF 400 pro Monat, inkl. MWST.
 Ablauf
 Wir verstehen Ihr Angebot, prüfen Ihre Sichtbarkeit, setzen Prioritäten und verbessern Seiten und Inhalte.
 Region
@@ -765,7 +763,7 @@ Sichtbarkeit
 Was bedeutet Sichtbarkeit? +
 Sichtbarkeit im Netz: SEO für Suchmaschinen und GEO für KI-Antworten, damit Ihr Angebot gefunden und verstanden wird. Zu Sichtbarkeit →
 Was kostet Sichtbarkeit? +
-Der automatische Check auf der Seite ist kostenlos. Wenn wir selbst hinschauen: Google-Check (SEO-Audit) CHF 990 , KI-Sichtbarkeits-Check CHF 1'300 , eine Seite überarbeiten CHF 280 je Seite, beide Checks zusammen CHF 1'990 . Die laufende Betreuung kostet CHF 400 pro Monat für lokales Gefundenwerden, CHF 950 pro Monat für die Google-Sichtbarkeit und CHF 1'300 pro Monat für Google und KI zusammen. Jede Stufe enthält die darunter. Eine Offerte stellen Sie im Offerten-Tool zusammen.
+Der Google-Check auf der Seite ist kostenlos: Er liest, was Ihre Website öffentlich zeigt, und schickt Ihnen den Bericht per E-Mail. Wenn wir selbst hinschauen: KI-Sichtbarkeits-Check CHF 1'300 , eine Seite überarbeiten CHF 280 je Seite. Die laufende Betreuung kostet CHF 400 pro Monat für lokales Gefundenwerden, CHF 950 pro Monat für die Google-Sichtbarkeit und CHF 1'300 pro Monat für Google und KI zusammen. Jede Stufe enthält die darunter. Eine Offerte stellen Sie im Offerten-Tool zusammen.
 Ist GEO einfach ein neues Wort für SEO? +
 Nein. SEO hilft vor allem bei Suchmaschinenresultaten. GEO ergänzt das: Inhalte werden so erklärt und strukturiert, dass KI-Systeme sie als klare Quelle verstehen können.
 Muss ich dafür Technik verstehen? +

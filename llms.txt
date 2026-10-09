@@ -27,8 +27,7 @@ kostenlose Check der eigenen Website. Rückruf innert eines Arbeitstages.
   Fragen): https://vaiacon.ch/learning#standortbestimmung
 - [Sichtbarkeit](https://vaiacon.ch/visibility): Von Google gefunden werden
   und in KI-Antworten vorkommen (SEO und GEO). Kostenloser automatischer Check,
-  dazu Google-Check, KI-Sichtbarkeits-Check, Seiten überarbeiten, SEO-Workshop
-  und laufende Betreuung.
+  dazu KI-Sichtbarkeits-Check, Seiten überarbeiten und laufende Betreuung.
 - [Automationen](https://vaiacon.ch/bot): Belege, Offerten, Korrespondenz und
   Anfragen automatisieren, Chatbot mit Firmenwissen, Telefonassistent,
   Anbindung an Ihre Software. Fixpreis nach der Erstanalyse.
@@ -57,9 +56,7 @@ Offerten-Tool zusammen: https://vaiacon.ch/offerte
 
 ### Sichtbarkeit
 
-- Google-Check (SEO-Audit): CHF 990 (Der Einstieg.)
-- KI-Sichtbarkeits-Check: CHF 1'300 (Die nächste Stufe.)
-- Google-Check und KI-Check zusammen: CHF 1'990 (Statt CHF 2'290 einzeln.)
+- KI-Sichtbarkeits-Check: CHF 1'300 (Der Einstieg nach dem kostenlosen Check auf der Seite.)
 - Seite überarbeiten: CHF 280 (Preis je Seite.)
 - Laufende Betreuung: lokal gefunden werden: CHF 400 pro Monat (Kündbar auf Ende Folgemonat. Den ersten Platz kann niemand versprechen.)
 - Laufende Betreuung: Google-Sichtbarkeit: CHF 950 pro Monat (Kündbar auf Ende Folgemonat. Enthält die lokale Betreuung.)
