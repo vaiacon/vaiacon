@@ -2477,3 +2477,19 @@ picture {
     margin-bottom: var(--space-5);
   }
 }
+
+/* «Kurz gesagt» ausgeblendet (09.10.2026, Philip): bleibt im HTML für Suchmaschinen
+   und Vorleser, ist aber unsichtbar und nimmt keinen Platz ein. Kein display:none,
+   damit Google den Text weiterhin liest. */
+.sv-nur-crawler {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
