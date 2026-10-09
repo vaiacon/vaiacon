@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261009-fakten-versteckt">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
 <link rel="stylesheet" href="ui_kits/website/preismatrix.css?v=20261010-kacheln4">
-<link rel="stylesheet" href="ui_kits/website/automationen.css?v=20261010-kontakt2">
+<link rel="stylesheet" href="ui_kits/website/automationen.css?v=20261010-ihrfall">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -652,11 +652,19 @@
           <p class="sv-kicker">IHR FALL</p>
           <h2 class="sv-title" id="if-titel">Ihr Fall in zwei Sätzen.</h2>
           <p class="sv-lead">
-            Beschreiben Sie, was bei Ihnen jede Woche Zeit frisst. Die KI sagt Ihnen, welche Sprosse das ist und was es ungefähr kostet. Ohne Namen und Kundendaten, bitte.
+            Beschreiben Sie, was bei Ihnen jede Woche Zeit frisst. Die KI sagt Ihnen, welche Sprosse das ist und was es ungefähr kostet.
           </p>
+          <ol class="if__schritte" aria-label="So läuft es">
+            <li><span>1</span>Beschreiben</li>
+            <li><span>2</span>E-Mail und Telefon</li>
+            <li><span>3</span>Einordnung mit Richtpreis</li>
+          </ol>
         </div>
         <form class="if" id="if-form" novalidate>
-          <label class="if__label" for="if-text">Was frisst bei Ihnen Zeit?</label>
+          <div class="if__oben">
+            <label class="if__label" for="if-text">Was frisst bei Ihnen Zeit?</label>
+            <span class="if__privat">Ohne Namen und Kundendaten, bitte</span>
+          </div>
           <textarea id="if-text" name="wunsch" rows="4" maxlength="1500" aria-describedby="if-zaehler if-hinweis" placeholder="Bei uns kommen Rechnungen per Mail, jemand druckt sie aus und tippt sie in die Buchhaltung …"></textarea>
           <div class="if__kontakt" id="if-kontakt" hidden>
             <p class="if__kontakt-satz">Damit wir uns melden können, falls etwas unklar ist:</p>

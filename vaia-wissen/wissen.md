@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag 5cd95f0 Automationen: Einleitung zum Preis entfernt, Titel fragt nach Branchen-Beispielen
+> Stand: 09.10.2026 · Eintrag 05b7648 Automationen: Branchen-Kacheln auf dem Handy vier je Reihe (4+3 statt 3+3+1)
 
 ## Wie du antwortest
 
@@ -595,8 +595,12 @@ So sieht das im Alltag aus.
 Belege, Offerten und Freigaben laufen von selbst. Ihr Fall steht im Feld darunter.
 IHR FALL
 Ihr Fall in zwei Sätzen.
-Beschreiben Sie, was bei Ihnen jede Woche Zeit frisst. Die KI sagt Ihnen, welche Sprosse das ist und was es ungefähr kostet. Ohne Namen und Kundendaten, bitte.
+Beschreiben Sie, was bei Ihnen jede Woche Zeit frisst. Die KI sagt Ihnen, welche Sprosse das ist und was es ungefähr kostet.
+1 Beschreiben
+2 E-Mail und Telefon
+3 Einordnung mit Richtpreis
 Was frisst bei Ihnen Zeit?
+Ohne Namen und Kundendaten, bitte
 Damit wir uns melden können, falls etwas unklar ist:
 E-Mail
 Telefon
