@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag 2cfbce5 Lernwoche: nur Montag bis Freitag, Wochenende raus
+> Stand: 09.10.2026 · Eintrag 2a20f58 KI-Kompetenz: Abschnitt «Ihr Betrieb, Ihre Aufgaben, Ihr Tempo» entfernt
 
 ## Wie du antwortest
 
@@ -217,7 +217,6 @@ KI-KOMPETENZ
 KI-Schulungen für Schweizer KMU, die im Arbeitsalltag funktionieren
 Eine Lernreise, die zu Ihrem Betrieb passt. Ein Kurstag, nach dem alles beim Alten bleibt? Das wollen wir nicht. Eine Lernreise verbindet Training, kleine tägliche Einheiten, Begleitung am Arbeitsplatz und Coaching der Führung über Wochen. Jede ist massgeschneidert.
 KI-Standort bestimmen →
-Offerte erfassen →
 Kurz gesagt
 Für wen ist es geeignet
 Betriebe, deren Team und Führungskräfte KI sicher und nützlich einsetzen sollen.
@@ -322,7 +321,6 @@ Offerten, Protokolle und Kundenmails entstehen aus geprüften Vorlagen keine 6 V
 Alle wissen, welche Werkzeuge Kundendaten bekommen dürfen keine Regel Regel steht, 11 von 15 kennen sie offen, nächste Etappe
 Den Zielcheck erhalten Sie am Ende als eine Seite, mit Vorher und Nachher und einem Vorschlag für die nächsten Wochen.
 Das ist eine Beispielreise, kein fester Plan. Welche Stationen Sie wirklich brauchen, legen wir im Erstgespräch mit Ihnen fest.
-Bauen Sie mit uns Ihre eigene Reise →
 DIE FORMATE
 Alles ist möglich. Alles ist massgeschneidert.
 Sieben Formate, die sich kombinieren lassen. Jedes entsteht aus Ihren Aufgaben, Ihren Unterlagen und Ihrem Alltag.
@@ -356,7 +354,6 @@ Was es ist. Jeden Arbeitstag ein paar Minuten Lernstoff zu Ihren Themen, aufs Sm
 Wann es passt. Wenn Gelerntes im Alltag haften bleiben soll, statt nach dem Kurstag zu verpuffen.
 CHF 60 pro Person Für ein Programm von vier Wochen, ab zehn Personen. Dazu einmalig CHF 900 für den Zuschnitt.
 Jede Reise ist eine Kombination. Sie zahlen nur, was Ihr Betrieb braucht. Preise inklusive Mehrwertsteuer.
-Offerte erfassen →
 KLEINE SCHRITTE, JEDEN TAG
 Ein Kurstag verpufft. Fünf Minuten am Tag bleiben.
 Unsere Überzeugung: Kleine Interventionen, jeden Tag, steigern den Lernerfolg und damit die Effizienz nachhaltig. Wer täglich an der eigenen Aufgabe übt, behält mehr als jemand, der einmal einen langen Tag besucht hat.
@@ -379,7 +376,6 @@ Start
 Ein Kurstag, danach nichts
 Kleine Einheiten, jeden Tag
 Die Skizze zeigt ein Prinzip, keine gemessenen Werte. Dass der Abstand zwischen Lerneinheiten beeinflusst, wie lange etwas haften bleibt, ist gut untersucht, etwa in einer Auswertung von 317 Experimenten ( Cepeda et al., 2006, Psychological Bulletin ; dort ging es um Gedächtnisaufgaben, nicht um Betriebsschulungen). Wie stark es bei Ihnen wirkt, wissen wir erst, wenn wir es gemeinsam messen.
-Kleine Lerneinheiten anfragen →
 Standortbestimmung
 Wo steht Ihr Betrieb mit KI?
 Zwölf kurze Fragen, ein ehrliches Ergebnis und eine persönliche Einschätzung, was sich als Nächstes lohnt.
