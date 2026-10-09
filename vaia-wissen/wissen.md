@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag 16bfce3 Automationen: Beispiel-Tabelle mit sieben Artikeln entfernt, Film bleibt
+> Stand: 09.10.2026 · Eintrag a8fbf85 Ihr Fall: erst Beschreibung, dann E-Mail + Telefon, dann Einordnung
 
 ## Wie du antwortest
 
@@ -512,8 +512,6 @@ Was Sie bekommen
 Bei Ihnen eingerichtete Automationen, auf Wunsch mit Chatbot, Telefonassistent und Anbindung an Ihre Software.
 Preisrahmen
 Fixpreis nach der Erstanalyse, ab CHF 1'300 pro Ablauf, inkl. MWST.
-Ablauf
-Fünf Schritte vom Gespräch bis zur Kontrolle: Empfehlung, Priorisierung, Planung, Umsetzung, Kontrolle.
 Bausteine
 Jede Automation besteht aus fünf Teilen: Etwas kommt rein, die KI versteht es, es wird entschieden, etwas passiert, Sie erfahren davon.
 Ihr Fall
@@ -612,23 +610,6 @@ Das klären wir mit Ihnen
 Richtpreis als Dokument →
 Erstanalyse buchen
 Richtpreis, keine verbindliche Offerte. Die Einstufung machen wir in der Erstanalyse, danach steht der Fixpreis.
-SO LÄUFT ES AB
-Fünf Schritte, vom Gespräch bis zur Kontrolle.
-01
-Empfehlung
-Wir schauen Ihre Abläufe an und benennen, was am meisten entlastet, mit Offerte und ohne Verpflichtung.
-02
-Priorisierung
-Zuerst kommt das Einfachste mit dem schnellsten Nutzen, nicht das Grösste.
-03
-Planung
-Vor dem Bauen steht der Ablauf auf Papier: Auslöser, Schritte, Ergebnis, Ausnahmen.
-04
-Umsetzung
-Wir richten die Automation bei Ihnen ein, zwei Wochen läuft sie neben dem alten Weg mit.
-05
-Kontrolle
-Wir prüfen regelmässig, ob sie noch passt, auf Wunsch dauerhaft mit unserer Begleitung .
 NÄCHSTER SCHRITT
 Zeigen Sie uns, was jede Woche Zeit frisst.
 Im Erstgespräch schauen wir gemeinsam auf Ihre Abläufe und sagen Ihnen, wo sich eine Automation lohnt und wo nicht. Kostenlos und unverbindlich.
