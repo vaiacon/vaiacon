@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag 05b7648 Automationen: Branchen-Kacheln auf dem Handy vier je Reihe (4+3 statt 3+3+1)
+> Stand: 09.10.2026 · Eintrag ca8bbd3 Ihr Fall: Einordnung nur per E-Mail, Seite zeigt nur die Bestätigung
 
 ## Wie du antwortest
 
@@ -515,7 +515,7 @@ Fixpreis nach der Erstanalyse, ab CHF 1'300 pro Ablauf, inkl. MWST.
 Bausteine
 Jede Automation besteht aus fünf Teilen: Etwas kommt rein, die KI versteht es, es wird entschieden, etwas passiert, Sie erfahren davon.
 Ihr Fall
-Auf der Seite beschreiben Sie Ihren Fall in zwei Sätzen, die KI nennt die Sprosse und einen Richtpreis. Die Beschreibung wird nicht gespeichert.
+Auf der Seite beschreiben Sie Ihren Fall in zwei Sätzen und geben E-Mail und Telefon an. Die Einordnung mit Sprosse und Richtpreis kommt per E-Mail, nicht auf der Seite. Die Beschreibung wird nicht gespeichert.
 Region
 Gesamte Deutschschweiz
 BAUSTEINE
@@ -595,21 +595,21 @@ So sieht das im Alltag aus.
 Belege, Offerten und Freigaben laufen von selbst. Ihr Fall steht im Feld darunter.
 IHR FALL
 Ihr Fall in zwei Sätzen.
-Beschreiben Sie, was bei Ihnen jede Woche Zeit frisst. Die KI sagt Ihnen, welche Sprosse das ist und was es ungefähr kostet.
+Beschreiben Sie, was bei Ihnen jede Woche Zeit frisst. Unsere Einordnung bekommen Sie per E-Mail: welche Sprosse das ist und was es ungefähr kostet.
 1 Beschreiben
 2 E-Mail und Telefon
-3 Einordnung mit Richtpreis
+3 Einordnung mit Richtpreis per E-Mail
 Was frisst bei Ihnen Zeit?
 Ohne Namen und Kundendaten, bitte
-Damit wir uns melden können, falls etwas unklar ist:
+An diese Adresse schicken wir die Einordnung. Die Telefonnummer brauchen wir, falls etwas unklar ist:
 E-Mail
 Telefon
 0 Zeichen, mindestens 20
 Einordnung anfordern
-Ihre Beschreibung geht zusammen mit Ihrer Kontaktangabe an uns. Wir melden uns nur, wenn etwas offen ist.
-Unsere Einordnung
-Richtpreis, einmalig
-Das klären wir mit Ihnen
+Ihre Beschreibung geht zusammen mit Ihrer Kontaktangabe an uns. Die Einordnung schicken wir an Ihre E-Mail, meist innert Minuten.
+Unterwegs
+Die Einordnung ist unterwegs.
+Sie bekommen sie in wenigen Minuten an . Wir melden uns, wenn etwas offen ist.
 Richtpreis, keine verbindliche Offerte. Die Einstufung machen wir in der Erstanalyse, danach steht der Fixpreis.
 NÄCHSTER SCHRITT
 Zeigen Sie uns, was jede Woche Zeit frisst.
