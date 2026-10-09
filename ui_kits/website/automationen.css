@@ -419,6 +419,7 @@
 }
 .if textarea:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .if textarea::placeholder { color: var(--text-muted); }
+.if__kontakt[hidden] { display: none; }
 .if__kontakt { display: grid; gap: 10px; padding: 14px 16px; background: var(--surface-card); border: 1.5px solid var(--border-ink); border-radius: var(--radius-md); }
 .if__kontakt-satz { margin: 0; font-size: 14.5px; color: var(--text-body); }
 .if__felder { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
