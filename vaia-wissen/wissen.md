@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag 2a20f58 KI-Kompetenz: Abschnitt «Ihr Betrieb, Ihre Aufgaben, Ihr Tempo» entfernt
+> Stand: 09.10.2026 · Eintrag 1001ae9 KI-Kompetenz: Lernreise-Vorbefüllung hängt am Erstgespräch-Knopf, JS ohne Knopf abgesichert
 
 ## Wie du antwortest
 
@@ -581,7 +581,6 @@ Das ist drin
 Einrichten im Programm, das Sie schon haben
 Probelauf mit Ihren echten Belegen
 Kurze Anleitung fürs Team
-Beispiel ansehen ↓
 Fixpreis nach Erstanalyse
 ab CHF 1'300
 Bei Ihnen fertig in 1 bis 2 Arbeitstagen
@@ -595,175 +594,8 @@ Betreuung mittel, bis 5 Abläufe, 1 Std. Anpassung inkl. CHF 290 pro Monat
 Anpassung nach Aufwand CHF 150 pro Stunde
 Chatbot und Telefonassistent sind eigene Produkte ausserhalb der Matrix, die Preise stehen in den häufigen Fragen . Betreuung kündbar auf Ende Folgemonat. Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer.
 IN 22 SEKUNDEN
-Sieben von vielen.
-Jedes Beispiel ist eine Kombination der Bausteine oben. Ihres steht nicht hier, sondern im Feld darunter.
-Beispiel Sprosse Was von selbst läuft Was Sie davon haben
-Belege in drei Stufen
-Einfache bis Mittelgrosse Automation
-Belege werden abgelegt, gebucht, aus Anfragen werden Offerten-Entwürfe.
-Etwa ein halber Tag pro Woche zurück.
-+
-Ein Ablauf, der mitwächst: Sie fangen mit der Ablage an und bauen aus, sobald es sich lohnt.
-Für die Chefin, den Chef: Etwa ein halber Tag pro Woche kommt zurück, und keine Rechnung geht mehr verloren.
-Kein Abtippen mehr.
-Offerte am selben Tag.
-Teile: Mail, Foto vom Handy liest den Beleg Unklares geht an einen Menschen ablegen, buchen, Offerte schreiben Hinweis bei Abweichung
-Heute
-Belege liegen an drei Orten: Mail, Handy, Papier.
-Abtippen, Suchen am Monatsende, Offerten erst nach Tagen.
-Danach
-1 Beleg erkannt, gelesen, benannt abgelegt.
-2 Buchungsentwurf in Ihrem Programm, ein Klick.
-3 Anfrage wird Offerten-Entwurf, wartet auf Ihr OK.
-Stufe 1 · Einfache Automation Belege ablegen
-Jede Rechnung aus Mail oder Handyfoto liegt Sekunden später benannt im richtigen Ordner. Unklares landet in «Bitte prüfen».
-Passt, wenn Belege per Mail oder Foto kommen und eine feste Ablage da ist: Drive, OneDrive, NAS.
-Einfache Automation · bei Ihnen fertig in 1 bis 2 Arbeitstagen ab CHF 1'300 pro Ablauf
-Stufe 2 · Mittelgrosse Automation In die Buchhaltung
-Aus dem Beleg wird ein Buchungsentwurf in bexio, Abacus oder Banana. Doppelte Rechnungen werden abgefangen, Sie bestätigen mit einem Klick.
-Passt, wenn sich Ihr Buchhaltungsprogramm verbinden lässt: bexio, Abacus, Banana, Sage.
-Mittelgrosse Automation · bei Ihnen fertig in 1 bis 2 Arbeitstagen ab CHF 1'900 pro Programm
-Stufe 3 · Mittelgrosse Automation Mit Offerten
-Das Postfach wird gelesen: Belege werden gebucht, Anfragen werden zu Offerten-Entwürfen mit Ihren Preisen. Beides wartet auf Ihr OK.
-Passt, wenn Anfragen per Mail oder Formular kommen und Ihre Preise in einer Liste stehen.
-Mittelgrosse Automation · bei Ihnen fertig in 3 bis 5 Arbeitstagen ab CHF 3'000
-Passt nicht, wenn
-Belege kommen fast nur auf Papier.
-Die Buchhaltung läuft in Excel.
-Jede Offerte braucht eine Begehung.
-Einstufung: Einfache bis Mittelgrosse Automation Fixpreis nach Erstanalyse, ab CHF 1'300 pro Ablauf bis ab CHF 3'000 Zur Leiter ↑
-Offerte aus dem Formular
-Einfache Automation
-Aus einem kurzen Formular entsteht die fertige PDF-Offerte.
-Minuten statt einer Stunde je Offerte.
-+
-Ihr Team füllt ein kurzes Formular aus. Die Preise werden nach Ihren Regeln gerechnet, die fertige Offerte liegt als PDF bereit.
-Für die Chefin, den Chef: Jede Offerte sieht gleich gut aus, und Ihr Team braucht Minuten statt einer Stunde.
-Regeln statt Bauchgefühl.
-Teile: Formular zieht Leistung und Menge heraus feste Regel: Staffelpreis und Rabatt Offerte schreiben Meldung zur Kontrolle
-Heute
-Offerten werden aus einer alten Vorlage kopiert.
-Rabattregeln stehen im Kopf einer Person.
-Danach
-1 Formular: Leistung, Menge, Kunde, Termin.
-2 Preise werden gerechnet: Staffelpreise, Rabatt, MWST nach Ihren Regeln.
-3 PDF in Ihrem Design, Versand nach Kontrolle.
-Passt, wenn
-Wiederkehrende Leistungen mit klaren Preisen.
-Mehrere Personen schreiben Offerten.
-Passt nicht, wenn
-Preise entstehen erst im Gespräch.
-Einstufung: Einfache Automation · bei Ihnen fertig in 3 bis 5 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 2'200 Zur Leiter ↑
-Freigabe-Schleife
-Mittelgrosse Automation
-Grosse Rechnungen gehen erst nach Ihrer Freigabe weiter.
-Freigabe vom Handy, nachvollziehbar.
-+
-Rechnungen über einem Betrag, den Sie festlegen, gehen per Mail oder Handy-Nachricht zur Freigabe. Erst dann werden sie bezahlt.
-Für die Chefin, den Chef: Sie behalten die Hand auf dem Geld, auch wenn Sie unterwegs sind.
-Nachvollziehbar.
-Teile: Beleg als PDF zieht Betrag und Datum heraus über der Schwelle: Freigabe am Handy buchen Frist läuft ab, Erinnerung
-Heute
-Freigaben per Zuruf, Unterschriften freitags im Stapel.
-Wer was freigegeben hat, steht nirgends.
-Danach
-1 Betrag gelesen, unter der Schwelle direkt weiter.
-2 Darüber: Nachricht mit Beleg und Knopf «Freigeben».
-3 Erinnerung nach zwei Tagen, Freigabe mit Name und Zeit am Beleg.
-Passt, wenn
-Klare Regel: Betrag, Lieferant oder Kostenstelle.
-Die freigebende Person ist oft unterwegs.
-Passt nicht, wenn
-Jede Rechnung soll persönlich angeschaut werden.
-Einstufung: Mittelgrosse Automation · bei Ihnen fertig in 1 bis 2 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 2'600 Zur Leiter ↑
-Von der Anfrage zur Rechnung
-Komplette Automation
-Anfrage, Offerte, Auftrag und Rechnung laufen in einem Fluss.
-Rechnung am Tag des Abschlusses.
-+
-Eine Anfrage kommt rein, die Offerte geht raus, der Auftrag wird angelegt, nach Abschluss folgt die Rechnung. Alle beteiligten Programme arbeiten dabei zusammen.
-Für die Chefin, den Chef: Rechnungen gehen am Tag des Abschlusses raus, das Geld ist Wochen früher da.
-Einmal erfassen.
-Überblick über jede Anfrage.
-Teile: Mail, Formular auf der Website ordnet dem Kunden zu KI schlägt vor, Sie entscheiden Offerte schreiben, Auftrag anlegen, Rechnung stellen Dossier je Kunde
-Heute
-Kundendaten werden dreimal getippt: Offerte, Auftrag, Rechnung.
-Zwischen Abschluss und Rechnung vergehen Wochen.
-Danach
-1 Anfrage wird Offerten-Entwurf, Sie geben frei.
-2 Zusage wird Auftrag im Werkstattprogramm.
-3 Abschluss wird Rechnungsentwurf, offene Offerten nach sieben Tagen nachgefasst.
-Passt, wenn
-Mehrere Aufträge pro Woche laufen ähnlich ab.
-Programme für Offerte, Auftrag und Rechnung sind da.
-Passt nicht, wenn
-Projekte dauern Monate und ändern sich ständig.
-Einstufung: Komplette Automation · bei Ihnen fertig in 3 bis 5 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 4'200 Zur Leiter ↑
-Postfach mit KI
-Mittelgrosse Automation
-Mails werden eingeordnet, Antwortentwürfe stehen bereit.
-Weniger Sortieren, schnellere Antworten.
-+
-Jede Mail wird eingeordnet, für Anfragen steht ein Antwortentwurf in Ihrem Ton bereit.
-Für die Chefin, den Chef: Keine Anfrage geht mehr unter, und Ihr Team beginnt den Tag mit dem Wichtigen.
-Teile: Mail erkennt Dringlichkeit Reihenfolge nach Kunde Antwort entwerfen Tagesübersicht am Morgen
-Heute
-Achtzig Mails am Tag, fünfzehn davon wichtig.
-Anfragen gehen zwischen Newslettern unter.
-Danach
-1 Kategorie und Dringlichkeit gesetzt.
-2 Antwortentwurf aus Ihren Textbausteinen.
-3 Nachfassen nach drei Tagen ohne Antwort.
-Passt, wenn
-Viele ähnliche Anfragen: Preis, Verfügbarkeit, Termin.
-Mail ist Ihr Hauptkanal.
-Passt nicht, wenn
-Jede Antwort ist ein Beratungsgespräch.
-Einstufung: Mittelgrosse Automation · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 3'800 Zur Leiter ↑
-Kundendossier
-Komplette Automation
-Mails, Rechnungen, Offerten und Termine je Kunde an einem Ort.
-Alles zum Kunden in einem Blick.
-+
-Mails, Rechnungen, Offerten und Termine je Kunde aus zwei Programmen, mit Kurzfassung von der KI.
-Für die Chefin, den Chef: Wer ausfällt oder in den Ferien ist, reisst keine Lücke: Der Stand zu jedem Kunden ist jederzeit da.
-In dreissig Sekunden im Bild.
-Versprechen werden gehalten.
-Teile: Mail, Beleg, Termin im Kalender ordnet dem Kunden zu, fasst zusammen Frist läuft ab, Erinnerung Dossier nachführen Dossier je Kunde
-Heute
-Vor jedem Anruf fünf Minuten Suchen in Mail, Buchhaltung, Kalender.
-Fällt jemand aus, kennt niemand den Stand.
-Danach
-1 Kunde erkannt in beiden Programmen.
-2 Alles zusammengeführt, offene Punkte zuoberst.
-3 Täglich nachgeführt, dort, wo Sie arbeiten.
-Passt, wenn
-Stammkunden mit längerer Beziehung.
-Daten liegen in zwei Programmen.
-Passt nicht, wenn
-Alles ist schon sauber in einem CRM.
-Einstufung: Komplette Automation · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 5'200 Zur Leiter ↑
-Ganzer Bereich
-Komplette Automation
-Einkauf oder Rapportierung laufen von selbst, mit Freigaben.
-Ein Bereich ohne Handarbeit.
-+
-Einkauf oder Rapportierung komplett: Bestellung, Lieferschein, Rechnung, Freigabe, Buchung, Auswertung.
-Für die Chefin, den Chef: Der Bereich hängt nicht mehr an einer Person, und Sie sehen jeden Monat, wo es hakt.
-Teile: Bestellung, Lieferschein, Beleg als PDF vergleicht mit der Bestellung Vier-Augen-Prinzip buchen, nachbestellen Monatsabschluss auf Knopfdruck
-Heute
-Der Bereich hängt an einer Person mit allem im Kopf.
-Auswertungen kommen am Quartalsende, zu spät.
-Danach
-1 Bestellung, Lieferschein, Rechnung abgeglichen, Abweichung gemeldet.
-2 Freigabe nach Regel, dann Buchung.
-3 Monatsauswertung, Team geschult und begleitet.
-Passt, wenn
-Ein abgegrenzter Bereich mit vielen Durchläufen.
-Die Geschäftsleitung steht dahinter.
-Passt nicht, wenn
-Der Bereich ändert sich gerade grundlegend.
-Einstufung: Komplette Automation · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 6'800 Zur Leiter ↑
+So sieht das im Alltag aus.
+Belege, Offerten und Freigaben laufen von selbst. Ihr Fall steht im Feld darunter.
 IHR FALL
 Ihr Fall in zwei Sätzen.
 Beschreiben Sie, was bei Ihnen jede Woche Zeit frisst. Die KI sagt Ihnen, welche Sprosse das ist und was es ungefähr kostet. Ohne Namen und Kundendaten, bitte.
