@@ -1,4 +1,4 @@
-/* Preismatrix Automationen (bot.html): Zeitaufwand × Komplexität.
+/* Preismatrix Automationen (bot.html): Dauer × Grösse des Schritts.
    Farben, Schriften, Radien aus tokens/. Preise der Ankerzellen kommen über
    data-preis aus daten/preise.json, die Zwischenwerte stehen im HTML. */
 
@@ -238,3 +238,82 @@
 }
 
 .pm-mehr { display: inline-block; margin-top: 14px; font-weight: var(--weight-semibold); font-size: 15px; }
+
+/* Detailkarte: Nutzenzeile und Umfang */
+.pm-nutzen {
+  margin-top: 16px;
+  padding: 12px 16px;
+  border-left: 4px solid var(--terra-600);
+  background: var(--cream-card);
+  border-radius: 6px;
+}
+.pm-nutzen b {
+  display: block;
+  font-size: var(--text-overline);
+  letter-spacing: var(--tracking-badge);
+  text-transform: uppercase;
+  color: var(--terra-600);
+  margin-bottom: 4px;
+}
+.pm-nutzen p { color: var(--text-strong); font-size: 15px; }
+.pm-drin {
+  margin: 16px 0 0;
+  font-size: var(--text-overline);
+  letter-spacing: var(--tracking-badge);
+  text-transform: uppercase;
+  font-weight: var(--weight-bold);
+  color: var(--text-muted);
+}
+.pm-card .pm-drin + .pm-liste { margin-top: 8px; }
+
+/* Leiter: drei Grössen, vor der Matrix */
+.pm-leiter {
+  list-style: none;
+  margin: var(--space-6) 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+.pm-leiter li {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 18px;
+  background: var(--bg-alt);
+  border-radius: var(--radius-md);
+}
+.pm-leiter p { margin: 0; font-size: 15px; color: var(--text-body); line-height: 1.4; }
+.pm-leiter__kopf { display: flex; align-items: center; gap: 10px; }
+.pm-leiter__kopf i {
+  font-style: normal;
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-xs);
+  background: var(--peach-150);
+  color: var(--terra-600);
+  font-weight: var(--weight-bold);
+  font-size: 13px;
+}
+.pm-leiter__kopf b { font-size: 18px; color: var(--text-strong); }
+.pm-leiter .pm-leiter__bsp { color: var(--text-strong); font-style: italic; }
+.pm-leiter .pm-leiter__gewinn {
+  margin-top: auto;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-soft);
+  color: var(--text-strong);
+}
+.pm-leiter__gewinn span {
+  display: block;
+  font-size: var(--text-overline);
+  letter-spacing: var(--tracking-badge);
+  text-transform: uppercase;
+  font-weight: var(--weight-bold);
+  color: var(--terra-600);
+  margin-bottom: 2px;
+}
+@media (max-width: 860px) {
+  .pm-leiter { grid-template-columns: 1fr; }
+}
