@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag ca8bbd3 Ihr Fall: Einordnung nur per E-Mail, Seite zeigt nur die Bestätigung
+> Stand: 09.10.2026 · Eintrag e5f4ed6 Automationen: «Das nervt» als Terra-Karte hervorgehoben
 
 ## Wie du antwortest
 
@@ -611,11 +611,6 @@ Unterwegs
 Die Einordnung ist unterwegs.
 Sie bekommen sie in wenigen Minuten an . Wir melden uns, wenn etwas offen ist.
 Richtpreis, keine verbindliche Offerte. Die Einstufung machen wir in der Erstanalyse, danach steht der Fixpreis.
-NÄCHSTER SCHRITT
-Zeigen Sie uns, was jede Woche Zeit frisst.
-Im Erstgespräch schauen wir gemeinsam auf Ihre Abläufe und sagen Ihnen, wo sich eine Automation lohnt und wo nicht. Kostenlos und unverbindlich.
-Kostenlose Erstanalyse →
-Richtpreis in zwei Minuten →
 
 ### Begleitung
 
