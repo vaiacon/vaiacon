@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261009-fakten-versteckt">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
 <link rel="stylesheet" href="ui_kits/website/kundenstimme.css?v=20261005-vorschlag">
-<link rel="stylesheet" href="ui_kits/website/offerte.css?v=20261009-richtpreis">
+<link rel="stylesheet" href="ui_kits/website/offerte.css?v=20261009-ohne-katalog">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -208,20 +208,12 @@
               <p class="of-zaehler" id="of-wunsch-zaehler"><span id="of-wunsch-n">0</span> von 3000 Zeichen</p>
               <p class="of-fehler" id="of-wunsch-fehler" role="alert"></p>
             </div>
-          <details class="of-klapp" id="of-klapp">
-            <summary class="of-klapp__kopf">Sie wissen schon genau, welche Leistungen Sie wollen? Positionen selbst ankreuzen</summary>
-            <p class="of-klapp__hilfe">Angekreuzte Positionen gelten dann so, wie Sie sie gewählt haben. Die Beschreibung ergänzt sie.</p>
-            <nav class="of-chips" id="of-chips" aria-label="Bereiche" hidden></nav>
-            <div id="of-katalog" aria-live="polite">
-              <p class="of-laden" role="status">Angebote werden geladen …</p>
-            </div>
-          </details>
           </div>
 
           <aside class="of-summary" id="of-summary" aria-label="Zusammenfassung" hidden>
             <div class="of-summary__body" id="of-summary-body">
               <h3 class="of-summary__titel">Ihr Richtpreis</h3>
-              <p class="of-summary__leer" id="of-summary-leer">Erscheint, sobald Sie Ihre Beschreibung abgeschickt haben. Wer Positionen ankreuzt, sieht hier schon die Vorschau.</p>
+              <p class="of-summary__leer" id="of-summary-leer">Erscheint, sobald Sie Ihre Beschreibung abgeschickt haben.</p>
               <ul class="of-summary__liste" id="of-summary-liste"></ul>
               <div class="of-summe" id="of-summe" aria-live="polite" aria-atomic="true">
                 <p class="of-summe__zeile"><span>Einmalig <small class="of-inkl" data-inkl></small></span><strong id="of-summe-einmalig">CHF 0</strong></p>
@@ -379,7 +371,7 @@
 </div>
 <script src="ui_kits/website/api-basis.js?v=20261004-umbau"></script>
 <script src="ui_kits/website/visibility.js?v=20261007-logo-svg"></script>
-<script src="ui_kits/website/offerte.js?v=20261009-richtpreis" defer></script>
+<script src="ui_kits/website/offerte.js?v=20261009-ohne-katalog" defer></script>
 <script src="ui_kits/website/chat.js?v=20261004-umbau"></script>
 </body>
 </html>
