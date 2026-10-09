@@ -31,6 +31,8 @@ kostenlose Check der eigenen Website. Rückruf innert eines Arbeitstages.
 - [Automationen](https://vaiacon.ch/bot): Belege, Offerten, Korrespondenz und
   Anfragen automatisieren, Chatbot mit Firmenwissen, Telefonassistent,
   Anbindung an Ihre Software. Fixpreis nach der Erstanalyse.
+- [Automationen im Alltag](https://vaiacon.ch/beispiele): Neun Beispiele mit
+  Heute, Danach und Nutzen: Belege, Offerten, Freigaben, Postfach, Kundendossier.
 - [Begleitung](https://vaiacon.ch/service): Betreuung und Support für alles,
   was vaiacon aufgebaut hat, Beratung nach Aufwand, Anpassungen und die
   bezahlte KI-Standortanalyse im Betrieb. Monatlich kündbar.

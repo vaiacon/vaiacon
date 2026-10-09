@@ -235,3 +235,5 @@
 @media (prefers-reduced-motion: reduce) {
   .pm-cell { transition: none; }
 }
+
+.pm-mehr { display: inline-block; margin-top: 14px; font-weight: var(--weight-semibold); font-size: 15px; }

@@ -41,6 +41,11 @@
     setze('pm-d-dauer', zelle.getAttribute('data-dauer') || '');
     setze('pm-d-betreuung', 'CHF ' + format(betreuung) + ' pro Monat');
     setze('pm-d-jahr', 'CHF ' + format(preis + betreuung * 12));
+    var mehr = document.getElementById('pm-d-mehr');
+    if (mehr) {
+      var ziel = zelle.getAttribute('data-mehr');
+      if (ziel) { mehr.href = ziel; mehr.hidden = false; } else { mehr.hidden = true; }
+    }
 
     var liste = document.getElementById('pm-d-liste');
     if (liste) {
