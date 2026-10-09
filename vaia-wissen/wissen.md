@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag 98b0f7e Automationen: Sinnbilder mit Versionszusatz, damit Browser neu laden
+> Stand: 09.10.2026 · Eintrag 5cd95f0 Automationen: Einleitung zum Preis entfernt, Titel fragt nach Branchen-Beispielen
 
 ## Wie du antwortest
 
@@ -606,8 +606,6 @@ Ihre Beschreibung geht zusammen mit Ihrer Kontaktangabe an uns. Wir melden uns n
 Unsere Einordnung
 Richtpreis, einmalig
 Das klären wir mit Ihnen
-Richtpreis als Dokument →
-Erstanalyse buchen
 Richtpreis, keine verbindliche Offerte. Die Einstufung machen wir in der Erstanalyse, danach steht der Fixpreis.
 NÄCHSTER SCHRITT
 Zeigen Sie uns, was jede Woche Zeit frisst.
