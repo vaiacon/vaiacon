@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag e2ab216 Branchen-Use-Cases als Stichworte statt Sätze
+> Stand: 09.10.2026 · Eintrag 3b3f8df Mahnlauf ohne Ziffern
 
 ## Wie du antwortest
 
@@ -370,10 +370,6 @@ Donnerstag 5 Min Eine Vorlage nutzen
 Eine Vorlage aus dem Training, auf einen echten Fall angewendet.
 Freitag 5 Min Weitergeben
 Was Sie diese Woche gefunden haben, in einer Minute einer Kollegin zeigen.
-Samstag frei Pause
-Kein Lernstoff.
-Sonntag frei Pause
-Auch Ruhe gehört zum Lernen.
 Einmal schulen oder täglich dranbleiben
 Prinzipskizze, keine Messung
 Was im Alltag ankommt
