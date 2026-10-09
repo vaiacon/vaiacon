@@ -40,7 +40,8 @@
 
   function spalten() { return mqSpalten.matches; }
   function ruhe() { return mqRuhe.matches; }
-  function automatisch() { return spalten() && !ruhe(); }
+  /* Wechselt auf allen Breiten von selbst; nur wer weniger Bewegung wünscht, sieht ihn nicht. */
+  function automatisch() { return !ruhe(); }
 
   function sagen(text) { if (hinweis) hinweis.textContent = text; }
 
@@ -198,8 +199,8 @@
   });
   ['pointerup', 'pointercancel'].forEach(function (n) {
     stage.addEventListener(n, function () {
-      /* Nach Berührung bleibt es stehen, bis jemand «Weiter» drückt. */
-      if (halten.beruehrung) { halte('beruehrung', false); nutzerPause = true; knopfZeigen(); }
+      /* Finger weg: weiter. Wer zu einer anderen Karte wischt, hält es über den Scroll-Beobachter an. */
+      if (halten.beruehrung) { halte('beruehrung', false); letzter = 0; }
     });
   });
 
@@ -255,7 +256,7 @@
       if (letzter) verstrichen += t - letzter;
       letzter = t;
       if (verstrichen >= DAUER) {
-        setze(aktiv + 1, {});
+        setze(aktiv + 1, { scrollen: true });
         sagen('');
       } else {
         balken(verstrichen / DAUER);
