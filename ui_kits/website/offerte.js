@@ -83,7 +83,7 @@
   function zeige(name, fokus) {
     aktuelle = name;
     Object.keys(ansichten).forEach(function (k) { ansichten[k].hidden = (k !== name); });
-    document.body.classList.toggle('of-leiste', name === 'auswahl' && !!katalog && !!$('of-katalog'));
+    document.body.classList.toggle('of-leiste', name === 'auswahl' && !!katalog);
     if (fokus === false) return;
     var titel = ansichten[name].querySelector('[tabindex="-1"]');
     var oben = ansichten[name].getBoundingClientRect().top + window.pageYOffset - 90;
@@ -116,7 +116,15 @@
   function zeichneKatalog() {
     var platz = $('of-katalog');
     var chips = $('of-chips');
-    if (!platz || !chips) return;
+    if (!platz || !chips) {
+      // Kein Katalog auf der Seite: Textfeld und Zusammenfassung (mit dem Knopf «Richtpreis anfordern») trotzdem zeigen.
+      $('of-frei').hidden = false;
+      $('of-summary').hidden = false;
+      $('of-wunsch').value = wunsch;
+      $('of-wunsch-n').textContent = String(wunsch.length);
+      $('of-mwst').textContent = katalog.mwst_hinweis || '';
+      return;
+    }
     platz.textContent = '';
     chips.textContent = '';
 
@@ -697,7 +705,7 @@
       Object.keys(auswahl).forEach(karteSync);
       var klapp = $('of-klapp');
       if (klapp && (Object.keys(auswahl).length || (location.hash && k.bereiche.some(function (b) { return '#' + b.id === location.hash; })))) klapp.open = true;
-      if ($('of-katalog')) document.body.classList.add('of-leiste');
+      document.body.classList.add('of-leiste');
       aktualisiere();
       zumBereich();
     }).catch(function () {
