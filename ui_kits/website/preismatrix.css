@@ -13,6 +13,11 @@
   align-items: start;
 }
 .pm-spalte { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+/* Spaltenköpfe gleich hoch: jede Spalte teilt die Zeilen des Rasters (Kopf + drei Karten). */
+@supports (grid-template-rows: subgrid) {
+  .pm-matrix { grid-template-rows: auto auto auto auto; }
+  .pm-spalte { display: grid; grid-template-rows: subgrid; grid-row: span 4; row-gap: 10px; }
+}
 
 /* Spaltenkopf: Sprosse, Erklärung, Beispiel, Nutzen, ab-Preis */
 .pm-col {
