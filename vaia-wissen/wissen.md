@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag d45b99c Bausteine mit Sinnbildern, Sprossen heissen Einfache/Mittelgrosse/Komplette Automation
+> Stand: 09.10.2026 · Eintrag a23f754 Branchen-Umschalter zeigt realistische Use Cases statt Einzelsätze
 
 ## Wie du antwortest
 
@@ -556,29 +556,6 @@ Jedes Beispiel weiter unten ist eine Kombination aus diesen Teilen. Ihres auch.
 WAS ES KOSTET
 Wie gross ist der Schritt?
 Alles, was sich in Ihrem Betrieb wiederholt, lässt sich automatisieren: von der einen festen Regel bis zum ganzen Bereich. Der Preis hängt nur davon ab, wie gross der Schritt ist. Wie schnell er bei Ihnen fertig ist, sagen wir Ihnen dazu – das ändert am Preis nichts. Die Einstufung machen wir in der Erstanalyse, danach steht der Fixpreis. Alle Preise pro Ablauf, einmalig, inklusive MWST.
-Was in Ihrer Branche von selbst laufen kann:
-Malerbetrieb
-Treuhand
-Arztpraxis
-Sanitär und Heizung
-Agentur
-Restaurant
-Für alle Branchen
-Das nervt Aufmass, Rapport und Offerte werden mehrfach abgetippt, bis am Ende die Rechnung rausgeht.
-Offerten bleiben liegen, weil das Nachfassen an Notizzetteln und am Gedächtnis hängt.
-Arbeitszeiten von der Baustelle kommen spät oder lückenhaft im Büro an.
-1 Einfache Automation
-Bewertungsbitte nach Abnahme Nach der Abnahme geht eine Nachricht mit Google-Bewertungslink an den Kunden, Ihre Referenzen wachsen ohne Nachfragen.
-Rapport-Foto ablegen Fotos von Rapport und Lieferschein per WhatsApp landen automatisch im richtigen Projektordner, mit Datum und Kundennamen benannt.
-Zahlungseingang abgleichen Eingehende QR-Zahlungen werden der offenen Rechnung zugeordnet und als bezahlt markiert, ohne dass jemand Kontoauszüge durchgeht.
-2 Mittelgrosse Automation
-Offerte mit Nachfassen Nach jedem Versand erinnert das System nach einer Woche und schreibt einen Nachfass-Entwurf, den Sie nur freigeben.
-Aufmass zu Offertenentwurf Aus Raumfotos, Massen und Wunschfarbe entsteht ein Offertenentwurf mit Flächen und Material, den Sie prüfen und anpassen.
-Terminabgleich mit Kunden Kunden wählen online einen freien Besichtigungstermin; er erscheint in Ihrem Kalender samt Adresse und Anfahrtszeit.
-3 Komplette Automation
-Von Anfrage bis Rechnung Von der Anfrage über Besichtigung, Offerte und Rapport bis zur QR-Rechnung; Sie geben nur frei, der Mahnlauf läuft mit.
-Mahnlauf von selbst Offene Rechnungen bekommen Erinnerung, erste und zweite Mahnung zur richtigen Zeit; bei Streit stoppt es und fragt Sie.
-Social-Media-Funnel Anfrage Ein Beitrag mit Vorher-nachher-Bildern führt über ein Formular zur Anfrage; die KI ordnet sie ein und bucht die Besichtigung.
 1 Einfache Automation Eine feste Regel in einem Programm
 Eine Rechnung kommt per Mail und liegt Sekunden später im richtigen Ordner.
 Was Sie davon haben Nichts geht verloren, niemand sucht am Monatsende.
@@ -639,12 +616,11 @@ Chatbot und Telefonassistent sind eigene Produkte ausserhalb der Matrix, die Pre
 IN 22 SEKUNDEN
 Sieben von vielen.
 Jedes Beispiel ist eine Kombination der Bausteine oben. Ihres steht nicht hier, sondern im Feld darunter.
-Beispiel Sprosse Was von selbst läuft Was Sie davon haben Preis
+Beispiel Sprosse Was von selbst läuft Was Sie davon haben
 Belege in drei Stufen
 Einfache bis Mittelgrosse Automation
 Belege werden abgelegt, gebucht, aus Anfragen werden Offerten-Entwürfe.
 Etwa ein halber Tag pro Woche zurück.
-ab CHF 1'300
 +
 Ein Ablauf, der mitwächst: Sie fangen mit der Ablage an und bauen aus, sobald es sich lohnt.
 Für die Chefin, den Chef: Etwa ein halber Tag pro Woche kommt zurück, und keine Rechnung geht mehr verloren.
@@ -679,7 +655,6 @@ Offerte aus dem Formular
 Einfache Automation
 Aus einem kurzen Formular entsteht die fertige PDF-Offerte.
 Minuten statt einer Stunde je Offerte.
-ab CHF 2'200
 +
 Ihr Team füllt ein kurzes Formular aus. Die Preise werden nach Ihren Regeln gerechnet, die fertige Offerte liegt als PDF bereit.
 Für die Chefin, den Chef: Jede Offerte sieht gleich gut aus, und Ihr Team braucht Minuten statt einer Stunde.
@@ -702,7 +677,6 @@ Freigabe-Schleife
 Mittelgrosse Automation
 Grosse Rechnungen gehen erst nach Ihrer Freigabe weiter.
 Freigabe vom Handy, nachvollziehbar.
-ab CHF 2'600
 +
 Rechnungen über einem Betrag, den Sie festlegen, gehen per Mail oder Handy-Nachricht zur Freigabe. Erst dann werden sie bezahlt.
 Für die Chefin, den Chef: Sie behalten die Hand auf dem Geld, auch wenn Sie unterwegs sind.
@@ -725,7 +699,6 @@ Von der Anfrage zur Rechnung
 Komplette Automation
 Anfrage, Offerte, Auftrag und Rechnung laufen in einem Fluss.
 Rechnung am Tag des Abschlusses.
-ab CHF 4'200
 +
 Eine Anfrage kommt rein, die Offerte geht raus, der Auftrag wird angelegt, nach Abschluss folgt die Rechnung. Alle beteiligten Programme arbeiten dabei zusammen.
 Für die Chefin, den Chef: Rechnungen gehen am Tag des Abschlusses raus, das Geld ist Wochen früher da.
@@ -749,7 +722,6 @@ Postfach mit KI
 Mittelgrosse Automation
 Mails werden eingeordnet, Antwortentwürfe stehen bereit.
 Weniger Sortieren, schnellere Antworten.
-ab CHF 3'800
 +
 Jede Mail wird eingeordnet, für Anfragen steht ein Antwortentwurf in Ihrem Ton bereit.
 Für die Chefin, den Chef: Keine Anfrage geht mehr unter, und Ihr Team beginnt den Tag mit dem Wichtigen.
@@ -771,7 +743,6 @@ Kundendossier
 Komplette Automation
 Mails, Rechnungen, Offerten und Termine je Kunde an einem Ort.
 Alles zum Kunden in einem Blick.
-ab CHF 5'200
 +
 Mails, Rechnungen, Offerten und Termine je Kunde aus zwei Programmen, mit Kurzfassung von der KI.
 Für die Chefin, den Chef: Wer ausfällt oder in den Ferien ist, reisst keine Lücke: Der Stand zu jedem Kunden ist jederzeit da.
@@ -795,7 +766,6 @@ Ganzer Bereich
 Komplette Automation
 Einkauf oder Rapportierung laufen von selbst, mit Freigaben.
 Ein Bereich ohne Handarbeit.
-ab CHF 6'800
 +
 Einkauf oder Rapportierung komplett: Bestellung, Lieferschein, Rechnung, Freigabe, Buchung, Auswertung.
 Für die Chefin, den Chef: Der Bereich hängt nicht mehr an einer Person, und Sie sehen jeden Monat, wo es hakt.

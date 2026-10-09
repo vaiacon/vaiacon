@@ -100,7 +100,7 @@
 .bsp-tabelle { text-align: left; margin: 36px 0 0; border-top: 1.5px solid var(--border-ink); }
 .bsp-tabelle__kopf, .bsp-tabelle__zeile > summary {
   display: grid;
-  grid-template-columns: 1.3fr 1fr 2fr 1.5fr .8fr 24px;
+  grid-template-columns: 1.3fr 1fr 2fr 1.5fr 24px;
   gap: 8px 22px;
   align-items: baseline;
   padding: 14px 6px;
@@ -151,7 +151,6 @@
     font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
     color: var(--text-muted);
   }
-  .bsp-tabelle__preis { white-space: normal; }
   .bsp-tabelle__plus { position: absolute; right: 6px; top: 14px; margin: 0; }
 }
 @media (prefers-reduced-motion: reduce) {

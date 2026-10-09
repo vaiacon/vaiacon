@@ -21,8 +21,8 @@
 <link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20261005-vorschlag">
 <link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261009-fakten-versteckt">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
-<link rel="stylesheet" href="ui_kits/website/preismatrix.css?v=20261010-usecases">
-<link rel="stylesheet" href="ui_kits/website/automationen.css?v=20261010-sinnbilder">
+<link rel="stylesheet" href="ui_kits/website/preismatrix.css?v=20261010-preise-leise">
+<link rel="stylesheet" href="ui_kits/website/automationen.css?v=20261010-preise-leise">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -477,7 +477,7 @@
             <article class="pm-branchen__karte"><p class="pm-branchen__sprosse"><i>3</i>Komplette Automation</p><ul class="pm-branchen__liste" data-sprosse="ganzer_ablauf"><li><b>Von Anfrage bis Rechnung</b> <span>Von der Anfrage über Besichtigung, Offerte und Rapport bis zur QR-Rechnung; Sie geben nur frei, der Mahnlauf läuft mit.</span></li><li><b>Mahnlauf von selbst</b> <span>Offene Rechnungen bekommen Erinnerung, erste und zweite Mahnung zur richtigen Zeit; bei Streit stoppt es und fragt Sie.</span></li><li><b>Social-Media-Funnel Anfrage</b> <span>Ein Beitrag mit Vorher-nachher-Bildern führt über ein Formular zur Anfrage; die KI ordnet sie ein und bucht die Besichtigung.</span></li></ul></article>
             </div>
           </div>
-        </div>
+        </div><!-- /pm-branchen -->
 
         <div class="pm-wrap" id="pm-preise">
           <div class="pm-scroll">
@@ -650,7 +650,7 @@
           </video>
         </div>
         <div class="bsp-tabelle" aria-label="Sieben Beispiele im Überblick">
-          <div class="bsp-tabelle__kopf" aria-hidden="true"><span>Beispiel</span><span>Sprosse</span><span>Was von selbst läuft</span><span>Was Sie davon haben</span><span>Preis</span><span></span></div>
+          <div class="bsp-tabelle__kopf" aria-hidden="true"><span>Beispiel</span><span>Sprosse</span><span>Was von selbst läuft</span><span>Was Sie davon haben</span><span></span></div>
 
           <details class="bsp-tabelle__zeile" id="belege">
             <summary>
@@ -658,7 +658,7 @@
               <span data-label="Sprosse"><em class="bsp-tag bsp-tag--mix">Einfache bis Mittelgrosse Automation</em></span>
               <span data-label="Was von selbst läuft">Belege werden abgelegt, gebucht, aus Anfragen werden Offerten-Entwürfe.</span>
               <span data-label="Was Sie davon haben">Etwa ein halber Tag pro Woche zurück.</span>
-              <span data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-ablauf-klein" data-preis-form="betrag">ab CHF 1'300</span></span>
+              <!-- Preis erst im Aufklapper (09.10.) -->
               <span class="bsp-tabelle__plus" aria-hidden="true">+</span>
             </summary>
             <div class="bsp">
@@ -730,7 +730,7 @@
               <span data-label="Sprosse"><em class="bsp-tag bsp-tag--e">Einfache Automation</em></span>
               <span data-label="Was von selbst läuft">Aus einem kurzen Formular entsteht die fertige PDF-Offerte.</span>
               <span data-label="Was Sie davon haben">Minuten statt einer Stunde je Offerte.</span>
-              <span data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-offerte-formular" data-preis-form="betrag">ab CHF 2'200</span></span>
+              <!-- Preis erst im Aufklapper (09.10.) -->
               <span class="bsp-tabelle__plus" aria-hidden="true">+</span>
             </summary>
             <div class="bsp">
@@ -786,7 +786,7 @@
               <span data-label="Sprosse"><em class="bsp-tag bsp-tag--v">Mittelgrosse Automation</em></span>
               <span data-label="Was von selbst läuft">Grosse Rechnungen gehen erst nach Ihrer Freigabe weiter.</span>
               <span data-label="Was Sie davon haben">Freigabe vom Handy, nachvollziehbar.</span>
-              <span data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-freigabe-schleife" data-preis-form="betrag">ab CHF 2'600</span></span>
+              <!-- Preis erst im Aufklapper (09.10.) -->
               <span class="bsp-tabelle__plus" aria-hidden="true">+</span>
             </summary>
             <div class="bsp">
@@ -842,7 +842,7 @@
               <span data-label="Sprosse"><em class="bsp-tag bsp-tag--g">Komplette Automation</em></span>
               <span data-label="Was von selbst läuft">Anfrage, Offerte, Auftrag und Rechnung laufen in einem Fluss.</span>
               <span data-label="Was Sie davon haben">Rechnung am Tag des Abschlusses.</span>
-              <span data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-auftragsablauf" data-preis-form="betrag">ab CHF 4'200</span></span>
+              <!-- Preis erst im Aufklapper (09.10.) -->
               <span class="bsp-tabelle__plus" aria-hidden="true">+</span>
             </summary>
             <div class="bsp">
@@ -899,7 +899,7 @@
               <span data-label="Sprosse"><em class="bsp-tag bsp-tag--v">Mittelgrosse Automation</em></span>
               <span data-label="Was von selbst läuft">Mails werden eingeordnet, Antwortentwürfe stehen bereit.</span>
               <span data-label="Was Sie davon haben">Weniger Sortieren, schnellere Antworten.</span>
-              <span data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-postfach-ki" data-preis-form="betrag">ab CHF 3'800</span></span>
+              <!-- Preis erst im Aufklapper (09.10.) -->
               <span class="bsp-tabelle__plus" aria-hidden="true">+</span>
             </summary>
             <div class="bsp">
@@ -952,7 +952,7 @@
               <span data-label="Sprosse"><em class="bsp-tag bsp-tag--g">Komplette Automation</em></span>
               <span data-label="Was von selbst läuft">Mails, Rechnungen, Offerten und Termine je Kunde an einem Ort.</span>
               <span data-label="Was Sie davon haben">Alles zum Kunden in einem Blick.</span>
-              <span data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-kundendossier" data-preis-form="betrag">ab CHF 5'200</span></span>
+              <!-- Preis erst im Aufklapper (09.10.) -->
               <span class="bsp-tabelle__plus" aria-hidden="true">+</span>
             </summary>
             <div class="bsp">
@@ -1009,7 +1009,7 @@
               <span data-label="Sprosse"><em class="bsp-tag bsp-tag--g">Komplette Automation</em></span>
               <span data-label="Was von selbst läuft">Einkauf oder Rapportierung laufen von selbst, mit Freigaben.</span>
               <span data-label="Was Sie davon haben">Ein Bereich ohne Handarbeit.</span>
-              <span data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-ablauf-gross" data-preis-form="betrag">ab CHF 6'800</span></span>
+              <!-- Preis erst im Aufklapper (09.10.) -->
               <span class="bsp-tabelle__plus" aria-hidden="true">+</span>
             </summary>
             <div class="bsp">

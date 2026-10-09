@@ -73,6 +73,7 @@ def seitentext(pfad: Path) -> str:
     # Kundenstimmen kommen aus daten/kundenstimmen.json (Abschnitt «Referenz»), nicht aus den Seiten
     t = re.sub(r"(?s)<!-- kundenstimme:(\w+):anfang -->.*?<!-- kundenstimme:\1:ende -->", " ", t)
     t = re.sub(r"(?s)<(script|style|head|header|footer|nav)\b.*?</\1>", " ", t)
+    t = re.sub(r"(?s)<div class=\"pm-branchen\".*?<!-- /pm-branchen -->", " ", t)  # steht unter ### Branchen
     t = re.sub(r"(?s)<!--.*?-->", " ", t)
     # Absatzgrenzen erhalten, damit der Text lesbar bleibt statt zu einem Block zu verkleben
     t = re.sub(r"</(p|h1|h2|h3|h4|li|summary|article|section|div)>", "\n", t)
