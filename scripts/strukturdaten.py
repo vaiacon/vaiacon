@@ -225,6 +225,7 @@ SITEMAP = [
     ("visibility", "visibility.html"),
     ("learning", "learning.html"),
     ("bot", "bot.html"),
+    ("beispiele", "beispiele.html"),
     ("service", "service.html"),
     ("offerte", "offerte.html"),
     ("referenzen", "referenzen.html"),
