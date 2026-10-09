@@ -260,7 +260,7 @@
 
   /* Die gewählte Beispielreise geht als Ausgangspunkt ins Kontaktformular
      (kontakt.js liest 'vaiacon-lernreise' und füllt die Nachricht vor). */
-  knopf.addEventListener('click', function () {
+  if (knopf) knopf.addEventListener('click', function () {
     try {
       /* Aus Sicht des Betriebs geschrieben, nicht als Beschreibung der Beispielreise. */
       var L = stationen(wahl);
