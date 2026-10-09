@@ -374,10 +374,14 @@
   column-gap: 40px;
   align-items: start;
 }
-.bsp__kopf > .bsp__nr, .bsp__kopf > .bsp__nutzen { grid-column: 1 / -1; }
+.bsp__kopf > .bsp__nr { grid-column: 1 / -1; }
 .bsp__kopf > h3, .bsp__kopf > .bsp__lead { grid-column: 1; }
-.bsp__kopf > .bsp__chef { grid-column: 2; grid-row: 2 / 4; margin: 6px 0 0; align-self: start; }
+.bsp__kopf > .bsp__chef { grid-column: 2; grid-row: 2; margin: 6px 0 0; align-self: start; }
+.bsp__kopf > .bsp__chef:not(:has(+ .bsp__nutzen)) { grid-row: 2 / 4; }
+/* Nutzen-Kacheln (nur was die Chef-Zeile nicht sagt) stehen rechts unter ihr, nicht in einer eigenen Reihe */
+.bsp__kopf > .bsp__nutzen { grid-column: 2; grid-row: 3; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 6px 0 0; align-self: start; }
 @media (max-width: 820px) {
+  .bsp__kopf > .bsp__nutzen { grid-column: 1; grid-row: auto; }
   .bsp__kopf { grid-template-columns: 1fr; }
   .bsp__kopf > .bsp__chef { grid-column: 1; grid-row: auto; }
 }
