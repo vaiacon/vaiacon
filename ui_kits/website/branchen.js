@@ -74,7 +74,7 @@
       b.setAttribute('aria-selected', 'false');
       var bild = document.createElement('img');
       bild.className = 'pm-branchen__ico';
-      bild.src = 'assets/branchen/' + id + '.webp?v=20261010-ico';
+      bild.src = 'assets/branchen/' + id + '.webp?v=20261010-gross';
       bild.alt = ''; bild.width = 24; bild.height = 24; bild.loading = 'lazy'; bild.decoding = 'async';
       b.appendChild(bild);
       b.appendChild(document.createTextNode(daten[id].name || id));
