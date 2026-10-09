@@ -517,6 +517,13 @@
     platz.textContent = '';
     var dok = el('article', { class: 'of-dokument', 'aria-label': 'Richtofferte ' + (a.nummer || '') });
 
+    var logo = el('img', { class: 'of-dokument__logo', src: 'assets/logo-lockup-terra.svg', alt: 'Vaiacon', height: '30' });
+    logo.addEventListener('error', function () { if (!logo.getAttribute('data-png')) { logo.setAttribute('data-png', '1'); logo.src = 'assets/logo-lockup-terra.png'; } });
+    dok.appendChild(el('div', { class: 'of-dokument__marke' }, [
+      logo,
+      el('span', { class: 'of-dokument__marke-zeile', text: 'Richtofferte · ' + String(a.nummer || '') + ' · ' + datum(a.datum) })
+    ]));
+
     dok.appendChild(el('header', { class: 'of-dokument__kopf' }, [
       el('div', { class: 'of-dokument__absender' }, [
         el('strong', { text: 'Vaiacon GmbH' }),
@@ -535,7 +542,12 @@
     [kontakt.firma, kontakt.name, kontakt.mail, kontakt.telefon].forEach(function (z) { if (z) empf.appendChild(el('span', { text: z })); });
     dok.appendChild(empf);
 
-    dok.appendChild(el('h3', { class: 'of-dokument__titel', text: 'Richtofferte' }));
+    dok.appendChild(el('p', { class: 'of-dokument__kicker', text: 'Richtofferte' }));
+    dok.appendChild(el('h3', { class: 'of-dokument__titel', text: 'Ihr Richtpreis.' }));
+    dok.appendChild(el('p', { class: 'of-richtpreis of-dokument__banner' }, [
+      el('strong', { text: 'Richtpreis, keine verbindliche Offerte' }),
+      document.createTextNode(' \u2013 wir melden uns bei Ihnen.')
+    ]));
     var einl = absaetze(a.einleitung);
     if (einl.length) dok.appendChild(el('div', { class: 'of-dokument__text' }, einl));
 
@@ -610,7 +622,10 @@
       dok.appendChild(el('h4', { class: 'of-dokument__zwischen', text: 'Nächste Schritte' }));
       dok.appendChild(el('div', { class: 'of-dokument__text' }, schritte));
     }
-    dok.appendChild(el('p', { class: 'of-dokument__fuss', text: 'Dies ist ein Richtpreis, keine verbindliche Offerte. Verbindlich wird erst die schriftliche Offerte nach unserem Gespräch. Wir melden uns bei Ihnen.' }));
+    dok.appendChild(el('footer', { class: 'of-dokument__fuss' }, [
+      el('span', { text: 'Vaiacon GmbH · Lehenstrasse 74 · 8037 Zürich · hallo@vaiacon.ch · vaiacon.ch' }),
+      el('span', { text: 'Verbindlich wird erst die schriftliche Offerte nach unserem Gespräch.' + (a.gueltig_bis ? ' Richtpreis gültig bis ' + datum(a.gueltig_bis) + '.' : '') })
+    ]));
     platz.appendChild(dok);
 
     var ms = $('of-mailstatus');

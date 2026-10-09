@@ -210,9 +210,12 @@
   body > *:not(.sv-page), .mock-header, .sv-footer, .of-hero, noscript, .of-ansicht:not(#of-ergebnis), .of-aktionen, .of-kopf, .of-mailstatus, .vc-chat { display: none !important; }
   body { background: #fff !important; padding: 0 !important; }
   .sv-section, .of-wrap { padding: 0 !important; margin: 0 !important; max-width: none !important; }
-  .of-dokument { border: 0; box-shadow: none; padding: 0; }
-  .of-tabelle tr { break-inside: avoid; }
-  @page { margin: 18mm; }
+  .of-dokument { border: 0; box-shadow: none; padding: 0; background: #fff !important; }
+  .of-tabelle tr, .of-dokument__wunsch, .of-dokument__summen, .of-dokument__banner, .of-dokument__marke, .of-dokument__zwischen, .of-dokument__liste li { break-inside: avoid; }
+  .of-dokument__zwischen, .of-dokument__titel { break-after: avoid; }
+  .of-dokument__fuss { break-inside: avoid; }
+  .of-dokument, .of-dokument * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  @page { size: A4; margin: 16mm 16mm 18mm; }
 }
 
 /* Klebende Seitenleiste: overflow-x:hidden der Seite würde sticky ausschalten */
@@ -230,3 +233,33 @@
 .of-frei { margin-bottom: var(--space-5); }
 .of-frei textarea { font-size: 1.05rem; line-height: 1.5; }
 .of-richtpreis { margin: var(--space-3) 0 var(--space-5); padding: var(--space-3) var(--space-4); background: var(--cream-card); border-left: 4px solid var(--terra-600); border-radius: 6px; }
+
+/* Vaiacon-Design im Dokument (09.10.2026): Logo, Mono-Zeile, Terra-Akzente; gilt auch im Druck */
+.of-dokument { font-family: var(--font-sans); font-weight: 500; color: var(--ink-900); border-top: 4px solid var(--terra-500); }
+.of-dokument__marke { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-3); padding-bottom: var(--space-4); margin-bottom: var(--space-5); border-bottom: 1px solid var(--sand-200); }
+.of-dokument__logo { display: block; height: 30px; width: auto; }
+.of-dokument__marke-zeile { font-family: var(--font-mono); font-size: 0.78rem; letter-spacing: 0.04em; color: var(--brown-400); }
+.of-dokument__kopf { border-bottom: 1px solid var(--sand-200); }
+.of-dokument__absender strong { font-weight: 700; }
+.of-dokument__meta dt { color: var(--brown-600); }
+.of-dokument__meta dd { font-family: var(--font-mono); font-weight: 500; font-size: 0.86rem; }
+.of-dokument__kicker { margin: 0 0 var(--space-2); font-family: var(--font-mono); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--terra-500); }
+.of-dokument__titel { font-weight: 700; font-size: 1.6rem; margin: 0 0 var(--space-4); }
+.of-dokument__titel + .of-dokument__banner { margin-top: 0; }
+.of-dokument__banner { background: var(--cream-100); border-left: 4px solid var(--terra-500); }
+.of-dokument__zwischen { font-weight: 700; }
+.of-dokument__klein, .of-dokument__mwst { color: var(--brown-600); }
+.of-dokument__wunsch { background: var(--cream-card); border: 1px solid var(--sand-200); border-radius: 14px; }
+.of-tabelle th { font-family: var(--font-mono); font-weight: 500; color: var(--brown-400); border-bottom: 2px solid var(--terra-500); }
+.of-tabelle td { border-bottom-color: var(--sand-200); }
+.of-tabelle__bereich { font-family: var(--font-mono); color: var(--brown-400); }
+.of-tabelle__notiz { font-style: normal; color: var(--brown-600); }
+.of-tabelle td.zahl { font-family: var(--font-mono); font-size: 0.9rem; }
+.of-tabelle td.zahl:last-child { font-weight: 600; }
+.of-dokument__summe { border-top: 2px solid var(--terra-500); }
+.of-dokument__summe strong { font-family: var(--font-mono); font-weight: 600; color: var(--terra-500); }
+.of-dokument__fuss { display: flex; flex-direction: column; gap: 4px; font-style: normal; font-family: var(--font-mono); font-size: 0.75rem; line-height: 1.5; color: var(--brown-400); border-top: 1px solid var(--sand-200); }
+@media (max-width: 700px) {
+  .of-tabelle td.zahl { font-size: 0.86rem; }
+  .of-dokument__marke-zeile { font-size: 0.72rem; }
+}
