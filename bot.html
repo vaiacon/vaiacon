@@ -21,8 +21,8 @@
 <link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20261005-vorschlag">
 <link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261009-fakten-versteckt">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
-<link rel="stylesheet" href="ui_kits/website/preismatrix.css?v=20261009-handy-leiste">
-<link rel="stylesheet" href="ui_kits/website/automationen-film.css?v=20261009-sachlich">
+<link rel="stylesheet" href="ui_kits/website/preismatrix.css?v=20261010-eine-seite">
+<link rel="stylesheet" href="ui_kits/website/automationen.css?v=20261010-eine-seite">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -137,7 +137,7 @@
     "priceCurrency": "CHF",
     "lowPrice": 1300,
     "highPrice": 6800,
-    "offerCount": 6
+    "offerCount": 11
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -162,6 +162,36 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
+          "name": "Offerte aus dem Formular",
+          "description": "Ihr Team füllt ein Formular aus, Preise werden nach Ihren Regeln gerechnet, die fertige Offerte liegt als PDF in Ihrem Design bereit."
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "CHF",
+          "valueAddedTaxIncluded": true,
+          "minPrice": 2200,
+          "unitText": "Ablauf"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Freigabe-Schleife",
+          "description": "Grosse Beträge oder wichtige Schritte gehen erst weiter, wenn Sie auf dem Handy «Freigeben» drücken, mit Erinnerung und Meldung bei Ausnahmen."
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "CHF",
+          "valueAddedTaxIncluded": true,
+          "minPrice": 2600,
+          "unitText": "Ablauf"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
           "name": "Belege und Offerten automatisieren",
           "description": "Rechnungen und Belege werden gelesen und abgelegt, Offerten entstehen aus Ihren Vorlagen und Angaben."
         },
@@ -170,6 +200,51 @@
           "priceCurrency": "CHF",
           "valueAddedTaxIncluded": true,
           "minPrice": 3000,
+          "unitText": "Ablauf"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Postfach mit KI",
+          "description": "Das Postfach sortiert sich selbst, Antworten stehen als Entwurf bereit, Liegengebliebenes wird nachgefasst."
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "CHF",
+          "valueAddedTaxIncluded": true,
+          "minPrice": 3800,
+          "unitText": "Ablauf"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Auftragsablauf von der Anfrage bis zur Rechnung",
+          "description": "Anfrage, Offerte, Auftrag und Rechnung laufen in einem Fluss über alle beteiligten Programme; die Rechnung geht am Tag des Abschlusses raus."
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "CHF",
+          "valueAddedTaxIncluded": true,
+          "minPrice": 4200,
+          "unitText": "Ablauf"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Kundendossier mit KI-Kurzfassung",
+          "description": "Zu jedem Kunden liegt alles an einem Ort: Mails, Rechnungen, Termine, mit einer Kurzfassung der KI und offenen Punkten zuoberst."
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "CHF",
+          "valueAddedTaxIncluded": true,
+          "minPrice": 5200,
           "unitText": "Ablauf"
         }
       },
@@ -296,7 +371,7 @@
           </p>
           <div class="sv-actions">
             <a class="sv-button sv-button--light" href="erstanalyse/">Kostenlose Erstanalyse →</a>
-            <a class="sv-button sv-button--glass" href="#ablauf">So läuft es ab →</a>
+            <a class="sv-button sv-button--glass" href="#ihr-fall">Ihren Fall einordnen →</a>
           </div>
         </div>
         <div class="sv-hero__visual" aria-label="Automationen Übersicht">
@@ -322,6 +397,10 @@
             <dd>Fixpreis nach der Erstanalyse, ab CHF 1'300 pro Ablauf, inkl. MWST.</dd>
             <dt>Ablauf</dt>
             <dd>Fünf Schritte vom Gespräch bis zur Kontrolle: Empfehlung, Priorisierung, Planung, Umsetzung, Kontrolle.</dd>
+            <dt>Bausteine</dt>
+            <dd>Jede Automation besteht aus fünf Teilen: Etwas kommt rein, die KI versteht es, es wird entschieden, etwas passiert, Sie erfahren davon.</dd>
+            <dt>Ihr Fall</dt>
+            <dd>Auf der Seite beschreiben Sie Ihren Fall in zwei Sätzen, die KI nennt die Sprosse und einen Richtpreis. Die Beschreibung wird nicht gespeichert.</dd>
             <dt>Region</dt>
             <dd>Gesamte Deutschschweiz</dd>
           </dl>
@@ -329,80 +408,55 @@
       </div>
     </section>
 
-    <section id="beispiele" class="sv-section sv-section--alt" aria-labelledby="af-titel">
+    <section id="bausteine" class="sv-section sv-section--alt" aria-labelledby="bst-titel">
       <div class="sv-wrap">
         <div class="sv-center">
-          <p class="sv-kicker">IN 22 SEKUNDEN</p>
-          <h2 class="sv-title" id="af-titel">So sieht Büroarbeit aus, die von selbst läuft.</h2>
+          <p class="sv-kicker">BAUSTEINE</p>
+          <h2 class="sv-title" id="bst-titel">Alles, was sich wiederholt, lässt sich automatisieren.</h2>
           <p class="sv-lead">
-            Von einfach bis gross: Beleg ablegen, Rechnung buchen, ganzer Einkauf von selbst. Es lohnt sich überall, wo heute jemand von Hand dasselbe macht. Der Kurzfilm zeigt es ohne Ton.
+            Eine Automation ist nie ein Produkt aus dem Regal. Sie besteht immer aus denselben fünf Teilen, die wir für Ihren Betrieb zusammensetzen.
           </p>
         </div>
-        <div class="af-film">
-          <video autoplay muted loop playsinline preload="metadata" poster="assets/automationen-reel.jpg" aria-label="Kurzfilm: Belege, Offerten und Freigaben laufen automatisch">
-            <source src="assets/automationen-reel.webm" type="video/webm">
-            <source src="assets/automationen-reel.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="bsp-tabelle" role="table" aria-label="Sieben Beispiele im Überblick">
-          <div class="bsp-tabelle__kopf" role="row"><span role="columnheader">Beispiel</span><span role="columnheader">Sprosse</span><span role="columnheader">Was von selbst läuft</span><span role="columnheader">Was Sie davon haben</span><span role="columnheader">Preis</span></div>
-          <div class="bsp-tabelle__zeile" role="row">
-            <a role="cell" data-label="Beispiel" class="bsp-tabelle__name" href="beispiele#belege">Belege in drei Stufen</a>
-            <span role="cell" data-label="Sprosse"><em class="bsp-tag bsp-tag--mix">Einfach bis Verbunden</em></span>
-            <span role="cell" data-label="Was von selbst läuft">Belege werden abgelegt, gebucht, aus Anfragen werden Offerten-Entwürfe.</span>
-            <span role="cell" data-label="Was Sie davon haben">Etwa ein halber Tag pro Woche zurück.</span>
-            <span role="cell" data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-ablauf-klein" data-preis-form="betrag">ab CHF 1'300</span></span>
-          </div>
-          <div class="bsp-tabelle__zeile" role="row">
-            <a role="cell" data-label="Beispiel" class="bsp-tabelle__name" href="beispiele#offerten-vorlage">Offerte aus dem Formular</a>
-            <span role="cell" data-label="Sprosse"><em class="bsp-tag bsp-tag--e">Einfach</em></span>
-            <span role="cell" data-label="Was von selbst läuft">Aus einem kurzen Formular entsteht die fertige PDF-Offerte.</span>
-            <span role="cell" data-label="Was Sie davon haben">Minuten statt einer Stunde je Offerte.</span>
-            <span role="cell" data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-offerte-formular" data-preis-form="betrag">ab CHF 2'200</span></span>
-          </div>
-          <div class="bsp-tabelle__zeile" role="row">
-            <a role="cell" data-label="Beispiel" class="bsp-tabelle__name" href="beispiele#freigabe-schleife">Freigabe-Schleife</a>
-            <span role="cell" data-label="Sprosse"><em class="bsp-tag bsp-tag--v">Verbunden</em></span>
-            <span role="cell" data-label="Was von selbst läuft">Grosse Rechnungen gehen erst nach Ihrer Freigabe weiter.</span>
-            <span role="cell" data-label="Was Sie davon haben">Freigabe vom Handy, nachvollziehbar.</span>
-            <span role="cell" data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-freigabe-schleife" data-preis-form="betrag">ab CHF 2'600</span></span>
-          </div>
-          <div class="bsp-tabelle__zeile" role="row">
-            <a role="cell" data-label="Beispiel" class="bsp-tabelle__name" href="beispiele#auftragsablauf">Von der Anfrage zur Rechnung</a>
-            <span role="cell" data-label="Sprosse"><em class="bsp-tag bsp-tag--g">Ganzer Ablauf</em></span>
-            <span role="cell" data-label="Was von selbst läuft">Anfrage, Offerte, Auftrag und Rechnung laufen in einem Fluss.</span>
-            <span role="cell" data-label="Was Sie davon haben">Rechnung am Tag des Abschlusses.</span>
-            <span role="cell" data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-auftragsablauf" data-preis-form="betrag">ab CHF 4'200</span></span>
-          </div>
-          <div class="bsp-tabelle__zeile" role="row">
-            <a role="cell" data-label="Beispiel" class="bsp-tabelle__name" href="beispiele#postfach-ki">Postfach mit KI</a>
-            <span role="cell" data-label="Sprosse"><em class="bsp-tag bsp-tag--v">Verbunden</em></span>
-            <span role="cell" data-label="Was von selbst läuft">Mails werden eingeordnet, Antwortentwürfe stehen bereit.</span>
-            <span role="cell" data-label="Was Sie davon haben">Weniger Sortieren, schnellere Antworten.</span>
-            <span role="cell" data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-postfach-ki" data-preis-form="betrag">ab CHF 3'800</span></span>
-          </div>
-          <div class="bsp-tabelle__zeile" role="row">
-            <a role="cell" data-label="Beispiel" class="bsp-tabelle__name" href="beispiele#kundendossier">Kundendossier</a>
-            <span role="cell" data-label="Sprosse"><em class="bsp-tag bsp-tag--g">Ganzer Ablauf</em></span>
-            <span role="cell" data-label="Was von selbst läuft">Mails, Rechnungen, Offerten und Termine je Kunde an einem Ort.</span>
-            <span role="cell" data-label="Was Sie davon haben">Alles zum Kunden in einem Blick.</span>
-            <span role="cell" data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-kundendossier" data-preis-form="betrag">ab CHF 5'200</span></span>
-          </div>
-          <div class="bsp-tabelle__zeile" role="row">
-            <a role="cell" data-label="Beispiel" class="bsp-tabelle__name" href="beispiele#ganzer-bereich">Ganzer Bereich</a>
-            <span role="cell" data-label="Sprosse"><em class="bsp-tag bsp-tag--g">Ganzer Ablauf</em></span>
-            <span role="cell" data-label="Was von selbst läuft">Einkauf oder Rapportierung laufen von selbst, mit Freigaben.</span>
-            <span role="cell" data-label="Was Sie davon haben">Ein Bereich ohne Handarbeit.</span>
-            <span role="cell" data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-ablauf-gross" data-preis-form="betrag">ab CHF 6'800</span></span>
-          </div>
-        </div>
-        <div class="sv-actions sv-center af-mehr">
-          <a class="sv-button sv-button--cta" href="beispiele">Alle Beispiele mit Heute, Danach und Nutzen →</a>
-        </div>
+        <ol class="bst" aria-label="Die fünf Teile jeder Automation">
+          <li class="bst__teil">
+            <p class="bst__kopf"><i>1</i><b>Etwas kommt rein</b></p>
+            <p class="bst__satz">Der Anstoss: Etwas trifft bei Ihnen ein, auf welchem Weg auch immer.</p>
+            <ul class="bst__chips">
+              <li>Mail</li><li>Formular auf der Website</li><li>Anruf</li><li>Sprachnachricht</li><li>Foto vom Handy</li><li>Beleg als PDF</li><li>Bestellung aus dem Shop</li><li>Termin im Kalender</li><li>Lieferschein</li><li>Bewerbung</li><li>Rückmeldung eines Kunden</li><li>WhatsApp-Nachricht</li><li>Tabelle vom Lieferanten</li><li>Zählerstand</li><li>Chat auf der Website</li>
+            </ul>
+          </li>
+          <li class="bst__teil">
+            <p class="bst__kopf"><i>2</i><b>Die KI versteht es</b></p>
+            <p class="bst__satz">Sie liest, hört oder schaut hin und holt heraus, was zählt.</p>
+            <ul class="bst__chips">
+              <li>liest den Beleg</li><li>erkennt den Absender</li><li>fasst zusammen</li><li>übersetzt</li><li>zieht Betrag und Datum heraus</li><li>erkennt Dringlichkeit</li><li>ordnet dem Kunden zu</li><li>vergleicht mit der Offerte</li><li>prüft auf Vollständigkeit</li><li>hört den Anruf ab</li><li>schreibt den Rapport</li><li>erkennt Dubletten</li><li>schätzt den Aufwand</li>
+            </ul>
+          </li>
+          <li class="bst__teil">
+            <p class="bst__kopf"><i>3</i><b>Es wird entschieden</b></p>
+            <p class="bst__satz">Nach Ihren Regeln: Manches läuft durch, anderes wartet auf Ihr OK.</p>
+            <ul class="bst__chips">
+              <li>feste Regel («über CHF 2'000 → Freigabe»)</li><li>KI schlägt vor, Sie entscheiden</li><li>Freigabe am Handy</li><li>Vier-Augen-Prinzip</li><li>Ausnahme geht an einen Menschen</li><li>Frist läuft ab → Erinnerung</li><li>Reihenfolge nach Kunde</li><li>Zuständigkeit nach Region</li>
+            </ul>
+          </li>
+          <li class="bst__teil">
+            <p class="bst__kopf"><i>4</i><b>Etwas passiert</b></p>
+            <p class="bst__satz">Das Ergebnis landet dort, wo Sie arbeiten: im Programm, im Ordner, beim Kunden.</p>
+            <ul class="bst__chips">
+              <li>ablegen</li><li>buchen</li><li>Antwort entwerfen</li><li>Offerte schreiben</li><li>Auftrag anlegen</li><li>Rechnung stellen</li><li>Termin eintragen</li><li>Mahnung schicken</li><li>nachbestellen</li><li>Lohn vorbereiten</li><li>Lieferant anfragen</li><li>Kunde informieren</li><li>Zeiterfassung ergänzen</li><li>in die Buchhaltung übertragen</li>
+            </ul>
+          </li>
+          <li class="bst__teil">
+            <p class="bst__kopf"><i>5</i><b>Sie erfahren davon</b></p>
+            <p class="bst__satz">Sie behalten den Überblick, ohne nachschauen zu müssen.</p>
+            <ul class="bst__chips">
+              <li>Meldung aufs Handy</li><li>Tagesübersicht am Morgen</li><li>Dossier je Kunde</li><li>Wochenbericht</li><li>Ampel in der Tabelle</li><li>Hinweis bei Abweichung</li><li>Monatsabschluss auf Knopfdruck</li><li>Frage an den Bot</li>
+            </ul>
+          </li>
+        </ol>
+        <p class="bst__schluss">Jedes Beispiel weiter unten ist eine Kombination aus diesen Teilen. Ihres auch.</p>
       </div>
     </section>
-
-
 
     <section id="preise" class="sv-section" aria-labelledby="pm-titel">
       <div class="sv-wrap">
@@ -414,6 +468,23 @@
           </p>
         </div>
 
+        <div class="pm-branchen" id="pm-branchen">
+          <p class="pm-branchen__frage" id="pm-branchen-frage">Was die drei Sprossen in Ihrer Branche heissen:</p>
+          <div class="pm-branchen__chips" role="tablist" aria-labelledby="pm-branchen-frage">
+            <button type="button" role="tab" data-branche="malerbetrieb" aria-selected="true">Malerbetrieb</button>
+            <button type="button" role="tab" data-branche="treuhand" aria-selected="false">Treuhand</button>
+            <button type="button" role="tab" data-branche="arztpraxis" aria-selected="false">Arztpraxis</button>
+            <button type="button" role="tab" data-branche="sanitaer-heizung" aria-selected="false">Sanitär und Heizung</button>
+            <button type="button" role="tab" data-branche="agentur" aria-selected="false">Agentur</button>
+            <button type="button" role="tab" data-branche="restaurant" aria-selected="false">Restaurant</button>
+          </div>
+          <div class="pm-branchen__karten" role="tabpanel" aria-live="polite">
+            <article class="pm-branchen__karte"><p class="pm-branchen__sprosse"><i>1</i>Einfach</p><p data-sprosse="einfach">Das Foto von der Baustelle landet benannt im Projektordner.</p></article>
+            <article class="pm-branchen__karte"><p class="pm-branchen__sprosse"><i>2</i>Verbunden</p><p data-sprosse="verbunden">Aus dem Aufmass im Formular wird die Offerte in Ihrem Design.</p></article>
+            <article class="pm-branchen__karte"><p class="pm-branchen__sprosse"><i>3</i>Ganzer Ablauf</p><p data-sprosse="ganzer_ablauf">Von der Anfrage über Offerte und Rapport bis zur Rechnung, Sie geben nur frei.</p></article>
+          </div>
+        </div>
+
         <div class="pm-wrap" id="pm-preise">
           <div class="pm-scroll">
             <div class="pm-matrix" id="pm-matrix">
@@ -422,7 +493,7 @@
                   <span class="pm-col__bsp">Eine Rechnung kommt per Mail und liegt Sekunden später im richtigen Ordner.</span>
                   <span class="pm-col__gewinn"><em>Was Sie davon haben</em>Nichts geht verloren, niemand sucht am Monatsende.</span>
                   <span class="pm-col__ab"><em>Preis</em><span data-preis="au-ablauf-klein" data-preis-form="betrag">ab CHF 1'300</span></span></div>
-              <button type="button" class="pm-cell ist-gewaehlt" aria-pressed="true" data-mehr="beispiele#belege-ablegen"
+              <button type="button" class="pm-cell ist-gewaehlt" aria-pressed="true" data-mehr="#belege-ablegen"
                 data-komplexitaet="Einfach" data-zeit="Tage" data-dauer="Bei Ihnen fertig in 1 bis 2 Arbeitstagen" data-betreuung="be-betreuung-klein"
                 data-text="Eine feste Regel: Kommt ein Beleg per Mail, legen wir ihn von selbst richtig ab."
                 data-nutzen="Niemand sucht mehr am Monatsende, und kein Beleg geht verloren."
@@ -432,7 +503,7 @@
                 <span class="pm-cell__name">Kleiner Ablauf</span>
                 <span class="pm-cell__tag">Katalog</span>
               </button>
-              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#offerten-vorlage"
+              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="#offerten-vorlage"
                 data-komplexitaet="Einfach" data-zeit="Woche" data-dauer="Bei Ihnen fertig in 3 bis 5 Arbeitstagen" data-betreuung="be-betreuung-klein"
                 data-text="Ihr Team füllt ein Formular aus, die fertige Offerte liegt als PDF bereit."
                 data-nutzen="Jede Offerte ist gleich gut, und sie ist in Minuten fertig."
@@ -447,7 +518,7 @@
                   <span class="pm-col__bsp">Der Beleg geht aus der Mail direkt in die Buchhaltung.</span>
                   <span class="pm-col__gewinn"><em>Was Sie davon haben</em>Kein Abtippen mehr, die Zahlen stimmen.</span>
                   <span class="pm-col__ab"><em>Preis</em><span data-preis="au-integration" data-preis-form="betrag">ab CHF 1'900</span></span></div>
-              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#belege-buchhaltung"
+              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="#belege-buchhaltung"
                 data-komplexitaet="Verbunden" data-zeit="Tage" data-dauer="Bei Ihnen fertig in 1 bis 2 Arbeitstagen" data-betreuung="be-betreuung-klein"
                 data-text="Zwei Programme reden miteinander: Der Beleg aus der Mail steht in der Buchhaltung als Buchung bereit."
                 data-nutzen="Kein Abtippen mehr, und die Zahlen stimmen."
@@ -457,7 +528,7 @@
                 <span class="pm-cell__name">Anbindung</span>
                 <span class="pm-cell__tag">Katalog</span>
               </button>
-              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#freigabe-schleife"
+              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="#freigabe-schleife"
                 data-komplexitaet="Verbunden" data-zeit="Tage" data-dauer="Bei Ihnen fertig in 1 bis 2 Arbeitstagen" data-betreuung="be-betreuung-klein"
                 data-text="Grosse Beträge gehen erst weiter, wenn Sie auf dem Handy «Freigeben» drücken."
                 data-nutzen="Nichts geht ohne Sie raus, und Sie müssen dafür nicht im Büro sein."
@@ -466,7 +537,7 @@
                 <span class="pm-cell__preis" data-preis="au-freigabe-schleife" data-preis-form="betrag">ab CHF 2'600</span>
                 <span class="pm-cell__name">Freigabe-Schleife</span>
               </button>
-              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#belege-offerten"
+              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="#belege-offerten"
                 data-komplexitaet="Verbunden" data-zeit="Woche" data-dauer="Bei Ihnen fertig in 3 bis 5 Arbeitstagen" data-betreuung="be-betreuung-mittel"
                 data-text="Die KI liest Belege und Anfragen: Belege werden gebucht, aus Anfragen werden Offerten."
                 data-nutzen="Sie geben nur noch frei, und Anfragen sind am selben Tag beantwortet."
@@ -476,7 +547,7 @@
                 <span class="pm-cell__name">Belege und Offerten</span>
                 <span class="pm-cell__tag">Katalog</span>
               </button>
-              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#postfach-ki"
+              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="#postfach-ki"
                 data-komplexitaet="Verbunden" data-zeit="Wochen" data-dauer="Bei Ihnen fertig in 6 bis 12 Arbeitstagen" data-betreuung="be-betreuung-mittel"
                 data-text="Das Postfach sortiert sich selbst, Antworten stehen als Entwurf bereit, Liegengebliebenes wird nachgefasst."
                 data-nutzen="Kein Kunde geht vergessen, und Wichtiges steht zuoberst."
@@ -491,7 +562,7 @@
                   <span class="pm-col__bsp">Von der Anfrage bis zur Rechnung, ohne dass jemand etwas weiterreicht.</span>
                   <span class="pm-col__gewinn"><em>Was Sie davon haben</em>Der Bereich hängt nicht mehr an einer Person, Rechnungen gehen am Tag des Abschlusses raus.</span>
                   <span class="pm-col__ab"><em>Preis</em><span data-preis="au-auftragsablauf" data-preis-form="betrag">ab CHF 4'200</span></span></div>
-              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#auftragsablauf"
+              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="#auftragsablauf"
                 data-komplexitaet="Ganzer Ablauf" data-zeit="Woche" data-dauer="Bei Ihnen fertig in 3 bis 5 Arbeitstagen" data-betreuung="be-betreuung-mittel"
                 data-text="Von der Anfrage bis zur Rechnung in einem Fluss, über alle beteiligten Programme."
                 data-nutzen="Die Rechnung geht am Tag des Abschlusses raus, das Geld ist früher auf dem Konto."
@@ -500,7 +571,7 @@
                 <span class="pm-cell__preis" data-preis="au-auftragsablauf" data-preis-form="betrag">ab CHF 4'200</span>
                 <span class="pm-cell__name">Auftragsablauf</span>
               </button>
-              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#kundendossier"
+              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="#kundendossier"
                 data-komplexitaet="Ganzer Ablauf" data-zeit="Wochen" data-dauer="Bei Ihnen fertig in 6 bis 12 Arbeitstagen" data-betreuung="be-betreuung-mittel"
                 data-text="Zu jedem Kunden liegt alles an einem Ort, mit einer Kurzfassung der KI."
                 data-nutzen="In dreissig Sekunden im Bild, auch wenn jemand in den Ferien ist."
@@ -509,7 +580,7 @@
                 <span class="pm-cell__preis" data-preis="au-kundendossier" data-preis-form="betrag">ab CHF 5'200</span>
                 <span class="pm-cell__name">Kundendossier</span>
               </button>
-              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="beispiele#ganzer-bereich"
+              <button type="button" class="pm-cell" aria-pressed="false" data-mehr="#ganzer-bereich"
                 data-komplexitaet="Ganzer Ablauf" data-zeit="Wochen" data-dauer="Bei Ihnen fertig in 6 bis 12 Arbeitstagen" data-betreuung="be-betreuung-mittel"
                 data-text="Ein ganzer Bereich läuft von selbst, zum Beispiel Einkauf oder Rapportierung, von der Bestellung bis zur Auswertung."
                 data-nutzen="Der Bereich hängt an keiner einzelnen Person mehr, und Abweichungen fallen sofort auf."
@@ -537,7 +608,7 @@
                 <li>Probelauf mit Ihren echten Belegen</li>
                 <li>Kurze Anleitung fürs Team</li>
               </ul>
-              <a class="pm-mehr" id="pm-d-mehr" href="beispiele#belege-ablegen">Mehr zu diesem Beispiel →</a>
+              <a class="pm-mehr" id="pm-d-mehr" href="#belege-ablegen">Beispiel ansehen ↓</a>
             </div>
             <div class="pm-card pm-card--terra">
               <p class="sv-kicker">Fixpreis nach Erstanalyse</p>
@@ -568,6 +639,469 @@
       </div>
     </section>
 
+
+    <section id="beispiele" class="sv-section" aria-labelledby="af-titel">
+      <div class="sv-wrap">
+        <div class="sv-center">
+          <p class="sv-kicker">IN 22 SEKUNDEN</p>
+          <h2 class="sv-title" id="af-titel">Sieben von vielen.</h2>
+          <p class="sv-lead">
+            Jedes Beispiel ist eine Kombination der Bausteine oben. Ihres steht nicht hier, sondern im Feld darunter.
+          </p>
+        </div>
+        <div class="af-film">
+          <video autoplay muted loop playsinline preload="metadata" poster="assets/automationen-reel.jpg" aria-label="Kurzfilm: Belege, Offerten und Freigaben laufen automatisch">
+            <source src="assets/automationen-reel.webm" type="video/webm">
+            <source src="assets/automationen-reel.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="bsp-tabelle" aria-label="Sieben Beispiele im Überblick">
+          <div class="bsp-tabelle__kopf" aria-hidden="true"><span>Beispiel</span><span>Sprosse</span><span>Was von selbst läuft</span><span>Was Sie davon haben</span><span>Preis</span><span></span></div>
+
+          <details class="bsp-tabelle__zeile" id="belege">
+            <summary>
+              <span class="bsp-tabelle__name" data-label="Beispiel">Belege in drei Stufen</span>
+              <span data-label="Sprosse"><em class="bsp-tag bsp-tag--mix">Einfach bis Verbunden</em></span>
+              <span data-label="Was von selbst läuft">Belege werden abgelegt, gebucht, aus Anfragen werden Offerten-Entwürfe.</span>
+              <span data-label="Was Sie davon haben">Etwa ein halber Tag pro Woche zurück.</span>
+              <span data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-ablauf-klein" data-preis-form="betrag">ab CHF 1'300</span></span>
+              <span class="bsp-tabelle__plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="bsp">
+              <div class="bsp__kopf">
+                <p class="bsp__lead">Ein Ablauf, der mitwächst: Sie fangen mit der Ablage an und bauen aus, sobald es sich lohnt.</p>
+                <p class="bsp__chef"><b>Für die Chefin, den Chef:</b> Etwa ein halber Tag pro Woche kommt zurück, und keine Rechnung geht mehr verloren.</p>
+                <ul class="bsp__nutzen" aria-label="Was Sie davon haben">
+                  <li><b>Kein Abtippen mehr.</b></li>
+                  <li><b>Offerte am selben Tag.</b></li>
+                </ul>
+              </div>
+              <p class="bsp__teile"><b>Teile:</b> <span>Mail, Foto vom Handy</span><span>liest den Beleg</span><span>Unklares geht an einen Menschen</span><span>ablegen, buchen, Offerte schreiben</span><span>Hinweis bei Abweichung</span></p>
+              <div class="bsp__vergleich">
+                <div class="bsp__heute">
+                  <h4>Heute</h4>
+                  <ul>
+                    <li>Belege liegen an drei Orten: Mail, Handy, Papier.</li>
+                    <li>Abtippen, Suchen am Monatsende, Offerten erst nach Tagen.</li>
+                  </ul>
+                </div>
+                <div class="bsp__danach">
+                  <h4>Danach</h4>
+                  <ol>
+                    <li><i>1</i><span><b>Beleg erkannt,</b> gelesen, benannt abgelegt.</span></li>
+                    <li><i>2</i><span><b>Buchungsentwurf</b> in Ihrem Programm, ein Klick.</span></li>
+                    <li><i>3</i><span><b>Anfrage wird Offerten-Entwurf,</b> wartet auf Ihr OK.</span></li>
+                  </ol>
+                </div>
+              </div>
+              <ol class="bsp__stufen" aria-label="Die drei Ausbaustufen">
+                <li id="belege-ablegen">
+                  <p class="bsp__stufe-kopf"><i>Stufe 1 · Einfach</i><b>Belege ablegen</b></p>
+                  <p>Jede Rechnung aus Mail oder Handyfoto liegt Sekunden später benannt im richtigen Ordner. Unklares landet in «Bitte prüfen».</p>
+                  <p class="bsp__stufe-passt">Passt, wenn Belege per Mail oder Foto kommen und eine feste Ablage da ist: Drive, OneDrive, NAS.</p>
+                  <p class="bsp__stufe-preis"><span>Einfach · bei Ihnen fertig in 1 bis 2 Arbeitstagen</span><span data-preis="au-ablauf-klein">ab CHF 1'300 pro Ablauf</span></p>
+                </li>
+                <li id="belege-buchhaltung">
+                  <p class="bsp__stufe-kopf"><i>Stufe 2 · Verbunden</i><b>In die Buchhaltung</b></p>
+                  <p>Aus dem Beleg wird ein Buchungsentwurf in bexio, Abacus oder Banana. Doppelte Rechnungen werden abgefangen, Sie bestätigen mit einem Klick.</p>
+                  <p class="bsp__stufe-passt">Passt, wenn sich Ihr Buchhaltungsprogramm verbinden lässt: bexio, Abacus, Banana, Sage.</p>
+                  <p class="bsp__stufe-preis"><span>Verbunden · bei Ihnen fertig in 1 bis 2 Arbeitstagen</span><span data-preis="au-integration">ab CHF 1'900 pro Programm</span></p>
+                </li>
+                <li id="belege-offerten">
+                  <p class="bsp__stufe-kopf"><i>Stufe 3 · Verbunden</i><b>Mit Offerten</b></p>
+                  <p>Das Postfach wird gelesen: Belege werden gebucht, Anfragen werden zu Offerten-Entwürfen mit Ihren Preisen. Beides wartet auf Ihr OK.</p>
+                  <p class="bsp__stufe-passt">Passt, wenn Anfragen per Mail oder Formular kommen und Ihre Preise in einer Liste stehen.</p>
+                  <p class="bsp__stufe-preis"><span>Verbunden · bei Ihnen fertig in 3 bis 5 Arbeitstagen</span><span data-preis="au-belege-offerten">ab CHF 3'000</span></p>
+                </li>
+              </ol>
+              <div class="bsp__unten">
+                <div class="bsp__passt bsp__passt--nur-nein">
+                  <div>
+                    <h4>Passt nicht, wenn</h4>
+                    <ul class="bsp__nein">
+                      <li>Belege kommen fast nur auf Papier.</li>
+                      <li>Die Buchhaltung läuft in Excel.</li>
+                      <li>Jede Offerte braucht eine Begehung.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p class="bsp__fuss"><span>Einstufung: <b>Einfach bis Verbunden</b></span><span>Fixpreis nach Erstanalyse, <span data-preis="au-ablauf-klein">ab CHF 1'300 pro Ablauf</span> bis <span data-preis="au-belege-offerten">ab CHF 3'000</span></span><a href="#preise">Zur Leiter ↑</a></p>
+            </div>
+          </details>
+
+          <details class="bsp-tabelle__zeile" id="offerten-vorlage">
+            <summary>
+              <span class="bsp-tabelle__name" data-label="Beispiel">Offerte aus dem Formular</span>
+              <span data-label="Sprosse"><em class="bsp-tag bsp-tag--e">Einfach</em></span>
+              <span data-label="Was von selbst läuft">Aus einem kurzen Formular entsteht die fertige PDF-Offerte.</span>
+              <span data-label="Was Sie davon haben">Minuten statt einer Stunde je Offerte.</span>
+              <span data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-offerte-formular" data-preis-form="betrag">ab CHF 2'200</span></span>
+              <span class="bsp-tabelle__plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="bsp">
+              <div class="bsp__kopf">
+                <p class="bsp__lead">Ihr Team füllt ein kurzes Formular aus. Die Preise werden nach Ihren Regeln gerechnet, die fertige Offerte liegt als PDF bereit.</p>
+                <p class="bsp__chef"><b>Für die Chefin, den Chef:</b> Jede Offerte sieht gleich gut aus, und Ihr Team braucht Minuten statt einer Stunde.</p>
+                <ul class="bsp__nutzen" aria-label="Was Sie davon haben">
+                  <li><b>Regeln statt Bauchgefühl.</b></li>
+                </ul>
+              </div>
+              <p class="bsp__teile"><b>Teile:</b> <span>Formular</span><span>zieht Leistung und Menge heraus</span><span>feste Regel: Staffelpreis und Rabatt</span><span>Offerte schreiben</span><span>Meldung zur Kontrolle</span></p>
+              <div class="bsp__vergleich">
+                <div class="bsp__heute">
+                  <h4>Heute</h4>
+                  <ul>
+                    <li>Offerten werden aus einer alten Vorlage kopiert.</li>
+                    <li>Rabattregeln stehen im Kopf einer Person.</li>
+                  </ul>
+                </div>
+                <div class="bsp__danach">
+                  <h4>Danach</h4>
+                  <ol>
+                    <li><i>1</i><span><b>Formular:</b> Leistung, Menge, Kunde, Termin.</span></li>
+                    <li><i>2</i><span><b>Preise werden gerechnet:</b> Staffelpreise, Rabatt, MWST nach Ihren Regeln.</span></li>
+                    <li><i>3</i><span><b>PDF in Ihrem Design,</b> Versand nach Kontrolle.</span></li>
+                  </ol>
+                </div>
+              </div>
+              <div class="bsp__unten">
+                <div class="bsp__passt">
+                  <div>
+                    <h4>Passt, wenn</h4>
+                    <ul class="bsp__ja">
+                      <li>Wiederkehrende Leistungen mit klaren Preisen.</li>
+                      <li>Mehrere Personen schreiben Offerten.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>Passt nicht, wenn</h4>
+                    <ul class="bsp__nein">
+                      <li>Preise entstehen erst im Gespräch.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p class="bsp__fuss"><span>Einstufung: <b>Einfach · bei Ihnen fertig in 3 bis 5 Arbeitstagen</b></span><span>Fixpreis nach Erstanalyse, <span data-preis="au-offerte-formular" data-preis-form="betrag">ab CHF 2'200</span></span><a href="#preise">Zur Leiter ↑</a></p>
+            </div>
+          </details>
+
+          <details class="bsp-tabelle__zeile" id="freigabe-schleife">
+            <summary>
+              <span class="bsp-tabelle__name" data-label="Beispiel">Freigabe-Schleife</span>
+              <span data-label="Sprosse"><em class="bsp-tag bsp-tag--v">Verbunden</em></span>
+              <span data-label="Was von selbst läuft">Grosse Rechnungen gehen erst nach Ihrer Freigabe weiter.</span>
+              <span data-label="Was Sie davon haben">Freigabe vom Handy, nachvollziehbar.</span>
+              <span data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-freigabe-schleife" data-preis-form="betrag">ab CHF 2'600</span></span>
+              <span class="bsp-tabelle__plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="bsp">
+              <div class="bsp__kopf">
+                <p class="bsp__lead">Rechnungen über einem Betrag, den Sie festlegen, gehen per Mail oder Handy-Nachricht zur Freigabe. Erst dann werden sie bezahlt.</p>
+                <p class="bsp__chef"><b>Für die Chefin, den Chef:</b> Sie behalten die Hand auf dem Geld, auch wenn Sie unterwegs sind.</p>
+                <ul class="bsp__nutzen" aria-label="Was Sie davon haben">
+                  <li><b>Nachvollziehbar.</b></li>
+                </ul>
+              </div>
+              <p class="bsp__teile"><b>Teile:</b> <span>Beleg als PDF</span><span>zieht Betrag und Datum heraus</span><span>über der Schwelle: Freigabe am Handy</span><span>buchen</span><span>Frist läuft ab, Erinnerung</span></p>
+              <div class="bsp__vergleich">
+                <div class="bsp__heute">
+                  <h4>Heute</h4>
+                  <ul>
+                    <li>Freigaben per Zuruf, Unterschriften freitags im Stapel.</li>
+                    <li>Wer was freigegeben hat, steht nirgends.</li>
+                  </ul>
+                </div>
+                <div class="bsp__danach">
+                  <h4>Danach</h4>
+                  <ol>
+                    <li><i>1</i><span><b>Betrag gelesen,</b> unter der Schwelle direkt weiter.</span></li>
+                    <li><i>2</i><span><b>Darüber: Nachricht</b> mit Beleg und Knopf «Freigeben».</span></li>
+                    <li><i>3</i><span><b>Erinnerung nach zwei Tagen,</b> Freigabe mit Name und Zeit am Beleg.</span></li>
+                  </ol>
+                </div>
+              </div>
+              <div class="bsp__unten">
+                <div class="bsp__passt">
+                  <div>
+                    <h4>Passt, wenn</h4>
+                    <ul class="bsp__ja">
+                      <li>Klare Regel: Betrag, Lieferant oder Kostenstelle.</li>
+                      <li>Die freigebende Person ist oft unterwegs.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>Passt nicht, wenn</h4>
+                    <ul class="bsp__nein">
+                      <li>Jede Rechnung soll persönlich angeschaut werden.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p class="bsp__fuss"><span>Einstufung: <b>Verbunden · bei Ihnen fertig in 1 bis 2 Arbeitstagen</b></span><span>Fixpreis nach Erstanalyse, <span data-preis="au-freigabe-schleife" data-preis-form="betrag">ab CHF 2'600</span></span><a href="#preise">Zur Leiter ↑</a></p>
+            </div>
+          </details>
+
+          <details class="bsp-tabelle__zeile" id="auftragsablauf">
+            <summary>
+              <span class="bsp-tabelle__name" data-label="Beispiel">Von der Anfrage zur Rechnung</span>
+              <span data-label="Sprosse"><em class="bsp-tag bsp-tag--g">Ganzer Ablauf</em></span>
+              <span data-label="Was von selbst läuft">Anfrage, Offerte, Auftrag und Rechnung laufen in einem Fluss.</span>
+              <span data-label="Was Sie davon haben">Rechnung am Tag des Abschlusses.</span>
+              <span data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-auftragsablauf" data-preis-form="betrag">ab CHF 4'200</span></span>
+              <span class="bsp-tabelle__plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="bsp">
+              <div class="bsp__kopf">
+                <p class="bsp__lead">Eine Anfrage kommt rein, die Offerte geht raus, der Auftrag wird angelegt, nach Abschluss folgt die Rechnung. Alle beteiligten Programme arbeiten dabei zusammen.</p>
+                <p class="bsp__chef"><b>Für die Chefin, den Chef:</b> Rechnungen gehen am Tag des Abschlusses raus, das Geld ist Wochen früher da.</p>
+                <ul class="bsp__nutzen" aria-label="Was Sie davon haben">
+                  <li><b>Einmal erfassen.</b></li>
+                  <li><b>Überblick über jede Anfrage.</b></li>
+                </ul>
+              </div>
+              <p class="bsp__teile"><b>Teile:</b> <span>Mail, Formular auf der Website</span><span>ordnet dem Kunden zu</span><span>KI schlägt vor, Sie entscheiden</span><span>Offerte schreiben, Auftrag anlegen, Rechnung stellen</span><span>Dossier je Kunde</span></p>
+              <div class="bsp__vergleich">
+                <div class="bsp__heute">
+                  <h4>Heute</h4>
+                  <ul>
+                    <li>Kundendaten werden dreimal getippt: Offerte, Auftrag, Rechnung.</li>
+                    <li>Zwischen Abschluss und Rechnung vergehen Wochen.</li>
+                  </ul>
+                </div>
+                <div class="bsp__danach">
+                  <h4>Danach</h4>
+                  <ol>
+                    <li><i>1</i><span><b>Anfrage wird Offerten-Entwurf,</b> Sie geben frei.</span></li>
+                    <li><i>2</i><span><b>Zusage wird Auftrag</b> im Werkstattprogramm.</span></li>
+                    <li><i>3</i><span><b>Abschluss wird Rechnungsentwurf,</b> offene Offerten nach sieben Tagen nachgefasst.</span></li>
+                  </ol>
+                </div>
+              </div>
+              <div class="bsp__unten">
+                <div class="bsp__passt">
+                  <div>
+                    <h4>Passt, wenn</h4>
+                    <ul class="bsp__ja">
+                      <li>Mehrere Aufträge pro Woche laufen ähnlich ab.</li>
+                      <li>Programme für Offerte, Auftrag und Rechnung sind da.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>Passt nicht, wenn</h4>
+                    <ul class="bsp__nein">
+                      <li>Projekte dauern Monate und ändern sich ständig.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p class="bsp__fuss"><span>Einstufung: <b>Ganzer Ablauf · bei Ihnen fertig in 3 bis 5 Arbeitstagen</b></span><span>Fixpreis nach Erstanalyse, <span data-preis="au-auftragsablauf" data-preis-form="betrag">ab CHF 4'200</span></span><a href="#preise">Zur Leiter ↑</a></p>
+            </div>
+          </details>
+
+          <details class="bsp-tabelle__zeile" id="postfach-ki">
+            <summary>
+              <span class="bsp-tabelle__name" data-label="Beispiel">Postfach mit KI</span>
+              <span data-label="Sprosse"><em class="bsp-tag bsp-tag--v">Verbunden</em></span>
+              <span data-label="Was von selbst läuft">Mails werden eingeordnet, Antwortentwürfe stehen bereit.</span>
+              <span data-label="Was Sie davon haben">Weniger Sortieren, schnellere Antworten.</span>
+              <span data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-postfach-ki" data-preis-form="betrag">ab CHF 3'800</span></span>
+              <span class="bsp-tabelle__plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="bsp">
+              <div class="bsp__kopf">
+                <p class="bsp__lead">Jede Mail wird eingeordnet, für Anfragen steht ein Antwortentwurf in Ihrem Ton bereit.</p>
+                <p class="bsp__chef"><b>Für die Chefin, den Chef:</b> Keine Anfrage geht mehr unter, und Ihr Team beginnt den Tag mit dem Wichtigen.</p>
+              </div>
+              <p class="bsp__teile"><b>Teile:</b> <span>Mail</span><span>erkennt Dringlichkeit</span><span>Reihenfolge nach Kunde</span><span>Antwort entwerfen</span><span>Tagesübersicht am Morgen</span></p>
+              <div class="bsp__vergleich">
+                <div class="bsp__heute">
+                  <h4>Heute</h4>
+                  <ul>
+                    <li>Achtzig Mails am Tag, fünfzehn davon wichtig.</li>
+                    <li>Anfragen gehen zwischen Newslettern unter.</li>
+                  </ul>
+                </div>
+                <div class="bsp__danach">
+                  <h4>Danach</h4>
+                  <ol>
+                    <li><i>1</i><span><b>Kategorie und Dringlichkeit</b> gesetzt.</span></li>
+                    <li><i>2</i><span><b>Antwortentwurf</b> aus Ihren Textbausteinen.</span></li>
+                    <li><i>3</i><span><b>Nachfassen</b> nach drei Tagen ohne Antwort.</span></li>
+                  </ol>
+                </div>
+              </div>
+              <div class="bsp__unten">
+                <div class="bsp__passt">
+                  <div>
+                    <h4>Passt, wenn</h4>
+                    <ul class="bsp__ja">
+                      <li>Viele ähnliche Anfragen: Preis, Verfügbarkeit, Termin.</li>
+                      <li>Mail ist Ihr Hauptkanal.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>Passt nicht, wenn</h4>
+                    <ul class="bsp__nein">
+                      <li>Jede Antwort ist ein Beratungsgespräch.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p class="bsp__fuss"><span>Einstufung: <b>Verbunden · bei Ihnen fertig in 6 bis 12 Arbeitstagen</b></span><span>Fixpreis nach Erstanalyse, <span data-preis="au-postfach-ki" data-preis-form="betrag">ab CHF 3'800</span></span><a href="#preise">Zur Leiter ↑</a></p>
+            </div>
+          </details>
+
+          <details class="bsp-tabelle__zeile" id="kundendossier">
+            <summary>
+              <span class="bsp-tabelle__name" data-label="Beispiel">Kundendossier</span>
+              <span data-label="Sprosse"><em class="bsp-tag bsp-tag--g">Ganzer Ablauf</em></span>
+              <span data-label="Was von selbst läuft">Mails, Rechnungen, Offerten und Termine je Kunde an einem Ort.</span>
+              <span data-label="Was Sie davon haben">Alles zum Kunden in einem Blick.</span>
+              <span data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-kundendossier" data-preis-form="betrag">ab CHF 5'200</span></span>
+              <span class="bsp-tabelle__plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="bsp">
+              <div class="bsp__kopf">
+                <p class="bsp__lead">Mails, Rechnungen, Offerten und Termine je Kunde aus zwei Programmen, mit Kurzfassung von der KI.</p>
+                <p class="bsp__chef"><b>Für die Chefin, den Chef:</b> Wer ausfällt oder in den Ferien ist, reisst keine Lücke: Der Stand zu jedem Kunden ist jederzeit da.</p>
+                <ul class="bsp__nutzen" aria-label="Was Sie davon haben">
+                  <li><b>In dreissig Sekunden im Bild.</b></li>
+                  <li><b>Versprechen werden gehalten.</b></li>
+                </ul>
+              </div>
+              <p class="bsp__teile"><b>Teile:</b> <span>Mail, Beleg, Termin im Kalender</span><span>ordnet dem Kunden zu, fasst zusammen</span><span>Frist läuft ab, Erinnerung</span><span>Dossier nachführen</span><span>Dossier je Kunde</span></p>
+              <div class="bsp__vergleich">
+                <div class="bsp__heute">
+                  <h4>Heute</h4>
+                  <ul>
+                    <li>Vor jedem Anruf fünf Minuten Suchen in Mail, Buchhaltung, Kalender.</li>
+                    <li>Fällt jemand aus, kennt niemand den Stand.</li>
+                  </ul>
+                </div>
+                <div class="bsp__danach">
+                  <h4>Danach</h4>
+                  <ol>
+                    <li><i>1</i><span><b>Kunde erkannt</b> in beiden Programmen.</span></li>
+                    <li><i>2</i><span><b>Alles zusammengeführt,</b> offene Punkte zuoberst.</span></li>
+                    <li><i>3</i><span><b>Täglich nachgeführt,</b> dort, wo Sie arbeiten.</span></li>
+                  </ol>
+                </div>
+              </div>
+              <div class="bsp__unten">
+                <div class="bsp__passt">
+                  <div>
+                    <h4>Passt, wenn</h4>
+                    <ul class="bsp__ja">
+                      <li>Stammkunden mit längerer Beziehung.</li>
+                      <li>Daten liegen in zwei Programmen.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>Passt nicht, wenn</h4>
+                    <ul class="bsp__nein">
+                      <li>Alles ist schon sauber in einem CRM.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p class="bsp__fuss"><span>Einstufung: <b>Ganzer Ablauf · bei Ihnen fertig in 6 bis 12 Arbeitstagen</b></span><span>Fixpreis nach Erstanalyse, <span data-preis="au-kundendossier" data-preis-form="betrag">ab CHF 5'200</span></span><a href="#preise">Zur Leiter ↑</a></p>
+            </div>
+          </details>
+
+          <details class="bsp-tabelle__zeile" id="ganzer-bereich">
+            <summary>
+              <span class="bsp-tabelle__name" data-label="Beispiel">Ganzer Bereich</span>
+              <span data-label="Sprosse"><em class="bsp-tag bsp-tag--g">Ganzer Ablauf</em></span>
+              <span data-label="Was von selbst läuft">Einkauf oder Rapportierung laufen von selbst, mit Freigaben.</span>
+              <span data-label="Was Sie davon haben">Ein Bereich ohne Handarbeit.</span>
+              <span data-label="Preis" class="bsp-tabelle__preis"><span data-preis="au-ablauf-gross" data-preis-form="betrag">ab CHF 6'800</span></span>
+              <span class="bsp-tabelle__plus" aria-hidden="true">+</span>
+            </summary>
+            <div class="bsp">
+              <div class="bsp__kopf">
+                <p class="bsp__lead">Einkauf oder Rapportierung komplett: Bestellung, Lieferschein, Rechnung, Freigabe, Buchung, Auswertung.</p>
+                <p class="bsp__chef"><b>Für die Chefin, den Chef:</b> Der Bereich hängt nicht mehr an einer Person, und Sie sehen jeden Monat, wo es hakt.</p>
+              </div>
+              <p class="bsp__teile"><b>Teile:</b> <span>Bestellung, Lieferschein, Beleg als PDF</span><span>vergleicht mit der Bestellung</span><span>Vier-Augen-Prinzip</span><span>buchen, nachbestellen</span><span>Monatsabschluss auf Knopfdruck</span></p>
+              <div class="bsp__vergleich">
+                <div class="bsp__heute">
+                  <h4>Heute</h4>
+                  <ul>
+                    <li>Der Bereich hängt an einer Person mit allem im Kopf.</li>
+                    <li>Auswertungen kommen am Quartalsende, zu spät.</li>
+                  </ul>
+                </div>
+                <div class="bsp__danach">
+                  <h4>Danach</h4>
+                  <ol>
+                    <li><i>1</i><span><b>Bestellung, Lieferschein, Rechnung abgeglichen,</b> Abweichung gemeldet.</span></li>
+                    <li><i>2</i><span><b>Freigabe nach Regel,</b> dann Buchung.</span></li>
+                    <li><i>3</i><span><b>Monatsauswertung,</b> Team geschult und begleitet.</span></li>
+                  </ol>
+                </div>
+              </div>
+              <div class="bsp__unten">
+                <div class="bsp__passt">
+                  <div>
+                    <h4>Passt, wenn</h4>
+                    <ul class="bsp__ja">
+                      <li>Ein abgegrenzter Bereich mit vielen Durchläufen.</li>
+                      <li>Die Geschäftsleitung steht dahinter.</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>Passt nicht, wenn</h4>
+                    <ul class="bsp__nein">
+                      <li>Der Bereich ändert sich gerade grundlegend.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <p class="bsp__fuss"><span>Einstufung: <b>Ganzer Ablauf · bei Ihnen fertig in 6 bis 12 Arbeitstagen</b></span><span>Fixpreis nach Erstanalyse, <span data-preis="au-ablauf-gross">ab CHF 6'800</span></span><a href="#preise">Zur Leiter ↑</a></p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="ihr-fall" class="sv-section sv-section--alt" aria-labelledby="if-titel">
+      <div class="sv-wrap">
+        <div class="sv-center">
+          <p class="sv-kicker">IHR FALL</p>
+          <h2 class="sv-title" id="if-titel">Ihr Fall in zwei Sätzen.</h2>
+          <p class="sv-lead">
+            Beschreiben Sie, was bei Ihnen jede Woche Zeit frisst. Die KI sagt Ihnen, welche Sprosse das ist und was es ungefähr kostet. Ohne Namen und Kundendaten, bitte.
+          </p>
+        </div>
+        <form class="if" id="if-form" novalidate>
+          <label class="if__label" for="if-text">Was frisst bei Ihnen Zeit?</label>
+          <textarea id="if-text" name="wunsch" rows="4" maxlength="1500" aria-describedby="if-zaehler if-hinweis" placeholder="Bei uns kommen Rechnungen per Mail, jemand druckt sie aus und tippt sie in die Buchhaltung …"></textarea>
+          <div class="if__leiste">
+            <p class="if__zaehler" id="if-zaehler"><span id="if-n">0</span> Zeichen, mindestens 20</p>
+            <button type="submit" class="sv-button sv-button--cta" id="if-knopf">Einordnen</button>
+          </div>
+          <p class="if__hinweis" id="if-hinweis">Wir speichern Ihre Beschreibung nicht.</p>
+          <p class="if__fehler" id="if-fehler" role="alert" hidden></p>
+        </form>
+        <div class="if__ergebnis" id="if-ergebnis" hidden>
+          <p class="if__kopf"><span class="if__kicker">Unsere Einordnung</span><em class="bsp-tag" id="if-tag"></em></p>
+          <p class="if__satz" id="if-satz"></p>
+          <ul class="if__positionen" id="if-positionen" aria-label="Passende Leistungen"></ul>
+          <p class="if__summe"><span>Richtpreis, einmalig</span><strong id="if-summe"></strong></p>
+          <p class="if__monat" id="if-monat" hidden></p>
+          <div class="if__unklar" id="if-unklar" hidden>
+            <h3>Das klären wir mit Ihnen</h3>
+            <ul id="if-unklar-liste"></ul>
+          </div>
+          <div class="sv-actions if__aktionen">
+            <a class="sv-button sv-button--cta" id="if-offerte" href="offerte?bereich=automationen">Richtpreis als Dokument →</a>
+            <a class="sv-button sv-button--light" href="erstanalyse/">Erstanalyse buchen</a>
+          </div>
+          <p class="if__fuss">Richtpreis, keine verbindliche Offerte. Die Einstufung machen wir in der Erstanalyse, danach steht der Fixpreis.</p>
+        </div>
+      </div>
+    </section>
 
     <section id="ablauf" class="sv-section">
       <div class="sv-wrap">
@@ -625,7 +1159,7 @@
         </p>
         <div class="sv-actions">
           <a class="sv-button sv-button--light" href="erstanalyse/">Kostenlose Erstanalyse →</a>
-          <a class="sv-button sv-button--glass" href="offerte">Richtpreis in zwei Minuten →</a>
+          <a class="sv-button sv-button--glass" href="offerte?bereich=automationen">Richtpreis in zwei Minuten →</a>
         </div>
       </div>
     </section>
@@ -658,7 +1192,9 @@
 <script src="ui_kits/website/api-basis.js?v=20261004-umbau"></script>
 <script src="ui_kits/website/visibility.js?v=20261007-logo-svg"></script>
 <script src="ui_kits/website/preise.js?v=20261004-preise"></script>
-<script src="ui_kits/website/preismatrix.js?v=20261009-handy-leiste"></script>
+<script src="ui_kits/website/preismatrix.js?v=20261010-eine-seite"></script>
+<script src="ui_kits/website/branchen.js?v=20261010-eine-seite"></script>
+<script src="ui_kits/website/ihrfall.js?v=20261010-eine-seite"></script>
 <script src="ui_kits/website/chat.js?v=20261004-umbau"></script>
 </body>
 </html>

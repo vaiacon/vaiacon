@@ -157,6 +157,38 @@
     });
   }
 
+  /* «Beispiel ansehen»: Ziel liegt in einem <details> weiter unten; erst aufklappen, dann hinrollen.
+   * Dasselbe beim Laden mit #anker und bei jedem Wechsel des Ankers, sonst bleibt das Ziel zu. */
+  function oeffneBeispiel(hash, sofort) {
+    if (!hash || hash.length < 2) return false;
+    var ziel = null;
+    try { ziel = document.getElementById(decodeURIComponent(hash.slice(1))); } catch (e) { ziel = null; }
+    if (!ziel) return false;
+    var box = ziel.closest ? ziel.closest('details') : null;
+    if (!box) return false;
+    box.open = true;
+    if (ziel.scrollIntoView) ziel.scrollIntoView({ block: 'start', behavior: sofort ? 'instant' : 'smooth' });
+    return true;
+  }
+  var mehrLink = document.getElementById('pm-d-mehr');
+  if (mehrLink) {
+    mehrLink.addEventListener('click', function (e) {
+      var hash = mehrLink.getAttribute('href') || '';
+      if (hash.charAt(0) !== '#') return;
+      if (oeffneBeispiel(hash)) {
+        e.preventDefault();
+        if (history.replaceState) history.replaceState(null, '', hash);
+      }
+    });
+  }
+  window.addEventListener('hashchange', function () { oeffneBeispiel(location.hash); });
+  // Beim Laden ohne Animation: der Browser ist schon gesprungen, bevor die Zeile offen war.
+  if (location.hash) {
+    setTimeout(function () { oeffneBeispiel(location.hash, true); }, 0);
+    // Nach dem vollständigen Laden noch einmal: der Browser springt selbst zum Anker, sobald Bilder und Schriften da sind.
+    window.addEventListener('load', function () { setTimeout(function () { oeffneBeispiel(location.hash, true); }, 50); });
+  }
+
   var start = matrix.querySelector('.pm-cell.ist-gewaehlt') || zellen[0];
   setzeSpalte(start.getAttribute('data-komplexitaet'));
   waehle(start);

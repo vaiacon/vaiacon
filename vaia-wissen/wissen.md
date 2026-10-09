@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag cf7a7da Fünf Beispielpreise aus preise.json statt fest im Markup
+> Stand: 09.10.2026 · Eintrag 75c8adc Sprossen korrigiert: Freigabe-Schleife und Postfach mit KI sind Verbunden, Kundendossier Ganzer Ablauf
 
 ## Wie du antwortest
 
@@ -521,7 +521,7 @@ AUTOMATIONEN
 Büroarbeit mit KI automatisieren – für Schweizer KMU
 Die Arbeit, die sich jede Woche wiederholt, läuft von selbst. Automationen übernehmen, was in Ihrem Betrieb regelmässig Zeit kostet: Belege, Offerten, Korrespondenz, Anfragen. Eingerichtet bei Ihnen, zum Fixpreis nach der Erstanalyse. Von der einen festen Regel bis zum ganzen Bereich: Sie entscheiden, wie gross der Schritt ist.
 Kostenlose Erstanalyse →
-So läuft es ab →
+Ihren Fall einordnen →
 Kurz gesagt
 Für wen
 Schweizer KMU mit wiederkehrender Büroarbeit wie Belegen, Offerten, Korrespondenz und Anfragen.
@@ -533,51 +533,100 @@ Preisrahmen
 Fixpreis nach der Erstanalyse, ab CHF 1'300 pro Ablauf, inkl. MWST.
 Ablauf
 Fünf Schritte vom Gespräch bis zur Kontrolle: Empfehlung, Priorisierung, Planung, Umsetzung, Kontrolle.
+Bausteine
+Jede Automation besteht aus fünf Teilen: Etwas kommt rein, die KI versteht es, es wird entschieden, etwas passiert, Sie erfahren davon.
+Ihr Fall
+Auf der Seite beschreiben Sie Ihren Fall in zwei Sätzen, die KI nennt die Sprosse und einen Richtpreis. Die Beschreibung wird nicht gespeichert.
 Region
 Gesamte Deutschschweiz
-IN 22 SEKUNDEN
-So sieht Büroarbeit aus, die von selbst läuft.
-Von einfach bis gross: Beleg ablegen, Rechnung buchen, ganzer Einkauf von selbst. Es lohnt sich überall, wo heute jemand von Hand dasselbe macht. Der Kurzfilm zeigt es ohne Ton.
-Beispiel Sprosse Was von selbst läuft Was Sie davon haben Preis
-Belege in drei Stufen
-Einfach bis Verbunden
-Belege werden abgelegt, gebucht, aus Anfragen werden Offerten-Entwürfe.
-Etwa ein halber Tag pro Woche zurück.
-ab CHF 1'300
-Offerte aus dem Formular
-Einfach
-Aus einem kurzen Formular entsteht die fertige PDF-Offerte.
-Minuten statt einer Stunde je Offerte.
-ab CHF 2'200
-Freigabe-Schleife
-Verbunden
-Grosse Rechnungen gehen erst nach Ihrer Freigabe weiter.
-Freigabe vom Handy, nachvollziehbar.
-ab CHF 2'600
-Von der Anfrage zur Rechnung
-Ganzer Ablauf
-Anfrage, Offerte, Auftrag und Rechnung laufen in einem Fluss.
-Rechnung am Tag des Abschlusses.
-ab CHF 4'200
-Postfach mit KI
-Verbunden
-Mails werden eingeordnet, Antwortentwürfe stehen bereit.
-Weniger Sortieren, schnellere Antworten.
-ab CHF 3'800
-Kundendossier
-Ganzer Ablauf
-Mails, Rechnungen, Offerten und Termine je Kunde an einem Ort.
-Alles zum Kunden in einem Blick.
-ab CHF 5'200
-Ganzer Bereich
-Ganzer Ablauf
-Einkauf oder Rapportierung laufen von selbst, mit Freigaben.
-Ein Bereich ohne Handarbeit.
-ab CHF 6'800
-Alle Beispiele mit Heute, Danach und Nutzen →
+BAUSTEINE
+Alles, was sich wiederholt, lässt sich automatisieren.
+Eine Automation ist nie ein Produkt aus dem Regal. Sie besteht immer aus denselben fünf Teilen, die wir für Ihren Betrieb zusammensetzen.
+1 Etwas kommt rein
+Der Anstoss: Etwas trifft bei Ihnen ein, auf welchem Weg auch immer.
+Mail
+Formular auf der Website
+Anruf
+Sprachnachricht
+Foto vom Handy
+Beleg als PDF
+Bestellung aus dem Shop
+Termin im Kalender
+Lieferschein
+Bewerbung
+Rückmeldung eines Kunden
+WhatsApp-Nachricht
+Tabelle vom Lieferanten
+Zählerstand
+Chat auf der Website
+2 Die KI versteht es
+Sie liest, hört oder schaut hin und holt heraus, was zählt.
+liest den Beleg
+erkennt den Absender
+fasst zusammen
+übersetzt
+zieht Betrag und Datum heraus
+erkennt Dringlichkeit
+ordnet dem Kunden zu
+vergleicht mit der Offerte
+prüft auf Vollständigkeit
+hört den Anruf ab
+schreibt den Rapport
+erkennt Dubletten
+schätzt den Aufwand
+3 Es wird entschieden
+Nach Ihren Regeln: Manches läuft durch, anderes wartet auf Ihr OK.
+feste Regel («über CHF 2'000 → Freigabe»)
+KI schlägt vor, Sie entscheiden
+Freigabe am Handy
+Vier-Augen-Prinzip
+Ausnahme geht an einen Menschen
+Frist läuft ab → Erinnerung
+Reihenfolge nach Kunde
+Zuständigkeit nach Region
+4 Etwas passiert
+Das Ergebnis landet dort, wo Sie arbeiten: im Programm, im Ordner, beim Kunden.
+ablegen
+buchen
+Antwort entwerfen
+Offerte schreiben
+Auftrag anlegen
+Rechnung stellen
+Termin eintragen
+Mahnung schicken
+nachbestellen
+Lohn vorbereiten
+Lieferant anfragen
+Kunde informieren
+Zeiterfassung ergänzen
+in die Buchhaltung übertragen
+5 Sie erfahren davon
+Sie behalten den Überblick, ohne nachschauen zu müssen.
+Meldung aufs Handy
+Tagesübersicht am Morgen
+Dossier je Kunde
+Wochenbericht
+Ampel in der Tabelle
+Hinweis bei Abweichung
+Monatsabschluss auf Knopfdruck
+Frage an den Bot
+Jedes Beispiel weiter unten ist eine Kombination aus diesen Teilen. Ihres auch.
 WAS ES KOSTET
 Wie gross ist der Schritt?
 Alles, was sich in Ihrem Betrieb wiederholt, lässt sich automatisieren: von der einen festen Regel bis zum ganzen Bereich. Der Preis hängt nur davon ab, wie gross der Schritt ist. Wie schnell er bei Ihnen fertig ist, sagen wir Ihnen dazu – das ändert am Preis nichts. Die Einstufung machen wir in der Erstanalyse, danach steht der Fixpreis. Alle Preise pro Ablauf, einmalig, inklusive MWST.
+Was die drei Sprossen in Ihrer Branche heissen:
+Malerbetrieb
+Treuhand
+Arztpraxis
+Sanitär und Heizung
+Agentur
+Restaurant
+1 Einfach
+Das Foto von der Baustelle landet benannt im Projektordner.
+2 Verbunden
+Aus dem Aufmass im Formular wird die Offerte in Ihrem Design.
+3 Ganzer Ablauf
+Von der Anfrage über Offerte und Rapport bis zur Rechnung, Sie geben nur frei.
 1 Einfach Eine feste Regel in einem Programm
 Eine Rechnung kommt per Mail und liegt Sekunden später im richtigen Ordner.
 Was Sie davon haben Nichts geht verloren, niemand sucht am Monatsende.
@@ -622,7 +671,7 @@ Das ist drin
 Einrichten im Programm, das Sie schon haben
 Probelauf mit Ihren echten Belegen
 Kurze Anleitung fürs Team
-Mehr zu diesem Beispiel →
+Beispiel ansehen ↓
 Fixpreis nach Erstanalyse
 ab CHF 1'300
 Bei Ihnen fertig in 1 bis 2 Arbeitstagen
@@ -635,55 +684,21 @@ Betreuung klein, 1 Ablauf CHF 130 pro Monat
 Betreuung mittel, bis 5 Abläufe, 1 Std. Anpassung inkl. CHF 290 pro Monat
 Anpassung nach Aufwand CHF 150 pro Stunde
 Chatbot und Telefonassistent sind eigene Produkte ausserhalb der Matrix, die Preise stehen in den häufigen Fragen . Betreuung kündbar auf Ende Folgemonat. Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer.
-SO LÄUFT ES AB
-Fünf Schritte, vom Gespräch bis zur Kontrolle.
-01
-Empfehlung
-Wir schauen Ihre Abläufe an und benennen, was am meisten entlastet, mit Offerte und ohne Verpflichtung.
-02
-Priorisierung
-Zuerst kommt das Einfachste mit dem schnellsten Nutzen, nicht das Grösste.
-03
-Planung
-Vor dem Bauen steht der Ablauf auf Papier: Auslöser, Schritte, Ergebnis, Ausnahmen.
-04
-Umsetzung
-Wir richten die Automation bei Ihnen ein, zwei Wochen läuft sie neben dem alten Weg mit.
-05
-Kontrolle
-Wir prüfen regelmässig, ob sie noch passt, auf Wunsch dauerhaft mit unserer Begleitung .
-NÄCHSTER SCHRITT
-Zeigen Sie uns, was jede Woche Zeit frisst.
-Im Erstgespräch schauen wir gemeinsam auf Ihre Abläufe und sagen Ihnen, wo sich eine Automation lohnt und wo nicht. Kostenlos und unverbindlich.
-Kostenlose Erstanalyse →
-Richtpreis in zwei Minuten →
-
-### Beispiele aus dem Alltag (Automationen)
-
-Zum Inhalt springen
-AUTOMATIONEN IM ALLTAG
-Was eine Automation in Ihrem Betrieb wirklich tut
-Eine Automation ist kein Programm, das man kauft. Es ist ein Ablauf, der bei Ihnen läuft. Sieben Beispiele zeigen, von der einen festen Regel bis zum ganzen Bereich, was sich ändert: was heute liegen bleibt, was danach von selbst passiert und wo es sich nicht lohnt.
-Kostenlose Erstanalyse →
-Richtpreis in zwei Minuten →
-SIEBEN BEISPIELE, DREI BEREICHE
-Suchen Sie sich aus, was bei Ihnen jede Woche Zeit frisst.
-Von einfach bis gross: «Einfach» ist eine feste Regel, «Verbunden» heisst, zwei Programme arbeiten zusammen, «Ganzer Ablauf» heisst, ein ganzer Bereich läuft von selbst. Jedes Beispiel zeigt, was heute liegen bleibt, was danach von selbst läuft und was Sie als Chefin oder Chef davon haben. Und ehrlich, wann es nicht passt.
-1 Einfach bis Verbunden · Belege in drei Stufen
-2 Einfach · Offerte aus dem Formular
-3 Verbunden · Freigabe-Schleife
-4 Ganzer Ablauf · Von der Anfrage zur Rechnung
-5 Verbunden · Postfach mit KI
-6 Ganzer Ablauf · Kundendossier
-7 Ganzer Ablauf · Ganzer Bereich
-BEREICH 1
-Belege und Buchhaltung
-1 Einfach bis Verbunden · Belege in drei Stufen
-Belege landen am richtigen Ort, werden gebucht, und aus Anfragen werden Offerten.
+IN 22 SEKUNDEN
+Sieben von vielen.
+Jedes Beispiel ist eine Kombination der Bausteine oben. Ihres steht nicht hier, sondern im Feld darunter.
+Beispiel Sprosse Was von selbst läuft Was Sie davon haben Preis
+Belege in drei Stufen
+Einfach bis Verbunden
+Belege werden abgelegt, gebucht, aus Anfragen werden Offerten-Entwürfe.
+Etwa ein halber Tag pro Woche zurück.
+ab CHF 1'300
++
 Ein Ablauf, der mitwächst: Sie fangen mit der Ablage an und bauen aus, sobald es sich lohnt.
 Für die Chefin, den Chef: Etwa ein halber Tag pro Woche kommt zurück, und keine Rechnung geht mehr verloren.
 Kein Abtippen mehr.
 Offerte am selben Tag.
+Teile: Mail, Foto vom Handy liest den Beleg Unklares geht an einen Menschen ablegen, buchen, Offerte schreiben Hinweis bei Abweichung
 Heute
 Belege liegen an drei Orten: Mail, Handy, Papier.
 Abtippen, Suchen am Monatsende, Offerten erst nach Tagen.
@@ -707,14 +722,17 @@ Passt nicht, wenn
 Belege kommen fast nur auf Papier.
 Die Buchhaltung läuft in Excel.
 Jede Offerte braucht eine Begehung.
-Einstufung: Einfach bis Verbunden Fixpreis nach Erstanalyse, ab CHF 1'300 pro Ablauf bis ab CHF 3'000 Zu den Preisen →
-BEREICH 2
-Offerten, Freigaben und Aufträge
-2 Einfach · Offerte aus dem Formular
-Aus einem kurzen Formular wird eine fertige Offerte.
+Einstufung: Einfach bis Verbunden Fixpreis nach Erstanalyse, ab CHF 1'300 pro Ablauf bis ab CHF 3'000 Zur Leiter ↑
+Offerte aus dem Formular
+Einfach
+Aus einem kurzen Formular entsteht die fertige PDF-Offerte.
+Minuten statt einer Stunde je Offerte.
+ab CHF 2'200
++
 Ihr Team füllt ein kurzes Formular aus. Die Preise werden nach Ihren Regeln gerechnet, die fertige Offerte liegt als PDF bereit.
 Für die Chefin, den Chef: Jede Offerte sieht gleich gut aus, und Ihr Team braucht Minuten statt einer Stunde.
 Regeln statt Bauchgefühl.
+Teile: Formular zieht Leistung und Menge heraus feste Regel: Staffelpreis und Rabatt Offerte schreiben Meldung zur Kontrolle
 Heute
 Offerten werden aus einer alten Vorlage kopiert.
 Rabattregeln stehen im Kopf einer Person.
@@ -727,12 +745,17 @@ Wiederkehrende Leistungen mit klaren Preisen.
 Mehrere Personen schreiben Offerten.
 Passt nicht, wenn
 Preise entstehen erst im Gespräch.
-Einstufung: Einfach · bei Ihnen fertig in 3 bis 5 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 2'200 Zu den Preisen →
-3 Verbunden · Freigabe-Schleife
-Grosse Beträge gehen erst nach Ihrer Freigabe weiter.
+Einstufung: Einfach · bei Ihnen fertig in 3 bis 5 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 2'200 Zur Leiter ↑
+Freigabe-Schleife
+Verbunden
+Grosse Rechnungen gehen erst nach Ihrer Freigabe weiter.
+Freigabe vom Handy, nachvollziehbar.
+ab CHF 2'600
++
 Rechnungen über einem Betrag, den Sie festlegen, gehen per Mail oder Handy-Nachricht zur Freigabe. Erst dann werden sie bezahlt.
 Für die Chefin, den Chef: Sie behalten die Hand auf dem Geld, auch wenn Sie unterwegs sind.
 Nachvollziehbar.
+Teile: Beleg als PDF zieht Betrag und Datum heraus über der Schwelle: Freigabe am Handy buchen Frist läuft ab, Erinnerung
 Heute
 Freigaben per Zuruf, Unterschriften freitags im Stapel.
 Wer was freigegeben hat, steht nirgends.
@@ -745,13 +768,18 @@ Klare Regel: Betrag, Lieferant oder Kostenstelle.
 Die freigebende Person ist oft unterwegs.
 Passt nicht, wenn
 Jede Rechnung soll persönlich angeschaut werden.
-Einstufung: Verbunden · bei Ihnen fertig in 1 bis 2 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 2'600 Zu den Preisen →
-4 Ganzer Ablauf · Von der Anfrage zur Rechnung
-Von der Anfrage bis zur Rechnung in einem Fluss.
+Einstufung: Verbunden · bei Ihnen fertig in 1 bis 2 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 2'600 Zur Leiter ↑
+Von der Anfrage zur Rechnung
+Ganzer Ablauf
+Anfrage, Offerte, Auftrag und Rechnung laufen in einem Fluss.
+Rechnung am Tag des Abschlusses.
+ab CHF 4'200
++
 Eine Anfrage kommt rein, die Offerte geht raus, der Auftrag wird angelegt, nach Abschluss folgt die Rechnung. Alle beteiligten Programme arbeiten dabei zusammen.
 Für die Chefin, den Chef: Rechnungen gehen am Tag des Abschlusses raus, das Geld ist Wochen früher da.
 Einmal erfassen.
 Überblick über jede Anfrage.
+Teile: Mail, Formular auf der Website ordnet dem Kunden zu KI schlägt vor, Sie entscheiden Offerte schreiben, Auftrag anlegen, Rechnung stellen Dossier je Kunde
 Heute
 Kundendaten werden dreimal getippt: Offerte, Auftrag, Rechnung.
 Zwischen Abschluss und Rechnung vergehen Wochen.
@@ -764,13 +792,16 @@ Mehrere Aufträge pro Woche laufen ähnlich ab.
 Programme für Offerte, Auftrag und Rechnung sind da.
 Passt nicht, wenn
 Projekte dauern Monate und ändern sich ständig.
-Einstufung: Ganzer Ablauf · bei Ihnen fertig in 3 bis 5 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 4'200 Zu den Preisen →
-BEREICH 3
-Postfach, Kunden und ganze Bereiche
-5 Verbunden · Postfach mit KI
-Das Postfach sortiert sich selbst und schlägt Antworten vor.
+Einstufung: Ganzer Ablauf · bei Ihnen fertig in 3 bis 5 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 4'200 Zur Leiter ↑
+Postfach mit KI
+Verbunden
+Mails werden eingeordnet, Antwortentwürfe stehen bereit.
+Weniger Sortieren, schnellere Antworten.
+ab CHF 3'800
++
 Jede Mail wird eingeordnet, für Anfragen steht ein Antwortentwurf in Ihrem Ton bereit.
 Für die Chefin, den Chef: Keine Anfrage geht mehr unter, und Ihr Team beginnt den Tag mit dem Wichtigen.
+Teile: Mail erkennt Dringlichkeit Reihenfolge nach Kunde Antwort entwerfen Tagesübersicht am Morgen
 Heute
 Achtzig Mails am Tag, fünfzehn davon wichtig.
 Anfragen gehen zwischen Newslettern unter.
@@ -783,13 +814,18 @@ Viele ähnliche Anfragen: Preis, Verfügbarkeit, Termin.
 Mail ist Ihr Hauptkanal.
 Passt nicht, wenn
 Jede Antwort ist ein Beratungsgespräch.
-Einstufung: Verbunden · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 3'800 Zu den Preisen →
-6 Ganzer Ablauf · Kundendossier
-Zu jedem Kunden alles an einem Ort, mit Kurzfassung.
+Einstufung: Verbunden · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 3'800 Zur Leiter ↑
+Kundendossier
+Ganzer Ablauf
+Mails, Rechnungen, Offerten und Termine je Kunde an einem Ort.
+Alles zum Kunden in einem Blick.
+ab CHF 5'200
++
 Mails, Rechnungen, Offerten und Termine je Kunde aus zwei Programmen, mit Kurzfassung von der KI.
 Für die Chefin, den Chef: Wer ausfällt oder in den Ferien ist, reisst keine Lücke: Der Stand zu jedem Kunden ist jederzeit da.
 In dreissig Sekunden im Bild.
 Versprechen werden gehalten.
+Teile: Mail, Beleg, Termin im Kalender ordnet dem Kunden zu, fasst zusammen Frist läuft ab, Erinnerung Dossier nachführen Dossier je Kunde
 Heute
 Vor jedem Anruf fünf Minuten Suchen in Mail, Buchhaltung, Kalender.
 Fällt jemand aus, kennt niemand den Stand.
@@ -802,11 +838,16 @@ Stammkunden mit längerer Beziehung.
 Daten liegen in zwei Programmen.
 Passt nicht, wenn
 Alles ist schon sauber in einem CRM.
-Einstufung: Ganzer Ablauf · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 5'200 Zu den Preisen →
-7 Ganzer Ablauf · Ganzer Bereich
-Ein ganzer Bereich läuft von selbst, mit Freigaben, wo sie hingehören.
+Einstufung: Ganzer Ablauf · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 5'200 Zur Leiter ↑
+Ganzer Bereich
+Ganzer Ablauf
+Einkauf oder Rapportierung laufen von selbst, mit Freigaben.
+Ein Bereich ohne Handarbeit.
+ab CHF 6'800
++
 Einkauf oder Rapportierung komplett: Bestellung, Lieferschein, Rechnung, Freigabe, Buchung, Auswertung.
 Für die Chefin, den Chef: Der Bereich hängt nicht mehr an einer Person, und Sie sehen jeden Monat, wo es hakt.
+Teile: Bestellung, Lieferschein, Beleg als PDF vergleicht mit der Bestellung Vier-Augen-Prinzip buchen, nachbestellen Monatsabschluss auf Knopfdruck
 Heute
 Der Bereich hängt an einer Person mit allem im Kopf.
 Auswertungen kommen am Quartalsende, zu spät.
@@ -819,10 +860,40 @@ Ein abgegrenzter Bereich mit vielen Durchläufen.
 Die Geschäftsleitung steht dahinter.
 Passt nicht, wenn
 Der Bereich ändert sich gerade grundlegend.
-Einstufung: Ganzer Ablauf · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 6'800 Zu den Preisen →
+Einstufung: Ganzer Ablauf · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 6'800 Zur Leiter ↑
+IHR FALL
+Ihr Fall in zwei Sätzen.
+Beschreiben Sie, was bei Ihnen jede Woche Zeit frisst. Die KI sagt Ihnen, welche Sprosse das ist und was es ungefähr kostet. Ohne Namen und Kundendaten, bitte.
+Was frisst bei Ihnen Zeit?
+0 Zeichen, mindestens 20
+Einordnen
+Wir speichern Ihre Beschreibung nicht.
+Unsere Einordnung
+Richtpreis, einmalig
+Das klären wir mit Ihnen
+Richtpreis als Dokument →
+Erstanalyse buchen
+Richtpreis, keine verbindliche Offerte. Die Einstufung machen wir in der Erstanalyse, danach steht der Fixpreis.
+SO LÄUFT ES AB
+Fünf Schritte, vom Gespräch bis zur Kontrolle.
+01
+Empfehlung
+Wir schauen Ihre Abläufe an und benennen, was am meisten entlastet, mit Offerte und ohne Verpflichtung.
+02
+Priorisierung
+Zuerst kommt das Einfachste mit dem schnellsten Nutzen, nicht das Grösste.
+03
+Planung
+Vor dem Bauen steht der Ablauf auf Papier: Auslöser, Schritte, Ergebnis, Ausnahmen.
+04
+Umsetzung
+Wir richten die Automation bei Ihnen ein, zwei Wochen läuft sie neben dem alten Weg mit.
+05
+Kontrolle
+Wir prüfen regelmässig, ob sie noch passt, auf Wunsch dauerhaft mit unserer Begleitung .
 NÄCHSTER SCHRITT
-Welches Beispiel kommt Ihnen bekannt vor?
-Erzählen Sie uns im Erstgespräch, was bei Ihnen jede Woche liegen bleibt. Wir sagen Ihnen, wo sich eine Automation lohnt und wo nicht. Kostenlos und unverbindlich.
+Zeigen Sie uns, was jede Woche Zeit frisst.
+Im Erstgespräch schauen wir gemeinsam auf Ihre Abläufe und sagen Ihnen, wo sich eine Automation lohnt und wo nicht. Kostenlos und unverbindlich.
 Kostenlose Erstanalyse →
 Richtpreis in zwei Minuten →
 
@@ -1320,3 +1391,14 @@ Etwas ist unklar geblieben?
 Schreiben Sie uns. Wir antworten selbst und erklären gerne, was wir hier meinen.
 hallo@vaiacon.ch ↗
 Zum Kontaktformular →
+
+### Branchen
+
+Was die drei Sprossen (Einfach, Verbunden, Ganzer Ablauf) in einzelnen Branchen heissen:
+
+- Malerbetrieb: Einfach: Das Foto von der Baustelle landet benannt im Projektordner. Verbunden: Aus dem Aufmass im Formular wird die Offerte in Ihrem Design. Ganzer Ablauf: Von der Anfrage über Offerte und Rapport bis zur Rechnung, Sie geben nur frei.
+- Treuhand: Einfach: Jeder Beleg aus dem Postfach liegt benannt im richtigen Mandanten-Dossier. Verbunden: Aus dem Beleg wird der Buchungsentwurf in Ihrem Programm, Sie bestätigen mit einem Klick. Ganzer Ablauf: Vom Posteingang über Buchung und Rückfrage bis zum Abschluss, Sie prüfen nur noch.
+- Arztpraxis: Einfach: Jeder Bericht vom Spital liegt sortiert in der richtigen Akte. Verbunden: Aus dem Terminwunsch per Mail wird ein Vorschlag im Kalender samt Antwortentwurf. Ganzer Ablauf: Von der Anmeldung über die Terminerinnerung bis zur Abrechnung, Ihr Team gibt nur frei.
+- Sanitär und Heizung: Einfach: Das Foto vom Zählerstand oder vom Defekt liegt benannt beim Auftrag. Verbunden: Aus der Störungsmeldung im Formular wird der Einsatz im Kalender, der Monteur hat alles auf dem Handy. Ganzer Ablauf: Von der Störungsmeldung über Einsatz und Rapport bis zur Rechnung, Sie geben nur frei.
+- Agentur: Einfach: Jede Kundenmail landet im richtigen Projektordner, die Anhänge gleich dabei. Verbunden: Aus dem Briefing im Formular wird die Offerte mit Ihren Stundensätzen. Ganzer Ablauf: Von der Anfrage über Offerte und Zeiterfassung bis zur Monatsrechnung, Sie geben nur frei.
+- Restaurant: Einfach: Der Lieferschein vom Handyfoto liegt benannt beim richtigen Lieferanten. Verbunden: Aus der Reservation per Mail wird der Tisch im Plan samt Bestätigung an den Gast. Ganzer Ablauf: Vom Einkauf über Lieferschein und Rechnung bis zur Buchung, Sie geben nur frei.
