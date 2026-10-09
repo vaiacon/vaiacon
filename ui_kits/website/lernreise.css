@@ -482,6 +482,112 @@ html:not(.lr-js) .lr-station__knoten span,
   .lr-option span { padding: 6px 3px; }
 }
 
+/* ── Spielbrett (Desktop, mit JS): Schein-3D-Strasse, Start, Ziel ───────
+   Gebaut von lernreise.js ab 761 px. Darunter und ohne JS gilt die Liste. */
+.lr-brett { display: none; }
+.lr-weg--brett .lr-liste,
+.lr-weg--brett > .lr-pfad,
+.lr-weg--brett > .lr-spur { display: none; }
+.lr-weg--brett .lr-brett { display: block; }
+
+.lr-brett__buehne {
+  position: relative;
+  container-type: inline-size;
+  aspect-ratio: 1000 / 600;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-strong);
+  background: linear-gradient(180deg, var(--cream-card) 0%, var(--cream-50) 38%, var(--peach-150) 100%);
+}
+.lr-strasse { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.lr-b-schatten { fill: rgba(62, 22, 6, 0.30); }
+.lr-b-seite { fill: var(--brown-400); stroke: var(--brown-400); stroke-width: 2; stroke-linejoin: round; }
+.lr-b-band { fill: var(--sand-200); stroke: var(--brown-300); stroke-width: 2; stroke-linejoin: round; }
+.lr-b-mitte { fill: none; stroke: var(--cream-50); stroke-width: 3; stroke-dasharray: 14 14; stroke-linecap: round; opacity: .9; }
+.lr-b-gefahren { stroke: var(--terra-500); stroke-width: 2; stroke-linejoin: round; opacity: .95; }
+.lr-b-marker { fill: none; stroke: var(--cream-50); stroke-width: 4; }
+.lr-f-terra { fill: var(--terra-500); }
+.lr-f-orange { fill: var(--orange-500); }
+.lr-f-creme { fill: var(--cream-50); }
+.lr-f-holz { fill: var(--brown-400); }
+.lr-s-holz { stroke: var(--brown-400); stroke-width: 3; }
+.lr-f-schatten { fill: rgba(62, 22, 6, 0.25); }
+.lr-t-schild { fill: var(--cream-50); font-family: var(--font-mono); font-weight: 700; font-size: 22px; letter-spacing: .08em; }
+.lr-t-schild--klein { font-size: 17px; }
+.lr-t-schild--start { font-size: 18px; }
+
+.lr-brett__halte { position: absolute; inset: 0; }
+.lr-halt {
+  position: absolute;
+  transform: translate(-50%, calc(-100% + 23px));
+  display: flex; flex-direction: column; align-items: center;
+  margin: 0; padding: 0; border: 0; background: none; cursor: pointer;
+  font: inherit; color: inherit;
+}
+.lr-halt__bild { display: block; pointer-events: none; }
+.lr-halt__bild picture { display: block; }
+.lr-halt__bild img {
+  display: block; width: auto; height: calc(var(--lr-h) * 1cqw); max-width: none;
+  object-fit: contain; opacity: .62; filter: grayscale(.35) drop-shadow(0 8px 10px rgba(62, 22, 6, 0.22));
+  transform-origin: 50% 100%;
+  transition: opacity .35s, filter .35s, transform .45s var(--ease-spring);
+}
+.lr-halt__knoten span {
+  display: flex; align-items: center; justify-content: center;
+  width: clamp(34px, 4.2cqw, 46px); height: clamp(34px, 4.2cqw, 46px);
+  margin-top: -6px;
+  border-radius: 50%; border: 3px solid var(--brown-300);
+  background: var(--cream-card); color: var(--brown-400);
+  font-family: var(--font-mono); font-weight: var(--weight-bold); font-size: 16px;
+  transition: background .35s, border-color .35s, color .35s, transform .35s var(--ease-spring);
+}
+.lr-halt--mess .lr-halt__knoten span { box-shadow: 0 0 0 4px var(--cream-card), 0 0 0 6px var(--terra-500); }
+.lr-halt.is-erreicht .lr-halt__knoten span,
+.lr-halt.is-aktiv .lr-halt__knoten span { background: var(--terra-500); border-color: var(--terra-500); color: var(--cream-50); }
+.lr-halt.is-erreicht .lr-halt__bild img { opacity: .8; }
+.lr-halt.is-aktiv .lr-halt__bild img { opacity: 1; filter: drop-shadow(0 10px 14px rgba(62, 22, 6, 0.28)); transform: scale(1.18); }
+.lr-halt.is-aktiv .lr-halt__knoten span { transform: scale(1.18); }
+.lr-halt:hover .lr-halt__bild img { opacity: 1; }
+.lr-halt:focus-visible { outline: none; }
+.lr-halt:focus-visible .lr-halt__knoten span { outline: 3px solid var(--orange-500); outline-offset: 3px; }
+
+.lr-brett__nav {
+  display: flex; align-items: center; justify-content: space-between; gap: var(--space-4);
+  margin: var(--space-5) auto 0; width: min(100%, 46rem);
+}
+.lr-brett__zaehler { margin: 0; font-family: var(--font-mono); font-size: var(--text-overline); font-weight: var(--weight-semibold); letter-spacing: var(--tracking-badge); text-transform: uppercase; color: var(--terra-600); }
+.lr-pfeil {
+  min-height: 44px; padding: 8px 20px;
+  border: 1px solid var(--border-strong); border-radius: var(--radius-pill);
+  background: var(--surface-card); color: var(--terra-600);
+  font: inherit; font-size: var(--text-ui); font-weight: var(--weight-bold); cursor: pointer;
+  transition: background .2s, color .2s, opacity .2s;
+}
+.lr-pfeil:hover:not(:disabled) { background: var(--terra-500); border-color: var(--terra-500); color: var(--cream-50); }
+.lr-pfeil:focus-visible { outline: 3px solid var(--orange-500); outline-offset: 2px; }
+.lr-pfeil:disabled { opacity: .4; cursor: default; }
+
+.lr-detail {
+  margin: var(--space-3) auto 0; width: min(100%, 46rem);
+  padding: var(--space-6);
+  border: 1px solid var(--terra-500); border-radius: var(--radius-lg);
+  background: var(--surface-card);
+  display: flex; flex-direction: column; gap: var(--space-3);
+  text-align: left;
+}
+.lr-detail--ein { animation: lr-detail-ein .45s var(--ease-reveal, ease-out); }
+@keyframes lr-detail-ein { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+.lr-detail p { margin: 0; color: var(--text-body); font-size: var(--text-body-sm); line-height: var(--leading-body); }
+.lr-detail p.lr-detail__zeit { font-family: var(--font-mono); font-size: var(--text-overline); font-weight: var(--weight-semibold); letter-spacing: var(--tracking-badge); text-transform: uppercase; color: var(--terra-600); line-height: 1.4; }
+.lr-detail h3 { margin: 0; color: var(--text-strong); font-size: var(--text-h3); line-height: var(--leading-snug); letter-spacing: var(--tracking-tight); font-weight: var(--weight-semibold); }
+.lr-detail__formate { display: flex; flex-wrap: wrap; gap: 6px; }
+.lr-detail .lr-mess p { font-size: 14px; }
+.lr-detail .lr-mess p.lr-mess__art { font-family: var(--font-mono); font-size: var(--text-overline); font-weight: var(--weight-bold); letter-spacing: var(--tracking-badge); text-transform: uppercase; color: var(--terra-600); line-height: 1.4; }
+
+@media (prefers-reduced-motion: reduce) {
+  .lr-halt__bild img, .lr-halt__knoten span, .lr-pfeil { transition: none; }
+  .lr-detail--ein { animation: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .lr-umgestellt .lr-station { animation: none; }
   .lr-station__karte, .lr-station__knoten span, .lr-js .lr-station__bild, .lr-option span { transition: none; }

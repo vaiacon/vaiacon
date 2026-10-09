@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag a8fbf85 Ihr Fall: erst Beschreibung, dann E-Mail + Telefon, dann Einordnung
+> Stand: 09.10.2026 · Eintrag d0ecae9 Ihr Fall: Kontaktfelder bleiben bis zur Anforderung verborgen
 
 ## Wie du antwortest
 
