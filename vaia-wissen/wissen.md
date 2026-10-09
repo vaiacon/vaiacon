@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag b31138a Merge pull request #17 from vaiacon/richtpreis-freitext
+> Stand: 09.10.2026 · Eintrag b76327a Merge pull request #18 from vaiacon/beispiele-belege-stufen
 
 ## Wie du antwortest
 
@@ -854,11 +854,8 @@ Schreiben Sie es so, wie Sie es einer Kollegin erzählen würden: Was macht Ihr 
 Ihre Beschreibung
 Ein paar Sätze genügen. Die KI ordnet Ihrer Beschreibung die passenden Leistungen aus unserer Preisliste zu. Sie sehen danach einen Richtpreis, keine verbindliche Offerte.
 0 von 3000 Zeichen
-Sie wissen schon genau, welche Leistungen Sie wollen? Positionen selbst ankreuzen
-Angekreuzte Positionen gelten dann so, wie Sie sie gewählt haben. Die Beschreibung ergänzt sie.
-Angebote werden geladen …
 Ihr Richtpreis
-Erscheint, sobald Sie Ihre Beschreibung abgeschickt haben. Wer Positionen ankreuzt, sieht hier schon die Vorschau.
+Erscheint, sobald Sie Ihre Beschreibung abgeschickt haben.
 Einmalig CHF 0
 Pro Monat CHF 0
 Enthält «ab»-Preise: Der endgültige Preis hängt vom Aufwand ab.

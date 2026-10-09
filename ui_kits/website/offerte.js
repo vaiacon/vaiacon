@@ -1,4 +1,4 @@
-/* Offerte-Werkzeug: Auswahl ankreuzen, Kontakt, Offerte vom Dienst anzeigen.
+/* Offerte-Werkzeug: Beschreibung in Worten (Katalog nur noch im Hintergrund), Kontakt, Offerte vom Dienst anzeigen.
 
    Ablauf: Katalog laden (daten/preise.json) → Auswahl → Kontakt → POST
    /api/offerte → Offerte als Dokument. Die Zahlen im Ergebnis stammen
@@ -83,7 +83,7 @@
   function zeige(name, fokus) {
     aktuelle = name;
     Object.keys(ansichten).forEach(function (k) { ansichten[k].hidden = (k !== name); });
-    document.body.classList.toggle('of-leiste', name === 'auswahl' && !!katalog);
+    document.body.classList.toggle('of-leiste', name === 'auswahl' && !!katalog && !!$('of-katalog'));
     if (fokus === false) return;
     var titel = ansichten[name].querySelector('[tabindex="-1"]');
     var oben = ansichten[name].getBoundingClientRect().top + window.pageYOffset - 90;
@@ -100,7 +100,7 @@
       var roh = sessionStorage.getItem(SPEICHER);
       if (!roh) return;
       var d = JSON.parse(roh);
-      if (d && d.auswahl && typeof d.auswahl === 'object') {
+      if (d && d.auswahl && typeof d.auswahl === 'object' && $('of-katalog')) {
         Object.keys(d.auswahl).forEach(function (id) {
           var p = positionen[id];
           if (!p) return;
@@ -116,6 +116,7 @@
   function zeichneKatalog() {
     var platz = $('of-katalog');
     var chips = $('of-chips');
+    if (!platz || !chips) return;
     platz.textContent = '';
     chips.textContent = '';
 
@@ -307,7 +308,7 @@
   }
   function zumBereich() {
     var h = (location.hash || '').replace('#', '');
-    if (h && document.getElementById(h) && positionen && katalog.bereiche.some(function (b) { return b.id === h; })) {
+    if (h && $('of-katalog') && document.getElementById(h) && positionen && katalog.bereiche.some(function (b) { return b.id === h; })) {
       setTimeout(function () { springe(h); }, 60);
     }
   }
@@ -325,7 +326,7 @@
     }
     var teile = [];
     if (wunsch.trim()) teile.push('Ihre Beschreibung');
-    if (s.anzahl) teile.push(s.anzahl === 1 ? '1 angekreuzte Position' : s.anzahl + ' angekreuzte Positionen');
+    if (s.anzahl) teile.push(s.anzahl === 1 ? '1 gewählte Position' : s.anzahl + ' gewählte Positionen');
     $('of-recap').textContent = 'Grundlage: ' + teile.join(' und ') + '.';
     ['name', 'firma', 'mail', 'telefon'].forEach(function (k) { $('of-' + k).value = kontakt[k]; });
     loescheFehler();
@@ -570,7 +571,7 @@
     }
 
     if (a.positionen.length === 0) {
-      dok.appendChild(el('p', { class: 'of-dokument__leer', text: a.ki_zuordnung ? 'Ihre Beschreibung konnten wir noch keiner Leistung sicher zuordnen. Wir melden uns persönlich bei Ihnen.' : 'Es wurden keine Positionen angekreuzt. Wir melden uns zu Ihrem Anliegen persönlich.' }));
+      dok.appendChild(el('p', { class: 'of-dokument__leer', text: a.ki_zuordnung ? 'Ihre Beschreibung konnten wir noch keiner Leistung sicher zuordnen. Wir melden uns persönlich bei Ihnen.' : 'Es wurden keine Positionen gewählt. Wir melden uns zu Ihrem Anliegen persönlich.' }));
     }
     if (wunsch.trim()) {
       dok.appendChild(el('div', { class: 'of-dokument__wunsch' }, [
@@ -653,8 +654,11 @@
   }
 
   function katalogFehler() {
-    $('of-katalog').textContent = '';
-    $('of-katalog').appendChild(el('div', { class: 'of-hinweis' }, [
+    var platz = $('of-katalog');
+    if (platz) platz.textContent = '';
+    else platz = $('of-wunsch-fehler') && $('of-wunsch-fehler').parentNode;   // ohne Katalog: Hinweis unter der Beschreibung
+    if (!platz) return;
+    platz.appendChild(el('div', { class: 'of-hinweis' }, [
       el('h3', { class: 'of-hinweis__titel', text: 'Die Angebote lassen sich gerade nicht laden.' }),
       el('p', null, ['Das tut uns leid. Schreiben Sie uns bitte kurz, was Sie interessiert, über das ', el('a', { href: 'kontakt', text: 'Kontaktformular' }), ' oder per Mail an ', el('a', { href: 'mailto:' + MAIL, text: MAIL }), '. Wir melden uns persönlich.'])
     ]));
@@ -678,7 +682,7 @@
       Object.keys(auswahl).forEach(karteSync);
       var klapp = $('of-klapp');
       if (klapp && (Object.keys(auswahl).length || (location.hash && k.bereiche.some(function (b) { return '#' + b.id === location.hash; })))) klapp.open = true;
-      document.body.classList.add('of-leiste');
+      if ($('of-katalog')) document.body.classList.add('of-leiste');
       aktualisiere();
       zumBereich();
     }).catch(function () {
