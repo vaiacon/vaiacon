@@ -578,10 +578,6 @@
     pointer-events: none;
   }
 
-  .st-js .st-pause {
-    display: none;
-  }
-
   .st-steuer {
     margin-top: 18px;
   }
