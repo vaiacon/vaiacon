@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag 425a373 Beispiel-Tabelle: feste Spalten, lange Sprossen-Pille verschiebt nichts mehr
+> Stand: 09.10.2026 · Eintrag e2ab216 Branchen-Use-Cases als Stichworte statt Sätze
 
 ## Wie du antwortest
 
@@ -1334,7 +1334,7 @@ Mittelgrosse Automation:
 
 Komplette Automation:
 - Von Anfrage bis Rechnung: Anfrage → Besichtigung → Offerte → Rapport → QR-Rechnung
-- Mahnlauf von selbst: Erinnerung → 1. Mahnung → 2. Mahnung, Stopp bei Streit
+- Mahnlauf von selbst: Erinnerung → erste → zweite Mahnung, Stopp bei Streit
 - Social-Media-Funnel: Beitrag → Formular → KI-Einordnung → Besichtigung
 
 #### Treuhand
