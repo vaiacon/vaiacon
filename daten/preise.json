@@ -151,19 +151,6 @@
       "kurz": "Sie werden bei Google gefunden und in den Antworten von KI-Assistenten richtig genannt.",
       "positionen": [
         {
-          "id": "si-seo-audit",
-          "titel": "Google-Check (SEO-Audit)",
-          "beschreibung": "Wir prüfen Ihre Website auf das, was bei Google zählt, und geben Ihnen eine klare Liste der wichtigsten Verbesserungen.",
-          "einheit": "pauschal",
-          "preis": 990,
-          "ab": false,
-          "art": "einmalig",
-          "menge_waehlbar": false,
-          "menge_standard": 1,
-          "menge_max": 1,
-          "hinweis": "Der Einstieg."
-        },
-        {
           "id": "si-geo-check",
           "titel": "KI-Sichtbarkeits-Check",
           "beschreibung": "Wir testen, ob und wie ChatGPT und andere KI-Assistenten Ihre Firma nennen, und zeigen, was Sie ändern können.",
@@ -174,20 +161,7 @@
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": "Die nächste Stufe."
-        },
-        {
-          "id": "si-check-beides",
-          "titel": "Google-Check und KI-Check zusammen",
-          "beschreibung": "Beide Prüfungen in einem Bericht, mit einer Liste, was zuerst dran ist.",
-          "einheit": "pauschal",
-          "preis": 1990,
-          "ab": false,
-          "art": "einmalig",
-          "menge_waehlbar": false,
-          "menge_standard": 1,
-          "menge_max": 1,
-          "hinweis": "Statt CHF 2'290 einzeln."
+          "hinweis": "Der Einstieg nach dem kostenlosen Check auf der Seite."
         },
         {
           "id": "si-inhalt-optimierung",

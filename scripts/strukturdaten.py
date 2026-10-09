@@ -176,7 +176,7 @@ ANGEBOTE = {
     "visibility.html": angebot(
         "Sichtbarkeit", "SEO und GEO",
         "Von Google gefunden werden und in KI-Antworten vorkommen (Fachwörter: SEO und GEO). "
-        "Google-Check, KI-Sichtbarkeits-Check, Seiten überarbeiten und laufende Betreuung, mit offen genannten Richtpreisen. " + MWST_SATZ,
+        "Kostenloser Google-Check, KI-Sichtbarkeits-Check, Seiten überarbeiten und laufende Betreuung, mit offen genannten Richtpreisen. " + MWST_SATZ,
         "visibility", "sichtbarkeit"),
     "learning.html": angebot(
         "KI-Kompetenz", "KI-Schulung und Weiterbildung",
@@ -319,8 +319,7 @@ kostenlose Check der eigenen Website. Rückruf innert eines Arbeitstages.
   Fragen): https://vaiacon.ch/learning#standortbestimmung
 - [Sichtbarkeit](https://vaiacon.ch/visibility): Von Google gefunden werden
   und in KI-Antworten vorkommen (SEO und GEO). Kostenloser automatischer Check,
-  dazu Google-Check, KI-Sichtbarkeits-Check, Seiten überarbeiten, SEO-Workshop
-  und laufende Betreuung.
+  dazu KI-Sichtbarkeits-Check, Seiten überarbeiten und laufende Betreuung.
 - [Automationen](https://vaiacon.ch/bot): Belege, Offerten, Korrespondenz und
   Anfragen automatisieren, Chatbot mit Firmenwissen, Telefonassistent,
   Anbindung an Ihre Software. Fixpreis nach der Erstanalyse.
