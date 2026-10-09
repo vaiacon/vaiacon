@@ -13,6 +13,19 @@
       "kurz": "Ihr Team lernt, KI sicher und nützlich einzusetzen, zugeschnitten auf Ihren Betrieb.",
       "positionen": [
         {
+          "id": "kk-training-kurz",
+          "titel": "KI-Einstieg im Betrieb, zwei Stunden",
+          "beschreibung": "Der erste Schritt für kleine Teams: Was KI im Büro heute kann, an zwei Aufgaben aus Ihrem Alltag ausprobiert.",
+          "einheit": "pro Termin",
+          "preis": 890,
+          "ab": false,
+          "art": "einmalig",
+          "menge_waehlbar": true,
+          "menge_standard": 1,
+          "menge_max": 10,
+          "hinweis": "Bei Ihnen im Betrieb, bis 15 Personen. Raum und Beamer stellen Sie."
+        },
+        {
           "id": "kk-training-halbtag",
           "titel": "Training oder Workshop im Betrieb, Halbtag",
           "beschreibung": "Ihr Team übt KI an Ihren eigenen Aufgaben. Thema nach Wahl: KI im Büro, Sichtbarkeit, Texte und Offerten.",
@@ -23,7 +36,7 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 30,
-          "hinweis": "Pro Gruppe bis 15 Personen, Vorbereitung und Unterlagen inklusive. Grössere Teams in zwei Gruppen."
+          "hinweis": "Bei Ihnen im Betrieb, pro Gruppe bis 15 Personen. Vorbereitung und Unterlagen inklusive, Raum und Beamer stellen Sie. Grössere Teams in zwei Gruppen."
         },
         {
           "id": "kk-training-tag",
@@ -36,7 +49,7 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 30,
-          "hinweis": "Pro Gruppe bis 15 Personen, Vorbereitung und Unterlagen inklusive."
+          "hinweis": "Bei Ihnen im Betrieb, pro Gruppe bis 15 Personen. Vorbereitung und Unterlagen inklusive, Raum und Beamer stellen Sie."
         },
         {
           "id": "kk-coaching-fuehrung",
@@ -53,29 +66,29 @@
         },
         {
           "id": "kk-elearning-lernminute",
-          "titel": "Online-Kurs nach Mass",
-          "beschreibung": "Ein Kurs mit Ihren Inhalten, Ihren Beispielen, Quiz und Ihrem Auftritt. Ihr Team lernt, wann es passt.",
-          "einheit": "pro Lernminute",
-          "preis": 290,
+          "titel": "Online-Kurs nach Mass, zehn Minuten",
+          "beschreibung": "Ein fertiger Kurs von zehn Minuten mit Ihren Inhalten, Ihren Beispielen, Quiz und Ihrem Auftritt. Ihr Team lernt, wann es passt.",
+          "einheit": "pro Kurs",
+          "preis": 2900,
           "ab": false,
           "art": "einmalig",
           "menge_waehlbar": true,
-          "menge_standard": 10,
-          "menge_max": 120,
-          "hinweis": "Eine Lernminute ist eine Minute fertiger Kurs. Zehn Lernminuten: CHF 2'900."
+          "menge_standard": 1,
+          "menge_max": 12,
+          "hinweis": "Zehn Minuten fertiger Kurs. Jede weitere Minute CHF 290."
         },
         {
           "id": "kk-lernvideo",
           "titel": "Lernvideo",
           "beschreibung": "Ein kurzes Video, gefilmt oder animiert, mit Sprecherstimme, das einen Ablauf aus Ihrem Betrieb erklärt.",
-          "einheit": "pauschal",
+          "einheit": "pro Video bis drei Minuten",
           "preis": 4700,
           "ab": true,
           "art": "einmalig",
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 10,
-          "hinweis": "Bis etwa drei Minuten. Jedes weitere Video ab CHF 3'500."
+          "hinweis": "Gefilmt oder animiert, mit Sprecherstimme. Jedes weitere Video ab CHF 3'500."
         },
         {
           "id": "kk-mikro-einrichtung",

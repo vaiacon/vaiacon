@@ -137,12 +137,27 @@
     "priceCurrency": "CHF",
     "lowPrice": 60,
     "highPrice": 4700,
-    "offerCount": 10
+    "offerCount": 11
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "KI-Kompetenz",
     "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "KI-Einstieg im Betrieb, zwei Stunden",
+          "description": "Der erste Schritt für kleine Teams: Was KI im Büro heute kann, an zwei Aufgaben aus Ihrem Alltag ausprobiert."
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "CHF",
+          "valueAddedTaxIncluded": true,
+          "price": 890,
+          "unitText": "Termin"
+        }
+      },
       {
         "@type": "Offer",
         "itemOffered": {
@@ -192,15 +207,15 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Online-Kurs nach Mass",
-          "description": "Ein Kurs mit Ihren Inhalten, Ihren Beispielen, Quiz und Ihrem Auftritt. Ihr Team lernt, wann es passt."
+          "name": "Online-Kurs nach Mass, zehn Minuten",
+          "description": "Ein fertiger Kurs von zehn Minuten mit Ihren Inhalten, Ihren Beispielen, Quiz und Ihrem Auftritt. Ihr Team lernt, wann es passt."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
           "priceCurrency": "CHF",
           "valueAddedTaxIncluded": true,
-          "price": 290,
-          "unitText": "Lernminute"
+          "price": 2900,
+          "unitText": "Kurs"
         }
       },
       {
@@ -214,7 +229,8 @@
           "@type": "UnitPriceSpecification",
           "priceCurrency": "CHF",
           "valueAddedTaxIncluded": true,
-          "minPrice": 4700
+          "minPrice": 4700,
+          "unitText": "Video bis drei Minuten"
         }
       },
       {
@@ -379,7 +395,7 @@
             <dt>Was Sie bekommen</dt>
             <dd>Eine massgeschneiderte Lernreise aus Training, täglichen kleinen Lerneinheiten, Begleitung am Arbeitsplatz und Führungscoaching.</dd>
             <dt>Preisrahmen</dt>
-            <dd>Training CHF 1'550 pro Halbtag oder CHF 2'450 pro Tag und Gruppe bis 15 Personen, inkl. MWST.</dd>
+            <dd>KI-Einstieg CHF 890 für zwei Stunden, Training CHF 1'550 pro Halbtag oder CHF 2'450 pro Tag, je Gruppe bis 15 Personen, inkl. MWST.</dd>
             <dt>Ablauf</dt>
             <dd>Kostenloses halbstündiges Erstgespräch, danach eine Lernreise über mehrere Wochen mit Stationen nach Ihrem Bedarf.</dd>
             <dt>Region</dt>
@@ -486,14 +502,14 @@
             <h3>E-Learnings nach Mass</h3>
             <p><strong>Was es ist.</strong> Ein Online-Kurs mit Ihren Inhalten, Ihren Beispielen und Ihrem Auftritt.</p>
             <p><strong>Wann es passt.</strong> Wenn Wissen für viele da sein soll, unabhängig von Ort und Zeit, auch für neue Mitarbeitende.</p>
-            <p class="lr-format__preis"><span data-preis="kk-elearning-lernminute">CHF 290 pro Lernminute</span><small>Umfang klären wir im Erstgespräch.</small></p>
+            <p class="lr-format__preis"><span data-preis="kk-elearning-lernminute">CHF 2'900 pro Kurs</span><small>Zehn Minuten fertiger Kurs mit Quiz, jede weitere Minute CHF 290.</small></p>
           </article>
           <article class="lr-format" id="format-video">
             <figure class="lr-format__bild"><picture><source srcset="assets/vaiacon-buerobot-journey-video.webp" type="image/webp"><img src="assets/vaiacon-buerobot-journey-video.png" alt="Der vaiacon-Roboter zum Thema Lernvideos" loading="lazy" decoding="async"></picture></figure>
             <h3>Lernvideos</h3>
             <p><strong>Was es ist.</strong> Ein kurzes Video, das einen Ablauf oder ein Thema aus Ihrem Betrieb erklärt.</p>
             <p><strong>Wann es passt.</strong> Wenn dieselbe Frage immer wieder kommt oder ein Ablauf sich besser zeigen als beschreiben lässt.</p>
-            <p class="lr-format__preis"><span data-preis="kk-lernvideo">ab CHF 4'700</span><small>Für ein Video von bis zu etwa drei Minuten.</small></p>
+            <p class="lr-format__preis"><span data-preis="kk-lernvideo">ab CHF 4'700 pro Video bis drei Minuten</span><small>Gefilmt oder animiert, mit Sprecherstimme.</small></p>
           </article>
           <article class="lr-format" id="format-coaching">
             <figure class="lr-format__bild"><picture><source srcset="assets/vaiacon-buerobot-journey-coaching.webp" type="image/webp"><img src="assets/vaiacon-buerobot-journey-coaching.png" alt="Der vaiacon-Roboter zum Thema Coaching für Führungskräfte" loading="lazy" decoding="async"></picture></figure>
@@ -515,6 +531,7 @@
             <p><strong>Was es ist.</strong> Ihr Team übt KI an Ihren eigenen Aufgaben, bei Ihnen im Betrieb und auf Ihre Abläufe zugeschnitten.</p>
             <p><strong>Wann es passt.</strong> Wenn alle auf denselben Stand kommen sollen, vom ersten Schritt bis zur Vorlage, die bleibt.</p>
             <p class="lr-format__preis"><span data-preis="kk-training-halbtag">CHF 1'550 pro Halbtag</span> · <span data-preis="kk-training-tag">CHF 2'450 pro Tag</span><small>Pro Gruppe bis 15 Personen, nicht pro Person. Zum Vergleich: offene Tagesseminare kosten rund CHF 990 pro Person.</small></p>
+            <p class="lr-format__preis"><span data-preis="kk-training-kurz">CHF 890 pro Termin</span><small>KI-Einstieg für kleine Teams: zwei Stunden bei Ihnen im Betrieb, Raum und Beamer stellen Sie.</small></p>
           </article>
           <article class="lr-format" id="format-change">
             <figure class="lr-format__bild"><picture><source srcset="assets/vaiacon-buerobot-journey-change.webp" type="image/webp"><img src="assets/vaiacon-buerobot-journey-change.png" alt="Der vaiacon-Roboter zum Thema Change Management" loading="lazy" decoding="async"></picture></figure>

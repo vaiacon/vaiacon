@@ -31,6 +31,7 @@ SEITEN = [
     ("learning.html", "KI-Kompetenz (inkl. KI-Standortbestimmung)"),
     ("visibility.html", "Sichtbarkeit — gefunden werden"),
     ("bot.html", "Automationen"),
+    ("beispiele.html", "Beispiele aus dem Alltag (Automationen)"),
     ("service.html", "Begleitung"),
     ("offerte.html", "Offerten-Tool"),
     ("ki-kmu-news/index.html", "KI-News für KMU"),

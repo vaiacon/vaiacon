@@ -54,6 +54,7 @@
 
   var FORMATE = {
     standort: { name: 'Standortbestimmung', href: '#standortbestimmung' },
+    'kk-training-kurz': { name: 'KI-Einstieg, zwei Stunden', href: '#format-training' },
     'kk-training-halbtag': { name: 'Training, Halbtag', href: '#format-training' },
     'kk-training-tag': { name: 'Training, ganzer Tag', href: '#format-training' },
     'kk-coaching-fuehrung': { name: 'Coaching für Führungskräfte', href: '#format-coaching' },
@@ -101,7 +102,13 @@
       });
     }
 
-    if (s === 'kaum') {
+    if (s === 'kaum' && klein) {
+      L.push({
+        bild: 'training', rolle: 'Einstieg', titel: 'KI-Einstieg, zwei Stunden',
+        text: 'Zwei Stunden bei Ihnen im Betrieb: was KI im Büro heute kann, an zwei Aufgaben aus Ihrem Alltag ausprobiert. Für ein kleines Team der günstigste Anfang.',
+        formate: ['kk-training-kurz'], ids: ['kk-training-kurz']
+      });
+    } else if (s === 'kaum') {
       L.push({
         bild: 'training', rolle: 'Training', titel: 'Training im Team' + (sehrgross ? ' (mehrere Gruppen)' : gross ? ' (zwei Gruppen)' : ''),
         text: 'Ein ganzer Tag, bei Ihnen im Betrieb, an Ihren eigenen Aufgaben: vom ersten Gespräch mit einem Assistenten bis zu Vorlagen, die danach bleiben.',

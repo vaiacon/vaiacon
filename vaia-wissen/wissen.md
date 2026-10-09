@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag dd8f949 Merge pull request #12 from vaiacon/preise-2026-10
+> Stand: 09.10.2026 · Eintrag b2e5721 Kurzfilm (20 s) und vier Beispielbilder auf /bot
 
 ## Wie du antwortest
 
@@ -34,11 +34,12 @@ Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer. Die Preise sin
 
 ### KI-Kompetenz
 
-- Training oder Workshop im Betrieb, Halbtag: CHF 1'550 pro Halbtag (Pro Gruppe bis 15 Personen, Vorbereitung und Unterlagen inklusive. Grössere Teams in zwei Gruppen.)
-- Training oder Workshop im Betrieb, ganzer Tag: CHF 2'450 pro Tag (Pro Gruppe bis 15 Personen, Vorbereitung und Unterlagen inklusive.)
+- KI-Einstieg im Betrieb, zwei Stunden: CHF 890 pro Termin (Bei Ihnen im Betrieb, bis 15 Personen. Raum und Beamer stellen Sie.)
+- Training oder Workshop im Betrieb, Halbtag: CHF 1'550 pro Halbtag (Bei Ihnen im Betrieb, pro Gruppe bis 15 Personen. Vorbereitung und Unterlagen inklusive, Raum und Beamer stellen Sie. Grössere Teams in zwei Gruppen.)
+- Training oder Workshop im Betrieb, ganzer Tag: CHF 2'450 pro Tag (Bei Ihnen im Betrieb, pro Gruppe bis 15 Personen. Vorbereitung und Unterlagen inklusive, Raum und Beamer stellen Sie.)
 - Coaching für Führungskräfte: CHF 210 pro Stunde (Sechs Stunden als Paket: CHF 1'190.)
-- Online-Kurs nach Mass: CHF 290 pro Lernminute (Eine Lernminute ist eine Minute fertiger Kurs. Zehn Lernminuten: CHF 2'900.)
-- Lernvideo: ab CHF 4'700 (Bis etwa drei Minuten. Jedes weitere Video ab CHF 3'500.)
+- Online-Kurs nach Mass, zehn Minuten: CHF 2'900 pro Kurs (Zehn Minuten fertiger Kurs. Jede weitere Minute CHF 290.)
+- Lernvideo: ab CHF 4'700 pro Video bis drei Minuten (Gefilmt oder animiert, mit Sprecherstimme. Jedes weitere Video ab CHF 3'500.)
 - Tägliche kleine Lerneinheiten: Zuschnitt: CHF 900 (Einmalig je Programm.)
 - Tägliche kleine Lerneinheiten: Teilnahme: CHF 60 pro Person (Für vier Wochen, ab zehn Personen.)
 - Change-Begleitung: CHF 1'700 pro Tag (Inklusive Vorbereitung und Nachbereitung.)
@@ -220,7 +221,7 @@ Ein einzelner Kurstag ändert wenig: Danach bleibt im Arbeitsalltag alles beim A
 Was Sie bekommen
 Eine massgeschneiderte Lernreise aus Training, täglichen kleinen Lerneinheiten, Begleitung am Arbeitsplatz und Führungscoaching.
 Preisrahmen
-Training CHF 1'550 pro Halbtag oder CHF 2'450 pro Tag und Gruppe bis 15 Personen, inkl. MWST.
+KI-Einstieg CHF 890 für zwei Stunden, Training CHF 1'550 pro Halbtag oder CHF 2'450 pro Tag, je Gruppe bis 15 Personen, inkl. MWST.
 Ablauf
 Kostenloses halbstündiges Erstgespräch, danach eine Lernreise über mehrere Wochen mit Stationen nach Ihrem Bedarf.
 Region
@@ -323,11 +324,11 @@ Sieben Formate, die sich kombinieren lassen. Jedes entsteht aus Ihren Aufgaben, 
 E-Learnings nach Mass
 Was es ist. Ein Online-Kurs mit Ihren Inhalten, Ihren Beispielen und Ihrem Auftritt.
 Wann es passt. Wenn Wissen für viele da sein soll, unabhängig von Ort und Zeit, auch für neue Mitarbeitende.
-CHF 290 pro Lernminute Umfang klären wir im Erstgespräch.
+CHF 2'900 pro Kurs Zehn Minuten fertiger Kurs mit Quiz, jede weitere Minute CHF 290.
 Lernvideos
 Was es ist. Ein kurzes Video, das einen Ablauf oder ein Thema aus Ihrem Betrieb erklärt.
 Wann es passt. Wenn dieselbe Frage immer wieder kommt oder ein Ablauf sich besser zeigen als beschreiben lässt.
-ab CHF 4'700 Für ein Video von bis zu etwa drei Minuten.
+ab CHF 4'700 pro Video bis drei Minuten Gefilmt oder animiert, mit Sprecherstimme.
 Coaching für Führungskräfte
 Was es ist. Einzelgespräche für Personen, die entscheiden: Wie führe ich ein Team, das mit KI arbeitet?
 Wann es passt. Wenn Sie vorangehen wollen, ohne alles selbst zu können, oder wenn im Team Unsicherheit herrscht.
@@ -340,6 +341,7 @@ Trainings und Workshops
 Was es ist. Ihr Team übt KI an Ihren eigenen Aufgaben, bei Ihnen im Betrieb und auf Ihre Abläufe zugeschnitten.
 Wann es passt. Wenn alle auf denselben Stand kommen sollen, vom ersten Schritt bis zur Vorlage, die bleibt.
 CHF 1'550 pro Halbtag · CHF 2'450 pro Tag Pro Gruppe bis 15 Personen, nicht pro Person. Zum Vergleich: offene Tagesseminare kosten rund CHF 990 pro Person.
+CHF 890 pro Termin KI-Einstieg für kleine Teams: zwei Stunden bei Ihnen im Betrieb, Raum und Beamer stellen Sie.
 Change Management
 Was es ist. Wir begleiten Leitung und Team durch die Veränderung: Kommunikation, Rollen, Widerstände, Tempo.
 Wann es passt. Wenn KI nicht nur ein Werkzeug ist, sondern verändert, wie bei Ihnen gearbeitet wird.
@@ -528,6 +530,19 @@ Ablauf
 Fünf Schritte vom Gespräch bis zur Kontrolle: Empfehlung, Priorisierung, Planung, Umsetzung, Kontrolle.
 Region
 Gesamte Deutschschweiz
+IN 20 SEKUNDEN
+So sieht Büroarbeit aus, die von selbst läuft.
+Beleg kommt an, wird gelesen, abgelegt, gebucht, freigegeben. Was heute Hände braucht, läuft danach im Hintergrund. Der Kurzfilm zeigt es ohne Ton.
+Beispiel 1 · Belege ablegen Jede Rechnung landet von selbst im richtigen Ordner. Umsetzung ab 1 bis 2 Tagen
+Beispiel 2 · Belege in die Buchhaltung Der Beleg steht als Buchung bereit, bevor jemand ihn öffnet. Umsetzung ab 1 bis 2 Tagen
+Beispiel 3 · Belege und Offerten Die KI liest, prüft, bucht. Aus Anfragen werden Offerten-Entwürfe. Umsetzung 3 bis 5 Tage
+Beispiel 4 · Offerte aus dem Formular Formular ausfüllen, fertige PDF-Offerte zur Kontrolle. Umsetzung 3 bis 5 Tage
+Beispiel 5 · Freigabe-Schleife Grosse Beträge gehen erst nach Ihrer Freigabe weiter, vom Handy aus. Umsetzung 1 bis 2 Tage
+Beispiel 6 · Von der Anfrage zur Rechnung Offerte, Auftrag, Rechnung in einem Fluss. Rechnung am Tag des Abschlusses. Umsetzung 3 bis 5 Tage
+Beispiel 7 · Postfach mit KI Das Postfach sortiert sich selbst und schlägt Antworten vor. Umsetzung 6 bis 12 Tage
+Beispiel 8 · Kundendossier Zu jedem Kunden alles an einem Ort, mit Kurzfassung. Umsetzung 6 bis 12 Tage
+Beispiel 9 · Ganzer Bereich Einkauf oder Rapportierung laufen von selbst, mit Freigaben. Umsetzung 6 bis 12 Tage
+Alle Beispiele mit Heute, Danach und Nutzen →
 WAS SICH LOHNT
 Nicht alles gehört automatisiert.
 Es lohnt sich bei Arbeiten, die sich ständig wiederholen und heute noch von Hand gemacht werden.
@@ -537,6 +552,68 @@ Offerten und Korrespondenz
 Wie weit die Automation geht, bestimmen Sie: vom Entwurf, den Sie nur noch prüfen, bis zur Antwort, die von selbst rausgeht.
 Anfragen und Auskünfte
 Die Anfragen, die täglich kommen, beantwortet ein Assistent rund um die Uhr. Er erkennt, wann eine persönliche Beratung Sinn macht, und gibt dann an Sie weiter.
+Alle neun Beispiele im Detail →
+WAS ES KOSTET
+Zwei Fragen bestimmen den Preis.
+Wie verzweigt ist der Ablauf, und wie lange brauchen wir für die Umsetzung? Die Einstufung machen wir in der Erstanalyse, danach steht der Fixpreis. Alle Preise pro Ablauf, einmalig, inklusive MWST.
+Zeitaufwand ↓ Komplexität →
+Ein Programm Feste Regeln, kein Sonderfall
+Zwei Programme oder ein Entscheid durch KI
+Verzweigt Bis 3 Programme, Freigaben, Ausnahmen
+Tage 1 bis 2 Arbeitstage
+ab CHF 1'300
+Kleiner Ablauf
+Katalog
+ab CHF 1'900
+Anbindung
+Katalog
+ab CHF 2'600
+Freigabe-Schleife
+Woche 3 bis 5 Arbeitstage
+ab CHF 2'200
+Ablauf mit eigener Logik
+ab CHF 3'000
+Belege und Offerten
+Katalog
+ab CHF 4'200
+Auftragsablauf
+Wochen 6 bis 12 Arbeitstage
+ab CHF 3'800
+Postfach mit KI
+ab CHF 5'200
+Kundendossier
+ab CHF 6'800
+Grosser Ablauf
+Katalog
+Zelle antippen: darunter erscheinen Beispiel, Umfang und die Kosten im ersten Jahr.
+Ein Programm · Tage
+Kleiner Ablauf
+Ein Werkzeug, eine feste Regel. Läuft nach dem ersten Testlauf ohne Rückfragen.
+Einrichten im bestehenden Programm
+Ein Testlauf mit echten Daten
+Kurze Anleitung fürs Team
+Beispiel Eingehende Mails mit Beleg erkennen und automatisch in den richtigen Ordner ablegen.
+Mehr zu diesem Beispiel →
+Fixpreis nach Erstanalyse
+ab CHF 1'300
+1 bis 2 Arbeitstage Umsetzung
+Empfohlene Betreuung CHF 130 pro Monat
+Erstes Jahr gesamt CHF 2'860
+Jedes weitere Programm ab CHF 1'900
+Zuschläge und Laufendes
+Weiteres Programm anbinden ab CHF 1'900
+Betreuung klein, 1 Ablauf CHF 130 pro Monat
+Betreuung mittel, bis 5 Abläufe, 1 Std. Anpassung inkl. CHF 290 pro Monat
+Anpassung nach Aufwand CHF 150 pro Stunde
+So stufen wir die Komplexität ein
+A Ein Programm. Wenn-dann-Regeln, Daten fliessen in eine Richtung, nichts muss verstanden werden.
+B Zwei Programme oder KI. Daten wechseln das Werkzeug, oder eine KI liest, prüft und entscheidet.
+C Verzweigt. Mehrere Wege, ein Mensch gibt frei, Ausnahmen werden abgefangen und gemeldet.
+So stufen wir den Zeitaufwand ein
+1 Tage. 1 bis 2 Arbeitstage. Vorlage vorhanden, Zugänge da, ein Testlauf reicht.
+2 Woche. 3 bis 5 Arbeitstage. Eigene Logik, Abstimmung mit dem Team, zwei Testrunden.
+3 Wochen. 6 bis 12 Arbeitstage. Mehrere Beteiligte, Schulung, Begleitung der ersten Durchläufe.
+Chatbot und Telefonassistent sind eigene Produkte ausserhalb der Matrix, die Preise stehen in den häufigen Fragen . Betreuung kündbar auf Ende Folgemonat. Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer.
 SO LÄUFT ES AB
 Fünf Schritte, vom Gespräch bis zur Kontrolle.
 01
@@ -559,6 +636,290 @@ Zeigen Sie uns, was jede Woche Zeit frisst.
 Im Erstgespräch schauen wir gemeinsam auf Ihre Abläufe und sagen Ihnen, wo sich eine Automation lohnt und wo nicht. Kostenlos und unverbindlich.
 Kostenlose Erstanalyse →
 Offerte erfassen →
+
+### Beispiele aus dem Alltag (Automationen)
+
+Zum Inhalt springen
+AUTOMATIONEN IM ALLTAG
+Was eine Automation in Ihrem Betrieb wirklich tut
+Eine Automation ist kein Programm, das man kauft. Es ist ein Ablauf, der bei Ihnen läuft. Neun Beispiele zeigen, was sich ändert: was heute liegen bleibt, was danach von selbst passiert und wo es sich nicht lohnt.
+Kostenlose Erstanalyse →
+Was es kostet →
+NEUN BEISPIELE, DREI BEREICHE
+Suchen Sie sich aus, was bei Ihnen jede Woche Zeit frisst.
+Jedes Beispiel zeigt den Alltag vorher und nachher, den konkreten Nutzen und ehrlich, wann es nicht passt. Die Betriebe in den Szenen sind erfunden, die Abläufe so, wie wir sie antreffen.
+1 Belege ablegen
+2 Belege in die Buchhaltung
+3 Belege lesen, Offerten entwerfen
+4 Offerte aus dem Formular
+5 Freigabe-Schleife
+6 Von der Anfrage zur Rechnung
+7 Postfach mit KI
+8 Kundendossier
+9 Ganzer Bereich
+BEREICH 1
+Belege und Buchhaltung
+Der häufigste Einstieg, weil er sich am schnellsten bezahlt macht: Belege kommen von überall her und gehören an einen Ort.
+1 Kleiner Ablauf
+Belege landen von selbst am richtigen Ort.
+Jede Rechnung, die per Mail kommt, liegt Sekunden später im richtigen Ordner, benannt nach Lieferant und Datum. Sie suchen nichts mehr.
+Heute
+Belege kommen per Mail, als Foto und auf Papier und liegen an drei Orten.
+Am Monatsende sucht jemand zwei Stunden nach fehlenden Rechnungen.
+Das Treuhandbüro fragt nach, was fehlt.
+Dateien heissen «Scan_0034.pdf».
+Danach
+1 Mail kommt an. Der Anhang wird als Beleg erkannt, auch ein Handyfoto.
+2 Lieferant, Datum und Betrag werden gelesen.
+3 Datei wird benannt und abgelegt: Jahr, Monat, Lieferant, Betrag.
+4 Unklares landet in «Bitte prüfen» , zum Beispiel ein Beleg ohne lesbaren Betrag.
+Nichts geht verloren. Jede Rechnung ist auffindbar, auch die vom Handy auf der Baustelle.
+Monatsende ohne Suchen. Das Treuhandbüro bekommt einen fertigen Ordner statt einer Nachfrage.
+Startklar in Tagen. Läuft in Ihrem Postfach und Ihrer Ablage. Kein neues Programm, keine Umstellung.
+Passt, wenn
+Belege überwiegend per Mail oder als Foto kommen.
+Sie eine feste Ablage haben: Drive, OneDrive, NAS.
+Es bis einige hundert Belege im Monat sind.
+Passt nicht, wenn
+Belege fast nur auf Papier kommen und niemand sie fotografiert.
+Die Ablage je nach Person anders aussieht.
+Aus dem Alltag
+Ein Malerbetrieb, fünf Leute. Der Chef fotografiert Tankquittungen mit dem Handy, die Lieferanten mailen ihre Rechnungen. Früher: am Dritten des Monats zwei Stunden Sammeln.
+Heute ist der Ordner «2026-10» am Ersten schon voll. Die drei Quittungen ohne lesbaren Betrag liegen in «Bitte prüfen» und sind in fünf Minuten erledigt.
+Einstufung: Ein Programm · Tage Fixpreis nach Erstanalyse, ab CHF 1'300 pro Ablauf Zur Preismatrix →
+2 Anbindung
+Der Beleg steht als Buchung bereit, bevor jemand ihn öffnet.
+Aus dem abgelegten Beleg wird ein Buchungsentwurf in Ihrem Buchhaltungsprogramm: Lieferant, Betrag, MWST, Fälligkeit. Sie prüfen und bestätigen.
+Heute
+Jede Rechnung wird von Hand abgetippt.
+Tippfehler bei Beträgen und MWST-Sätzen.
+Doppelt geschickte Rechnungen fallen erst beim Abgleich auf.
+Zahlungsfristen und Skonto gehen verloren.
+Danach
+1 Beleg kommt an , per Mail oder aus der Ablage.
+2 Die KI liest Lieferant, Betrag, MWST-Satz und Fälligkeit.
+3 Abgleich mit bestehenden Buchungen. Doppelte werden abgefangen.
+4 Buchungsentwurf steht im Programm , etwa bexio, Abacus oder Banana.
+5 Sie bestätigen mit einem Klick, oder korrigieren.
+Kein Abtippen mehr. Typisch zwei bis drei Minuten je Beleg, die wegfallen.
+Weniger Fehler. Beträge kommen aus dem Dokument, nicht aus der Tastatur.
+Fristen im Blick. Die Fälligkeit steht am Tag des Eingangs, Skonto wird nicht mehr verschenkt.
+Passt, wenn
+Ihr Buchhaltungsprogramm eine Schnittstelle hat: bexio, Abacus, Banana, Sage und andere.
+Lieferanten und Konten einigermassen stabil sind.
+Jemand die Entwürfe bestätigt.
+Passt nicht, wenn
+Die Buchhaltung in Excel läuft.
+Das Treuhandbüro Belege nur auf Papier will.
+Aus dem Alltag
+Ein Elektroinstallateur, zwölf Leute, rund 180 Lieferantenrechnungen im Monat. Die Büroleiterin tippte sie jeden Donnerstag ab.
+Jetzt liegen sie als Entwürfe bereit. Sie prüft eine halbe Stunde und bestätigt. Zwei doppelt geschickte Rechnungen hat die Automation im ersten Monat abgefangen.
+Einstufung: Zwei Programme · Tage Fixpreis nach Erstanalyse, ab CHF 1'900 pro Programm Zur Preismatrix →
+3 Belege und Offerten
+Die KI liest, prüft und bucht. Und macht aus Anfragen Offerten-Entwürfe.
+Die ganze Strecke in einem: Belege werden gelesen, dem Lieferanten zugeordnet und verbucht. Anfragen werden gelesen und zu einem Offerten-Entwurf mit Ihren Preisen.
+Heute
+Zwei Arbeiten, die beide auf dieselbe Person warten.
+Offerten gehen erst nach Tagen raus, Kunden fragen woanders.
+Belege und Anfragen vermischen sich im Postfach.
+Danach
+1 Das Postfach wird gelesen: Beleg oder Anfrage?
+2 Belege: Lieferant, Betrag, Konto. Daraus wird eine Buchung.
+3 Anfragen: Leistung, Menge, Ort. Daraus wird ein Offerten-Entwurf aus Ihrer Vorlage, mit Ihren Preisen.
+4 Beides wartet auf Ihr OK. Unklares ist markiert.
+Offerte am selben Tag. Der Entwurf steht, bevor der Kunde ein zweites Mal nachfragt.
+Eine Prüfung statt zwei Arbeiten. Sie entscheiden, die Maschine tippt.
+Buchhaltung läuft mit. Die Belege sind verbucht, wenn das Treuhandbüro kommt.
+Passt, wenn
+Anfragen per Mail oder Formular kommen.
+Ihre Preise in einer Liste stehen können.
+Ein Buchhaltungsprogramm im Einsatz ist.
+Passt nicht, wenn
+Jede Offerte ein Unikat ist, das eine Begehung braucht.
+Preise je Kunde frei verhandelt werden.
+Aus dem Alltag
+Ein Gartenbaubetrieb. Im Frühling vierzig Anfragen pro Woche, dazu die Rechnungen der Baumschule. Offerten schrieb der Chef am Sonntagabend.
+Jetzt liegt am Montag für jede Anfrage ein Entwurf bereit. Rasen und Hecke gehen nach kurzer Kontrolle raus, beim Teichbau steht «Begehung nötig».
+Einstufung: Zwei Programme · Woche Fixpreis nach Erstanalyse, ab CHF 3'000 Zur Preismatrix →
+BEREICH 2
+Offerten, Freigaben und Aufträge
+Hier entscheidet sich, wie schnell Geld reinkommt: Offerte raus, Freigabe erteilt, Rechnung gestellt. Ohne dass jemand daran denken muss.
+4 Ablauf mit eigener Logik
+Aus einem kurzen Formular wird eine fertige Offerte.
+Ihr Team füllt ein Formular aus, die Automation rechnet nach Ihren Regeln und legt eine fertige PDF-Offerte zur Kontrolle vor. Keine Excel-Formel, die jemand kaputtmacht.
+Heute
+Offerten werden aus einer alten Vorlage kopiert.
+Rabattregeln stehen im Kopf eines Mitarbeiters.
+Jede Offerte sieht ein bisschen anders aus.
+Rechenfehler fallen auf, wenn der Kunde nachfragt.
+Danach
+1 Formular: Leistung, Menge, Kunde, Termin.
+2 Regeln rechnen: Staffelpreise, Zuschläge, Rabatt, MWST.
+3 PDF in Ihrem Design , mit Positionen und AGB-Verweis.
+4 Kontrolle, dann Versand mit einem Klick. Kopie in der Ablage.
+Jede Offerte gleich gut. Egal, wer sie schreibt. Auch die neue Mitarbeiterin in der ersten Woche.
+Regeln statt Bauchgefühl. Rabatte und Zuschläge sind festgelegt und nachvollziehbar.
+Minuten statt einer Stunde. Typisch bei standardisierten Leistungen.
+Passt, wenn
+Sie wiederkehrende Leistungen mit klaren Preisen haben.
+Mehrere Personen Offerten schreiben.
+Ihr Auftritt immer gleich aussehen soll.
+Passt nicht, wenn
+Jede Offerte eine andere Struktur hat.
+Preise erst im Gespräch entstehen.
+Aus dem Alltag
+Ein Reinigungsunternehmen mit drei Standorten. Jede Standortleitung schrieb ihre Offerten anders, mit eigenen Rabatten.
+Jetzt: Formular mit Fläche, Häufigkeit und Zusatzleistungen. Die Offerte kommt in zwei Minuten als PDF mit dem richtigen Staffelpreis. Der Inhaber sieht alle Offerten in einem Ordner.
+Einstufung: Ein Programm · Woche Fixpreis nach Erstanalyse, ab CHF 2'200 Zur Preismatrix →
+5 Freigabe-Schleife
+Grosse Beträge gehen erst nach Ihrer Freigabe weiter.
+Rechnungen über einer Schwelle gehen zur Freigabe an die richtige Person, per Mail oder Telegram. Erst dann laufen sie weiter in die Zahlung. Niemand muss daran denken.
+Heute
+Freigaben per Zuruf im Gang.
+Die Inhaberin unterschreibt am Freitag einen Stapel.
+Wer was freigegeben hat, steht nirgends.
+Lieferanten mahnen, weil etwas liegen blieb.
+Danach
+1 Rechnung erkannt , Betrag gelesen.
+2 Unter der Schwelle: direkt weiter in die Zahlung.
+3 Über der Schwelle: Nachricht an die Inhaberin mit Beleg und zwei Knöpfen, «Freigeben» und «Rückfrage».
+4 Keine Antwort nach zwei Tagen: Erinnerung. Nach fünf Tagen: Meldung ans Büro.
+5 Die Freigabe wird festgehalten , mit Name und Zeit am Beleg.
+Nichts geht ohne Sie raus. Und trotzdem bleibt nichts liegen.
+Freigabe vom Handy. In zwanzig Sekunden, auch von der Baustelle.
+Nachvollziehbar. Wer wann was freigegeben hat, steht am Beleg. Das Treuhandbüro freut sich.
+Passt, wenn
+Es eine klare Regel gibt: Betrag, Lieferant oder Kostenstelle.
+Die freigebende Person oft unterwegs ist.
+Revision oder Treuhand Nachweise wollen.
+Passt nicht, wenn
+Jede Rechnung persönlich angeschaut werden soll.
+Es keine feste Zuständigkeit gibt.
+Aus dem Alltag
+Ein Sanitärbetrieb. Die Inhaberin ist tagsüber auf Baustellen. Früher der Freitagabend mit dem Stapel.
+Jetzt kommen am Tag zwei, drei Nachrichten aufs Handy, mit Rechnung und Knopf. Was sie nicht freigibt, fragt nach zwei Tagen nach. Der Treuhänder bekommt zu jeder grossen Rechnung die Freigabe gleich mit.
+Einstufung: Verzweigt · Tage Fixpreis nach Erstanalyse, ab CHF 2'600 Zur Preismatrix →
+6 Auftragsablauf
+Von der Anfrage bis zur Rechnung in einem Fluss.
+Anfrage rein, Offerte raus, Auftrag angelegt, Rechnung nach Abschluss. Bis drei Programme, verbunden. An den entscheidenden Stellen gibt ein Mensch frei.
+Heute
+Dieselben Kundendaten werden dreimal getippt: Offerte, Auftrag, Rechnung.
+Zwischen Abschluss und Rechnung vergehen Wochen.
+Niemand weiss, welche Offerten noch offen sind.
+Übergaben zwischen Büro und Werkstatt laufen per Zettel.
+Danach
+1 Anfrage wird zum Offerten-Entwurf. Sie geben frei.
+2 Kunde sagt zu: Auftrag mit allen Daten im Planungs- oder Werkstattprogramm.
+3 Auftrag abgeschlossen: Rechnungsentwurf im Buchhaltungsprogramm. Sie geben frei.
+4 Offene Offerten werden nach sieben Tagen freundlich nachgefasst.
+5 Ausnahmen wie Sonderpreis oder Teilrechnung gehen ans Büro.
+Rechnung am Tag des Abschlusses. Das Geld kommt Wochen früher.
+Einmal erfassen. Kundendaten werden nicht dreimal getippt und nicht dreimal falsch.
+Überblick. Jede Anfrage hat einen Stand: offen, offeriert, in Arbeit, verrechnet.
+Passt, wenn
+Mehrere Aufträge pro Woche ähnlich ablaufen.
+Programme für Offerte, Auftrag und Rechnung da sind oder gewünscht.
+Zwei bis drei Personen am Ablauf beteiligt sind.
+Passt nicht, wenn
+Projekte Monate dauern und sich ständig ändern.
+Eine Person alles macht und es wenige Aufträge sind.
+Aus dem Alltag
+Eine Schreinerei, fünfzehn Leute. Die Rechnung kam im Schnitt drei Wochen nach der Montage, weil das Büro erst den Rapport brauchte.
+Jetzt schliesst der Monteur den Auftrag auf dem Tablet ab. Am Abend liegt der Rechnungsentwurf bereit, am Morgen ist er raus. Die offenen Offerten vom Frühling fasste die Automation von selbst nach, vier wurden noch zu Aufträgen.
+Einstufung: Verzweigt · Woche Fixpreis nach Erstanalyse, ab CHF 4'200 Zur Preismatrix →
+BEREICH 3
+Postfach, Kunden und ganze Bereiche
+Hier arbeitet die KI mit viel Logik über Wochen: Sie sortiert, bereitet vor, fasst zusammen und fasst nach. Das Team wird geschult und die ersten Durchläufe begleitet.
+7 Postfach mit KI
+Das Postfach sortiert sich selbst und schlägt Antworten vor.
+Jede Mail wird gelesen und eingeordnet: Anfrage, Rechnung, Termin, Werbung. Für Anfragen steht ein Antwortentwurf in Ihrem Ton bereit. Was nach drei Tagen offen ist, wird nachgefasst.
+Heute
+Achtzig Mails am Tag, davon fünfzehn wichtige.
+Jede Antwort beginnt bei null.
+Anfragen gehen zwischen Newslettern unter.
+Nach den Ferien vierhundert Ungelesene.
+Danach
+1 Mail kommt an: Kategorie und Dringlichkeit werden gesetzt.
+2 Anfragen: Antwortentwurf aus Ihren Textbausteinen und Preisen, in Ihrem Ton.
+3 Rechnungen gehen in den Beleg-Ablauf, Termine werden zur Kalenderanfrage.
+4 Sie lesen den Entwurf , ändern, senden.
+5 Drei Tage ohne Antwort des Kunden: freundliche Nachfrage.
+Wichtiges zuerst. Die fünfzehn Mails, die zählen, stehen oben.
+Antworten in Ihrem Ton. Ein Entwurf statt ein leeres Blatt. Die Antwortzeit halbiert sich typisch.
+Kein Kunde geht vergessen. Offene Anfragen fassen sich selbst nach.
+Passt, wenn
+Viele ähnliche Anfragen kommen: Preis, Verfügbarkeit, Termin.
+Eine Person oder ein kleines Team das Postfach betreut.
+Mail Ihr Hauptkanal ist.
+Passt nicht, wenn
+Jede Antwort ein individuelles Beratungsgespräch ist.
+Kunden fast nur anrufen.
+Aus dem Alltag
+Eine Physiotherapie-Praxis mit zwei Standorten. Terminanfragen, Überweisungen der Ärzte und Lieferantenrechnungen, alles in einem Postfach.
+Jetzt sieht der Empfang morgens: zwölf Terminanfragen mit vorgeschlagenen Zeiten, drei Überweisungen zur Ablage, der Rest ist aussortiert. Antworten gehen am selben Vormittag raus statt nach zwei Tagen.
+Einstufung: Ein Programm · Wochen Fixpreis nach Erstanalyse, ab CHF 3'800 Zur Preismatrix →
+8 Kundendossier
+Zu jedem Kunden alles an einem Ort, mit Kurzfassung.
+Mails, Rechnungen, Offerten und Termine zu einem Kunden werden aus zwei Programmen zusammengeführt. Die KI schreibt eine Kurzfassung: Was lief, was ist offen, was wurde versprochen.
+Heute
+Vor jedem Anruf fünf Minuten Suchen in Mail, Buchhaltung und Kalender.
+Fällt jemand aus, kennt niemand den Stand.
+Versprechen aus Mails gehen vergessen.
+Der Kunde erzählt zum dritten Mal dasselbe.
+Danach
+1 Der Kunde wird in beiden Programmen erkannt , über Name, Adresse oder Kundennummer.
+2 Mails, Rechnungen, Offerten, Termine werden zusammengeführt.
+3 Die KI schreibt eine Kurzfassung mit den offenen Punkten zuoberst.
+4 Das Dossier liegt dort, wo Sie arbeiten: CRM, Ablage oder Intranet.
+5 Täglich nachgeführt.
+In dreissig Sekunden im Bild. Vor dem Anruf, nicht danach.
+Ferien ohne Übergabe-Chaos. Jede Kollegin sieht den Stand.
+Versprechen werden gehalten. Offene Punkte stehen oben, nicht in einer Mail von vor drei Wochen.
+Passt, wenn
+Sie Stammkunden mit längerer Beziehung haben.
+Mehrere Personen dieselben Kunden betreuen.
+Daten in zwei Programmen liegen, etwa Mail und Buchhaltung.
+Passt nicht, wenn
+Sie Laufkundschaft ohne Wiederkehr haben.
+Alles schon sauber in einem CRM gepflegt ist.
+Aus dem Alltag
+Ein Treuhandbüro mit vier Mitarbeitenden und 120 Mandaten. Jeder Anruf begann mit Suchen.
+Jetzt öffnet die Beraterin das Dossier: «Letzter Kontakt vor neun Tagen, Jahresabschluss in Arbeit, Kunde wartet auf Rückmeldung zur MWST-Frage.» Bei Krankheit übernimmt die Kollegin ohne Übergabe.
+Einstufung: Zwei Programme · Wochen Fixpreis nach Erstanalyse, ab CHF 5'200 Zur Preismatrix →
+9 Grosser Ablauf
+Ein ganzer Bereich läuft von selbst, mit Freigaben, wo sie hingehören.
+Einkauf oder Rapportierung komplett: Bestellung, Lieferschein, Rechnung, Freigabe, Buchung, Auswertung. Bis drei Programme, Schulung, Begleitung und der erste Monatsabschluss inklusive.
+Heute
+Ein Bereich hängt an einer Person, die alles im Kopf hat.
+Daten werden von Hand zwischen Programmen übertragen.
+Auswertungen gibt es am Quartalsende, zu spät.
+Ausnahmen sind zum Normalfall geworden.
+Danach
+1 Bestellung ausgelöst: erfasst, Lieferant informiert.
+2 Lieferschein gelesen und mit der Bestellung abgeglichen.
+3 Rechnung gelesen und mit dem Lieferschein abgeglichen. Abweichung: Meldung.
+4 Freigabe nach Regel , dann Buchung.
+5 Auswertung jeden Monat: Mengen, Preise, offene Posten.
+6 Team geschult , die ersten Durchläufe begleitet.
+Kein Kopfmonopol mehr. Der Bereich läuft, auch wenn jemand fehlt.
+Abweichungen sofort sichtbar. Zu viel geliefert, zu viel verrechnet: am selben Tag, nicht im Herbst.
+Zahlen jeden Monat. Entscheide auf aktueller Basis statt auf dem Quartalsbericht.
+Passt, wenn
+Ein klar abgegrenzter Bereich viele Durchläufe hat.
+Zwei bis drei Programme beteiligt sind.
+Die Geschäftsleitung dahintersteht und das Team mitzieht.
+Passt nicht, wenn
+Der Bereich sich gerade grundlegend ändert.
+Die Einzelschritte noch nicht geklärt sind. Dann zuerst ein kleiner Ablauf.
+Aus dem Alltag
+Ein Produktionsbetrieb mit dreissig Leuten. Der Einkauf lief über den Betriebsleiter: Bestellungen per Mail, Lieferscheine im Ordner, Rechnungen im Stapel.
+Heute laufen Bestellung, Lieferschein und Rechnung zusammen. Stimmt etwas nicht, meldet es die Automation. Der Betriebsleiter sieht jeden Monat, welche Lieferanten teurer wurden. Vorher wusste er es im Herbst.
+Einstufung: Verzweigt · Wochen Fixpreis nach Erstanalyse, ab CHF 6'800 Zur Preismatrix →
+NÄCHSTER SCHRITT
+Welches Beispiel kommt Ihnen bekannt vor?
+Erzählen Sie uns im Erstgespräch, was bei Ihnen jede Woche liegen bleibt. Wir sagen Ihnen, wo sich eine Automation lohnt und wo nicht. Kostenlos und unverbindlich.
+Kostenlose Erstanalyse →
+Was es kostet →
 
 ### Begleitung
 
@@ -733,7 +1094,7 @@ KI-Kompetenz
 Was bietet KI-Kompetenz? +
 Trainings, Workshops und Coachings bei Ihnen im Betrieb, dazu E-Learning, Lernvideos und kurze tägliche Lerneinheiten: Ihr Team lernt, KI sicher und nützlich einzusetzen, zugeschnitten auf Ihre Abläufe. Zu KI-Kompetenz →
 Welche Lernformate gibt es, und was kosten sie? +
-Training oder Workshop im Betrieb: CHF 1'550 pro Halbtag oder CHF 2'450 pro Tag , je pro Gruppe bis 15 Personen, nicht pro Person. Coaching für Führungskräfte: CHF 210 pro Stunde . E-Learning nach Mass: CHF 290 pro Lernminute (Abrechnung je fertiger Lernminute). Lernvideo: ab CHF 4'700 für ein Video von bis zu etwa drei Minuten. Tägliche kleine Lerneinheiten: CHF 60 pro Person für ein Programm von vier Wochen, dazu einmalig CHF 900 für den Zuschnitt auf Ihren Betrieb. Change-Begleitung: CHF 1'700 pro Tag . Begleitung der Mitarbeitenden vor Ort: CHF 700 pro Halbtag oder CHF 1'250 pro Tag . Ihre Auswahl stellen Sie im Offerten-Tool zusammen.
+Training oder Workshop bei Ihnen im Betrieb: CHF 1'550 pro Halbtag oder CHF 2'450 pro Tag , je pro Gruppe bis 15 Personen, nicht pro Person; Raum und Beamer stellen Sie. Für kleine Teams gibt es den KI-Einstieg von zwei Stunden für CHF 890 . Coaching für Führungskräfte: CHF 210 pro Stunde . Online-Kurs nach Mass: CHF 2'900 pro Kurs von zehn Minuten, jede weitere Minute CHF 290. Lernvideo: ab CHF 4'700 pro Video bis drei Minuten . Tägliche kleine Lerneinheiten: CHF 60 pro Person für ein Programm von vier Wochen, dazu einmalig CHF 900 für den Zuschnitt auf Ihren Betrieb. Change-Begleitung: CHF 1'700 pro Tag . Begleitung der Mitarbeitenden vor Ort: CHF 700 pro Halbtag oder CHF 1'250 pro Tag . Ihre Auswahl stellen Sie im Offerten-Tool zusammen.
 Braucht mein Team Vorkenntnisse? +
 Nein. Wir setzen bei null an: ein Computer, die eigenen Unterlagen, etwas Neugier. Alles andere erklären wir unterwegs, ohne Fachchinesisch.
 Wie lange dauert eine Schulung? +

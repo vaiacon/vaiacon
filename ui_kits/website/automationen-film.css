@@ -1,0 +1,79 @@
+/* Automationen (bot.html): Kurzfilm und Bildergalerie der neun Beispiele.
+   Farben, Schriften, Radien aus tokens/. */
+
+.af-film {
+  margin: 28px auto 0;
+  max-width: 980px;
+  border: 1.5px solid var(--border-ink);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-comic);
+  background: var(--bg-dark);
+  aspect-ratio: 16 / 9;
+}
+.af-film video { display: block; width: 100%; height: 100%; object-fit: cover; }
+
+.af-galerie {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin: 36px 0 0;
+  padding: 0;
+  list-style: none;
+}
+.af-galerie li { min-width: 0; }
+.af-galerie a {
+  display: grid;
+  gap: 12px;
+  height: 100%;
+  padding: 10px 10px 16px;
+  background: var(--surface-card);
+  border: 1.5px solid var(--border-ink);
+  border-radius: var(--radius-lg);
+  color: var(--text-strong);
+  text-decoration: none;
+  transition: transform .14s ease, box-shadow .14s ease;
+}
+.af-galerie a:hover, .af-galerie a:focus-visible {
+  transform: translate(-3px, -3px);
+  box-shadow: 5px 5px 0 var(--border-ink);
+  color: var(--text-strong);
+}
+.af-galerie figure { margin: 0; min-width: 0; }
+.af-galerie picture {
+  display: block;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 5 / 3;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--surface-card-sand);
+}
+.af-galerie img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.af-galerie figcaption { display: grid; gap: 4px; padding: 0 6px; }
+.af-galerie figcaption b {
+  font-size: var(--text-overline);
+  letter-spacing: var(--tracking-badge);
+  text-transform: uppercase;
+  font-weight: var(--weight-bold);
+  color: var(--accent);
+}
+.af-galerie figcaption span {
+  font-size: 16px;
+  line-height: 1.3;
+  font-weight: var(--weight-semibold);
+  text-wrap: balance;
+}
+.af-galerie figcaption small { font-size: 14px; color: var(--text-muted); font-weight: var(--weight-medium); }
+
+.af-mehr { margin-top: 28px; }
+
+@media (max-width: 900px) { .af-galerie { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .af-galerie { grid-template-columns: 1fr; } }
+@media (prefers-reduced-motion: reduce) { .af-galerie a { transition: none; } }
