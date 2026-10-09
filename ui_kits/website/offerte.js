@@ -529,7 +529,7 @@
     logo.addEventListener('error', function () { if (!logo.getAttribute('data-png')) { logo.setAttribute('data-png', '1'); logo.src = 'assets/logo-lockup-terra.png'; } });
     dok.appendChild(el('div', { class: 'of-dokument__marke' }, [
       logo,
-      el('span', { class: 'of-dokument__marke-zeile', text: 'Richtofferte · ' + String(a.nummer || '') + ' · ' + datum(a.datum) })
+      el('span', { class: 'of-dokument__marke-zeile', text: 'Richtofferte' })
     ]));
 
     dok.appendChild(el('header', { class: 'of-dokument__kopf' }, [
@@ -550,7 +550,6 @@
     [kontakt.firma, kontakt.name, kontakt.mail, kontakt.telefon].forEach(function (z) { if (z) empf.appendChild(el('span', { text: z })); });
     dok.appendChild(empf);
 
-    dok.appendChild(el('p', { class: 'of-dokument__kicker', text: 'Richtofferte' }));
     dok.appendChild(el('h3', { class: 'of-dokument__titel', text: 'Ihr Richtpreis.' }));
     dok.appendChild(el('p', { class: 'of-richtpreis of-dokument__banner' }, [
       el('strong', { text: 'Richtpreis, keine verbindliche Offerte' }),
