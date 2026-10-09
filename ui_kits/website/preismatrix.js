@@ -60,21 +60,108 @@
     }
   }
 
-  for (var i = 0; i < zellen.length; i++) {
-    zellen[i].addEventListener('click', function (e) { waehle(e.currentTarget); });
+  /* Handy (bis 700 px): Schrittwahl als Leiste, nur eine Spalte sichtbar,
+   * Detailkarte klappt direkt unter der angetippten Karte auf. Die neun Zellen
+   * bleiben die einzige Datenquelle; Dauer und Satz werden aus ihren
+   * data-Attributen in die Karte gespiegelt (am Desktop per CSS verborgen). */
+  var mq = window.matchMedia ? window.matchMedia('(max-width: 700px)') : null;
+  var detail = document.querySelector('.pm-detail');
+  var detailHeim = detail ? detail.parentNode : null;
+  var detailDanach = detail ? detail.nextSibling : null;
+  var spalten = matrix.querySelectorAll('.pm-col');
+  var leiste = null, hilfe = null, knoepfe = [];
+
+  for (var z = 0; z < zellen.length; z++) {
+    var dauer = document.createElement('span');
+    dauer.className = 'pm-cell__dauer';
+    dauer.textContent = zellen[z].getAttribute('data-dauer') || '';
+    var satz = document.createElement('span');
+    satz.className = 'pm-cell__satz';
+    satz.textContent = zellen[z].getAttribute('data-text') || '';
+    zellen[z].insertBefore(dauer, zellen[z].firstChild);
+    zellen[z].appendChild(satz);
   }
 
-  waehle(matrix.querySelector('.pm-cell.ist-gewaehlt') || zellen[0]);
+  function setzeSpalte(name) {
+    matrix.setAttribute('data-spalte', name);
+    for (var k = 0; k < knoepfe.length; k++) {
+      var an = knoepfe[k].getAttribute('data-spalte') === name;
+      knoepfe[k].setAttribute('aria-pressed', an ? 'true' : 'false');
+      knoepfe[k].classList.toggle('ist-an', an);
+      if (an && hilfe) hilfe.textContent = knoepfe[k].getAttribute('data-hilfe');
+    }
+  }
+
+  function legeDetail(zelle) {
+    if (!detail) return;
+    if (mq && mq.matches) {
+      zelle.parentNode.insertBefore(detail, zelle.nextSibling);
+    } else if (detail.parentNode !== detailHeim) {
+      detailHeim.insertBefore(detail, detailDanach && detailDanach.parentNode === detailHeim ? detailDanach : null);
+    }
+  }
+
+  if (spalten.length && matrix.parentNode) {
+    leiste = document.createElement('div');
+    leiste.className = 'pm-schritt';
+    var gruppe = document.createElement('div');
+    gruppe.className = 'pm-schritt__leiste';
+    gruppe.setAttribute('role', 'group');
+    gruppe.setAttribute('aria-label', 'Grösse des Schritts');
+    Array.prototype.forEach.call(spalten, function (sp) {
+      var name = sp.firstChild.textContent.trim();
+      var klein = sp.querySelector('small');
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = name;
+      b.setAttribute('data-spalte', name);
+      b.setAttribute('data-hilfe', klein ? klein.textContent.trim() : '');
+      b.setAttribute('aria-pressed', 'false');
+      b.addEventListener('click', function () {
+        setzeSpalte(name);
+        var erste = matrix.querySelector('.pm-cell[data-komplexitaet="' + name + '"]');
+        if (erste) { waehle(erste); legeDetail(erste); }
+      });
+      knoepfe.push(b);
+      gruppe.appendChild(b);
+    });
+    hilfe = document.createElement('p');
+    hilfe.className = 'pm-schritt__hilfe';
+    hilfe.setAttribute('aria-live', 'polite');
+    leiste.appendChild(gruppe);
+    leiste.appendChild(hilfe);
+    matrix.parentNode.insertBefore(leiste, matrix);
+  }
+
+  for (var i = 0; i < zellen.length; i++) {
+    zellen[i].addEventListener('click', function (e) {
+      var zelle = e.currentTarget;
+      waehle(zelle);
+      legeDetail(zelle);
+      if (mq && mq.matches && zelle.scrollIntoView) {
+        zelle.scrollIntoView({ block: 'start', behavior: 'smooth' });
+      }
+    });
+  }
+
+  var start = matrix.querySelector('.pm-cell.ist-gewaehlt') || zellen[0];
+  setzeSpalte(start.getAttribute('data-komplexitaet'));
+  waehle(start);
+  legeDetail(start);
+  if (mq) {
+    var neu = function () { legeDetail(matrix.querySelector('.pm-cell.ist-gewaehlt') || zellen[0]); };
+    if (mq.addEventListener) mq.addEventListener('change', neu); else if (mq.addListener) mq.addListener(neu);
+  }
 
   /* preise.js setzt die Katalogpreise später ein: dann die Karte neu rechnen. */
-  /* Nur Matrix und Zuschlagstabelle beobachten, nie die Detailkarte (sonst Endlosschleife). */
+  /* Nur Preise der Zellen und Zuschlagstabelle beobachten, nie die Detailkarte (sonst Endlosschleife). */
   if (window.MutationObserver) {
     var beobachter = new MutationObserver(function () {
       var aktiv = matrix.querySelector('.pm-cell.ist-gewaehlt');
       if (aktiv) waehle(aktiv);
     });
     var opt = { subtree: true, characterData: true, childList: true };
-    beobachter.observe(matrix, opt);
+    for (var q = 0; q < zellen.length; q++) beobachter.observe(zellen[q].querySelector('.pm-cell__preis'), opt);
     var tabelle = document.querySelector('.pm-tabelle');
     if (tabelle) beobachter.observe(tabelle, opt);
   }
