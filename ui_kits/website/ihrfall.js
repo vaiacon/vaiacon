@@ -28,9 +28,9 @@
   try { probe = new URLSearchParams(location.search).get('probe') || ''; } catch (e) { /* ohne */ }
 
   var SPROSSEN = {
-    einfach: ['Einfach', 'bsp-tag--e'],
-    verbunden: ['Verbunden', 'bsp-tag--v'],
-    ganzer_ablauf: ['Ganzer Ablauf', 'bsp-tag--g']
+    einfach: ['Einfache Automation', 'bsp-tag--e'],
+    verbunden: ['Mittelgrosse Automation', 'bsp-tag--v'],
+    ganzer_ablauf: ['Komplette Automation', 'bsp-tag--g']
   };
   function sprosseKey(s) {
     return String(s || '').toLowerCase().replace(/[\s-]+/g, '_');

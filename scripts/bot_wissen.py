@@ -186,10 +186,10 @@ def bauen() -> tuple[str, list[str]]:
     # Branchen-Umschalter der Preisleiter (daten/branchen.json): was die drei Sprossen je Branche heissen.
     t.append("### Branchen")
     t.append("")
-    t.append("Was die drei Sprossen (Einfach, Verbunden, Ganzer Ablauf) in einzelnen Branchen heissen:")
+    t.append("Was die drei Sprossen (Einfache, Mittelgrosse, Komplette Automation) in einzelnen Branchen heissen:")
     t.append("")
     for b in BRANCHEN.values():
-        t.append(f"- {b['name']}: Einfach: {b['einfach']} Verbunden: {b['verbunden']} Ganzer Ablauf: {b['ganzer_ablauf']}")
+        t.append(f"- {b['name']}: Einfache Automation: {b['einfach']} Mittelgrosse Automation: {b['verbunden']} Komplette Automation: {b['ganzer_ablauf']}")
     t.append("")
 
     return "\n".join(t).rstrip() + "\n", fehlend

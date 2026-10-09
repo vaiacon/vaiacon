@@ -1,4 +1,4 @@
-/* Preismatrix Automationen (bot.html): Drei Spalten nach Grösse des Schritts (Einfach, Verbunden, Ganzer Ablauf). Die Dauer steht je Beispiel als Information, sie bestimmt den Preis nicht.
+/* Preismatrix Automationen (bot.html): Drei Spalten nach Grösse des Schritts (Einfache Automation, Mittelgrosse Automation, Komplette Automation). Die Dauer steht je Beispiel als Information, sie bestimmt den Preis nicht.
    Farben, Schriften, Radien aus tokens/. Preise der Ankerzellen kommen über
    data-preis aus daten/preise.json, die Zwischenwerte stehen im HTML. */
 
@@ -330,9 +330,9 @@
   }
   .pm-schritt__hilfe { margin: 12px 2px 10px; font-size: 15px; line-height: 1.4; color: var(--text-body); min-height: 3em; }
 
-  .pm-matrix[data-spalte="Einfach"] .pm-cell:not([data-komplexitaet="Einfach"]),
-  .pm-matrix[data-spalte="Verbunden"] .pm-cell:not([data-komplexitaet="Verbunden"]),
-  .pm-matrix[data-spalte="Ganzer Ablauf"] .pm-cell:not([data-komplexitaet="Ganzer Ablauf"]) { display: none; }
+  .pm-matrix[data-spalte="Einfache Automation"] .pm-cell:not([data-komplexitaet="Einfache Automation"]),
+  .pm-matrix[data-spalte="Mittelgrosse Automation"] .pm-cell:not([data-komplexitaet="Mittelgrosse Automation"]),
+  .pm-matrix[data-spalte="Komplette Automation"] .pm-cell:not([data-komplexitaet="Komplette Automation"]) { display: none; }
 
   .pm-cell { row-gap: 4px; }
   .pm-cell:hover { transform: none; box-shadow: none; }

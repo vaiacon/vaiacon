@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag 75c8adc Sprossen korrigiert: Freigabe-Schleife und Postfach mit KI sind Verbunden, Kundendossier Ganzer Ablauf
+> Stand: 09.10.2026 · Eintrag ffd66d2 Offerte: Text aus «Ihr Fall» sofort ins Feld, nicht erst nach dem Katalog
 
 ## Wie du antwortest
 
@@ -544,72 +544,14 @@ Alles, was sich wiederholt, lässt sich automatisieren.
 Eine Automation ist nie ein Produkt aus dem Regal. Sie besteht immer aus denselben fünf Teilen, die wir für Ihren Betrieb zusammensetzen.
 1 Etwas kommt rein
 Der Anstoss: Etwas trifft bei Ihnen ein, auf welchem Weg auch immer.
-Mail
-Formular auf der Website
-Anruf
-Sprachnachricht
-Foto vom Handy
-Beleg als PDF
-Bestellung aus dem Shop
-Termin im Kalender
-Lieferschein
-Bewerbung
-Rückmeldung eines Kunden
-WhatsApp-Nachricht
-Tabelle vom Lieferanten
-Zählerstand
-Chat auf der Website
 2 Die KI versteht es
 Sie liest, hört oder schaut hin und holt heraus, was zählt.
-liest den Beleg
-erkennt den Absender
-fasst zusammen
-übersetzt
-zieht Betrag und Datum heraus
-erkennt Dringlichkeit
-ordnet dem Kunden zu
-vergleicht mit der Offerte
-prüft auf Vollständigkeit
-hört den Anruf ab
-schreibt den Rapport
-erkennt Dubletten
-schätzt den Aufwand
 3 Es wird entschieden
 Nach Ihren Regeln: Manches läuft durch, anderes wartet auf Ihr OK.
-feste Regel («über CHF 2'000 → Freigabe»)
-KI schlägt vor, Sie entscheiden
-Freigabe am Handy
-Vier-Augen-Prinzip
-Ausnahme geht an einen Menschen
-Frist läuft ab → Erinnerung
-Reihenfolge nach Kunde
-Zuständigkeit nach Region
 4 Etwas passiert
 Das Ergebnis landet dort, wo Sie arbeiten: im Programm, im Ordner, beim Kunden.
-ablegen
-buchen
-Antwort entwerfen
-Offerte schreiben
-Auftrag anlegen
-Rechnung stellen
-Termin eintragen
-Mahnung schicken
-nachbestellen
-Lohn vorbereiten
-Lieferant anfragen
-Kunde informieren
-Zeiterfassung ergänzen
-in die Buchhaltung übertragen
 5 Sie erfahren davon
 Sie behalten den Überblick, ohne nachschauen zu müssen.
-Meldung aufs Handy
-Tagesübersicht am Morgen
-Dossier je Kunde
-Wochenbericht
-Ampel in der Tabelle
-Hinweis bei Abweichung
-Monatsabschluss auf Knopfdruck
-Frage an den Bot
 Jedes Beispiel weiter unten ist eine Kombination aus diesen Teilen. Ihres auch.
 WAS ES KOSTET
 Wie gross ist der Schritt?
@@ -621,13 +563,13 @@ Arztpraxis
 Sanitär und Heizung
 Agentur
 Restaurant
-1 Einfach
+1 Einfache Automation
 Das Foto von der Baustelle landet benannt im Projektordner.
-2 Verbunden
+2 Mittelgrosse Automation
 Aus dem Aufmass im Formular wird die Offerte in Ihrem Design.
-3 Ganzer Ablauf
+3 Komplette Automation
 Von der Anfrage über Offerte und Rapport bis zur Rechnung, Sie geben nur frei.
-1 Einfach Eine feste Regel in einem Programm
+1 Einfache Automation Eine feste Regel in einem Programm
 Eine Rechnung kommt per Mail und liegt Sekunden später im richtigen Ordner.
 Was Sie davon haben Nichts geht verloren, niemand sucht am Monatsende.
 Preis ab CHF 1'300
@@ -636,7 +578,7 @@ Kleiner Ablauf
 Katalog
 ab CHF 2'200
 Ablauf mit eigenen Regeln
-2 Verbunden Zwei Programme reden miteinander, oder die KI entscheidet
+2 Mittelgrosse Automation Zwei Programme reden miteinander, oder die KI entscheidet
 Der Beleg geht aus der Mail direkt in die Buchhaltung.
 Was Sie davon haben Kein Abtippen mehr, die Zahlen stimmen.
 Preis ab CHF 1'900
@@ -650,7 +592,7 @@ Belege und Offerten
 Katalog
 ab CHF 3'800
 Postfach mit KI
-3 Ganzer Ablauf Mehrere Schritte, Freigaben, Ausnahmen: ein Bereich läuft von selbst
+3 Komplette Automation Mehrere Schritte, Freigaben, Ausnahmen: ein Bereich läuft von selbst
 Von der Anfrage bis zur Rechnung, ohne dass jemand etwas weiterreicht.
 Was Sie davon haben Der Bereich hängt nicht mehr an einer Person, Rechnungen gehen am Tag des Abschlusses raus.
 Preis ab CHF 4'200
@@ -662,7 +604,7 @@ ab CHF 6'800
 Ganzer Bereich
 Katalog
 Antippen: Sie sehen, was passiert, was es bringt und was es im ersten Jahr kostet.
-Einfach
+Einfache Automation
 Kleiner Ablauf
 Eine feste Regel: Kommt ein Beleg per Mail, legen wir ihn von selbst richtig ab.
 Was Sie davon haben Niemand sucht mehr am Monatsende, und kein Beleg geht verloren.
@@ -689,7 +631,7 @@ Sieben von vielen.
 Jedes Beispiel ist eine Kombination der Bausteine oben. Ihres steht nicht hier, sondern im Feld darunter.
 Beispiel Sprosse Was von selbst läuft Was Sie davon haben Preis
 Belege in drei Stufen
-Einfach bis Verbunden
+Einfache bis Mittelgrosse Automation
 Belege werden abgelegt, gebucht, aus Anfragen werden Offerten-Entwürfe.
 Etwa ein halber Tag pro Woche zurück.
 ab CHF 1'300
@@ -706,25 +648,25 @@ Danach
 1 Beleg erkannt, gelesen, benannt abgelegt.
 2 Buchungsentwurf in Ihrem Programm, ein Klick.
 3 Anfrage wird Offerten-Entwurf, wartet auf Ihr OK.
-Stufe 1 · Einfach Belege ablegen
+Stufe 1 · Einfache Automation Belege ablegen
 Jede Rechnung aus Mail oder Handyfoto liegt Sekunden später benannt im richtigen Ordner. Unklares landet in «Bitte prüfen».
 Passt, wenn Belege per Mail oder Foto kommen und eine feste Ablage da ist: Drive, OneDrive, NAS.
-Einfach · bei Ihnen fertig in 1 bis 2 Arbeitstagen ab CHF 1'300 pro Ablauf
-Stufe 2 · Verbunden In die Buchhaltung
+Einfache Automation · bei Ihnen fertig in 1 bis 2 Arbeitstagen ab CHF 1'300 pro Ablauf
+Stufe 2 · Mittelgrosse Automation In die Buchhaltung
 Aus dem Beleg wird ein Buchungsentwurf in bexio, Abacus oder Banana. Doppelte Rechnungen werden abgefangen, Sie bestätigen mit einem Klick.
 Passt, wenn sich Ihr Buchhaltungsprogramm verbinden lässt: bexio, Abacus, Banana, Sage.
-Verbunden · bei Ihnen fertig in 1 bis 2 Arbeitstagen ab CHF 1'900 pro Programm
-Stufe 3 · Verbunden Mit Offerten
+Mittelgrosse Automation · bei Ihnen fertig in 1 bis 2 Arbeitstagen ab CHF 1'900 pro Programm
+Stufe 3 · Mittelgrosse Automation Mit Offerten
 Das Postfach wird gelesen: Belege werden gebucht, Anfragen werden zu Offerten-Entwürfen mit Ihren Preisen. Beides wartet auf Ihr OK.
 Passt, wenn Anfragen per Mail oder Formular kommen und Ihre Preise in einer Liste stehen.
-Verbunden · bei Ihnen fertig in 3 bis 5 Arbeitstagen ab CHF 3'000
+Mittelgrosse Automation · bei Ihnen fertig in 3 bis 5 Arbeitstagen ab CHF 3'000
 Passt nicht, wenn
 Belege kommen fast nur auf Papier.
 Die Buchhaltung läuft in Excel.
 Jede Offerte braucht eine Begehung.
-Einstufung: Einfach bis Verbunden Fixpreis nach Erstanalyse, ab CHF 1'300 pro Ablauf bis ab CHF 3'000 Zur Leiter ↑
+Einstufung: Einfache bis Mittelgrosse Automation Fixpreis nach Erstanalyse, ab CHF 1'300 pro Ablauf bis ab CHF 3'000 Zur Leiter ↑
 Offerte aus dem Formular
-Einfach
+Einfache Automation
 Aus einem kurzen Formular entsteht die fertige PDF-Offerte.
 Minuten statt einer Stunde je Offerte.
 ab CHF 2'200
@@ -745,9 +687,9 @@ Wiederkehrende Leistungen mit klaren Preisen.
 Mehrere Personen schreiben Offerten.
 Passt nicht, wenn
 Preise entstehen erst im Gespräch.
-Einstufung: Einfach · bei Ihnen fertig in 3 bis 5 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 2'200 Zur Leiter ↑
+Einstufung: Einfache Automation · bei Ihnen fertig in 3 bis 5 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 2'200 Zur Leiter ↑
 Freigabe-Schleife
-Verbunden
+Mittelgrosse Automation
 Grosse Rechnungen gehen erst nach Ihrer Freigabe weiter.
 Freigabe vom Handy, nachvollziehbar.
 ab CHF 2'600
@@ -768,9 +710,9 @@ Klare Regel: Betrag, Lieferant oder Kostenstelle.
 Die freigebende Person ist oft unterwegs.
 Passt nicht, wenn
 Jede Rechnung soll persönlich angeschaut werden.
-Einstufung: Verbunden · bei Ihnen fertig in 1 bis 2 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 2'600 Zur Leiter ↑
+Einstufung: Mittelgrosse Automation · bei Ihnen fertig in 1 bis 2 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 2'600 Zur Leiter ↑
 Von der Anfrage zur Rechnung
-Ganzer Ablauf
+Komplette Automation
 Anfrage, Offerte, Auftrag und Rechnung laufen in einem Fluss.
 Rechnung am Tag des Abschlusses.
 ab CHF 4'200
@@ -792,9 +734,9 @@ Mehrere Aufträge pro Woche laufen ähnlich ab.
 Programme für Offerte, Auftrag und Rechnung sind da.
 Passt nicht, wenn
 Projekte dauern Monate und ändern sich ständig.
-Einstufung: Ganzer Ablauf · bei Ihnen fertig in 3 bis 5 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 4'200 Zur Leiter ↑
+Einstufung: Komplette Automation · bei Ihnen fertig in 3 bis 5 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 4'200 Zur Leiter ↑
 Postfach mit KI
-Verbunden
+Mittelgrosse Automation
 Mails werden eingeordnet, Antwortentwürfe stehen bereit.
 Weniger Sortieren, schnellere Antworten.
 ab CHF 3'800
@@ -814,9 +756,9 @@ Viele ähnliche Anfragen: Preis, Verfügbarkeit, Termin.
 Mail ist Ihr Hauptkanal.
 Passt nicht, wenn
 Jede Antwort ist ein Beratungsgespräch.
-Einstufung: Verbunden · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 3'800 Zur Leiter ↑
+Einstufung: Mittelgrosse Automation · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 3'800 Zur Leiter ↑
 Kundendossier
-Ganzer Ablauf
+Komplette Automation
 Mails, Rechnungen, Offerten und Termine je Kunde an einem Ort.
 Alles zum Kunden in einem Blick.
 ab CHF 5'200
@@ -838,9 +780,9 @@ Stammkunden mit längerer Beziehung.
 Daten liegen in zwei Programmen.
 Passt nicht, wenn
 Alles ist schon sauber in einem CRM.
-Einstufung: Ganzer Ablauf · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 5'200 Zur Leiter ↑
+Einstufung: Komplette Automation · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 5'200 Zur Leiter ↑
 Ganzer Bereich
-Ganzer Ablauf
+Komplette Automation
 Einkauf oder Rapportierung laufen von selbst, mit Freigaben.
 Ein Bereich ohne Handarbeit.
 ab CHF 6'800
@@ -860,7 +802,7 @@ Ein abgegrenzter Bereich mit vielen Durchläufen.
 Die Geschäftsleitung steht dahinter.
 Passt nicht, wenn
 Der Bereich ändert sich gerade grundlegend.
-Einstufung: Ganzer Ablauf · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 6'800 Zur Leiter ↑
+Einstufung: Komplette Automation · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 6'800 Zur Leiter ↑
 IHR FALL
 Ihr Fall in zwei Sätzen.
 Beschreiben Sie, was bei Ihnen jede Woche Zeit frisst. Die KI sagt Ihnen, welche Sprosse das ist und was es ungefähr kostet. Ohne Namen und Kundendaten, bitte.
@@ -1394,11 +1336,11 @@ Zum Kontaktformular →
 
 ### Branchen
 
-Was die drei Sprossen (Einfach, Verbunden, Ganzer Ablauf) in einzelnen Branchen heissen:
+Was die drei Sprossen (Einfache, Mittelgrosse, Komplette Automation) in einzelnen Branchen heissen:
 
-- Malerbetrieb: Einfach: Das Foto von der Baustelle landet benannt im Projektordner. Verbunden: Aus dem Aufmass im Formular wird die Offerte in Ihrem Design. Ganzer Ablauf: Von der Anfrage über Offerte und Rapport bis zur Rechnung, Sie geben nur frei.
-- Treuhand: Einfach: Jeder Beleg aus dem Postfach liegt benannt im richtigen Mandanten-Dossier. Verbunden: Aus dem Beleg wird der Buchungsentwurf in Ihrem Programm, Sie bestätigen mit einem Klick. Ganzer Ablauf: Vom Posteingang über Buchung und Rückfrage bis zum Abschluss, Sie prüfen nur noch.
-- Arztpraxis: Einfach: Jeder Bericht vom Spital liegt sortiert in der richtigen Akte. Verbunden: Aus dem Terminwunsch per Mail wird ein Vorschlag im Kalender samt Antwortentwurf. Ganzer Ablauf: Von der Anmeldung über die Terminerinnerung bis zur Abrechnung, Ihr Team gibt nur frei.
-- Sanitär und Heizung: Einfach: Das Foto vom Zählerstand oder vom Defekt liegt benannt beim Auftrag. Verbunden: Aus der Störungsmeldung im Formular wird der Einsatz im Kalender, der Monteur hat alles auf dem Handy. Ganzer Ablauf: Von der Störungsmeldung über Einsatz und Rapport bis zur Rechnung, Sie geben nur frei.
-- Agentur: Einfach: Jede Kundenmail landet im richtigen Projektordner, die Anhänge gleich dabei. Verbunden: Aus dem Briefing im Formular wird die Offerte mit Ihren Stundensätzen. Ganzer Ablauf: Von der Anfrage über Offerte und Zeiterfassung bis zur Monatsrechnung, Sie geben nur frei.
-- Restaurant: Einfach: Der Lieferschein vom Handyfoto liegt benannt beim richtigen Lieferanten. Verbunden: Aus der Reservation per Mail wird der Tisch im Plan samt Bestätigung an den Gast. Ganzer Ablauf: Vom Einkauf über Lieferschein und Rechnung bis zur Buchung, Sie geben nur frei.
+- Malerbetrieb: Einfache Automation: Das Foto von der Baustelle landet benannt im Projektordner. Mittelgrosse Automation: Aus dem Aufmass im Formular wird die Offerte in Ihrem Design. Komplette Automation: Von der Anfrage über Offerte und Rapport bis zur Rechnung, Sie geben nur frei.
+- Treuhand: Einfache Automation: Jeder Beleg aus dem Postfach liegt benannt im richtigen Mandanten-Dossier. Mittelgrosse Automation: Aus dem Beleg wird der Buchungsentwurf in Ihrem Programm, Sie bestätigen mit einem Klick. Komplette Automation: Vom Posteingang über Buchung und Rückfrage bis zum Abschluss, Sie prüfen nur noch.
+- Arztpraxis: Einfache Automation: Jeder Bericht vom Spital liegt sortiert in der richtigen Akte. Mittelgrosse Automation: Aus dem Terminwunsch per Mail wird ein Vorschlag im Kalender samt Antwortentwurf. Komplette Automation: Von der Anmeldung über die Terminerinnerung bis zur Abrechnung, Ihr Team gibt nur frei.
+- Sanitär und Heizung: Einfache Automation: Das Foto vom Zählerstand oder vom Defekt liegt benannt beim Auftrag. Mittelgrosse Automation: Aus der Störungsmeldung im Formular wird der Einsatz im Kalender, der Monteur hat alles auf dem Handy. Komplette Automation: Von der Störungsmeldung über Einsatz und Rapport bis zur Rechnung, Sie geben nur frei.
+- Agentur: Einfache Automation: Jede Kundenmail landet im richtigen Projektordner, die Anhänge gleich dabei. Mittelgrosse Automation: Aus dem Briefing im Formular wird die Offerte mit Ihren Stundensätzen. Komplette Automation: Von der Anfrage über Offerte und Zeiterfassung bis zur Monatsrechnung, Sie geben nur frei.
+- Restaurant: Einfache Automation: Der Lieferschein vom Handyfoto liegt benannt beim richtigen Lieferanten. Mittelgrosse Automation: Aus der Reservation per Mail wird der Tisch im Plan samt Bestätigung an den Gast. Komplette Automation: Vom Einkauf über Lieferschein und Rechnung bis zur Buchung, Sie geben nur frei.
