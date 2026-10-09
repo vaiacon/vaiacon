@@ -348,12 +348,12 @@
    Sätze aus daten/branchen.json (branchen.js), erste Branche steht im HTML. */
 .pm-branchen { margin: 28px auto 0; max-width: 1040px; text-align: left; }
 .pm-branchen__frage { margin: 0 0 10px; text-align: center; font-weight: var(--weight-semibold); color: var(--text-strong); font-size: var(--text-ui); }
-.pm-branchen__chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.pm-branchen__chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
 .pm-branchen__chips button {
   font: inherit;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: var(--weight-semibold);
-  padding: 9px 18px 9px 12px;
+  padding: 10px 22px 10px 12px;
   border-radius: var(--radius-pill);
   border: 1.5px solid var(--border-ink);
   background: var(--surface-card);
@@ -363,7 +363,7 @@
   padding-left: 8px;
   transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
 }
-.pm-branchen__ico { flex: none; width: 34px; height: 34px; border-radius: 50%; background: var(--cream-50); object-fit: cover; }
+.pm-branchen__ico { flex: none; width: 44px; height: 44px; border-radius: 50%; background: var(--cream-50); object-fit: cover; }
 .pm-branchen__chips button[aria-selected="true"] .pm-branchen__ico { box-shadow: 0 0 0 1.5px rgba(255,255,255,.55); }
 .pm-branchen__chips button:hover { transform: translate(-1px, -1px); box-shadow: 2px 2px 0 var(--border-ink); }
 .pm-branchen__chips button[aria-selected="true"] { background: var(--accent); color: var(--text-on-terra); border-color: var(--accent); }
