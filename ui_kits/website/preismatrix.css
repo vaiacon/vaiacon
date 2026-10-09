@@ -342,3 +342,46 @@
   .pm-matrix > .pm-detail, .pm-spalte > .pm-detail { margin-top: 0; gap: 12px; }
   .pm-card { padding: 20px 18px; }
 }
+
+/* ── Branchen-Umschalter: was die drei Sprossen in einer Branche heissen ──
+   Sätze aus daten/branchen.json (branchen.js), erste Branche steht im HTML. */
+.pm-branchen { margin: 28px auto 0; max-width: 1040px; text-align: left; }
+.pm-branchen__frage { margin: 0 0 10px; text-align: center; font-weight: var(--weight-semibold); color: var(--text-strong); font-size: var(--text-ui); }
+.pm-branchen__chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.pm-branchen__chips button {
+  font: inherit;
+  font-size: 14px;
+  font-weight: var(--weight-semibold);
+  padding: 7px 14px;
+  border-radius: var(--radius-pill);
+  border: 1.5px solid var(--border-ink);
+  background: var(--surface-card);
+  color: var(--text-strong);
+  cursor: pointer;
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+}
+.pm-branchen__chips button:hover { transform: translate(-1px, -1px); box-shadow: 2px 2px 0 var(--border-ink); }
+.pm-branchen__chips button[aria-selected="true"] { background: var(--accent); color: var(--text-on-terra); border-color: var(--accent); }
+.pm-branchen__chips button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+.pm-branchen__karten { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 14px; }
+.pm-branchen__karte {
+  min-width: 0;
+  padding: 12px 14px 14px;
+  background: var(--surface-card);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-md);
+}
+.pm-branchen__sprosse { display: flex; align-items: center; gap: 8px; margin: 0 0 6px; font-size: var(--text-overline); letter-spacing: var(--tracking-badge); text-transform: uppercase; font-weight: var(--weight-bold); color: var(--accent); }
+.pm-branchen__sprosse i {
+  font-style: normal;
+  display: inline-grid; place-items: center;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--peach-150); color: var(--terra-600);
+  font-family: var(--font-mono, "IBM Plex Mono", monospace); font-size: 11.5px; letter-spacing: 0;
+}
+.pm-branchen__karte p[data-sprosse] { margin: 0; font-size: 15px; line-height: 1.45; color: var(--text-body); }
+@media (max-width: 760px) {
+  .pm-branchen__karten { grid-template-columns: 1fr; }
+  .pm-branchen__chips { justify-content: flex-start; }
+}
+@media (prefers-reduced-motion: reduce) { .pm-branchen__chips button { transition: none; } }

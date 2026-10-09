@@ -1,0 +1,38 @@
+{
+  "malerbetrieb": {
+    "name": "Malerbetrieb",
+    "einfach": "Das Foto von der Baustelle landet benannt im Projektordner.",
+    "verbunden": "Aus dem Aufmass im Formular wird die Offerte in Ihrem Design.",
+    "ganzer_ablauf": "Von der Anfrage über Offerte und Rapport bis zur Rechnung, Sie geben nur frei."
+  },
+  "treuhand": {
+    "name": "Treuhand",
+    "einfach": "Jeder Beleg aus dem Postfach liegt benannt im richtigen Mandanten-Dossier.",
+    "verbunden": "Aus dem Beleg wird der Buchungsentwurf in Ihrem Programm, Sie bestätigen mit einem Klick.",
+    "ganzer_ablauf": "Vom Posteingang über Buchung und Rückfrage bis zum Abschluss, Sie prüfen nur noch."
+  },
+  "arztpraxis": {
+    "name": "Arztpraxis",
+    "einfach": "Jeder Bericht vom Spital liegt sortiert in der richtigen Akte.",
+    "verbunden": "Aus dem Terminwunsch per Mail wird ein Vorschlag im Kalender samt Antwortentwurf.",
+    "ganzer_ablauf": "Von der Anmeldung über die Terminerinnerung bis zur Abrechnung, Ihr Team gibt nur frei."
+  },
+  "sanitaer-heizung": {
+    "name": "Sanitär und Heizung",
+    "einfach": "Das Foto vom Zählerstand oder vom Defekt liegt benannt beim Auftrag.",
+    "verbunden": "Aus der Störungsmeldung im Formular wird der Einsatz im Kalender, der Monteur hat alles auf dem Handy.",
+    "ganzer_ablauf": "Von der Störungsmeldung über Einsatz und Rapport bis zur Rechnung, Sie geben nur frei."
+  },
+  "agentur": {
+    "name": "Agentur",
+    "einfach": "Jede Kundenmail landet im richtigen Projektordner, die Anhänge gleich dabei.",
+    "verbunden": "Aus dem Briefing im Formular wird die Offerte mit Ihren Stundensätzen.",
+    "ganzer_ablauf": "Von der Anfrage über Offerte und Zeiterfassung bis zur Monatsrechnung, Sie geben nur frei."
+  },
+  "restaurant": {
+    "name": "Restaurant",
+    "einfach": "Der Lieferschein vom Handyfoto liegt benannt beim richtigen Lieferanten.",
+    "verbunden": "Aus der Reservation per Mail wird der Tisch im Plan samt Bestätigung an den Gast.",
+    "ganzer_ablauf": "Vom Einkauf über Lieferschein und Rechnung bis zur Buchung, Sie geben nur frei."
+  }
+}

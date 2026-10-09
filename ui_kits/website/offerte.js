@@ -110,6 +110,14 @@
       }
       if (d && typeof d.wunsch === 'string') wunsch = d.wunsch.slice(0, 3000);
     } catch (e) { /* ohne */ }
+    /* Übergabe von «Ihr Fall in zwei Sätzen» (bot.html): einmal lesen, gleich löschen. */
+    try {
+      var uebergabe = sessionStorage.getItem('vaiacon_wunsch');
+      if (uebergabe) {
+        wunsch = String(uebergabe).slice(0, 3000);
+        sessionStorage.removeItem('vaiacon_wunsch');
+      }
+    } catch (e) { /* ohne */ }
   }
 
   // ── Katalog zeichnen ────────────────────────────────────────────────────
@@ -305,6 +313,26 @@
   }
 
   // ── Vorwahl über die Adresse ────────────────────────────────────────────
+  // Platzhalter je Bereich: ?bereich=automationen|kompetenz|sichtbarkeit. Ohne Parameter
+  // ein neutrales Beispiel, das alle drei Bereiche anreisst. Beispiele erfunden, ohne Namen.
+  var PLATZHALTER = {
+    automationen: 'Zum Beispiel: Wir sind ein Malerbetrieb mit zwölf Personen. Rechnungen kommen per Mail und werden von Hand abgelegt und gebucht, das kostet jede Woche einen halben Tag. Das soll von selbst laufen, und das Team soll lernen, KI im Alltag zu nutzen.',
+    kompetenz: 'Zum Beispiel: Wir sind acht Leute im Büro. Zwei nutzen ChatGPT heimlich, die anderen gar nicht. Alle sollen sicher mit KI arbeiten und wissen, was sie eingeben dürfen und was nicht.',
+    sichtbarkeit: 'Zum Beispiel: Unsere Website ist von 2019, bei Google findet uns kaum jemand, die Fotos sind alt. Wir möchten für «Sanitär Dietikon» gefunden werden und mehr Anfragen über die Seite bekommen.',
+    neutral: 'Zum Beispiel: Wir sind ein Betrieb mit zwölf Personen. Das Team soll sicher mit KI arbeiten, die Website soll bei Google besser gefunden werden, und Rechnungen sollen nicht mehr von Hand abgelegt werden. Was zuerst dran ist, wissen wir noch nicht.'
+  };
+  function bereichAusUrl() {
+    var b = '';
+    try { b = (new URLSearchParams(location.search).get('bereich') || '').toLowerCase(); } catch (e) { /* ohne */ }
+    return PLATZHALTER[b] ? b : '';
+  }
+  function platzhalterSetzen() {
+    var feld = $('of-wunsch'); if (!feld) return;
+    var b = bereichAusUrl();
+    feld.placeholder = PLATZHALTER[b || 'neutral'];
+    if (b) document.documentElement.setAttribute('data-bereich', b);
+  }
+
   function vorwahl() {
     var v = '';
     try { v = new URLSearchParams(location.search).get('vorwahl') || ''; } catch (e) { /* ohne */ }
@@ -656,6 +684,7 @@
     $('of-fehler-aendern').addEventListener('click', function () { zeige('auswahl'); });
     $('of-nochmals').addEventListener('click', function () { senden(); });
     $('of-drucken').addEventListener('click', function () { window.print(); });
+    platzhalterSetzen();
     $('of-wunsch').addEventListener('input', function () {
       wunsch = this.value;
       $('of-wunsch-n').textContent = String(wunsch.length);

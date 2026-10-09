@@ -23,6 +23,7 @@ from pathlib import Path
 WURZEL = Path(__file__).resolve().parents[1]
 ZIEL = WURZEL / "vaia-wissen" / "wissen.md"
 KATALOG = json.loads((WURZEL / "daten" / "preise.json").read_text(encoding="utf-8"))
+BRANCHEN = json.loads((WURZEL / "daten" / "branchen.json").read_text(encoding="utf-8"))
 
 # Reihenfolge zaehlt: So liest der Chat die Website von vorn nach hinten.
 SEITEN = [
@@ -31,7 +32,6 @@ SEITEN = [
     ("learning.html", "KI-Kompetenz (inkl. KI-Standortbestimmung)"),
     ("visibility.html", "Sichtbarkeit — gefunden werden"),
     ("bot.html", "Automationen"),
-    ("beispiele.html", "Beispiele aus dem Alltag (Automationen)"),
     ("service.html", "Begleitung"),
     ("offerte.html", "Offerten-Tool"),
     ("ki-kmu-news/index.html", "KI-News für KMU"),
@@ -182,6 +182,15 @@ def bauen() -> tuple[str, list[str]]:
         t.append("")
         t.append(seitentext(pfad))
         t.append("")
+
+    # Branchen-Umschalter der Preisleiter (daten/branchen.json): was die drei Sprossen je Branche heissen.
+    t.append("### Branchen")
+    t.append("")
+    t.append("Was die drei Sprossen (Einfach, Verbunden, Ganzer Ablauf) in einzelnen Branchen heissen:")
+    t.append("")
+    for b in BRANCHEN.values():
+        t.append(f"- {b['name']}: Einfach: {b['einfach']} Verbunden: {b['verbunden']} Ganzer Ablauf: {b['ganzer_ablauf']}")
+    t.append("")
 
     return "\n".join(t).rstrip() + "\n", fehlend
 
