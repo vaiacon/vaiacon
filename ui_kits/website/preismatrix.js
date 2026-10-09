@@ -69,7 +69,7 @@
   var detailHeim = detail ? detail.parentNode : null;
   var detailDanach = detail ? detail.nextSibling : null;
   var spalten = matrix.querySelectorAll('.pm-col');
-  var leiste = null, hilfe = null, knoepfe = [];
+  var leiste = null, hilfe = null, mehrBox = null, knoepfe = [], spaltenNach = {};
 
   for (var z = 0; z < zellen.length; z++) {
     var dauer = document.createElement('span');
@@ -89,6 +89,15 @@
       knoepfe[k].setAttribute('aria-pressed', an ? 'true' : 'false');
       knoepfe[k].classList.toggle('ist-an', an);
       if (an && hilfe) hilfe.textContent = knoepfe[k].getAttribute('data-hilfe');
+    }
+    /* Beispiel und Gewinn der Spalte aus dem ausgeblendeten Spaltenkopf spiegeln (Klone, eine Textquelle). */
+    if (mehrBox) {
+      mehrBox.innerHTML = '';
+      var sp = spaltenNach[name];
+      ['.pm-col__bsp', '.pm-col__gewinn'].forEach(function (sel) {
+        var q = sp && sp.querySelector(sel);
+        if (q) mehrBox.appendChild(q.cloneNode(true));
+      });
     }
   }
 
@@ -111,6 +120,7 @@
     Array.prototype.forEach.call(spalten, function (sp) {
       var name = sp.querySelector('.pm-col__kopf b').textContent.trim();
       var klein = sp.querySelector('small');
+      spaltenNach[name] = sp;
       var b = document.createElement('button');
       b.type = 'button';
       b.textContent = name;
@@ -130,6 +140,9 @@
     hilfe.setAttribute('aria-live', 'polite');
     leiste.appendChild(gruppe);
     leiste.appendChild(hilfe);
+    mehrBox = document.createElement('div');
+    mehrBox.className = 'pm-schritt__mehr';
+    leiste.appendChild(mehrBox);
     matrix.parentNode.insertBefore(leiste, matrix);
   }
 

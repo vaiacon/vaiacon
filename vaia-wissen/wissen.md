@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag 73e937e Merge pull request #23 from vaiacon/beispiele-sachlich
+> Stand: 09.10.2026 · Eintrag 50853c0 Offerte: alter Banner weg, Nummer und Datum nur noch im Metablock
 
 ## Wie du antwortest
 
@@ -677,7 +677,6 @@ Belege und Buchhaltung
 Belege landen am richtigen Ort, werden gebucht, und aus Anfragen werden Offerten.
 Ein Ablauf, der mitwächst: Sie fangen mit der Ablage an und bauen aus, sobald es sich lohnt.
 Für die Chefin, den Chef: Etwa ein halber Tag pro Woche kommt zurück, und keine Rechnung geht mehr verloren.
-Nichts geht verloren.
 Kein Abtippen mehr.
 Offerte am selben Tag.
 Heute
@@ -710,9 +709,7 @@ Offerten, Freigaben und Aufträge
 Aus einem kurzen Formular wird eine fertige Offerte.
 Ihr Team füllt ein kurzes Formular aus. Die Preise werden nach Ihren Regeln gerechnet, die fertige Offerte liegt als PDF bereit.
 Für die Chefin, den Chef: Jede Offerte sieht gleich gut aus, und Ihr Team braucht Minuten statt einer Stunde.
-Jede Offerte gleich gut.
 Regeln statt Bauchgefühl.
-Minuten statt einer Stunde.
 Heute
 Offerten werden aus einer alten Vorlage kopiert.
 Rabattregeln stehen im Kopf einer Person.
@@ -730,8 +727,6 @@ Einstufung: Einfach · bei Ihnen fertig in 3 bis 5 Arbeitstagen Fixpreis nach Er
 Grosse Beträge gehen erst nach Ihrer Freigabe weiter.
 Rechnungen über einem Betrag, den Sie festlegen, gehen per Mail oder Handy-Nachricht zur Freigabe. Erst dann werden sie bezahlt.
 Für die Chefin, den Chef: Sie behalten die Hand auf dem Geld, auch wenn Sie unterwegs sind.
-Nichts geht ohne Sie raus.
-Freigabe vom Handy.
 Nachvollziehbar.
 Heute
 Freigaben per Zuruf, Unterschriften freitags im Stapel.
@@ -750,7 +745,6 @@ Einstufung: Ganzer Ablauf · bei Ihnen fertig in 1 bis 2 Arbeitstagen Fixpreis n
 Von der Anfrage bis zur Rechnung in einem Fluss.
 Eine Anfrage kommt rein, die Offerte geht raus, der Auftrag wird angelegt, nach Abschluss folgt die Rechnung. Alle beteiligten Programme arbeiten dabei zusammen.
 Für die Chefin, den Chef: Rechnungen gehen am Tag des Abschlusses raus, das Geld ist Wochen früher da.
-Rechnung am Tag des Abschlusses.
 Einmal erfassen.
 Überblick über jede Anfrage.
 Heute
@@ -772,9 +766,6 @@ Postfach, Kunden und ganze Bereiche
 Das Postfach sortiert sich selbst und schlägt Antworten vor.
 Jede Mail wird eingeordnet, für Anfragen steht ein Antwortentwurf in Ihrem Ton bereit.
 Für die Chefin, den Chef: Keine Anfrage geht mehr unter, und Ihr Team beginnt den Tag mit dem Wichtigen.
-Wichtiges zuerst.
-Antworten in Ihrem Ton.
-Kein Kunde geht vergessen.
 Heute
 Achtzig Mails am Tag, fünfzehn davon wichtig.
 Anfragen gehen zwischen Newslettern unter.
@@ -793,7 +784,6 @@ Zu jedem Kunden alles an einem Ort, mit Kurzfassung.
 Mails, Rechnungen, Offerten und Termine je Kunde aus zwei Programmen, mit Kurzfassung von der KI.
 Für die Chefin, den Chef: Wer ausfällt oder in den Ferien ist, reisst keine Lücke: Der Stand zu jedem Kunden ist jederzeit da.
 In dreissig Sekunden im Bild.
-Ferien ohne Übergabe-Chaos.
 Versprechen werden gehalten.
 Heute
 Vor jedem Anruf fünf Minuten Suchen in Mail, Buchhaltung, Kalender.
@@ -812,9 +802,6 @@ Einstufung: Verbunden · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach
 Ein ganzer Bereich läuft von selbst, mit Freigaben, wo sie hingehören.
 Einkauf oder Rapportierung komplett: Bestellung, Lieferschein, Rechnung, Freigabe, Buchung, Auswertung.
 Für die Chefin, den Chef: Der Bereich hängt nicht mehr an einer Person, und Sie sehen jeden Monat, wo es hakt.
-Nicht mehr an einer Person hängen.
-Abweichungen sofort sichtbar.
-Zahlen jeden Monat.
 Heute
 Der Bereich hängt an einer Person mit allem im Kopf.
 Auswertungen kommen am Quartalsende, zu spät.
@@ -922,7 +909,6 @@ Das dauert meist nur wenige Sekunden.
 IHR RICHTPREIS
 Hier ist Ihr Richtpreis.
 Probelauf: Dies ist eine Beispielantwort. Es wurde nichts gesendet.
-Das ist ein Richtpreis, keine verbindliche Offerte. Wir melden uns bei Ihnen, prüfen die Zuordnung gemeinsam und passen den Preis an, wo nötig.
 Drucken / als PDF sichern
 Beschreibung ändern
 Erstgespräch vereinbaren →

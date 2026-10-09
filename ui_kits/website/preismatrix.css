@@ -314,7 +314,21 @@
     box-shadow: var(--shadow-soft);
   }
   .pm-schritt__leiste button:focus-visible { outline: 3px solid var(--orange-500); outline-offset: 2px; }
-  .pm-schritt__hilfe { margin: 12px 2px 14px; font-size: 15px; line-height: 1.4; color: var(--text-body); min-height: 3em; }
+  .pm-schritt__mehr { display: grid; gap: 10px; margin: 0 2px 14px; font-size: 15px; line-height: 1.4; }
+  .pm-schritt__mehr:empty { display: none; }
+  .pm-schritt__mehr .pm-col__bsp { font-style: italic; color: var(--text-strong); }
+  .pm-schritt__mehr .pm-col__gewinn { display: block; padding-top: 8px; border-top: 1px solid var(--border-soft); color: var(--text-strong); }
+  .pm-schritt__mehr em {
+    display: block;
+    font-style: normal;
+    font-size: var(--text-overline);
+    letter-spacing: var(--tracking-badge);
+    text-transform: uppercase;
+    font-weight: var(--weight-bold);
+    color: var(--terra-600);
+    margin-bottom: 2px;
+  }
+  .pm-schritt__hilfe { margin: 12px 2px 10px; font-size: 15px; line-height: 1.4; color: var(--text-body); min-height: 3em; }
 
   .pm-matrix[data-spalte="Einfach"] .pm-cell:not([data-komplexitaet="Einfach"]),
   .pm-matrix[data-spalte="Verbunden"] .pm-cell:not([data-komplexitaet="Verbunden"]),
