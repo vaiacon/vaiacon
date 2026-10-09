@@ -1,103 +1,106 @@
-/* Preismatrix Automationen (bot.html): Dauer × Grösse des Schritts.
+/* Preismatrix Automationen (bot.html): Drei Spalten nach Grösse des Schritts (Einfach, Verbunden, Ganzer Ablauf). Die Dauer steht je Beispiel als Information, sie bestimmt den Preis nicht.
    Farben, Schriften, Radien aus tokens/. Preise der Ankerzellen kommen über
    data-preis aus daten/preise.json, die Zwischenwerte stehen im HTML. */
 
 .pm-wrap { text-align: left; }
 
-.pm-scroll { overflow-x: auto; margin-top: var(--space-9); }
+.pm-scroll { margin-top: var(--space-9); }
 
 .pm-matrix {
   display: grid;
-  grid-template-columns: 150px repeat(3, minmax(170px, 1fr));
-  gap: 10px;
-  min-width: 680px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
 }
+.pm-spalte { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
 
-.pm-corner {
+/* Spaltenkopf: Sprosse, Erklärung, Beispiel, Nutzen, ab-Preis */
+.pm-col {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  gap: 2px;
-  padding: 6px 4px;
+  gap: 8px;
+  padding: 14px 16px 14px;
+  background: var(--bg-alt);
+  border-radius: var(--radius-md);
+  border-bottom: 3px solid var(--border-ink);
+  color: var(--text-body);
+  font-size: 15px;
+  line-height: 1.4;
 }
-.pm-corner span {
+.pm-col__kopf { display: flex; align-items: center; gap: 10px; }
+.pm-col__kopf i {
+  font-style: normal;
+  display: inline-grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--radius-xs);
+  background: var(--peach-150);
+  color: var(--terra-600);
+  font-weight: var(--weight-bold);
+  font-size: 13px;
+}
+.pm-col__kopf b { font-size: 20px; color: var(--text-strong); }
+.pm-col small { display: block; font-size: 15px; font-weight: var(--weight-semibold); color: var(--text-strong); }
+.pm-col__bsp { font-style: italic; color: var(--text-strong); }
+.pm-col__gewinn, .pm-col__ab { display: block; padding-top: 8px; border-top: 1px solid var(--border-soft); color: var(--text-strong); }
+.pm-col em {
+  display: block;
+  font-style: normal;
   font-size: var(--text-overline);
   letter-spacing: var(--tracking-badge);
   text-transform: uppercase;
   font-weight: var(--weight-bold);
-  color: var(--text-muted);
+  color: var(--terra-600);
+  margin-bottom: 2px;
 }
-.pm-corner .pm-ax { color: var(--accent); }
+.pm-col__ab { font-family: var(--font-mono); font-size: 21px; font-weight: var(--weight-bold); font-variant-numeric: tabular-nums; letter-spacing: var(--tracking-tight); }
 
-.pm-col, .pm-row {
-  font-weight: var(--weight-bold);
-  color: var(--text-strong);
-  line-height: 1.25;
-}
-.pm-col {
-  padding: 10px 12px 12px;
-  border-bottom: 2px solid var(--border-ink);
-}
-.pm-row {
-  padding: 12px 12px 12px 4px;
-  border-right: 2px solid var(--border-ink);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.pm-col small, .pm-row small {
-  display: block;
-  font-weight: var(--weight-medium);
-  font-size: 13.5px;
-  color: var(--text-body);
-  margin-top: 3px;
-}
-
+/* Beispielkarte: Name + Preis, Satz, Dauer als Information */
 .pm-cell {
   font: inherit;
   color: var(--text-strong);
   text-align: left;
   cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  min-height: 110px;
-  padding: 14px 14px 12px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-areas: "name preis" "satz satz" "dauer dauer";
+  column-gap: 12px;
+  row-gap: 6px;
+  align-items: baseline;
+  padding: 14px 16px;
   background: var(--surface-card);
   border: 1.5px solid var(--border-ink);
   border-radius: var(--radius-sm);
+  scroll-margin-top: 12px;
   transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
 }
 .pm-cell:hover { background: var(--sand-300); transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--border-ink); }
 .pm-cell:focus-visible { outline: 3px solid var(--orange-500); outline-offset: 2px; }
+.pm-cell__name { grid-area: name; font-size: 18px; font-weight: var(--weight-bold); color: var(--text-strong); line-height: 1.3; }
 .pm-cell__preis {
-  font-size: 24px;
+  grid-area: preis;
+  font-size: 20px;
   font-weight: var(--weight-bold);
   letter-spacing: var(--tracking-tight);
   font-variant-numeric: tabular-nums;
   line-height: 1.05;
+  text-align: right;
+  white-space: nowrap;
 }
-.pm-cell__name { font-size: 14.5px; color: var(--text-body); line-height: 1.3; }
-.pm-cell__tag {
-  align-self: flex-start;
-  margin-top: auto;
-  font-size: var(--text-badge);
-  letter-spacing: var(--tracking-badge);
-  text-transform: uppercase;
-  font-weight: var(--weight-bold);
-  padding: 3px 8px;
-  border-radius: var(--radius-pill);
-  background: var(--peach-150);
-  color: var(--terra-600);
-}
+.pm-cell__satz { grid-area: satz; font-size: 15px; line-height: 1.4; color: var(--text-body); }
+.pm-cell__dauer { grid-area: dauer; font-size: 13.5px; font-weight: var(--weight-medium); color: var(--text-muted); font-variant-numeric: tabular-nums; }
+.pm-cell__dauer::before { content: "\25F7\00a0"; }
+.pm-cell__tag { display: none; }
 .pm-cell.ist-gewaehlt {
   background: var(--grad-package);
   color: var(--text-on-terra);
   box-shadow: var(--shadow-comic);
   transform: translate(-3px, -3px);
 }
-.pm-cell.ist-gewaehlt .pm-cell__name { color: var(--text-on-terra-soft); }
-.pm-cell.ist-gewaehlt .pm-cell__tag { background: var(--peach-200); }
+.pm-cell.ist-gewaehlt .pm-cell__name { color: var(--text-on-terra); }
+.pm-cell.ist-gewaehlt .pm-cell__satz { color: var(--text-on-terra-soft); }
+.pm-cell.ist-gewaehlt .pm-cell__dauer { color: var(--peach-200); }
 
 .pm-hinweis { margin: 12px 0 0; font-size: var(--text-ui); color: var(--text-muted); }
 
@@ -266,66 +269,16 @@
 }
 .pm-card .pm-drin + .pm-liste { margin-top: 8px; }
 
-/* Leiter: drei Grössen, vor der Matrix */
-.pm-leiter {
-  list-style: none;
-  margin: var(--space-6) 0 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 14px;
-}
-.pm-leiter li {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  padding: 16px 18px;
-  background: var(--bg-alt);
-  border-radius: var(--radius-md);
-}
-.pm-leiter p { margin: 0; font-size: 15px; color: var(--text-body); line-height: 1.4; }
-.pm-leiter__kopf { display: flex; align-items: center; gap: 10px; }
-.pm-leiter__kopf i {
-  font-style: normal;
-  display: inline-grid;
-  place-items: center;
-  width: 28px;
-  height: 28px;
-  border-radius: var(--radius-xs);
-  background: var(--peach-150);
-  color: var(--terra-600);
-  font-weight: var(--weight-bold);
-  font-size: 13px;
-}
-.pm-leiter__kopf b { font-size: 18px; color: var(--text-strong); }
-.pm-leiter .pm-leiter__bsp { color: var(--text-strong); font-style: italic; }
-.pm-leiter .pm-leiter__gewinn {
-  margin-top: auto;
-  padding-top: 8px;
-  border-top: 1px solid var(--border-soft);
-  color: var(--text-strong);
-}
-.pm-leiter__gewinn span {
-  display: block;
-  font-size: var(--text-overline);
-  letter-spacing: var(--tracking-badge);
-  text-transform: uppercase;
-  font-weight: var(--weight-bold);
-  color: var(--terra-600);
-  margin-bottom: 2px;
-}
+/* Handy (bis 700 px): Schrittwahl + eine Spalte statt drei */
+.pm-schritt { display: none; }
 @media (max-width: 860px) {
-  .pm-leiter { grid-template-columns: 1fr; }
+  .pm-matrix { grid-template-columns: 1fr; }
 }
-
-/* Handy-Bausteine: am Desktop unsichtbar */
-.pm-schritt, .pm-cell__dauer, .pm-cell__satz { display: none; }
-
-/* Handy (bis 700 px): Schrittwahl + Karten statt Raster */
 @media (max-width: 700px) {
-  .pm-scroll { overflow: visible; margin-top: var(--space-6); }
-  .pm-matrix { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
-  .pm-corner, .pm-row, .pm-col { display: none; }
+  .pm-scroll { margin-top: var(--space-6); }
+  .pm-matrix { display: flex; flex-direction: column; gap: 12px; }
+  .pm-spalte { display: contents; }
+  .pm-col { display: none; }
 
   .pm-schritt { display: block; }
   .pm-schritt__leiste {
@@ -362,29 +315,11 @@
   .pm-matrix[data-spalte="Verbunden"] .pm-cell:not([data-komplexitaet="Verbunden"]),
   .pm-matrix[data-spalte="Ganzer Ablauf"] .pm-cell:not([data-komplexitaet="Ganzer Ablauf"]) { display: none; }
 
-  .pm-cell {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-areas: "dauer dauer" "name preis" "satz satz";
-    column-gap: 12px;
-    row-gap: 4px;
-    align-items: baseline;
-    min-height: 0;
-    padding: 14px 16px;
-    scroll-margin-top: 12px;
-  }
+  .pm-cell { row-gap: 4px; }
   .pm-cell:hover { transform: none; box-shadow: none; }
   .pm-cell.ist-gewaehlt { transform: none; box-shadow: none; }
-  .pm-cell__dauer, .pm-cell__satz { display: block; }
-  .pm-cell__dauer { grid-area: dauer; font-size: 14px; font-weight: var(--weight-semibold); color: var(--terra-600); }
-  .pm-cell__name { grid-area: name; font-size: 19px; font-weight: var(--weight-bold); color: var(--text-strong); }
-  .pm-cell__preis { grid-area: preis; font-size: 20px; text-align: right; white-space: nowrap; }
-  .pm-cell__satz { grid-area: satz; font-size: 15px; line-height: 1.4; color: var(--text-body); margin-top: 2px; }
-  .pm-cell__tag { display: none; }
-  .pm-cell.ist-gewaehlt .pm-cell__dauer { color: var(--peach-200); }
-  .pm-cell.ist-gewaehlt .pm-cell__name { color: var(--text-on-terra); }
-  .pm-cell.ist-gewaehlt .pm-cell__satz { color: var(--text-on-terra-soft); }
+  .pm-cell__name { font-size: 19px; }
 
-  .pm-matrix > .pm-detail { margin-top: 0; gap: 12px; }
+  .pm-matrix > .pm-detail, .pm-spalte > .pm-detail { margin-top: 0; gap: 12px; }
   .pm-card { padding: 20px 18px; }
 }

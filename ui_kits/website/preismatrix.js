@@ -33,7 +33,7 @@
     var betreuungEl = document.querySelector('.pm-tabelle [data-preis="' + betreuungId + '"]');
     var betreuung = betreuungEl ? zahl(betreuungEl.textContent) : 0;
 
-    setze('pm-d-kicker', zelle.getAttribute('data-komplexitaet') + ' · ' + zelle.getAttribute('data-zeit'));
+    setze('pm-d-kicker', zelle.getAttribute('data-komplexitaet'));
     setze('pm-d-titel', zelle.querySelector('.pm-cell__name').textContent.trim());
     setze('pm-d-text', zelle.getAttribute('data-text') || '');
     setze('pm-d-nutzen', zelle.getAttribute('data-nutzen') || '');
@@ -63,7 +63,7 @@
   /* Handy (bis 700 px): Schrittwahl als Leiste, nur eine Spalte sichtbar,
    * Detailkarte klappt direkt unter der angetippten Karte auf. Die neun Zellen
    * bleiben die einzige Datenquelle; Dauer und Satz werden aus ihren
-   * data-Attributen in die Karte gespiegelt (am Desktop per CSS verborgen). */
+   * data-Attributen in die Karte gespiegelt (Dauer ist nur Information, kein Preistreiber). */
   var mq = window.matchMedia ? window.matchMedia('(max-width: 700px)') : null;
   var detail = document.querySelector('.pm-detail');
   var detailHeim = detail ? detail.parentNode : null;
@@ -78,8 +78,8 @@
     var satz = document.createElement('span');
     satz.className = 'pm-cell__satz';
     satz.textContent = zellen[z].getAttribute('data-text') || '';
-    zellen[z].insertBefore(dauer, zellen[z].firstChild);
     zellen[z].appendChild(satz);
+    zellen[z].appendChild(dauer);
   }
 
   function setzeSpalte(name) {
@@ -109,7 +109,7 @@
     gruppe.setAttribute('role', 'group');
     gruppe.setAttribute('aria-label', 'Grösse des Schritts');
     Array.prototype.forEach.call(spalten, function (sp) {
-      var name = sp.firstChild.textContent.trim();
+      var name = sp.querySelector('.pm-col__kopf b').textContent.trim();
       var klein = sp.querySelector('small');
       var b = document.createElement('button');
       b.type = 'button';

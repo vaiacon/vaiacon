@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag af92a87 Merge pull request #22 from vaiacon/matrix-handy
+> Stand: 09.10.2026 · Eintrag 73e937e Merge pull request #23 from vaiacon/beispiele-sachlich
 
 ## Wie du antwortest
 
@@ -571,51 +571,44 @@ Ein Bereich ohne Handarbeit.
 ab CHF 6'800
 Alle Beispiele mit Heute, Danach und Nutzen →
 WAS ES KOSTET
-Wie gross ist der Schritt, und wie schnell ist er fertig?
-Alles, was sich in Ihrem Betrieb wiederholt, lässt sich automatisieren: von der einen festen Regel bis zum ganzen Bereich. Zwei Fragen bestimmen den Preis: Wie gross ist der Schritt, und wie lange brauchen wir dafür? Die Einstufung machen wir in der Erstanalyse, danach steht der Fixpreis. Alle Preise pro Ablauf, einmalig, inklusive MWST.
-1 Einfach
-Eine feste Regel nimmt Ihnen eine Handarbeit ab. Wie ein Türöffner: Wenn dies passiert, geschieht das.
+Wie gross ist der Schritt?
+Alles, was sich in Ihrem Betrieb wiederholt, lässt sich automatisieren: von der einen festen Regel bis zum ganzen Bereich. Der Preis hängt nur davon ab, wie gross der Schritt ist. Wie schnell er bei Ihnen fertig ist, sagen wir Ihnen dazu – das ändert am Preis nichts. Die Einstufung machen wir in der Erstanalyse, danach steht der Fixpreis. Alle Preise pro Ablauf, einmalig, inklusive MWST.
+1 Einfach Eine feste Regel in einem Programm
 Eine Rechnung kommt per Mail und liegt Sekunden später im richtigen Ordner.
 Was Sie davon haben Nichts geht verloren, niemand sucht am Monatsende.
-2 Verbunden
-Zwei Programme reden miteinander, oder die KI liest etwas und entscheidet. Was Sie heute abtippen, geschieht von selbst.
-Der Beleg geht aus der Mail direkt in die Buchhaltung.
-Was Sie davon haben Kein Abtippen mehr, die Zahlen stimmen.
-3 Ganzer Ablauf
-Mehrere Schritte, Freigaben und Ausnahmen: ein ganzer Bereich läuft von selbst. Sie geben nur frei, wo es Sie braucht.
-Von der Anfrage bis zur Rechnung, ohne dass jemand etwas weiterreicht.
-Was Sie davon haben Der Bereich hängt nicht mehr an einer Person, Rechnungen gehen am Tag des Abschlusses raus.
-Dauer ↓ Grösse des Schritts →
-Einfach Eine feste Regel in einem Programm
-Verbunden Zwei Programme reden miteinander, oder die KI entscheidet
-Ganzer Ablauf Mehrere Schritte, Freigaben, Ausnahmen: ein Bereich läuft von selbst
-Tage Bei Ihnen fertig in 1 bis 2 Tagen
+Preis ab CHF 1'300
 ab CHF 1'300
 Kleiner Ablauf
 Katalog
+ab CHF 2'200
+Ablauf mit eigenen Regeln
+ab CHF 3'800
+Postfach mit KI
+2 Verbunden Zwei Programme reden miteinander, oder die KI entscheidet
+Der Beleg geht aus der Mail direkt in die Buchhaltung.
+Was Sie davon haben Kein Abtippen mehr, die Zahlen stimmen.
+Preis ab CHF 1'900
 ab CHF 1'900
 Anbindung
 Katalog
-ab CHF 2'600
-Freigabe-Schleife
-Woche Bei Ihnen fertig in etwa einer Woche
-ab CHF 2'200
-Ablauf mit eigenen Regeln
 ab CHF 3'000
 Belege und Offerten
 Katalog
-ab CHF 4'200
-Auftragsablauf
-Wochen Bei Ihnen fertig in 2 bis 3 Wochen
-ab CHF 3'800
-Postfach mit KI
 ab CHF 5'200
 Kundendossier
+3 Ganzer Ablauf Mehrere Schritte, Freigaben, Ausnahmen: ein Bereich läuft von selbst
+Von der Anfrage bis zur Rechnung, ohne dass jemand etwas weiterreicht.
+Was Sie davon haben Der Bereich hängt nicht mehr an einer Person, Rechnungen gehen am Tag des Abschlusses raus.
+Preis ab CHF 2'600
+ab CHF 2'600
+Freigabe-Schleife
+ab CHF 4'200
+Auftragsablauf
 ab CHF 6'800
 Ganzer Bereich
 Katalog
 Antippen: Sie sehen, was passiert, was es bringt und was es im ersten Jahr kostet.
-Einfach · Tage
+Einfach
 Kleiner Ablauf
 Eine feste Regel: Kommt ein Beleg per Mail, legen wir ihn von selbst richtig ab.
 Was Sie davon haben Niemand sucht mehr am Monatsende, und kein Beleg geht verloren.
@@ -697,20 +690,20 @@ Danach
 Stufe 1 · Einfach Belege ablegen
 Jede Rechnung aus Mail oder Handyfoto liegt Sekunden später benannt im richtigen Ordner. Unklares landet in «Bitte prüfen».
 Passt, wenn Belege per Mail oder Foto kommen und eine feste Ablage da ist: Drive, OneDrive, NAS.
-Einfach · Tage ab CHF 1'300 pro Ablauf
+Einfach · bei Ihnen fertig in 1 bis 2 Arbeitstagen ab CHF 1'300 pro Ablauf
 Stufe 2 · Verbunden In die Buchhaltung
 Aus dem Beleg wird ein Buchungsentwurf in bexio, Abacus oder Banana. Doppelte Rechnungen werden abgefangen, Sie bestätigen mit einem Klick.
 Passt, wenn sich Ihr Buchhaltungsprogramm verbinden lässt: bexio, Abacus, Banana, Sage.
-Verbunden · Tage ab CHF 1'900 pro Programm
+Verbunden · bei Ihnen fertig in 1 bis 2 Arbeitstagen ab CHF 1'900 pro Programm
 Stufe 3 · Verbunden Mit Offerten
 Das Postfach wird gelesen: Belege werden gebucht, Anfragen werden zu Offerten-Entwürfen mit Ihren Preisen. Beides wartet auf Ihr OK.
 Passt, wenn Anfragen per Mail oder Formular kommen und Ihre Preise in einer Liste stehen.
-Verbunden · Woche ab CHF 3'000
+Verbunden · bei Ihnen fertig in 3 bis 5 Arbeitstagen ab CHF 3'000
 Passt nicht, wenn
 Belege kommen fast nur auf Papier.
 Die Buchhaltung läuft in Excel.
 Jede Offerte braucht eine Begehung.
-Einstufung: Einfach bis Verbunden Fixpreis nach Erstanalyse, ab CHF 1'300 pro Ablauf bis ab CHF 3'000 Zur Preismatrix →
+Einstufung: Einfach bis Verbunden Fixpreis nach Erstanalyse, ab CHF 1'300 pro Ablauf bis ab CHF 3'000 Zu den Preisen →
 BEREICH 2
 Offerten, Freigaben und Aufträge
 2 Einfach · Offerte aus dem Formular
@@ -732,7 +725,7 @@ Wiederkehrende Leistungen mit klaren Preisen.
 Mehrere Personen schreiben Offerten.
 Passt nicht, wenn
 Preise entstehen erst im Gespräch.
-Einstufung: Einfach · Woche Fixpreis nach Erstanalyse, ab CHF 2'200 Zur Preismatrix →
+Einstufung: Einfach · bei Ihnen fertig in 3 bis 5 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 2'200 Zu den Preisen →
 3 Ganzer Ablauf · Freigabe-Schleife
 Grosse Beträge gehen erst nach Ihrer Freigabe weiter.
 Rechnungen über einem Betrag, den Sie festlegen, gehen per Mail oder Handy-Nachricht zur Freigabe. Erst dann werden sie bezahlt.
@@ -752,7 +745,7 @@ Klare Regel: Betrag, Lieferant oder Kostenstelle.
 Die freigebende Person ist oft unterwegs.
 Passt nicht, wenn
 Jede Rechnung soll persönlich angeschaut werden.
-Einstufung: Ganzer Ablauf · Tage Fixpreis nach Erstanalyse, ab CHF 2'600 Zur Preismatrix →
+Einstufung: Ganzer Ablauf · bei Ihnen fertig in 1 bis 2 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 2'600 Zu den Preisen →
 4 Ganzer Ablauf · Von der Anfrage zur Rechnung
 Von der Anfrage bis zur Rechnung in einem Fluss.
 Eine Anfrage kommt rein, die Offerte geht raus, der Auftrag wird angelegt, nach Abschluss folgt die Rechnung. Alle beteiligten Programme arbeiten dabei zusammen.
@@ -772,7 +765,7 @@ Mehrere Aufträge pro Woche laufen ähnlich ab.
 Programme für Offerte, Auftrag und Rechnung sind da.
 Passt nicht, wenn
 Projekte dauern Monate und ändern sich ständig.
-Einstufung: Ganzer Ablauf · Woche Fixpreis nach Erstanalyse, ab CHF 4'200 Zur Preismatrix →
+Einstufung: Ganzer Ablauf · bei Ihnen fertig in 3 bis 5 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 4'200 Zu den Preisen →
 BEREICH 3
 Postfach, Kunden und ganze Bereiche
 5 Einfach · Postfach mit KI
@@ -794,7 +787,7 @@ Viele ähnliche Anfragen: Preis, Verfügbarkeit, Termin.
 Mail ist Ihr Hauptkanal.
 Passt nicht, wenn
 Jede Antwort ist ein Beratungsgespräch.
-Einstufung: Einfach · Wochen Fixpreis nach Erstanalyse, ab CHF 3'800 Zur Preismatrix →
+Einstufung: Einfach · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 3'800 Zu den Preisen →
 6 Verbunden · Kundendossier
 Zu jedem Kunden alles an einem Ort, mit Kurzfassung.
 Mails, Rechnungen, Offerten und Termine je Kunde aus zwei Programmen, mit Kurzfassung von der KI.
@@ -814,7 +807,7 @@ Stammkunden mit längerer Beziehung.
 Daten liegen in zwei Programmen.
 Passt nicht, wenn
 Alles ist schon sauber in einem CRM.
-Einstufung: Verbunden · Wochen Fixpreis nach Erstanalyse, ab CHF 5'200 Zur Preismatrix →
+Einstufung: Verbunden · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 5'200 Zu den Preisen →
 7 Ganzer Ablauf · Ganzer Bereich
 Ein ganzer Bereich läuft von selbst, mit Freigaben, wo sie hingehören.
 Einkauf oder Rapportierung komplett: Bestellung, Lieferschein, Rechnung, Freigabe, Buchung, Auswertung.
@@ -834,7 +827,7 @@ Ein abgegrenzter Bereich mit vielen Durchläufen.
 Die Geschäftsleitung steht dahinter.
 Passt nicht, wenn
 Der Bereich ändert sich gerade grundlegend.
-Einstufung: Ganzer Ablauf · Wochen Fixpreis nach Erstanalyse, ab CHF 6'800 Zur Preismatrix →
+Einstufung: Ganzer Ablauf · bei Ihnen fertig in 6 bis 12 Arbeitstagen Fixpreis nach Erstanalyse, ab CHF 6'800 Zu den Preisen →
 NÄCHSTER SCHRITT
 Welches Beispiel kommt Ihnen bekannt vor?
 Erzählen Sie uns im Erstgespräch, was bei Ihnen jede Woche liegen bleibt. Wir sagen Ihnen, wo sich eine Automation lohnt und wo nicht. Kostenlos und unverbindlich.
@@ -1038,7 +1031,7 @@ Nur so weit, wie es für die Einrichtung nötig ist, und nur, was Sie freigeben.
 Brauchen wir dafür technisches Wissen? +
 Nein. Wir richten es ein und zeigen es Ihrem Team. Wer tiefer verstehen will, wie es funktioniert, erfährt das in der Schulung.
 Wie lange dauert die erste Automation? +
-Von der Erstanalyse bis zum Betrieb meist wenige Wochen. Wir fangen bewusst klein an: Eine Sache, die funktioniert, ist mehr wert als fünf, die halb fertig sind.
+Von der Erstanalyse bis zum Betrieb meist wenige Wochen. Wir fangen bewusst klein an: Eine Sache, die funktioniert, ist mehr wert als fünf, die halb fertig sind. Die Dauer nennen wir Ihnen vorab; sie ändert am Preis nichts, der hängt nur an der Grösse des Schritts.
 Zu den Automationen →
 Sichtbarkeit
 Was bedeutet Sichtbarkeit? +
