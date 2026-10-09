@@ -276,6 +276,7 @@
 
   function neuBauen(sanft) {
     liste.innerHTML = bauen(wahl);
+    geo = null;
     knopf.setAttribute('href', 'kontakt#formular');
     if (sanft && !reduziert) {
       liste.classList.remove('lr-umgestellt');
@@ -285,15 +286,118 @@
     messen();
   }
 
+  /* ── Der kurvige Weg ───────────────────────────────────────────────────
+     Ein SVG-Band läuft von Knoten zu Knoten (Kubikkurven mit senkrechten
+     Tangenten, die Knoten sitzen abwechselnd links und rechts der Mitte).
+     Die Bandbreite wächst nach unten (Strassen-Perspektive), darunter liegt
+     ein weicher Schatten. Der gefahrene Teil wird beim Scrollen entlang der
+     Pfadlänge gezeichnet (Randpunkte aus getPointAtLength, Mittellinie mit
+     stroke-dashoffset), der Marker fährt per getPointAtLength mit. */
+  var NS = 'http://www.w3.org/2000/svg';
+  function el(n, a) { var e = doc.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); return e; }
+  var svg = null, geo = null;
+  if (weg && fuellung) {
+    svg = el('svg', { 'class': 'lr-pfad', 'aria-hidden': 'true', focusable: 'false' });
+    svg.innerHTML =
+      '<defs>' +
+        '<filter id="lr-schatten" x="-20%" y="-5%" width="140%" height="110%"><feGaussianBlur stdDeviation="7"/></filter>' +
+        '<linearGradient id="lr-verlauf" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="0" y2="1">' +
+          '<stop offset="0" stop-color="#B25222"/><stop offset="1" stop-color="#E0803F"/></linearGradient>' +
+      '</defs>' +
+      '<polygon class="lr-pfad__schatten" filter="url(#lr-schatten)"/>' +
+      '<polygon class="lr-pfad__band"/>' +
+      '<path class="lr-pfad__mitte"/>' +
+      '<polygon class="lr-pfad__gefahren" fill="url(#lr-verlauf)"/>' +
+      '<path class="lr-pfad__spitze"/>' +
+      '<circle class="lr-pfad__marker" r="7"/>';
+    weg.insertBefore(svg, weg.firstChild);
+  }
+
+  function pfadBauen() {
+    if (!svg) return;
+    var items = liste.querySelectorAll('[data-station]');
+    var r = weg.getBoundingClientRect();
+    var H = r.height, W = r.width;
+    if (!items.length || !H) { geo = null; return; }
+    var P = [], i;
+    for (i = 0; i < items.length; i++) {
+      var k = items[i].querySelector('.lr-station__knoten').getBoundingClientRect();
+      P.push({ x: k.left + k.width / 2 - r.left, y: k.top + k.height / 2 - r.top });
+    }
+    var d = 'M' + P[0].x.toFixed(1) + ' ' + Math.max(0, P[0].y - 36).toFixed(1) + ' L' + P[0].x.toFixed(1) + ' ' + P[0].y.toFixed(1);
+    for (i = 1; i < P.length; i++) {
+      var a = P[i - 1], b = P[i], m = (b.y - a.y) * 0.5;
+      d += ' C' + a.x.toFixed(1) + ' ' + (a.y + m).toFixed(1) + ' ' + b.x.toFixed(1) + ' ' + (b.y - m).toFixed(1) + ' ' + b.x.toFixed(1) + ' ' + b.y.toFixed(1);
+    }
+    var last = P[P.length - 1];
+    d += ' L' + last.x.toFixed(1) + ' ' + Math.min(H, last.y + 36).toFixed(1);
+
+    svg.setAttribute('viewBox', '0 0 ' + W.toFixed(1) + ' ' + H.toFixed(1));
+    svg.setAttribute('width', W); svg.setAttribute('height', H);
+    var mitte = svg.querySelector('.lr-pfad__mitte'), spitze = svg.querySelector('.lr-pfad__spitze');
+    mitte.setAttribute('d', d); spitze.setAttribute('d', d);
+    var Ltot = mitte.getTotalLength();
+
+    /* Perspektive: Halbbreite wächst von oben (hinten) nach unten (vorne) */
+    var schmal = W < 560;
+    var wOben = schmal ? 5 : 11, wUnten = schmal ? 13 : 30;
+    var n = Math.max(40, Math.round(Ltot / 14)), S = [];
+    for (i = 0; i <= n; i++) {
+      var L = Ltot * i / n, p = mitte.getPointAtLength(L), q = mitte.getPointAtLength(Math.min(Ltot, L + 1)), o = mitte.getPointAtLength(Math.max(0, L - 1));
+      var tx = q.x - o.x, ty = q.y - o.y, tl = Math.sqrt(tx * tx + ty * ty) || 1;
+      var nx = -ty / tl, ny = tx / tl, w = wOben + (wUnten - wOben) * (p.y / H);
+      S.push({ L: L, x: p.x, y: p.y, lx: p.x + nx * w, ly: p.y + ny * w, rx: p.x - nx * w, ry: p.y - ny * w });
+    }
+    function rand(upTo) {
+      var links = [], rechts = [];
+      for (var j = 0; j <= upTo; j++) { links.push(S[j].lx.toFixed(1) + ',' + S[j].ly.toFixed(1)); rechts.unshift(S[j].rx.toFixed(1) + ',' + S[j].ry.toFixed(1)); }
+      return links.concat(rechts).join(' ');
+    }
+    var voll = rand(n);
+    svg.querySelector('.lr-pfad__band').setAttribute('points', voll);
+    var sch = svg.querySelector('.lr-pfad__schatten');
+    sch.setAttribute('points', voll); sch.setAttribute('transform', 'translate(0 9)');
+    var vl = svg.querySelector('#lr-verlauf'); vl.setAttribute('y2', H);
+    spitze.setAttribute('stroke-dasharray', Ltot);
+    geo = { S: S, n: n, rand: rand, Ltot: Ltot, mitte: mitte, spitze: spitze,
+            gef: svg.querySelector('.lr-pfad__gefahren'), marker: svg.querySelector('.lr-pfad__marker') };
+  }
+
+  /* Pfadlänge, bei der der Weg die Marke (y im Weg) erreicht */
+  function laengeBei(y) {
+    var S = geo.S, j;
+    if (y <= S[0].y) return 0;
+    for (j = 1; j < S.length; j++) {
+      if (S[j].y >= y) {
+        var t = (y - S[j - 1].y) / ((S[j].y - S[j - 1].y) || 1);
+        return S[j - 1].L + (S[j].L - S[j - 1].L) * t;
+      }
+    }
+    return geo.Ltot;
+  }
+  function zeichnen(len) {
+    if (!geo) return;
+    var S = geo.S, idx = 0;
+    while (idx < S.length - 1 && S[idx + 1].L <= len) idx++;
+    geo.gef.setAttribute('points', len <= 0 ? '' : geo.rand(idx));
+    geo.spitze.setAttribute('stroke-dashoffset', geo.Ltot - len);
+    var p = geo.mitte.getPointAtLength(Math.min(len, geo.Ltot));
+    geo.marker.setAttribute('cx', p.x); geo.marker.setAttribute('cy', p.y);
+    geo.marker.style.opacity = len > 0 && len < geo.Ltot ? 1 : 0;
+  }
+
   var wartet = false;
   function messen() {
     if (!weg) return;
-    if (reduziert) { fuellung.style.height = ''; wartet = false; return; }
     var items = liste.querySelectorAll('[data-station]');
     var r = weg.getBoundingClientRect();
     var linie = root.innerHeight * 0.6;               /* Marke auf 60 % der Fensterhöhe */
-    var hoehe = Math.max(0, Math.min(r.height, linie - r.top));
-    fuellung.style.height = hoehe + 'px';
+    if (!geo || Math.abs(geo.H - r.height) > 1 || geo.W !== r.width) { pfadBauen(); if (geo) { geo.H = r.height; geo.W = r.width; } }
+    if (reduziert) {
+      if (geo) zeichnen(geo.Ltot);
+      wartet = false; return;
+    }
+    if (geo) zeichnen(laengeBei(Math.max(0, Math.min(r.height, linie - r.top))));
     for (var i = 0; i < items.length; i++) {
       var k = items[i].querySelector('.lr-station__knoten').getBoundingClientRect();
       var mitte = k.top + k.height / 2;
@@ -323,4 +427,5 @@
   root.addEventListener('scroll', beiScroll, { passive: true });
   root.addEventListener('resize', beiScroll);
   root.addEventListener('load', messen);
+  if (root.ResizeObserver && weg) new root.ResizeObserver(function () { geo = null; beiScroll(); }).observe(liste);
 })(typeof window !== 'undefined' ? window : this);

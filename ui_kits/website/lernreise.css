@@ -98,13 +98,26 @@
   background: linear-gradient(180deg, var(--terra-500), var(--orange-500));
 }
 .lr-js .lr-spur__fuellung { height: 0; }
+/* Mit JS ersetzt das SVG-Band (lernreise.js) die gerade Spur */
+.lr-js .lr-spur { display: none; }
+.lr-pfad { position: absolute; left: 0; top: 0; width: 100%; overflow: visible; pointer-events: none; z-index: 0; }
+.lr-pfad__schatten { fill: rgba(62, 22, 6, 0.28); }
+.lr-pfad__band { fill: var(--sand-200); stroke: var(--brown-300); stroke-width: 2; stroke-linejoin: round; }
+.lr-pfad__mitte { fill: none; stroke: var(--cream-50); stroke-width: 2.5; stroke-dasharray: 10 12; stroke-linecap: round; opacity: .9; }
+.lr-pfad__gefahren { stroke: var(--terra-500); stroke-width: 2; stroke-linejoin: round; }
+.lr-pfad__spitze { fill: none; stroke: var(--cream-50); stroke-width: 3; stroke-linecap: round; }
+.lr-pfad__marker { fill: var(--cream-50); stroke: var(--terra-600, #8f3f17); stroke-width: 3.5; transition: opacity .2s; }
+
+/* Knoten sitzen abwechselnd links und rechts der Mitte, auf dem Weg */
+.lr-js .lr-station:nth-child(odd) .lr-station__knoten { transform: translateX(-40px); }
+.lr-js .lr-station:nth-child(even) .lr-station__knoten { transform: translateX(40px); }
 
 .lr-liste { list-style: none; margin: 0; padding: 0; position: relative; }
 
 .lr-station {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 64px minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1fr) 150px minmax(0, 1fr);
   align-items: center;
   column-gap: var(--space-4);
   padding: var(--space-4) 0;
@@ -436,10 +449,12 @@ html:not(.lr-js) .lr-station__knoten span,
   .lr-option span { min-height: 46px; padding: 6px 6px; border-radius: 14px; font-size: 13.5px; }
   /* Weg links, Karte rechts, Bild klein unter der Karte */
   .lr-spur { left: 22px; margin-left: -3px; }
+  .lr-js .lr-station:nth-child(odd) .lr-station__knoten { transform: translateX(-9px); }
+  .lr-js .lr-station:nth-child(even) .lr-station__knoten { transform: translateX(9px); }
   .lr-station,
   .lr-station--links,
   .lr-station--rechts {
-    grid-template-columns: 44px minmax(0, 1fr);
+    grid-template-columns: 58px minmax(0, 1fr);
     column-gap: var(--space-3);
     align-items: start;
     row-gap: 0;
@@ -473,6 +488,7 @@ html:not(.lr-js) .lr-station__knoten span,
   .lr-umgestellt .lr-station { animation: none; }
   .lr-station__karte, .lr-station__knoten span, .lr-js .lr-station__bild, .lr-option span { transition: none; }
   .lr-js .lr-spur__fuellung { height: 100%; }
+  .lr-pfad__marker { transition: none; }
   .lr-js .lr-station:not(.is-erreicht) .lr-station__karte,
   .lr-js .lr-station:not(.is-erreicht) .lr-station__bild { opacity: 1; filter: none; }
   .lr-js .lr-station:not(.is-erreicht) .lr-station__knoten span { background: var(--terra-500); border-color: var(--terra-500); color: var(--cream-50); }
