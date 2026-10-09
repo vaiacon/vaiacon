@@ -397,7 +397,7 @@
   .pm-branchen__karten { grid-template-columns: 1fr; }
   .pm-branchen__nervt ul { grid-template-columns: 1fr; }
   .pm-branchen__chips { justify-content: center; gap: 8px; }
-  .pm-branchen__chips button { width: calc(33.333% - 6px); font-size: 14px; padding: 8px 4px 10px; }
-  .pm-branchen__ico { width: 72px; height: 72px; }
+  .pm-branchen__chips button { width: calc(25% - 6px); font-size: 13px; padding: 8px 3px 10px; hyphens: auto; }
+  .pm-branchen__ico { width: 62px; height: 62px; }
 }
 @media (prefers-reduced-motion: reduce) { .pm-branchen__chips button { transition: none; } }
