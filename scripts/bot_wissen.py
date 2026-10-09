@@ -183,14 +183,22 @@ def bauen() -> tuple[str, list[str]]:
         t.append(seitentext(pfad))
         t.append("")
 
-    # Branchen-Umschalter der Preisleiter (daten/branchen.json): was die drei Sprossen je Branche heissen.
+    # Branchen-Umschalter der Preisleiter (daten/branchen.json): realistische Use Cases je Branche.
     t.append("### Branchen")
     t.append("")
-    t.append("Was die drei Sprossen (Einfache, Mittelgrosse, Komplette Automation) in einzelnen Branchen heissen:")
+    t.append("Realistische Use Cases je Branche, geordnet nach den drei Sprossen (Einfache, Mittelgrosse, Komplette Automation):")
     t.append("")
-    for b in BRANCHEN.values():
-        t.append(f"- {b['name']}: Einfache Automation: {b['einfach']} Mittelgrosse Automation: {b['verbunden']} Komplette Automation: {b['ganzer_ablauf']}")
-    t.append("")
+    for k, b in BRANCHEN.items():
+        t.append(f"#### {b['name']}")
+        t.append("")
+        if b.get("nervt"):
+            t.append("Das nervt: " + " ".join(b["nervt"]))
+            t.append("")
+        for sk, nm in (("einfach", "Einfache Automation"), ("verbunden", "Mittelgrosse Automation"), ("ganzer_ablauf", "Komplette Automation")):
+            t.append(f"{nm}:")
+            for u in b.get(sk, []):
+                t.append(f"- {u['titel']}: {u['satz']}")
+            t.append("")
 
     return "\n".join(t).rstrip() + "\n", fehlend
 

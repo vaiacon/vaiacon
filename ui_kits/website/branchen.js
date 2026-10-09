@@ -1,5 +1,5 @@
-/* Branchen-Umschalter in der Preisleiter (bot.html): Was die drei Sprossen in
- * einer Branche heissen. Die Sätze stehen in daten/branchen.json; die erste
+/* Branchen-Umschalter in der Preisleiter (bot.html): Realistische Use Cases je
+ * Branche und Sprosse, dazu «Das nervt». Die Texte stehen in daten/branchen.json; die erste
  * Branche steht auch im HTML, damit die Seite ohne JavaScript lesbar bleibt.
  * Die gewählte Branche merkt sich der Browser (localStorage), sonst gilt die erste.
  * Kein Zusammenhang mit preismatrix.js: Die Leiter rechnet unabhängig weiter. */
@@ -8,8 +8,9 @@
   var wurzel = document.getElementById('pm-branchen');
   if (!wurzel) return;
   var chips = wurzel.querySelector('.pm-branchen__chips');
-  var saetze = wurzel.querySelectorAll('[data-sprosse]');
-  if (!chips || !saetze.length) return;
+  var listen = wurzel.querySelectorAll('[data-sprosse]');
+  var nervt = wurzel.querySelector('.pm-branchen__nervt');
+  if (!chips || !listen.length) return;
   var SPEICHER = 'vaiacon-branche';
   var daten = null, knoepfe = [];
 
@@ -20,12 +21,39 @@
     try { localStorage.setItem(SPEICHER, id); } catch (e) { /* ohne Speicher */ }
   }
 
+  function fuellen(ul, eintraege, mitTitel) {
+    ul.textContent = '';
+    if (!eintraege || !eintraege.length) return;
+    for (var i = 0; i < eintraege.length; i++) {
+      var e = eintraege[i];
+      var li = document.createElement('li');
+      if (mitTitel) {
+        var t = document.createElement('b');
+        t.textContent = e.titel || '';
+        var sp = document.createElement('span');
+        sp.textContent = e.satz || '';
+        li.appendChild(t);
+        li.appendChild(document.createTextNode(' '));
+        li.appendChild(sp);
+      } else {
+        li.textContent = e;
+      }
+      ul.appendChild(li);
+    }
+  }
+
   function zeige(id) {
     var b = daten[id];
     if (!b) return;
-    for (var i = 0; i < saetze.length; i++) {
-      var s = saetze[i].getAttribute('data-sprosse');
-      saetze[i].textContent = b[s] || '';
+    for (var i = 0; i < listen.length; i++) {
+      var s = listen[i].getAttribute('data-sprosse');
+      fuellen(listen[i], b[s], true);
+    }
+    if (nervt) {
+      var n = nervt.querySelector('ul');
+      var hat = b.nervt && b.nervt.length;
+      nervt.hidden = !hat;
+      if (n && hat) fuellen(n, b.nervt, false);
     }
     for (var k = 0; k < knoepfe.length; k++) {
       var an = knoepfe[k].getAttribute('data-branche') === id;

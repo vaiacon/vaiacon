@@ -379,9 +379,16 @@
   background: var(--peach-150); color: var(--terra-600);
   font-family: var(--font-mono, "IBM Plex Mono", monospace); font-size: 11.5px; letter-spacing: 0;
 }
-.pm-branchen__karte p[data-sprosse] { margin: 0; font-size: 15px; line-height: 1.45; color: var(--text-body); }
-@media (max-width: 760px) {
+.pm-branchen__nervt { margin-top: 16px; padding: 10px 14px; border-left: 3px solid var(--accent); background: var(--surface-card); border-radius: 0 var(--radius-md) var(--radius-md) 0; font-size: 14px; line-height: 1.45; color: var(--text-body); }
+.pm-branchen__nervt[hidden] { display: none; }
+.pm-branchen__nervt b { display: block; margin-bottom: 4px; font-size: var(--text-overline); letter-spacing: var(--tracking-badge); text-transform: uppercase; font-weight: var(--weight-bold); color: var(--accent); }
+.pm-branchen__nervt ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px 18px; }
+.pm-branchen__liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.pm-branchen__liste li { margin: 0; font-size: 14px; line-height: 1.4; color: var(--brown-600, var(--text-body)); }
+.pm-branchen__liste b { display: block; font-family: var(--font-display, "Quicksand", sans-serif); font-weight: var(--weight-bold); font-size: 15px; color: var(--text-strong); }
+@media (max-width: 820px) {
   .pm-branchen__karten { grid-template-columns: 1fr; }
+  .pm-branchen__nervt ul { grid-template-columns: 1fr; }
   .pm-branchen__chips { justify-content: flex-start; }
 }
 @media (prefers-reduced-motion: reduce) { .pm-branchen__chips button { transition: none; } }

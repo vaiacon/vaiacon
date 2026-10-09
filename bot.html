@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20261005-vorschlag">
 <link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261009-fakten-versteckt">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
-<link rel="stylesheet" href="ui_kits/website/preismatrix.css?v=20261010-sprossen">
+<link rel="stylesheet" href="ui_kits/website/preismatrix.css?v=20261010-usecases">
 <link rel="stylesheet" href="ui_kits/website/automationen.css?v=20261010-sinnbilder">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
@@ -459,7 +459,7 @@
         </div>
 
         <div class="pm-branchen" id="pm-branchen">
-          <p class="pm-branchen__frage" id="pm-branchen-frage">Was die drei Sprossen in Ihrer Branche heissen:</p>
+          <p class="pm-branchen__frage" id="pm-branchen-frage">Was in Ihrer Branche von selbst laufen kann:</p>
           <div class="pm-branchen__chips" role="tablist" aria-labelledby="pm-branchen-frage">
             <button type="button" role="tab" data-branche="malerbetrieb" aria-selected="true">Malerbetrieb</button>
             <button type="button" role="tab" data-branche="treuhand" aria-selected="false">Treuhand</button>
@@ -467,11 +467,15 @@
             <button type="button" role="tab" data-branche="sanitaer-heizung" aria-selected="false">Sanitär und Heizung</button>
             <button type="button" role="tab" data-branche="agentur" aria-selected="false">Agentur</button>
             <button type="button" role="tab" data-branche="restaurant" aria-selected="false">Restaurant</button>
+            <button type="button" role="tab" data-branche="alle" aria-selected="false">Für alle Branchen</button>
           </div>
-          <div class="pm-branchen__karten" role="tabpanel" aria-live="polite">
-            <article class="pm-branchen__karte"><p class="pm-branchen__sprosse"><i>1</i>Einfache Automation</p><p data-sprosse="einfach">Das Foto von der Baustelle landet benannt im Projektordner.</p></article>
-            <article class="pm-branchen__karte"><p class="pm-branchen__sprosse"><i>2</i>Mittelgrosse Automation</p><p data-sprosse="verbunden">Aus dem Aufmass im Formular wird die Offerte in Ihrem Design.</p></article>
-            <article class="pm-branchen__karte"><p class="pm-branchen__sprosse"><i>3</i>Komplette Automation</p><p data-sprosse="ganzer_ablauf">Von der Anfrage über Offerte und Rapport bis zur Rechnung, Sie geben nur frei.</p></article>
+          <div class="pm-branchen__panel" role="tabpanel" aria-live="polite">
+            <div class="pm-branchen__nervt"><b>Das nervt</b><ul><li>Aufmass, Rapport und Offerte werden mehrfach abgetippt, bis am Ende die Rechnung rausgeht.</li><li>Offerten bleiben liegen, weil das Nachfassen an Notizzetteln und am Gedächtnis hängt.</li><li>Arbeitszeiten von der Baustelle kommen spät oder lückenhaft im Büro an.</li></ul></div>
+            <div class="pm-branchen__karten">
+            <article class="pm-branchen__karte"><p class="pm-branchen__sprosse"><i>1</i>Einfache Automation</p><ul class="pm-branchen__liste" data-sprosse="einfach"><li><b>Bewertungsbitte nach Abnahme</b> <span>Nach der Abnahme geht eine Nachricht mit Google-Bewertungslink an den Kunden, Ihre Referenzen wachsen ohne Nachfragen.</span></li><li><b>Rapport-Foto ablegen</b> <span>Fotos von Rapport und Lieferschein per WhatsApp landen automatisch im richtigen Projektordner, mit Datum und Kundennamen benannt.</span></li><li><b>Zahlungseingang abgleichen</b> <span>Eingehende QR-Zahlungen werden der offenen Rechnung zugeordnet und als bezahlt markiert, ohne dass jemand Kontoauszüge durchgeht.</span></li></ul></article>
+            <article class="pm-branchen__karte"><p class="pm-branchen__sprosse"><i>2</i>Mittelgrosse Automation</p><ul class="pm-branchen__liste" data-sprosse="verbunden"><li><b>Offerte mit Nachfassen</b> <span>Nach jedem Versand erinnert das System nach einer Woche und schreibt einen Nachfass-Entwurf, den Sie nur freigeben.</span></li><li><b>Aufmass zu Offertenentwurf</b> <span>Aus Raumfotos, Massen und Wunschfarbe entsteht ein Offertenentwurf mit Flächen und Material, den Sie prüfen und anpassen.</span></li><li><b>Terminabgleich mit Kunden</b> <span>Kunden wählen online einen freien Besichtigungstermin; er erscheint in Ihrem Kalender samt Adresse und Anfahrtszeit.</span></li></ul></article>
+            <article class="pm-branchen__karte"><p class="pm-branchen__sprosse"><i>3</i>Komplette Automation</p><ul class="pm-branchen__liste" data-sprosse="ganzer_ablauf"><li><b>Von Anfrage bis Rechnung</b> <span>Von der Anfrage über Besichtigung, Offerte und Rapport bis zur QR-Rechnung; Sie geben nur frei, der Mahnlauf läuft mit.</span></li><li><b>Mahnlauf von selbst</b> <span>Offene Rechnungen bekommen Erinnerung, erste und zweite Mahnung zur richtigen Zeit; bei Streit stoppt es und fragt Sie.</span></li><li><b>Social-Media-Funnel Anfrage</b> <span>Ein Beitrag mit Vorher-nachher-Bildern führt über ein Formular zur Anfrage; die KI ordnet sie ein und bucht die Besichtigung.</span></li></ul></article>
+            </div>
           </div>
         </div>
 
@@ -1183,7 +1187,7 @@
 <script src="ui_kits/website/visibility.js?v=20261007-logo-svg"></script>
 <script src="ui_kits/website/preise.js?v=20261004-preise"></script>
 <script src="ui_kits/website/preismatrix.js?v=20261010-eine-seite"></script>
-<script src="ui_kits/website/branchen.js?v=20261010-eine-seite"></script>
+<script src="ui_kits/website/branchen.js?v=20261010-usecases"></script>
 <script src="ui_kits/website/ihrfall.js?v=20261010-sprossen"></script>
 <script src="ui_kits/website/chat.js?v=20261004-umbau"></script>
 </body>
