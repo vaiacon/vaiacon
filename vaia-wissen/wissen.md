@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag e708477 Merge pull request #19 from vaiacon/offerte-ohne-katalog
+> Stand: 09.10.2026 · Eintrag eebc64e Matrix und Beispiele: einfache Sprache, drei Sprossen Einfach/Verbunden/Ganzer Ablauf, Nutzenzeile für die Chefin
 
 ## Wie du antwortest
 
