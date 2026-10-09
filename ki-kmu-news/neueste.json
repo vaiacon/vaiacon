@@ -1,26 +1,26 @@
 [
   {
+    "titel": "Gemini-Agent: Google bringt einen Helfer, der Aufgaben selbst erledigt, zuerst zu Firmenkunden",
+    "datum": "2026-10-09",
+    "rubrik": "werkzeuge",
+    "kurz": "Google hat laut TechCrunch an einem Cloud-Anlass einen einheitlichen Gemini-Agenten vorgestellt. Er plant Aufgaben selbst, greift auf Firmensysteme wie Workspace, Microsoft 365 oder Slack zu und zeigt in einem Posteingang, was er getan hat. Zuerst erhalten ihn Firmen, Privatpersonen folgen später. Zu Ländern, auch zur Schweiz, nennt der Artikel nichts.",
+    "adresse": "ki-kmu-news/2026-kw41#2026-10-09-gemini-agent-google-bringt-einen",
+    "bild": "assets/vaiacon-buerobot-news-werkzeuge.png"
+  },
+  {
+    "titel": "SynthID: Googles Prüfseite zeigt, ob Bilder, Videos oder Audio mit KI erzeugt wurden",
+    "datum": "2026-10-09",
+    "rubrik": "werkzeuge",
+    "kurz": "Google hat laut TechCrunch die Seite synthid.com für alle geöffnet. Dort lässt sich eine Datei hochladen, um zu prüfen, ob sie mit KI erzeugt wurde. Das gilt für Bilder, Videos und Audio. Die Prüfung beruht auf dem Wasserzeichen SynthID, das Googles Werkzeuge einbetten. Auch in der Gemini-App und im Browser Chrome ist die Prüfung eingebaut.",
+    "adresse": "ki-kmu-news/2026-kw41#2026-10-09-synthid-googles-pruefseite-zeigt-ob",
+    "bild": "assets/vaiacon-buerobot-news-werkzeuge.png"
+  },
+  {
     "titel": "KI-Agenten vor verschlossener Tür: Viele Websites lassen persönliche Assistenten nicht hinein",
     "datum": "2026-10-07",
     "rubrik": "markt",
     "kurz": "Persönliche KI-Agenten sollen Flüge buchen, Tische reservieren oder einkaufen. Laut TechCrunch blockieren aber viele Websites solche Agenten, teils gewollt, teils durch normalen Bot-Schutz. Meta und Partner arbeiten an einem Standard, mit dem sich Agenten und Websites klar verständigen können.",
     "adresse": "ki-kmu-news/2026-kw41#2026-10-07-ki-agenten-vor-verschlossener-tuer",
     "bild": "assets/vaiacon-buerobot-news-markt.png"
-  },
-  {
-    "titel": "Mistral Large 4: Das europäische Grossmodell ist da, offene Gewichte sollen folgen",
-    "datum": "2026-10-07",
-    "rubrik": "modelle",
-    "kurz": "Das französische Unternehmen Mistral hat am 6. Oktober «Mistral Large 4» vorgestellt, ein Modell mit rund einer Billion Parametern. Es ist vorerst nur über einen öffentlichen Zugang mit Schutzmassnahmen nutzbar. Eine offene Version ist nach Sicherheitstests in etwa drei Wochen geplant.",
-    "adresse": "ki-kmu-news/2026-kw41#2026-10-07-mistral-large-4-das-europaeische",
-    "bild": "assets/vaiacon-buerobot-news-modelle.png"
-  },
-  {
-    "titel": "OpenAI soll Texte aus ChatGPT in der EU mit unsichtbarem Wasserzeichen versehen",
-    "datum": "2026-10-06",
-    "rubrik": "recht",
-    "kurz": "Laut AI Weekly hat OpenAI am 5. Oktober «textGrain» vorgestellt. Das Verfahren legt ein unsichtbares Muster in die Wortwahl. AI Weekly berichtet, dass es in der EU in den kommenden Wochen für ChatGPT und Codex verpflichtend wird und API-Kunden weltweit es freiwillig einschalten können. OpenAI hat das selbst nicht bestätigt.",
-    "adresse": "ki-kmu-news/2026-kw41#2026-10-06-openai-versieht-texte-aus-chatgpt",
-    "bild": "assets/vaiacon-buerobot-news-recht.png"
   }
 ]

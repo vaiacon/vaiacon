@@ -6,7 +6,39 @@
 <atom:link href="https://vaiacon.ch/ki-kmu-news/feed.xml" rel="self" type="application/rss+xml"/>
 <description>Was KI-Neuigkeiten für Schweizer KMU heissen: was passiert ist, was es für Ihren Betrieb bedeutet und worauf Sie achten sollten.</description>
 <language>de-CH</language>
-<lastBuildDate>Wed, 07 Oct 2026 07:00:00 +0200</lastBuildDate>
+<lastBuildDate>Fri, 09 Oct 2026 07:00:00 +0200</lastBuildDate>
+<item>
+<title>Gemini-Agent: Google bringt einen Helfer, der Aufgaben selbst erledigt, zuerst zu Firmenkunden</title>
+<link>https://vaiacon.ch/ki-kmu-news/2026-kw41#2026-10-09-gemini-agent-google-bringt-einen</link>
+<guid isPermaLink="true">https://vaiacon.ch/ki-kmu-news/2026-kw41#2026-10-09-gemini-agent-google-bringt-einen</guid>
+<pubDate>Fri, 09 Oct 2026 07:00:00 +0200</pubDate>
+<category>Werkzeuge</category>
+<description>Google hat laut TechCrunch an einem Cloud-Anlass einen einheitlichen Gemini-Agenten vorgestellt. Er plant Aufgaben selbst, greift auf Firmensysteme wie Workspace, Microsoft 365 oder Slack zu und zeigt in einem Posteingang, was er getan hat. Zuerst erhalten ihn Firmen, Privatpersonen folgen später. Zu Ländern, auch zur Schweiz, nennt der Artikel nichts.
+
+Was heisst das für Ihr KMU? Solche Agenten übernehmen nicht nur Fragen, sondern ganze Arbeitsschritte, etwa Termine abstimmen, Dateien auswerten oder Tickets bearbeiten. Für Ihr KMU wird das interessant, wenn Sie bereits Google Workspace oder Microsoft 365 nutzen. Ob und wann der Agent in der Schweiz verfügbar ist, steht in der Quelle nicht. Es lohnt sich, jetzt zu überlegen, welche wiederkehrenden Aufgaben Sie einem Helfer anvertrauen würden.
+
+Was vaiacon dazu bietet: In der KI-Standortanalyse im Betrieb prüfen wir mit Ihnen, welche Abläufe sich für einen solchen Helfer eignen und welche Daten er dafür sehen dürfte. Was schon heute geht, setzen wir als Automation um, etwa für Belege und Offerten. So sind Sie bereit, wenn der Agent bei Ihnen ankommt.
+
+Worauf Sie achten sollten: Prüfen Sie vor dem Einsatz, welche Zugriffe ein Agent erhält und welche Personendaten er sieht. Die Quelle sagt nichts zu Datenspeicherung und Standort. Lassen Sie wichtige Ergebnisse zunächst von einer Person gegenlesen. Das ersetzt keine Rechtsauskunft.
+
+Von KI aus den genannten Quellen zusammengestellt. Fehler melden: hallo@vaiacon.ch</description>
+</item>
+<item>
+<title>SynthID: Googles Prüfseite zeigt, ob Bilder, Videos oder Audio mit KI erzeugt wurden</title>
+<link>https://vaiacon.ch/ki-kmu-news/2026-kw41#2026-10-09-synthid-googles-pruefseite-zeigt-ob</link>
+<guid isPermaLink="true">https://vaiacon.ch/ki-kmu-news/2026-kw41#2026-10-09-synthid-googles-pruefseite-zeigt-ob</guid>
+<pubDate>Fri, 09 Oct 2026 07:00:00 +0200</pubDate>
+<category>Werkzeuge</category>
+<description>Google hat laut TechCrunch die Seite synthid.com für alle geöffnet. Dort lässt sich eine Datei hochladen, um zu prüfen, ob sie mit KI erzeugt wurde. Das gilt für Bilder, Videos und Audio. Die Prüfung beruht auf dem Wasserzeichen SynthID, das Googles Werkzeuge einbetten. Auch in der Gemini-App und im Browser Chrome ist die Prüfung eingebaut.
+
+Was heisst das für Ihr KMU? Gefälschte Bilder oder Stimmen können auch Ihren Betrieb treffen, etwa in Bewerbungen, Rechnungen oder Anfragen. Die Seite ist eine einfache Hilfe für einen ersten Blick. Sie erkennt aber vermutlich nur Dateien mit einem passenden Wasserzeichen. Ein unauffälliges Ergebnis beweist deshalb noch nicht, dass eine Datei echt ist.
+
+Was vaiacon dazu bietet: In unseren Trainings und Workshops zeigen wir Ihrem Team, wie es KI-Inhalte einordnet und solche Prüfwerkzeuge sinnvoll nutzt. Sie erhalten dazu klare, kurze Regeln für den Alltag, zugeschnitten auf Ihren Betrieb.
+
+Worauf Sie achten sollten: Laden Sie keine vertraulichen Dateien oder Bilder mit Personen hoch, ohne vorher zu klären, was mit den Daten geschieht. Verlassen Sie sich nicht allein auf ein Werkzeug. Das ersetzt keine Rechtsauskunft.
+
+Von KI aus den genannten Quellen zusammengestellt. Fehler melden: hallo@vaiacon.ch</description>
+</item>
 <item>
 <title>KI-Agenten vor verschlossener Tür: Viele Websites lassen persönliche Assistenten nicht hinein</title>
 <link>https://vaiacon.ch/ki-kmu-news/2026-kw41#2026-10-07-ki-agenten-vor-verschlossener-tuer</link>
