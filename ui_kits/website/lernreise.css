@@ -148,3 +148,30 @@
   .lr-kurve { padding: var(--space-4); }
 }
 
+
+/* ── Formate: Zeilen über alle Kacheln gleich hoch (Ergänzung 2026-10-11) ──
+   Bild, Titel, «Was es ist», «Wann es passt» und Preis liegen je auf einer
+   gemeinsamen Zeile des Rasters, darum sitzen Trennlinie und Preis in jeder
+   Kachelreihe auf gleicher Höhe. Ohne Subgrid bleibt die Flex-Fassung oben. */
+@supports (grid-template-rows: subgrid) {
+  .lr-formate { display: grid; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: var(--space-4); align-items: stretch; }
+  .lr-format { display: grid; grid-template-rows: subgrid; grid-row: span 5; grid-column: span 2; row-gap: 0; flex: none; width: auto; }
+  .lr-format > * { min-width: 0; }
+  .lr-format:nth-child(5) { grid-column: 2 / span 2; }
+  .lr-format__preis { margin-top: 0 !important; align-self: start; }
+  .lr-format__preise { align-self: start; }
+  .lr-format__preise .lr-format__preis + .lr-format__preis { margin-top: var(--space-3) !important; }
+  @media (max-width: 1100px) {
+    .lr-formate { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+    .lr-format:nth-child(5) { grid-column: auto / span 2; }
+    .lr-format:nth-child(7) { grid-column: 3 / span 2; }
+  }
+  @media (max-width: 860px) {
+    .lr-formate { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .lr-format:nth-child(7) { grid-column: 2 / span 2; }
+  }
+  @media (max-width: 560px) {
+    .lr-formate { grid-template-columns: minmax(0, 1fr); }
+    .lr-format, .lr-format:nth-child(5), .lr-format:nth-child(7) { grid-column: auto / span 1; }
+  }
+}

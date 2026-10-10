@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 11.10.2026 · Eintrag 68f58f3 Online-Kurs nach Mass: fünf Minuten für CHF 1'450, jede weitere Minute CHF 290
+> Stand: 11.10.2026 · Eintrag 07eea26 Preislogik 2026-10-11 live: ein Katalog, Online-Kurs 1'450, Branche Immobilien, Lernreise-Ziel
 
 ## Wie du antwortest
 
@@ -1203,7 +1203,7 @@ Muss die Anbieterin einen Termin absagen, wird ein Ersatztermin vereinbart. Weit
 6. Termine
 Termine gelten als Richtwerte, sofern nicht ausdrücklich verbindlich vereinbart. Keine Haftung für Verzögerungen durch Kunden oder Dritte.
 7. Einsatz künstlicher Intelligenz
-Die Anbieterin kann KI-Systeme einsetzen. KI-Ergebnisse beruhen auf Wahrscheinlichkeiten und können Fehler enthalten. Der Kunde prüft sämtliche Ergebnisse eigenständig. Eine Garantie für bestimmte Resultate besteht nicht, mit Ausnahme der Sichtbarkeits-Garantie nach Ziffer 11k.
+Die Anbieterin kann KI-Systeme einsetzen. KI-Ergebnisse beruhen auf Wahrscheinlichkeiten und können Fehler enthalten. Der Kunde prüft sämtliche Ergebnisse eigenständig. Eine Garantie für bestimmte Resultate besteht nicht.
 8. Datenschutz
 Bearbeitung personenbezogener Daten erfolgt nach geltendem Datenschutzrecht. Soweit erforderlich wird ein Auftragsbearbeitungsvertrag abgeschlossen. Es gilt zusätzlich die Datenschutzerklärung .
 9. Vertraulichkeit
@@ -1235,12 +1235,12 @@ Es gelten ausschliesslich die jeweiligen Lizenzbedingungen.
 Keine Haftung für Ausfälle oder Änderungen externer Cloud-, API-, Hosting- oder KI-Dienste.
 11j. Exportkontrolle und Compliance
 Der Kunde hält sämtliche gesetzlichen Vorgaben ein. Die Anbieterin darf Leistungen einstellen, sofern gesetzliche Gründe dies verlangen.
-11k. Sichtbarkeits-Garantie
-Sichert die Anbieterin im Sichtbarkeits-Bericht oder in der Offerte schriftlich einen Vaiacon-Sichtbarkeits-Score zu, gilt: Erreicht die Website des Kunden innert 30 Tagen nach Freigabe der vorgeschlagenen Änderungen nicht mindestens den zugesicherten Score, erstattet die Anbieterin das Honorar für die Umsetzung vollständig. Der Score wird mit der Prüfliste gemessen, die dem Bericht zugrunde liegt, und bezieht sich ausschliesslich auf Kriterien, die der Kunde selbst beeinflussen kann. Voraussetzung ist, dass der Kunde die Änderungen freigibt, den nötigen Zugang zur Website gewährt und während der Umsetzung keine gegenläufigen Änderungen vornimmt. Platzierungen in Suchmaschinen und Nennungen durch KI-Assistenten sind von der Garantie nicht erfasst (Ziffer 11).
+11k. Sichtbarkeits-Score
+Der Vaiacon-Sichtbarkeits-Score ist eine Messung nach einer festen Prüfliste zum Zeitpunkt der Prüfung. Er zeigt, welche Kriterien die Website erfüllt, und ist keine Zusage für Platzierungen, Nennungen durch KI-Assistenten oder einen wirtschaftlichen Erfolg (Ziffer 11). Setzt die Anbieterin Änderungen um, misst sie den Score nach der Freigabe erneut mit derselben Prüfliste. Eine Rückerstattung des Honorars aufgrund des Scores ist nicht vorgesehen.
 11l. Mängel nach der Übergabe
 Mängel beheben wir 90 Tage nach der Übergabe ohne Rechnung. Die Reaktionszeit der Betreuung ist die Zeit bis zur ersten Antwort und keine Frist für die Behebung.
 11m. Freigabe vor dem Versand nach aussen
-Was nach aussen geht, etwa Mails, Nachrichten oder Beiträge an Ihre Kundschaft, wird vor jedem Versand vom Kunden freigegeben, soweit nicht schriftlich etwas anderes vereinbart ist.
+Texte, die eine Automation an Dritte schickt, etwa Mails, Nachrichten oder Beiträge an die Kundschaft des Kunden, gibt der Kunde vor dem ersten produktiven Versand frei. Freigegeben werden die Vorlagen und die Regeln, nach denen die Automation sie verwendet. Danach läuft der Versand ohne weitere Freigabe, bis der Kunde die Vorlagen oder Regeln ändert. Einzelfreigabe je Versand wird schriftlich vereinbart.
 11n. Anrechnung der Standortanalyse
 Bei einem Folgeauftrag innert sechs Monaten wird die Vorarbeit bis zur Hälfte angerechnet, höchstens CHF 1'075.
 12. Haftung
@@ -1401,7 +1401,7 @@ Mittelgrosse Automation:
 
 Komplette Automation:
 - Von Kündigung bis Neumieter: Kündigung → Inserat → Besichtigung → Dossier → Zusage
-- Mieteranfragen beantworten: Frage per Mail → Antwort aus Hausordnung und Vertrag → Freigabe
+- Mieteranfragen beantworten: Frage per Mail → Antwortentwurf aus Hausordnung und Mietvertrag → Freigabe durch die Bewirtschaftung
 - Eigentümerbericht: Mietzinsen + Aufträge + Leerstand → Monatsbericht → Versand
 
 #### Für alle Branchen
