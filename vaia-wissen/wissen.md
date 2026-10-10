@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 10.10.2026 · Eintrag f940bf2 Bot-Wissen: Stand nach Lernreise-Zeitleiste und Preis-Kürzung
+> Stand: 11.10.2026 · Eintrag 67be799 Preislogik 2026-10-11: ein Katalog, weniger Zahlen, klare Sätze
 
 ## Wie du antwortest
 
@@ -71,10 +71,9 @@ Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer. Ab-Preise sind
   - Umfang: Einzeltermine à 60 Minuten, online oder vor Ort.
 - Coaching-Paket, sechs Stunden: CHF 1'190 (Sechs Termine innert drei Monaten.)
   - Umfang: Sechs Termine à 60 Minuten innert drei Monaten, online oder vor Ort.
-- Online-Kurs nach Mass, zehn Minuten: CHF 2'900 pro Kurs (Zehn Minuten fertiger Kurs. Weitere Minuten nach Staffel, jede weitere Minute günstiger.)
-  - Umfang: Zehn fertige Minuten mit Drehbuch, KI-Sprecherstimme, Quiz und zwei Freigaberunden. Zusatzminuten gestaffelt.
-  - Staffel: CHF 290 / 240 / 190 je Lernminute
-  - Kurzfassung ohne Quiz, eine Freigaberunde: CHF 2'300
+- Online-Kurs nach Mass, fünf Minuten: CHF 1'450 pro Kurs (Fünf Minuten fertiger Kurs. Jede weitere Minute CHF 290.)
+  - Umfang: Fünf fertige Minuten mit Drehbuch, KI-Sprecherstimme, Quiz und zwei Freigaberunden.
+  - Jede weitere Minute: CHF 290
 - Lernvideo als Bildschirmaufnahme: ab CHF 1'900 pro Video bis drei Minuten (Bildschirm mit Sprecherstimme. Für Dreh oder Animation: Lernvideo, gefilmt oder animiert.)
   - Umfang: Bildschirm, KI-Sprecherstimme, Schnitt, eine Freigaberunde. KI-Stimme, Gestaltungsgrad und Lieferformat stehen im Angebot.
   - Jedes weitere Video: ab CHF 1'400
@@ -416,7 +415,7 @@ Sieben Formate, die sich kombinieren lassen. Jedes entsteht aus Ihren Aufgaben, 
 E-Learnings nach Mass
 Was es ist. Ein Online-Kurs mit Ihren Inhalten, Ihren Beispielen und Ihrem Auftritt.
 Wann es passt. Wenn Wissen für viele da sein soll, unabhängig von Ort und Zeit, auch für neue Mitarbeitende.
-CHF 2'900 pro Kurs Zehn fertige Minuten mit Drehbuch, KI-Sprecherstimme, Quiz und zwei Freigaberunden. Zusatzminuten gestaffelt. Weitere Minuten: 290 / 240 / 190 je Lernminute . Kurzfassung ohne Quiz: CHF 2'300 .
+CHF 1'450 pro Kurs Fünf fertige Minuten mit Drehbuch, KI-Sprecherstimme, Quiz und zwei Freigaberunden. Dazu jede weitere Minute CHF 290 .
 Lernvideos
 Was es ist. Ein kurzes Video, das einen Ablauf oder ein Thema aus Ihrem Betrieb erklärt.
 Wann es passt. Wenn dieselbe Frage immer wieder kommt oder ein Ablauf sich besser zeigen als beschreiben lässt.
@@ -929,7 +928,7 @@ KI-Kompetenz
 Was bietet KI-Kompetenz? +
 Trainings, Workshops und Coachings bei Ihnen im Betrieb, dazu E-Learning, Lernvideos und kurze tägliche Lerneinheiten: Ihr Team lernt, KI sicher und nützlich einzusetzen, zugeschnitten auf Ihre Abläufe. Zu KI-Kompetenz →
 Welche Lernformate gibt es, und was kosten sie? +
-Training oder Workshop bei Ihnen im Betrieb: CHF 1'550 pro Halbtag oder CHF 2'450 pro Tag , je pro Gruppe bis 15 Personen, nicht pro Person; Raum und Beamer stellen Sie. Für kleine Teams gibt es den KI-Einstieg von zwei Stunden für CHF 890 . Coaching für Führungskräfte: CHF 210 pro Stunde . Online-Kurs nach Mass: CHF 2'900 pro Kurs von zehn Minuten, weitere Minuten gestaffelt: 290 / 240 / 190 je Lernminute . Lernvideo: ab CHF 4'700 pro Video bis drei Minuten . Tägliche kleine Lerneinheiten: CHF 60 pro Person für ein Programm von vier Wochen, dazu einmalig CHF 900 für den Zuschnitt auf Ihren Betrieb. Change-Begleitung: CHF 1'700 pro Tag . Begleitung der Mitarbeitenden vor Ort: CHF 700 pro Halbtag oder CHF 1'250 pro Tag . Ihre Auswahl stellen Sie im Offerten-Tool zusammen.
+Training oder Workshop bei Ihnen im Betrieb: CHF 1'550 pro Halbtag oder CHF 2'450 pro Tag , je pro Gruppe bis 15 Personen, nicht pro Person; Raum und Beamer stellen Sie. Für kleine Teams gibt es den KI-Einstieg von zwei Stunden für CHF 890 . Coaching für Führungskräfte: CHF 210 pro Stunde . Online-Kurs nach Mass: CHF 1'450 pro Kurs von fünf Minuten, jede weitere Minute CHF 290 . Lernvideo: ab CHF 4'700 pro Video bis drei Minuten . Tägliche kleine Lerneinheiten: CHF 60 pro Person für ein Programm von vier Wochen, dazu einmalig CHF 900 für den Zuschnitt auf Ihren Betrieb. Change-Begleitung: CHF 1'700 pro Tag . Begleitung der Mitarbeitenden vor Ort: CHF 700 pro Halbtag oder CHF 1'250 pro Tag . Ihre Auswahl stellen Sie im Offerten-Tool zusammen.
 Braucht mein Team Vorkenntnisse? +
 Nein. Wir setzen bei null an: ein Computer, die eigenen Unterlagen, etwas Neugier. Alles andere erklären wir unterwegs, ohne Fachchinesisch.
 Wie lange dauert eine Schulung? +

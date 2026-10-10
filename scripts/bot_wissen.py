@@ -126,7 +126,7 @@ def preisliste() -> list[str]:
                 z.append(f"  - Beispiel erstes Jahr: {bj} (Einrichtung plus zwölf Monate Betreuung, zuzüglich Fremdkosten)")
             if p.get("staffel"):
                 stufen = " / ".join(chf(x["preis"]) for x in p["staffel"])
-                z.append(f"  - Staffel: CHF {stufen} je Lernminute")
+                z.append(f"  - Jede weitere Minute: CHF {stufen}" if len(p["staffel"]) == 1 else f"  - Staffel: CHF {stufen} je Lernminute")
             for v in p.get("varianten") or []:
                 z.append(f"  - {v['titel']}: {ab(v)}CHF {chf(v['preis'])}")
         z.append("")

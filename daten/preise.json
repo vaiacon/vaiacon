@@ -118,17 +118,17 @@
         },
         {
           "id": "kk-elearning-lernminute",
-          "titel": "Online-Kurs nach Mass, zehn Minuten",
-          "beschreibung": "Ein fertiger Kurs von zehn Minuten mit Ihren Inhalten, Ihren Beispielen, Quiz und Ihrem Auftritt. Ihr Team lernt, wann es passt.",
+          "titel": "Online-Kurs nach Mass, fünf Minuten",
+          "beschreibung": "Ein fertiger Kurs von fünf Minuten mit Ihren Inhalten, Ihren Beispielen, Quiz und Ihrem Auftritt. Ihr Team lernt, wann es passt.",
           "einheit": "pro Kurs",
-          "preis": 2900,
+          "preis": 1450,
           "ab": false,
           "art": "einmalig",
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 12,
-          "hinweis": "Zehn Minuten fertiger Kurs. Weitere Minuten nach Staffel, jede weitere Minute günstiger.",
-          "umfang": "Zehn fertige Minuten mit Drehbuch, KI-Sprecherstimme, Quiz und zwei Freigaberunden. Zusatzminuten gestaffelt.",
+          "hinweis": "Fünf Minuten fertiger Kurs. Jede weitere Minute CHF 290.",
+          "umfang": "Fünf fertige Minuten mit Drehbuch, KI-Sprecherstimme, Quiz und zwei Freigaberunden.",
           "folgekosten": null,
           "betreuung_id": null,
           "fremdkosten": null,
@@ -136,22 +136,8 @@
           "abnahme": false,
           "staffel": [
             {
-              "bis": 10,
-              "preis": 290
-            },
-            {
-              "bis": 20,
-              "preis": 240
-            },
-            {
               "bis": null,
-              "preis": 190
-            }
-          ],
-          "varianten": [
-            {
-              "titel": "Kurzfassung ohne Quiz, eine Freigaberunde",
-              "preis": 2300
+              "preis": 290
             }
           ]
         },

@@ -101,6 +101,7 @@
       if (b === null) return null;
       teile.push(b);
     }
+    if (teile.length === 1) return 'jede weitere Minute CHF ' + teile[0];
     return teile.join(' / ') + ' je Lernminute';
   }
 

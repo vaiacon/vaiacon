@@ -310,7 +310,7 @@ def preisliste_llms() -> str:
                 zeilen.append(f"  - {v['titel']}: {ab}CHF {chf(v['preis'])}")
             if p.get("staffel"):
                 stufen = " / ".join(chf(s["preis"]) for s in p["staffel"])
-                zeilen.append(f"  - Staffel: CHF {stufen} je Lernminute")
+                zeilen.append(f"  - Jede weitere Minute: CHF {stufen}" if len(p["staffel"]) == 1 else f"  - Staffel: CHF {stufen} je Lernminute")
         zeilen.append("")
     return "\n".join(zeilen).rstrip()
 

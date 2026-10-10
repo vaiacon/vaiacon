@@ -223,7 +223,7 @@ def ersatztexte(katalog: dict) -> list[str]:
                 if not p or not p.get("staffel"):
                     m.append(f"{ort}  Staffel «{attr('data-preis-staffel')}» gibt es nicht")
                     continue
-                soll = " / ".join(chf(s["preis"]) for s in p["staffel"]) + " je Lernminute"
+                soll = (f"jede weitere Minute CHF {chf(p['staffel'][0]['preis'])}" if len(p["staffel"]) == 1 else " / ".join(chf(s["preis"]) for s in p["staffel"]) + " je Lernminute")
                 if inhalt != soll:
                     m.append(f"{ort}  Staffel «{inhalt}» statt «{soll}»")
                 continue
