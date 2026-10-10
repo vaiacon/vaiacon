@@ -2552,3 +2552,45 @@ picture {
 
 /* Preislogik 2026-10: kein einzelnes Wort in der letzten Hero-Zeile */
 .sv-hero__lead { text-wrap: pretty; }
+
+/* Preislogik 2026-10: die «Was wir tun»-Kästen (SEO, GEO) im ruhigen Kartenstil
+   der Seite: dünne Linie, Standard-Radius, weicher Schatten statt schwarzem
+   Versatz. Im Terra-Band eine helle Karte; die Häkchen in Terracotta wie in
+   den anderen hellen Karten. */
+.sv-detail-card--comic {
+  background: var(--surface-card);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 14px 34px -18px rgba(60, 20, 5, 0.32);
+}
+
+.sv-section--terra .sv-detail-card--comic {
+  border-color: transparent;
+  box-shadow: var(--shadow-cta);
+}
+
+.sv-detail-card--comic .sv-checklist span {
+  color: var(--terra-500);
+}
+
+.sv-detail-card--comic .sv-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  text-align: left;
+}
+
+.sv-detail-card--comic .sv-checklist li {
+  display: flex;
+  gap: var(--space-2);
+  line-height: 1.6;
+}
+
+/* Preislogik 2026-10: Verweis am Ende einer FAQ-Gruppe, so gross wie der
+   Fliesstext der Antworten und mit Luft zur Liste. */
+.sv-faq-gruppe__mehr {
+  font-size: var(--text-body-sm);
+  line-height: var(--leading-body);
+  margin-top: var(--space-4);
+  margin-bottom: var(--space-6);
+}

@@ -554,3 +554,8 @@
   .lz--an .lz-tafel { display: none; }
   .lz--an .lz-tafel.ist-aktiv { display: grid; }
 }
+
+/* Preislogik 2026-10: Scrollspur und Bühne an die Fensterhöhe binden, aber höchstens 960 px
+   (sehr hohe Fenster und Vollseiten-Aufnahmen zeigten sonst riesige leere Flächen). */
+.lz--scroll { height: calc(min(100vh, 960px) - var(--lz-oben) + (var(--lz-n, 9) - 1) * var(--lz-schritt)); }
+.lz--scroll .lz-buehne { height: calc(min(100vh, 960px) - var(--lz-oben)); }

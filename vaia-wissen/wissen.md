@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 11.10.2026 · Eintrag 67be799 Preislogik 2026-10-11: ein Katalog, weniger Zahlen, klare Sätze
+> Stand: 11.10.2026 · Eintrag 68f58f3 Online-Kurs nach Mass: fünf Minuten für CHF 1'450, jede weitere Minute CHF 290
 
 ## Wie du antwortest
 
@@ -1384,6 +1384,25 @@ Komplette Automation:
 - Reservation bis Nachfassen: Buchung → Erinnerung → Nachrücken → Dank mit Bewertungslink
 - Social-Media-Funnel Events: Beitrag → Reservation oder TWINT-Anzahlung → Nachfass
 - Lieferantenrechnungen verbuchen: Rechnung per Mail → kontieren → Zahlung → verbucht
+
+#### Immobilien
+
+Das nervt: Gleiche Interessentenfragen, jeden Tag neu Dossiers unvollständig, Rückfragen von Hand Schadenmeldungen verstreut auf Mail und Telefon
+
+Einfache Automation:
+- Eingangsbestätigung für Interessenten: Portal-Anfrage → Antwort mit Unterlagenliste → Eintrag
+- Besichtigungserinnerung: Termin gebucht → Erinnerung mit Absagelink → Kalender
+- Meldung ins Ticket: Schadenmeldung per Mail → Ticket mit Objekt und Dringlichkeit
+
+Mittelgrosse Automation:
+- Dossier-Vorprüfung: Dossier → Vollständigkeit prüfen → Rückfrage oder Freigabe
+- Handwerker informieren: Schadenmeldung → Auftragsentwurf an Handwerker → Freigabe
+- Inserat aus Objektdaten: Objektdaten + Fotos → Inserattext-Entwurf → Freigabe
+
+Komplette Automation:
+- Von Kündigung bis Neumieter: Kündigung → Inserat → Besichtigung → Dossier → Zusage
+- Mieteranfragen beantworten: Frage per Mail → Antwort aus Hausordnung und Vertrag → Freigabe
+- Eigentümerbericht: Mietzinsen + Aufträge + Leerstand → Monatsbericht → Versand
 
 #### Für alle Branchen
 
