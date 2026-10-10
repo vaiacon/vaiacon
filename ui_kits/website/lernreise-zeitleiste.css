@@ -1,0 +1,556 @@
+/* Lernreise als Zeitleiste (Entwurf «Variante A», 10.10.2026)
+   Links eine Leiste mit allen Stationen, rechts eine Karte, die wechselt.
+   Am Bildschirm bleibt die Bühne beim Scrollen stehen (sticky), jede
+   Station braucht rund 100px Scrollweg. Auf dem Handy wird getippt statt
+   gescrollt. Ohne JavaScript stehen alle Stationen als Liste da.
+
+   Farben, Schriften, Abstände aus tokens/*.css; Grundklassen (sv-section,
+   sv-wrap, sv-center, sv-kicker, sv-title, sv-lead, sv-button) aus
+   visibility.css. Karten mit Hairline, ohne harten Schatten. */
+
+/* Sticky braucht eine Seite, die nicht selbst scrollt: overflow-x:hidden auf
+   .sv-page macht sie zum Scroll-Container und schaltet sticky ab
+   (gleiche Lösung wie in offerte.css). */
+.sv-page { overflow-x: clip; overflow-y: visible; }
+
+.lz {
+  --lz-schritt: 100px;          /* Scrollweg pro Station */
+  --lz-zeile: 54px;             /* Höhe eines Eintrags in der Leiste */
+  --lz-oben: var(--kopfzeile, 82px);
+  --lz-flagge: var(--terra-500);
+  position: relative;
+  margin-top: var(--space-11);
+  text-align: left;
+}
+
+/* ── Ohne JavaScript: einfache Liste ─────────────────────────────────── */
+.lz-leiste,
+.lz-karte__fuss { display: none; }
+
+.lz-tafeln {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.lz-tafel {
+  display: grid;
+  grid-template-columns: minmax(150px, 220px) minmax(0, 1fr);
+  gap: var(--space-9);
+  align-items: center;
+  padding: var(--space-6);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-xl);
+  background: var(--surface-card);
+}
+
+/* ── Mit JavaScript: Leiste + eine Karte ─────────────────────────────── */
+.lz--an .lz-buehne {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: var(--space-16);
+  align-items: center;
+}
+
+.lz--an .lz-leiste { display: block; position: relative; }
+.lz--an .lz-karte__fuss { display: flex; }
+
+.lz--an .lz-karte {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 470px;
+  padding: var(--space-7) var(--space-9) var(--space-6) var(--space-7);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-xl);
+  background: var(--surface-card);
+  box-shadow: 0 30px 60px -44px rgba(62, 22, 6, 0.35);
+}
+
+.lz--an .lz-tafeln {
+  display: grid;
+  flex: 1 1 auto;
+  align-items: center;
+}
+
+/* Alle Tafeln liegen übereinander; sichtbar ist nur die aktive.
+   Die Höhe der Karte richtet sich nach der längsten Tafel, nichts springt. */
+.lz--an .lz-tafel {
+  grid-area: 1 / 1;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: var(--space-11);
+  align-items: stretch;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(16px);
+  transition: opacity var(--duration-fast) ease, transform var(--duration-slow) var(--ease-spring), visibility 0s linear var(--duration-fast);
+}
+
+.lz--an .lz-tafel.ist-vorbei { transform: translateY(-16px); }
+
+.lz--an .lz-tafel.ist-aktiv {
+  opacity: 1;
+  visibility: visible;
+  transform: none;
+  transition: opacity 0.45s ease 0.12s, transform 0.6s var(--ease-spring) 0.12s, visibility 0s;
+}
+
+/* ── Bild ───────────────────────────────────────────────────────────── */
+.lz-bild {
+  position: relative;
+  margin: 0;
+  min-height: 220px;
+  border-radius: var(--radius-lg);
+  background: var(--bg-page);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.lz-bild::after {               /* weicher Bodenschatten unter dem Roboter */
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  width: 140px;
+  height: 18px;
+  margin-left: -70px;
+  border-radius: 50%;
+  background: rgba(28, 22, 19, 0.08);
+}
+
+.lz-bild picture { display: block; position: relative; z-index: 1; min-width: 0; }
+
+.lz-bild img {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: auto;
+  height: 190px;
+  margin-bottom: 28px;
+}
+
+.lz--an .lz-bild { min-height: 380px; }
+.lz--an .lz-bild img {
+  height: 250px;
+  transform: translateY(30px) scale(0.92);
+  transition: transform 0.7s var(--ease-spring);
+}
+.lz--an .lz-tafel.ist-vorbei .lz-bild img { transform: translateY(-30px) scale(0.92); }
+.lz--an .lz-tafel.ist-aktiv .lz-bild img { transform: none; }
+
+/* Ziel: alle acht Roboter zusammen */
+.lz-bild--ziel {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-content: center;
+  gap: var(--space-4) var(--space-3);
+  padding: var(--space-5) var(--space-6);
+  background: var(--peach-100);
+}
+.lz-bild--ziel::after { display: none; }
+.lz-bild--ziel img,
+.lz--an .lz-bild--ziel img {
+  width: 100%;
+  height: 82px;
+  margin: 0;
+  object-fit: contain;
+  object-position: center bottom;
+  transform: none;
+}
+
+/* ── Text der Tafel ─────────────────────────────────────────────────── */
+.lz-text { align-self: center; min-width: 0; }
+
+.lz-zeit {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: var(--text-overline);
+  line-height: 1.4;
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.lz-zeit__nr {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: var(--radius-pill);
+  background: var(--peach-100);
+  letter-spacing: 0;
+}
+
+.lz-text h3 {
+  margin: var(--space-3) 0 0;
+  color: var(--text-strong);
+  font-size: clamp(23px, 2.3vw, 28px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: var(--weight-semibold);
+  text-wrap: balance;
+}
+
+.lz-text > p:not(.lz-zeit) {
+  max-width: 58ch;
+  margin: var(--space-3) 0 0;
+  color: var(--text-body);
+  font-size: var(--text-size-body);
+  line-height: var(--leading-body);
+}
+
+/* Messpunkt: kleiner Kasten unter dem Text */
+.lz-mess {
+  max-width: 58ch;
+  margin-top: var(--space-5);
+  padding: 14px 16px;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  background: var(--bg-page);
+}
+
+.lz-mess__kopf {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  line-height: 1.4;
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.lz-mess p:not(.lz-mess__kopf) {
+  margin: 6px 0 0;
+  color: var(--text-body);
+  font-size: var(--text-ui);
+  line-height: 1.58;
+}
+
+/* Fähnchen: Stange + Wimpel, reines CSS */
+.lz-fahne {
+  position: relative;
+  display: inline-block;
+  flex: none;
+  width: 11px;
+  height: 13px;
+}
+.lz-fahne::before,
+.lz-fahne::after { content: ""; position: absolute; }
+.lz-fahne::before { left: 0; top: 0; width: 1.6px; height: 13px; border-radius: 1px; background: var(--ink-900); }
+.lz-fahne::after { left: 2px; top: 1px; width: 8px; height: 6px; background: var(--lz-flagge); clip-path: polygon(0 0, 100% 50%, 0 100%); }
+
+/* Ziel: vier Fragen */
+.lz-fragen {
+  margin: var(--space-4) 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2) var(--space-4);
+}
+.lz-fragen li { padding-top: var(--space-2); border-top: 1px solid var(--border-soft); }
+.lz-fragen span {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-kicker);
+  color: var(--accent);
+}
+.lz-fragen strong {
+  display: block;
+  margin-top: 3px;
+  color: var(--text-strong);
+  font-size: var(--text-body-sm);
+  line-height: 1.35;
+  font-weight: var(--weight-semibold);
+}
+
+.lz-link {
+  margin-top: var(--space-3);
+  min-height: 44px;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: var(--text-ui);
+  font-weight: var(--weight-bold);
+  color: var(--link);
+  text-align: left;
+}
+.lz-link:hover { color: var(--link-hover); }
+
+/* ── Leiste ─────────────────────────────────────────────────────────── */
+.lz-leiste ol {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Linie hinter den Punkten: grau, darüber die Füllung in Terracotta */
+.lz-leiste__spur,
+.lz-leiste__fuellung {
+  position: absolute;
+  left: 15px;
+  top: calc(var(--lz-zeile) / 2);
+  width: 2px;
+  border-radius: 2px;
+  pointer-events: none;
+}
+.lz-leiste__spur { height: calc(var(--lz-zeile) * 8); background: var(--border-soft); }
+.lz-leiste__fuellung {
+  height: calc(var(--lz-zeile) * var(--lz-fortschritt, 0));
+  background: var(--accent);
+  transition: height 0.3s ease-out;
+}
+
+.lz-punkt {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  height: var(--lz-zeile);
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  color: inherit;
+  text-align: left;
+}
+
+.lz-punkt__nr {
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid var(--brown-300);
+  border-radius: var(--radius-pill);
+  background: var(--surface-card);
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: var(--weight-semibold);
+  transition: background 0.35s ease, border-color 0.35s ease, color 0.35s ease, transform 0.45s var(--ease-spring);
+}
+.lz-punkt__nr .lz-fahne { --lz-flagge: var(--terra-500); }
+
+.lz-punkt__text { flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 1px; }
+.lz-punkt__zeit {
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  line-height: 1.3;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.lz-punkt__titel {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: var(--text-muted);
+  font-size: var(--text-body-sm);
+  line-height: 1.3;
+  font-weight: var(--weight-semibold);
+  transition: color var(--duration-fast) ease;
+}
+.lz-punkt > .lz-fahne { margin-right: 6px; }
+
+.lz-punkt:hover .lz-punkt__nr { border-color: var(--accent); }
+.lz-punkt:hover .lz-punkt__titel { color: var(--text-strong); }
+
+/* erreicht (vorbei oder aktiv) */
+.lz-punkt.ist-erreicht .lz-punkt__nr { border-color: var(--accent); background: var(--accent); color: var(--cream-card); }
+.lz-punkt.ist-erreicht .lz-punkt__nr .lz-fahne { --lz-flagge: var(--cream-card); }
+.lz-punkt.ist-erreicht .lz-punkt__nr .lz-fahne::before { background: var(--cream-card); }
+.lz-punkt.ist-erreicht .lz-punkt__titel { color: var(--text-strong); }
+.lz-punkt[aria-current="step"] .lz-punkt__nr { transform: scale(1.14); }
+.lz-punkt[aria-current="step"] .lz-punkt__titel { font-weight: var(--weight-bold); }
+
+/* ── Fuss der Karte ─────────────────────────────────────────────────── */
+.lz-karte__fuss {
+  margin-top: var(--space-5);
+  padding-top: 14px;
+  border-top: 1px solid var(--border-soft);
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.lz-stand {
+  font-family: var(--font-mono);
+  font-size: var(--text-overline);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.lz-knoepfe { display: flex; gap: var(--space-2); }
+
+.lz-knopf {
+  min-height: 44px;
+  padding: 0 var(--space-4);
+  border: 1.5px solid var(--brown-400);
+  border-radius: var(--radius-pill);
+  background: var(--surface-card);
+  color: var(--text-strong);
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-size: var(--text-ui);
+  font-weight: var(--weight-bold);
+  transition: background var(--duration-fast) ease, border-color var(--duration-fast) ease;
+}
+.lz-knopf:hover { background: var(--cream-100); border-color: var(--border-ink); }
+.lz-knopf[hidden] { display: none; }
+
+.lz :focus-visible { outline: 2px solid var(--terra-700); outline-offset: 3px; }
+
+/* ── Scroll-Modus (Bildschirm): Bühne bleibt stehen ─────────────────── */
+.lz--scroll {
+  height: calc(100vh - var(--lz-oben) + 8 * var(--lz-schritt));
+}
+.lz--scroll .lz-buehne {
+  position: sticky;
+  top: var(--lz-oben);
+  height: calc(100vh - var(--lz-oben));
+  min-height: 560px;
+}
+
+/* ── Zielcheck-Dialog ───────────────────────────────────────────────── */
+.lz-dialog {
+  width: min(760px, calc(100% - 32px));
+  max-height: calc(100% - 48px);
+  padding: 22px 24px 18px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  background: var(--surface-card);
+  color: var(--text-body);
+  box-shadow: 0 30px 60px -30px rgba(62, 22, 6, 0.35);
+}
+.lz-dialog::backdrop { background: rgba(244, 237, 225, 0.82); }
+.lz-dialog__kopf { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--space-4); }
+.lz-dialog__kopf p {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-overline);
+  line-height: 1.4;
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-badge);
+  color: var(--text-muted);
+}
+.lz-tabelle { margin-top: var(--space-3); overflow-x: auto; }
+.lz-tabelle table { width: 100%; min-width: 560px; border-collapse: collapse; font-size: 13.5px; line-height: 1.4; }
+.lz-tabelle th {
+  padding: 0 12px 8px 0;
+  border-bottom: 1px solid var(--border-strong);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: left;
+  color: var(--text-muted);
+}
+.lz-tabelle td { padding: 9px 12px 9px 0; border-bottom: 1px solid var(--border-soft); vertical-align: top; }
+.lz-tabelle tr:last-child td { border-bottom: 0; }
+.lz-tabelle td:first-child { color: var(--text-strong); font-weight: var(--weight-semibold); }
+.lz-tabelle td:nth-child(2),
+.lz-tabelle td:nth-child(3) { font-family: var(--font-mono); font-size: 12.5px; }
+.lz-marke { display: inline-block; padding: 3px 10px; border-radius: var(--radius-pill); font-size: 12px; font-weight: var(--weight-semibold); }
+.lz-marke--erreicht { background: var(--peach-100); color: var(--terra-500); font-weight: var(--weight-bold); }
+.lz-marke--teilweise { background: var(--sand-200); color: var(--text-strong); }
+.lz-marke--offen { border: 1px solid var(--brown-400); padding: 2px 9px; color: var(--text-body); }
+.lz-dialog__fuss { margin: var(--space-3) 0 0; font-size: 13.5px; line-height: 1.55; color: var(--text-muted); }
+
+/* ── Fuss unter der Lernreise ───────────────────────────────────────── */
+.lz-schluss {
+  margin-top: var(--space-11);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  text-align: left;
+}
+.lz-schluss p { margin: 0; max-width: 62ch; color: var(--text-muted); font-size: var(--text-body-sm); line-height: 1.6; }
+
+/* ── Tablet und Handy: tippen statt scrollen ────────────────────────── */
+@media (max-width: 899px) {
+  .lz--an .lz-buehne { grid-template-columns: minmax(0, 1fr); gap: var(--space-3); }
+
+  .lz-leiste ol { display: flex; gap: 2px; overflow-x: auto; padding: 4px 2px; scroll-snap-type: x proximity; }
+  .lz-leiste__spur,
+  .lz-leiste__fuellung,
+  .lz-punkt__text,
+  .lz-punkt > .lz-fahne { display: none; }
+  .lz-punkt { width: 44px; height: 44px; justify-content: center; scroll-snap-align: start; }
+
+  .lz--an .lz-karte { min-height: 0; padding: var(--space-5); }
+  .lz--an .lz-tafeln { align-items: start; }
+  .lz--an .lz-tafel,
+  .lz-tafel { grid-template-columns: minmax(0, 1fr); gap: var(--space-4); }
+  .lz--an .lz-bild { min-height: 170px; }
+  .lz--an .lz-bild img,
+  .lz-bild img { height: 150px; margin-bottom: 18px; }
+  .lz-bild--ziel { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .lz--an .lz-bild--ziel img,
+  .lz-bild--ziel img { height: 64px; margin: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lz *, .lz *::before, .lz *::after { transition: none !important; }
+}
+
+/* ── Ergänzung (Einbau 10.10.2026) ──────────────────────────────────────
+   Die Zahl der Stationen hängt von der Auswahl ab (7 bis 11 Punkte inkl. Ziel);
+   das Skript setzt --lz-n auf .lz. Ohne Wert gelten die neun des Entwurfs. */
+.lz-leiste__spur { height: calc(var(--lz-zeile) * (var(--lz-n, 9) - 1)); }
+.lz--scroll { height: calc(100vh - var(--lz-oben) + (var(--lz-n, 9) - 1) * var(--lz-schritt)); }
+
+/* Format-Links unter dem Text */
+.lz-text > .lz-formate { display: flex; flex-wrap: wrap; gap: 6px; margin-top: var(--space-4); }
+
+/* Ohne JavaScript steht die Zielcheck-Tabelle offen unter dem Ziel-Text */
+.lz:not(.lz--an) .lz-dialog { display: block; position: static; width: auto; max-height: none; margin: var(--space-4) 0 0; padding: var(--space-4); }
+.lz:not(.lz--an) .lz-link,
+.lz:not(.lz--an) .lz-dialog .lz-knopf { display: none; }
+
+/* Tabelle im Dialog auf dem Handy: Zeilen untereinander */
+@media (max-width: 560px) {
+  .lz-tabelle table, .lz-tabelle tbody, .lz-tabelle tr, .lz-tabelle td { display: block; min-width: 0; }
+  .lz-tabelle thead { display: none; }
+  .lz-tabelle tr { padding: var(--space-3) 0; border-bottom: 1px solid var(--border-soft); }
+  .lz-tabelle tr:last-child { border-bottom: 0; }
+  .lz-tabelle td { padding: 2px 0; border-bottom: 0; }
+  .lz-tabelle td[data-k]::before { content: attr(data-k) ": "; font-weight: var(--weight-semibold); color: var(--text-strong); }
+}
+
+/* Handy: Karte nur so hoch wie die aktive Tafel (keine gestapelten Tafeln) */
+@media (max-width: 899px) {
+  .lz--an .lz-tafeln { display: block; }
+  .lz--an .lz-tafel { display: none; }
+  .lz--an .lz-tafel.ist-aktiv { display: grid; }
+}

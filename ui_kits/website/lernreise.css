@@ -74,85 +74,7 @@
 .lr-option input:focus-visible + span { outline: 3px solid var(--orange-500); outline-offset: 2px; }
 
 
-/* ── Der Weg ─────────────────────────────────────────────────────────── */
-.lr-weg {
-  position: relative;
-  margin: var(--space-11) auto 0;
-  width: min(100%, 68rem);
-}
-.lr-liste { list-style: none; margin: 0; padding: 0; position: relative; }
-
-.lr-station {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 150px minmax(0, 1fr);
-  align-items: center;
-  column-gap: var(--space-4);
-  padding: var(--space-4) 0;
-  text-align: left;
-}
-.lr-station__knoten {
-  grid-column: 2; grid-row: 1;
-  display: flex; align-items: center; justify-content: center;
-  z-index: 2;
-}
-.lr-station__knoten span {
-  display: flex; align-items: center; justify-content: center;
-  width: 46px; height: 46px;
-  border-radius: 50%;
-  border: 3px solid var(--brown-300);
-  background: var(--cream-card);
-  color: var(--brown-400);
-  font-family: var(--font-mono);
-  font-weight: var(--weight-bold);
-  font-size: 16px;
-  transition: background .35s, border-color .35s, color .35s, transform .35s var(--ease-spring);
-}
-.lr-station__knoten span { background: var(--terra-500); border-color: var(--terra-500); color: var(--cream-50); }
-
-.lr-station__karte {
-  grid-row: 1;
-  padding: var(--space-6) var(--space-6);
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-lg);
-  background: var(--surface-card);
-  display: flex; flex-direction: column; gap: var(--space-3);
-  transition: border-color .35s, transform .45s var(--ease-reveal), opacity .45s;
-}
-.lr-station__bild { grid-row: 1; margin: 0; display: flex; align-items: center; justify-content: center; }
-.lr-station__bild picture { display: block; }
-.lr-station__bild img {
-  display: block; height: 190px; width: auto; max-width: 100%;
-  object-fit: contain;
-  filter: drop-shadow(0 10px 14px rgba(62, 22, 6, 0.22));
-}
-
-.lr-station--links .lr-station__karte { grid-column: 1; }
-.lr-station--links .lr-station__bild { grid-column: 3; }
-.lr-station--rechts .lr-station__karte { grid-column: 3; }
-.lr-station--rechts .lr-station__bild { grid-column: 1; }
-
-
-.lr-station__zeit {
-  margin: 0;
-  font-family: var(--font-mono);
-  font-size: var(--text-overline);
-  font-weight: var(--weight-semibold);
-  letter-spacing: var(--tracking-badge);
-  text-transform: uppercase;
-  color: var(--terra-600);
-}
-.lr-station__karte h3 {
-  margin: 0;
-  color: var(--text-strong);
-  font-size: var(--text-h3);
-  line-height: var(--leading-snug);
-  letter-spacing: var(--tracking-tight);
-  font-weight: var(--weight-semibold);
-}
-.lr-station__karte p { margin: 0; color: var(--text-body); font-size: var(--text-body-sm); line-height: var(--leading-body); }
-.lr-station__karte p.lr-station__zeit { color: var(--terra-600); font-size: var(--text-overline); line-height: 1.4; }
-.lr-station__formate { display: flex; flex-wrap: wrap; gap: 6px; }
+/* Format-Links unter den Stationen der Zeitleiste */
 .lr-chip {
   display: inline-block; padding: 5px 12px;
   border: 1px solid var(--border-strong); border-radius: var(--radius-pill);
@@ -160,104 +82,6 @@
   font-size: 13px; font-weight: var(--weight-bold); text-decoration: none; line-height: 1.3;
 }
 .lr-chip:hover, .lr-chip:focus-visible { background: var(--peach-200); }
-
-/* Messpunkte: wo gemessen und geprüft wird. Knoten mit zweitem Ring. */
-.lr-station--mess .lr-station__knoten span {
-  box-shadow: 0 0 0 4px var(--cream-card), 0 0 0 6px var(--terra-500);
-}
-.lr-mess {
-  padding: var(--space-3) var(--space-4);
-  border-left: 3px solid var(--terra-500);
-  border-radius: 0 12px 12px 0;
-  background: var(--peach-150);
-  display: flex; flex-direction: column; gap: 4px;
-}
-.lr-station__karte .lr-mess p { font-size: 14px; }
-.lr-station__karte .lr-mess p.lr-mess__art {
-  font-family: var(--font-mono);
-  font-size: var(--text-overline);
-  font-weight: var(--weight-bold);
-  letter-spacing: var(--tracking-badge);
-  text-transform: uppercase;
-  color: var(--terra-600);
-  line-height: 1.4;
-}
-.lr-mess__art::before {
-  content: ""; display: inline-block; vertical-align: -1px;
-  width: 9px; height: 9px; margin-right: 7px;
-  border-radius: 50%; border: 2px solid var(--terra-500);
-  box-shadow: inset 0 0 0 2px var(--peach-150), inset 0 0 0 5px var(--terra-500);
-}
-
-/* Wirkung: vier Fragen und Muster des Zielchecks unter der Reise. */
-.lr-wirkung {
-  margin: var(--space-11) auto 0;
-  width: min(100%, 60rem);
-  text-align: left;
-}
-.lr-wirkung__kopf { text-align: center; margin-bottom: var(--space-6); }
-.lr-wirkung__kopf h3 {
-  margin: var(--space-2) 0 var(--space-3);
-  color: var(--text-strong); font-size: var(--text-h3); font-weight: var(--weight-semibold);
-  letter-spacing: var(--tracking-tight); line-height: var(--leading-snug);
-}
-.lr-wirkung__kopf p { margin: 0 auto; max-width: 60ch; color: var(--text-body); font-size: var(--text-body-sm); line-height: var(--leading-body); }
-.lr-ebenen {
-  list-style: none; margin: 0; padding: 0;
-  display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-4);
-}
-.lr-ebene {
-  padding: var(--space-5);
-  border: 1px solid var(--border-strong); border-radius: var(--radius-lg);
-  background: var(--surface-card);
-  display: flex; flex-direction: column; gap: var(--space-2);
-}
-.lr-ebene__nr {
-  margin: 0; font-family: var(--font-mono); font-size: var(--text-overline);
-  font-weight: var(--weight-bold); letter-spacing: var(--tracking-badge);
-  text-transform: uppercase; color: var(--terra-600);
-}
-.lr-ebene h4 { margin: 0; color: var(--text-strong); font-size: 17px; font-weight: var(--weight-semibold); line-height: var(--leading-snug); }
-.lr-ebene p { margin: 0; color: var(--text-body); font-size: 14px; line-height: var(--leading-body); }
-.lr-ebene p.lr-ebene__wann { margin-top: auto; padding-top: var(--space-2); border-top: 1px solid var(--border-soft); font-size: 13px; color: var(--text-muted, var(--text-body)); }
-
-.lr-zielcheck {
-  margin-top: var(--space-6);
-  border: 1px solid var(--border-strong); border-radius: var(--radius-lg);
-  background: var(--surface-card);
-  overflow: hidden;
-}
-.lr-zielcheck__titel {
-  margin: 0; padding: var(--space-3) var(--space-5);
-  border-bottom: 1px solid var(--border-soft);
-  font-family: var(--font-mono); font-size: var(--text-overline); font-weight: var(--weight-bold);
-  letter-spacing: var(--tracking-badge); text-transform: uppercase; color: var(--terra-600);
-}
-.lr-zielcheck table { width: 100%; border-collapse: collapse; font-size: 14px; }
-.lr-zielcheck th, .lr-zielcheck td { padding: var(--space-3) var(--space-5); text-align: left; vertical-align: top; color: var(--text-body); }
-.lr-zielcheck th { font-weight: var(--weight-semibold); color: var(--text-strong); font-size: 13px; }
-.lr-zielcheck tbody tr { border-top: 1px solid var(--border-soft); }
-.lr-ampel { display: inline-flex; align-items: center; gap: 7px; font-weight: var(--weight-semibold); color: var(--text-strong); white-space: nowrap; }
-.lr-ampel::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: currentColor; }
-.lr-ampel--gruen::before { background: #3d8a5a; }
-.lr-ampel--gelb::before { background: #d9a227; }
-.lr-ampel--offen::before { background: transparent; border: 2px solid var(--brown-300); width: 6px; height: 6px; }
-.lr-zielcheck__fuss { margin: 0; padding: var(--space-3) var(--space-5); border-top: 1px solid var(--border-soft); font-size: 13px; color: var(--text-body); line-height: var(--leading-body); }
-
-@media (max-width: 900px) {
-  .lr-ebenen { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-}
-@media (max-width: 560px) {
-  .lr-ebenen { grid-template-columns: 1fr; }
-  .lr-zielcheck table, .lr-zielcheck tbody, .lr-zielcheck tr, .lr-zielcheck td { display: block; }
-  .lr-zielcheck thead { display: none; }
-  .lr-zielcheck tbody tr { padding: var(--space-3) 0; }
-  .lr-zielcheck td { padding: 2px var(--space-5); }
-  .lr-zielcheck td[data-k]::before { content: attr(data-k) ": "; font-weight: var(--weight-semibold); color: var(--text-strong); }
-}
-
-.lr-fuss { margin-top: var(--space-9); display: flex; flex-direction: column; align-items: center; gap: var(--space-3); }
-.lr-fuss p { margin: 0; max-width: 60ch; color: var(--text-body); font-size: var(--text-body-sm); line-height: var(--leading-body); }
 
 /* ── Formate ─────────────────────────────────────────────────────────── */
 .lr-formate {
@@ -393,24 +217,6 @@
   .lr-steuerung { padding: var(--space-2) var(--space-4); }
   .lr-optionen { border-radius: 18px; }
   .lr-option span { min-height: 46px; padding: 6px 6px; border-radius: 14px; font-size: 13.5px; }
-  /* Weg links, Karte rechts, Bild klein unter der Karte */
-  .lr-station,
-  .lr-station--links,
-  .lr-station--rechts {
-    grid-template-columns: 58px minmax(0, 1fr);
-    column-gap: var(--space-3);
-    align-items: start;
-    row-gap: 0;
-  }
-  .lr-station__knoten { grid-column: 1; grid-row: 1; padding-top: 18px; }
-  .lr-station__knoten span { width: 40px; height: 40px; }
-  .lr-station--links .lr-station__karte,
-  .lr-station--rechts .lr-station__karte { grid-column: 2; grid-row: 1; padding: var(--space-5); }
-  .lr-station--links .lr-station__bild,
-  .lr-station--rechts .lr-station__bild {
-    grid-column: 2; grid-row: 2; justify-content: flex-end; margin: -26px 8px 0 0; pointer-events: none;
-  }
-  .lr-station__bild img { height: 96px; }
 }
 @media (max-width: 560px) {
   .lr-format { --lr-spalten: 1; }
@@ -428,49 +234,5 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .lr-station__karte, .lr-station__knoten span, .lr-option span { transition: none; }
+  .lr-option span { transition: none; }
 }
-
-/* ── 3D-Fahrt (lernreise3d.js) ─────────────────────────────────────── */
-.lr-3d { position: relative; width: 100vw; margin-left: calc(50% - 50vw); height: calc((var(--lr-n, 6) + 1) * 100vh * var(--lr-vh, 1)); margin-top: 8px; }
-.lr-3d__buehne { position: sticky; top: 0; height: 100vh; height: 100svh; overflow: hidden; background: var(--lr-fond, #F4EDE1); }
-.lr-3d__canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block;
-  -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 9%, #000 91%, transparent 100%);
-          mask-image: linear-gradient(to bottom, transparent 0, #000 9%, #000 91%, transparent 100%); }
-.lr-3d__karte { position: absolute; top: 12vh; right: max(24px, 4vw); width: min(380px, 30vw); padding: 22px 24px 20px;
-  background: rgba(255, 253, 248, .86); border: 1px solid #EAE0CC; border-radius: 22px;
-  box-shadow: 0 14px 40px -18px rgba(90, 60, 30, .35); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
-  transition: opacity .17s ease, transform .17s ease; }
-.lr-3d__karte.is-links { right: auto; left: max(24px, 4vw); }
-.lr-3d__karte.is-aus { opacity: 0; transform: translateY(6px); }
-.lr-3d__zeit { margin: 0 0 8px; font: 600 12px/1.3 'IBM Plex Mono', monospace; letter-spacing: .06em; text-transform: uppercase; color: #8A5A3A; display: flex; align-items: center; gap: 10px; }
-.lr-3d__nr { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: #B25222; color: #FBF4EE; font: 700 14px/1 Quicksand, sans-serif; letter-spacing: 0; }
-.lr-3d__karte h3 { margin: 0 0 8px; font: 700 21px/1.2 Quicksand, sans-serif; color: #1C1613; }
-.lr-3d__karte p { margin: 0; }
-.lr-3d__text { font-size: 15px; line-height: 1.5; color: #3A322C; }
-.lr-3d__mess { margin-top: 12px; padding-top: 10px; border-top: 1px solid #EAE0CC; font-size: 14px; line-height: 1.45; color: #3A322C; }
-.lr-3d__messart { font: 600 11px/1.3 'IBM Plex Mono', monospace; letter-spacing: .06em; text-transform: uppercase; color: #B25222; margin-bottom: 3px !important; }
-.lr-3d__formate { margin-top: 14px !important; display: flex; flex-wrap: wrap; gap: 6px; }
-.lr-3d__leiste { position: absolute; right: 14px; top: 50%; transform: translateY(-50%); margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 4px; }
-.lr-3d__leiste button { display: grid; place-items: center; width: 22px; height: 22px; padding: 0; border: 0; background: none; cursor: pointer; }
-.lr-3d__leiste span { width: 8px; height: 8px; border-radius: 50%; background: #CDBFA5; transition: transform .2s, background .2s; }
-.lr-3d__leiste .is-aktiv span { background: #B25222; transform: scale(1.6); }
-.lr-3d__leiste button:focus-visible { outline: 2px solid #B25222; border-radius: 50%; }
-.lr-3d__woche { position: absolute; left: 50%; transform: translateX(-50%); bottom: 3vh; margin: 0; font: 600 13px/1 'IBM Plex Mono', monospace; letter-spacing: .06em; text-transform: uppercase; color: #5A524B; }
-.lr-3d__hinweis { position: absolute; left: 50%; bottom: 7vh; transform: translateX(-50%); margin: 0; font: 600 12px/1 'IBM Plex Mono', monospace; letter-spacing: .08em; text-transform: uppercase; color: #8A5A3A; transition: opacity .4s; }
-.lr-3d__hinweis.is-weg { opacity: 0; }
-@media (max-width: 760px) {
-  .lr-3d__karte { top: auto; bottom: 9vh; left: 14px; right: 40px; width: auto; padding: 14px 16px 14px; border-radius: 18px; }
-  .lr-3d__karte h3 { font-size: 17px; margin-bottom: 4px; }
-  .lr-3d__text { font-size: 13px; line-height: 1.4; }
-  .lr-3d__mess { margin-top: 8px; padding-top: 7px; font-size: 12.5px; }
-  .lr-3d__formate { margin-top: 9px !important; }
-  .lr-3d__woche { bottom: 2.4vh; font-size: 11px; }
-  .lr-3d__karte.is-links { left: 14px; right: 40px; }
-  .lr-3d__hinweis { display: none; }
-  .lr-3d__leiste { right: 6px; gap: 0; }
-}
-
-/* overflow-x:hidden an .sv-page würde position:sticky der Fahrt brechen */
-html.lr-js .sv-page { overflow-x: clip; overflow-y: visible; }
-.lr-3d__karte h3, .lr-3d__karte p { text-align: left; }

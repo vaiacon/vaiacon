@@ -1,8 +1,9 @@
 /* Lernreise (KI-Kompetenz, seit 04.10.2026)
    Baut die Beispielreise aus drei Angaben (Teamgrösse, Ausgangslage, Zeit)
-   und stellt sie als Liste (Fallback) und für die 3D-Fahrt (lernreise3d.js) bereit. Rein im Browser, kein Dienst,
-   nichts wird gespeichert. Ohne JavaScript steht die feste Beispielreise im
-   HTML (erzeugt mit derselben Funktion `bauen`).
+   und baut daraus die Tafeln der Zeitleiste (lernreise-zeitleiste.js zeigt sie an,
+   hört auf 'lernreise:gebaut'). Rein im Browser, kein Dienst, nichts wird
+   gespeichert. Ohne JavaScript steht die feste Beispielreise im HTML (erzeugt
+   mit derselben Funktion `bauen`; die Ziel-Tafel steht fest im HTML).
 
    Bilder: je Rolle ein Büro-Bot. Die Zuordnung steht unten in BILD; wenn
    die journey-Bilder da sind, genügt es, hier die Dateinamen zu tauschen
@@ -210,33 +211,31 @@
       STAND[a.stand].label.replace(/^./, function (z) { return z.toLowerCase(); }) + ' · ' + ZEIT[a.zeit].woche + '. Dauer: etwa ' + wochen(a) + ' Wochen, ' + n + ' Stationen.';
   }
 
-  /* HTML der Stationen. Gleiche Ausgabe im JS und im festen Beispiel. */
+  /* HTML der Tafeln (ohne Ziel-Tafel). Gleiche Ausgabe im JS und im festen Beispiel. */
   function bauen(a, basis) {
     basis = basis || '';
     var L = stationen(a), total = wochen(a), h = '';
     L.forEach(function (st, i) {
-      var seite = i % 2 === 0 ? 'links' : 'rechts';
       var chips = st.formate.map(function (k) {
         var f = FORMATE[k];
         return '<a class="lr-chip" href="' + f.href + '">' + esc(f.name) + '</a>';
       }).join('');
       var mess = st.mess
-        ? '<div class="lr-mess"><p class="lr-mess__art">Messpunkt · ' + esc(st.mess.art) + '</p><p>' + esc(st.mess.text) + '</p></div>'
+        ? '<div class="lz-mess"><p class="lz-mess__kopf"><span class="lz-fahne" aria-hidden="true"></span>Messpunkt · ' + esc(st.mess.art) + '</p><p>' + esc(st.mess.text) + '</p></div>'
         : '';
-      h += '<li class="lr-station lr-station--' + seite + (st.mess ? ' lr-station--mess' : '') + '" data-station>' +
-        '<div class="lr-station__knoten" aria-hidden="true"><span>' + (i + 1) + '</span></div>' +
-        '<article class="lr-station__karte">' +
-          '<p class="lr-station__zeit">' + esc(wochenLabel(i, L.length, total)) + ' · ' + esc(st.rolle) + '</p>' +
-          '<h3>' + esc(st.titel) + '</h3>' +
-          '<p>' + esc(st.text) + '</p>' +
-          mess +
-          '<p class="lr-station__formate">' + chips + '</p>' +
-        '</article>' +
-        '<figure class="lr-station__bild"><picture>' +
+      h += '<article class="lz-tafel' + (st.mess ? ' lz-tafel--mess' : '') + '" data-station>' +
+        '<figure class="lz-bild"><picture>' +
           '<source srcset="' + basis + 'assets/vaiacon-buerobot-' + BILD[st.bild] + '.webp" type="image/webp">' +
           '<img src="' + basis + 'assets/vaiacon-buerobot-' + BILD[st.bild] + '.png" alt="' + esc(ALT[st.bild]) + '" loading="lazy" decoding="async">' +
         '</picture></figure>' +
-      '</li>';
+        '<div class="lz-text">' +
+          '<p class="lz-zeit"><span class="lz-zeit__nr">' + (i + 1) + '</span>' + esc(wochenLabel(i, L.length, total)) + ' · ' + esc(st.rolle) + '</p>' +
+          '<h3>' + esc(st.titel) + '</h3>' +
+          '<p>' + esc(st.text) + '</p>' +
+          mess +
+          (chips ? '<p class="lz-formate">' + chips + '</p>' : '') +
+        '</div>' +
+      '</article>';
     });
     return h;
   }
@@ -248,9 +247,8 @@
   var doc = root.document;
   var app = doc.getElementById('lernreise-app');
   if (!app) return;
-  doc.documentElement.classList.add('lr-js');
 
-  var liste = doc.getElementById('lernreise-liste');
+  var tafeln = doc.getElementById('lernreise-tafeln');
   var knopf = doc.getElementById('lernreise-offerte');
   var steuerung = doc.getElementById('lernreise-steuerung');
   var wahl = { groesse: STANDARD.groesse, stand: STANDARD.stand, zeit: STANDARD.zeit };
@@ -271,8 +269,8 @@
     } catch (e) { /* ohne Speicher landet man einfach im leeren Formular */ }
   });
 
-  /* Die 3D-Fahrt (lernreise3d.js, ES-Modul) hört auf 'lernreise:gebaut'. Die Liste
-     bleibt als Fallback und für Suchmaschinen und Screenreader im DOM. */
+  /* Die Zeitleiste (lernreise-zeitleiste.js) hört auf 'lernreise:gebaut' und
+     liest beim Start 'VaiaconLernreise.letzter' (dieses Skript läuft zuerst). */
   var api3d = {
     stationen: stationen, wochen: wochen, wochenLabel: wochenLabel,
     FORMATE: FORMATE, BILD: BILD, ALT: ALT,
@@ -282,8 +280,11 @@
   root.VaiaconLernreise = api3d;
 
   function neuBauen() {
-    liste.innerHTML = bauen(wahl);
-    knopf.setAttribute('href', 'kontakt#formular');
+    /* nur die Stationen ersetzen; die Ziel-Tafel steht fest im HTML */
+    Array.prototype.forEach.call(tafeln.querySelectorAll('.lz-tafel:not(.lz-tafel--ziel)'), function (t) { t.parentNode.removeChild(t); });
+    tafeln.insertAdjacentHTML('afterbegin', bauen(wahl));
+    Array.prototype.forEach.call(doc.querySelectorAll('[data-lz-woche]'), function (el) { el.textContent = wochen(wahl); });
+    if (knopf) knopf.setAttribute('href', 'kontakt#formular');
     var L = stationen(wahl);
     api3d.letzter = { wahl: wahl, stationen: L, total: wochen(wahl) };
     var ev;
