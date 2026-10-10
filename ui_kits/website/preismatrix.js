@@ -1,8 +1,7 @@
-/* Preismatrix Automationen: Zelle wählen, Detailkarte füllen.
+/* Preismatrix Automationen: Handy-Schrittwahl (bis 700 px).
  * Die Matrix steht fertig im HTML (auch ohne JavaScript lesbar). Dieses Skript
- * markiert die gewählte Zelle, kopiert deren Inhalt in die Detailkarte und
- * rechnet das erste Jahr (Einmalpreis + 12 × Betreuung). Die Beträge liest es
- * aus dem Text der Zelle, damit die Werte aus daten/preise.json gelten. */
+ * ergänzt je Zelle Satz und Dauer aus den data-Attributen und baut auf dem Handy
+ * eine Leiste, die nur eine Spalte zeigt. Es gibt keine Detailkarte mehr. */
 (function () {
   'use strict';
   var matrix = document.getElementById('pm-matrix');
@@ -10,64 +9,6 @@
   var zellen = matrix.querySelectorAll('.pm-cell');
   if (!zellen.length) return;
 
-  function zahl(text) {
-    var m = String(text || '').replace(/['’’\s]/g, '').match(/\d+/);
-    return m ? Number(m[0]) : 0;
-  }
-  function format(n) {
-    return String(Math.round(n)).replace(/\B(?=(\d{3})+(?!\d))/g, "'");
-  }
-  function setze(id, text) {
-    var el = document.getElementById(id);
-    if (el) el.textContent = text;
-  }
-
-  function waehle(zelle) {
-    for (var i = 0; i < zellen.length; i++) {
-      zellen[i].classList.toggle('ist-gewaehlt', zellen[i] === zelle);
-      zellen[i].setAttribute('aria-pressed', zellen[i] === zelle ? 'true' : 'false');
-    }
-    var preisText = zelle.querySelector('.pm-cell__preis').textContent.trim();
-    var preis = zahl(preisText);
-    var betreuungId = zelle.getAttribute('data-betreuung') || 'be-betreuung-klein';
-    var betreuungEl = document.querySelector('.pm-tabelle [data-preis="' + betreuungId + '"]');
-    var betreuung = betreuungEl ? zahl(betreuungEl.textContent) : 0;
-
-    setze('pm-d-kicker', zelle.getAttribute('data-komplexitaet'));
-    setze('pm-d-titel', zelle.querySelector('.pm-cell__name').textContent.trim());
-    setze('pm-d-text', zelle.getAttribute('data-text') || '');
-    setze('pm-d-nutzen', zelle.getAttribute('data-nutzen') || '');
-    setze('pm-d-beispiel', zelle.getAttribute('data-beispiel') || '');
-    setze('pm-d-preis', preisText);
-    setze('pm-d-dauer', zelle.getAttribute('data-dauer') || '');
-    setze('pm-d-betreuung', 'CHF ' + format(betreuung) + ' pro Monat');
-    setze('pm-d-jahr', 'CHF ' + format(preis + betreuung * 12));
-    var mehr = document.getElementById('pm-d-mehr');
-    if (mehr) {
-      var ziel = zelle.getAttribute('data-mehr');
-      if (ziel) { mehr.href = ziel; mehr.hidden = false; } else { mehr.hidden = true; }
-    }
-
-    var liste = document.getElementById('pm-d-liste');
-    if (liste) {
-      liste.innerHTML = '';
-      (zelle.getAttribute('data-umfang') || '').split('|').forEach(function (t) {
-        if (!t.trim()) return;
-        var li = document.createElement('li');
-        li.textContent = t.trim();
-        liste.appendChild(li);
-      });
-    }
-  }
-
-  /* Handy (bis 700 px): Schrittwahl als Leiste, nur eine Spalte sichtbar,
-   * Detailkarte klappt direkt unter der angetippten Karte auf. Die neun Zellen
-   * bleiben die einzige Datenquelle; Dauer und Satz werden aus ihren
-   * data-Attributen in die Karte gespiegelt (Dauer ist nur Information, kein Preistreiber). */
-  var mq = window.matchMedia ? window.matchMedia('(max-width: 700px)') : null;
-  var detail = document.querySelector('.pm-detail');
-  var detailHeim = detail ? detail.parentNode : null;
-  var detailDanach = detail ? detail.nextSibling : null;
   var spalten = matrix.querySelectorAll('.pm-col');
   var leiste = null, hilfe = null, mehrBox = null, knoepfe = [], spaltenNach = {};
 
@@ -101,15 +42,6 @@
     }
   }
 
-  function legeDetail(zelle) {
-    if (!detail) return;
-    if (mq && mq.matches) {
-      zelle.parentNode.insertBefore(detail, zelle.nextSibling);
-    } else if (detail.parentNode !== detailHeim) {
-      detailHeim.insertBefore(detail, detailDanach && detailDanach.parentNode === detailHeim ? detailDanach : null);
-    }
-  }
-
   if (spalten.length && matrix.parentNode) {
     leiste = document.createElement('div');
     leiste.className = 'pm-schritt';
@@ -129,8 +61,6 @@
       b.setAttribute('aria-pressed', 'false');
       b.addEventListener('click', function () {
         setzeSpalte(name);
-        var erste = matrix.querySelector('.pm-cell[data-komplexitaet="' + name + '"]');
-        if (erste) { waehle(erste); legeDetail(erste); }
       });
       knoepfe.push(b);
       gruppe.appendChild(b);
@@ -146,17 +76,6 @@
     matrix.parentNode.insertBefore(leiste, matrix);
   }
 
-  for (var i = 0; i < zellen.length; i++) {
-    zellen[i].addEventListener('click', function (e) {
-      var zelle = e.currentTarget;
-      waehle(zelle);
-      legeDetail(zelle);
-      if (mq && mq.matches && zelle.scrollIntoView) {
-        zelle.scrollIntoView({ block: 'start', behavior: 'smooth' });
-      }
-    });
-  }
-
   /* «Beispiel ansehen»: Ziel liegt in einem <details> weiter unten; erst aufklappen, dann hinrollen.
    * Dasselbe beim Laden mit #anker und bei jedem Wechsel des Ankers, sonst bleibt das Ziel zu. */
   function oeffneBeispiel(hash, sofort) {
@@ -170,17 +89,6 @@
     if (ziel.scrollIntoView) ziel.scrollIntoView({ block: 'start', behavior: sofort ? 'instant' : 'smooth' });
     return true;
   }
-  var mehrLink = document.getElementById('pm-d-mehr');
-  if (mehrLink) {
-    mehrLink.addEventListener('click', function (e) {
-      var hash = mehrLink.getAttribute('href') || '';
-      if (hash.charAt(0) !== '#') return;
-      if (oeffneBeispiel(hash)) {
-        e.preventDefault();
-        if (history.replaceState) history.replaceState(null, '', hash);
-      }
-    });
-  }
   window.addEventListener('hashchange', function () { oeffneBeispiel(location.hash); });
   // Beim Laden ohne Animation: der Browser ist schon gesprungen, bevor die Zeile offen war.
   if (location.hash) {
@@ -188,26 +96,5 @@
     // Nach dem vollständigen Laden noch einmal: der Browser springt selbst zum Anker, sobald Bilder und Schriften da sind.
     window.addEventListener('load', function () { setTimeout(function () { oeffneBeispiel(location.hash, true); }, 50); });
   }
-
-  var start = matrix.querySelector('.pm-cell.ist-gewaehlt') || zellen[0];
-  setzeSpalte(start.getAttribute('data-komplexitaet'));
-  waehle(start);
-  legeDetail(start);
-  if (mq) {
-    var neu = function () { legeDetail(matrix.querySelector('.pm-cell.ist-gewaehlt') || zellen[0]); };
-    if (mq.addEventListener) mq.addEventListener('change', neu); else if (mq.addListener) mq.addListener(neu);
-  }
-
-  /* preise.js setzt die Katalogpreise später ein: dann die Karte neu rechnen. */
-  /* Nur Preise der Zellen und Zuschlagstabelle beobachten, nie die Detailkarte (sonst Endlosschleife). */
-  if (window.MutationObserver) {
-    var beobachter = new MutationObserver(function () {
-      var aktiv = matrix.querySelector('.pm-cell.ist-gewaehlt');
-      if (aktiv) waehle(aktiv);
-    });
-    var opt = { subtree: true, characterData: true, childList: true };
-    for (var q = 0; q < zellen.length; q++) beobachter.observe(zellen[q].querySelector('.pm-cell__preis'), opt);
-    var tabelle = document.querySelector('.pm-tabelle');
-    if (tabelle) beobachter.observe(tabelle, opt);
-  }
+  setzeSpalte(zellen[0].getAttribute('data-komplexitaet'));
 })();

@@ -21,7 +21,7 @@
 <link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20261005-vorschlag">
 <link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261009-fakten-versteckt">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
-<link rel="stylesheet" href="ui_kits/website/preismatrix.css?v=20261010-nervt">
+<link rel="stylesheet" href="ui_kits/website/preismatrix.css?v=20261010-ohne-detail">
 <link rel="stylesheet" href="ui_kits/website/automationen.css?v=20261010-mail">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
@@ -482,7 +482,7 @@
                   <span class="pm-col__bsp">Eine Rechnung kommt per Mail und liegt Sekunden später im richtigen Ordner.</span>
                   <span class="pm-col__gewinn"><em>Was Sie davon haben</em>Nichts geht verloren, niemand sucht am Monatsende.</span>
                   <span class="pm-col__ab"><em>Preis</em><span data-preis="au-ablauf-klein" data-preis-form="betrag">ab CHF 1'300</span></span></div>
-              <button type="button" class="pm-cell ist-gewaehlt" aria-pressed="true"
+              <div class="pm-cell"
                 data-komplexitaet="Einfache Automation" data-zeit="Tage" data-dauer="Bei Ihnen fertig in 1 bis 2 Arbeitstagen" data-betreuung="be-betreuung-klein"
                 data-text="Eine feste Regel: Kommt ein Beleg per Mail, legen wir ihn von selbst richtig ab."
                 data-nutzen="Niemand sucht mehr am Monatsende, und kein Beleg geht verloren."
@@ -491,8 +491,8 @@
                 <span class="pm-cell__preis" data-preis="au-ablauf-klein" data-preis-form="betrag">ab CHF 1'300</span>
                 <span class="pm-cell__name">Kleiner Ablauf</span>
                 <span class="pm-cell__tag">Katalog</span>
-              </button>
-              <button type="button" class="pm-cell" aria-pressed="false"
+              </div>
+              <div class="pm-cell"
                 data-komplexitaet="Einfache Automation" data-zeit="Woche" data-dauer="Bei Ihnen fertig in 3 bis 5 Arbeitstagen" data-betreuung="be-betreuung-klein"
                 data-text="Ihr Team füllt ein Formular aus, die fertige Offerte liegt als PDF bereit."
                 data-nutzen="Jede Offerte ist gleich gut, und sie ist in Minuten fertig."
@@ -500,14 +500,14 @@
                 data-beispiel="Aus einem Formular wird eine Offerte in Ihrem Design. Sie schauen drüber, dann geht sie raus.">
                 <span class="pm-cell__preis" data-preis="au-offerte-formular" data-preis-form="betrag">ab CHF 2'200</span>
                 <span class="pm-cell__name">Ablauf mit eigenen Regeln</span>
-              </button>
+              </div>
               </div>
               <div class="pm-spalte">
                 <div class="pm-col"><span class="pm-col__kopf"><i>2</i><b>Mittelgrosse Automation</b></span><small>Zwei Programme reden miteinander, oder die KI entscheidet</small>
                   <span class="pm-col__bsp">Der Beleg geht aus der Mail direkt in die Buchhaltung.</span>
                   <span class="pm-col__gewinn"><em>Was Sie davon haben</em>Kein Abtippen mehr, die Zahlen stimmen.</span>
                   <span class="pm-col__ab"><em>Preis</em><span data-preis="au-integration" data-preis-form="betrag">ab CHF 1'900</span></span></div>
-              <button type="button" class="pm-cell" aria-pressed="false"
+              <div class="pm-cell"
                 data-komplexitaet="Mittelgrosse Automation" data-zeit="Tage" data-dauer="Bei Ihnen fertig in 1 bis 2 Arbeitstagen" data-betreuung="be-betreuung-klein"
                 data-text="Zwei Programme reden miteinander: Der Beleg aus der Mail steht in der Buchhaltung als Buchung bereit."
                 data-nutzen="Kein Abtippen mehr, und die Zahlen stimmen."
@@ -516,8 +516,8 @@
                 <span class="pm-cell__preis" data-preis="au-integration" data-preis-form="betrag">ab CHF 1'900</span>
                 <span class="pm-cell__name">Anbindung</span>
                 <span class="pm-cell__tag">Katalog</span>
-              </button>
-              <button type="button" class="pm-cell" aria-pressed="false"
+              </div>
+              <div class="pm-cell"
                 data-komplexitaet="Mittelgrosse Automation" data-zeit="Tage" data-dauer="Bei Ihnen fertig in 1 bis 2 Arbeitstagen" data-betreuung="be-betreuung-klein"
                 data-text="Grosse Beträge gehen erst weiter, wenn Sie auf dem Handy «Freigeben» drücken."
                 data-nutzen="Nichts geht ohne Sie raus, und Sie müssen dafür nicht im Büro sein."
@@ -525,8 +525,8 @@
                 data-beispiel="Eine Rechnung über CHF 2'000 geht zur Inhaberin aufs Handy. Erst nach ihrem Klick geht sie in die Zahlung.">
                 <span class="pm-cell__preis" data-preis="au-freigabe-schleife" data-preis-form="betrag">ab CHF 2'600</span>
                 <span class="pm-cell__name">Freigabe-Schleife</span>
-              </button>
-              <button type="button" class="pm-cell" aria-pressed="false"
+              </div>
+              <div class="pm-cell"
                 data-komplexitaet="Mittelgrosse Automation" data-zeit="Woche" data-dauer="Bei Ihnen fertig in 3 bis 5 Arbeitstagen" data-betreuung="be-betreuung-mittel"
                 data-text="Die KI liest Belege und Anfragen: Belege werden gebucht, aus Anfragen werden Offerten."
                 data-nutzen="Sie geben nur noch frei, und Anfragen sind am selben Tag beantwortet."
@@ -535,8 +535,8 @@
                 <span class="pm-cell__preis" data-preis="au-belege-offerten" data-preis-form="betrag">ab CHF 3'000</span>
                 <span class="pm-cell__name">Belege und Offerten</span>
                 <span class="pm-cell__tag">Katalog</span>
-              </button>
-              <button type="button" class="pm-cell" aria-pressed="false"
+              </div>
+              <div class="pm-cell"
                 data-komplexitaet="Mittelgrosse Automation" data-zeit="Wochen" data-dauer="Bei Ihnen fertig in 6 bis 12 Arbeitstagen" data-betreuung="be-betreuung-mittel"
                 data-text="Das Postfach sortiert sich selbst, Antworten stehen als Entwurf bereit, Liegengebliebenes wird nachgefasst."
                 data-nutzen="Kein Kunde geht vergessen, und Wichtiges steht zuoberst."
@@ -544,14 +544,14 @@
                 data-beispiel="Von achtzig Mails am Tag stehen die fünfzehn wichtigen zuoberst. Zu jeder Anfrage wartet ein Antwort-Entwurf.">
                 <span class="pm-cell__preis" data-preis="au-postfach-ki" data-preis-form="betrag">ab CHF 3'800</span>
                 <span class="pm-cell__name">Postfach mit KI</span>
-              </button>
+              </div>
               </div>
               <div class="pm-spalte">
                 <div class="pm-col"><span class="pm-col__kopf"><i>3</i><b>Komplette Automation</b></span><small>Mehrere Schritte, Freigaben, Ausnahmen: ein Bereich läuft von selbst</small>
                   <span class="pm-col__bsp">Von der Anfrage bis zur Rechnung, ohne dass jemand etwas weiterreicht.</span>
                   <span class="pm-col__gewinn"><em>Was Sie davon haben</em>Der Bereich hängt nicht mehr an einer Person, Rechnungen gehen am Tag des Abschlusses raus.</span>
                   <span class="pm-col__ab"><em>Preis</em><span data-preis="au-auftragsablauf" data-preis-form="betrag">ab CHF 4'200</span></span></div>
-              <button type="button" class="pm-cell" aria-pressed="false"
+              <div class="pm-cell"
                 data-komplexitaet="Komplette Automation" data-zeit="Woche" data-dauer="Bei Ihnen fertig in 3 bis 5 Arbeitstagen" data-betreuung="be-betreuung-mittel"
                 data-text="Von der Anfrage bis zur Rechnung in einem Fluss, über alle beteiligten Programme."
                 data-nutzen="Die Rechnung geht am Tag des Abschlusses raus, das Geld ist früher auf dem Konto."
@@ -559,8 +559,8 @@
                 data-beispiel="Anfrage kommt rein, Offerte geht raus, Auftrag wird angelegt, Rechnung folgt nach Abschluss. Ein Mensch gibt frei.">
                 <span class="pm-cell__preis" data-preis="au-auftragsablauf" data-preis-form="betrag">ab CHF 4'200</span>
                 <span class="pm-cell__name">Auftragsablauf</span>
-              </button>
-              <button type="button" class="pm-cell" aria-pressed="false"
+              </div>
+              <div class="pm-cell"
                 data-komplexitaet="Komplette Automation" data-zeit="Wochen" data-dauer="Bei Ihnen fertig in 6 bis 12 Arbeitstagen" data-betreuung="be-betreuung-mittel"
                 data-text="Zu jedem Kunden liegt alles an einem Ort, mit einer Kurzfassung der KI."
                 data-nutzen="In dreissig Sekunden im Bild, auch wenn jemand in den Ferien ist."
@@ -568,8 +568,8 @@
                 data-beispiel="Mails, Rechnungen und Termine eines Kunden stehen untereinander, offene Punkte zuoberst.">
                 <span class="pm-cell__preis" data-preis="au-kundendossier" data-preis-form="betrag">ab CHF 5'200</span>
                 <span class="pm-cell__name">Kundendossier</span>
-              </button>
-              <button type="button" class="pm-cell" aria-pressed="false"
+              </div>
+              <div class="pm-cell"
                 data-komplexitaet="Komplette Automation" data-zeit="Wochen" data-dauer="Bei Ihnen fertig in 6 bis 12 Arbeitstagen" data-betreuung="be-betreuung-mittel"
                 data-text="Ein ganzer Bereich läuft von selbst, zum Beispiel Einkauf oder Rapportierung, von der Bestellung bis zur Auswertung."
                 data-nutzen="Der Bereich hängt an keiner einzelnen Person mehr, und Abweichungen fallen sofort auf."
@@ -578,51 +578,10 @@
                 <span class="pm-cell__preis" data-preis="au-ablauf-gross" data-preis-form="betrag">ab CHF 6'800</span>
                 <span class="pm-cell__name">Ganzer Bereich</span>
                 <span class="pm-cell__tag">Katalog</span>
-              </button>
+              </div>
               </div>
             </div>
           </div>
-          <p class="pm-hinweis">Antippen: Sie sehen, was passiert, was es bringt und was es im ersten Jahr kostet.</p>
-
-          <div class="pm-detail" aria-live="polite">
-            <div class="pm-card">
-              <p class="sv-kicker" id="pm-d-kicker">Einfache Automation</p>
-              <h3 id="pm-d-titel">Kleiner Ablauf</h3>
-              <p id="pm-d-text">Eine feste Regel: Kommt ein Beleg per Mail, legen wir ihn von selbst richtig ab.</p>
-              <div class="pm-nutzen"><b>Was Sie davon haben</b><p id="pm-d-nutzen">Niemand sucht mehr am Monatsende, und kein Beleg geht verloren.</p></div>
-              <div class="pm-beispiel"><b>Beispiel</b><p id="pm-d-beispiel">Eine Rechnung kommt per Mail und liegt Sekunden später benannt im richtigen Ordner.</p></div>
-              <p class="pm-drin">Das ist drin</p>
-              <ul class="pm-liste" id="pm-d-liste">
-                <li>Einrichten im Programm, das Sie schon haben</li>
-                <li>Probelauf mit Ihren echten Belegen</li>
-                <li>Kurze Anleitung fürs Team</li>
-              </ul>
-            </div>
-            <div class="pm-card pm-card--terra">
-              <p class="sv-kicker">Fixpreis nach Erstanalyse</p>
-              <div class="pm-gross" id="pm-d-preis">ab CHF 1'300</div>
-              <p id="pm-d-dauer">Bei Ihnen fertig in 1 bis 2 Arbeitstagen</p>
-              <ul class="pm-summe">
-                <li><span>Empfohlene Betreuung</span><strong id="pm-d-betreuung">CHF 130 pro Monat</strong></li>
-                <li><span>Erstes Jahr gesamt</span><strong id="pm-d-jahr">CHF 2'860</strong></li>
-                <li><span>Jedes weitere Programm</span><strong><span data-preis="au-integration" data-preis-form="betrag">ab CHF 1'900</span></strong></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="pm-regeln">
-            <div>
-              <h3>Zuschläge und Laufendes</h3>
-              <table class="pm-tabelle">
-                <tr><td>Weiteres Programm anbinden</td><td><span data-preis="au-integration" data-preis-form="betrag">ab CHF 1'900</span></td></tr>
-                <tr><td>Betreuung klein, 1 Ablauf</td><td><span data-preis="be-betreuung-klein">CHF 130 pro Monat</span></td></tr>
-                <tr><td>Betreuung mittel, bis 5 Abläufe, 1 Std. Anpassung inkl.</td><td><span data-preis="be-betreuung-mittel">CHF 290 pro Monat</span></td></tr>
-                <tr><td>Anpassung nach Aufwand</td><td><span data-preis="be-anpassung-stunde">CHF 150 pro Stunde</span></td></tr>
-              </table>
-            </div>
-          </div>
-
-          <p class="pm-fuss">Chatbot und Telefonassistent sind eigene Produkte ausserhalb der Matrix, die Preise stehen in den <a href="faq#faq-bot">häufigen Fragen</a>. Betreuung kündbar auf Ende Folgemonat. <span data-preis-mwst>Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer.</span></p>
         </div>
       </div>
     </section>
@@ -718,7 +677,7 @@
 <script src="ui_kits/website/api-basis.js?v=20261004-umbau"></script>
 <script src="ui_kits/website/visibility.js?v=20261007-logo-svg"></script>
 <script src="ui_kits/website/preise.js?v=20261004-preise"></script>
-<script src="ui_kits/website/preismatrix.js?v=20261010-eine-seite"></script>
+<script src="ui_kits/website/preismatrix.js?v=20261010-ohne-detail"></script>
 <script src="ui_kits/website/branchen.js?v=20261010-ico"></script>
 <script src="ui_kits/website/ihrfall.js?v=20261010-mail"></script>
 <script src="ui_kits/website/chat.js?v=20261004-umbau"></script>

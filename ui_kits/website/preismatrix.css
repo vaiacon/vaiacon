@@ -66,7 +66,6 @@
   font: inherit;
   color: var(--text-strong);
   text-align: left;
-  cursor: pointer;
   display: grid;
   grid-template-columns: 1fr auto;
   grid-template-areas: "name preis" "satz satz" "dauer dauer";
@@ -80,8 +79,6 @@
   scroll-margin-top: 12px;
   transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
 }
-.pm-cell:hover { background: var(--sand-300); transform: translate(-2px, -2px); box-shadow: 4px 4px 0 var(--border-ink); }
-.pm-cell:focus-visible { outline: 3px solid var(--orange-500); outline-offset: 2px; }
 .pm-cell__name { grid-area: name; font-size: 18px; font-weight: var(--weight-bold); color: var(--text-strong); line-height: 1.3; }
 .pm-cell__preis {
   display: none; /* 09.10. Philip: erst Verständnis, dann Kosten; Preis steht in der Detailkarte */
@@ -98,182 +95,9 @@
 .pm-cell__dauer { grid-area: dauer; font-size: 13.5px; font-weight: var(--weight-medium); color: var(--text-muted); font-variant-numeric: tabular-nums; }
 .pm-cell__dauer::before { content: "\25F7\00a0"; }
 .pm-cell__tag { display: none; }
-.pm-cell.ist-gewaehlt {
-  background: var(--grad-package);
-  color: var(--text-on-terra);
-  box-shadow: var(--shadow-comic);
-  transform: translate(-3px, -3px);
-}
-.pm-cell.ist-gewaehlt .pm-cell__name { color: var(--text-on-terra); }
-.pm-cell.ist-gewaehlt .pm-cell__satz { color: var(--text-on-terra-soft); }
-.pm-cell.ist-gewaehlt .pm-cell__dauer { color: var(--peach-200); }
-
-.pm-hinweis { margin: 12px 0 0; font-size: var(--text-ui); color: var(--text-muted); }
-
-/* Detail */
-.pm-detail {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 18px;
-  margin-top: 22px;
-}
-.pm-card {
-  min-width: 0;
-  padding: 24px;
-  background: var(--surface-card);
-  border: 1.5px solid var(--border-ink);
-  border-radius: var(--radius-lg);
-}
-.pm-card h3 { margin: 0 0 6px; font-size: var(--text-h3); font-weight: var(--weight-bold); letter-spacing: var(--tracking-tight); }
-.pm-card .sv-kicker { margin-bottom: 8px; }
-.pm-card p { margin: 0; color: var(--text-body); font-size: 16px; }
-.pm-card--terra {
-  background: var(--grad-package);
-  color: var(--text-on-terra);
-  border-color: transparent;
-  box-shadow: var(--shadow-soft);
-}
-.pm-card--terra .sv-kicker { color: var(--peach-200); }
-.pm-card--terra p { color: var(--text-on-terra-soft); }
-.pm-gross {
-  font-size: 42px;
-  font-weight: var(--weight-bold);
-  letter-spacing: var(--tracking-display);
-  line-height: 1;
-  font-variant-numeric: tabular-nums;
-  margin: 6px 0 4px;
-}
-.pm-summe {
-  list-style: none;
-  margin: 16px 0 0;
-  padding: 14px 0 0;
-  border-top: 1px solid var(--border-on-dark);
-  display: grid;
-  gap: 8px;
-}
-.pm-summe li {
-  display: flex;
-  justify-content: space-between;
-  gap: 12px;
-  font-size: 15px;
-  font-variant-numeric: tabular-nums;
-  color: var(--text-on-terra-soft);
-}
-.pm-summe strong { color: var(--text-on-terra); white-space: nowrap; }
-
-.pm-liste {
-  list-style: none;
-  margin: 12px 0 0;
-  padding: 0;
-  display: grid;
-  gap: 8px;
-}
-.pm-liste li { position: relative; padding-left: 24px; font-size: 15px; color: var(--text-body); }
-.pm-liste li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: .45em;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: var(--accent);
-}
-.pm-beispiel {
-  margin-top: 16px;
-  padding: 14px 16px;
-  background: var(--bg-alt);
-  border-radius: var(--radius-md);
-}
-.pm-beispiel b {
-  display: block;
-  font-size: var(--text-overline);
-  letter-spacing: var(--tracking-badge);
-  text-transform: uppercase;
-  color: var(--text-muted);
-  margin-bottom: 4px;
-}
-.pm-beispiel p { color: var(--text-strong); font-size: 15px; }
-
-/* Einstufung + Zuschläge */
-.pm-regeln {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
-  margin: 28px auto 0;
-  max-width: 40rem;
-}
-.pm-regeln h3 { margin: 0 0 10px; font-size: 15px; font-weight: var(--weight-bold); letter-spacing: .02em; }
-.pm-regel { display: grid; gap: 10px; }
-.pm-regel div {
-  display: grid;
-  grid-template-columns: 34px 1fr;
-  gap: 10px;
-  align-items: start;
-  font-size: 15px;
-  color: var(--text-body);
-}
-.pm-regel i {
-  font-style: normal;
-  display: inline-grid;
-  place-items: center;
-  width: 30px;
-  height: 30px;
-  border-radius: var(--radius-xs);
-  background: var(--peach-150);
-  color: var(--terra-600);
-  font-weight: var(--weight-bold);
-  font-size: 13px;
-}
-.pm-regel b { color: var(--text-strong); }
-.pm-tabelle { width: 100%; border-collapse: collapse; font-size: 15px; }
-.pm-tabelle td { padding: 8px 0; border-bottom: 1px solid var(--border-soft); vertical-align: top; color: var(--text-body); }
-.pm-tabelle td:last-child {
-  text-align: right;
-  white-space: nowrap;
-  padding-left: 12px;
-  font-weight: var(--weight-bold);
-  color: var(--text-strong);
-  font-variant-numeric: tabular-nums;
-}
-.pm-fuss { margin: 28px 0 0; font-size: 13.5px; color: var(--text-muted); }
-
-@media (max-width: 760px) {
-  .pm-detail { grid-template-columns: 1fr; }
-  .pm-gross { font-size: 36px; }
-}
 @media (prefers-reduced-motion: reduce) {
   .pm-cell { transition: none; }
 }
-
-.pm-mehr { display: inline-block; margin-top: 14px; font-weight: var(--weight-semibold); font-size: 15px; }
-
-/* Detailkarte: Nutzenzeile und Umfang */
-.pm-nutzen {
-  margin-top: 16px;
-  padding: 12px 16px;
-  border-left: 4px solid var(--terra-600);
-  background: var(--cream-card);
-  border-radius: 6px;
-}
-.pm-nutzen b {
-  display: block;
-  font-size: var(--text-overline);
-  letter-spacing: var(--tracking-badge);
-  text-transform: uppercase;
-  color: var(--terra-600);
-  margin-bottom: 4px;
-}
-.pm-nutzen p { color: var(--text-strong); font-size: 15px; }
-.pm-drin {
-  margin: 16px 0 0;
-  font-size: var(--text-overline);
-  letter-spacing: var(--tracking-badge);
-  text-transform: uppercase;
-  font-weight: var(--weight-bold);
-  color: var(--text-muted);
-}
-.pm-card .pm-drin + .pm-liste { margin-top: 8px; }
 
 /* Handy (bis 700 px): Schrittwahl + eine Spalte statt drei */
 .pm-schritt { display: none; }
@@ -336,12 +160,8 @@
   .pm-matrix[data-spalte="Komplette Automation"] .pm-cell:not([data-komplexitaet="Komplette Automation"]) { display: none; }
 
   .pm-cell { row-gap: 4px; }
-  .pm-cell:hover { transform: none; box-shadow: none; }
-  .pm-cell.ist-gewaehlt { transform: none; box-shadow: none; }
   .pm-cell__name { font-size: 19px; }
 
-  .pm-matrix > .pm-detail, .pm-spalte > .pm-detail { margin-top: 0; gap: 12px; }
-  .pm-card { padding: 20px 18px; }
 }
 
 /* ── Branchen-Umschalter: was die drei Sprossen in einer Branche heissen ──
