@@ -250,7 +250,6 @@
 
   var tafeln = doc.getElementById('lernreise-tafeln');
   var knopf = doc.getElementById('lernreise-offerte');
-  var steuerung = doc.getElementById('lernreise-steuerung');
   var wahl = { groesse: STANDARD.groesse, stand: STANDARD.stand, zeit: STANDARD.zeit };
 
   /* Die gewählte Beispielreise geht als Ausgangspunkt ins Kontaktformular
@@ -259,13 +258,9 @@
     try {
       /* Aus Sicht des Betriebs geschrieben, nicht als Beschreibung der Beispielreise. */
       var L = stationen(wahl);
-      root.sessionStorage.setItem('vaiacon-lernreise', [
-        'Unser Betrieb: ' + GROESSE[wahl.groesse].satz + ' Mitarbeitende',
-        'Stand bei KI: ' + STAND[wahl.stand].label.replace(/\u00a0/g, ' '),
-        'Zeit zum Lernen: ' + ZEIT[wahl.zeit].woche,
-        'Ausgangspunkt: Ihre Beispielreise, etwa ' + wochen(wahl) + ' Wochen mit ' + L.length + ' Stationen (' +
-          L.map(function (st) { return st.titel; }).join(', ') + ')'
-      ].join('\n'));
+      root.sessionStorage.setItem('vaiacon-lernreise',
+        'Ausgangspunkt: die Beispiel-Lernreise, etwa ' + wochen(wahl) + ' Wochen mit ' + L.length + ' Stationen (' +
+          L.map(function (st) { return st.titel; }).join(', ') + ')');
     } catch (e) { /* ohne Speicher landet man einfach im leeren Formular */ }
   });
 
@@ -293,21 +288,6 @@
     doc.dispatchEvent(ev);
   }
 
-  /* Reihenfolge bleibt wie im Dokument: erst die Gruppe markieren, dann bauen */
-  function markieren() {
-    Array.prototype.forEach.call(steuerung.querySelectorAll('input[type=radio]'), function (r) {
-      r.checked = wahl[r.name] === r.value;
-    });
-  }
-  steuerung.addEventListener('change', function (e) {
-    var t = e.target;
-    if (t && t.type === 'radio' && wahl.hasOwnProperty(t.name)) {
-      wahl[t.name] = t.value;
-      neuBauen();
-    }
-  });
-
-  steuerung.hidden = false;
-  markieren();
+  /* Die Auswahl (Grösse, Stand, Zeit) gibt es seit 10.10.2026 nicht mehr – es gilt STANDARD. */
   neuBauen();
 })(typeof window !== 'undefined' ? window : this);
