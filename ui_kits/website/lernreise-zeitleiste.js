@@ -215,6 +215,19 @@
   setzen(0);
   ausUrl();
 
+  /* Nach Laden, Zurück-Navigation und Scroll-Wiederherstellung Punkt, Karte und Zähler
+     neu aus der Scrollstellung ableiten (ohne Scroll-Ereignis, ohne Sprung). */
+  function abgleich() {
+    if (scrollModus) {
+      var i = Math.round((root.pageYOffset - lzTop()) / SCHRITT);
+      setzen(Math.max(0, Math.min(tafeln.length - 1, i)));
+    } else {
+      setzen(aktiv);
+    }
+  }
+  root.addEventListener('load', abgleich);
+  root.addEventListener('pageshow', abgleich);
+
   /* Formularwechsel: lernreise.js baut die Tafeln neu und feuert das Ereignis */
   doc.addEventListener('lernreise:gebaut', function () { neu(true); });
 })(window);

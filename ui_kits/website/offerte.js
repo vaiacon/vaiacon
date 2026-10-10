@@ -179,6 +179,7 @@
         el('span', { class: 'of-pos__titel', text: p.titel }),
         el('span', { class: 'of-pos__beschr', text: p.beschreibung }),
         el('span', { class: 'of-pos__preis', id: kid + '-preis', text: preisText(p) }),
+        p.umfang ? el('span', { class: 'of-pos__hinweis', text: p.umfang }) : null,
         p.hinweis ? el('span', { class: 'of-pos__hinweis', text: p.hinweis }) : null
       ])
     ]);
@@ -732,6 +733,7 @@
       if (!k || !Array.isArray(k.bereiche) || !k.bereiche.length) throw new Error('Katalog leer');
       katalog = k;
       k.bereiche.forEach(function (b) {
+        b.positionen = b.positionen.filter(function (p) { return p.status !== 'pruefen'; });
         b.positionen.forEach(function (p) { positionen[p.id] = { pos: p, bereich: b }; });
       });
       laden();

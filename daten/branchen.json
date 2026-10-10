@@ -335,6 +335,62 @@
       "https://www.twint.ch/geschaeftskunden/unsere-loesungen/gastronomie/"
     ]
   },
+  "immobilien": {
+    "name": "Immobilien",
+    "nervt": [
+      "Gleiche Interessentenfragen, jeden Tag neu",
+      "Dossiers unvollständig, Rückfragen von Hand",
+      "Schadenmeldungen verstreut auf Mail und Telefon"
+    ],
+    "einfach": [
+      {
+        "titel": "Eingangsbestätigung für Interessenten",
+        "satz": "Portal-Anfrage → Antwort mit Unterlagenliste → Eintrag"
+      },
+      {
+        "titel": "Besichtigungserinnerung",
+        "satz": "Termin gebucht → Erinnerung mit Absagelink → Kalender"
+      },
+      {
+        "titel": "Meldung ins Ticket",
+        "satz": "Schadenmeldung per Mail → Ticket mit Objekt und Dringlichkeit"
+      }
+    ],
+    "verbunden": [
+      {
+        "titel": "Dossier-Vorprüfung",
+        "satz": "Dossier → Vollständigkeit prüfen → Rückfrage oder Freigabe"
+      },
+      {
+        "titel": "Handwerker informieren",
+        "satz": "Schadenmeldung → Auftragsentwurf an Handwerker → Freigabe"
+      },
+      {
+        "titel": "Inserat aus Objektdaten",
+        "satz": "Objektdaten + Fotos → Inserattext-Entwurf → Freigabe"
+      }
+    ],
+    "ganzer_ablauf": [
+      {
+        "titel": "Von Kündigung bis Neumieter",
+        "satz": "Kündigung → Inserat → Besichtigung → Dossier → Zusage"
+      },
+      {
+        "titel": "Mieteranfragen beantworten",
+        "satz": "Frage per Mail → Antwort aus Hausordnung und Vertrag → Freigabe"
+      },
+      {
+        "titel": "Eigentümerbericht",
+        "satz": "Mietzinsen + Aufträge + Leerstand → Monatsbericht → Versand"
+      }
+    ],
+    "_quellen": [
+      "https://edana.ch/en/2026/02/09/how-ai-is-redefining-property-management-in-switzerland/",
+      "https://www.moneycab.com/?p=1008295",
+      "https://www.weka.ch/themen/bau-immobilien/immobilien/mietrecht/article/wohnungsabnahme-die-durchfuehrung-und-weitervermietung/",
+      "https://www.mobiliar.ch/ratgeber/nebenkostenabrechnung"
+    ]
+  },
   "alle": {
     "name": "Für alle Branchen",
     "einfach": [

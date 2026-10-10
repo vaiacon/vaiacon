@@ -265,3 +265,8 @@
   .pm-branchen__ico { width: 62px; height: 62px; }
 }
 @media (prefers-reduced-motion: reduce) { .pm-branchen__chips button { transition: none; } }
+
+/* Ergänzung 2026-10-11: acht Branchen-Chips, zwei Reihen zu vier (statt 7 + 1) */
+@media (min-width: 821px) {
+  .pm-branchen__chips { max-width: 548px; margin-inline: auto; }
+}

@@ -46,3 +46,30 @@ selbst aus `main`. Höchstens zwei Minuten nach dem Push ist die Seite draussen.
 
 ⚠️ Weisse Seite nach einer Änderung ist fast immer der Browser-Zwischenspeicher —
 einmal hart neu laden (⌘⇧R).
+
+## Preise: eine Quelle, vier Sätze
+
+Alle Preise stehen an **einer** Stelle: `daten/preise.json` (live: https://vaiacon.ch/daten/preise.json). Seiten, Chat (Vaia), Offerten-Dienst, PDF, Mails, Skills und Unterlagen lesen dort. ⛔ **Keine Zahl von Hand** in eine Seite, Mail, Vorlage oder einen Skill schreiben: auf der Website per `data-preis`, anderswo als Verweis auf den Katalog.
+
+Vier Sätze gelten überall wortgleich und stehen im Katalog unter `saetze`:
+
+1. **Ab-Preis:** Ab-Preise sind Fixpreise nach der Erstanalyse, nie offen nach oben.
+2. **Betreuung:** Betreuung ist optional und kündbar auf Ende Folgemonat. Sie umfasst Überwachung, Fehlerbehebung und ein festes Anpassungsbudget im Monat.
+3. **Fremdkosten:** Lizenzen, Hosting, KI-Nutzung und Telefonie rechnen wir nach Verbrauch separat ab. Sie laufen auch ohne Betreuung.
+4. **Beispiel erstes Jahr:** Einrichtung plus zwölf Monate Betreuung, zuzüglich der genannten Fremdkosten.
+
+Dazu im Katalog: `maengel` (90 Tage nach Übergabe ohne Rechnung), `abnahme`, `gueltigkeit` (30 Tage).
+
+**Wörter:** Betreuung (nicht Service, Retainer, Wartung, Abo) · Chatbot mit Firmenwissen (nie «Agent») · Anbindung / Standard-Connector / individuell (nicht Integration, Schnittstelle) · Einfache / Mittelgrosse / Komplette Automation. Nie: «typisch», «garantiert», Platzierungen, Umsatzwirkung, «Geld zurück». **Nur intern, nie nach aussen:** Listenstunden, Produkttest, Marge, Status.
+
+**Nach jeder Preisänderung, erst nach dem Merge, in dieser Reihenfolge:**
+1. Abgleich abwarten (zwei Minuten).
+2. Offerten-Dienst neu bauen, mit `--force-recreate`, Image-ID prüfen.
+3. Bot neu starten: `cd /srv/vaiacon-bot && docker compose restart` (er liest sein Wissen nur beim Start; vorher `scripts/bot_wissen.py`).
+4. intern neu bauen.
+
+Nie vor dem Merge, sonst nennt der Bot neue und die Seite alte Preise.
+
+**Prüfskript:** `scripts/preise_pruefen.py` findet jede CHF-Zahl ausserhalb von `data-preis`, vergleicht Seiten, llms.txt, Bot-Wissen und Offerten-Dienst mit dem Katalog. Rot heisst nicht fertig.
+
+Preise ändern: `git branch --show-current` prüfen, Änderung im eigenen Zweig mit Zusammenführungsanfrage, nie `--force`. `preise.json`, die Angebotsseiten (bot, learning, visibility, service) und den Offerten-Dienst nicht parallel von zwei Personen anfassen; vorher im Chat sagen.

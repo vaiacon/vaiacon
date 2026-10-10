@@ -26,6 +26,11 @@ FAQ-Antworten (Preis-Spans mit `data-preis`) und `llms.txt` zusammen.
 
     python3 scripts/strukturdaten.py --nur bot.html service.html   # nur diese Dateien
     python3 scripts/strukturdaten.py --nur llms.txt                # nur llms.txt
+    python3 scripts/strukturdaten.py --ziel /pfad/probe            # alles in ein Probe-Verzeichnis schreiben
+
+Mit `--ziel VERZEICHNIS` (oder der Umgebungsvariable `STRUKTURDATEN_ZIEL`) liest das
+Skript weiter aus dem Repo, schreibt aber Seiten, `llms.txt` und `sitemap.xml` mit
+denselben Pfaden ins Probe-Verzeichnis. Ohne Angabe bleibt der Standard: das Repo selbst.
 
 Ohne `--nur` laufen alle Seiten aus SEITEN plus `llms.txt`. Seiten, die es
 noch nicht gibt (z. B. ki-kmu-news/index.html im Aufbau), werden uebersprungen
@@ -38,6 +43,7 @@ from __future__ import annotations
 
 import html
 import json
+import os
 import re
 import subprocess
 import sys
@@ -45,6 +51,7 @@ from datetime import date
 from pathlib import Path
 
 WURZEL = Path(__file__).resolve().parents[1]
+AUSGABE = WURZEL   # Ziel der Dateien; main() setzt es bei --ziel um
 BASIS = "https://vaiacon.ch"
 ANFANG = "<!-- Strukturdaten: erzeugt von scripts/strukturdaten.py, nicht von Hand aendern -->"
 ENDE = "<!-- Strukturdaten Ende -->"
@@ -138,7 +145,7 @@ def angebot(name: str, art: str, text: str, pfad: str, bereich: str | None = Non
         "areaServed": {"@type": "Country", "name": "Schweiz"},
     }
     if bereich:
-        pos = BEREICHE[bereich]["positionen"]
+        pos = [p for p in BEREICHE[bereich]["positionen"] if p.get("status") != "pruefen"]
         preise = [p["preis"] for p in pos]
         block["offers"] = {
             "@type": "AggregateOffer",
@@ -160,7 +167,8 @@ def angebot(name: str, art: str, text: str, pfad: str, bereich: str | None = Non
                 spez["unitText"] = einheit
             eintraege.append({
                 "@type": "Offer",
-                "itemOffered": {"@type": "Service", "name": p["titel"], "description": p["beschreibung"]},
+                "itemOffered": {"@type": "Service", "name": p["titel"],
+                                "description": (p["beschreibung"] + " " + p.get("umfang", "")).strip()},
                 "priceSpecification": spez,
             })
         block["hasOfferCatalog"] = {
@@ -171,12 +179,15 @@ def angebot(name: str, art: str, text: str, pfad: str, bereich: str | None = Non
     return block
 
 
-MWST_SATZ = "Preise in CHF, inklusive 8,1 % MWST."
+# Satz und Hinweis stehen im Katalog (mwst_satz, mwst_hinweis), nie von Hand hier.
+MWST_PROZENT = f"{KATALOG['mwst_satz']:g}".replace(".", ",")
+MWST_SATZ = f"Preise in CHF, inklusive {MWST_PROZENT} % MWST."
+SAETZE = KATALOG["saetze"]
 ANGEBOTE = {
     "visibility.html": angebot(
         "Sichtbarkeit", "SEO und GEO",
         "Von Google gefunden werden und in KI-Antworten vorkommen (Fachwörter: SEO und GEO). "
-        "Kostenloser Google-Check, KI-Sichtbarkeits-Check, Seiten überarbeiten und laufende Betreuung, mit offen genannten Richtpreisen. " + MWST_SATZ,
+        "Kostenloser Google-Check, Check kompakt, Audit vertieft, Seiten überarbeiten und laufende Betreuung, mit offen genannten Preisen. " + MWST_SATZ,
         "visibility", "sichtbarkeit"),
     "learning.html": angebot(
         "KI-Kompetenz", "KI-Schulung und Weiterbildung",
@@ -277,14 +288,29 @@ def sitemap_text() -> str:
 
 
 
+def erster_satz(text: str) -> str:
+    """Erster Satz eines Textes, ohne Schlusspunkt (fuer die Umfangszeile in llms.txt)."""
+    m = re.match(r"(.+?[.!?])(\s|$)", text.strip())
+    return (m.group(1) if m else text.strip()).rstrip(".")
+
+
 def preisliste_llms() -> str:
     zeilen = []
     for b in KATALOG["bereiche"]:
         zeilen.append(f"### {b['titel']}")
         zeilen.append("")
         for p in b["positionen"]:
+            if p.get("status") == "pruefen":
+                continue   # noch nicht entschieden: nicht nach aussen
             zusatz = f" ({p['hinweis']})" if p["hinweis"] else ""
-            zeilen.append(f"- {p['titel']}: {preis_text(p)}{zusatz}")
+            umfang = f" Umfang: {erster_satz(p['umfang'])}." if p.get("umfang") else ""
+            zeilen.append(f"- {p['titel']}: {preis_text(p)}.{umfang}{zusatz}".replace("..", "."))
+            for v in p.get("varianten") or []:
+                ab = "ab " if v.get("ab") else ""
+                zeilen.append(f"  - {v['titel']}: {ab}CHF {chf(v['preis'])}")
+            if p.get("staffel"):
+                stufen = " / ".join(chf(s["preis"]) for s in p["staffel"])
+                zeilen.append(f"  - Jede weitere Minute: CHF {stufen}" if len(p["staffel"]) == 1 else f"  - Staffel: CHF {stufen} je Lernminute")
         zeilen.append("")
     return "\n".join(zeilen).rstrip()
 
@@ -329,7 +355,13 @@ kostenlose Check der eigenen Website. Rückruf innert eines Arbeitstages.
 
 ## Preise
 
-{KATALOG["mwst_hinweis"]} Die Preise gelten {KATALOG["gueltigkeit_tage"]} Tage. Stand: {KATALOG["stand"]}.
+{KATALOG["mwst_hinweis"]} {SAETZE["gueltigkeit"]} Stand: {KATALOG["stand"]}.
+
+- {SAETZE["ab_preis"]}
+- {SAETZE["betreuung"]}
+- {SAETZE["fremdkosten"]}
+- {SAETZE["beispiel_jahr"]}
+
 Quelle: https://vaiacon.ch/daten/preise.json. Eine Richtofferte stellen Sie im
 Offerten-Tool zusammen: https://vaiacon.ch/offerte
 
@@ -398,11 +430,27 @@ def als_skript(block: dict) -> str:
     return f'<script type="application/ld+json">\n{inhalt}\n</script>'
 
 
+def ausgeben(name: str, inhalt: str) -> None:
+    ziel = AUSGABE / name
+    ziel.parent.mkdir(parents=True, exist_ok=True)
+    ziel.write_text(inhalt, encoding="utf-8")
+
+
 def main() -> None:
+    global AUSGABE
     probe = "--probe" in sys.argv
+    ziel = os.environ.get("STRUKTURDATEN_ZIEL")
+    if "--ziel" in sys.argv:
+        ziel = sys.argv[sys.argv.index("--ziel") + 1]
+    if ziel:
+        AUSGABE = Path(ziel).expanduser().resolve()
     nur = None
     if "--nur" in sys.argv:
-        nur = set(a for a in sys.argv[sys.argv.index("--nur") + 1:] if not a.startswith("--"))
+        nur = set()
+        for a in sys.argv[sys.argv.index("--nur") + 1:]:
+            if a.startswith("--"):
+                break
+            nur.add(a)
         if not nur:
             raise SystemExit("--nur braucht mindestens einen Dateinamen")
     geaendert, fehlt = [], []
@@ -426,24 +474,24 @@ def main() -> None:
         if ohne.count("</head>") != 1:
             raise SystemExit(f"{name}: </head> nicht genau einmal gefunden")
         neu = ohne.replace("</head>", einschub + "</head>")
-        if neu != seite:
+        if neu != seite or AUSGABE != WURZEL:
             geaendert.append(f"{name} ({len(bloecke)} Block/Bloecke)")
             if not probe:
-                pfad.write_text(neu, encoding="utf-8")
+                ausgeben(name, neu)
 
     if nur is None or "llms.txt" in nur:
         llms = WURZEL / "llms.txt"
-        if not llms.exists() or llms.read_text(encoding="utf-8") != llms_text():
+        if AUSGABE != WURZEL or not llms.exists() or llms.read_text(encoding="utf-8") != llms_text():
             geaendert.append("llms.txt")
             if not probe:
-                llms.write_text(llms_text(), encoding="utf-8")
+                ausgeben("llms.txt", llms_text())
 
     if nur is None or "sitemap.xml" in nur:
         karte = WURZEL / "sitemap.xml"
-        if not karte.exists() or karte.read_text(encoding="utf-8") != sitemap_text():
+        if AUSGABE != WURZEL or not karte.exists() or karte.read_text(encoding="utf-8") != sitemap_text():
             geaendert.append("sitemap.xml")
             if not probe:
-                karte.write_text(sitemap_text(), encoding="utf-8")
+                ausgeben("sitemap.xml", sitemap_text())
 
     wort = "Wuerde aendern" if probe else "Geschrieben"
     print(f"{wort}: " + (", ".join(geaendert) if geaendert else "nichts, alles aktuell."))

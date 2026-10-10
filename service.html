@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Support für alles, was vaiacon bei Ihnen aufgebaut hat: Automationen, Sichtbarkeit und KI im Team. Ab CHF 130 pro Monat inklusive MWST, monatlich kündbar.">
+<meta name="description" content="Betreuung für alles, was vaiacon bei Ihnen aufgebaut hat: Automationen, Sichtbarkeit und KI im Team. Betreuung optional, kündbar auf Ende Folgemonat.">
 <link rel="canonical" href="https://vaiacon.ch/service">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="vaiacon">
 <meta property="og:locale" content="de_CH">
 <meta property="og:title" content="Begleitung für alles, was läuft · vaiacon">
-<meta property="og:description" content="Support für alles, was vaiacon bei Ihnen aufgebaut hat: Automationen, Sichtbarkeit und KI im Team. Ab CHF 130 pro Monat inklusive MWST, monatlich kündbar.">
+<meta property="og:description" content="Betreuung für alles, was vaiacon bei Ihnen aufgebaut hat: Automationen, Sichtbarkeit und KI im Team. Betreuung optional, kündbar auf Ende Folgemonat.">
 <meta property="og:url" content="https://vaiacon.ch/service">
 <meta property="og:image" content="https://vaiacon.ch/assets/vorschau-begleitung.jpg">
 <meta property="og:image:width" content="1200">
@@ -22,6 +22,15 @@
 <link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261009-fakten-versteckt">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
 <link rel="stylesheet" href="ui_kits/website/kundenstimme.css?v=20261005-vorschlag">
+<!-- Preislogik 2026-10: ruhiger Textblock «vier Dinge», nur Abstaende und vorhandene Tokens -->
+<style>
+.pl-vier { margin: var(--space-11) auto 0; }
+.pl-vier > h3 { margin: 0 0 var(--space-6); color: var(--text-strong); font-size: var(--text-h3); line-height: var(--leading-snug); letter-spacing: var(--tracking-tight); font-weight: var(--weight-semibold); text-align: center; }
+.pl-vier__raster { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); width: min(100%, 54rem); margin: 0 auto; }
+.pl-vier__raster p { margin: var(--space-2) 0 0; }
+.sv-card h3 { text-wrap: balance; }
+@media (max-width: 640px) { .pl-vier__raster { grid-template-columns: 1fr; } }
+</style>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -79,7 +88,7 @@
           "name": "Sichtbarkeit",
           "serviceType": "SEO und GEO",
           "url": "https://vaiacon.ch/visibility",
-          "description": "Von Google gefunden werden und in KI-Antworten vorkommen (Fachwörter: SEO und GEO). Kostenloser Google-Check, KI-Sichtbarkeits-Check, Seiten überarbeiten und laufende Betreuung, mit offen genannten Richtpreisen."
+          "description": "Von Google gefunden werden und in KI-Antworten vorkommen (Fachwörter: SEO und GEO). Kostenloser Google-Check, Check kompakt, Audit vertieft, Seiten überarbeiten und laufende Betreuung, mit offen genannten Preisen."
         }
       },
       {
@@ -147,7 +156,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Betreuung: eine Automation oder ein Chatbot",
-          "description": "Wir halten eine Automation oder einen Assistenten am Laufen: Überwachung, Updates, Support bei Fragen."
+          "description": "Wir halten eine Automation oder einen Assistenten am Laufen: Überwachung, Updates, Support bei Fragen. Überwachung, Fehlerbehebung, bis 30 Minuten Anpassung im Monat, Reaktion innert eines Arbeitstags."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -162,7 +171,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Betreuung: Telefonassistent",
-          "description": "Überwachung, Updates und Support, dazu die Telefonnummer und 200 Gesprächsminuten im Monat."
+          "description": "Überwachung, Fehlerbehebung und Support, dazu die Telefonnummer und 300 Gesprächsminuten im Monat. Wie die Betreuung für eine Automation, plus 300 Telefonie-Minuten im Monat. Darüber und die KI-Nutzung des Sprachmodells rechnen wir nach Verbrauch ab."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -176,8 +185,8 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Betreuung: mehrere Abläufe",
-          "description": "Wir betreuen bis zu fünf Automationen oder Assistenten und erledigen kleine Anpassungen gleich mit."
+          "name": "Betreuung: grosser Ablauf oder mehrere Abläufe",
+          "description": "Wir betreuen einen grossen Ablauf oder mehrere Abläufe und erledigen Anpassungen im festen Monatsbudget gleich mit. Ein grosser Ablauf oder zwei bis drei Abläufe. 1,5 Stunden Anpassung im Monat, Reaktion innert vier Arbeitsstunden."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -191,8 +200,8 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Laufende Begleitung, 4 Stunden im Monat",
-          "description": "Feste Zeit für Ihre Fragen, Ihr Team und neue Ideen rund um KI."
+          "name": "Begleitung, 4 Std. im Monat",
+          "description": "Feste Zeit für Ihre Fragen, Ihr Team und neue Ideen rund um KI. Vier Stunden im Monat, Reaktion innert eines Arbeitstags. Nicht genutzte Zeit wird einen Monat übertragen, danach verfällt sie."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -206,8 +215,8 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Laufende Begleitung, 8 Stunden im Monat",
-          "description": "Feste Zeit für Ihre Fragen, Ihr Team und neue Ideen rund um KI."
+          "name": "Begleitung, 8 Std. im Monat",
+          "description": "Feste Zeit für Ihre Fragen, Ihr Team und neue Ideen rund um KI. Acht Stunden im Monat. Gleiche Regeln wie bei vier Stunden."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -222,7 +231,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "KI-Standortanalyse im Betrieb",
-          "description": "Ein halber Tag bei Ihnen, danach ein Bericht mit den besten nächsten Schritten und eine Besprechung."
+          "description": "Ein halber Tag bei Ihnen, danach ein Bericht mit den besten nächsten Schritten und eine Besprechung. Kein Pflichtschritt vor einer Automation. Ein halber Tag bei Ihnen, Bericht und Besprechung. Bei einem Folgeauftrag innert sechs Monaten wird die Vorarbeit angerechnet, soweit Prozessaufnahme und Systemliste wiederverwendet werden."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -236,7 +245,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Beratung nach Aufwand",
-          "description": "Eine Frage, ein Problem, eine Entscheidung: Wir beraten Sie nach Zeitaufwand."
+          "description": "Eine Frage, ein Problem, eine Entscheidung: Wir beraten Sie nach Zeitaufwand. Nach Zeitaufwand abgerechnet."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -251,13 +260,13 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Anpassungen und Erweiterungen",
-          "description": "Änderungen an bestehenden Automationen, Seiten oder Assistenten, die über die Betreuung hinausgehen."
+          "description": "Änderungen an bestehenden Automationen, Seiten oder Assistenten, die über die Betreuung hinausgehen. Nach Zeitaufwand abgerechnet, für Änderungen über die Betreuung hinaus."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
           "priceCurrency": "CHF",
           "valueAddedTaxIncluded": true,
-          "price": 150,
+          "price": 170,
           "unitText": "Stunde"
         }
       }
@@ -322,7 +331,7 @@
           <p class="sv-kicker sv-kicker--on-terra">BEGLEITUNG</p>
           <h1>Eingerichtet ist erst der Anfang.</h1>
           <p class="sv-hero__lead">
-            Unsere Begleitung betreut alles, was wir für Sie aufgebaut haben. Pflege, Support und Weiterentwicklung, so viel Sie brauchen.
+            Unsere Begleitung betreut alles, was wir für Sie aufgebaut haben. Pflege, Fehlerbehebung und Weiterentwicklung, so viel Sie brauchen.
           </p>
           <div class="sv-actions">
             <a class="sv-button sv-button--light" href="kontakt#formular">Beratungsgespräch vereinbaren →</a>
@@ -369,7 +378,7 @@
           <p class="sv-kicker">WAS WIR BETREUEN</p>
           <h2 class="sv-title">Eine Anlaufstelle für unser ganzes Angebot.</h2>
           <p class="sv-lead">
-            Wir passen unseren Support individuell auf Ihre Bedürfnisse an. Teilen Sie uns mit, welche Bedürfnisse Sie haben, und wir finden gemeinsam die richtige Lösung.
+            Wir passen unsere Betreuung individuell auf Ihre Bedürfnisse an. Teilen Sie uns mit, welche Bedürfnisse Sie haben, und wir finden gemeinsam die richtige Lösung.
           </p>
         </div>
         <div class="sv-card-grid sv-card-grid--three">
@@ -389,6 +398,85 @@
       </div>
     </section>
 
+
+    <section id="betreuung" class="sv-section sv-section--alt">
+      <div class="sv-wrap">
+        <div class="sv-center">
+          <p class="sv-kicker">BETREUUNG</p>
+          <h2 class="sv-title">So viel Betreuung, wie Ihr Ablauf braucht.</h2>
+          <p class="sv-lead">
+            Drei Stufen, nach Grösse dessen, was läuft. <span data-preis-mwst>Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer.</span>
+          </p>
+        </div>
+        <div class="sv-card-grid sv-card-grid--three">
+          <article class="sv-card">
+            <h3><span data-preis="be-betreuung-klein" data-preis-form="titel">Betreuung: eine Automation oder ein Chatbot</span></h3>
+            <p class="sv-card__preis"><span data-preis="be-betreuung-klein">CHF 130 pro Monat</span></p>
+            <p><span data-preis="be-betreuung-klein" data-preis-form="umfang">Überwachung, Fehlerbehebung, bis 30 Minuten Anpassung im Monat, Reaktion innert eines Arbeitstags.</span></p>
+          </article>
+          <article class="sv-card">
+            <h3><span data-preis="be-betreuung-mittel" data-preis-form="titel">Betreuung: grosser Ablauf oder mehrere Abläufe</span></h3>
+            <p class="sv-card__preis"><span data-preis="be-betreuung-mittel">CHF 290 pro Monat</span></p>
+            <p><span data-preis="be-betreuung-mittel" data-preis-form="umfang">Ein grosser Ablauf oder zwei bis drei Abläufe. 1,5 Stunden Anpassung im Monat, Reaktion innert vier Arbeitsstunden.</span></p>
+          </article>
+          <article class="sv-card">
+            <h3><span data-preis="be-betreuung-telefon" data-preis-form="titel">Betreuung: Telefonassistent</span></h3>
+            <p class="sv-card__preis"><span data-preis="be-betreuung-telefon">CHF 190 pro Monat</span></p>
+            <p><span data-preis="be-betreuung-telefon" data-preis-form="umfang">Wie die Betreuung für eine Automation, plus 300 Telefonie-Minuten im Monat. Darüber und die KI-Nutzung des Sprachmodells rechnen wir nach Verbrauch ab.</span></p>
+          </article>
+        </div>
+        <div class="pl-vier">
+          <h3>Betrieb, Pflege, Mängel und Ausbau sind vier Dinge.</h3>
+          <div class="pl-vier__raster">
+            <article class="sv-card">
+              <h3>Betrieb</h3>
+              <p><span data-preis-satz="fremdkosten">Lizenzen, Hosting, KI-Nutzung und Telefonie rechnen wir nach Verbrauch separat ab. Sie laufen auch ohne Betreuung.</span></p>
+            </article>
+            <article class="sv-card">
+              <h3>Pflege</h3>
+              <p><span data-preis-satz="betreuung">Betreuung ist optional und kündbar auf Ende Folgemonat. Sie umfasst Überwachung, Fehlerbehebung und ein festes Anpassungsbudget im Monat.</span></p>
+            </article>
+            <article class="sv-card">
+              <h3>Mängel</h3>
+              <p><span data-preis-satz="maengel">Mängel beheben wir 90 Tage nach der Übergabe ohne Rechnung.</span> Ohne Betreuung läuft Ihre Lösung mit dem Übergabe-Paket weiter, die Verantwortung liegt dann bei Ihnen.</p>
+            </article>
+            <article class="sv-card">
+              <h3>Ausbau</h3>
+              <p>Wünsche über das Anpassungsbudget hinaus rechnen wir nach Aufwand ab: <span data-preis="be-anpassung-stunde">CHF 170 pro Stunde</span>.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="zeit" class="sv-section">
+      <div class="sv-wrap">
+        <div class="sv-center">
+          <p class="sv-kicker">NACH BEDARF</p>
+          <h2 class="sv-title">Feste Zeit für Ihre Fragen, oder erst die Standortanalyse.</h2>
+          <p class="sv-lead">
+            Ein Zeitbudget für Ihr Team und neue Ideen rund um KI, oder zuerst ein Blick auf den ganzen Betrieb.
+          </p>
+        </div>
+        <div class="sv-card-grid sv-card-grid--three">
+          <article class="sv-card">
+            <h3><span data-preis="be-zeitbudget-4" data-preis-form="titel">Begleitung, 4 Std. im Monat</span></h3>
+            <p class="sv-card__preis"><span data-preis="be-zeitbudget-4">CHF 650 pro Monat</span></p>
+            <p><span data-preis="be-zeitbudget-4" data-preis-form="hinweis">Kündbar auf Ende Folgemonat. Nicht genutzte Zeit wird einen Monat übertragen.</span></p>
+          </article>
+          <article class="sv-card">
+            <h3><span data-preis="be-zeitbudget-8" data-preis-form="titel">Begleitung, 8 Std. im Monat</span></h3>
+            <p class="sv-card__preis"><span data-preis="be-zeitbudget-8">CHF 1'250 pro Monat</span></p>
+            <p><span data-preis="be-zeitbudget-8" data-preis-form="hinweis">Kündbar auf Ende Folgemonat. Nicht genutzte Zeit wird einen Monat übertragen.</span></p>
+          </article>
+          <article class="sv-card">
+            <h3><span data-preis="be-standortbestimmung" data-preis-form="titel">KI-Standortanalyse im Betrieb</span></h3>
+            <p class="sv-card__preis"><span data-preis="be-standortbestimmung" data-preis-form="betrag">CHF 2'150</span></p>
+            <p>Ein halber Tag bei Ihnen, danach ein Bericht mit den besten nächsten Schritten und eine Besprechung. <span data-preis="be-standortbestimmung" data-preis-form="hinweis">Bei einem Folgeauftrag innert sechs Monaten wird die Vorarbeit bis zur Hälfte angerechnet, höchstens CHF 1'075.</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <section id="ablauf" class="sv-section">
       <div class="sv-wrap">
@@ -493,6 +581,7 @@
 </div>
 <script src="ui_kits/website/api-basis.js?v=20261004-umbau"></script>
 <script src="ui_kits/website/visibility.js?v=20261007-logo-svg"></script>
+<script src="ui_kits/website/preise.js?v=20261011-preislogik"></script>
 <script src="ui_kits/website/chat.js?v=20261004-umbau"></script>
 </body>
 </html>
