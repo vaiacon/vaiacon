@@ -2,6 +2,7 @@
 
     python3 scripts/bot_wissen.py                 # schreibt vaia-wissen/wissen.md
     python3 scripts/bot_wissen.py --ziel /pfad/probe.md   # Probelauf in eine andere Datei
+    (oder Umgebungsvariable BOT_WISSEN_ZIEL)
 
 Das ist das Wissen, das dem Chat auf vaiacon.ch bei jeder Frage mitgeschickt
 wird. Frueher lag es nur auf dem Server und wurde von Hand gepflegt, und es ist
@@ -15,6 +16,7 @@ from __future__ import annotations
 
 import html
 import json
+import os
 import re
 import subprocess
 import sys
@@ -23,6 +25,7 @@ from pathlib import Path
 WURZEL = Path(__file__).resolve().parents[1]
 ZIEL = WURZEL / "vaia-wissen" / "wissen.md"
 KATALOG = json.loads((WURZEL / "daten" / "preise.json").read_text(encoding="utf-8"))
+POSITIONEN = {p["id"]: p for b in KATALOG["bereiche"] for p in b["positionen"]}
 BRANCHEN = json.loads((WURZEL / "daten" / "branchen.json").read_text(encoding="utf-8"))
 
 # Reihenfolge zaehlt: So liest der Chat die Website von vorn nach hinten.
@@ -50,19 +53,82 @@ def chf(zahl: float) -> str:
     return vor + ("." + nach if nach else "")
 
 
+def ab(p: dict) -> str:
+    return "ab " if p.get("ab") else ""
+
+
+def preis_zeile(p: dict) -> str:
+    t = ab(p) + "CHF " + chf(p["preis"])
+    if p["einheit"] != "pauschal":
+        t += " " + p["einheit"]
+    return t
+
+
+def beispiel_jahr(p: dict) -> str | None:
+    """Einrichtung plus zwoelf Monate Betreuung; nur, wenn die Position eine Betreuung hat."""
+    bid = p.get("betreuung_id")
+    if not bid or bid not in POSITIONEN:
+        return None
+    gesamt = p["preis"] + 12 * POSITIONEN[bid]["preis"]
+    return f"{ab(p)}CHF {chf(gesamt)}"
+
+
+def saetze_block() -> list[str]:
+    s = KATALOG["saetze"]
+    z = ["## So nennen wir Preise", "",
+         "Diese sieben Sätze gelten wörtlich. Nenne sie so, wenn jemand danach fragt, und ändere sie nicht ab.", ""]
+    for schluessel in ("ab_preis", "betreuung", "fremdkosten", "beispiel_jahr", "maengel", "abnahme", "gueltigkeit"):
+        z.append(f"- {s[schluessel]}")
+    z.append("")
+    return z
+
+
+def regeln_preise() -> list[str]:
+    return [
+        "## Regeln für Preisantworten", "",
+        "- Betreuung ist immer optional und monatlich kündbar (auf Ende Folgemonat). Sie ist kein Muss und kein Abo.",
+        "- Nenne Fremdkosten (Lizenzen, Hosting, KI-Nutzung, Telefonie) immer separat und nach Verbrauch.",
+        "  Sie fallen auch ohne Betreuung an. Nenne keine Zahlen dazu, die hier nicht stehen.",
+        "- Jahreskosten nennst du nur als «Beispiel erstes Jahr» (Einrichtung plus zwölf Monate Betreuung,",
+        "  zuzüglich Fremdkosten), nie als feste Zusage.",
+        "- Bei Ab-Preisen sagst du immer «Fixpreis nach der Erstanalyse, nie offen nach oben».",
+        "- Verspreche keine Platzierungen bei Google oder in KI-Antworten und keine Umsatzwirkung.",
+        "- Den Chatbot mit Firmenwissen nennst du nie «Agent»: Er antwortet, er handelt nicht.",
+        "- Den Telefonassistenten erklärst du nur mit seiner Prozessarbeit: Anruf aufnehmen, Anliegen erfassen,",
+        "  Rückruf, Termin oder Weiterleitung, Übergabe an Mitarbeitende.",
+        "- Keine Rabatte, keine Vergleiche mit «statt …» und keine Preise, die hier nicht stehen.",
+        "- Sag «Betreuung» (nicht Service, Retainer, Wartung, Abo) und «Anbindung» (nicht Integration, Schnittstelle).",
+        "",
+    ]
+
+
 def preisliste() -> list[str]:
-    z = [f"{KATALOG['mwst_hinweis']} Die Preise sind Richtwerte und gelten {KATALOG['gueltigkeit_tage']} Tage. "
+    s = KATALOG["saetze"]
+    z = [f"{KATALOG['mwst_hinweis']} {s['ab_preis']} {s['gueltigkeit']} "
          "Eine Richtofferte stellt man im Offerten-Tool (vaiacon.ch/offerte) zusammen; "
          "verbindlich wird sie erst nach Bestätigung durch vaiacon.", ""]
     for b in KATALOG["bereiche"]:
         z.append(f"### {b['titel']}")
         z.append("")
         for p in b["positionen"]:
-            t = ("ab " if p["ab"] else "") + "CHF " + chf(p["preis"])
-            if p["einheit"] != "pauschal":
-                t += " " + p["einheit"]
+            if p.get("status") == "pruefen":
+                continue
             zusatz = f" ({p['hinweis']})" if p["hinweis"] else ""
-            z.append(f"- {p['titel']}: {t}{zusatz}")
+            z.append(f"- {p['titel']}: {preis_zeile(p)}{zusatz}")
+            if p.get("umfang"):
+                z.append(f"  - Umfang: {p['umfang']}")
+            if p.get("fremdkosten"):
+                z.append(f"  - Fremdkosten: {p['fremdkosten']}")
+            if p.get("folgekosten"):
+                z.append(f"  - Folgekosten: {p['folgekosten']}")
+            bj = beispiel_jahr(p)
+            if bj:
+                z.append(f"  - Beispiel erstes Jahr: {bj} (Einrichtung plus zwölf Monate Betreuung, zuzüglich Fremdkosten)")
+            if p.get("staffel"):
+                stufen = " / ".join(chf(x["preis"]) for x in p["staffel"])
+                z.append(f"  - Staffel: CHF {stufen} je Lernminute")
+            for v in p.get("varianten") or []:
+                z.append(f"  - {v['titel']}: {ab(v)}CHF {chf(v['preis'])}")
         z.append("")
     return z
 
@@ -162,6 +228,8 @@ def bauen() -> tuple[str, list[str]]:
     t.append("Begleitung. Verständlich, persönlich und ohne Verkaufsdruck. Kundendaten")
     t.append("bleiben nach revDSG auf Schweizer Infrastruktur.")
     t.append("")
+    t.extend(saetze_block())
+    t.extend(regeln_preise())
     t.append("## Preisübersicht (aus dem Katalog daten/preise.json)")
     t.append("")
     t.extend(preisliste())
@@ -205,7 +273,7 @@ def bauen() -> tuple[str, list[str]]:
 
 
 def main() -> None:
-    ziel = ZIEL
+    ziel = Path(os.environ["BOT_WISSEN_ZIEL"]).expanduser() if os.environ.get("BOT_WISSEN_ZIEL") else ZIEL
     if "--ziel" in sys.argv:
         ziel = Path(sys.argv[sys.argv.index("--ziel") + 1]).expanduser()
     inhalt, fehlend = bauen()

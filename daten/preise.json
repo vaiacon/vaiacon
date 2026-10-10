@@ -1,10 +1,19 @@
 {
-  "stand": "2026-10-09",
+  "stand": "2026-10-11",
   "waehrung": "CHF",
   "mwst_inklusive": true,
   "mwst_satz": 8.1,
   "mwst_hinweis": "Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer.",
   "gueltigkeit_tage": 30,
+  "saetze": {
+    "ab_preis": "Ab-Preise sind Fixpreise nach der Erstanalyse, nie offen nach oben.",
+    "betreuung": "Betreuung ist optional und kündbar auf Ende Folgemonat. Sie umfasst Überwachung, Fehlerbehebung und ein festes Anpassungsbudget im Monat.",
+    "fremdkosten": "Lizenzen, Hosting, KI-Nutzung und Telefonie rechnen wir nach Verbrauch separat ab. Sie laufen auch ohne Betreuung.",
+    "beispiel_jahr": "Beispiel erstes Jahr: Einrichtung plus zwölf Monate Betreuung, zuzüglich der genannten Fremdkosten.",
+    "maengel": "Mängel beheben wir 90 Tage nach der Übergabe ohne Rechnung.",
+    "abnahme": "Abgenommen ist ein Ablauf, wenn der Normalfall, fehlende und falsche Daten, ein Schnittstellenausfall und eine Doppelauslösung geprüft sind und die Rechte stimmen.",
+    "gueltigkeit": "Preise gelten 30 Tage ab Angebot."
+  },
   "bereiche": [
     {
       "id": "ki-kompetenz",
@@ -23,7 +32,13 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 10,
-          "hinweis": "Bei Ihnen im Betrieb, bis 15 Personen. Raum und Beamer stellen Sie."
+          "hinweis": "Bei Ihnen im Betrieb, bis 15 Personen. Raum und Beamer stellen Sie.",
+          "umfang": "Bis 15 Personen, zwei Arbeitsaufgaben aus Ihrem Betrieb, Vorlagen zum Mitnehmen. Raum und Beamer stellen Sie, Reise ab Zürich separat.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "fest",
+          "abnahme": false
         },
         {
           "id": "kk-training-halbtag",
@@ -36,7 +51,13 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 30,
-          "hinweis": "Bei Ihnen im Betrieb, pro Gruppe bis 15 Personen. Vorbereitung und Unterlagen inklusive, Raum und Beamer stellen Sie. Grössere Teams in zwei Gruppen."
+          "hinweis": "Bei Ihnen im Betrieb, pro Gruppe bis 15 Personen. Vorbereitung und Unterlagen inklusive, Raum und Beamer stellen Sie. Grössere Teams in zwei Gruppen.",
+          "umfang": "Bis 15 Personen, Vorgespräch, Unterlagen, eine Nachfass-Mail.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "fest",
+          "abnahme": false
         },
         {
           "id": "kk-training-tag",
@@ -49,7 +70,13 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 30,
-          "hinweis": "Bei Ihnen im Betrieb, pro Gruppe bis 15 Personen. Vorbereitung und Unterlagen inklusive, Raum und Beamer stellen Sie."
+          "hinweis": "Bei Ihnen im Betrieb, pro Gruppe bis 15 Personen. Vorbereitung und Unterlagen inklusive, Raum und Beamer stellen Sie.",
+          "umfang": "Nur bei zwei Gruppen oder Vertiefung. Der Halbtag ist der Standard.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "fest",
+          "abnahme": false
         },
         {
           "id": "kk-coaching-fuehrung",
@@ -62,7 +89,32 @@
           "menge_waehlbar": true,
           "menge_standard": 6,
           "menge_max": 40,
-          "hinweis": "Sechs Stunden als Paket: CHF 1'190."
+          "hinweis": "Als Paket mit sechs Stunden: siehe Coaching-Paket.",
+          "umfang": "Einzeltermine à 60 Minuten, online oder vor Ort.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "fest",
+          "abnahme": false
+        },
+        {
+          "id": "kk-coaching-paket",
+          "titel": "Coaching-Paket, sechs Stunden",
+          "beschreibung": "Sechs Einzelgespräche für Personen, die entscheiden: Wie führe ich ein Team, das mit KI arbeitet?",
+          "einheit": "pauschal",
+          "preis": 1190,
+          "ab": false,
+          "art": "einmalig",
+          "menge_waehlbar": false,
+          "menge_standard": 1,
+          "menge_max": 1,
+          "hinweis": "Sechs Termine innert drei Monaten.",
+          "umfang": "Sechs Termine à 60 Minuten innert drei Monaten, online oder vor Ort.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "produkttest",
+          "abnahme": false
         },
         {
           "id": "kk-elearning-lernminute",
@@ -75,11 +127,63 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 12,
-          "hinweis": "Zehn Minuten fertiger Kurs. Jede weitere Minute CHF 290."
+          "hinweis": "Zehn Minuten fertiger Kurs. Weitere Minuten nach Staffel, jede weitere Minute günstiger.",
+          "umfang": "Zehn fertige Minuten mit Drehbuch, KI-Sprecherstimme, Quiz und zwei Freigaberunden. Zusatzminuten gestaffelt.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "fest",
+          "abnahme": false,
+          "staffel": [
+            {
+              "bis": 10,
+              "preis": 290
+            },
+            {
+              "bis": 20,
+              "preis": 240
+            },
+            {
+              "bis": null,
+              "preis": 190
+            }
+          ],
+          "varianten": [
+            {
+              "titel": "Kurzfassung ohne Quiz, eine Freigaberunde",
+              "preis": 2300
+            }
+          ]
+        },
+        {
+          "id": "kk-lernvideo-screencast",
+          "titel": "Lernvideo als Bildschirmaufnahme",
+          "beschreibung": "Ein kurzes Video mit Bildschirmaufnahme und Sprecherstimme, das einen Ablauf aus Ihrem Betrieb erklärt.",
+          "einheit": "pro Video bis drei Minuten",
+          "preis": 1900,
+          "ab": true,
+          "art": "einmalig",
+          "menge_waehlbar": true,
+          "menge_standard": 1,
+          "menge_max": 10,
+          "hinweis": "Bildschirm mit Sprecherstimme. Für Dreh oder Animation: Lernvideo, gefilmt oder animiert.",
+          "umfang": "Bildschirm, KI-Sprecherstimme, Schnitt, eine Freigaberunde. KI-Stimme, Gestaltungsgrad und Lieferformat stehen im Angebot.",
+          "varianten": [
+            {
+              "titel": "Jedes weitere Video",
+              "preis": 1400,
+              "ab": true
+            }
+          ],
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "produkttest",
+          "abnahme": false
         },
         {
           "id": "kk-lernvideo",
-          "titel": "Lernvideo",
+          "titel": "Lernvideo, gefilmt oder animiert",
           "beschreibung": "Ein kurzes Video, gefilmt oder animiert, mit Sprecherstimme, das einen Ablauf aus Ihrem Betrieb erklärt.",
           "einheit": "pro Video bis drei Minuten",
           "preis": 4700,
@@ -88,7 +192,20 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 10,
-          "hinweis": "Gefilmt oder animiert, mit Sprecherstimme. Jedes weitere Video ab CHF 3'500."
+          "hinweis": "Gefilmt oder animiert, mit Sprecherstimme. Als Bildschirmaufnahme: siehe Lernvideo als Bildschirmaufnahme.",
+          "umfang": "Dreh oder Animation, Sprecherstimme, zwei Freigaberunden.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "fest",
+          "abnahme": false,
+          "varianten": [
+            {
+              "titel": "Jedes weitere Video",
+              "preis": 3500,
+              "ab": true
+            }
+          ]
         },
         {
           "id": "kk-mikro-einrichtung",
@@ -101,7 +218,13 @@
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": "Einmalig je Programm."
+          "hinweis": "Einmalig je Programm.",
+          "umfang": "Ein Programm sind vier Wochen: 20 Einheiten à drei bis fünf Minuten aus Ihren vorhandenen Unterlagen (Handbuch, Schulung, Prozessbeschrieb), Kanal nach Wahl (Mail, Teams, WhatsApp), ohne laufende Kosten. Neue Inhalte ohne Grundlage nach Aufwand.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "fest",
+          "abnahme": false
         },
         {
           "id": "kk-mikro-lerneinheiten",
@@ -114,7 +237,27 @@
           "menge_waehlbar": true,
           "menge_standard": 10,
           "menge_max": 250,
-          "hinweis": "Für vier Wochen, ab zehn Personen."
+          "hinweis": "Für vier Wochen, ab zehn Personen.",
+          "umfang": "Für ein Programm von vier Wochen, ab zehn Personen. Der Programmpreis richtet sich nach der Zahl der Personen.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "fest",
+          "abnahme": false,
+          "varianten": [
+            {
+              "titel": "Programm, 10 Personen",
+              "preis": 1500
+            },
+            {
+              "titel": "Programm, 15 Personen",
+              "preis": 1800
+            },
+            {
+              "titel": "Programm, 25 Personen",
+              "preis": 2400
+            }
+          ]
         },
         {
           "id": "kk-change-begleitung",
@@ -127,7 +270,13 @@
           "menge_waehlbar": true,
           "menge_standard": 2,
           "menge_max": 20,
-          "hinweis": "Inklusive Vorbereitung und Nachbereitung."
+          "hinweis": "Inklusive Vorbereitung und Nachbereitung.",
+          "umfang": "Wir begleiten Ihre Leitung und Ihr Team im Betrieb: Kommunikation, Rollen, Widerstände und Tempo. Vor- und Nachbereitung sind im Tagespreis inbegriffen.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "fest",
+          "abnahme": false
         },
         {
           "id": "kk-begleitung-vor-ort-halbtag",
@@ -140,7 +289,13 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 20,
-          "hinweis": "Ohne Vorbereitung: wir sind da und helfen."
+          "hinweis": "Ohne Vorbereitung: wir sind da und helfen.",
+          "umfang": "Ohne Trainingskonzept: wir sind da und helfen. Reise und Spesen im Angebot ausgewiesen.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "fest",
+          "abnahme": false
         },
         {
           "id": "kk-begleitung-vor-ort",
@@ -153,7 +308,13 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 20,
-          "hinweis": "Ohne Vorbereitung: wir sind da und helfen."
+          "hinweis": "Ohne Vorbereitung: wir sind da und helfen.",
+          "umfang": "Wie der Halbtag, ein ganzer Tag. Reise separat.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "fest",
+          "abnahme": false
         }
       ]
     },
@@ -164,8 +325,27 @@
       "kurz": "Sie werden bei Google gefunden und in den Antworten von KI-Assistenten richtig genannt.",
       "positionen": [
         {
+          "id": "si-check-kompakt",
+          "titel": "Sichtbarkeits-Check, kompakt",
+          "beschreibung": "Der nächste Schritt nach dem kostenlosen Check: Wir prüfen, wie Google und KI-Assistenten Ihre Firma nennen, und zeigen die wichtigsten Massnahmen.",
+          "einheit": "pauschal",
+          "preis": 790,
+          "ab": false,
+          "art": "einmalig",
+          "menge_waehlbar": false,
+          "menge_standard": 1,
+          "menge_max": 1,
+          "hinweis": "Wird beim Audit, vertieft, angerechnet.",
+          "umfang": "Ein Standort, eine Sprache, Google plus drei KI-Assistenten, zehn Suchbegriffe, Bericht mit fünf Massnahmen und 30 Minuten Besprechung.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "produkttest",
+          "abnahme": false
+        },
+        {
           "id": "si-geo-check",
-          "titel": "KI-Sichtbarkeits-Check",
+          "titel": "Sichtbarkeits-Audit, vertieft",
           "beschreibung": "Wir testen, ob und wie ChatGPT und andere KI-Assistenten Ihre Firma nennen, und zeigen, was Sie ändern können.",
           "einheit": "pauschal",
           "preis": 1300,
@@ -174,7 +354,13 @@
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": "Der Einstieg nach dem kostenlosen Check auf der Seite."
+          "hinweis": "Vertieft den Check. Ein vorher gebuchter Kompakt-Check wird angerechnet.",
+          "umfang": "Eine Domain bis 30 Seiten, eine Sprache, drei Mitbewerber, Massnahmenplan mit Reihenfolge. Darüber eigenes Angebot.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "fest",
+          "abnahme": false
         },
         {
           "id": "si-inhalt-optimierung",
@@ -187,7 +373,13 @@
           "menge_waehlbar": true,
           "menge_standard": 5,
           "menge_max": 50,
-          "hinweis": "Preis je Seite."
+          "hinweis": "Preis je Seite.",
+          "umfang": "Text, Titel, Beschreibung, strukturierte Daten, eine Freigaberunde.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "fest",
+          "abnahme": false
         },
         {
           "id": "si-betreuung-lokal",
@@ -200,7 +392,13 @@
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": "Kündbar auf Ende Folgemonat. Den ersten Platz kann niemand versprechen."
+          "hinweis": "Kündbar auf Ende Folgemonat. Wir versprechen keine Platzierung.",
+          "umfang": "Google-Unternehmensprofil, Bewertungen beantworten, ein Beitrag im Monat, Monatsbericht. Keine Seitenüberarbeitung enthalten.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "fest",
+          "abnahme": false
         },
         {
           "id": "si-betreuung-seo",
@@ -213,7 +411,13 @@
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": "Kündbar auf Ende Folgemonat. Enthält die lokale Betreuung."
+          "hinweis": "Kündbar auf Ende Folgemonat. Enthält die lokale Betreuung.",
+          "umfang": "Enthält lokal plus zwei Seitenüberarbeitungen im Monat, Quartalsplan mit Prioritäten und monatliche Auswertung der zehn Suchbegriffe.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "fest",
+          "abnahme": false
         },
         {
           "id": "si-betreuung-geo",
@@ -226,7 +430,13 @@
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": "Kündbar auf Ende Folgemonat. Enthält Google und lokal."
+          "hinweis": "Kündbar auf Ende Folgemonat. Enthält Google und lokal.",
+          "umfang": "Enthält Google-Sichtbarkeit plus KI-Sichtbarkeit: 20 feste Suchfragen in drei Assistenten, dokumentierte Messbedingungen, eine umgesetzte Massnahme im Monat. Nach drei Monaten Prüfung der gelieferten Arbeit.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "fest",
+          "abnahme": false
         }
       ]
     },
@@ -247,11 +457,38 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 10,
-          "hinweis": "Fixpreis nach der Erstanalyse. Ohne Anbindung an weitere Programme."
+          "hinweis": "Fixpreis nach der Erstanalyse. Ohne Anbindung an weitere Programme.",
+          "umfang": "Ein Auslöser, eine Regel, ein Zielsystem, ohne weitere Anbindung. Fixpreis nach der Erstanalyse.",
+          "folgekosten": "Betreuung optional, kündbar auf Ende Folgemonat",
+          "betreuung_id": "be-betreuung-klein",
+          "fremdkosten": "Lizenzen der angebundenen Programme und KI-Nutzung, nach Verbrauch",
+          "status": "fest",
+          "sprosse": "einfach",
+          "abnahme": true
+        },
+        {
+          "id": "au-offerte-formular-standard",
+          "titel": "Offerte-Formular, Standard",
+          "beschreibung": "Ihr Team füllt ein Formular aus, die Preise werden gerechnet, die fertige Offerte liegt als PDF in Ihrem Design bereit.",
+          "einheit": "pro Ablauf",
+          "preis": 1900,
+          "ab": true,
+          "art": "einmalig",
+          "menge_waehlbar": true,
+          "menge_standard": 1,
+          "menge_max": 5,
+          "hinweis": "Fixpreis nach der Erstanalyse. Die Anbindung ans Offertenprogramm ist nicht im Preis.",
+          "umfang": "Standard-Vorlage: ein Formular, eine Preisliste bis 30 Positionen, eine PDF-Vorlage, ein Mailversand. Anbindung ans Offertenprogramm nicht im Preis. Versand erst nach Ihrer Freigabe.",
+          "folgekosten": "Betreuung optional, kündbar auf Ende Folgemonat",
+          "betreuung_id": "be-betreuung-klein",
+          "fremdkosten": "Lizenzen der angebundenen Programme und KI-Nutzung, nach Verbrauch",
+          "status": "produkttest",
+          "sprosse": "einfach",
+          "abnahme": true
         },
         {
           "id": "au-offerte-formular",
-          "titel": "Offerte aus dem Formular",
+          "titel": "Offerte-Formular, individuell",
           "beschreibung": "Ihr Team füllt ein Formular aus, Preise werden nach Ihren Regeln gerechnet, die fertige Offerte liegt als PDF in Ihrem Design bereit.",
           "einheit": "pro Ablauf",
           "preis": 2200,
@@ -260,7 +497,14 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 5,
-          "hinweis": "Fixpreis nach der Erstanalyse. Ihre Regeln halten wir gemeinsam fest, zwei Probeläufe inklusive."
+          "hinweis": "Fixpreis nach der Erstanalyse. Ihre Regeln halten wir gemeinsam fest; abgenommen ist der Ablauf nach einem Probelauf mit Ihren echten Fällen.",
+          "umfang": "Eigene Regeln, bis zwei Preislisten oder Varianten. Die Anbindung ans Offertenprogramm ist nicht im Preis: Standard-Connector oder individuelle Anbindung. Versand erst nach Ihrer Freigabe.",
+          "folgekosten": "Betreuung optional, kündbar auf Ende Folgemonat",
+          "betreuung_id": "be-betreuung-klein",
+          "fremdkosten": "Lizenzen der angebundenen Programme und KI-Nutzung, nach Verbrauch",
+          "status": "fest",
+          "sprosse": "einfach",
+          "abnahme": true
         },
         {
           "id": "au-freigabe-schleife",
@@ -273,7 +517,14 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 5,
-          "hinweis": "Fixpreis nach der Erstanalyse. Freigabe per Mail oder Telegram."
+          "hinweis": "Fixpreis nach der Erstanalyse. Freigabe per Mail oder Telegram.",
+          "umfang": "Eigenständig, Freigabe per Mail oder Telegram. Als Zusatzmodul zu einem bestehenden Ablauf zum Preis eines kleinen Ablaufs.",
+          "folgekosten": "Betreuung optional, kündbar auf Ende Folgemonat",
+          "betreuung_id": "be-betreuung-klein",
+          "fremdkosten": "Lizenzen der angebundenen Programme und KI-Nutzung, nach Verbrauch",
+          "status": "fest",
+          "sprosse": "verbunden",
+          "abnahme": true
         },
         {
           "id": "au-belege-offerten",
@@ -286,7 +537,14 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 5,
-          "hinweis": "Fixpreis nach der Erstanalyse. Anbindung an Ihr Buchhaltungs- oder Offertenprogramm inklusive."
+          "hinweis": "Fixpreis nach der Erstanalyse. Anbindung an Ihr Buchhaltungs- oder Offertenprogramm inklusive.",
+          "umfang": "Zwei Anwendungsfälle getrennt: Belege erfassen oder Offerten erstellen. Genau eine Anbindung enthalten, das Programm steht im Angebot (zum Beispiel Bexio oder Abacus).",
+          "folgekosten": "Betreuung optional, kündbar auf Ende Folgemonat",
+          "betreuung_id": "be-betreuung-klein",
+          "fremdkosten": "Lizenzen der angebundenen Programme und KI-Nutzung, nach Verbrauch",
+          "status": "fest",
+          "sprosse": "verbunden",
+          "abnahme": true
         },
         {
           "id": "au-postfach-ki",
@@ -299,7 +557,14 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 5,
-          "hinweis": "Fixpreis nach der Erstanalyse. Anbindung an Ihr Mailprogramm inklusive."
+          "hinweis": "Fixpreis nach der Erstanalyse. Anbindung an Ihr Mailprogramm inklusive.",
+          "umfang": "Ein Postfach, Sortieren und Antwortentwürfe, Anbindung ans Mailprogramm inklusive.",
+          "folgekosten": "Betreuung optional, kündbar auf Ende Folgemonat",
+          "betreuung_id": "be-betreuung-klein",
+          "fremdkosten": "Lizenzen der angebundenen Programme und KI-Nutzung, nach Verbrauch",
+          "status": "fest",
+          "sprosse": "verbunden",
+          "abnahme": true
         },
         {
           "id": "au-auftragsablauf",
@@ -312,7 +577,14 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 5,
-          "hinweis": "Fixpreis nach der Erstanalyse. Anbindung an bis zu drei Programme inklusive."
+          "hinweis": "Fixpreis nach der Erstanalyse. Anbindung an bis zu drei Programme inklusive.",
+          "umfang": "Anfrage, Offerte, Auftrag, Rechnung mit bis zu drei Programmen über Standard-Connectoren, Daten je Programm in eine Richtung, bis 15 Felder je Übergabe. Rückkanäle und Altsysteme sind Anbindungen. Mehr Umfang über Anbindungen.",
+          "folgekosten": "Betreuung optional, kündbar auf Ende Folgemonat",
+          "betreuung_id": "be-betreuung-mittel",
+          "fremdkosten": "Lizenzen der angebundenen Programme und KI-Nutzung, nach Verbrauch",
+          "status": "fest",
+          "sprosse": "ganzer_ablauf",
+          "abnahme": true
         },
         {
           "id": "au-kundendossier",
@@ -325,7 +597,14 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 5,
-          "hinweis": "Fixpreis nach der Erstanalyse. Daten aus zwei Programmen zusammengeführt."
+          "hinweis": "Fixpreis nach der Erstanalyse. Daten aus zwei Programmen zusammengeführt.",
+          "umfang": "Nur wenn Daten aus mindestens zwei Programmen zusammengeführt werden. Sonst passt Postfach mit KI oder ein kleiner Ablauf besser.",
+          "folgekosten": "Betreuung optional, kündbar auf Ende Folgemonat",
+          "betreuung_id": "be-betreuung-mittel",
+          "fremdkosten": "Lizenzen der angebundenen Programme und KI-Nutzung, nach Verbrauch",
+          "status": "fest",
+          "sprosse": "ganzer_ablauf",
+          "abnahme": true
         },
         {
           "id": "au-ablauf-gross",
@@ -338,7 +617,14 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 5,
-          "hinweis": "Fixpreis nach der Erstanalyse. Anbindung an bis zu drei Programme inklusive."
+          "hinweis": "Fixpreis nach der Erstanalyse. Anbindung an bis zu drei Programme inklusive.",
+          "umfang": "Ab-Preis, Fixpreis nach der Erstanalyse. In Etappen mit je eigener Freigabe und eigenem Fixpreis. Bis drei Programme enthalten.",
+          "folgekosten": "Betreuung optional, kündbar auf Ende Folgemonat",
+          "betreuung_id": "be-betreuung-mittel",
+          "fremdkosten": "Lizenzen der angebundenen Programme und KI-Nutzung, nach Verbrauch",
+          "status": "fest",
+          "sprosse": "ganzer_ablauf",
+          "abnahme": true
         },
         {
           "id": "au-chatbot",
@@ -351,7 +637,14 @@
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": "Betrieb: CHF 130 im Monat (Begleitung)."
+          "hinweis": "Betreuung optional. Hosting und KI-Nutzung sind Fremdkosten.",
+          "umfang": "Website-Chatbot mit Firmenwissen bis 50 Webseiten oder 200 A4-Seiten Dokumente, eine Sprache, eine Domain, Übergabe an Mail. Er antwortet, er handelt nicht.",
+          "folgekosten": "Betreuung optional, kündbar auf Ende Folgemonat",
+          "betreuung_id": "be-betreuung-klein",
+          "fremdkosten": "Hosting und KI-Nutzung, nach Verbrauch",
+          "status": "fest",
+          "sprosse": null,
+          "abnahme": false
         },
         {
           "id": "au-telefonassistent",
@@ -364,12 +657,39 @@
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": "Mit eigener Nummer und Kalenderanbindung. Betrieb: CHF 190 im Monat (Begleitung)."
+          "hinweis": "Mit eigener Nummer und Kalenderanbindung. Betreuung optional; Telefonie und KI-Nutzung über dem Inklusivumfang nach Verbrauch.",
+          "umfang": "Prozessarbeit: Anruf aufnehmen, Anliegen erfassen, Rückruf, Termin oder Weiterleitung, Übergabe an Mitarbeitende. Dazu geprüfter Gesprächsleitfaden, eigene Nummer, Kalender und Weiterleitung, ein Anwendungsfall (Termin oder Rückruf), 30 Tage Feinschliff nach Start.",
+          "folgekosten": "Betreuung optional, inklusive 300 Telefonie-Minuten im Monat, kündbar auf Ende Folgemonat",
+          "betreuung_id": "be-betreuung-telefon",
+          "fremdkosten": "Telefonnummer, KI-Nutzung und Telefonie-Minuten über dem Inklusivumfang, nach Verbrauch",
+          "status": "fest",
+          "sprosse": null,
+          "abnahme": false
+        },
+        {
+          "id": "au-anbindung-standard",
+          "titel": "Anbindung, Standard-Connector",
+          "beschreibung": "Wir verbinden eine Automation mit einem gängigen Programm über einen fertigen Connector: Bexio, Google Workspace, Microsoft 365, HubSpot, Make oder Zapier.",
+          "einheit": "pro Programm",
+          "preis": 900,
+          "ab": true,
+          "art": "einmalig",
+          "menge_waehlbar": true,
+          "menge_standard": 1,
+          "menge_max": 5,
+          "hinweis": "Darüber hinaus: Anbindung, individuell.",
+          "umfang": "Zwei Programme, eine Richtung, Datenabgleich bis 15 Felder, Rechteprüfung, Test.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": "Lizenzen des angebundenen Programms",
+          "status": "produkttest",
+          "sprosse": null,
+          "abnahme": false
         },
         {
           "id": "au-integration",
-          "titel": "Zusätzliche Anbindung",
-          "beschreibung": "Wir verbinden eine bestehende Automation mit einem weiteren Programm: Branchensoftware, Kundenverzeichnis oder Microsoft 365.",
+          "titel": "Anbindung, individuell",
+          "beschreibung": "Wir verbinden eine bestehende Automation mit einem weiteren Programm: Branchensoftware, Kundenverzeichnis oder Microsoft 365, wenn kein Standard-Connector passt.",
           "einheit": "pro Programm",
           "preis": 1900,
           "ab": true,
@@ -377,7 +697,14 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 5,
-          "hinweis": "Je nach Programm und Umfang."
+          "hinweis": "Je nach Programm und Umfang. Standard-Connector: siehe Anbindung, Standard-Connector.",
+          "umfang": "Eigene Schnittstelle, Datei-Import, Altsysteme. Jedes Paket nennt, welche Anbindungen schon drin sind.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": "Lizenzen des angebundenen Programms",
+          "status": "fest",
+          "sprosse": null,
+          "abnahme": false
         }
       ]
     },
@@ -398,12 +725,18 @@
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": "Kündbar auf Ende Folgemonat."
+          "hinweis": "Kündbar auf Ende Folgemonat. Reaktion ist keine Behebungszeit; die Vertretung bei Abwesenheit ist geregelt. Ohne Betreuung erhalten Sie ein Übergabe-Paket, Betrieb und Verantwortung liegen bei Ihnen, Mängel beheben wir 90 Tage ohne Rechnung.",
+          "umfang": "Überwachung, Fehlerbehebung, bis 30 Minuten Anpassung im Monat, Reaktion innert eines Arbeitstags.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": "Lizenzen und KI-Nutzung, nach Verbrauch",
+          "status": "fest",
+          "abnahme": false
         },
         {
           "id": "be-betreuung-telefon",
           "titel": "Betreuung: Telefonassistent",
-          "beschreibung": "Überwachung, Updates und Support, dazu die Telefonnummer und 200 Gesprächsminuten im Monat.",
+          "beschreibung": "Überwachung, Fehlerbehebung und Support, dazu die Telefonnummer und 300 Gesprächsminuten im Monat.",
           "einheit": "pro Monat",
           "preis": 190,
           "ab": false,
@@ -411,12 +744,18 @@
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": "Kündbar auf Ende Folgemonat. Weitere Minuten CHF 0.40 je Minute."
+          "hinweis": "Kündbar auf Ende Folgemonat. 300 Gesprächsminuten im Monat inklusive, darüber und die KI-Nutzung nach Verbrauch.",
+          "umfang": "Wie die Betreuung für eine Automation, plus 300 Telefonie-Minuten im Monat. Darüber und die KI-Nutzung des Sprachmodells rechnen wir nach Verbrauch ab.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": "Telefonnummer, KI-Nutzung und weitere Minuten, nach Verbrauch",
+          "status": "fest",
+          "abnahme": false
         },
         {
           "id": "be-betreuung-mittel",
-          "titel": "Betreuung: mehrere Abläufe",
-          "beschreibung": "Wir betreuen bis zu fünf Automationen oder Assistenten und erledigen kleine Anpassungen gleich mit.",
+          "titel": "Betreuung: grosser Ablauf oder mehrere Abläufe",
+          "beschreibung": "Wir betreuen einen grossen Ablauf oder mehrere Abläufe und erledigen Anpassungen im festen Monatsbudget gleich mit.",
           "einheit": "pro Monat",
           "preis": 290,
           "ab": false,
@@ -424,11 +763,17 @@
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": "Kündbar auf Ende Folgemonat. Eine Stunde Anpassung im Monat inklusive."
+          "hinweis": "Kündbar auf Ende Folgemonat. Anderthalb Stunden Anpassung im Monat inklusive, Reaktion innert vier Arbeitsstunden.",
+          "umfang": "Ein grosser Ablauf oder zwei bis drei Abläufe. 1,5 Stunden Anpassung im Monat, Reaktion innert vier Arbeitsstunden.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": "Lizenzen und KI-Nutzung, nach Verbrauch",
+          "status": "fest",
+          "abnahme": false
         },
         {
           "id": "be-zeitbudget-4",
-          "titel": "Laufende Begleitung, 4 Stunden im Monat",
+          "titel": "Begleitung, 4 Std. im Monat",
           "beschreibung": "Feste Zeit für Ihre Fragen, Ihr Team und neue Ideen rund um KI.",
           "einheit": "pro Monat",
           "preis": 650,
@@ -437,11 +782,17 @@
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": "Kündbar auf Ende Folgemonat. Statt CHF 680 nach Aufwand."
+          "hinweis": "Kündbar auf Ende Folgemonat. Nicht genutzte Zeit wird einen Monat übertragen.",
+          "umfang": "Vier Stunden im Monat, Reaktion innert eines Arbeitstags. Nicht genutzte Zeit wird einen Monat übertragen, danach verfällt sie.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "fest",
+          "abnahme": false
         },
         {
           "id": "be-zeitbudget-8",
-          "titel": "Laufende Begleitung, 8 Stunden im Monat",
+          "titel": "Begleitung, 8 Std. im Monat",
           "beschreibung": "Feste Zeit für Ihre Fragen, Ihr Team und neue Ideen rund um KI.",
           "einheit": "pro Monat",
           "preis": 1250,
@@ -450,7 +801,13 @@
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": "Kündbar auf Ende Folgemonat. Statt CHF 1'360 nach Aufwand."
+          "hinweis": "Kündbar auf Ende Folgemonat. Nicht genutzte Zeit wird einen Monat übertragen.",
+          "umfang": "Acht Stunden im Monat. Gleiche Regeln wie bei vier Stunden.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "fest",
+          "abnahme": false
         },
         {
           "id": "be-standortbestimmung",
@@ -463,7 +820,13 @@
           "menge_waehlbar": false,
           "menge_standard": 1,
           "menge_max": 1,
-          "hinweis": "Bei einem Folgeauftrag über CHF 5'000 wird der Betrag ganz angerechnet."
+          "hinweis": "Bei einem Folgeauftrag innert sechs Monaten wird die Vorarbeit bis zur Hälfte angerechnet, höchstens CHF 1'075.",
+          "umfang": "Kein Pflichtschritt vor einer Automation. Ein halber Tag bei Ihnen, Bericht und Besprechung. Bei einem Folgeauftrag innert sechs Monaten wird die Vorarbeit angerechnet, soweit Prozessaufnahme und Systemliste wiederverwendet werden.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "fest",
+          "abnahme": false
         },
         {
           "id": "be-beratung-stunde",
@@ -476,20 +839,32 @@
           "menge_waehlbar": true,
           "menge_standard": 2,
           "menge_max": 40,
-          "hinweis": ""
+          "hinweis": "",
+          "umfang": "Nach Zeitaufwand abgerechnet.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "fest",
+          "abnahme": false
         },
         {
           "id": "be-anpassung-stunde",
           "titel": "Anpassungen und Erweiterungen",
           "beschreibung": "Änderungen an bestehenden Automationen, Seiten oder Assistenten, die über die Betreuung hinausgehen.",
           "einheit": "pro Stunde",
-          "preis": 150,
+          "preis": 170,
           "ab": false,
           "art": "einmalig",
           "menge_waehlbar": true,
           "menge_standard": 2,
           "menge_max": 40,
-          "hinweis": ""
+          "hinweis": "",
+          "umfang": "Nach Zeitaufwand abgerechnet, für Änderungen über die Betreuung hinaus.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "fest",
+          "abnahme": false
         }
       ]
     }

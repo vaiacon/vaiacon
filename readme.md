@@ -140,3 +140,9 @@ am Zeichen oder gar nicht. Die Ausnahme ist eng:
 **Intentional additions:** `PackageCard` hat eine dritte Variante `sand` (helle Karte mit Hairline) — für Paket-Grids in hellen Sektionen, wo Terra-Verlauf und Tinte zu schwer wirken.
 
 **Caveats:** Keine Font-Binaries (Google-Fonts-CDN wie im Original). Büro-Bot hat kein eigenes Produkt-UI in den Quellen — bewusst kein UI-Kit dafür erfunden. Das ursprüngliche Hero-Intro-Video (`ich machs_compressed.mp4`) wurde nicht mitgeliefert; dafür liegt ein Büro-Bot-Tanz-Loop unter `assets/buerobot-dance.mp4` (im UI-Kit in der Büro-Bot-Sektion eingebaut).
+
+## Preise
+
+Preise: eine Quelle `daten/preise.json` (Seiten per `data-preis`), Prüfskript `scripts/preise_pruefen.py`.
+Nach jeder Änderung am Katalog `scripts/strukturdaten.py` (JSON-LD, llms.txt) und `scripts/bot_wissen.py` (Chat-Wissen) laufen lassen.
+Rot im Prüfskript heisst nicht fertig; Regeln und Wörter stehen in `CLAUDE.md`.

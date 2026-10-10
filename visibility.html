@@ -20,7 +20,7 @@
 <title>Online gefunden werden, bei Google und in KI-Antworten · vaiacon</title>
 <link rel="stylesheet" href="styles.css?v=20261005-vorschlag">
 <link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20261005-vorschlag">
-<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261009-fakten-versteckt">
+<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261011-preislogik">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
 <link rel="stylesheet" href="ui_kits/website/kundenstimme.css?v=20261005-vorschlag">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -80,7 +80,7 @@
           "name": "Sichtbarkeit",
           "serviceType": "SEO und GEO",
           "url": "https://vaiacon.ch/visibility",
-          "description": "Von Google gefunden werden und in KI-Antworten vorkommen (Fachwörter: SEO und GEO). Kostenloser Google-Check, KI-Sichtbarkeits-Check, Seiten überarbeiten und laufende Betreuung, mit offen genannten Richtpreisen."
+          "description": "Von Google gefunden werden und in KI-Antworten vorkommen (Fachwörter: SEO und GEO). Kostenloser Google-Check, Check kompakt, Audit vertieft, Seiten überarbeiten und laufende Betreuung, mit offen genannten Preisen."
         }
       },
       {
@@ -123,7 +123,7 @@
   "@type": "Service",
   "name": "Sichtbarkeit",
   "serviceType": "SEO und GEO",
-  "description": "Von Google gefunden werden und in KI-Antworten vorkommen (Fachwörter: SEO und GEO). Kostenloser Google-Check, KI-Sichtbarkeits-Check, Seiten überarbeiten und laufende Betreuung, mit offen genannten Richtpreisen. Preise in CHF, inklusive 8,1 % MWST.",
+  "description": "Von Google gefunden werden und in KI-Antworten vorkommen (Fachwörter: SEO und GEO). Kostenloser Google-Check, Check kompakt, Audit vertieft, Seiten überarbeiten und laufende Betreuung, mit offen genannten Preisen. Preise in CHF, inklusive 8,1 % MWST.",
   "url": "https://vaiacon.ch/visibility",
   "provider": {
     "@id": "https://vaiacon.ch/#organisation"
@@ -137,7 +137,7 @@
     "priceCurrency": "CHF",
     "lowPrice": 280,
     "highPrice": 1300,
-    "offerCount": 5
+    "offerCount": 6
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -147,8 +147,22 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "KI-Sichtbarkeits-Check",
-          "description": "Wir testen, ob und wie ChatGPT und andere KI-Assistenten Ihre Firma nennen, und zeigen, was Sie ändern können."
+          "name": "Sichtbarkeits-Check, kompakt",
+          "description": "Der nächste Schritt nach dem kostenlosen Check: Wir prüfen, wie Google und KI-Assistenten Ihre Firma nennen, und zeigen die wichtigsten Massnahmen. Ein Standort, eine Sprache, Google plus drei KI-Assistenten, zehn Suchbegriffe, Bericht mit fünf Massnahmen und 30 Minuten Besprechung."
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "CHF",
+          "valueAddedTaxIncluded": true,
+          "price": 790
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Sichtbarkeits-Audit, vertieft",
+          "description": "Wir testen, ob und wie ChatGPT und andere KI-Assistenten Ihre Firma nennen, und zeigen, was Sie ändern können. Eine Domain bis 30 Seiten, eine Sprache, drei Mitbewerber, Massnahmenplan mit Reihenfolge. Darüber eigenes Angebot."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -162,7 +176,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Seite überarbeiten",
-          "description": "Wir überarbeiten eine Seite Ihrer Website so, dass Kundschaft, Google und KI-Assistenten sie verstehen."
+          "description": "Wir überarbeiten eine Seite Ihrer Website so, dass Kundschaft, Google und KI-Assistenten sie verstehen. Text, Titel, Beschreibung, strukturierte Daten, eine Freigaberunde."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -176,7 +190,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Laufende Betreuung: lokal gefunden werden",
-          "description": "Wir pflegen Ihren Karteneintrag und Ihre Bewertungen und passen Ihre Seite laufend an. Jeden Monat ein kurzer Bericht."
+          "description": "Wir pflegen Ihren Karteneintrag und Ihre Bewertungen und passen Ihre Seite laufend an. Jeden Monat ein kurzer Bericht. Google-Unternehmensprofil, Bewertungen beantworten, ein Beitrag im Monat, Monatsbericht. Keine Seitenüberarbeitung enthalten."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -191,7 +205,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Laufende Betreuung: Google-Sichtbarkeit",
-          "description": "Alles aus «lokal gefunden werden», dazu jeden Monat zwei Seiten neu oder überarbeitet und ein Bericht, was sich getan hat."
+          "description": "Alles aus «lokal gefunden werden», dazu jeden Monat zwei Seiten neu oder überarbeitet und ein Bericht, was sich getan hat. Enthält lokal plus zwei Seitenüberarbeitungen im Monat, Quartalsplan mit Prioritäten und monatliche Auswertung der zehn Suchbegriffe."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -206,7 +220,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Laufende Betreuung: Google und KI",
-          "description": "Alles aus der Google-Betreuung, dazu prüfen wir jeden Monat, wie KI-Assistenten Ihre Firma nennen, und bessern nach."
+          "description": "Alles aus der Google-Betreuung, dazu prüfen wir jeden Monat, wie KI-Assistenten Ihre Firma nennen, und bessern nach. Enthält Google-Sichtbarkeit plus KI-Sichtbarkeit: 20 feste Suchfragen in drei Assistenten, dokumentierte Messbedingungen, eine umgesetzte Massnahme im Monat. Nach drei Monaten Prüfung der gelieferten Arbeit."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -275,7 +289,7 @@
       <div class="sv-hero__inner">
         <div class="sv-hero__copy">
           <p class="sv-kicker sv-kicker--on-terra">SICHTBARKEIT</p>
-          <h1>SEO und GEO für Schweizer KMU: bei Google und in KI-Antworten sichtbar</h1>
+          <h1>SEO und GEO für Schweizer KMU: bei Google und in KI&#8209;Antworten sichtbar</h1>
           <p class="sv-hero__lead">
             Gefunden werden, wenn Menschen suchen und KI antwortet. Sichtbarkeit von vaiacon hilft Schweizer KMU, online sichtbar und verständlich zu werden: mit SEO für Suchmaschinen und GEO für KI-Antworten.
           </p>
@@ -304,7 +318,7 @@
             <dt>Was Sie bekommen</dt>
             <dd>Sichtbarkeits-Audit, SEO-Roadmap, GEO-Inhalte und Kontrolle.</dd>
             <dt>Preisrahmen</dt>
-            <dd>Google-Check kostenlos, KI-Sichtbarkeits-Check CHF 1'300, Seite überarbeiten CHF 280; laufende Betreuung ab CHF 400 pro Monat, inkl. MWST.</dd>
+            <dd>Google-Check kostenlos, Sichtbarkeits-Check, kompakt <span data-preis="si-check-kompakt" data-preis-form="betrag">CHF 790</span>, Sichtbarkeits-Audit, vertieft <span data-preis="si-geo-check" data-preis-form="betrag">CHF 1'300</span>, Seite überarbeiten <span data-preis="si-inhalt-optimierung" data-preis-form="betrag">CHF 280</span>; laufende Betreuung ab <span data-preis="si-betreuung-lokal" data-preis-form="betrag">CHF 400</span> pro Monat, inkl. MWST.</dd>
             <dt>Ablauf</dt>
             <dd>Wir verstehen Ihr Angebot, prüfen Ihre Sichtbarkeit, setzen Prioritäten und verbessern Seiten und Inhalte.</dd>
             <dt>Region</dt>
@@ -499,7 +513,7 @@
             <span class="sv-label">WAS WIR TUN</span>
             <h3>Wir machen Ihre Inhalte antwortfähig.</h3>
             <ul class="sv-checklist">
-              <li><span aria-hidden="true">✓</span> Wir formulieren klare Antworten auf typische Kundenfragen.</li>
+              <li><span aria-hidden="true">✓</span> Wir formulieren klare Antworten auf häufige Kundenfragen.</li>
               <li><span aria-hidden="true">✓</span> Wir erklären Begriffe, Abläufe, Nutzen und Grenzen ohne Fachjargon.</li>
               <li><span aria-hidden="true">✓</span> Wir stärken Vertrauenssignale wie Erfahrung, Standort und Leistungen.</li>
               <li><span aria-hidden="true">✓</span> Wir strukturieren Inhalte so, dass KI-Systeme Zusammenhänge erkennen.</li>
@@ -523,7 +537,7 @@
             <span class="sv-step__no">01</span>
             <div>
               <h3>Wir verstehen Ihr Angebot.</h3>
-              <p>Welche Leistungen bringen Umsatz? Welche Kunden passen? Welche Fragen kommen im Verkauf immer wieder?</p>
+              <p>Welche Leistungen tragen Ihren Betrieb? Welche Kunden passen? Welche Fragen kommen im Verkauf immer wieder?</p>
             </div>
           </li>
           <li>
@@ -537,7 +551,7 @@
             <span class="sv-step__no">03</span>
             <div>
               <h3>Wir setzen Prioritäten.</h3>
-              <p>Nicht alles muss sofort gemacht werden. Sie erhalten eine klare Reihenfolge: zuerst das, was am meisten Wirkung verspricht.</p>
+              <p>Nicht alles muss sofort gemacht werden. Sie erhalten eine klare Reihenfolge: zuerst das, was für Ihren Betrieb am meisten zählt.</p>
             </div>
           </li>
           <li>
@@ -574,6 +588,52 @@
             <h3>Kontrolle.</h3>
             <p>Regelmässige Prüfung, was sichtbar wird, welche Fragen auftauchen und welche Inhalte nachziehen sollten.</p>
           </article>
+        </div>
+
+        <div class="vs-stufen" id="stufen">
+          <h3 class="vs-stufen__titel">Wenn Sie nach dem kostenlosen Check weitergehen möchten</h3>
+          <ul class="vs-stufen__liste">
+            <li>
+              <div>
+                <strong data-preis="si-check-kompakt" data-preis-form="titel">Sichtbarkeits-Check, kompakt</strong>
+                <span data-preis="si-check-kompakt" data-preis-form="umfang">Ein Standort, eine Sprache, Google plus drei KI-Assistenten, zehn Suchbegriffe, Bericht mit fünf Massnahmen und 30 Minuten Besprechung.</span>
+                <span data-preis="si-check-kompakt" data-preis-form="hinweis">Wird beim Audit, vertieft, angerechnet.</span>
+              </div>
+              <span class="vs-stufen__preis" data-preis="si-check-kompakt">CHF 790</span>
+            </li>
+            <li>
+              <div>
+                <strong data-preis="si-geo-check" data-preis-form="titel">Sichtbarkeits-Audit, vertieft</strong>
+                <span data-preis="si-geo-check" data-preis-form="umfang">Eine Domain bis 30 Seiten, eine Sprache, drei Mitbewerber, Massnahmenplan mit Reihenfolge. Darüber eigenes Angebot.</span>
+              </div>
+              <span class="vs-stufen__preis" data-preis="si-geo-check">CHF 1'300</span>
+            </li>
+          </ul>
+          <h3 class="vs-stufen__titel">Danach, wenn Sie Betreuung möchten</h3>
+          <ul class="vs-stufen__liste">
+            <li>
+              <div>
+                <strong data-preis="si-betreuung-lokal" data-preis-form="titel">Laufende Betreuung: lokal gefunden werden</strong>
+                <span data-preis="si-betreuung-lokal" data-preis-form="umfang">Google-Unternehmensprofil, Bewertungen beantworten, ein Beitrag im Monat, Monatsbericht. Keine Seitenüberarbeitung enthalten.</span>
+              </div>
+              <span class="vs-stufen__preis" data-preis="si-betreuung-lokal">CHF 400 pro Monat</span>
+            </li>
+            <li>
+              <div>
+                <strong data-preis="si-betreuung-seo" data-preis-form="titel">Laufende Betreuung: Google-Sichtbarkeit</strong>
+                <span>Enthält lokal plus zwei Seitenüberarbeitungen im Monat, Quartalsplan mit Prioritäten und Beobachtung von zehn Suchbegriffen.</span>
+              </div>
+              <span class="vs-stufen__preis" data-preis="si-betreuung-seo">CHF 950 pro Monat</span>
+            </li>
+            <li>
+              <div>
+                <strong data-preis="si-betreuung-geo" data-preis-form="titel">Laufende Betreuung: Google und KI</strong>
+                <span data-preis="si-betreuung-geo" data-preis-form="umfang">Enthält Google-Sichtbarkeit plus KI-Sichtbarkeit: 20 feste Suchfragen in drei Assistenten, dokumentierte Messbedingungen, eine umgesetzte Massnahme im Monat. Nach drei Monaten Prüfung der gelieferten Arbeit.</span>
+              </div>
+              <span class="vs-stufen__preis" data-preis="si-betreuung-geo">CHF 1'300 pro Monat</span>
+            </li>
+          </ul>
+          <p class="vs-stufen__satz"><span data-preis-satz="betreuung">Betreuung ist optional und kündbar auf Ende Folgemonat. Sie umfasst Überwachung, Fehlerbehebung und ein festes Anpassungsbudget im Monat.</span> <span data-preis-mwst>Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer.</span></p>
         </div>
       </div>
     </section>
@@ -636,7 +696,7 @@
 <script src="ui_kits/website/api-basis.js?v=20261004-umbau"></script>
 <script src="ui_kits/website/visibility.js?v=20261007-logo-svg"></script>
 <script src="ui_kits/website/visibility-check.js?v=20261007-besucher"></script>
-<script src="ui_kits/website/preise.js?v=20261004-preise"></script>
+<script src="ui_kits/website/preise.js?v=20261011-preislogik"></script>
 <script src="ui_kits/website/chat.js?v=20261004-umbau"></script>
 </body>
 </html>

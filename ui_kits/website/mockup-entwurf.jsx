@@ -47,15 +47,15 @@ const FAQS = [
   ['Was ist vaiaconBot?', 'vaiaconBot ist der Ansatz für wiederkehrende Büro- und Administrationsprozesse: Wir analysieren Abläufe, priorisieren Hebel und setzen passende Automatisierungen um.'],
   ['Was ist vaiaconService?', 'vaiaconService begleitet bestehende Automatisierungen im Betrieb. Dazu gehören Pflege, Updates, Kontrolle und Weiterentwicklung nach Bedarf.'],
   ['Brauche ich technisches Vorwissen?', 'Nein. Die Inhalte und die Umsetzung werden so erklärt, dass Unternehmer und Mitarbeitende ohne technisches Vorwissen mitkommen.'],
-  ['Was kostet eine Automation?', 'Eine Automation beginnt bei CHF 600. Den Fixpreis nennen wir nach der Erstanalyse — Sie wissen vor der Umsetzung, woran Sie sind.'],
+  ['Was kostet eine Automation?', 'Den Fixpreis nennen wir nach der Erstanalyse — Sie wissen vor der Umsetzung, woran Sie sind.'],
   ['Was passiert mit unseren Daten?', 'Wir arbeiten nach dem revDSG. Vor der Umsetzung klären wir mit Ihnen, welche Daten ein Werkzeug überhaupt sehen darf, und halten Kundendaten dort heraus, wo sie nicht hingehören.'],
   ['Wie beginnt eine Zusammenarbeit?', 'Am Anfang steht ein unverbindliches Gespräch. Danach klären wir, ob Learning, Bot, Service oder eine Kombination davon sinnvoll ist.'],
 ];
 
 const SERVICE_PLANS = [
-  { number: '01', title: 'vaiaconService BASIC', text: 'Regelmässige Funktionsprüfung, kleine Anpassungen und E-Mail-Support.', price: 'ab CHF 90 / Monat' },
-  { number: '02', title: 'vaiaconService STANDARD', text: 'Laufende Pflege und Updates, Optimierung bestehender Abläufe, Support für Ihr Team und ein periodischer Review-Termin.', price: 'ab CHF 190 / Monat' },
-  { number: '03', title: 'vaiaconService PREMIUM', text: 'Proaktive Weiterentwicklung, priorisierte Betreuung, Erweiterungen und Integrationen.', price: 'ab CHF 390 / Monat' },
+  { number: '01', title: 'vaiaconService BASIC', text: 'Regelmässige Funktionsprüfung, kleine Anpassungen und E-Mail-Support.', price: 'Betreuung optional' },
+  { number: '02', title: 'vaiaconService STANDARD', text: 'Laufende Pflege und Updates, Optimierung bestehender Abläufe, Support für Ihr Team und ein periodischer Review-Termin.', price: 'Betreuung optional' },
+  { number: '03', title: 'vaiaconService PREMIUM', text: 'Proaktive Weiterentwicklung, priorisierte Betreuung, Erweiterungen und Integrationen.', price: 'Betreuung optional' },
 ];
 
 
@@ -266,7 +266,7 @@ function Service() {
             </div>
             <div className="mock-bot-tile__offer">
               <p className="mock-bot-tile__price-line">
-                <span className="mock-bot-tile__amount">ab CHF 600</span>
+                <span className="mock-bot-tile__amount">Fixpreis nach der Erstanalyse</span>
                 <span className="mock-bot-tile__unit">pro Automation</span>
               </p>
               <span className="mock-bot-tile__note">Fixpreis nach der Erstanalyse · meist in wenigen Wochen zurückverdient</span>

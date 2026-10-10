@@ -539,3 +539,50 @@
   .if__positionen li { flex-direction: column; gap: 2px; }
   .if__summe strong { font-size: 21px; }
 }
+
+/* ── Preislogik (11.10.2026): Feinschrift je Sprosse, ruhige Regeln, Anbindungen ── */
+.pm-col__fein {
+  display: block;
+  margin-top: 6px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: var(--weight-medium);
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: var(--text-muted);
+}
+.pm-col__ab .pm-col__fein:first-of-type { margin-top: 10px; }
+.pm-col__fein [data-preis] { font-weight: var(--weight-semibold); color: var(--text-body); }
+
+.pm-regeln { margin: var(--space-6, 28px) auto 0; max-width: 760px; text-align: left; display: grid; gap: 6px; }
+.pm-regeln p { margin: 0; font-size: 14.5px; line-height: 1.5; color: var(--text-body); }
+.pm-regeln__auf { margin-top: 4px; }
+.pm-regeln__auf summary {
+  cursor: pointer;
+  font-size: 14.5px;
+  font-weight: var(--weight-semibold);
+  color: var(--text-strong);
+  padding: 4px 0;
+}
+.pm-regeln__auf summary:hover { color: var(--accent); }
+.pm-regeln__auf summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+.pm-regeln__auf p { margin-top: 6px; }
+
+.pm-anbindung { margin: var(--space-8, 40px) auto 0; max-width: 760px; text-align: left; padding-top: 22px; border-top: 1px solid var(--border-strong); }
+.pm-anbindung__titel { margin: 0 0 6px; font-size: 20px; color: var(--text-strong); }
+.pm-anbindung__lead { margin: 0 0 14px; font-size: 15px; line-height: 1.5; color: var(--text-body); }
+.pm-anbindung__liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.pm-anbindung__liste li {
+  padding: 12px 16px;
+  background: var(--surface-card);
+  border: 1.5px solid var(--border-ink);
+  border-radius: var(--radius-sm);
+}
+.pm-anbindung__liste p { margin: 0; font-size: 14.5px; line-height: 1.5; color: var(--text-body); }
+.pm-anbindung__liste .pm-anbindung__kopf { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 2px 16px; margin-bottom: 4px; }
+.pm-anbindung__kopf b { font-size: 16px; color: var(--text-strong); }
+.pm-anbindung__preis { font-family: var(--font-mono); font-size: 15px; font-weight: var(--weight-bold); font-variant-numeric: tabular-nums; color: var(--text-strong); white-space: nowrap; }
+@media (max-width: 700px) {
+  .pm-regeln, .pm-anbindung { margin-top: 24px; }
+}
+.pm-regeln__auf p b { color: var(--text-strong); font-weight: var(--weight-semibold); }

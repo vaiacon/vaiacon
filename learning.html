@@ -19,11 +19,17 @@
 <title>KI-Kompetenz als Lernreise für Schweizer KMU · vaiacon</title>
 <link rel="stylesheet" href="styles.css?v=20261005-vorschlag">
 <link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20261005-vorschlag">
-<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261009-fakten-versteckt">
+<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261011-preislogik">
 <link rel="stylesheet" href="ui_kits/website/lernreise.css?v=20261010-zeitleiste2">
 <link rel="stylesheet" href="ui_kits/website/lernreise-zeitleiste.css?v=20261010-zeitleiste2">
 <link rel="stylesheet" href="ui_kits/website/standort.css?v=20261008-blase">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
+<style>
+/* Preislogik 2026-10: Umfangsätze dürfen umbrechen, Nebenpreise stehen leiser unter dem Hauptpreis. */
+.lr-format__preis small span { white-space: normal; }
+.lr-format__preis small.lr-format__nebenpreis { margin-top: var(--space-2); }
+.lr-format__preis + .lr-format__preis { margin-top: var(--space-3) !important; }
+</style>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -81,7 +87,7 @@
           "name": "Sichtbarkeit",
           "serviceType": "SEO und GEO",
           "url": "https://vaiacon.ch/visibility",
-          "description": "Von Google gefunden werden und in KI-Antworten vorkommen (Fachwörter: SEO und GEO). Kostenloser Google-Check, KI-Sichtbarkeits-Check, Seiten überarbeiten und laufende Betreuung, mit offen genannten Richtpreisen."
+          "description": "Von Google gefunden werden und in KI-Antworten vorkommen (Fachwörter: SEO und GEO). Kostenloser Google-Check, Check kompakt, Audit vertieft, Seiten überarbeiten und laufende Betreuung, mit offen genannten Preisen."
         }
       },
       {
@@ -138,7 +144,7 @@
     "priceCurrency": "CHF",
     "lowPrice": 60,
     "highPrice": 4700,
-    "offerCount": 11
+    "offerCount": 13
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -149,7 +155,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "KI-Einstieg im Betrieb, zwei Stunden",
-          "description": "Der erste Schritt für kleine Teams: Was KI im Büro heute kann, an zwei Aufgaben aus Ihrem Alltag ausprobiert."
+          "description": "Der erste Schritt für kleine Teams: Was KI im Büro heute kann, an zwei Aufgaben aus Ihrem Alltag ausprobiert. Bis 15 Personen, zwei Arbeitsaufgaben aus Ihrem Betrieb, Vorlagen zum Mitnehmen. Raum und Beamer stellen Sie, Reise ab Zürich separat."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -164,7 +170,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Training oder Workshop im Betrieb, Halbtag",
-          "description": "Ihr Team übt KI an Ihren eigenen Aufgaben. Thema nach Wahl: KI im Büro, Sichtbarkeit, Texte und Offerten."
+          "description": "Ihr Team übt KI an Ihren eigenen Aufgaben. Thema nach Wahl: KI im Büro, Sichtbarkeit, Texte und Offerten. Bis 15 Personen, Vorgespräch, Unterlagen, eine Nachfass-Mail."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -179,7 +185,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Training oder Workshop im Betrieb, ganzer Tag",
-          "description": "Ein ganzer Tag für Ihr Team: Grundlagen, Übungen an Ihren Fällen und konkrete nächste Schritte."
+          "description": "Ein ganzer Tag für Ihr Team: Grundlagen, Übungen an Ihren Fällen und konkrete nächste Schritte. Nur bei zwei Gruppen oder Vertiefung. Der Halbtag ist der Standard."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -194,7 +200,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Coaching für Führungskräfte",
-          "description": "Einzelgespräche für Personen, die entscheiden: Wie führe ich ein Team, das mit KI arbeitet?"
+          "description": "Einzelgespräche für Personen, die entscheiden: Wie führe ich ein Team, das mit KI arbeitet? Einzeltermine à 60 Minuten, online oder vor Ort."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -208,8 +214,22 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
+          "name": "Coaching-Paket, sechs Stunden",
+          "description": "Sechs Einzelgespräche für Personen, die entscheiden: Wie führe ich ein Team, das mit KI arbeitet? Sechs Termine à 60 Minuten innert drei Monaten, online oder vor Ort."
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "CHF",
+          "valueAddedTaxIncluded": true,
+          "price": 1190
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
           "name": "Online-Kurs nach Mass, zehn Minuten",
-          "description": "Ein fertiger Kurs von zehn Minuten mit Ihren Inhalten, Ihren Beispielen, Quiz und Ihrem Auftritt. Ihr Team lernt, wann es passt."
+          "description": "Ein fertiger Kurs von zehn Minuten mit Ihren Inhalten, Ihren Beispielen, Quiz und Ihrem Auftritt. Ihr Team lernt, wann es passt. Zehn fertige Minuten mit Drehbuch, KI-Sprecherstimme, Quiz und zwei Freigaberunden. Zusatzminuten gestaffelt."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -223,8 +243,23 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Lernvideo",
-          "description": "Ein kurzes Video, gefilmt oder animiert, mit Sprecherstimme, das einen Ablauf aus Ihrem Betrieb erklärt."
+          "name": "Lernvideo als Bildschirmaufnahme",
+          "description": "Ein kurzes Video mit Bildschirmaufnahme und Sprecherstimme, das einen Ablauf aus Ihrem Betrieb erklärt. Bildschirm, KI-Sprecherstimme, Schnitt, eine Freigaberunde. KI-Stimme, Gestaltungsgrad und Lieferformat stehen im Angebot."
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "CHF",
+          "valueAddedTaxIncluded": true,
+          "minPrice": 1900,
+          "unitText": "Video bis drei Minuten"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Lernvideo, gefilmt oder animiert",
+          "description": "Ein kurzes Video, gefilmt oder animiert, mit Sprecherstimme, das einen Ablauf aus Ihrem Betrieb erklärt. Dreh oder Animation, Sprecherstimme, zwei Freigaberunden."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -239,7 +274,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Tägliche kleine Lerneinheiten: Zuschnitt",
-          "description": "Wir bauen das Vier-Wochen-Programm auf Ihre Themen und Ihren Betrieb."
+          "description": "Wir bauen das Vier-Wochen-Programm auf Ihre Themen und Ihren Betrieb. Ein Programm sind vier Wochen: 20 Einheiten à drei bis fünf Minuten aus Ihren vorhandenen Unterlagen (Handbuch, Schulung, Prozessbeschrieb), Kanal nach Wahl (Mail, Teams, WhatsApp), ohne laufende Kosten. Neue Inhalte ohne Grundlage nach Aufwand."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -253,7 +288,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Tägliche kleine Lerneinheiten: Teilnahme",
-          "description": "Jeden Arbeitstag ein paar Minuten Lernstoff, direkt aufs Smartphone oder an den Arbeitsplatz."
+          "description": "Jeden Arbeitstag ein paar Minuten Lernstoff, direkt aufs Smartphone oder an den Arbeitsplatz. Für ein Programm von vier Wochen, ab zehn Personen. Der Programmpreis richtet sich nach der Zahl der Personen."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -268,7 +303,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Change-Begleitung",
-          "description": "Wir begleiten Ihre Leitung und Ihr Team durch die Veränderung: Kommunikation, Rollen, Widerstände, Tempo."
+          "description": "Wir begleiten Ihre Leitung und Ihr Team durch die Veränderung: Kommunikation, Rollen, Widerstände, Tempo. Wir begleiten Ihre Leitung und Ihr Team im Betrieb: Kommunikation, Rollen, Widerstände und Tempo. Vor- und Nachbereitung sind im Tagespreis inbegriffen."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -283,7 +318,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Begleitung am Arbeitsplatz, Halbtag",
-          "description": "Wir sind bei Ihnen im Betrieb und helfen Ihren Leuten direkt an ihren Aufgaben."
+          "description": "Wir sind bei Ihnen im Betrieb und helfen Ihren Leuten direkt an ihren Aufgaben. Ohne Trainingskonzept: wir sind da und helfen. Reise und Spesen im Angebot ausgewiesen."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -298,7 +333,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Begleitung am Arbeitsplatz, ganzer Tag",
-          "description": "Wir sind bei Ihnen im Betrieb und helfen Ihren Leuten direkt an ihren Aufgaben."
+          "description": "Wir sind bei Ihnen im Betrieb und helfen Ihren Leuten direkt an ihren Aufgaben. Wie der Halbtag, ein ganzer Tag. Reise separat."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -395,7 +430,7 @@
             <dt>Was Sie bekommen</dt>
             <dd>Eine massgeschneiderte Lernreise aus Training, täglichen kleinen Lerneinheiten, Begleitung am Arbeitsplatz und Führungscoaching.</dd>
             <dt>Preisrahmen</dt>
-            <dd>KI-Einstieg CHF 890 für zwei Stunden, Training CHF 1'550 pro Halbtag oder CHF 2'450 pro Tag, je Gruppe bis 15 Personen, inkl. MWST.</dd>
+            <dd>KI-Einstieg <span data-preis="kk-training-kurz" data-preis-form="betrag">CHF 890</span> für zwei Stunden, Training <span data-preis="kk-training-halbtag" data-preis-form="betrag">CHF 1'550</span> pro Halbtag oder <span data-preis="kk-training-tag" data-preis-form="betrag">CHF 2'450</span> pro Tag, je Gruppe bis 15 Personen, inkl. MWST.</dd>
             <dt>Ablauf</dt>
             <dd>Kostenloses halbstündiges Erstgespräch, danach eine Lernreise über mehrere Wochen mit Stationen nach Ihrem Bedarf.</dd>
             <dt>Region</dt>
@@ -488,53 +523,53 @@
             <h3>E-Learnings nach Mass</h3>
             <p><strong>Was es ist.</strong> Ein Online-Kurs mit Ihren Inhalten, Ihren Beispielen und Ihrem Auftritt.</p>
             <p><strong>Wann es passt.</strong> Wenn Wissen für viele da sein soll, unabhängig von Ort und Zeit, auch für neue Mitarbeitende.</p>
-            <p class="lr-format__preis"><span data-preis="kk-elearning-lernminute">CHF 2'900 pro Kurs</span><small>Zehn Minuten fertiger Kurs mit Quiz, jede weitere Minute CHF 290.</small></p>
+            <p class="lr-format__preis"><span data-preis="kk-elearning-lernminute">CHF 2'900 pro Kurs</span><small><span data-preis="kk-elearning-lernminute" data-preis-form="umfang">Zehn fertige Minuten mit Drehbuch, KI-Sprecherstimme, Quiz und zwei Freigaberunden. Zusatzminuten gestaffelt.</span></small><small class="lr-format__nebenpreis">Weitere Minuten: <span data-preis-staffel="kk-elearning-lernminute">290 / 240 / 190 je Lernminute</span>. Kurzfassung ohne Quiz: <span data-preis-variante="kk-elearning-lernminute:0">CHF 2'300</span>.</small></p>
           </article>
           <article class="lr-format" id="format-video">
             <figure class="lr-format__bild"><picture><source srcset="assets/vaiacon-buerobot-journey-video.webp" type="image/webp"><img src="assets/vaiacon-buerobot-journey-video.png" alt="Der vaiacon-Roboter zum Thema Lernvideos" loading="lazy" decoding="async"></picture></figure>
             <h3>Lernvideos</h3>
             <p><strong>Was es ist.</strong> Ein kurzes Video, das einen Ablauf oder ein Thema aus Ihrem Betrieb erklärt.</p>
             <p><strong>Wann es passt.</strong> Wenn dieselbe Frage immer wieder kommt oder ein Ablauf sich besser zeigen als beschreiben lässt.</p>
-            <p class="lr-format__preis"><span data-preis="kk-lernvideo">ab CHF 4'700 pro Video bis drei Minuten</span><small>Gefilmt oder animiert, mit Sprecherstimme.</small></p>
+            <p class="lr-format__preis"><span data-preis="kk-lernvideo-screencast" data-preis-form="betrag">ab CHF 1'900</span><small>Pro Video bis drei Minuten. <span data-preis="kk-lernvideo-screencast" data-preis-form="umfang">Bildschirm, KI-Sprecherstimme, Schnitt, eine Freigaberunde. KI-Stimme, Gestaltungsgrad und Lieferformat stehen im Angebot.</span></small><small class="lr-format__nebenpreis">Gefilmt oder animiert: <span data-preis="kk-lernvideo" data-preis-form="ab">ab CHF 4'700</span>. <span data-preis="kk-lernvideo" data-preis-form="umfang">Dreh oder Animation, Sprecherstimme, zwei Freigaberunden.</span></small></p>
           </article>
           <article class="lr-format" id="format-coaching">
             <figure class="lr-format__bild"><picture><source srcset="assets/vaiacon-buerobot-journey-coaching.webp" type="image/webp"><img src="assets/vaiacon-buerobot-journey-coaching.png" alt="Der vaiacon-Roboter zum Thema Coaching für Führungskräfte" loading="lazy" decoding="async"></picture></figure>
             <h3>Coaching für Führungskräfte</h3>
             <p><strong>Was es ist.</strong> Einzelgespräche für Personen, die entscheiden: Wie führe ich ein Team, das mit KI arbeitet?</p>
             <p><strong>Wann es passt.</strong> Wenn Sie vorangehen wollen, ohne alles selbst zu können, oder wenn im Team Unsicherheit herrscht.</p>
-            <p class="lr-format__preis"><span data-preis="kk-coaching-fuehrung">CHF 210 pro Stunde</span></p>
+            <p class="lr-format__preis"><span data-preis="kk-coaching-fuehrung">CHF 210 pro Stunde</span> · Paket <span data-preis="kk-coaching-paket">CHF 1'190</span><small><span data-preis="kk-coaching-paket" data-preis-form="umfang">Sechs Termine à 60 Minuten innert drei Monaten, online oder vor Ort.</span></small></p>
           </article>
           <article class="lr-format" id="format-vor-ort">
             <figure class="lr-format__bild"><picture><source srcset="assets/vaiacon-buerobot-journey-vor-ort.webp" type="image/webp"><img src="assets/vaiacon-buerobot-journey-vor-ort.png" alt="Der vaiacon-Roboter zum Thema Begleitung der Mitarbeitenden vor Ort" loading="lazy" decoding="async"></picture></figure>
             <h3>Begleitung der Mitarbeitenden vor Ort</h3>
             <p><strong>Was es ist.</strong> Wir sitzen bei Ihnen im Betrieb und helfen Ihren Leuten direkt am Arbeitsplatz.</p>
             <p><strong>Wann es passt.</strong> Wenn das Training vorbei ist und im Alltag die ersten echten Fragen auftauchen.</p>
-            <p class="lr-format__preis"><span data-preis="kk-begleitung-vor-ort-halbtag">CHF 700 pro Halbtag</span> · <span data-preis="kk-begleitung-vor-ort">CHF 1'250 pro Tag</span><small>Ohne Vorbereitung: wir sind da und helfen.</small></p>
+            <p class="lr-format__preis"><span data-preis="kk-begleitung-vor-ort-halbtag">CHF 700 pro Halbtag</span> · <span data-preis="kk-begleitung-vor-ort">CHF 1'250 pro Tag</span><small><span data-preis="kk-begleitung-vor-ort-halbtag" data-preis-form="umfang">Ohne Trainingskonzept: wir sind da und helfen. Reise und Spesen im Angebot ausgewiesen.</span></small></p>
           </article>
           <article class="lr-format" id="format-training">
             <figure class="lr-format__bild"><picture><source srcset="assets/vaiacon-buerobot-schulung-zeigestab.webp" type="image/webp"><img src="assets/vaiacon-buerobot-schulung-zeigestab.png" alt="Der vaiacon-Roboter zum Thema Trainings und Workshops" loading="lazy" decoding="async"></picture></figure>
             <h3>Trainings und Workshops</h3>
             <p><strong>Was es ist.</strong> Ihr Team übt KI an Ihren eigenen Aufgaben, bei Ihnen im Betrieb und auf Ihre Abläufe zugeschnitten.</p>
             <p><strong>Wann es passt.</strong> Wenn alle auf denselben Stand kommen sollen, vom ersten Schritt bis zur Vorlage, die bleibt.</p>
-            <p class="lr-format__preis"><span data-preis="kk-training-halbtag">CHF 1'550 pro Halbtag</span> · <span data-preis="kk-training-tag">CHF 2'450 pro Tag</span><small>Pro Gruppe bis 15 Personen, nicht pro Person. Zum Vergleich: offene Tagesseminare kosten rund CHF 990 pro Person.</small></p>
-            <p class="lr-format__preis"><span data-preis="kk-training-kurz">CHF 890 pro Termin</span><small>KI-Einstieg für kleine Teams: zwei Stunden bei Ihnen im Betrieb, Raum und Beamer stellen Sie.</small></p>
+            <p class="lr-format__preis"><span data-preis="kk-training-halbtag">CHF 1'550 pro Halbtag</span> · <span data-preis="kk-training-tag">CHF 2'450 pro Tag</span><small><span data-preis="kk-training-halbtag" data-preis-form="umfang">Bis 15 Personen, Vorgespräch, Unterlagen, eine Nachfass-Mail.</span></small></p>
+            <p class="lr-format__preis"><span data-preis="kk-training-kurz">CHF 890 pro Termin</span><small>KI-Einstieg für kleine Teams, zwei Stunden bei Ihnen im Betrieb. <span data-preis="kk-training-kurz" data-preis-form="umfang">Bis 15 Personen, zwei Arbeitsaufgaben aus Ihrem Betrieb, Vorlagen zum Mitnehmen. Raum und Beamer stellen Sie, Reise ab Zürich separat.</span></small></p>
           </article>
           <article class="lr-format" id="format-change">
             <figure class="lr-format__bild"><picture><source srcset="assets/vaiacon-buerobot-journey-change.webp" type="image/webp"><img src="assets/vaiacon-buerobot-journey-change.png" alt="Der vaiacon-Roboter zum Thema Change Management" loading="lazy" decoding="async"></picture></figure>
             <h3>Change Management</h3>
             <p><strong>Was es ist.</strong> Wir begleiten Leitung und Team durch die Veränderung: Kommunikation, Rollen, Widerstände, Tempo.</p>
             <p><strong>Wann es passt.</strong> Wenn KI nicht nur ein Werkzeug ist, sondern verändert, wie bei Ihnen gearbeitet wird.</p>
-            <p class="lr-format__preis"><span data-preis="kk-change-begleitung">CHF 1'700 pro Tag</span></p>
+            <p class="lr-format__preis"><span data-preis="kk-change-begleitung">CHF 1'700 pro Tag</span><small><span data-preis="kk-change-begleitung" data-preis-form="hinweis">Inklusive Vorbereitung und Nachbereitung.</span></small></p>
           </article>
           <article class="lr-format" id="format-mikro">
             <figure class="lr-format__bild"><picture><source srcset="assets/vaiacon-buerobot-journey-mikro.webp" type="image/webp"><img src="assets/vaiacon-buerobot-journey-mikro.png" alt="Der vaiacon-Roboter zum Thema Tägliche kleine Lerneinheiten" loading="lazy" decoding="async"></picture></figure>
             <h3>Tägliche kleine Lerneinheiten</h3>
             <p><strong>Was es ist.</strong> Jeden Arbeitstag ein paar Minuten Lernstoff zu Ihren Themen, aufs Smartphone oder an den Arbeitsplatz.</p>
             <p><strong>Wann es passt.</strong> Wenn Gelerntes im Alltag haften bleiben soll, statt nach dem Kurstag zu verpuffen.</p>
-            <p class="lr-format__preis"><span data-preis="kk-mikro-lerneinheiten">CHF 60 pro Person</span><small>Für ein Programm von vier Wochen, ab zehn Personen. Dazu einmalig <span data-preis="kk-mikro-einrichtung" data-preis-form="betrag">CHF 900</span> für den Zuschnitt.</small></p>
+            <p class="lr-format__preis"><span data-preis="kk-mikro-lerneinheiten">CHF 60 pro Person</span><small><span data-preis="kk-mikro-lerneinheiten" data-preis-form="umfang">Für ein Programm von vier Wochen, ab zehn Personen. Der Programmpreis richtet sich nach der Zahl der Personen.</span></small><small class="lr-format__nebenpreis">Programm mit Zuschnitt: 10 Personen <span data-preis-variante="kk-mikro-lerneinheiten:0">CHF 1'500</span>, 15 Personen <span data-preis-variante="kk-mikro-lerneinheiten:1">CHF 1'800</span>, 25 Personen <span data-preis-variante="kk-mikro-lerneinheiten:2">CHF 2'400</span>.</small></p>
           </article>
         </div>
-        <p class="lr-satz"><strong>Jede Reise ist eine Kombination.</strong> Sie zahlen nur, was Ihr Betrieb braucht. Preise inklusive Mehrwertsteuer.</p>
+        <p class="lr-satz"><strong>Jede Reise ist eine Kombination.</strong> Sie zahlen nur, was Ihr Betrieb braucht. <span data-preis-satz="ab_preis">Ab-Preise sind Fixpreise nach der Erstanalyse, nie offen nach oben.</span> <span data-preis-mwst>Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer.</span></p>
       </div>
     </section>
 
@@ -640,7 +675,7 @@
 <script src="ui_kits/website/visibility.js?v=20261007-logo-svg"></script>
 <script src="ui_kits/website/lernreise.js?v=20261010-zeitleiste2" defer></script>
 <script src="ui_kits/website/lernreise-zeitleiste.js?v=20261010-zeitleiste2" defer></script>
-<script src="ui_kits/website/preise.js?v=20261004-preise" defer></script>
+<script src="ui_kits/website/preise.js?v=20261011-preislogik" defer></script>
 <script src="ui_kits/website/standort.js?v=20261008-offerte" defer></script>
 <script src="ui_kits/website/chat.js?v=20261004-umbau"></script>
 </body>

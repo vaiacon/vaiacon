@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Büroarbeit automatisieren für Schweizer KMU: Belege, Offerten, Korrespondenz und Anfragen. Fixpreis nach der Erstanalyse, ab CHF 1'300 pro Ablauf, inklusive MWST.">
+<meta name="description" content="Büroarbeit automatisieren für Schweizer KMU: Belege, Offerten, Korrespondenz und Anfragen. Fixpreis nach der Erstanalyse, Betreuung optional.">
 <link rel="canonical" href="https://vaiacon.ch/bot">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="vaiacon">
 <meta property="og:locale" content="de_CH">
 <meta property="og:title" content="Automationen für Schweizer KMU · vaiacon">
-<meta property="og:description" content="Büroarbeit automatisieren für Schweizer KMU: Belege, Offerten, Korrespondenz und Anfragen. Fixpreis nach der Erstanalyse, ab CHF 1'300 pro Ablauf, inklusive MWST.">
+<meta property="og:description" content="Büroarbeit automatisieren für Schweizer KMU: Belege, Offerten, Korrespondenz und Anfragen. Fixpreis nach der Erstanalyse, Betreuung optional.">
 <meta property="og:url" content="https://vaiacon.ch/bot">
 <meta property="og:image" content="https://vaiacon.ch/assets/vorschau-automatisierungen.jpg">
 <meta property="og:image:width" content="1200">
@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261009-fakten-versteckt">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
 <link rel="stylesheet" href="ui_kits/website/preismatrix.css?v=20261010-ohne-detail">
-<link rel="stylesheet" href="ui_kits/website/automationen.css?v=20261010-mail">
+<link rel="stylesheet" href="ui_kits/website/automationen.css?v=20261011-preislogik">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -80,7 +80,7 @@
           "name": "Sichtbarkeit",
           "serviceType": "SEO und GEO",
           "url": "https://vaiacon.ch/visibility",
-          "description": "Von Google gefunden werden und in KI-Antworten vorkommen (Fachwörter: SEO und GEO). Kostenloser Google-Check, KI-Sichtbarkeits-Check, Seiten überarbeiten und laufende Betreuung, mit offen genannten Richtpreisen."
+          "description": "Von Google gefunden werden und in KI-Antworten vorkommen (Fachwörter: SEO und GEO). Kostenloser Google-Check, Check kompakt, Audit vertieft, Seiten überarbeiten und laufende Betreuung, mit offen genannten Preisen."
         }
       },
       {
@@ -135,9 +135,9 @@
   "offers": {
     "@type": "AggregateOffer",
     "priceCurrency": "CHF",
-    "lowPrice": 1300,
+    "lowPrice": 900,
     "highPrice": 6800,
-    "offerCount": 11
+    "offerCount": 13
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
@@ -148,7 +148,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Kleinen Ablauf automatisieren",
-          "description": "Ein einfacher, wiederkehrender Ablauf in einem Programm, zum Beispiel Anfragen sortieren oder Bestätigungen verschicken."
+          "description": "Ein einfacher, wiederkehrender Ablauf in einem Programm, zum Beispiel Anfragen sortieren oder Bestätigungen verschicken. Ein Auslöser, eine Regel, ein Zielsystem, ohne weitere Anbindung. Fixpreis nach der Erstanalyse."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -162,8 +162,23 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Offerte aus dem Formular",
-          "description": "Ihr Team füllt ein Formular aus, Preise werden nach Ihren Regeln gerechnet, die fertige Offerte liegt als PDF in Ihrem Design bereit."
+          "name": "Offerte-Formular, Standard",
+          "description": "Ihr Team füllt ein Formular aus, die Preise werden gerechnet, die fertige Offerte liegt als PDF in Ihrem Design bereit. Standard-Vorlage: ein Formular, eine Preisliste bis 30 Positionen, eine PDF-Vorlage, ein Mailversand. Anbindung ans Offertenprogramm nicht im Preis. Versand erst nach Ihrer Freigabe."
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "CHF",
+          "valueAddedTaxIncluded": true,
+          "minPrice": 1900,
+          "unitText": "Ablauf"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Offerte-Formular, individuell",
+          "description": "Ihr Team füllt ein Formular aus, Preise werden nach Ihren Regeln gerechnet, die fertige Offerte liegt als PDF in Ihrem Design bereit. Eigene Regeln, bis zwei Preislisten oder Varianten. Die Anbindung ans Offertenprogramm ist nicht im Preis: Standard-Connector oder individuelle Anbindung. Versand erst nach Ihrer Freigabe."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -178,7 +193,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Freigabe-Schleife",
-          "description": "Grosse Beträge oder wichtige Schritte gehen erst weiter, wenn Sie auf dem Handy «Freigeben» drücken, mit Erinnerung und Meldung bei Ausnahmen."
+          "description": "Grosse Beträge oder wichtige Schritte gehen erst weiter, wenn Sie auf dem Handy «Freigeben» drücken, mit Erinnerung und Meldung bei Ausnahmen. Eigenständig, Freigabe per Mail oder Telegram. Als Zusatzmodul zu einem bestehenden Ablauf zum Preis eines kleinen Ablaufs."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -193,7 +208,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Belege und Offerten automatisieren",
-          "description": "Rechnungen und Belege werden gelesen und abgelegt, Offerten entstehen aus Ihren Vorlagen und Angaben."
+          "description": "Rechnungen und Belege werden gelesen und abgelegt, Offerten entstehen aus Ihren Vorlagen und Angaben. Zwei Anwendungsfälle getrennt: Belege erfassen oder Offerten erstellen. Genau eine Anbindung enthalten, das Programm steht im Angebot (zum Beispiel Bexio oder Abacus)."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -208,7 +223,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Postfach mit KI",
-          "description": "Das Postfach sortiert sich selbst, Antworten stehen als Entwurf bereit, Liegengebliebenes wird nachgefasst."
+          "description": "Das Postfach sortiert sich selbst, Antworten stehen als Entwurf bereit, Liegengebliebenes wird nachgefasst. Ein Postfach, Sortieren und Antwortentwürfe, Anbindung ans Mailprogramm inklusive."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -223,7 +238,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Auftragsablauf von der Anfrage bis zur Rechnung",
-          "description": "Anfrage, Offerte, Auftrag und Rechnung laufen in einem Fluss über alle beteiligten Programme; die Rechnung geht am Tag des Abschlusses raus."
+          "description": "Anfrage, Offerte, Auftrag und Rechnung laufen in einem Fluss über alle beteiligten Programme; die Rechnung geht am Tag des Abschlusses raus. Anfrage, Offerte, Auftrag, Rechnung mit bis zu drei Programmen über Standard-Connectoren, Daten je Programm in eine Richtung, bis 15 Felder je Übergabe. Rückkanäle und Altsysteme sind Anbindungen. Mehr Umfang über Anbindungen."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -238,7 +253,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Kundendossier mit KI-Kurzfassung",
-          "description": "Zu jedem Kunden liegt alles an einem Ort: Mails, Rechnungen, Termine, mit einer Kurzfassung der KI und offenen Punkten zuoberst."
+          "description": "Zu jedem Kunden liegt alles an einem Ort: Mails, Rechnungen, Termine, mit einer Kurzfassung der KI und offenen Punkten zuoberst. Nur wenn Daten aus mindestens zwei Programmen zusammengeführt werden. Sonst passt Postfach mit KI oder ein kleiner Ablauf besser."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -253,7 +268,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Grosser Ablauf über mehrere Systeme",
-          "description": "Ein Ablauf, der mehrere Programme und Schritte verbindet, zum Beispiel von der Anfrage bis zur Rechnung."
+          "description": "Ein Ablauf, der mehrere Programme und Schritte verbindet, zum Beispiel von der Anfrage bis zur Rechnung. Ab-Preis, Fixpreis nach der Erstanalyse. In Etappen mit je eigener Freigabe und eigenem Fixpreis. Bis drei Programme enthalten."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -268,7 +283,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Chatbot mit Ihrem Firmenwissen",
-          "description": "Ein Assistent auf Ihrer Website, der Fragen Ihrer Kundschaft mit Ihren eigenen Angaben beantwortet."
+          "description": "Ein Assistent auf Ihrer Website, der Fragen Ihrer Kundschaft mit Ihren eigenen Angaben beantwortet. Website-Chatbot mit Firmenwissen bis 50 Webseiten oder 200 A4-Seiten Dokumente, eine Sprache, eine Domain, Übergabe an Mail. Er antwortet, er handelt nicht."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -282,7 +297,7 @@
         "itemOffered": {
           "@type": "Service",
           "name": "Telefonassistent",
-          "description": "Ein KI-Assistent nimmt Anrufe entgegen, beantwortet Standardfragen und trägt Termine in Ihren Kalender ein."
+          "description": "Ein KI-Assistent nimmt Anrufe entgegen, beantwortet Standardfragen und trägt Termine in Ihren Kalender ein. Prozessarbeit: Anruf aufnehmen, Anliegen erfassen, Rückruf, Termin oder Weiterleitung, Übergabe an Mitarbeitende. Dazu geprüfter Gesprächsleitfaden, eigene Nummer, Kalender und Weiterleitung, ein Anwendungsfall (Termin oder Rückruf), 30 Tage Feinschliff nach Start."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -295,8 +310,23 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
-          "name": "Zusätzliche Anbindung",
-          "description": "Wir verbinden eine bestehende Automation mit einem weiteren Programm: Branchensoftware, Kundenverzeichnis oder Microsoft 365."
+          "name": "Anbindung, Standard-Connector",
+          "description": "Wir verbinden eine Automation mit einem gängigen Programm über einen fertigen Connector: Bexio, Google Workspace, Microsoft 365, HubSpot, Make oder Zapier. Zwei Programme, eine Richtung, Datenabgleich bis 15 Felder, Rechteprüfung, Test."
+        },
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "priceCurrency": "CHF",
+          "valueAddedTaxIncluded": true,
+          "minPrice": 900,
+          "unitText": "Programm"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Anbindung, individuell",
+          "description": "Wir verbinden eine bestehende Automation mit einem weiteren Programm: Branchensoftware, Kundenverzeichnis oder Microsoft 365, wenn kein Standard-Connector passt. Eigene Schnittstelle, Datei-Import, Altsysteme. Jedes Paket nennt, welche Anbindungen schon drin sind."
         },
         "priceSpecification": {
           "@type": "UnitPriceSpecification",
@@ -392,13 +422,17 @@
             <dt>Problem</dt>
             <dd>Regelmässige Büroarbeit kostet jede Woche Zeit und wird heute noch von Hand gemacht.</dd>
             <dt>Was Sie bekommen</dt>
-            <dd>Bei Ihnen eingerichtete Automationen, auf Wunsch mit Chatbot, Telefonassistent und Anbindung an Ihre Software.</dd>
+            <dd>Bei Ihnen eingerichtete Automationen, auf Wunsch mit Chatbot, Telefonassistent und Anbindung an Ihre Software. Die Anbindung gibt es als Standard-Connector für gängige Programme oder individuell, wenn kein Standard passt.</dd>
+            <dt>Chatbot</dt>
+            <dd>Der Chatbot mit Firmenwissen beantwortet Fragen Ihrer Kundschaft mit Ihren eigenen Angaben und übergibt offene Fälle per Mail. Er antwortet, er handelt nicht. Einrichtung <span data-preis="au-chatbot" data-preis-form="ab">ab CHF 2'450</span>. <span data-preis="au-chatbot" data-preis-form="folgekosten">Betreuung optional, kündbar auf Ende Folgemonat</span>. Fremdkosten: <span data-preis="au-chatbot" data-preis-form="fremdkosten">Hosting und KI-Nutzung, nach Verbrauch</span>.</dd>
+            <dt>Telefonassistent</dt>
+            <dd>Der Telefonassistent nimmt Anrufe entgegen, erfasst das Anliegen und sorgt für Rückruf, Termin oder Weiterleitung, mit Übergabe an Ihre Mitarbeitenden. Einrichtung <span data-preis="au-telefonassistent" data-preis-form="ab">ab CHF 2'900</span>. Die Betreuung kostet <span data-preis="be-betreuung-telefon" data-preis-form="betrag">CHF 190</span> pro Monat: <span data-preis="au-telefonassistent" data-preis-form="folgekosten">Betreuung optional, inklusive 300 Telefonie-Minuten im Monat, kündbar auf Ende Folgemonat</span>. Fremdkosten: <span data-preis="au-telefonassistent" data-preis-form="fremdkosten">Telefonnummer, KI-Nutzung und Telefonie-Minuten über dem Inklusivumfang, nach Verbrauch</span>.</dd>
             <dt>Preisrahmen</dt>
-            <dd>Fixpreis nach der Erstanalyse, ab CHF 1'300 pro Ablauf, inkl. MWST.</dd>
+            <dd><span data-preis-satz="ab_preis">Ab-Preise sind Fixpreise nach der Erstanalyse, nie offen nach oben.</span> Der kleinste Ablauf kostet <span data-preis="au-ablauf-klein" data-preis-form="ab">ab CHF 1'300</span> pro Ablauf, alle Preise inklusive MWST. <span data-preis-satz="betreuung">Betreuung ist optional und kündbar auf Ende Folgemonat. Sie umfasst Überwachung, Fehlerbehebung und ein festes Anpassungsbudget im Monat.</span></dd>
             <dt>Bausteine</dt>
             <dd>Jede Automation besteht aus fünf Teilen: Etwas kommt rein, die KI versteht es, es wird entschieden, etwas passiert, Sie erfahren davon.</dd>
             <dt>Ihr Fall</dt>
-            <dd>Auf der Seite beschreiben Sie Ihren Fall in zwei Sätzen und geben E-Mail und Telefon an. Die Einordnung mit Sprosse und Richtpreis kommt per E-Mail, nicht auf der Seite. Die Beschreibung wird nicht gespeichert.</dd>
+            <dd>Auf der Seite beschreiben Sie Ihren Fall in zwei Sätzen und geben E-Mail und Telefon an. Die Einordnung kommt per E-Mail, nicht auf der Seite: welche Sprosse es ist, ob ein Standard reicht oder die Lösung individuell wird, und ein Richtpreis. Die Beschreibung wird nicht gespeichert.</dd>
             <dt>Region</dt>
             <dd>Gesamte Deutschschweiz</dd>
           </dl>
@@ -450,7 +484,7 @@
       <div class="sv-wrap">
         <div class="sv-center">
           <p class="sv-kicker">AUS DER PRAXIS</p>
-          <h2 class="sv-title" id="pm-titel">Was sind typische Beispiele in Ihrer Branche?</h2>
+          <h2 class="sv-title" id="pm-titel">Welche Beispiele gibt es in Ihrer Branche?</h2>
         </div>
 
         <div class="pm-branchen" id="pm-branchen">
@@ -481,7 +515,9 @@
                 <div class="pm-col"><span class="pm-col__kopf"><i>1</i><b>Einfache Automation</b></span><small>Eine feste Regel in einem Programm</small>
                   <span class="pm-col__bsp">Eine Rechnung kommt per Mail und liegt Sekunden später im richtigen Ordner.</span>
                   <span class="pm-col__gewinn"><em>Was Sie davon haben</em>Nichts geht verloren, niemand sucht am Monatsende.</span>
-                  <span class="pm-col__ab"><em>Preis</em><span data-preis="au-ablauf-klein" data-preis-form="betrag">ab CHF 1'300</span></span></div>
+                  <span class="pm-col__ab"><em>Preis</em><span data-preis="au-ablauf-klein" data-preis-form="betrag">ab CHF 1'300</span>
+                  <span class="pm-col__fein">Ein Auslöser, eine Regel, ein Zielsystem.</span>
+                  <span class="pm-col__fein">Beispiel erstes Jahr: <span data-preis="au-ablauf-klein" data-preis-form="jahr">ab CHF 2'860</span></span></span></div>
               <div class="pm-cell"
                 data-komplexitaet="Einfache Automation" data-zeit="Tage" data-dauer="Bei Ihnen fertig in 1 bis 2 Arbeitstagen" data-betreuung="be-betreuung-klein"
                 data-text="Eine feste Regel: Kommt ein Beleg per Mail, legen wir ihn von selbst richtig ab."
@@ -494,35 +530,36 @@
               </div>
               <div class="pm-cell"
                 data-komplexitaet="Einfache Automation" data-zeit="Woche" data-dauer="Bei Ihnen fertig in 3 bis 5 Arbeitstagen" data-betreuung="be-betreuung-klein"
-                data-text="Ihr Team füllt ein Formular aus, die fertige Offerte liegt als PDF bereit."
+                data-text="Das Standard-Formular: Ihr Team füllt es aus, die fertige Offerte liegt als PDF bereit, der Versand geht erst nach Ihrer Freigabe raus."
+                data-nutzen="Jede Offerte ist gleich gut, und Sie fangen mit einem erprobten Standard an."
+                data-umfang="Ein Formular|Eine Preisliste bis 30 Positionen|Eine PDF-Vorlage und ein Mailversand"
+                data-beispiel="Aus dem Standard-Formular wird eine Offerte in Ihrer Vorlage. Sie schauen drüber, dann geht sie raus.">
+                <span class="pm-cell__preis" data-preis="au-offerte-formular-standard" data-preis-form="betrag">ab CHF 1'900</span>
+                <span class="pm-cell__name">Offerte-Formular, Standard</span>
+              </div>
+              <div class="pm-cell"
+                data-komplexitaet="Einfache Automation" data-zeit="Woche" data-dauer="Bei Ihnen fertig in 3 bis 5 Arbeitstagen" data-betreuung="be-betreuung-klein"
+                data-text="Das Formular nach Ihren Regeln: Ihr Team füllt es aus, die fertige Offerte liegt als PDF bereit."
                 data-nutzen="Jede Offerte ist gleich gut, und sie ist in Minuten fertig."
                 data-umfang="Ihre Regeln gemeinsam mit dem Team festhalten|Zwei Probeläufe|Anleitung und kurze Einführung"
                 data-beispiel="Aus einem Formular wird eine Offerte in Ihrem Design. Sie schauen drüber, dann geht sie raus.">
                 <span class="pm-cell__preis" data-preis="au-offerte-formular" data-preis-form="betrag">ab CHF 2'200</span>
-                <span class="pm-cell__name">Ablauf mit eigenen Regeln</span>
+                <span class="pm-cell__name">Offerte-Formular, individuell</span>
               </div>
               </div>
               <div class="pm-spalte">
                 <div class="pm-col"><span class="pm-col__kopf"><i>2</i><b>Mittelgrosse Automation</b></span><small>Zwei Programme reden miteinander, oder die KI entscheidet</small>
                   <span class="pm-col__bsp">Der Beleg geht aus der Mail direkt in die Buchhaltung.</span>
                   <span class="pm-col__gewinn"><em>Was Sie davon haben</em>Kein Abtippen mehr, die Zahlen stimmen.</span>
-                  <span class="pm-col__ab"><em>Preis</em><span data-preis="au-integration" data-preis-form="betrag">ab CHF 1'900</span></span></div>
-              <div class="pm-cell"
-                data-komplexitaet="Mittelgrosse Automation" data-zeit="Tage" data-dauer="Bei Ihnen fertig in 1 bis 2 Arbeitstagen" data-betreuung="be-betreuung-klein"
-                data-text="Zwei Programme reden miteinander: Der Beleg aus der Mail steht in der Buchhaltung als Buchung bereit."
-                data-nutzen="Kein Abtippen mehr, und die Zahlen stimmen."
-                data-umfang="Verbindung zum zweiten Programm|Felder zuordnen, doppelte Rechnungen abfangen|Probelauf mit Ihren echten Belegen"
-                data-beispiel="Belege aus dem Postfach liegen als Entwurf in der Buchhaltung. Sie bestätigen mit einem Klick.">
-                <span class="pm-cell__preis" data-preis="au-integration" data-preis-form="betrag">ab CHF 1'900</span>
-                <span class="pm-cell__name">Anbindung</span>
-                <span class="pm-cell__tag">Katalog</span>
-              </div>
+                  <span class="pm-col__ab"><em>Preis</em><span data-preis="au-freigabe-schleife" data-preis-form="betrag">ab CHF 2'600</span>
+                  <span class="pm-col__fein">Zwei Programme, eine Freigabe, ein Rückkanal.</span>
+                  <span class="pm-col__fein">Beispiel erstes Jahr: <span data-preis="au-freigabe-schleife" data-preis-form="jahr">ab CHF 4'160</span></span></span></div>
               <div class="pm-cell"
                 data-komplexitaet="Mittelgrosse Automation" data-zeit="Tage" data-dauer="Bei Ihnen fertig in 1 bis 2 Arbeitstagen" data-betreuung="be-betreuung-klein"
                 data-text="Grosse Beträge gehen erst weiter, wenn Sie auf dem Handy «Freigeben» drücken."
                 data-nutzen="Nichts geht ohne Sie raus, und Sie müssen dafür nicht im Büro sein."
                 data-umfang="Freigabe per Mail oder Telegram|Erinnerung, wenn niemand antwortet|Meldung bei Ausnahmen"
-                data-beispiel="Eine Rechnung über CHF 2'000 geht zur Inhaberin aufs Handy. Erst nach ihrem Klick geht sie in die Zahlung.">
+                data-beispiel="Eine hohe Rechnung geht zur Inhaberin aufs Handy. Erst nach ihrem Klick geht sie in die Zahlung.">
                 <span class="pm-cell__preis" data-preis="au-freigabe-schleife" data-preis-form="betrag">ab CHF 2'600</span>
                 <span class="pm-cell__name">Freigabe-Schleife</span>
               </div>
@@ -550,7 +587,9 @@
                 <div class="pm-col"><span class="pm-col__kopf"><i>3</i><b>Komplette Automation</b></span><small>Mehrere Schritte, Freigaben, Ausnahmen: ein Bereich läuft von selbst</small>
                   <span class="pm-col__bsp">Von der Anfrage bis zur Rechnung, ohne dass jemand etwas weiterreicht.</span>
                   <span class="pm-col__gewinn"><em>Was Sie davon haben</em>Der Bereich hängt nicht mehr an einer Person, Rechnungen gehen am Tag des Abschlusses raus.</span>
-                  <span class="pm-col__ab"><em>Preis</em><span data-preis="au-auftragsablauf" data-preis-form="betrag">ab CHF 4'200</span></span></div>
+                  <span class="pm-col__ab"><em>Preis</em><span data-preis="au-auftragsablauf" data-preis-form="betrag">ab CHF 4'200</span>
+                  <span class="pm-col__fein">Bis drei Programme, mehrere Schritte, eine Übergabe.</span>
+                  <span class="pm-col__fein">Beispiel erstes Jahr: <span data-preis="au-auftragsablauf" data-preis-form="jahr">ab CHF 7'680</span></span></span></div>
               <div class="pm-cell"
                 data-komplexitaet="Komplette Automation" data-zeit="Woche" data-dauer="Bei Ihnen fertig in 3 bis 5 Arbeitstagen" data-betreuung="be-betreuung-mittel"
                 data-text="Von der Anfrage bis zur Rechnung in einem Fluss, über alle beteiligten Programme."
@@ -582,6 +621,37 @@
               </div>
             </div>
           </div>
+          <div class="pm-regeln">
+            <p data-preis-satz="ab_preis">Ab-Preise sind Fixpreise nach der Erstanalyse, nie offen nach oben.</p>
+            <p data-preis-satz="betreuung">Betreuung ist optional und kündbar auf Ende Folgemonat. Sie umfasst Überwachung, Fehlerbehebung und ein festes Anpassungsbudget im Monat.</p>
+            <p data-preis-satz="fremdkosten">Lizenzen, Hosting, KI-Nutzung und Telefonie rechnen wir nach Verbrauch separat ab. Sie laufen auch ohne Betreuung.</p>
+            <p data-preis-satz="beispiel_jahr">Beispiel erstes Jahr: Einrichtung plus zwölf Monate Betreuung, zuzüglich der genannten Fremdkosten.</p>
+            <details class="pm-regeln__auf">
+              <summary>Was ist in jeder Sprosse drin?</summary>
+              <p><b>Einfache Automation:</b> <span data-preis="au-ablauf-klein" data-preis-form="umfang">Ein Auslöser, eine Regel, ein Zielsystem, ohne weitere Anbindung. Fixpreis nach der Erstanalyse.</span></p>
+              <p><b>Mittelgrosse Automation:</b> <span data-preis="au-freigabe-schleife" data-preis-form="umfang">Eigenständig, Freigabe per Mail oder Telegram. Als Zusatzmodul zu einem bestehenden Ablauf zum Preis eines kleinen Ablaufs.</span></p>
+              <p><b>Komplette Automation:</b> <span data-preis="au-auftragsablauf" data-preis-form="umfang">Anfrage, Offerte, Auftrag, Rechnung mit bis zu drei Programmen über Standard-Connectoren, Daten je Programm in eine Richtung, bis 15 Felder je Übergabe. Rückkanäle und Altsysteme sind Anbindungen. Mehr Umfang über Anbindungen.</span></p>
+            </details>
+            <details class="pm-regeln__auf">
+              <summary>Wann ist ein Ablauf abgenommen?</summary>
+              <p data-preis-satz="abnahme">Abgenommen ist ein Ablauf, wenn der Normalfall, fehlende und falsche Daten, ein Schnittstellenausfall und eine Doppelauslösung geprüft sind und die Rechte stimmen.</p>
+              <p data-preis-satz="maengel">Mängel beheben wir 90 Tage nach der Übergabe ohne Rechnung.</p>
+            </details>
+          </div>
+          <div class="pm-anbindung" id="anbindungen">
+            <h3 class="pm-anbindung__titel">Anbindungen</h3>
+            <p class="pm-anbindung__lead">Wenn eine Automation ein weiteres Programm braucht, kommt die Anbindung dazu. Es gibt zwei Wege: den fertigen Standard-Connector oder eine individuelle Anbindung.</p>
+            <ul class="pm-anbindung__liste">
+              <li>
+                <p class="pm-anbindung__kopf"><b data-preis="au-anbindung-standard" data-preis-form="titel">Anbindung, Standard-Connector</b><span class="pm-anbindung__preis"><span data-preis="au-anbindung-standard" data-preis-form="ab">ab CHF 900</span> pro Programm</span></p>
+                <p>Für gängige Programme mit fertigem Connector: Bexio, Google Workspace, Microsoft 365, HubSpot, Make oder Zapier.</p>
+              </li>
+              <li>
+                <p class="pm-anbindung__kopf"><b data-preis="au-integration" data-preis-form="titel">Anbindung, individuell</b><span class="pm-anbindung__preis"><span data-preis="au-integration" data-preis-form="ab">ab CHF 1'900</span> pro Programm</span></p>
+                <p>Wenn kein Standard-Connector passt, etwa bei Branchensoftware, Kundenverzeichnis oder Altsystemen.</p>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -611,7 +681,7 @@
           <p class="sv-kicker">IHR FALL</p>
           <h2 class="sv-title" id="if-titel">Ihr Fall in zwei Sätzen.</h2>
           <p class="sv-lead">
-            Beschreiben Sie, was bei Ihnen jede Woche Zeit frisst. Unsere Einordnung bekommen Sie per E-Mail: welche Sprosse das ist und was es ungefähr kostet.
+            Beschreiben Sie, was bei Ihnen jede Woche Zeit frisst. Unsere Einordnung bekommen Sie per E-Mail: welche Sprosse das ist, ob ein Standard reicht oder es individuell wird, und was es ungefähr kostet.
           </p>
           <ol class="if__schritte" aria-label="So läuft es">
             <li><span>1</span>Beschreiben</li>
@@ -643,7 +713,7 @@
           <p class="if__kopf"><span class="if__kicker">Unterwegs</span></p>
           <p class="if__satz">Die Einordnung ist unterwegs.</p>
           <p class="if__danke-text">Sie bekommen sie in wenigen Minuten an <strong id="if-danke-mail"></strong>. Wir melden uns, wenn etwas offen ist.</p>
-          <p class="if__fuss">Richtpreis, keine verbindliche Offerte. Die Einstufung machen wir in der Erstanalyse, danach steht der Fixpreis.</p>
+          <p class="if__fuss">Eine Einordnung, keine verbindliche Offerte. Ob Standard oder individuell, klären wir in der Erstanalyse, danach steht der Fixpreis.</p>
         </div>
       </div>
     </section>
@@ -676,7 +746,7 @@
 </div>
 <script src="ui_kits/website/api-basis.js?v=20261004-umbau"></script>
 <script src="ui_kits/website/visibility.js?v=20261007-logo-svg"></script>
-<script src="ui_kits/website/preise.js?v=20261004-preise"></script>
+<script src="ui_kits/website/preise.js?v=20261011-preislogik"></script>
 <script src="ui_kits/website/preismatrix.js?v=20261010-ohne-detail"></script>
 <script src="ui_kits/website/branchen.js?v=20261010-ico"></script>
 <script src="ui_kits/website/ihrfall.js?v=20261010-mail"></script>

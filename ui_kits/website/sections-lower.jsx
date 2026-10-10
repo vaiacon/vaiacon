@@ -20,7 +20,7 @@ function Begleitung() {
             title="KI im Alltag"
             subtitle="Automatisierung und KI, die Ihr Team im Tagesgeschäft spürbar entlasten."
             features={['Prozesse analysieren & automatisieren', 'Büro-Bot als digitaler Mitarbeiter', 'KI-Schulungen ohne technisches Vorwissen', 'IT-Koordination aus einer Hand']}
-            price="ab CHF 600.00"
+            price="Fixpreis nach der Erstanalyse"
           />
           <PackageCard
             badge="Paket 02 · Mindchange"
