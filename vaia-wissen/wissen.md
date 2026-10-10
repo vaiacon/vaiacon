@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 09.10.2026 · Eintrag e5f4ed6 Automationen: «Das nervt» als Terra-Karte hervorgehoben
+> Stand: 10.10.2026 · Eintrag b86bcd6 Automationen: Preis-Detailkarte und Zuschläge entfernt (doppelt zur Leiter)
 
 ## Wie du antwortest
 
@@ -232,95 +232,67 @@ Region
 Gesamte Deutschschweiz
 DIE LERNREISE
 Formate, die über Wochen ineinandergreifen.
-Jede Station baut auf der vorigen auf. Klicken Sie dort darauf, wo es mit Ihrem Betrieb übereinstimmt, und die Reise passt sich entsprechend an.
-Mitarbeitende
-bis 10
-11 bis 20
-21 bis 50
-ab 50
-Ausgangslage
-Noch kaum KI
-Einzelne probieren
-Schon im Alltag
-Zeit pro Person und Woche
-rund 30 Minuten
-rund 1 Stunde
-2 Stunden und mehr
-1
-Woche 0 · Standort
+Jede Station baut auf der vorigen auf. Welche Sie wirklich brauchen, legen wir im Erstgespräch fest.
+1 Woche 0 · Standort
 Standortbestimmung
 Beantworten Sie einige Fragen zur Standortbestimmung. So wird sichtbar, was schon trägt und wo Handlungsbedarf herrscht.
 Messpunkt · Wo stehen wir?
 Machen Sie eine Umfrage im Team: Wer nutzt KI, wofür, wie sicher. Und eine Aufgabe, die oft vorkommt, mit der Zeit, die sie heute braucht.
 Standortbestimmung
-2
-Woche 1 · Auftakt
+2 Woche 1 · Auftakt
 Gespräch mit der Teamleitung
 Die Teamleitung klärt Ziel, Rollen und Spielregeln, bevor das Team startet. Wir begleiten das Gespräch und bringen uns dort mit ein, wo unsere Erfahrung helfen kann.
 Messpunkt · Ziele festlegen
 Zwei bis drei Ziele, welche greifbar sind. Zum Beispiel: alle arbeiten mit denselben geprüften Vorlagen. Zu jedem Ziel: woran wir es messen und bis wann wir es erreicht haben wollen.
 Change-Begleitung
-3
-Woche 2 · Training
+3 Woche 2 · Training
 Training im Team
 Ein halber Tag, in dem alle auf denselben Stand gebracht werden. Was Einzelne bereits gefunden haben, wird zum gemeinsamen Wissen.
 Training, Halbtag
-4
-Woche 3 · Video
+4 Woche 3 · Video
 Lernvideo aus Ihrem Alltag
 Was Ihre Mitarbeiter bereits beherrschen, wird zu einem kurzen Video. Neue Mitarbeiter können es später jederzeit abholen und aneignen.
 Lernvideo
-5
-Woche 5 · Täglich
+5 Woche 5 · Täglich
 Tägliche kleine Lerneinheiten
 Jeden Arbeitstag zehn Minuten: ein Tipp, eine Übung am eigenen Fall, eine Frage vom Roboter. Vier Wochen lang, direkt am Arbeitsplatz oder auf dem Smartphone.
 Messpunkt · Zwischenstand
 Die Antworten auf die tägliche Frage zeigen laufend, was sitzt. Nach zwei Wochen sehen Sie, wo das Team steht, und wir stellen nach, wo es hakt.
 Kleine Lerneinheiten
-6
-Woche 6 · Vor Ort
+6 Woche 6 · Vor Ort
 Begleitung am Arbeitsplatz
 Ein Tag, an dem wir Sie im Betrieb besuchen. Wir helfen dort, wo es im Alltag hakt, und beantworten die Fragen, die im Training nicht aufkamen.
 Begleitung vor Ort
-7
-Woche 7 · Coaching
+7 Woche 7 · Coaching
 Coaching der Führungskräfte
 In Einzelgesprächen geht es darum, was Führung jetzt anders macht: Wer entscheidet was, wie sprechen Sie über KI im Team, wo setzen Sie Grenzen.
 Coaching für Führungskräfte
-8
-ab Woche 8 · Wirkung
+8 ab Woche 8 · Wirkung
 Wirkung messen, Ziele prüfen
 Dieselben Fragen wie zu Beginn. An die Führung und an das Team. Wir legen Vorher und Nachher nebeneinander.
 Messpunkt · Zielcheck
 Jedes Ziel aus dem Auftakt bekommt ein Ergebnis: erreicht, teilweise oder offen. Was offen ist, wird zur nächsten Etappe.
 Standortbestimmung
-WIRKUNG UND ZIELE
+Ziel · ab Woche 8
 Am Ende wissen Sie, ob es gewirkt hat.
 An vier Stellen der Reise wird gemessen, immer gleich: vorher, unterwegs und nachher. Ausgewertet wird nur für die Gruppe, nie für einzelne Personen.
-1 · Wissen
-Sitzt es?
-Die Antworten auf die täglichen Fragen zeigen, was das Team verstanden hat und wo es noch wackelt.
-Laufend, ab der ersten Woche
-2 · Anwenden
-Wird es genutzt?
-Eine Umfrage von zwei Minuten: Wer nutzt KI, wie oft, wofür und wie sicher.
-Woche 0 und am Ende
-3 · Zeit
-Spart es etwas?
-Eine Aufgabe, die oft vorkommt, wird vorher und nachher mit der Uhr gemessen, zum Beispiel eine Offerte oder ein Protokoll.
-Woche 0 und am Ende
-4 · Ziele
-Ist erreicht, was wir wollten?
-Die Ziele aus dem Auftakt bekommen ein klares Ergebnis. Was offen bleibt, wird zur nächsten Etappe.
-Am Ende, im Zielcheck
+1 · Wissen Sitzt es?
+2 · Anwenden Wird es genutzt?
+3 · Zeit Spart es etwas?
+4 · Ziele Ist erreicht, was wir wollten?
+So sieht der Zielcheck aus →
 So sieht der Zielcheck aus · Muster mit erfundenen Werten
+Schliessen
 Ziel aus dem Auftakt Vorher Nachher Ergebnis
 Alle erledigen mindestens eine wiederkehrende Aufgabe regelmässig mit KI 4 von 15 13 von 15 teilweise
 Eine Offerte ist in 5 statt 45 Minuten fertig, ohne zusätzliche Korrekturen 45 Minuten 5 Minuten, Korrekturen wie bisher erreicht
 Offerten, Protokolle und Kundenmails entstehen aus geprüften Vorlagen keine 6 Vorlagen, in 4 von 5 Offerten genutzt erreicht
 Alle wissen, welche Werkzeuge Kundendaten bekommen dürfen keine Regel Regel steht, 11 von 15 kennen sie offen, nächste Etappe
 Den Zielcheck erhalten Sie am Ende als eine Seite, mit Vorher und Nachher und einem Vorschlag für die nächsten Wochen.
+Station 1 von 9
+‹ Zurück Weiter ›
 Das ist eine Beispielreise, kein fester Plan. Welche Stationen Sie wirklich brauchen, legen wir im Erstgespräch mit Ihnen fest.
+Erstgespräch vereinbaren →
 DIE FORMATE
 Alles ist möglich. Alles ist massgeschneidert.
 Sieben Formate, die sich kombinieren lassen. Jedes entsteht aus Ihren Aufgaben, Ihren Unterlagen und Ihrem Alltag.
@@ -568,28 +540,6 @@ Kundendossier
 ab CHF 6'800
 Ganzer Bereich
 Katalog
-Antippen: Sie sehen, was passiert, was es bringt und was es im ersten Jahr kostet.
-Einfache Automation
-Kleiner Ablauf
-Eine feste Regel: Kommt ein Beleg per Mail, legen wir ihn von selbst richtig ab.
-Was Sie davon haben Niemand sucht mehr am Monatsende, und kein Beleg geht verloren.
-Beispiel Eine Rechnung kommt per Mail und liegt Sekunden später benannt im richtigen Ordner.
-Das ist drin
-Einrichten im Programm, das Sie schon haben
-Probelauf mit Ihren echten Belegen
-Kurze Anleitung fürs Team
-Fixpreis nach Erstanalyse
-ab CHF 1'300
-Bei Ihnen fertig in 1 bis 2 Arbeitstagen
-Empfohlene Betreuung CHF 130 pro Monat
-Erstes Jahr gesamt CHF 2'860
-Jedes weitere Programm ab CHF 1'900
-Zuschläge und Laufendes
-Weiteres Programm anbinden ab CHF 1'900
-Betreuung klein, 1 Ablauf CHF 130 pro Monat
-Betreuung mittel, bis 5 Abläufe, 1 Std. Anpassung inkl. CHF 290 pro Monat
-Anpassung nach Aufwand CHF 150 pro Stunde
-Chatbot und Telefonassistent sind eigene Produkte ausserhalb der Matrix, die Preise stehen in den häufigen Fragen . Betreuung kündbar auf Ende Folgemonat. Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer.
 IN 22 SEKUNDEN
 So sieht das im Alltag aus.
 Belege, Offerten und Freigaben laufen von selbst. Ihr Fall steht im Feld darunter.
