@@ -431,6 +431,52 @@
     window.addEventListener('scroll', seitlichSteuern, { passive: true });
     window.addEventListener('resize', seitlichSteuern);
     seitlichSteuern();
+
+    /* Schriftfarbe je Eintrag: liegt hinter seiner Mitte ein Terracotta-Abschnitt, wird er hell.
+       Die Terracotta-Flächen werden einmal über die berechnete Hintergrundfarbe erkannt. */
+    var dunkleFlaechen = [];
+    var istTerracotta = function (cs) {
+      var teile = [];
+      if (cs.backgroundImage && cs.backgroundImage !== 'none' && /gradient/.test(cs.backgroundImage)) teile = teile.concat(cs.backgroundImage.match(/rgba?\([^)]*\)/g) || []);
+      if (cs.backgroundColor) teile.push(cs.backgroundColor);
+      var n = 0, dunkel = 0;
+      teile.forEach(function (c) {
+        var m = c.match(/[\d.]+/g); if (!m || m.length < 3) return;
+        if (m.length > 3 && parseFloat(m[3]) < 0.5) return;
+        var r = +m[0], g = +m[1], b = +m[2];
+        n++;
+        if (0.299 * r + 0.587 * g + 0.114 * b < 150 && r - b > 60) dunkel++;
+      });
+      return n > 0 && dunkel / n >= 0.5;
+    };
+    var flaechenErkennen = function () {
+      dunkleFlaechen = [];
+      var vw = window.innerWidth;
+      [].slice.call(document.body.querySelectorAll('header, section, footer, main > div, body > div, div[class*="hero"]')).forEach(function (e) {
+        if (e.closest('.vn, .vn-voll, .vn-seite')) return;
+        var r = e.getBoundingClientRect();
+        if (r.width < vw * 0.6 || r.height < 60) return;
+        if (istTerracotta(getComputedStyle(e))) dunkleFlaechen.push(e);
+      });
+    };
+    var eintraege = [].slice.call(seitlich.querySelectorAll('.vn-seite__haupt > li > a, .vn-seite__unter li'));
+    var farbeGeplant = false;
+    var farbeSetzen = function () {
+      farbeGeplant = false;
+      if (!seitlich.classList.contains('ist-sichtbar')) return;
+      var rects = dunkleFlaechen.map(function (e) { return e.getBoundingClientRect(); });
+      eintraege.forEach(function (e) {
+        var r = e.getBoundingClientRect(), mitte = r.top + r.height / 2, dunkel = false;
+        for (var i = 0; i < rects.length; i++) if (mitte >= rects[i].top && mitte < rects[i].bottom) { dunkel = true; break; }
+        if (e.classList.contains('auf-dunkel') !== dunkel) e.classList.toggle('auf-dunkel', dunkel);
+        if (e.tagName === 'LI') { var a = e.firstChild; if (a && a.classList) a.classList.toggle('auf-dunkel', dunkel); }
+      });
+    };
+    var farbePlanen = function () { if (!farbeGeplant) { farbeGeplant = true; requestAnimationFrame(farbeSetzen); } };
+    window.addEventListener('scroll', farbePlanen, { passive: true });
+    window.addEventListener('resize', function () { flaechenErkennen(); farbePlanen(); });
+    window.addEventListener('load', function () { flaechenErkennen(); farbePlanen(); });
+    flaechenErkennen(); farbePlanen();
   }
 
   if (ziele.length) {
