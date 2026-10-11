@@ -18,9 +18,12 @@
   ];
   var WEITERE = [['ki-kmu-news/', 'KI-News für KMU'], ['faq', 'FAQ'], ['ueber-uns', 'Über uns'], ['kontakt', 'Kontakt']];
 
-  var tiefe = location.pathname.indexOf('/ki-kmu-news/') > -1 ? '../' : '';
+  // Seiten in Unterordnern (ki-kmu-news/, erstanalyse/) brauchen '../' vor jedem Verweis.
+  var teile = location.pathname.split('/').filter(Boolean);
+  var unterordner = location.pathname.slice(-1) === '/' ? teile.length : teile.length - 1;
+  var tiefe = unterordner > 0 ? '../' : '';
   var name = (location.pathname.split('/').pop() || 'index').replace(/\.html$/, '') || 'index';
-  if (tiefe) name = 'news';
+  if (tiefe) name = teile[0] === 'ki-kmu-news' ? 'news' : teile[0];
 
 
   var panel = document.createElement('aside');
@@ -55,12 +58,14 @@
   knopf.className = 'sp-knopf';
   knopf.setAttribute('aria-controls', 'sp-panel');
   knopf.setAttribute('aria-expanded', 'false');
-  knopf.innerHTML = '<span aria-hidden="true">☰</span> Inhalt';
+  knopf.innerHTML = '<span aria-hidden="true">☰</span> Menü';
   document.body.appendChild(knopf);
   var schleier = document.createElement('div');
   schleier.className = 'sp-schleier';
   document.body.appendChild(schleier);
   var burger = document.querySelector('.mock-menu-toggle');
+  // Seiten ohne Burger (z. B. die Erstanalyse) zeigen auf dem Handy den Knopf «Menü».
+  if (!burger) document.documentElement.classList.add('sp-ohne-burger');
   function zu() {
     document.documentElement.classList.remove('sp-offen');
     knopf.setAttribute('aria-expanded', 'false');

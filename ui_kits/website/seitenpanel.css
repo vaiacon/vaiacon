@@ -79,11 +79,12 @@
     width: min(84vw, 320px);
     padding-top: var(--space-7);
     transform: translateX(-102%);
-    transition: transform 0.25s ease;
-    box-shadow: var(--shadow-soft);
+    transition: transform 0.25s ease, visibility 0s linear 0.25s;
+    box-shadow: none;
+    visibility: hidden;
     z-index: 260;
   }
-  html.sp-offen .sp-panel { transform: none; }
+  html.sp-offen .sp-panel { transform: none; box-shadow: var(--shadow-soft); visibility: visible; transition: transform 0.25s ease; }
   .sp-knopf {
     display: inline-flex;
     align-items: center;
@@ -112,7 +113,7 @@ html.mit-seitenpanel .mock-header__nav { justify-content: flex-end; }
 html.mit-seitenpanel .mock-nav-gruppe--info { margin-left: 0; padding-left: 0; }
 html.mit-seitenpanel .mock-menu-toggle { order: 3; }
 html.mit-seitenpanel .mock-mobile-nav { display: none !important; }
-html.mit-seitenpanel .sp-knopf { display: none !important; }
+html.mit-seitenpanel:not(.sp-ohne-burger) .sp-knopf { display: none !important; }
 
 /* Unter 1200 px öffnet das ☰ der Kopfzeile das Panel (bis 1024 px zeigt die Seite es selbst). */
 @media (min-width: 1025px) and (max-width: 1199px) {
