@@ -165,4 +165,4 @@ html.mit-seitenpanel .mock-mobile-nav { display: none !important; }
 .sp-bereich > summary a { color: var(--terra-700); font-weight: 700; }
 .sp-bereich > summary::after { border-color: var(--terra-500); }
 .sp-bereich > summary:hover { background: var(--peach-200); }
-.sp-bereich--aktiv > summary { background: var(--peach-200); box-shadow: inset 4px 0 0 var(--terra-500); }
+.sp-bereich--aktiv > summary { background: var(--peach-200); box-shadow: none; }
