@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 11.10.2026 · Eintrag 6c24af9 Formate-Karte Online-Kurs auf fünf Zeilen, Beschreibungs-Karte bündig mit Richtpreis
+> Stand: 11.10.2026 · Eintrag 01c3732 KI-Einstieg als Webinar: zwei Stunden online statt im Betrieb, CHF 890 pro Termin
 
 ## Wie du antwortest
 
@@ -592,7 +592,6 @@ Kostenlosen Website-Check starten →
 Zum Inhalt springen
 AUTOMATIONEN
 Büroarbeit mit KI automatisieren – für Schweizer KMU
-Was sich in Ihrem Betrieb jede Woche wiederholt, kann oft automatisch laufen: Belege, Offerten, Korrespondenz, Anfragen. Wir richten die Automationen bei Ihnen ein, zum Fixpreis nach der Erstanalyse. Von der einen festen Regel bis zum Ablauf von der Anfrage bis zur Rechnung: Sie entscheiden, wie gross der Schritt ist.
 Kostenlose Erstanalyse →
 Ihren Fall einordnen →
 Kurz gesagt

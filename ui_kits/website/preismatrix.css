@@ -15,8 +15,11 @@
 .pm-spalte { display: flex; flex-direction: column; gap: 10px; min-width: 0; }
 /* Spaltenköpfe gleich hoch: jede Spalte teilt die Zeilen des Rasters (Kopf + drei Karten). */
 @supports (grid-template-rows: subgrid) {
-  .pm-matrix { grid-template-rows: auto auto auto auto; }
-  .pm-spalte { display: grid; grid-template-rows: subgrid; grid-row: span 4; row-gap: 10px; }
+  /* 8 Zeilen: fünf Teile des Spaltenkopfs (Titel, Erklärung, Beispiel, Nutzen, Preis) + drei Karten.
+     So liegen Trennlinien und Preise in allen drei Spalten auf gleicher Höhe (11.10.). */
+  .pm-matrix { grid-template-rows: repeat(8, auto); }
+  .pm-spalte { display: grid; grid-template-rows: subgrid; grid-row: span 8; row-gap: 10px; }
+  .pm-col { display: grid; grid-template-rows: subgrid; grid-row: span 5; row-gap: 8px; align-content: start; }
 }
 
 /* Spaltenkopf: Sprosse, Erklärung, Beispiel, Nutzen, ab-Preis */
