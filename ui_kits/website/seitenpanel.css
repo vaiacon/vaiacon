@@ -103,3 +103,42 @@
   }
   html.sp-offen .sp-schleier { display: block; position: fixed; inset: 0; z-index: 255; background: rgba(20, 16, 12, 0.35); }
 }
+
+/* Kopfzeile: das Panel ersetzt die Hauptnavigation. Oben bleiben Logo und Kontakt. */
+html.mit-seitenpanel .mock-nav-gruppe--angebot,
+html.mit-seitenpanel .mock-nav-gruppe--info a:not(.mock-header__contact) { display: none; }
+html.mit-seitenpanel .mock-nav-gruppe--info::before { display: none; }
+html.mit-seitenpanel .mock-header__nav { justify-content: flex-end; }
+html.mit-seitenpanel .mock-nav-gruppe--info { margin-left: 0; padding-left: 0; }
+html.mit-seitenpanel .mock-menu-toggle { order: 3; }
+html.mit-seitenpanel .mock-mobile-nav { display: none !important; }
+html.mit-seitenpanel .sp-knopf { display: none !important; }
+
+/* Unter 1200 px öffnet das ☰ der Kopfzeile das Panel (bis 1024 px zeigt die Seite es selbst). */
+@media (min-width: 1025px) and (max-width: 1199px) {
+  html.mit-seitenpanel .mock-menu-toggle {
+    width: 46px; height: 42px; padding: 0; border: 0; background: transparent;
+    display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;
+    flex: 0 0 auto; cursor: pointer;
+  }
+  html.mit-seitenpanel .mock-menu-toggle span {
+    width: 19px; height: 2px; border-radius: 999px; background: var(--cream-50);
+    transition: transform 0.24s ease, opacity 0.18s ease, background 0.3s ease;
+  }
+  html.mit-seitenpanel .mock-header.is-solid .mock-menu-toggle span { background: var(--terra-500); }
+}
+
+/* Farbe: Terracotta mit weisser Schrift (Philip, 11.10.2026). */
+.sp-panel { background: var(--terra-500); border-right: 0; color: #fff; }
+.sp-panel a, .sp-bereich summary a, .sp-weitere a { color: #fff; }
+.sp-kopf { color: rgba(255, 255, 255, 0.72); }
+.sp-bereich summary::after { border-color: rgba(255, 255, 255, 0.85); }
+.sp-bereich summary:hover { background: rgba(255, 255, 255, 0.12); }
+.sp-bereich--aktiv > summary { background: rgba(255, 255, 255, 0.16); box-shadow: inset 3px 0 0 #fff; }
+.sp-bereich ul { border-left-color: rgba(255, 255, 255, 0.3); }
+.sp-bereich li a { color: rgba(255, 255, 255, 0.82); }
+.sp-bereich li a:hover { color: #fff; }
+.sp-bereich li a.an { color: #fff; border-left-color: #fff; font-weight: 700; }
+.sp-weitere { border-top-color: rgba(255, 255, 255, 0.3); }
+.sp-weitere a:hover, .sp-weitere a.an { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.sp-panel a:focus-visible, .sp-bereich summary:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }

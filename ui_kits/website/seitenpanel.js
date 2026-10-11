@@ -57,7 +57,23 @@
   var schleier = document.createElement('div');
   schleier.className = 'sp-schleier';
   document.body.appendChild(schleier);
-  function zu() { document.documentElement.classList.remove('sp-offen'); knopf.setAttribute('aria-expanded', 'false'); }
+  var burger = document.querySelector('.mock-menu-toggle');
+  function zu() {
+    document.documentElement.classList.remove('sp-offen');
+    knopf.setAttribute('aria-expanded', 'false');
+    if (burger) burger.setAttribute('aria-expanded', 'false');
+  }
+  // Das ☰ der Kopfzeile öffnet das Panel statt des alten Mobilmenüs.
+  if (burger) {
+    burger.setAttribute('aria-controls', 'sp-panel');
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest || !e.target.closest('.mock-menu-toggle')) return;
+      e.stopImmediatePropagation();
+      e.preventDefault();
+      var offen = document.documentElement.classList.toggle('sp-offen');
+      burger.setAttribute('aria-expanded', String(offen));
+    }, true);
+  }
   knopf.addEventListener('click', function () {
     var offen = document.documentElement.classList.toggle('sp-offen');
     knopf.setAttribute('aria-expanded', String(offen));
