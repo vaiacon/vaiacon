@@ -9,7 +9,7 @@
     "id": "zuriglow",
     "vorname": "Linda",
     "studio": "Züri Glow",
-    "branche": "Beauty Studio",
+    "branche": "Kosmetikstudio",
     "ort": "Zürich-Altstetten",
     "nennungen": {
       "voll": {
@@ -18,12 +18,12 @@
         "hinweis": "Nicht freigegeben. Erst ausfüllen, wenn die Kundin es wünscht."
       },
       "vorname_studio": {
-        "attribution": "Linda, Inhaberin Züri Glow, Beauty Studio in Zürich-Altstetten",
+        "attribution": "Linda, Inhaberin Züri Glow, Kosmetikstudio in Zürich-Altstetten",
         "wer": "Linda von Züri Glow"
       },
       "branche": {
-        "attribution": "Inhaberin eines Beauty Studios",
-        "wer": "die Inhaberin eines Beauty Studios"
+        "attribution": "Inhaberin eines Kosmetikstudios",
+        "wer": "die Inhaberin eines Kosmetikstudios"
       }
     },
     "gewaehlt": "vorname_studio"

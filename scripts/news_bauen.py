@@ -364,10 +364,18 @@ def beitraege_html(w: dict, bilder: Bilder) -> str:
 
 
 def beschreibung_woche(w: dict) -> str:
+    # Audit 11.10.2026: keine mitten im Satz abgeschnittene Beschreibung. Ganze Sätze bis 200 Zeichen;
+    # nur wenn schon der erste Satz zu lang ist, am Wortende kürzen.
     text = re.sub(r"\s+", " ", w.get("wochenfazit", "")).strip()
     if len(text) > 200:
-        text = text[:197].rsplit(" ", 1)[0] + "…"
-    return text or "Was KI-Neuigkeiten für Schweizer KMU heissen: täglich eingeordnet von vaiacon."
+        saetze = re.split(r"(?<=[.?])\s+", text)
+        kurz = ""
+        for satz in saetze:
+            if len(kurz) + len(satz) + 1 > 200:
+                break
+            kurz = (kurz + " " + satz).strip()
+        text = kurz or text[:197].rsplit(" ", 1)[0] + "…"
+    return text or "KI-News für Schweizer KMU: neue Beiträge während der Woche, mit Wochenfazit und Quellen."
 
 
 # Sichtbare Redaktion (07.10.2026): KI-Antworten und Suchmaschinen werten Beiträge mit benannten,
@@ -388,7 +396,7 @@ def redaktion_html() -> str:
     return f"""    <section class="sv-section nw-redaktion" aria-labelledby="redaktion-titel">
       <div class="sv-wrap">
         <h2 class="nw-redaktion__titel" id="redaktion-titel">Wer hinter diesen News steht</h2>
-        <p class="nw-redaktion__text">Verantwortlich: {personen}, vaiacon GmbH, Zürich.
+        <p class="nw-redaktion__text">Verantwortlich: {personen}, Vaiacon GmbH, Zürich.
           Die Beiträge stellt eine KI nach festen Regeln aus den verlinkten Quellen zusammen: nur erreichbare
           Quellen, keine Preise, keine Namen von Privatpersonen, jeder Beitrag mit der Frage, was er für ein
           Schweizer KMU heisst. Die Redaktion legt die Regeln fest, prüft Hinweise und korrigiert; Korrekturen
@@ -566,9 +574,9 @@ def hubseite(wochen: list[dict], bilder: Bilder) -> str:
     inhalt = f"""    <section id="top" class="nw-kopf nw-kopf--uebersicht" aria-label="Kopf">
       <div class="nw-kopf__innen">
         <div class="nw-kopf__text">
-          <p class="nw-kopf__kicker">KI-NEWS FÜR KMU · JEDE WOCHE NEU</p>
+          <p class="nw-kopf__kicker">KI-NEWS FÜR KMU · MIT WOCHENFAZIT</p>
           <h1 class="nw-kopf__titel nw-kopf__titel--uebersicht">KI-News für Schweizer KMU: <span class="nw-kopf__titel-zeile">was Neuigkeiten für Ihren Betrieb heissen</span></h1>
-          <p class="nw-kopf__lead">Täglich eingeordnet: Was ist passiert, was heisst das für ein KMU mit 5 bis 30 Mitarbeitenden, worauf sollten Sie achten. Mit Quellen, ohne Fachchinesisch.</p>
+          <p class="nw-kopf__lead">Neue Beiträge während der Woche, mit Wochenfazit. Zu jeder Meldung: was passiert ist, was sie für ein KMU mit 5 bis 30 Mitarbeitenden heisst und worauf Sie achten sollten. Mit Quellen, Fachbegriffe kurz erklärt.</p>
           {fazit_html}
         </div>
         <figure class="nw-kopf__bild" aria-hidden="true">
@@ -599,8 +607,8 @@ def hubseite(wochen: list[dict], bilder: Bilder) -> str:
 {redaktion_html()}
 
 {lies_vorlage("schluss.html").rstrip()}"""
-    beschr = ("KI-News für Schweizer KMU, jede Woche neu: was passiert ist, was es für Ihren Betrieb heisst und "
-              "worauf Sie achten sollten. Mit Quellen, eingeordnet von vaiacon in Zürich.")
+    beschr = ("KI-News für Schweizer KMU: neue Beiträge während der Woche, mit Wochenfazit. Was passiert ist, "
+              "was es für Ihren Betrieb heisst und worauf Sie achten sollten. Mit Quellen, eingeordnet von vaiacon in Zürich.")
     jsonld = jsonld_woche(aktuell, seitenname(aktuell), bilder)
     jsonld["name"] = "KI-News für KMU: aktuelle Woche"
     return rahmen("KI-News für Schweizer KMU · vaiacon", beschr, f"{SEITE}/{ORDNER}/", jsonld,

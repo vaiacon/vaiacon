@@ -54,9 +54,9 @@ function NetzVerweis({ art, href, label }) {
 export function SiteFooter({
   logoSrc = 'assets/logo-lockup-white.png',
   logoHeight = 24,
-  address = 'vaiacon GmbH · Lehenstrasse 74, 8037 Zürich',
+  address = 'Vaiacon GmbH · Lehenstrasse 74, 8037 Zürich',
   email = 'hallo@vaiacon.ch',
-  copyright = '© 2026 vaiacon GmbH',
+  copyright = '© 2026 Vaiacon GmbH',
   legalHref,
   legalLabel = 'Datenschutz und Impressum',
   agbHref,

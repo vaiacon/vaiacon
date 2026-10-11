@@ -1724,3 +1724,42 @@ body {
     background: rgba(255, 244, 236, 0.16);
   }
 }
+
+/* ───────── Audit 11.10.2026: Formulare (Kontakt, Rückruf) ───────── */
+
+/* Pflichtfeld-Legende über dem Formular */
+.vc-kontakt__pflicht {
+  margin: 0;
+  font-size: var(--text-body-sm);
+  color: var(--text-body);
+}
+
+/* Fehlertext direkt unter dem Feld */
+.vc-kontakt__feldfehler {
+  font-size: var(--text-body-sm);
+  font-weight: var(--weight-semibold);
+  line-height: 1.45;
+  color: #8C1D18;
+}
+
+.vc-kontakt__feldfehler:empty {
+  display: none;
+}
+
+.vc-kontakt [aria-invalid="true"] {
+  border-color: #8C1D18;
+  border-width: 2px;
+}
+
+/* Kontakt-Hero: Selbstprüfung als Textlinks statt weiterer Knöpfe */
+.kt-selbst {
+  margin-top: 18px;
+  font-size: var(--text-body-sm, 15px);
+}
+
+.kt-selbst a {
+  color: inherit;
+  font-weight: var(--weight-semibold);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

@@ -3,15 +3,15 @@
     "titel": "Gemini-Agent: Google bringt einen Helfer, der Aufgaben selbst erledigt, zuerst zu Firmenkunden",
     "datum": "2026-10-09",
     "rubrik": "werkzeuge",
-    "kurz": "Google hat laut TechCrunch an einem Cloud-Anlass einen einheitlichen Gemini-Agenten vorgestellt. Er plant Aufgaben selbst, greift auf Firmensysteme wie Workspace, Microsoft 365 oder Slack zu und zeigt in einem Posteingang, was er getan hat. Zuerst erhalten ihn Firmen, Privatpersonen folgen später. Zu Ländern, auch zur Schweiz, nennt der Artikel nichts.",
+    "kurz": "Google hat laut TechCrunch vom 8. Oktober an einem Cloud-Anlass einen Gemini-Agenten vorgestellt, also einen KI-Helfer, der Aufgaben selbst plant und ausführt. Er greift auf Firmensysteme wie Workspace, Microsoft 365 oder Slack zu und zeigt in einem Posteingang, was er getan hat. Zuerst erhalten ihn Firmen, Privatpersonen folgen später. Zu Ländern, auch zur Schweiz, nennt der Artikel nichts.",
     "adresse": "ki-kmu-news/2026-kw41#2026-10-09-gemini-agent-google-bringt-einen",
     "bild": "assets/vaiacon-buerobot-news-werkzeuge.png"
   },
   {
-    "titel": "SynthID: Googles Prüfseite zeigt, ob Bilder, Videos oder Audio mit KI erzeugt wurden",
+    "titel": "SynthID prüft Medien auf Googles KI-Wasserzeichen",
     "datum": "2026-10-09",
     "rubrik": "werkzeuge",
-    "kurz": "Google hat laut TechCrunch die Seite synthid.com für alle geöffnet. Dort lässt sich eine Datei hochladen, um zu prüfen, ob sie mit KI erzeugt wurde. Das gilt für Bilder, Videos und Audio. Die Prüfung beruht auf dem Wasserzeichen SynthID, das Googles Werkzeuge einbetten. Auch in der Gemini-App und im Browser Chrome ist die Prüfung eingebaut.",
+    "kurz": "Google hat laut TechCrunch vom 7. Oktober die Seite synthid.com für alle geöffnet. Dort lassen sich Bilder, Videos und Audiodateien hochladen. Die Seite prüft, ob eine Datei SynthID enthält, ein unsichtbares Wasserzeichen, das Googles eigene KI-Werkzeuge einbetten. Dieselbe Prüfung ist laut dem Bericht auch in der Gemini-App und im Browser Chrome eingebaut.",
     "adresse": "ki-kmu-news/2026-kw41#2026-10-09-synthid-googles-pruefseite-zeigt-ob",
     "bild": "assets/vaiacon-buerobot-news-werkzeuge.png"
   },
@@ -19,7 +19,7 @@
     "titel": "KI-Agenten vor verschlossener Tür: Viele Websites lassen persönliche Assistenten nicht hinein",
     "datum": "2026-10-07",
     "rubrik": "markt",
-    "kurz": "Persönliche KI-Agenten sollen Flüge buchen, Tische reservieren oder einkaufen. Laut TechCrunch blockieren aber viele Websites solche Agenten, teils gewollt, teils durch normalen Bot-Schutz. Meta und Partner arbeiten an einem Standard, mit dem sich Agenten und Websites klar verständigen können.",
+    "kurz": "Persönliche KI-Agenten, also KI-Helfer, die im Auftrag einer Person im Internet handeln, sollen Flüge buchen, Tische reservieren oder einkaufen. Laut TechCrunch vom 6. Oktober blockieren viele Websites solche Agenten, teils gewollt, teils durch den normalen Schutz gegen automatische Zugriffe. Meta und Partner arbeiten an einem Standard, mit dem sich Agenten und Websites verständigen können.",
     "adresse": "ki-kmu-news/2026-kw41#2026-10-07-ki-agenten-vor-verschlossener-tuer",
     "bild": "assets/vaiacon-buerobot-news-markt.png"
   }

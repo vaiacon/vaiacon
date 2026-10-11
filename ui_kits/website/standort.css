@@ -1208,3 +1208,36 @@ button.st-knopf-zweit:focus-visible {
     transition: none;
   }
 }
+
+/* ── Ergänzung Audit 11.10.2026 ─────────────────────────────────────────
+   Hinweis, wenn eine Antwort fehlt; Kennzeichnung der Ersatz-Einschätzung. */
+.st-fehlt {
+  margin: var(--space-3) 0 0;
+}
+
+.st-ersatz {
+  margin: var(--space-3) 0 var(--space-4);
+  padding: var(--space-3) var(--space-4);
+  border-left: 3px solid var(--terra-500);
+  background: var(--surface-subtle, rgba(0, 0, 0, 0.03));
+  color: var(--text-body);
+}
+
+.st-ersatz__knopf {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font: inherit;
+  font-weight: var(--weight-bold);
+  color: var(--terra-500);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+}
+
+.st-ersatz__knopf:focus-visible {
+  outline: 2px solid var(--terra-500);
+  outline-offset: 2px;
+}

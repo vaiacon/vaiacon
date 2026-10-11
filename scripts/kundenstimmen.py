@@ -110,7 +110,7 @@ def karte(abschnitte: list[dict], nennung: dict, mehr: tuple[str, str] | None = 
     ps = "\n".join(f'{einzug}    <p>«{esc(t)}»</p>' for t in absaetze(abschnitte))
     zeilen = [
         f'{einzug}<figure class="ks-karte{" ks-karte--breit" if breit else ""}">',
-        f'{einzug}  <img class="ks-karte__logo" src="{logo}" alt="" width="53" height="32" loading="lazy" decoding="async">',
+        f'{einzug}  <img class="ks-karte__logo" src="{logo}" alt="vaiacon-Zeichen" width="53" height="32" loading="lazy" decoding="async">',
         f'{einzug}  <blockquote class="ks-karte__zitat">',
         ps,
         f'{einzug}  </blockquote>',
@@ -158,7 +158,7 @@ def block_faq(auswahl, nennung, daten) -> str:
     return (
         '            <details class="sv-faq-item">\n'
         '              <summary><span>Gibt es Referenzen?</span><span aria-hidden="true">+</span></summary>\n'
-        '              <p>Ja. Auf der Seite <a href="referenzen">Aus der Praxis</a> erzählt eine Kundin, wie ihr Beauty Studio '
+        '              <p>Ja. Auf der Seite <a href="referenzen">Aus der Praxis</a> erzählt eine Kundin, wie ihr Kosmetikstudio '
         'heute mit uns arbeitet: mit einer eigenen Website samt eigenem Terminbuch. <a href="referenzen">Zur Geschichte →</a></p>\n'
         '            </details>'
     )

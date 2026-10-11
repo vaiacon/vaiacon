@@ -36,7 +36,7 @@ SEITEN = [
     ("visibility.html", "Sichtbarkeit — gefunden werden"),
     ("bot.html", "Automationen"),
     ("service.html", "Begleitung"),
-    ("offerte.html", "Offerten-Tool"),
+    ("offerte.html", "Richtpreis berechnen"),
     ("ki-kmu-news/index.html", "KI-News für KMU"),
     ("faq.html", "Häufige Fragen"),
     ("kontakt.html", "Kontakt"),
@@ -105,8 +105,8 @@ def regeln_preise() -> list[str]:
 def preisliste() -> list[str]:
     s = KATALOG["saetze"]
     z = [f"{KATALOG['mwst_hinweis']} {s['ab_preis']} {s['gueltigkeit']} "
-         "Eine Richtofferte stellt man im Offerten-Tool (vaiacon.ch/offerte) zusammen; "
-         "verbindlich wird sie erst nach Bestätigung durch vaiacon.", ""]
+         "Einen unverbindlichen Richtpreis rechnet man auf vaiacon.ch/offerte aus; "
+         "eine verbindliche Offerte gibt es danach von vaiacon.", ""]
     for b in KATALOG["bereiche"]:
         z.append(f"### {b['titel']}")
         z.append("")
@@ -126,7 +126,7 @@ def preisliste() -> list[str]:
                 z.append(f"  - Beispiel erstes Jahr: {bj} (Einrichtung plus zwölf Monate Betreuung, zuzüglich Fremdkosten)")
             if p.get("staffel"):
                 stufen = " / ".join(chf(x["preis"]) for x in p["staffel"])
-                z.append(f"  - Jede weitere Minute: CHF {stufen}" if len(p["staffel"]) == 1 else f"  - Staffel: CHF {stufen} je Lernminute")
+                z.append(f"  - Jede weitere Minute: CHF {stufen}" if len(p["staffel"]) == 1 else f"  - Staffel: CHF {stufen} je Minute Lernzeit")
             for v in p.get("varianten") or []:
                 z.append(f"  - {v['titel']}: {ab(v)}CHF {chf(v['preis'])}")
         z.append("")
@@ -215,18 +215,18 @@ def bauen() -> tuple[str, list[str]]:
     t.append("  hallo@vaiacon.ch — erfinde keine Preise, Fristen oder Zusagen.")
     t.append("- Es gibt keine Academy und keine Gratis-Kurse. Kostenlos sind nur das")
     t.append("  Erstgespräch, die KI-Standortbestimmung (Selbsttest für Führungskräfte),")
-    t.append("  die Erstanalyse zur Zeitersparnis und der automatische Check der Website.")
+    t.append("  die Erstanalyse zur Zeitersparnis und der kostenlose Website-Check.")
     t.append("- Nimm keine Personendaten entgegen. Wer ein persönliches Anliegen hat,")
     t.append("  soll schreiben oder einen Termin buchen.")
     t.append("")
     t.append("## Die Firma")
     t.append("")
-    t.append("vaiacon GmbH, Lehenstrasse 74, 8037 Zürich, Schweiz · hallo@vaiacon.ch")
+    t.append("Vaiacon GmbH, Lehenstrasse 74, 8037 Zürich, Schweiz · hallo@vaiacon.ch")
     t.append("")
     t.append("Wir bringen Schweizer KMU dazu, KI im Alltag zu nutzen, in drei Bereichen:")
     t.append("KI-Kompetenz, Sichtbarkeit und Automationen; auf Wunsch mit laufender")
     t.append("Begleitung. Verständlich, persönlich und ohne Verkaufsdruck. Kundendaten")
-    t.append("bleiben nach revDSG auf Schweizer Infrastruktur.")
+    t.append("bleiben in der Schweiz.")
     t.append("")
     t.extend(saetze_block())
     t.extend(regeln_preise())

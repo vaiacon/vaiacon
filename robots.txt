@@ -10,6 +10,52 @@ Disallow: /guidelines/
 Disallow: /tokens/
 Disallow: /uploads/
 
+# Ausnahmen: Stil- und Programmdateien, die die öffentlichen Seiten wirklich
+# laden. Suchmaschinen brauchen sie, um die Seiten so darzustellen wie Besucher.
+# Die längere Regel gewinnt; ?v=-Kennungen sind mit abgedeckt.
+# Liste neu erzeugen, wenn eine Seite eine weitere Datei aus ui_kits/ lädt:
+#   grep -ho 'ui_kits/[^"?# ]*' *.html ki-kmu-news/*.html erstanalyse/index.html | sed 's#^\(\.\./\)*##' | sort -u
+Allow: /ui_kits/website/api-basis.js
+Allow: /ui_kits/website/automationen.css
+Allow: /ui_kits/website/bot-schleife.js
+Allow: /ui_kits/website/branchen.js
+Allow: /ui_kits/website/chat.css
+Allow: /ui_kits/website/chat.js
+Allow: /ui_kits/website/check-start.js
+Allow: /ui_kits/website/erstanalyse-data.js
+Allow: /ui_kits/website/erstanalyse-form.compiled.js
+Allow: /ui_kits/website/ihrfall.js
+Allow: /ui_kits/website/kontakt.js
+Allow: /ui_kits/website/kundenstimme.css
+Allow: /ui_kits/website/lernreise-zeitleiste.css
+Allow: /ui_kits/website/lernreise-zeitleiste.js
+Allow: /ui_kits/website/lernreise.css
+Allow: /ui_kits/website/lernreise.js
+Allow: /ui_kits/website/mockup-entwurf.css
+Allow: /ui_kits/website/news.css
+Allow: /ui_kits/website/news.js
+Allow: /ui_kits/website/offerte.css
+Allow: /ui_kits/website/offerte.js
+Allow: /ui_kits/website/preise.js
+Allow: /ui_kits/website/preismatrix.css
+Allow: /ui_kits/website/preismatrix.js
+Allow: /ui_kits/website/standort.css
+Allow: /ui_kits/website/standort.js
+Allow: /ui_kits/website/start-ruhig.css
+Allow: /ui_kits/website/start.css
+Allow: /ui_kits/website/start.js
+Allow: /ui_kits/website/visibility-check.js
+Allow: /ui_kits/website/visibility.css
+Allow: /ui_kits/website/visibility.js
+
+# styles.css bindet diese Grundlagen per @import ein.
+Allow: /tokens/base.css
+Allow: /tokens/colors.css
+Allow: /tokens/effects.css
+Allow: /tokens/fonts.css
+Allow: /tokens/spacing.css
+Allow: /tokens/typography.css
+
 # Das Wissen für den Chat ist eine Zusammenfassung des Seitentexts. Es soll
 # nicht als Doppel der Website in der Suche auftauchen.
 Disallow: /vaia-wissen/

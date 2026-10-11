@@ -1,7 +1,7 @@
 /* Offerte-Werkzeug. Nur Dinge, die es woanders nicht gibt; Farben, Abstände
    und Schriften kommen aus den Tokens. */
 
-.of-ansicht[hidden], .of-summary[hidden], .of-chips[hidden], .of-frei[hidden] { display: none !important; }
+.of-ansicht[hidden], .of-summary[hidden], .of-chips[hidden], .of-frei[hidden], .of-summe[hidden], .of-summe__zeile[hidden] { display: none !important; }
 .of-wrap { text-align: left; align-items: stretch; }
 .of-wrap--schmal { max-width: 46rem; }
 .of-wrap--dok { max-width: 56rem; }

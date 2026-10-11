@@ -45,10 +45,13 @@
     einzelne: { label: 'Einzelne probieren', wochen: 8 },
     alltag: { label: 'Schon im Alltag', wochen: 6 }
   };
+  /* Die Lerneinheiten dauern immer gleich (Katalog kk-mikro-einrichtung:
+     20 Einheiten à drei bis fünf Minuten). Mehr Zeit heisst nur: eine eigene
+     Übungsstunde zusätzlich, ausdrücklich ausserhalb der Lerneinheiten. */
   var ZEIT = {
-    z30: { label: 'rund 30 Minuten', woche: 'rund 30 Minuten pro Person und Woche', taeglich: 'fünf Minuten', extra: 2 },
-    z60: { label: 'rund 1 Stunde', woche: 'rund eine Stunde pro Person und Woche', taeglich: 'zehn Minuten', extra: 0 },
-    z120: { label: '2 Stunden und mehr', woche: 'zwei Stunden und mehr pro Person und Woche', taeglich: 'zehn Minuten, dazu eine Übungsstunde pro Woche', extra: -1 }
+    z30: { label: 'rund 30 Minuten', woche: 'rund 30 Minuten pro Person und Woche', zusatz: '', extra: 2 },
+    z60: { label: 'rund 1 Stunde', woche: 'rund eine Stunde pro Person und Woche', zusatz: '', extra: 0 },
+    z120: { label: '2 Stunden und mehr', woche: 'zwei Stunden und mehr pro Person und Woche', zusatz: ' Dazu kommt eine eigene Übungsstunde pro Woche, ausserhalb der Lerneinheiten.', extra: -1 }
   };
 
   var STANDARD = { groesse: 'mittel', stand: 'einzelne', zeit: 'z60' };
@@ -59,15 +62,22 @@
     'kk-training-halbtag': { name: 'Training, Halbtag', href: '#format-training' },
     'kk-training-tag': { name: 'Training, ganzer Tag', href: '#format-training' },
     'kk-coaching-fuehrung': { name: 'Coaching für Führungskräfte', href: '#format-coaching' },
-    'kk-elearning-lernminute': { name: 'E-Learning nach Mass', href: '#format-elearning' },
+    'kk-elearning-lernminute': { name: 'Online-Kurs nach Mass', href: '#format-elearning' },
     'kk-lernvideo': { name: 'Lernvideo', href: '#format-video' },
     'kk-mikro-lerneinheiten': { name: 'Kleine Lerneinheiten', href: '#format-mikro' },
-    'kk-change-begleitung': { name: 'Change-Begleitung', href: '#format-change' },
+    'kk-change-begleitung': { name: 'Veränderung begleiten', href: '#format-change' },
     'kk-begleitung-vor-ort': { name: 'Begleitung vor Ort', href: '#format-vor-ort' }
   };
 
   function esc(s) {
     return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  /* Messpunkt im Auftakt: Ziel mit Messgrösse, Zielwert und Zeitpunkt. */
+  function zieleText(s) {
+    return 'Wir legen zwei bis drei messbare Ziele fest. Zum Beispiel: ' +
+      (s === 'kaum' ? 'drei von vier im Team nutzen KI jede Woche' : s === 'einzelne' ? 'alle arbeiten mit denselben geprüften Vorlagen' : 'Offerten in der halben Zeit') +
+      '. Zu jedem Ziel halten wir fest, woran wir es messen, welcher Wert gelten soll und bis wann.';
   }
 
   /* Die Stationen für eine Auswahl. Reine Funktion, ohne DOM. */
@@ -79,11 +89,11 @@
     L.push({
       bild: 'standort', rolle: 'Standort', titel: 'Standortbestimmung',
       text: sehrgross
-        ? 'Die Führung und, wo es passt, die Abteilungsleitungen beantworten zwölf kurze Fragen. So wird sichtbar, was in den Abteilungen schon trägt und wo sie auseinanderlaufen.'
+        ? 'Die Führung und, wo es passt, die Abteilungsleitungen machen drei Angaben zum Betrieb und beantworten zwölf kurze Fragen. So wird sichtbar, wo die Abteilungen stehen.'
         : s === 'kaum'
-        ? 'Die Führung beantwortet zwölf kurze Fragen. Sie sehen, wo Ihr Betrieb steht, und wir sehen, wo ein Anfang am meisten bringt.'
-        : 'Beantworten Sie einige Fragen zur Standortbestimmung. So wird sichtbar, was schon trägt und wo Handlungsbedarf herrscht.',
-      mess: { art: 'Wo stehen wir?', text: 'Machen Sie eine Umfrage im Team: Wer nutzt KI, wofür, wie sicher. Und eine Aufgabe, die oft vorkommt, mit der Zeit, die sie heute braucht.' },
+        ? 'Die Führung macht drei Angaben zum Betrieb und beantwortet zwölf kurze Fragen. Sie sehen, wo Ihr Betrieb steht, und wir sehen, wo ein Anfang am meisten bringt.'
+        : 'Drei Angaben zu Ihrem Betrieb und zwölf kurze Fragen. So wird sichtbar, was schon funktioniert und wo es noch Unterstützung braucht.',
+      mess: { art: 'Wo stehen wir?', text: 'Fragen Sie im Team: Wer nutzt KI, wofür und wie sicher? Messen Sie ausserdem, wie lange eine häufige Aufgabe heute dauert.' },
       formate: ['standort'], ids: []
     });
 
@@ -91,14 +101,14 @@
       L.push({
         bild: 'auftakt', rolle: 'Auftakt', titel: 'Auftakt mit der Geschäftsleitung',
         text: 'In zwei Stunden klären wir, was Sie erreichen wollen und welche Regeln im Betrieb gelten sollen. In einem kleinen Team genügt dafür ein Gespräch.',
-        mess: { art: 'Ziele festlegen', text: 'Zwei bis drei Ziele, welche greifbar sind. Zum Beispiel: ' + (s === 'kaum' ? 'drei von vier im Team nutzen KI jede Woche' : s === 'einzelne' ? 'alle arbeiten mit denselben geprüften Vorlagen' : 'Offerten in der halben Zeit') + '. Zu jedem Ziel: woran wir es messen und bis wann wir es erreicht haben wollen.' },
+        mess: { art: 'Ziele festlegen', text: zieleText(s) },
         formate: ['kk-coaching-fuehrung'], ids: ['kk-coaching-fuehrung']
       });
     } else {
       L.push({
         bild: 'auftakt', rolle: 'Auftakt', titel: 'Gespräch mit der Teamleitung',
-        text: 'Die Teamleitung klärt Ziel, Rollen und Spielregeln, bevor das Team startet. Wir begleiten das Gespräch und bringen uns dort mit ein, wo unsere Erfahrung helfen kann.',
-        mess: { art: 'Ziele festlegen', text: 'Zwei bis drei Ziele, welche greifbar sind. Zum Beispiel: ' + (s === 'kaum' ? 'drei von vier im Team nutzen KI jede Woche' : s === 'einzelne' ? 'alle arbeiten mit denselben geprüften Vorlagen' : 'Offerten in der halben Zeit') + '. Zu jedem Ziel: woran wir es messen und bis wann wir es erreicht haben wollen.' },
+        text: 'Die Teamleitung klärt Ziel, Rollen und Spielregeln, bevor das Team startet. Wir begleiten das Gespräch mit unserer Erfahrung.',
+        mess: { art: 'Ziele festlegen', text: zieleText(s) },
         formate: ['kk-change-begleitung'], ids: ['kk-change-begleitung']
       });
     }
@@ -132,21 +142,21 @@
     if (s !== 'kaum') {
       L.push({
         bild: 'video', rolle: 'Video', titel: 'Lernvideo aus Ihrem Alltag',
-        text: 'Was Ihre Mitarbeiter bereits beherrschen, wird zu einem kurzen Video. Neue Mitarbeiter können es später jederzeit abholen und aneignen.',
+        text: 'Was Ihre Mitarbeitenden bereits beherrschen, wird zu einem kurzen Video. Neue Mitarbeitende können das Video jederzeit ansehen und den Ablauf lernen.',
         formate: ['kk-lernvideo'], ids: ['kk-lernvideo']
       });
     }
 
     L.push({
       bild: 'mikro', rolle: 'Täglich', titel: 'Tägliche kleine Lerneinheiten',
-      text: 'Jeden Arbeitstag ' + z.taeglich + ': ein Tipp, eine Übung am eigenen Fall, eine Frage vom Roboter. Vier Wochen lang, direkt am Arbeitsplatz oder auf dem Smartphone.',
-      mess: { art: 'Zwischenstand', text: 'Die Antworten auf die tägliche Frage zeigen laufend, was sitzt. Nach zwei Wochen sehen Sie, wo das Team steht, und wir stellen nach, wo es hakt.' },
+      text: 'An 20 Arbeitstagen jeweils drei bis fünf Minuten: ein Tipp, eine Übung am eigenen Fall, eine Frage vom Roboter. Vier Wochen lang, am Arbeitsplatz oder auf dem Smartphone.' + z.zusatz,
+      mess: { art: 'Zwischenstand', text: 'Die Antworten auf die tägliche Frage zeigen laufend, was sitzt. Nach zwei Wochen sehen Sie, wo das Team steht. Wir passen die Übungen dort an, wo noch Unterstützung nötig ist.' },
       formate: ['kk-mikro-lerneinheiten'], ids: ['kk-mikro-lerneinheiten']
     });
 
     if (gross) {
       L.push({
-        bild: 'elearning', rolle: 'E-Learning', titel: 'E-Learning für alle',
+        bild: 'elearning', rolle: 'Online-Kurs', titel: 'Online-Kurs für alle',
         text: 'In einem grösseren Team lernt nicht jeder am selben Tag. Ein kurzer Online-Kurs mit Ihren Beispielen hält alle auf demselben Stand.',
         formate: ['kk-elearning-lernminute'], ids: ['kk-elearning-lernminute']
       });
@@ -174,7 +184,7 @@
 
     L.push({
       bild: 'wirkung', rolle: 'Wirkung', titel: 'Wirkung messen, Ziele prüfen',
-      text: 'Dieselben Fragen wie zu Beginn. An die Führung und an das Team. Wir legen Vorher und Nachher nebeneinander.',
+      text: 'Nach den vier Wochen Lerneinheiten stellen wir dieselben Fragen wie zu Beginn, an die Führung und an das Team. Wir legen Vorher und Nachher nebeneinander.',
       mess: { art: 'Zielcheck', text: 'Jedes Ziel aus dem Auftakt bekommt ein Ergebnis: erreicht, teilweise oder offen. Was offen ist, wird zur nächsten Etappe.' },
       formate: ['standort'], ids: []
     });
@@ -186,10 +196,13 @@
     return Math.max(4, STAND[a.stand].wochen + ZEIT[a.zeit].extra);
   }
 
-  function wochenLabel(i, n, total) {
+  /* Die Lerneinheiten laufen vier Wochen (Woche w bis w+3); gemessen wird
+     nach dem Ende dieser Übungsphase («nach Woche …»). */
+  function wochenLabel(i, n, total, rolle) {
     if (i === 0) return 'Woche 0';
-    if (i === n - 1) return 'ab Woche ' + total;
+    if (i === n - 1) return 'nach Woche ' + total;
     var w = Math.max(1, Math.round(total * (i / (n - 1))));
+    if (rolle === 'Täglich') return 'Woche ' + w + '–' + Math.min(total, w + 3);
     return 'Woche ' + w;
   }
 
@@ -229,7 +242,7 @@
           '<img src="' + basis + 'assets/vaiacon-buerobot-' + BILD[st.bild] + '.png" alt="' + esc(ALT[st.bild]) + '" loading="lazy" decoding="async">' +
         '</picture></figure>' +
         '<div class="lz-text">' +
-          '<p class="lz-zeit"><span class="lz-zeit__nr">' + (i + 1) + '</span>' + esc(wochenLabel(i, L.length, total)) + ' · ' + esc(st.rolle) + '</p>' +
+          '<p class="lz-zeit"><span class="lz-zeit__nr">' + (i + 1) + '</span>' + esc(wochenLabel(i, L.length, total, st.rolle)) + ' · ' + esc(st.rolle) + '</p>' +
           '<h3>' + esc(st.titel) + '</h3>' +
           '<p>' + esc(st.text) + '</p>' +
           mess +

@@ -1018,41 +1018,25 @@
 }
 
 
-/* Willkommensvideo: Rahmen 16:9 unter dem Karussell. Solange keine Datei da ist, steht ein Platzhalter darin. */
+/* Willkommen: Standbild der beiden Gründer unter dem Karussell (Audit 11.10.2026:
+   das angekündigte Video gab es nicht, Rahmen und «Video folgt» sind entfernt). */
 .st-willkommen__rahmen {
-  position: relative;
-  max-width: 52rem;
-  margin: 32px auto 0;
-  aspect-ratio: 16 / 9;
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  background: linear-gradient(135deg, var(--terra-500), var(--terra-600));
-  box-shadow: 0 22px 44px -26px rgba(156, 69, 23, 0.7);
-}
-
-.st-willkommen__video {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  background: var(--terra-600);
-}
-
-.st-willkommen__platzhalter {
-  position: absolute;
-  inset: 0;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  padding: 16px;
-  text-align: center;
-  color: var(--text-on-terra);
+  max-width: 52rem;
+  margin: 32px auto 0;
+  padding: clamp(28px, 6vw, 56px) 16px;
+  box-sizing: border-box;
+  border-radius: var(--radius-lg);
   background:
     radial-gradient(circle at 20% 15%, rgba(251, 244, 238, 0.22), transparent 55%),
     linear-gradient(135deg, var(--terra-500), var(--terra-600));
+  box-shadow: 0 22px 44px -26px rgba(156, 69, 23, 0.7);
+}
+
+.st-willkommen .sv-actions {
+  margin-top: 28px;
 }
 
 .st-willkommen__gesichter {
@@ -1073,21 +1057,46 @@
   margin-left: calc(clamp(72px, 14vw, 120px) / -4);
 }
 
-.st-willkommen__spiel {
-  display: inline-flex;
-  align-items: center;
-  gap: 12px;
-  font-size: var(--text-size-body);
-  font-weight: var(--weight-bold);
+
+/* ───────── Audit 11.10.2026: Steuerung bei 320–430 px ─────────
+   Zurück, Reiter, Vor und Anhalten passten unter 600 px nicht in eine Zeile;
+   Pfeile und Anhalten-Knopf wurden abgeschnitten. Die Reiter stehen jetzt
+   in einer eigenen Zeile, die Knöpfe darunter vollständig. */
+@media (max-width: 599px) {
+  .st-steuer {
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
+
+  .st-steuer .st-reiter {
+    order: -1;
+    flex: 1 1 100%;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .st-pfeil {
+    width: 44px;
+    height: 44px;
+  }
+
+  .st-pause {
+    height: 44px;
+    margin-left: 0;
+  }
 }
 
-.st-willkommen__spiel svg {
-  flex: none;
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-  background: var(--cream-50);
-  color: var(--terra-600);
-  box-sizing: border-box;
-  padding: 13px 10px 13px 15px;
+@media (prefers-reduced-motion: reduce) {
+  .st-reiter__spur > span,
+  .st-pfeil,
+  .st-pause,
+  .st-reiter__tab {
+    transition: none !important;
+  }
+
+  .sv-button:hover,
+  .sv-button:focus-visible {
+    transform: none;
+  }
 }

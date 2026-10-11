@@ -1,11 +1,12 @@
 /* «Ihr Fall in zwei Sätzen» (bot.html): Beschreibung + Kontakt an den Offerten-Dienst.
- * Die Einordnung (Sprosse, Richtpreis) kommt seit 10.10.2026 NUR per E-Mail an die
+ * Die Einordnung (Umfang, Richtpreis) kommt seit 10.10.2026 NUR per E-Mail an die
  * Kundschaft, die Seite zeigt nur die Bestätigung (Philip: «wir wollen den Kontakt»).
  *
  * POST /api/offerte/einordnen { wunsch, kontakt:{mail, telefon} } →
  *   { gemeldet, gesendet, kennung }; zu kurz/ungültig 400 { error:'eingabe', feld }.
  *
- * Die Beschreibung wird nirgends gespeichert.
+ * Beschreibung und Kontakt gehen als Anfrage (Quelle «einordnung») an intern, die Kopie an die
+ * Kundschaft verschickt intern. Der Offerten-Dienst selbst schreibt nichts auf die Platte.
  * Probe: ?probe=1 liest .bau/proben/einordnen-antwort.json, sendet nichts; ?probe=fehler zeigt den Fehlerfall. */
 (function () {
   'use strict';

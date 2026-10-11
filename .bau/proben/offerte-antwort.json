@@ -6,8 +6,8 @@
     {
       "id": "kk-training-halbtag",
       "bereich": "KI-Kompetenz",
-      "titel": "Training oder Workshop, Halbtag",
-      "beschreibung": "Ihr Team übt KI an Ihren eigenen Aufgaben. Bei Ihnen im Betrieb, auf Ihre Abläufe zugeschnitten.",
+      "titel": "Training oder Workshop im Betrieb, Halbtag",
+      "beschreibung": "Ihr Team übt KI an Ihren eigenen Aufgaben. Thema nach Wahl: KI im Büro, Sichtbarkeit, Texte und Offerten.",
       "einheit": "pro Halbtag",
       "menge": 2,
       "einzelpreis": 1550,
@@ -20,8 +20,8 @@
     {
       "id": "au-chatbot",
       "bereich": "Automationen",
-      "titel": "Chatbot für Ihre Website",
-      "beschreibung": "Ein Assistent, der Fragen Ihrer Kundschaft beantwortet und sauber an Ihr Team übergibt.",
+      "titel": "Chatbot mit Ihrem Firmenwissen",
+      "beschreibung": "Ein Assistent auf Ihrer Website, der Fragen Ihrer Kundschaft mit Ihren eigenen Angaben beantwortet.",
       "einheit": "pauschal",
       "menge": 1,
       "einzelpreis": 2450,
@@ -29,13 +29,13 @@
       "art": "einmalig",
       "betrag": 2450,
       "notiz": "",
-      "begruendung": "Anfragen auf der Website sollen von selbst beantwortet werden."
+      "begruendung": "Anfragen auf der Website sollen automatisch beantwortet werden."
     },
     {
       "id": "si-betreuung-lokal",
       "bereich": "Sichtbarkeit",
-      "titel": "Laufende Betreuung: lokale Sichtbarkeit",
-      "beschreibung": "Wir halten Ihren Auftritt bei Google und in Karten aktuell.",
+      "titel": "Laufende Betreuung: lokal gefunden werden",
+      "beschreibung": "Wir pflegen Ihr Google-Unternehmensprofil, beantworten Bewertungen und veröffentlichen einen Beitrag pro Monat. Sie erhalten einen Monatsbericht. Änderungen an Ihrer Website sind separat.",
       "einheit": "pro Monat",
       "menge": 1,
       "einzelpreis": 400,
@@ -53,11 +53,10 @@
   "einleitung": "Vielen Dank für Ihre Beschreibung. Daraus haben wir einen Richtpreis abgeleitet. Er zeigt, in welcher Grössenordnung Ihr Vorhaben liegt. Wir melden uns bei Ihnen und prüfen ihn gemeinsam.",
   "hinweise": [
     "Die Positionen haben wir aus Ihrer Beschreibung abgeleitet. Das ist ein Richtpreis. Wir melden uns bei Ihnen und prüfen ihn gemeinsam.",
-    "Mit «ab» gekennzeichnete Preise sind Richtwerte. Der endgültige Preis hängt vom Aufwand ab und wird im Gespräch festgelegt.",
-    "Diese Richtofferte ist unverbindlich und 30 Tage gültig.",
-    "Reisezeit und Spesen sind nicht enthalten."
+    "Ab-Preise sind Fixpreise nach der Erstanalyse, nie offen nach oben.",
+    "Dieser Richtpreis ist unverbindlich und 30 Tage gültig."
   ],
-  "naechste_schritte": "Wir rufen Sie in den nächsten Arbeitstagen kurz an und klären offene Punkte.\nDanach erhalten Sie von uns eine verbindliche Offerte.",
+  "naechste_schritte": "Wir melden uns in der Regel innert eines Arbeitstages und klären offene Punkte.\nDanach erhalten Sie von uns eine verbindliche Offerte.",
   "mail_gesendet": true,
   "mwst_inklusive": true,
   "mwst_satz": 8.1,

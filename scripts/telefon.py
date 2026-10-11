@@ -3,12 +3,12 @@
     python3 scripts/telefon.py "044 123 45 67"            # schreiben
     python3 scripts/telefon.py "044 123 45 67" --probe    # nur zeigen, was sich ändern würde
 
-Bis dahin steht auf jeder Seite ein sichtbarer Platzhalter «044 … folgt bald»
-(Elemente mit `data-telefon-platzhalter`), daneben die fertige Stelle als
-Kommentar `<!-- TELEFON: einkommentieren … -->`. Das Skript
-- entfernt alle Platzhalter-Elemente,
-- nimmt die TELEFON-Kommentare heraus und setzt die echte Nummer ein
-  (Kopfzeile, Fusszeile, Kontakt-Karte, Impressum, News-Vorlage),
+Bis dahin steht an jeder Telefonstelle ein Verweis «Rückruf anfordern»
+(Elemente mit `data-telefon-platzhalter`, seit dem Audit vom 11.10.2026 ohne
+auskommentierte Nummer). Das Skript
+- ersetzt jedes Platzhalter-Element durch dieselbe Art Element mit der echten
+  Nummer als tel:-Verweis (Fusszeile, Kontakt-Karte, Impressum, News-Vorlage),
+- entfernt übrig gebliebene TELEFON-Kommentare,
 - trägt `telephone` in `scripts/strukturdaten.py` ein und lässt es laufen.
 
 Danach von Hand: Nummer in `scripts/bot_wissen.py`-Lauf übernehmen (Vaia) und
@@ -22,8 +22,8 @@ import sys
 from pathlib import Path
 
 WURZEL = Path(__file__).resolve().parents[1]
-PLATZHALTER = re.compile(r'<(span|p|article)\b[^>]*\bdata-telefon-platzhalter\b[^>]*>.*?</\1>\n?[ \t]*', re.S)
-KOMMENTAR = re.compile(r"<!-- TELEFON: einkommentieren, sobald die 044-Nummer gebucht ist\s*(.*?)\s*-->", re.S)
+PLATZHALTER = re.compile(r'<(span|p|article)\b[^>]*\bdata-telefon-platzhalter\b[^>]*>.*?</\1>', re.S)
+KOMMENTAR = re.compile(r"<!-- TELEFON:.*?-->\n?", re.S)
 HINWEIS_KOPF = re.compile(r'<!-- TELEFON: in den Strukturdaten unten .*?-->\n')
 
 
@@ -51,8 +51,8 @@ def main() -> None:
     geaendert = []
     for p in dateien:
         alt = p.read_text(encoding="utf-8")
-        neu = PLATZHALTER.sub("", alt)
-        neu = KOMMENTAR.sub(lambda m: m.group(1), neu)
+        neu = PLATZHALTER.sub(lambda m: f'<{m.group(1)}><a href="tel:{tel}">{anzeige}</a></{m.group(1)}>', alt)
+        neu = KOMMENTAR.sub("", neu)
         neu = HINWEIS_KOPF.sub("", neu)
         neu = neu.replace("+41440000000", tel).replace("044 000 00 00", anzeige)
         if neu != alt:
