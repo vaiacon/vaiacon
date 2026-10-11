@@ -403,23 +403,76 @@
     alle = alle.concat([].slice.call(reihe.querySelectorAll('a')));
   }
 
-  /* Randliste: dieselben Hauptpunkte wie die Kopfzeile, die aktuelle Seite aufgeklappt */
+  /* Randliste: dieselben Oberthemen und Unterpunkte wie die Ausklapp-Fläche (MENUE, MEHR, SEITEN).
+     Die aktuelle Seite ist aufgeklappt, bei den anderen klappt ein kleiner Pfeil die Unterpunkte auf. */
+  var beobachtet = [];
+  var unterpunkte = function (g, aktuell) {
+    var nav = [], branchen = [];
+    (g.spalten || []).forEach(function (sp) {
+      sp.punkte.forEach(function (pk) {
+        var t = pk[0].split('#');
+        var eintrag = { href: aktuell && t[0] === seite && t[1] ? '#' + t[1] : wurzel + pk[0], id: t[0] === seite ? t[1] : null, titel: pk[1] };
+        if (t[1] && t[1].indexOf('branche-') === 0) { eintrag.tief = true; branchen.push(eintrag); } else nav.push(eintrag);
+      });
+    });
+    if (!aktuell || !ziele.length) return nav.concat(branchen);
+    /* Aktuelle Seite mit Abschnitten: gleiche Ziele zusammenführen, nichts doppelt */
+    var aus = [], genutzt = {};
+    ziele.forEach(function (z) {
+      var treffer = nav.filter(function (n) { return n.id === z[2]; })[0];
+      if (treffer) genutzt[z[2]] = true;
+      aus.push({ href: '#' + z[2], id: z[2], titel: treffer ? treffer.titel : z[1] });
+      if (z[2] === 'preise') aus = aus.concat(branchen);
+    });
+    nav.forEach(function (n) { if (!genutzt[n.id || '']) aus.push(n); });
+    if (!ziele.some(function (z) { return z[2] === 'preise'; })) aus = aus.concat(branchen);
+    return aus;
+  };
+
+  var seitlich = null, farbePlanen = function () {};
+  var SPEICHER = 'vn-seite-offen';
+  var gemerkt = function () { try { return JSON.parse(sessionStorage.getItem(SPEICHER)) || {}; } catch (e) { return {}; } };
+  var merken = function (id, offen) { try { var m = gemerkt(); m[id] = offen; sessionStorage.setItem(SPEICHER, JSON.stringify(m)); } catch (e) { /* ohne Speicher */ } };
   if (seite !== '404') {
-    var seitlich = el('nav', 'vn-seite');
+    seitlich = el('nav', 'vn-seite');
     seitlich.setAttribute('aria-label', 'Seitenübersicht');
-    var sh = '<ul class="vn-seite__haupt">';
-    haupt.forEach(function (h) {
-      var aktuell = h[2] === seite;
-      sh += '<li' + (aktuell ? ' class="ist-aktuell"' : '') + '><a href="' + wurzel + h[0] + '"' + (aktuell ? ' aria-current="page"' : '') + '>' + esc(h[1]) + '</a>';
-      if (aktuell && ziele.length) {
-        sh += '<ul class="vn-seite__unter" aria-label="' + esc(h[1]) + ': Abschnitte">' +
-          ziele.map(function (z) { return '<li><a href="#' + z[2] + '">' + esc(z[1]) + '</a></li>'; }).join('') + '</ul>';
+    var sh = '<ul class="vn-seite__haupt">', nr = 0, vorher = gemerkt();
+    var gruppen = MENUE.concat(MEHR.map(function (m) {
+      return { seite: m[0], id: m[3], titel: m[1], spalten: [] };
+    }));
+    gruppen.forEach(function (g) {
+      var aktuell = (g.id || g.seite) === seite;
+      var subs = unterpunkte(g, aktuell);
+      if (aktuell && !subs.length && ziele.length) subs = ziele.map(function (z) { return { href: '#' + z[2], id: z[2], titel: z[1] }; });
+      var uid = 'vn-seite-u' + (nr++), gkey = g.id || g.seite;
+      var offen0 = aktuell || vorher[gkey] === true;
+      sh += '<li class="vn-seite__eintrag' + (aktuell ? ' ist-aktuell' : '') + '"><div class="vn-seite__kopf"><a class="vn-seite__name" href="' + wurzel + g.seite + '"' + (aktuell ? ' aria-current="page"' : '') + '>' + esc(g.titel) + '</a>';
+      if (subs.length) {
+        sh += '<button type="button" class="vn-seite__auf" data-key="' + esc(gkey) + '" aria-expanded="' + (offen0 ? 'true' : 'false') + '" aria-controls="' + uid + '" aria-label="' + esc(g.titel) + ': Unterpunkte"' + (aktuell ? ' data-aktuell="1"' : '') + '>' + PFEIL + '</button>';
+      }
+      sh += '</div>';
+      if (subs.length) {
+        sh += '<div class="vn-seite__huelle' + (offen0 ? '' : ' ist-zu') + '" id="' + uid + '"><ul class="vn-seite__unter" aria-label="' + esc(g.titel) + ': Abschnitte">' +
+          subs.map(function (x) {
+            if (aktuell && x.id) beobachtet.push(x.id);
+            return '<li' + (x.tief ? ' class="ist-tief"' : '') + '><a href="' + esc(x.href) + '">' + esc(x.titel) + '</a></li>';
+          }).join('') + '</ul></div>';
       }
       sh += '</li>';
     });
     seitlich.innerHTML = sh + '</ul>';
     document.body.appendChild(seitlich);
     alle = alle.concat([].slice.call(seitlich.querySelectorAll('.vn-seite__unter a')));
+
+    [].slice.call(seitlich.querySelectorAll('.vn-seite__auf')).forEach(function (knopf) {
+      knopf.addEventListener('click', function () {
+        var offen = knopf.getAttribute('aria-expanded') === 'true';
+        knopf.setAttribute('aria-expanded', offen ? 'false' : 'true');
+        document.getElementById(knopf.getAttribute('aria-controls')).classList.toggle('ist-zu', offen);
+        merken(knopf.getAttribute('data-key'), !offen);
+        farbePlanen();
+      });
+    });
 
     var fussEl = document.querySelector('footer');
     var seitlichSteuern = function () {
@@ -459,7 +512,7 @@
         if (istTerracotta(getComputedStyle(e))) dunkleFlaechen.push(e);
       });
     };
-    var eintraege = [].slice.call(seitlich.querySelectorAll('.vn-seite__haupt > li > a, .vn-seite__unter li'));
+    var eintraege = [].slice.call(seitlich.querySelectorAll('.vn-seite__kopf, .vn-seite__unter li'));
     var farbeGeplant = false;
     var farbeSetzen = function () {
       farbeGeplant = false;
@@ -469,26 +522,26 @@
         var r = e.getBoundingClientRect(), mitte = r.top + r.height / 2, dunkel = false;
         for (var i = 0; i < rects.length; i++) if (mitte >= rects[i].top && mitte < rects[i].bottom) { dunkel = true; break; }
         if (e.classList.contains('auf-dunkel') !== dunkel) e.classList.toggle('auf-dunkel', dunkel);
-        if (e.tagName === 'LI') { var a = e.firstChild; if (a && a.classList) a.classList.toggle('auf-dunkel', dunkel); }
       });
     };
-    var farbePlanen = function () { if (!farbeGeplant) { farbeGeplant = true; requestAnimationFrame(farbeSetzen); } };
+    farbePlanen = function () { if (!farbeGeplant) { farbeGeplant = true; requestAnimationFrame(farbeSetzen); } };
     window.addEventListener('scroll', farbePlanen, { passive: true });
     window.addEventListener('resize', function () { flaechenErkennen(); farbePlanen(); });
     window.addEventListener('load', function () { flaechenErkennen(); farbePlanen(); });
     flaechenErkennen(); farbePlanen();
   }
 
-  if (ziele.length) {
+  /* Markierung beim Scrollen: Abschnitte der aktuellen Seite */
+  if (beobachtet.length || ziele.length) {
     var markieren = function () {
       var aktuell = null;
-      ziele.forEach(function (z) { if (imBand[z[2]]) aktuell = z[2]; });
+      beobachtet.forEach(function (id) { if (imBand[id]) aktuell = id; });
       if (!aktuell) return;
       alle.forEach(function (a) {
         if (a.getAttribute('href') === '#' + aktuell) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
       });
-      var chip = reihe.querySelector('a[aria-current]');
-      var innen = reihe.firstChild;
+      var chip = reihe && reihe.querySelector('a[aria-current]');
+      var innen = reihe && reihe.firstChild;
       if (chip && innen && innen.scrollWidth > innen.clientWidth) {
         innen.scrollLeft = chip.offsetLeft - (innen.clientWidth - chip.offsetWidth) / 2;
       }
@@ -498,7 +551,7 @@
         eintr.forEach(function (e) { imBand[e.target.id] = e.isIntersecting; });
         markieren();
       }, { rootMargin: '0px 0px -65% 0px', threshold: 0 });
-      ziele.forEach(function (z) { io.observe(z[0]); });
+      beobachtet.forEach(function (id) { var e = document.getElementById(id); if (e) io.observe(e); });
     }
   }
 })();
