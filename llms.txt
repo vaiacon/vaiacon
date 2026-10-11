@@ -15,8 +15,7 @@ Treuhand, Praxen, Verwaltungen).
 
 Kontakt: hallo@vaiacon.ch · Lehenstrasse 74, 8037 Zürich
 Erster Schritt: kostenloses Erstgespräch (eine halbe Stunde, am Telefon oder
-am Bildschirm), der Richtpreis-Rechner (unverbindlicher Richtpreis, auf der
-Seite und per E-Mail), die kostenlose KI-Standortbestimmung für
+am Bildschirm), die kostenlose KI-Standortbestimmung für
 Führungskräfte, die kostenlose Erstanalyse zur Zeitersparnis oder der
 kostenlose Website-Check auf vaiacon.ch. Wir antworten in der Regel innert
 eines Arbeitstages. Für einen Rückruf benötigen wir Ihre Telefonnummer.
@@ -33,96 +32,27 @@ eines Arbeitstages. Für einen Rückruf benötigen wir Ihre Telefonnummer.
   Voraussetzungen dafür, dass Google und KI-Assistenten Ihr Angebot richtig
   einordnen (Fachwörter: SEO und GEO). Kostenloser Website-Check auf
   vaiacon.ch, Sichtbarkeits-Check kompakt, Sichtbarkeits-Audit vertieft,
-  Seiten überarbeiten und laufende Betreuung, mit offen genannten Preisen.
+  Seiten überarbeiten und laufende Betreuung. Nach dem Check sehen Sie Ihre
+  Punktzahl, danach melden wir uns oder Sie sich bei uns.
 - [Automationen](https://vaiacon.ch/bot): Belege erfassen, Offertenentwürfe
   erstellen, Korrespondenz und Anfragen automatisch vorbereiten, Chatbot mit
-  Firmenwissen, Telefonassistent, Anbindung an Ihre Software. Fixpreis nach
-  der Erstanalyse.
+  Firmenwissen, Telefonassistent, Anbindung an Ihre Software.
 - [Betreuung und Begleitung](https://vaiacon.ch/service): Die Betreuung hält
   alle Automationen und Chatbots am Laufen, die Vaiacon gebaut hat
-  (Überwachung, Fehlerbehebung, eine Stunde Anpassung im Monat), ein Preis je
-  Kunde. Die Begleitung ist feste Beratungs- und Arbeitszeit (vier oder acht
+  (Überwachung, Fehlerbehebung, Anpassungen). Die Begleitung ist feste Beratungs- und Arbeitszeit (vier oder acht
   Stunden im Monat) für Fragen, Team und neue Ideen. Beides kündbar auf Ende
-  Folgemonat. Dazu Beratung nach Aufwand, Anpassungen und die bezahlte
-  KI-Standortanalyse im Betrieb.
+  Folgemonat. Dazu Beratung nach Aufwand und die KI-Standortanalyse im Betrieb.
 
 ## Preise
 
-Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer. Preise gelten 30 Tage ab Angebot. Stand: 2026-10-11.
+Auf der Website nennen wir keine Preise. Jedes Angebot schauen wir persönlich
+mit der Kundin oder dem Kunden an; am Anfang steht das kostenlose Erstgespräch.
 
-- Ab-Preise sind Fixpreise nach der Erstanalyse, nie offen nach oben.
-- Betreuung ist optional und kündbar auf Ende Folgemonat. Ein Preis deckt alle Automationen und Chatbots ab, die wir für Sie gebaut haben: Überwachung, Fehlerbehebung und eine Stunde Anpassung im Monat.
-- Die laufende Betreuung ist optional und auf Ende des Folgemonats kündbar. Enthalten sind die beim jeweiligen Paket genannten Leistungen.
-- Lizenzen, Hosting, KI-Nutzung und Telefonie rechnen wir nach Verbrauch separat ab. Sie laufen auch ohne Betreuung.
-- Beispiel erstes Jahr: Einrichtung plus zwölf Monate Betreuung, zuzüglich der genannten Fremdkosten.
-
-Quelle: https://vaiacon.ch/daten/preise.json. Einen unverbindlichen Richtpreis
-berechnen Sie im Richtpreis-Rechner: https://vaiacon.ch/offerte
-
-### KI-Kompetenz
-
-- KI-Einstieg als Webinar, zwei Stunden: CHF 890 pro Termin. Umfang: Bis 15 Personen, zwei Arbeitsaufgaben aus Ihrem Betrieb, Vorlagen zum Mitnehmen. (Online als Webinar, bis 15 Personen. Kein Raum und kein Beamer nötig.)
-- Training oder Workshop im Betrieb, Halbtag: CHF 1'550 pro Halbtag. Umfang: Bis 15 Personen, Vorgespräch, Unterlagen, eine Nachfass-Mail. (Bei Ihnen im Betrieb, pro Gruppe bis 15 Personen. Vorbereitung und Unterlagen inklusive, Raum und Beamer stellen Sie. Grössere Teams in zwei Gruppen.)
-- Training oder Workshop im Betrieb, ganzer Tag: CHF 2'450 pro Tag. Umfang: Nur bei zwei Gruppen oder Vertiefung. (Bei Ihnen im Betrieb, pro Gruppe bis 15 Personen. Vorbereitung und Unterlagen inklusive, Raum und Beamer stellen Sie.)
-- Coaching für Führungskräfte: CHF 210 pro Stunde. Umfang: Einzeltermine à 60 Minuten, online oder vor Ort. (Als Paket mit sechs Stunden: siehe Coaching-Paket.)
-- Coaching-Paket, sechs Stunden: CHF 1'190. Umfang: Sechs Termine à 60 Minuten innert drei Monaten, online oder vor Ort. (Sechs Termine innert drei Monaten.)
-- Online-Kurs nach Mass, fünf Minuten Lernzeit: CHF 1'450 pro Kurs. Umfang: Fünf Minuten Lernzeit aus Ihren vorhandenen Unterlagen, mit Drehbuch, KI-Sprecherstimme, Quiz und zwei Freigaberunden. (Fünf Minuten Lernzeit heisst: So lange braucht eine Person im Durchschnitt für die Einheit. Jede weitere Minute Lernzeit CHF 290.)
-  - Jede weitere Minute: CHF 290
-- Lernvideo als Bildschirmaufnahme: ab CHF 1'900 pro Video bis drei Minuten. Umfang: Bildschirm, KI-Sprecherstimme, Schnitt, eine Freigaberunde. (Bildschirm mit Sprecherstimme. Für Dreh oder Animation: Lernvideo, gefilmt oder animiert.)
-  - Jedes weitere Video: ab CHF 1'400
-- Lernvideo, gefilmt oder animiert: ab CHF 4'700 pro Video bis drei Minuten. Umfang: Dreh oder Animation, Sprecherstimme, zwei Freigaberunden. (Gefilmt oder animiert, mit Sprecherstimme. Als Bildschirmaufnahme: siehe Lernvideo als Bildschirmaufnahme.)
-  - Jedes weitere Video: ab CHF 3'500
-- Tägliche kleine Lerneinheiten: Zuschnitt: CHF 900. Umfang: Ein Programm sind vier Wochen: 20 Einheiten à drei bis fünf Minuten aus Ihren vorhandenen Unterlagen (Handbuch, Schulung, Prozessbeschrieb), Kanal nach Wahl (Mail, Teams, WhatsApp), ohne laufende Kosten. (Einmalig je Programm.)
-- Tägliche kleine Lerneinheiten: Teilnahme: CHF 60 pro Person. Umfang: Für ein Programm von vier Wochen, ab zehn Personen. (Für vier Wochen, ab zehn Personen.)
-  - Programm, 10 Personen: CHF 1'500
-  - Programm, 15 Personen: CHF 1'800
-  - Programm, 25 Personen: CHF 2'400
-- Veränderung begleiten: CHF 1'700 pro Tag. Umfang: Wir begleiten Ihre Leitung und Ihr Team im Betrieb: Kommunikation, Rollen, Widerstände und Tempo. (Inklusive Vorbereitung und Nachbereitung.)
-- Begleitung am Arbeitsplatz, Halbtag: CHF 700 pro Halbtag. Umfang: Ohne Trainingskonzept: wir sind da und helfen. (Ohne Vorbereitung: wir sind da und helfen.)
-- Begleitung am Arbeitsplatz, ganzer Tag: CHF 1'250 pro Tag. Umfang: Wie der Halbtag, ein ganzer Tag. (Ohne Vorbereitung: wir sind da und helfen.)
-
-### Sichtbarkeit
-
-- Sichtbarkeits-Check, kompakt: CHF 790. Umfang: Ein Standort, eine Sprache, Google plus drei KI-Assistenten, zehn Suchbegriffe, Bericht mit fünf Massnahmen und 30 Minuten Besprechung. (Wird beim Audit, vertieft, angerechnet.)
-- Sichtbarkeits-Audit, vertieft: CHF 1'300. Umfang: Eine Domain bis 30 Seiten, eine Sprache, drei Mitbewerber, Massnahmenplan mit Reihenfolge. (Vertieft den Kompakt-Check. Ein vorher gebuchter Kompakt-Check wird angerechnet.)
-- Seite überarbeiten: CHF 280. Umfang: Text, Titel, Beschreibung, strukturierte Daten, eine Freigaberunde. (Preis je Seite.)
-- Laufende Betreuung: lokal gefunden werden: CHF 400 pro Monat. Umfang: Google-Unternehmensprofil, Bewertungen beantworten, ein Beitrag im Monat, Monatsbericht. (Kündbar auf Ende Folgemonat. Wir versprechen keine Platzierung.)
-- Laufende Betreuung: Google-Sichtbarkeit: CHF 950 pro Monat. Umfang: Enthält die lokale Betreuung sowie zwei bestehende Seiten im Monat überarbeitet, keine neuen Seiten. (Kündbar auf Ende Folgemonat. Enthält die lokale Betreuung.)
-- Laufende Betreuung: Google und KI: CHF 1'300 pro Monat. Umfang: Enthält die Betreuung für die Google-Sichtbarkeit sowie KI-Sichtbarkeit: 20 feste Suchfragen in drei Assistenten, dokumentierte Messbedingungen, eine umgesetzte Massnahme im Monat. (Kündbar auf Ende Folgemonat. Enthält die Betreuung für die Google-Sichtbarkeit und die lokale Betreuung.)
-
-### Automationen
-
-- Kleinen Ablauf automatisieren: ab CHF 1'300 pro Ablauf. Umfang: Ein Auslöser, eine Regel, ein Zielprogramm (das Programm, in dem das Ergebnis landet), ohne weitere Anbindung. (Fixpreis nach der Erstanalyse. Ohne Anbindung an weitere Programme.)
-- Offerte-Formular, Standard: ab CHF 1'900 pro Ablauf. Umfang: Standard-Vorlage: ein Formular, eine Preisliste bis 30 Positionen, eine PDF-Vorlage, ein Mailversand. (Fixpreis nach der Erstanalyse. Die Anbindung ans Offertenprogramm ist nicht im Preis.)
-- Offerte-Formular, individuell: ab CHF 2'200 pro Ablauf. Umfang: Eigene Regeln, bis zwei Preislisten oder Varianten. (Fixpreis nach der Erstanalyse. Ihre Regeln halten wir gemeinsam fest; abgenommen ist der Ablauf nach einem Probelauf mit Ihren echten Fällen.)
-- Freigabe-Schleife: ab CHF 2'600 pro Ablauf. Umfang: Eigenständig, Freigabe per Mail oder Telegram. (Fixpreis nach der Erstanalyse. Freigabe per Mail oder Telegram.)
-- Belege erfassen oder Offertenentwürfe erstellen: ab CHF 3'000 pro Ablauf. Umfang: Ein Anwendungsfall: Belege erfassen oder Offertenentwürfe erstellen. (Fixpreis nach der Erstanalyse. Ein Anwendungsfall und eine Anbindung sind enthalten.)
-- Postfach mit KI: ab CHF 3'800 pro Ablauf. Umfang: Ein Postfach, Sortieren und Antwortentwürfe, Anbindung ans Mailprogramm inklusive. (Fixpreis nach der Erstanalyse. Anbindung an Ihr Mailprogramm inklusive.)
-- Auftragsablauf von der Anfrage bis zur Rechnung: ab CHF 4'200 pro Ablauf. Umfang: Anfrage, Offerte, Auftrag, Rechnung mit bis zu drei Programmen über fertige Verbindungen (Standard-Connectoren), Daten je Programm in eine Richtung, bis 15 Felder je Übergabe. (Fixpreis nach der Erstanalyse. Anbindung an bis zu drei Programme inklusive.)
-- Kundendossier mit KI-Kurzfassung: ab CHF 5'200 pro Ablauf. Umfang: Daten aus zwei Programmen werden zusammengeführt. (Fixpreis nach der Erstanalyse. Daten aus zwei Programmen zusammengeführt, weitere Programme als Anbindung.)
-- Chatbot mit Ihrem Firmenwissen: ab CHF 2'450. Umfang: Website-Chatbot mit Firmenwissen bis 50 Webseiten oder 200 A4-Seiten Dokumente, eine Sprache, eine Domain, Übergabe an Mail. (Betreuung optional. Hosting und KI-Nutzung sind Fremdkosten.)
-- Telefonassistent: ab CHF 2'900. Umfang: Prozessarbeit: Anruf aufnehmen, Anliegen erfassen, Rückruf, Termin oder Weiterleitung, Übergabe an Mitarbeitende. (Ein Anwendungsfall nach Wahl: Termin oder Rückruf. Mit der Betreuung ist die Telefonnummer enthalten. Gesprächsminuten und KI-Nutzung rechnen wir nach Verbrauch ab.)
-- Anbindung, Standard-Connector: ab CHF 900 pro Programm. Umfang: Zwei Programme, eine Richtung, Datenabgleich bis 15 Felder, Rechteprüfung, Test. (Darüber hinaus: Anbindung, individuell.)
-- Anbindung, individuell: ab CHF 1'900 pro Programm. Umfang: Eigene Schnittstelle, Datei-Import, Altsysteme. (Je nach Programm und Umfang. Standard-Connector: siehe Anbindung, Standard-Connector.)
-
-### Betreuung und Begleitung
-
-- Betreuung: CHF 190 pro Monat. Umfang: Überwachung, Fehlerbehebung, eine Stunde Anpassung im Monat, Reaktion innert eines Arbeitstags. (Ein Preis je Kunde, egal wie viele Automationen und Chatbots wir für Sie betreuen. Kündbar auf Ende Folgemonat. Reaktion ist keine Behebungszeit; die Vertretung bei Abwesenheit ist geregelt. Ohne Betreuung erhalten Sie ein Übergabe-Paket, Betrieb und Verantwortung liegen bei Ihnen, Mängel beheben wir 90 Tage ohne Rechnung.)
-- Begleitung, 4 Std. im Monat: CHF 650 pro Monat. Umfang: Vier Stunden im Monat, Reaktion innert eines Arbeitstags. (Kündbar auf Ende Folgemonat. Nicht genutzte Zeit wird einen Monat übertragen.)
-- Begleitung, 8 Std. im Monat: CHF 1'250 pro Monat. Umfang: Acht Stunden im Monat. (Kündbar auf Ende Folgemonat. Nicht genutzte Zeit wird einen Monat übertragen.)
-- KI-Standortanalyse im Betrieb: CHF 2'150. Umfang: Kein Pflichtschritt vor einer Automation. (Bei einem Folgeauftrag innert sechs Monaten wird die Vorarbeit bis zur Hälfte angerechnet, höchstens CHF 1'075.)
-- Beratung nach Aufwand: CHF 170 pro Stunde. Umfang: Nach Zeitaufwand abgerechnet.
-- Anpassungen und Erweiterungen: CHF 170 pro Stunde. Umfang: Nach Zeitaufwand abgerechnet, für Änderungen über die Betreuung hinaus.
-
-Hinweis: Die KI-Standortanalyse im Betrieb (bezahlt) ist nicht die kostenlose
+Hinweis: Die KI-Standortanalyse im Betrieb ist nicht die kostenlose
 KI-Standortbestimmung (Selbsttest für Führungskräfte).
 
 ## Weitere Seiten
 
-- [Richtpreis berechnen](https://vaiacon.ch/offerte): Beschreiben Sie Ihr
-  Vorhaben und geben Sie Ihre Kontaktdaten an. Sie erhalten einen
-  unverbindlichen Richtpreis auf der Seite und per E-Mail. Danach klären wir
-  die offenen Punkte mit Ihnen.
 - [KI-News für KMU](https://vaiacon.ch/ki-kmu-news/): Was in der KI für Schweizer
   KMU gerade zählt, kurz, mit Quellen und mit erklärten Fachbegriffen. Neue
   Beiträge erscheinen während der Woche, dazu ein Wochenfazit.
@@ -132,7 +62,7 @@ KI-Standortbestimmung (Selbsttest für Führungskräfte).
   und wofür wir stehen.
 - [Aus der Praxis](https://vaiacon.ch/referenzen): Eine Kundin erzählt, wie ihr
   Kosmetikstudio heute mit Vaiacon arbeitet.
-- [Häufige Fragen](https://vaiacon.ch/faq): Kosten und Richtpreis, Lernformate,
+- [Häufige Fragen](https://vaiacon.ch/faq): Kosten, Lernformate,
   Datenschutz, Vorwissen, Ablauf einer Zusammenarbeit.
 - [Erstanalyse](https://vaiacon.ch/erstanalyse/): Fragebogen mit sofortiger
   Einschätzung, wie viel Zeit in wiederkehrender Büroarbeit steckt.

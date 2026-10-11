@@ -318,7 +318,6 @@
       el('div', { class: 'st-auftakt__text' }, [
         el('p', { class: 'sv-kicker', text: 'Standortbestimmung für Führungskräfte' }),
         titel,
-        el('p', { text: 'Drei Angaben zu Ihrem Betrieb und zwölf kurze Fragen. Wir fragen, was Sie von Automationen verstehen, was heute möglich ist und was bei Ihnen schon im Einsatz ist. Danach sehen Sie Ihre Stufe und eine Einschätzung, was sich als Nächstes lohnt.' }),
         el('ul', { class: 'st-fakten', 'aria-label': 'Eckdaten' }, [
           el('li', { text: '3 Angaben, 12 Fragen' }),
           el('li', { text: 'Ohne Anmeldung' }),
@@ -888,8 +887,7 @@
       el('h4', { text: 'Warum sich ein Gespräch lohnt' }),
       d.warum_gespraech ? el('p', { text: d.warum_gespraech }) : null,
       el('div', { class: 'st-gespraech__knoepfe' }, [
-        el('a', { class: 'sv-button sv-button--light', href: href('kontakt#formular'), text: 'Erstgespräch vereinbaren →' }),
-        el('a', { class: 'sv-button sv-button--glass', href: href('offerte'), text: 'Richtpreis berechnen →' })
+        el('a', { class: 'sv-button sv-button--light', href: href('kontakt#formular'), text: 'Erstgespräch vereinbaren →' })
       ])
     ]));
 

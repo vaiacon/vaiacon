@@ -25,6 +25,7 @@
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="ui_kits/website/abschluss.css">
 <!-- Strukturdaten: erzeugt von scripts/strukturdaten.py, nicht von Hand aendern -->
 <script type="application/ld+json">
 {
@@ -36,7 +37,7 @@
   "url": "https://vaiacon.ch/",
   "logo": "https://vaiacon.ch/assets/logo-lockup-terra.png",
   "image": "https://vaiacon.ch/assets/vaiacon-buerobot-startseite.png",
-  "description": "vaiacon führt Schweizer KMU an KI heran, in drei Bereichen: KI-Kompetenz (Trainings, Coaching, Online-Kurse), Sichtbarkeit in Suchmaschinen und KI-Antworten und Automationen von Büroarbeit; auf Wunsch mit Betreuung und Begleitung. Gedacht für Betriebe mit 5 bis 30 Mitarbeitenden und eigenem Büro. Preise offen, Richtpreis online berechnen. Ohne Fachchinesisch.",
+  "description": "vaiacon führt Schweizer KMU an KI heran, in drei Bereichen: KI-Kompetenz (Trainings, Coaching, Online-Kurse), Sichtbarkeit in Suchmaschinen und KI-Antworten und Automationen von Büroarbeit; auf Wunsch mit Betreuung und Begleitung. Gedacht für Betriebe mit 5 bis 30 Mitarbeitenden und eigenem Büro. Jedes Angebot besprechen wir persönlich. Ohne Fachchinesisch.",
   "email": "hallo@vaiacon.ch",
   "foundingDate": "2026",
   "address": {
@@ -99,7 +100,7 @@
           "name": "Automationen",
           "serviceType": "Automatisierung von Büroarbeit",
           "url": "https://vaiacon.ch/bot",
-          "description": "Belege erfassen, Offertenentwürfe erstellen, Korrespondenz und Anfragen automatisch vorbereiten, dazu Chatbot mit Firmenwissen, Telefonassistent und Anbindung an Ihre Software. Fixpreis nach der Erstanalyse."
+          "description": "Belege erfassen, Offertenentwürfe erstellen, Korrespondenz und Anfragen automatisch vorbereiten, dazu Chatbot mit Firmenwissen, Telefonassistent und Anbindung an Ihre Software."
         }
       },
       {
@@ -123,7 +124,7 @@
 <div class="sv-page">
   <header class="mock-header sv-header">
     <div class="mock-header__inner">
-      <a class="mock-header__logo" href="./" aria-label="vaiacon Start">
+      <a class="mock-header__logo" href="/" aria-label="vaiacon Start">
         <img src="assets/logo-lockup-white.svg" alt="vaiacon" width="214" height="39">
       </a>
             <button class="mock-menu-toggle" type="button" aria-label="Menü öffnen" aria-controls="mock-mobile-menu" aria-expanded="false">
@@ -257,24 +258,18 @@
           Im Gespräch klären wir, ob sich bei Ihnen etwas lohnt. Unverbindlich, ohne Verkaufsdruck.
         </p>
         <div class="sv-actions">
-          <a class="sv-button sv-button--light" href="offerte">Richtpreis berechnen →</a>
           <a class="sv-button sv-button--glass" href="kontakt#formular">Erstgespräch vereinbaren →</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="sv-footer">
-    <div class="sv-footer__inner">
-      <a class="sv-footer__logo" href="#top" aria-label="Zurück nach oben">
-        <img src="assets/logo-lockup-white.svg" alt="vaiacon" width="214" height="39">
-      </a>
-      <nav class="sv-footer__links" aria-label="Weitere Seiten">
-        <a href="service">Begleitung</a><a href="offerte">Richtpreis berechnen</a><a href="ki-kmu-news/">KI-News für KMU</a><a href="referenzen">Aus der Praxis</a><a href="datenschutz">Datenschutz</a><a href="impressum">Impressum</a><a href="agb">AGB</a>
-      </nav>
-      <p class="sv-footer__adresse"><span>Vaiacon GmbH</span><span>Lehenstrasse 74, 8037 Zürich</span><span><a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a></span><span data-telefon-platzhalter><a href="kontakt#rueckruf">Rückruf anfordern</a></span></p>
-      <a class="sv-footer__top" href="#top">↑ Nach oben</a>
-      <div class="sv-footer__social">
+  <footer class="sv-footer vb-fuss">
+    <div class="vb-fuss__inner">
+      <div class="vb-fuss__marke">
+        <a class="sv-footer__logo" href="#top" aria-label="Zurück nach oben"><img src="assets/logo-lockup-white.svg" alt="vaiacon" width="214" height="39"></a>
+        <p class="vb-fuss__adresse">Vaiacon GmbH<br>Lehenstrasse 74<br>8037 Zürich</p>
+        <div class="sv-footer__social">
         <a href="https://www.facebook.com/vaiacon" target="_blank" rel="noopener" aria-label="vaiacon auf Facebook" title="Facebook">
           <svg width="21" height="21" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M14.9 8.1h2.4V4.3c-.4-.1-1.8-.2-3.4-.2-3.4 0-5.7 2.1-5.7 6v3.3H4.5v4.3h3.7V24h4.5v-6.3h3.7l.6-4.3h-4.3v-2.9c0-1.3.4-2.4 2.2-2.4Z"/></svg>
         </a>
@@ -285,7 +280,12 @@
           <svg width="21" height="21" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M5.4 8.5H2.3V22h3.1V8.5ZM3.9 6.7c1 0 1.8-.7 1.8-1.7S4.9 3.3 3.9 3.3 2.1 4 2.1 5s.8 1.7 1.8 1.7ZM22 22h-3.1v-6.6c0-1.6 0-3.6-2.2-3.6s-2.5 1.7-2.5 3.5V22h-3.1V8.5h3v1.8h.1c.4-.8 1.5-2.2 4.5-2.2 3.2 0 3.8 2.1 3.8 4.9V22Z"/></svg>
         </a>
       </div>
+      </div>
+      <nav class="vb-fuss__spalte" aria-label="Angebot"><p class="vb-fuss__titel">Angebot</p><a href="learning">KI-Kompetenz</a><a href="visibility">Sichtbarkeit</a><a href="bot">Automationen</a><a href="service">Begleitung</a></nav>
+      <nav class="vb-fuss__spalte" aria-label="vaiacon"><p class="vb-fuss__titel">vaiacon</p><a href="ueber-uns">Über uns</a><a href="referenzen">Aus der Praxis</a><a href="ki-kmu-news/">KI-News für KMU</a><a href="faq">FAQ</a></nav>
+      <div class="vb-fuss__spalte"><p class="vb-fuss__titel">Kontakt</p><span class="vb-fuss__wer"><span class="vb-koepfe"><img src="assets/philip-krieger-team-klein.webp" alt="Philip Krieger" width="56" height="56"><img src="assets/andre-ulrich-team-klein.webp" alt="André Ulrich" width="56" height="56"></span><span>Philip und André antworten persönlich.</span></span><a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a><a href="kontakt#rueckruf">Rückruf anfordern</a><a href="kontakt">Kontaktseite</a></div>
     </div>
+    <div class="vb-fuss__basis"><span>© 2026 Vaiacon GmbH</span><nav aria-label="Rechtliches"><a href="datenschutz">Datenschutz</a><a href="impressum">Impressum</a><a href="agb">AGB</a></nav><a href="#top">↑ Nach oben</a></div>
   </footer>
 </div>
 <script src="ui_kits/website/api-basis.js?v=20261004-umbau"></script>
