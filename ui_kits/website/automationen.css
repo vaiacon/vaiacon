@@ -19,7 +19,7 @@
   align-content: start;
   padding: 16px 16px 18px;
   background: var(--surface-card);
-  border: 1.5px solid var(--border-ink);
+  border: 1px solid var(--border-strong);
   border-radius: var(--radius-lg);
 }
 .bst__kopf { display: flex; align-items: center; gap: 10px; margin: 0; }
@@ -414,7 +414,7 @@
   font-weight: var(--weight-semibold);
   color: var(--text-strong);
   background: var(--surface-card);
-  border: 1.5px solid var(--border-ink);
+  border: 1px solid var(--border-strong);
   border-radius: var(--radius-pill);
 }
 .if__schritte li span {
