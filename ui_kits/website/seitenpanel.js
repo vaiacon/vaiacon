@@ -22,20 +22,13 @@
   var name = (location.pathname.split('/').pop() || 'index').replace(/\.html$/, '') || 'index';
   if (tiefe) name = 'news';
 
-  // Farbvergleich: ?farbe=hell bzw. ?farbe=dunkel gilt für den ganzen Besuch.
-  var farbe = new URLSearchParams(location.search).get('farbe');
-  try {
-    if (farbe) sessionStorage.setItem('sp-farbe', farbe);
-    else farbe = sessionStorage.getItem('sp-farbe');
-  } catch (e) {}
-  if (farbe && /^[a-z0-9]+$/.test(farbe)) document.documentElement.classList.add('sp-f-' + farbe);
 
   var panel = document.createElement('aside');
   panel.className = 'sp-panel';
   panel.id = 'sp-panel';
   panel.setAttribute('aria-label', 'Inhalt der Website');
   var html = '<a class="sp-logo" href="' + (tiefe || './') + '" aria-label="vaiacon Start">' +
-    '<img src="' + tiefe + 'assets/logo-lockup-' + (farbe === 'sand' ? 'terra' : 'white') + '.svg" alt="vaiacon" width="180" height="33"></a>' +
+    '<img src="' + tiefe + 'assets/logo-lockup-white.svg" alt="vaiacon" width="180" height="33"></a>' +
     '<p class="sp-kopf">Übersicht</p><nav class="sp-baum">';
   BEREICHE.forEach(function (b) {
     var aktiv = b.seite === name;
