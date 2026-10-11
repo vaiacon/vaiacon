@@ -180,7 +180,7 @@
   width: 128px;
   padding: 10px 8px 12px;
   border-radius: 18px;
-  border: 1.5px solid var(--border-ink);
+  border: 1px solid var(--border-strong);
   background: var(--surface-card);
   color: var(--text-strong);
   cursor: pointer;
@@ -190,7 +190,7 @@
 }
 .pm-branchen__ico { flex: none; width: 96px; height: 96px; border-radius: 14px; background: var(--cream-50); object-fit: contain; }
 .pm-branchen__chips button[aria-selected="true"] .pm-branchen__ico { box-shadow: 0 0 0 2px rgba(255,255,255,.7); }
-.pm-branchen__chips button:hover { transform: translate(-1px, -1px); box-shadow: 2px 2px 0 var(--border-ink); }
+.pm-branchen__chips button:hover { transform: translateY(-2px); border-color: var(--border-ink); }
 .pm-branchen__chips button[aria-selected="true"] { background: var(--accent); color: var(--text-on-terra); border-color: var(--accent); }
 .pm-branchen__chips button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 .pm-branchen__karten { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; margin-top: 14px; }
@@ -214,9 +214,7 @@
   padding: 20px 24px 22px;
   background: var(--terra-500);
   color: var(--cream-50);
-  border: 1.5px solid var(--border-ink);
   border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-comic);
 }
 .pm-branchen__nervt[hidden] { display: none; }
 .pm-branchen__nervt b {
