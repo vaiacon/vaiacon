@@ -6,8 +6,7 @@
 
 Quellen: daten/branchen.json (Inhalt je Branche), scripts/branchen_seite_vorlage.html
 (Kopf, Aufbau, Fuss) und die Texte unten (Überschrift, Lead, Schlusssatz).
-Die Richtpreise stehen als data-preis-Elemente drin, wie auf bot.html #preise; die
-Ersatztexte müssen dem Katalog entsprechen (scripts/preise_pruefen.py prüft das).
+Preise stehen auf den Branchenseiten nicht (Preisentscheid 11.10.2026).
 Die Branche «alle» bekommt keine Seite.
 URL-Form: /automationen-<branche>. Caddy löst über try_files {path}.html auf, ein
 Ordner /bot/ würde /bot (= bot.html) gefährden.
@@ -88,9 +87,7 @@ def karten(b: dict) -> str:
             f'          <article class="pm-branchen__karte">'
             f'<p class="pm-branchen__sprosse"><i>{nr}</i>{e(titel)}</p>'
             f'<p class="bs-stufe">{e(kurz)}</p>'
-            f'<ul class="pm-branchen__liste">{lis}</ul>'
-            f'<span class="bs-preis"><em>Richtpreis</em>'
-            f'<span data-preis="{pid}" data-preis-form="betrag">{ersatz}</span></span></article>'
+            f'<ul class="pm-branchen__liste">{lis}</ul></article>'
         )
     return "\n".join(out)
 
@@ -138,7 +135,7 @@ def seite(slug: str, daten: dict, vorlage: str) -> str:
     name = b["name"]
     h1, lead, schluss = TEXTE[slug]
     titel = f"Automatisierung {name}: Büroarbeit automatisieren · vaiacon"
-    beschr = (f"Automationen für {name}: {lead} Richtpreise je Grösse, Fixpreis nach der kostenlosen Erstanalyse.")
+    beschr = (f"Automationen für {name}: {lead} Drei Grössen, den Preis klären wir nach der kostenlosen Erstanalyse.")
     werte = {
         "titel": e(titel), "beschreibung": e(beschr), "pfad": pfad(slug), "slug": slug, "name": e(name),
         "h1": e(h1), "lead": e(lead), "schluss": e(schluss), "version": VERSION,

@@ -19,7 +19,6 @@
 <title>KI-Kompetenz als Lernreise für Schweizer KMU · vaiacon</title>
 <link rel="stylesheet" href="styles.css?v=20261005-vorschlag">
 <link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20261005-vorschlag">
-<link rel="stylesheet" href="ui_kits/website/hauptangebot.css?v=20261011-aufkleber">
 <link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261011-preislogik">
 <link rel="stylesheet" href="ui_kits/website/lernreise.css?v=20261011-kurve-haarlinie">
 <link rel="stylesheet" href="ui_kits/website/lernreise-zeitleiste.css?v=20261011-robo">
@@ -62,19 +61,6 @@
   .lr-kurve__tage b { font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--terra-600); min-width: 2.2em; flex: none; }
   .lr-kurve__tage li:last-child { grid-column: 1 / -1; }
 }
-/* Richtpreise und Einstiegsangebot (kopie, 11.10.2026) */
-.sv-hero__visual { position: relative; }
-.lr-preise { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-4); margin-top: var(--space-9); }
-.lr-preis { display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-5); border: 1px solid var(--border-strong); border-radius: var(--radius-lg); background: var(--surface-card); text-align: left; }
-.lr-preis--angebot { border-color: var(--terra-500); box-shadow: inset 0 0 0 1px var(--terra-500); }
-.lr-preis__marke { align-self: flex-start; padding: 3px 10px; border-radius: var(--radius-pill); background: var(--terra-500); color: var(--text-on-terra); font-family: var(--font-mono); font-size: 11px; font-weight: var(--weight-bold); letter-spacing: .08em; text-transform: uppercase; }
-.lr-preis h3 { margin: 0; color: var(--text-strong); font-size: var(--text-body); font-weight: var(--weight-semibold); line-height: var(--leading-snug); }
-.lr-preis__betrag { margin: 0; color: var(--terra-600); font-size: 1.35rem; font-weight: var(--weight-bold); letter-spacing: var(--tracking-tight); line-height: 1.2; }
-.lr-preis p { margin: 0; color: var(--text-body); font-size: var(--text-body-sm); line-height: var(--leading-body); }
-.lr-preise__fuss { margin: var(--space-6) auto 0; max-width: 62ch; text-align: center; color: var(--text-body); font-size: var(--text-body-sm); line-height: var(--leading-relaxed); }
-.lr-preise__fuss strong { color: var(--text-strong); }
-@media (max-width: 1000px) { .lr-preise { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 560px) { .lr-preise { grid-template-columns: minmax(0, 1fr); } }
 </style>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
@@ -299,7 +285,7 @@
 }
 </script>
 <!-- Strukturdaten Ende -->
-  <link rel="stylesheet" href="ui_kits/website/navigation.css?v=20261012-nav12">
+  <link rel="stylesheet" href="ui_kits/website/navigation.css?v=20261012-nav13">
 </head>
 <body>
 <a class="sv-skip" href="#inhalt">Zum Inhalt springen</a>
@@ -357,7 +343,6 @@
           </div>
         </div>
         <div class="sv-hero__visual" aria-label="KI-Kompetenz Übersicht">
-          <a class="lr-sticker" href="#preise" aria-label="Einstiegsangebot Ganztages-Training, zu den Richtpreisen"><small>Ganzer Tag</small><strong>ab <span data-preis="kk-training-tag-angebot" data-preis-form="zahl">1'550</span></strong><small>CHF</small></a>
           <figure class="sv-hero__robot sv-hero__robot--frei">
             <picture><source srcset="assets/vaiacon-buerobot-schulung-zeigestab.webp" type="image/webp"><img src="assets/vaiacon-buerobot-schulung-zeigestab.png" alt="Der vaiacon-Roboter mit Buch und Zeigestab" width="682" height="820" fetchpriority="high"></picture>
           </figure>
@@ -378,8 +363,6 @@
             <dd>Eine Lernreise nach Ihrem Bedarf aus Training, täglichen kleinen Lerneinheiten, Begleitung am Arbeitsplatz und Führungscoaching.</dd>
             <dt>Ablauf</dt>
             <dd>Kostenloses halbstündiges Erstgespräch, danach eine Lernreise über mehrere Wochen mit Stationen nach Ihrem Bedarf.</dd>
-            <dt>Richtpreise</dt>
-            <dd>Ganztages-Training mit dem Team <span data-preis="kk-training-tag-angebot" data-preis-form="ab">ab CHF 1'550</span> pro Tag, KI-Einstieg als Webinar <span data-preis="kk-training-kurz" data-preis-form="betrag">CHF 890</span>, Coaching <span data-preis="kk-coaching-fuehrung">CHF 210 pro Stunde</span>. Verbindlich ist die Offerte nach dem Erstgespräch.</dd>
             <dt>Region</dt>
             <dd>Gesamte Deutschschweiz</dd>
           </dl>
@@ -509,40 +492,6 @@
           </article>
         </div>
         <p class="lr-satz"><strong>Jede Reise ist eine Kombination.</strong> Sie zahlen nur, was Ihr Betrieb braucht. Was genau enthalten ist, legen wir im Erstgespräch fest.</p>
-      </div>
-    </section>
-
-    <section id="preise" class="sv-section" aria-labelledby="preise-titel">
-      <div class="sv-wrap">
-        <div class="sv-center">
-          <p class="sv-kicker">RICHTPREISE</p>
-          <h2 class="sv-title" id="preise-titel">Damit Sie wissen, woran Sie sind.</h2>
-          <p class="sv-lead">Einige Richtpreise zur Orientierung. Den genauen Preis für Ihre Lernreise nennen wir nach dem Erstgespräch.</p>
-        </div>
-        <div class="lr-preise">
-          <article class="lr-preis lr-preis--angebot">
-            <span class="lr-preis__marke">Einstiegsangebot</span>
-            <h3>Ganztages-Training mit Ihrem Team</h3>
-            <p class="lr-preis__betrag"><span data-preis="kk-training-tag-angebot">ab CHF 1'550 pro Tag</span></p>
-            <p>Ein ganzer Tag bei Ihnen im Betrieb, eine Gruppe bis 15 Personen, Unterlagen inklusive.</p>
-          </article>
-          <article class="lr-preis">
-            <h3>KI-Einstieg als Webinar</h3>
-            <p class="lr-preis__betrag"><span data-preis="kk-training-kurz">CHF 890 pro Termin</span></p>
-            <p>Zwei Stunden online, bis 15 Personen, mit zwei Aufgaben aus Ihrem Betrieb.</p>
-          </article>
-          <article class="lr-preis">
-            <h3>Online-Kurs nach Mass</h3>
-            <p class="lr-preis__betrag">ab <span data-preis="kk-elearning-lernminute">CHF 1'450 pro Kurs</span></p>
-            <p>Fünf Minuten Lernzeit aus Ihren Unterlagen, mit Quiz und Sprecherstimme.</p>
-          </article>
-          <article class="lr-preis">
-            <h3>Coaching für Führungskräfte</h3>
-            <p class="lr-preis__betrag"><span data-preis="kk-coaching-fuehrung">CHF 210 pro Stunde</span></p>
-            <p>Einzelgespräche, online oder vor Ort.</p>
-          </article>
-        </div>
-        <p class="lr-preise__fuss"><strong>Lernvideos, tägliche Lerneinheiten, Begleitung vor Ort und ganze Lernreisen</strong> stellen wir nach Ihrem Bedarf zusammen. Den Preis dafür erhalten Sie nach dem Erstgespräch. <span data-preis-mwst>Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer.</span> Richtpreise, verbindlich ist die Offerte.</p>
       </div>
     </section>
 
@@ -918,6 +867,6 @@
 <script src="ui_kits/website/standort.js?v=20261011-audit" defer></script>
 <script src="ui_kits/website/themenkatalog.js?v=20261011-klapp" defer></script>
 <script src="ui_kits/website/chat.js?v=20261004-umbau"></script>
-<script src="ui_kits/website/navigation.js?v=20261012-nav12" defer></script>
+<script src="ui_kits/website/navigation.js?v=20261012-nav13" defer></script>
 </body>
 </html>
