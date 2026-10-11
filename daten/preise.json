@@ -80,6 +80,25 @@
           "abnahme": false
         },
         {
+          "id": "kk-training-tag-angebot",
+          "titel": "Ganztages-Training mit Ihrem Team, Einstiegsangebot",
+          "beschreibung": "Ein ganzer Tag für Ihr Team: Grundlagen, Übungen an Ihren Aufgaben und konkrete nächste Schritte. Aus unseren erprobten Bausteinen zusammengestellt.",
+          "einheit": "pro Tag",
+          "preis": 1550,
+          "ab": true,
+          "art": "einmalig",
+          "menge_waehlbar": true,
+          "menge_standard": 1,
+          "menge_max": 30,
+          "hinweis": "Bei Ihnen im Betrieb in der Deutschschweiz, eine Gruppe bis 15 Personen. Programm aus unseren Bausteinen, Unterlagen inklusive. Raum und Beamer stellen Sie. Mehr Zuschnitt auf Ihre Abläufe nach Absprache.",
+          "umfang": "Ganzer Tag, eine Gruppe bis 15 Personen, Programm aus unseren Bausteinen, Unterlagen inklusive.",
+          "folgekosten": null,
+          "betreuung_id": null,
+          "fremdkosten": null,
+          "status": "produkttest",
+          "abnahme": false
+        },
+        {
           "id": "kk-coaching-fuehrung",
           "titel": "Coaching für Führungskräfte",
           "beschreibung": "Einzelgespräche für Personen, die entscheiden: Wie führe ich ein Team, das mit KI arbeitet?",
