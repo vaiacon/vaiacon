@@ -128,3 +128,25 @@
   .tk-wahl.tk-wahl--aus span { font-size: 0; }
   .tk-summe { bottom: 76px; } /* über dem Knopf «Fragen Sie Vaia» */
 }
+
+/* Schmale Handys (11.10.2026): Die vier Tiefen-Knöpfe brauchten 300 px Mindestbreite
+   (fieldset min-content), die Karten wurden darum unter 360 px breiter als die Seite
+   und standen rechts über. Jetzt dürfen Spur, Karte und Knöpfe schrumpfen. */
+.tk-katalog, .tk-gruppe, .tk-liste, .tk-thema, .tk-thema__text { min-width: 0; }
+.tk-tiefe { min-width: 0; min-inline-size: 0; width: 100%; box-sizing: border-box; }
+@media (max-width: 980px) {
+  .tk-thema { grid-template-columns: minmax(0, 1fr); }
+  .tk-wahl:not(.tk-wahl--aus) { min-width: 0; flex: 1 1 0; }
+  .tk-wahl b { display: block; overflow-wrap: anywhere; hyphens: auto; -webkit-hyphens: auto; }
+}
+@media (max-width: 359px) {
+  /* drei Tiefen nebeneinander, «Nicht gewählt» darunter als schmale Zeile */
+  .tk-tiefe { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px; }
+  .tk-wahl:not(.tk-wahl--aus) { flex: none; }
+  .tk-wahl b { hyphens: manual; -webkit-hyphens: manual; overflow-wrap: normal; }
+  .tk-wahl span { padding: 4px 2px; font-size: 0.72rem; }
+  .tk-wahl--aus { grid-column: 1 / -1; order: 4; }
+  .tk-wahl.tk-wahl--aus span { width: auto; min-height: 34px; font-size: 0; }
+  .tk-wahl--aus span::before { content: "Nicht gewählt"; font-size: 0.72rem; }
+  .tk-thema { padding: var(--space-3); }
+}
