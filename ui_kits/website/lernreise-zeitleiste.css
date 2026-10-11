@@ -572,3 +572,20 @@
   .lz-karte__fuss { gap: var(--space-2); flex-wrap: wrap; }
   .lz-knopf { padding-left: 12px; padding-right: 12px; }
 }
+
+/* ── Ergänzung 11.10.2026: Roboter ohne Kasten ──────────────────────────
+   Der beige Kasten war so hoch wie der Text (380 px), der Roboter nur 250 px:
+   80 px Luft über dem Kopf. Jetzt steht er direkt auf der weissen Tafel,
+   mittig zur Texthöhe, grösser, mit Bodenschatten unter den Füssen.
+   Die Zielstation (vier kleine Roboter) behält ihren Pfirsich-Kasten. */
+@media (min-width: 900px) {
+  .lz-bild:not(.lz-bild--ziel),
+  .lz--an .lz-bild:not(.lz-bild--ziel) { min-height: 0; background: transparent; border-radius: 0; overflow: visible; align-items: center; }
+  .lz-bild:not(.lz-bild--ziel)::after { display: none; }
+  .lz-bild:not(.lz-bild--ziel) picture::after {
+    content: ""; position: absolute; left: 15%; right: 15%; bottom: -6px; height: 16px;
+    border-radius: 50%; background: rgba(28, 22, 19, 0.08); z-index: 0;
+  }
+  .lz-bild:not(.lz-bild--ziel) img { margin-bottom: 0; }
+  .lz--an .lz-bild:not(.lz-bild--ziel) img { height: 300px; }
+}
