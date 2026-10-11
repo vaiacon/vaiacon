@@ -231,6 +231,7 @@
 
 /* Richtpreis (09.10.2026): Beschreibung zuerst, Katalog im Aufklapper */
 .of-frei { margin-bottom: var(--space-5); }
+.of-haupt > .of-frei:first-child { margin-top: 0; } /* Oberkante bündig mit «Ihr Richtpreis» (11.10.) */
 .of-frei textarea { font-size: 1.05rem; line-height: 1.5; }
 .of-richtpreis { margin: var(--space-3) 0 var(--space-5); padding: var(--space-3) var(--space-4); background: var(--cream-card); border-left: 4px solid var(--terra-600); border-radius: 6px; }
 
