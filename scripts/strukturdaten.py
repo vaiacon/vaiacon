@@ -91,7 +91,7 @@ ORGANISATION = {
         {"@type": "Person", "name": "Philip Krieger", "jobTitle": "Mitgründer, Technik und Coaching"},
     ],
     "sameAs": [
-        "https://www.facebook.com/vaiacon",
+        "https://www.facebook.com/profile.php?id=61594980906435",
         "https://www.instagram.com/vaiacon",
         "https://www.linkedin.com/company/vaiacon",
     ],

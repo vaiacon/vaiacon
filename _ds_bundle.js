@@ -5178,7 +5178,7 @@ function Faq() {
 /* 09 · Kontakt (Terracotta-Finale) */
 const SOCIAL_LINKS = [{
   label: 'Facebook',
-  href: 'https://www.facebook.com/vaiacon',
+  href: 'https://www.facebook.com/profile.php?id=61594980906435',
   icon: 'facebook'
 }, {
   label: 'LinkedIn',
