@@ -10,6 +10,7 @@
   var chips = wurzel.querySelector('.pm-branchen__chips');
   var listen = wurzel.querySelectorAll('[data-sprosse]');
   var nervt = wurzel.querySelector('.pm-branchen__nervt');
+  var mehr = document.getElementById('pm-branchen-mehr');
   if (!chips || !listen.length) return;
   var SPEICHER = 'vaiacon-branche';
   var daten = null, knoepfe = [];
@@ -59,6 +60,16 @@
       var an = knoepfe[k].getAttribute('data-branche') === id;
       knoepfe[k].setAttribute('aria-selected', an ? 'true' : 'false');
       knoepfe[k].tabIndex = an ? 0 : -1;
+    }
+    // Link zur Branchenseite (automationen-<branche>); bei «alle» gibt es keine.
+    if (mehr) {
+      var hat = id !== 'alle';
+      mehr.hidden = !hat;
+      if (hat) {
+        var a = mehr.querySelector('a');
+        a.href = 'automationen-' + id;
+        a.textContent = 'Mehr für ' + (b.name || id) + ' →';
+      }
     }
     wurzel.setAttribute('data-branche', id);
   }
