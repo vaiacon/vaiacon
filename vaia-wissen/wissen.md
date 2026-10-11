@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 11.10.2026 · Eintrag 14f5518 AGB 11k ohne Garantie, 11m Freigabe präzisiert, Format-Kacheln als Subgrid, Immobilien-Quellen
+> Stand: 11.10.2026 · Eintrag 6c24af9 Formate-Karte Online-Kurs auf fünf Zeilen, Beschreibungs-Karte bündig mit Richtpreis
 
 ## Wie du antwortest
 
@@ -61,8 +61,8 @@ Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer. Ab-Preise sind
 
 ### KI-Kompetenz
 
-- KI-Einstieg im Betrieb, zwei Stunden: CHF 890 pro Termin (Bei Ihnen im Betrieb, bis 15 Personen. Raum und Beamer stellen Sie.)
-  - Umfang: Bis 15 Personen, zwei Arbeitsaufgaben aus Ihrem Betrieb, Vorlagen zum Mitnehmen. Raum und Beamer stellen Sie.
+- KI-Einstieg als Webinar, zwei Stunden: CHF 890 pro Termin (Online als Webinar, bis 15 Personen. Kein Raum und kein Beamer nötig.)
+  - Umfang: Bis 15 Personen, zwei Arbeitsaufgaben aus Ihrem Betrieb, Vorlagen zum Mitnehmen. Den Link schicken wir, Sie brauchen je Person nur einen Rechner mit Ton.
 - Training oder Workshop im Betrieb, Halbtag: CHF 1'550 pro Halbtag (Bei Ihnen im Betrieb, pro Gruppe bis 15 Personen. Vorbereitung und Unterlagen inklusive, Raum und Beamer stellen Sie. Grössere Teams in zwei Gruppen.)
   - Umfang: Bis 15 Personen, Vorgespräch, Unterlagen, eine Nachfass-Mail.
 - Training oder Workshop im Betrieb, ganzer Tag: CHF 2'450 pro Tag (Bei Ihnen im Betrieb, pro Gruppe bis 15 Personen. Vorbereitung und Unterlagen inklusive, Raum und Beamer stellen Sie.)
@@ -327,7 +327,7 @@ Nach einem einzelnen Kurstag fehlt oft die Übung, damit das Gelernte im Arbeits
 Was Sie bekommen
 Eine Lernreise nach Ihrem Bedarf aus Training, täglichen kleinen Lerneinheiten, Begleitung am Arbeitsplatz und Führungscoaching.
 Preisrahmen
-KI-Einstieg CHF 890 für zwei Stunden, Training CHF 1'550 pro Halbtag oder CHF 2'450 pro Tag, je Gruppe bis 15 Personen.
+KI-Einstieg als Webinar CHF 890 für zwei Stunden, Training CHF 1'550 pro Halbtag oder CHF 2'450 pro Tag, je Gruppe bis 15 Personen.
 Ablauf
 Kostenloses halbstündiges Erstgespräch, danach eine Lernreise über mehrere Wochen mit Stationen nach Ihrem Bedarf.
 Region
@@ -399,9 +399,8 @@ DIE FORMATE
 Die passenden Formate für Ihren Betrieb.
 Sieben Formate, die sich kombinieren lassen. Jedes entsteht aus Ihren Aufgaben, Ihren Unterlagen und Ihrem Alltag.
 Online-Kurse nach Mass
-Was es ist. Ein Online-Kurs aus Ihren vorhandenen Unterlagen, mit Ihren Beispielen, Quizfragen und Ihrem Auftritt.
+Was es ist. Ein Online-Kurs aus Ihren vorhandenen Unterlagen, mit Ihren Beispielen, Quizfragen und Ihrem Auftritt. Anders als beim Lernvideo wird nichts neu gefilmt oder animiert.
 Wann es passt. Wenn Wissen für viele da sein soll, unabhängig von Ort und Zeit, auch für neue Mitarbeitende.
-Unterschied zum Lernvideo. Der Kurs entsteht aus Unterlagen, die es schon gibt. Ein Lernvideo wird neu aufgenommen, gefilmt oder animiert.
 CHF 1'450 pro Kurs Fünf Minuten Lernzeit aus Ihren vorhandenen Unterlagen, mit Drehbuch, KI-Sprecherstimme, Quiz und zwei Freigaberunden. Fünf Minuten Lernzeit heisst: So lange braucht eine Person im Durchschnitt für die Einheit. Jede weitere Minute Lernzeit CHF 290.
 Lernvideos
 Was es ist. Ein kurzes Video, das einen Ablauf oder ein Thema aus Ihrem Betrieb erklärt.
@@ -419,7 +418,7 @@ Trainings und Workshops
 Was es ist. Ihr Team übt KI an Ihren eigenen Aufgaben, bei Ihnen im Betrieb und auf Ihre Abläufe zugeschnitten.
 Wann es passt. Wenn alle auf denselben Stand kommen sollen, vom ersten Schritt bis zur Vorlage, die bleibt.
 CHF 1'550 pro Halbtag · CHF 2'450 pro Tag Bis 15 Personen, Vorgespräch, Unterlagen, eine Nachfass-Mail.
-CHF 890 pro Termin KI-Einstieg für kleine Teams, zwei Stunden bei Ihnen im Betrieb. Bis 15 Personen, zwei Arbeitsaufgaben aus Ihrem Betrieb, Vorlagen zum Mitnehmen. Raum und Beamer stellen Sie.
+CHF 890 pro Termin KI-Einstieg für kleine Teams, zwei Stunden als Webinar. Bis 15 Personen, zwei Arbeitsaufgaben aus Ihrem Betrieb, Vorlagen zum Mitnehmen. Den Link schicken wir, Sie brauchen je Person nur einen Rechner mit Ton.
 Veränderung begleiten
 Was es ist. Wir begleiten Leitung und Team durch die Veränderung (Fachbegriff: Change Management): Kommunikation, Rollen, Widerstände, Tempo.
 Wann es passt. Wenn KI nicht nur ein Werkzeug ist, sondern verändert, wie bei Ihnen gearbeitet wird.
@@ -912,7 +911,7 @@ KI-Kompetenz
 Was bietet KI-Kompetenz? +
 Trainings, Workshops und Coachings bei Ihnen im Betrieb, dazu Online-Kurse, Lernvideos und kurze tägliche Lerneinheiten: Ihr Team lernt, KI sicher und nützlich einzusetzen, zugeschnitten auf Ihre Abläufe. Zu KI-Kompetenz →
 Welche Lernformate gibt es, und was kosten sie? +
-Training oder Workshop bei Ihnen im Betrieb: CHF 1'550 pro Halbtag oder CHF 2'450 pro Tag , je pro Gruppe bis 15 Personen, nicht pro Person; Raum und Beamer stellen Sie. Für kleine Teams gibt es den KI-Einstieg von zwei Stunden für CHF 890 . Coaching für Führungskräfte: CHF 210 pro Stunde . Online-Kurs nach Mass aus Ihren vorhandenen Unterlagen: CHF 1'450 pro Kurs mit fünf Minuten Lernzeit, jede weitere Minute CHF 290 . Lernvideo bis drei Minuten: als Bildschirmaufnahme ab CHF 1'900 , gefilmt oder animiert ab CHF 4'700 . Tägliche kleine Lerneinheiten: CHF 60 pro Person für ein Programm von vier Wochen, dazu einmalig CHF 900 für den Zuschnitt auf Ihren Betrieb. Veränderung begleiten: CHF 1'700 pro Tag . Begleitung der Mitarbeitenden vor Ort: CHF 700 pro Halbtag oder CHF 1'250 pro Tag . Einen unverbindlichen Richtpreis berechnen Sie im Richtpreis-Rechner .
+Training oder Workshop bei Ihnen im Betrieb: CHF 1'550 pro Halbtag oder CHF 2'450 pro Tag , je pro Gruppe bis 15 Personen, nicht pro Person; Raum und Beamer stellen Sie. Für kleine Teams gibt es den KI-Einstieg von zwei Stunden als Webinar für CHF 890 , ohne Raum und Beamer. Coaching für Führungskräfte: CHF 210 pro Stunde . Online-Kurs nach Mass aus Ihren vorhandenen Unterlagen: CHF 1'450 pro Kurs mit fünf Minuten Lernzeit, jede weitere Minute CHF 290 . Lernvideo bis drei Minuten: als Bildschirmaufnahme ab CHF 1'900 , gefilmt oder animiert ab CHF 4'700 . Tägliche kleine Lerneinheiten: CHF 60 pro Person für ein Programm von vier Wochen, dazu einmalig CHF 900 für den Zuschnitt auf Ihren Betrieb. Veränderung begleiten: CHF 1'700 pro Tag . Begleitung der Mitarbeitenden vor Ort: CHF 700 pro Halbtag oder CHF 1'250 pro Tag . Einen unverbindlichen Richtpreis berechnen Sie im Richtpreis-Rechner .
 Was ist der Unterschied zwischen Online-Kurs und Lernvideo? +
 Der Online-Kurs nach Mass entsteht aus Ihren vorhandenen Unterlagen, mit Ihren Beispielen, Quizfragen und einer KI-Sprecherstimme. Fünf Minuten Lernzeit heisst: So lange braucht eine Person im Durchschnitt für die Einheit. Ein Lernvideo wird dagegen neu produziert: als Bildschirmaufnahme mit Sprecherstimme oder gefilmt beziehungsweise animiert.
 Braucht mein Team Vorkenntnisse? +

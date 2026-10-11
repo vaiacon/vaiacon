@@ -24,8 +24,8 @@
       "positionen": [
         {
           "id": "kk-training-kurz",
-          "titel": "KI-Einstieg im Betrieb, zwei Stunden",
-          "beschreibung": "Der erste Schritt für kleine Teams: Was KI im Büro heute kann, an zwei Aufgaben aus Ihrem Alltag ausprobiert.",
+          "titel": "KI-Einstieg als Webinar, zwei Stunden",
+          "beschreibung": "Der erste Schritt für kleine Teams: Was KI im Büro heute kann, an zwei Aufgaben aus Ihrem Alltag ausprobiert, live online.",
           "einheit": "pro Termin",
           "preis": 890,
           "ab": false,
@@ -33,8 +33,8 @@
           "menge_waehlbar": true,
           "menge_standard": 1,
           "menge_max": 10,
-          "hinweis": "Bei Ihnen im Betrieb, bis 15 Personen. Raum und Beamer stellen Sie.",
-          "umfang": "Bis 15 Personen, zwei Arbeitsaufgaben aus Ihrem Betrieb, Vorlagen zum Mitnehmen. Raum und Beamer stellen Sie.",
+          "hinweis": "Online als Webinar, bis 15 Personen. Kein Raum und kein Beamer nötig.",
+          "umfang": "Bis 15 Personen, zwei Arbeitsaufgaben aus Ihrem Betrieb, Vorlagen zum Mitnehmen. Den Link schicken wir, Sie brauchen je Person nur einen Rechner mit Ton.",
           "folgekosten": null,
           "betreuung_id": null,
           "fremdkosten": null,
