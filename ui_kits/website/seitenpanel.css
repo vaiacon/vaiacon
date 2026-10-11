@@ -105,28 +105,28 @@
   html.sp-offen .sp-schleier { display: block; position: fixed; inset: 0; z-index: 255; background: rgba(20, 16, 12, 0.35); }
 }
 
-/* Kopfzeile: das Panel ersetzt die Hauptnavigation. Oben bleiben Logo und Kontakt. */
-html.mit-seitenpanel .mock-nav-gruppe--angebot,
-html.mit-seitenpanel .mock-nav-gruppe--info a:not(.mock-header__contact) { display: none; }
-html.mit-seitenpanel .mock-nav-gruppe--info::before { display: none; }
-html.mit-seitenpanel .mock-header__nav { justify-content: flex-end; }
-html.mit-seitenpanel .mock-nav-gruppe--info { margin-left: 0; padding-left: 0; }
-html.mit-seitenpanel .mock-menu-toggle { order: 3; }
+/* Keine Kopfzeile mehr: das Panel trägt Logo, Navigation und Kontakt (Philip, 11.10.2026). */
+html.mit-seitenpanel .mock-header,
 html.mit-seitenpanel .mock-mobile-nav { display: none !important; }
-html.mit-seitenpanel:not(.sp-ohne-burger) .sp-knopf { display: none !important; }
 
-/* Unter 1200 px öffnet das ☰ der Kopfzeile das Panel (bis 1024 px zeigt die Seite es selbst). */
-@media (min-width: 1025px) and (max-width: 1199px) {
-  html.mit-seitenpanel .mock-menu-toggle {
-    width: 46px; height: 42px; padding: 0; border: 0; background: transparent;
-    display: inline-flex; flex-direction: column; align-items: center; justify-content: center; gap: 5px;
-    flex: 0 0 auto; cursor: pointer;
+/* Unter 1200 px öffnet ein runder Knopf oben links das Panel. */
+@media (max-width: 1199px) {
+  html.mit-seitenpanel .sp-knopf {
+    display: inline-flex !important;
+    flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+    top: 12px; left: 12px; bottom: auto;
+    width: 46px; height: 46px; padding: 0;
+    border: 1px solid var(--sand-300); border-radius: 999px;
+    background: var(--cream-50);
+    box-shadow: var(--shadow-soft);
   }
-  html.mit-seitenpanel .mock-menu-toggle span {
-    width: 19px; height: 2px; border-radius: 999px; background: var(--cream-50);
-    transition: transform 0.24s ease, opacity 0.18s ease, background 0.3s ease;
-  }
-  html.mit-seitenpanel .mock-header.is-solid .mock-menu-toggle span { background: var(--terra-500); }
+  html.mit-seitenpanel .sp-knopf span { display: block; width: 18px; height: 2px; border-radius: 999px; background: var(--terra-500); }
+  html.sp-offen .sp-knopf { visibility: hidden; }
+  /* Erstanalyse: die klebende Fortschrittsleiste macht dem Knopf Platz. */
+  html.mit-seitenpanel .ea-progress-inner { padding-left: 70px; }
+}
+@media (min-width: 1200px) {
+  html.mit-seitenpanel .sp-knopf { display: none !important; }
 }
 
 /* Farbe: Creme (cream-50) mit dunkler Schrift, Terracotta als Markierung (Philip, 11.10.2026). */

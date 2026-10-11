@@ -58,14 +58,13 @@
   knopf.className = 'sp-knopf';
   knopf.setAttribute('aria-controls', 'sp-panel');
   knopf.setAttribute('aria-expanded', 'false');
-  knopf.innerHTML = '<span aria-hidden="true">☰</span> Menü';
+  knopf.setAttribute('aria-label', 'Menü öffnen');
+  knopf.innerHTML = '<span></span><span></span><span></span>';
   document.body.appendChild(knopf);
   var schleier = document.createElement('div');
   schleier.className = 'sp-schleier';
   document.body.appendChild(schleier);
   var burger = document.querySelector('.mock-menu-toggle');
-  // Seiten ohne Burger (z. B. die Erstanalyse) zeigen auf dem Handy den Knopf «Menü».
-  if (!burger) document.documentElement.classList.add('sp-ohne-burger');
   function zu() {
     document.documentElement.classList.remove('sp-offen');
     knopf.setAttribute('aria-expanded', 'false');
