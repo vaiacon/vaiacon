@@ -53,9 +53,6 @@
 .lr-angebot__preis { font-size: clamp(1.35rem, 1rem + 1.8vw, 2.2rem); text-wrap: balance; font-weight: var(--weight-bold); letter-spacing: var(--tracking-tight); line-height: 1.15; }
 .lr-angebot__fuss { font-size: var(--text-body-sm); color: var(--text-on-terra-soft); }
 .sv-hero__visual { position: relative; }
-.lr-sticker { position: absolute; z-index: 2; top: 6%; right: 2%; width: 7.2rem; height: 7.2rem; display: grid; place-content: center; text-align: center; border-radius: 50%; background: var(--cream-50); color: var(--terra-600); box-shadow: var(--shadow-soft); transform: rotate(8deg); line-height: 1.1; text-decoration: none; }
-.lr-sticker small { display: block; font-family: var(--font-mono); font-size: 10.5px; font-weight: var(--weight-bold); letter-spacing: .08em; text-transform: uppercase; color: var(--text-strong); }
-.lr-sticker strong { display: block; font-size: 1.45rem; font-weight: var(--weight-bold); margin: 2px 0; }
 .lr-preise { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--space-4); margin-top: var(--space-9); }
 .lr-preis { display: flex; flex-direction: column; gap: var(--space-2); padding: var(--space-5); border: 1px solid var(--border-strong); border-radius: var(--radius-lg); background: var(--surface-card); text-align: left; }
 .lr-preis--angebot { border-color: var(--terra-500); box-shadow: inset 0 0 0 1px var(--terra-500); }
@@ -66,7 +63,7 @@
 .lr-preise__fuss { margin: var(--space-6) auto 0; max-width: 62ch; text-align: center; color: var(--text-body); font-size: var(--text-body-sm); line-height: var(--leading-relaxed); }
 .lr-preise__fuss strong { color: var(--text-strong); }
 @media (max-width: 1000px) { .lr-preise { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 560px) { .lr-preise { grid-template-columns: minmax(0, 1fr); } .lr-sticker { width: 6rem; height: 6rem; right: 0; } .lr-sticker strong { font-size: 1.2rem; } }
+@media (max-width: 560px) { .lr-preise { grid-template-columns: minmax(0, 1fr); } }
 </style>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
@@ -355,7 +352,6 @@
           </div>
         </div>
         <div class="sv-hero__visual" aria-label="KI-Kompetenz Übersicht">
-          <a class="lr-sticker" href="#preise" aria-label="Einstiegsangebot Ganztages-Training, zu den Richtpreisen"><small>Ganzer Tag</small><strong>ab <span data-preis="kk-training-tag-angebot" data-preis-form="zahl">1'550</span></strong><small>CHF</small></a>
           <figure class="sv-hero__robot sv-hero__robot--frei">
             <picture><source srcset="assets/vaiacon-buerobot-schulung-zeigestab.webp" type="image/webp"><img src="assets/vaiacon-buerobot-schulung-zeigestab.png" alt="Der vaiacon-Roboter mit Buch und Zeigestab" width="682" height="820" fetchpriority="high"></picture>
           </figure>
