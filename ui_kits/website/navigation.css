@@ -250,7 +250,7 @@ html.vn-sperre, html.vn-sperre body { overflow: hidden; }
 .vn-seite li.auf-dunkel, .vn-seite .vn-seite__kopf.auf-dunkel {
   --rl-text: #fff; --rl-leise: rgba(255, 255, 255, 0.86); --rl-akzent: #fff; --rl-linie: rgba(255, 255, 255, 0.55);
 }
-@media (min-width: 1360px) { .vn-seite { display: block; } }
+@media (min-width: 1450px) { .vn-seite { display: block; } }
 
 .vn-reihe { position: relative; z-index: 5; background: var(--cream-100); border-bottom: 1px solid var(--border-soft); }
 .vn-reihe__innen { display: flex; gap: 8px; overflow-x: auto; padding: 12px 16px; scrollbar-width: none; max-width: 1320px; margin: 0 auto; box-sizing: border-box; }
@@ -260,7 +260,7 @@ html.vn-sperre, html.vn-sperre body { overflow: hidden; }
   background: var(--cream-50); color: var(--ink-900); font: 600 14px/1 var(--font-sans); text-decoration: none; white-space: nowrap;
 }
 .vn-reihe a[aria-current] { background: var(--terra-600); border-color: var(--terra-600); color: var(--cream-50); }
-@media (min-width: 1360px) { .vn-reihe { display: none; } }
+@media (min-width: 1450px) { .vn-reihe { display: none; } }
 
 @media (prefers-reduced-motion: reduce) {
   .vn, .vn-leiste, .vn-flaeche, .vn-voll, .vn-seite, .vn-seite a, .vn-seite__unter li, .vn-seite a::before, .vn-seite__huelle, .vn-seite__auf .vn-pfeil, .vn-pfeil, .vn-punkt::after, .vn-menue__balken i, .vn-logo img { transition: none !important; }

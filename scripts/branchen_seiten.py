@@ -20,7 +20,7 @@ from pathlib import Path
 
 WURZEL = Path(__file__).resolve().parents[1]
 BASIS = "https://vaiacon.ch"
-VERSION = "20261012-nav16"
+VERSION = "20261012-nav17"
 
 # (Überschrift, Lead, Schlusssatz) je Branche
 TEXTE = {
