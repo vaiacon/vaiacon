@@ -29,10 +29,26 @@
 .lr-format__preis small span { white-space: normal; }
 .lr-format__preis small.lr-format__nebenpreis { margin-top: var(--space-2); }
 .lr-format__preis + .lr-format__preis { margin-top: var(--space-3) !important; }
+/* Kacheln: Stichworte statt Kleingedrucktes */
+.lr-format__chips { display: flex; flex-wrap: wrap; align-content: start; gap: 6px; margin: 0 0 var(--space-3); padding: 0; list-style: none; }
+.lr-format__chips li { padding: 4px 10px; border: 1px solid var(--border-strong); border-radius: var(--radius-pill); background: var(--cream-100); font-size: 13px; line-height: 1.3; color: var(--text-strong); }
+/* Wochentage direkt in der Kurve */
+.lr-kurve svg .lr-k-hilfe { stroke: var(--terra-500); stroke-width: 1; stroke-dasharray: 2 4; opacity: .45; }
+.lr-kurve svg .lr-k-punkt { fill: var(--cream-card); stroke: var(--terra-500); stroke-width: 3; }
+.lr-kurve svg .lr-k-tagname { font-family: var(--font-mono); font-size: 10.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; fill: var(--terra-600); }
+.lr-kurve svg .lr-k-einheit { font-size: 12px; font-weight: 600; fill: var(--text-strong); }
+.lr-kurve__tage { display: none; }
+@media (max-width: 700px) {
+  .lr-kurve svg .lr-k-label { display: none; }
+  .lr-kurve__tage { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 16px; margin: 12px 0 0; padding: 0; list-style: none; font-size: 14px; color: var(--text-strong); }
+  .lr-kurve__tage li { display: flex; gap: 8px; align-items: baseline; }
+  .lr-kurve__tage b { font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--terra-600); min-width: 2.2em; }
+}
 </style>
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="stylesheet" href="ui_kits/website/abschluss.css">
 <!-- Strukturdaten: erzeugt von scripts/strukturdaten.py, nicht von Hand aendern -->
 <script type="application/ld+json">
 {
@@ -44,7 +60,7 @@
   "url": "https://vaiacon.ch/",
   "logo": "https://vaiacon.ch/assets/logo-lockup-terra.png",
   "image": "https://vaiacon.ch/assets/vaiacon-buerobot-startseite.png",
-  "description": "vaiacon führt Schweizer KMU an KI heran, in drei Bereichen: KI-Kompetenz (Trainings, Coaching, Online-Kurse), Sichtbarkeit in Suchmaschinen und KI-Antworten und Automationen von Büroarbeit; auf Wunsch mit Betreuung und Begleitung. Gedacht für Betriebe mit 5 bis 30 Mitarbeitenden und eigenem Büro. Preise offen, Richtpreis online berechnen. Ohne Fachchinesisch.",
+  "description": "vaiacon führt Schweizer KMU an KI heran, in drei Bereichen: KI-Kompetenz (Trainings, Coaching, Online-Kurse), Sichtbarkeit in Suchmaschinen und KI-Antworten und Automationen von Büroarbeit; auf Wunsch mit Betreuung und Begleitung. Gedacht für Betriebe mit 5 bis 30 Mitarbeitenden und eigenem Büro. Jedes Angebot besprechen wir persönlich. Ohne Fachchinesisch.",
   "email": "hallo@vaiacon.ch",
   "foundingDate": "2026",
   "address": {
@@ -107,7 +123,7 @@
           "name": "Automationen",
           "serviceType": "Automatisierung von Büroarbeit",
           "url": "https://vaiacon.ch/bot",
-          "description": "Belege erfassen, Offertenentwürfe erstellen, Korrespondenz und Anfragen automatisch vorbereiten, dazu Chatbot mit Firmenwissen, Telefonassistent und Anbindung an Ihre Software. Fixpreis nach der Erstanalyse."
+          "description": "Belege erfassen, Offertenentwürfe erstellen, Korrespondenz und Anfragen automatisch vorbereiten, dazu Chatbot mit Firmenwissen, Telefonassistent und Anbindung an Ihre Software."
         }
       },
       {
@@ -139,13 +155,6 @@
     "@type": "Country",
     "name": "Schweiz"
   },
-  "offers": {
-    "@type": "AggregateOffer",
-    "priceCurrency": "CHF",
-    "lowPrice": 60,
-    "highPrice": 4700,
-    "offerCount": 13
-  },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",
     "name": "KI-Kompetenz",
@@ -156,13 +165,6 @@
           "@type": "Service",
           "name": "KI-Einstieg als Webinar, zwei Stunden",
           "description": "Der erste Schritt für kleine Teams: Was KI im Büro heute kann, an zwei Aufgaben aus Ihrem Alltag ausprobiert, live online. Bis 15 Personen, zwei Arbeitsaufgaben aus Ihrem Betrieb, Vorlagen zum Mitnehmen. Den Link schicken wir, Sie brauchen je Person nur einen Rechner mit Ton."
-        },
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "priceCurrency": "CHF",
-          "valueAddedTaxIncluded": true,
-          "price": 890,
-          "unitText": "Termin"
         }
       },
       {
@@ -171,13 +173,6 @@
           "@type": "Service",
           "name": "Training oder Workshop im Betrieb, Halbtag",
           "description": "Ihr Team übt KI an Ihren eigenen Aufgaben. Thema nach Wahl: KI im Büro, Sichtbarkeit, Texte und Offerten. Bis 15 Personen, Vorgespräch, Unterlagen, eine Nachfass-Mail."
-        },
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "priceCurrency": "CHF",
-          "valueAddedTaxIncluded": true,
-          "price": 1550,
-          "unitText": "Halbtag"
         }
       },
       {
@@ -186,13 +181,6 @@
           "@type": "Service",
           "name": "Training oder Workshop im Betrieb, ganzer Tag",
           "description": "Ein ganzer Tag für Ihr Team: Grundlagen, Übungen an Ihren Fällen und konkrete nächste Schritte. Nur bei zwei Gruppen oder Vertiefung. Der Halbtag ist der Standard."
-        },
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "priceCurrency": "CHF",
-          "valueAddedTaxIncluded": true,
-          "price": 2450,
-          "unitText": "Tag"
         }
       },
       {
@@ -201,13 +189,6 @@
           "@type": "Service",
           "name": "Coaching für Führungskräfte",
           "description": "Einzelgespräche für Personen, die entscheiden: Wie führe ich ein Team, das mit KI arbeitet? Einzeltermine à 60 Minuten, online oder vor Ort."
-        },
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "priceCurrency": "CHF",
-          "valueAddedTaxIncluded": true,
-          "price": 210,
-          "unitText": "Stunde"
         }
       },
       {
@@ -216,12 +197,6 @@
           "@type": "Service",
           "name": "Coaching-Paket, sechs Stunden",
           "description": "Sechs Einzelgespräche für Personen, die entscheiden: Wie führe ich ein Team, das mit KI arbeitet? Sechs Termine à 60 Minuten innert drei Monaten, online oder vor Ort."
-        },
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "priceCurrency": "CHF",
-          "valueAddedTaxIncluded": true,
-          "price": 1190
         }
       },
       {
@@ -230,13 +205,6 @@
           "@type": "Service",
           "name": "Online-Kurs nach Mass, fünf Minuten Lernzeit",
           "description": "Ein Kurs mit fünf Minuten Lernzeit, gebaut aus Ihren vorhandenen Unterlagen, mit Ihren Beispielen, Quizfragen und Ihrem Auftritt. Ihr Team lernt, wann es passt. Ein neu gedrehtes oder animiertes Video ist nicht enthalten, dafür gibt es die Lernvideos. Fünf Minuten Lernzeit aus Ihren vorhandenen Unterlagen, mit Drehbuch, KI-Sprecherstimme, Quiz und zwei Freigaberunden."
-        },
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "priceCurrency": "CHF",
-          "valueAddedTaxIncluded": true,
-          "price": 1450,
-          "unitText": "Kurs"
         }
       },
       {
@@ -245,13 +213,6 @@
           "@type": "Service",
           "name": "Lernvideo als Bildschirmaufnahme",
           "description": "Ein kurzes Video mit Bildschirmaufnahme und Sprecherstimme, das einen Ablauf aus Ihrem Betrieb erklärt. Bildschirm, KI-Sprecherstimme, Schnitt, eine Freigaberunde. KI-Stimme, Gestaltungsgrad und Lieferformat stehen im Angebot."
-        },
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "priceCurrency": "CHF",
-          "valueAddedTaxIncluded": true,
-          "minPrice": 1900,
-          "unitText": "Video bis drei Minuten"
         }
       },
       {
@@ -260,13 +221,6 @@
           "@type": "Service",
           "name": "Lernvideo, gefilmt oder animiert",
           "description": "Ein kurzes Video, gefilmt oder animiert, mit Sprecherstimme, das einen Ablauf aus Ihrem Betrieb erklärt. Dreh oder Animation, Sprecherstimme, zwei Freigaberunden."
-        },
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "priceCurrency": "CHF",
-          "valueAddedTaxIncluded": true,
-          "minPrice": 4700,
-          "unitText": "Video bis drei Minuten"
         }
       },
       {
@@ -275,12 +229,6 @@
           "@type": "Service",
           "name": "Tägliche kleine Lerneinheiten: Zuschnitt",
           "description": "Wir bauen das Vier-Wochen-Programm auf Ihre Themen und Ihren Betrieb. Ein Programm sind vier Wochen: 20 Einheiten à drei bis fünf Minuten aus Ihren vorhandenen Unterlagen (Handbuch, Schulung, Prozessbeschrieb), Kanal nach Wahl (Mail, Teams, WhatsApp), ohne laufende Kosten. Neue Inhalte ohne Grundlage nach Aufwand."
-        },
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "priceCurrency": "CHF",
-          "valueAddedTaxIncluded": true,
-          "price": 900
         }
       },
       {
@@ -289,13 +237,6 @@
           "@type": "Service",
           "name": "Tägliche kleine Lerneinheiten: Teilnahme",
           "description": "Jeden Arbeitstag ein paar Minuten Lernstoff, direkt aufs Smartphone oder an den Arbeitsplatz. Für ein Programm von vier Wochen, ab zehn Personen. Der Programmpreis richtet sich nach der Zahl der Personen."
-        },
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "priceCurrency": "CHF",
-          "valueAddedTaxIncluded": true,
-          "price": 60,
-          "unitText": "Person"
         }
       },
       {
@@ -304,13 +245,6 @@
           "@type": "Service",
           "name": "Veränderung begleiten",
           "description": "Wir begleiten Ihre Leitung und Ihr Team durch die Veränderung: Kommunikation, Rollen, Widerstände, Tempo. Wir begleiten Ihre Leitung und Ihr Team im Betrieb: Kommunikation, Rollen, Widerstände und Tempo. Vor- und Nachbereitung sind im Tagespreis inbegriffen."
-        },
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "priceCurrency": "CHF",
-          "valueAddedTaxIncluded": true,
-          "price": 1700,
-          "unitText": "Tag"
         }
       },
       {
@@ -319,13 +253,6 @@
           "@type": "Service",
           "name": "Begleitung am Arbeitsplatz, Halbtag",
           "description": "Wir sind bei Ihnen im Betrieb und helfen Ihren Leuten direkt an ihren Aufgaben. Ohne Trainingskonzept: wir sind da und helfen."
-        },
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "priceCurrency": "CHF",
-          "valueAddedTaxIncluded": true,
-          "price": 700,
-          "unitText": "Halbtag"
         }
       },
       {
@@ -334,13 +261,6 @@
           "@type": "Service",
           "name": "Begleitung am Arbeitsplatz, ganzer Tag",
           "description": "Wir sind bei Ihnen im Betrieb und helfen Ihren Leuten direkt an ihren Aufgaben. Wie der Halbtag, ein ganzer Tag."
-        },
-        "priceSpecification": {
-          "@type": "UnitPriceSpecification",
-          "priceCurrency": "CHF",
-          "valueAddedTaxIncluded": true,
-          "price": 1250,
-          "unitText": "Tag"
         }
       }
     ]
@@ -354,7 +274,7 @@
 <div class="sv-page">
   <header class="mock-header sv-header">
     <div class="mock-header__inner">
-      <a class="mock-header__logo" href="./" aria-label="vaiacon Start">
+      <a class="mock-header__logo" href="/" aria-label="vaiacon Start">
         <img src="assets/logo-lockup-white.svg" alt="vaiacon" width="214" height="39">
       </a>
       <button class="mock-menu-toggle" type="button" aria-label="Menü öffnen" aria-controls="mock-mobile-menu" aria-expanded="false">
@@ -396,7 +316,7 @@
       <div class="sv-hero__inner">
         <div class="sv-hero__copy">
           <p class="sv-kicker sv-kicker--on-terra">KI-KOMPETENZ</p>
-          <h1>KI-Schulungen für Schweizer KMU, die im Arbeitsalltag funktionieren</h1>
+          <h1>KI-Schulungen für Schweizer KMU</h1>
           <p class="sv-hero__lead">
             Ein einzelner Kurstag reicht selten, damit KI im Alltag ankommt. Eine Lernreise verbindet über mehrere Wochen Training, kurze tägliche Einheiten, Begleitung am Arbeitsplatz und Coaching der Führung. Welche Teile Sie brauchen, legen wir gemeinsam fest.
           </p>
@@ -423,8 +343,6 @@
             <dd>Nach einem einzelnen Kurstag fehlt oft die Übung, damit das Gelernte im Arbeitsalltag ankommt.</dd>
             <dt>Was Sie bekommen</dt>
             <dd>Eine Lernreise nach Ihrem Bedarf aus Training, täglichen kleinen Lerneinheiten, Begleitung am Arbeitsplatz und Führungscoaching.</dd>
-            <dt>Preisrahmen</dt>
-            <dd>KI-Einstieg als Webinar <span data-preis="kk-training-kurz" data-preis-form="betrag">CHF 890</span> für zwei Stunden, Training <span data-preis="kk-training-halbtag" data-preis-form="betrag">CHF 1'550</span> pro Halbtag oder <span data-preis="kk-training-tag" data-preis-form="betrag">CHF 2'450</span> pro Tag, je Gruppe bis 15 Personen.</dd>
             <dt>Ablauf</dt>
             <dd>Kostenloses halbstündiges Erstgespräch, danach eine Lernreise über mehrere Wochen mit Stationen nach Ihrem Bedarf.</dd>
             <dt>Region</dt>
@@ -461,7 +379,7 @@
             <article class="lz-tafel" data-station><figure class="lz-bild"><picture><source srcset="assets/vaiacon-buerobot-journey-coaching.webp" type="image/webp"><img src="assets/vaiacon-buerobot-journey-coaching.png" alt="Der vaiacon-Roboter sitzt mit einer Tasse auf einem Hocker und erklärt" loading="lazy" decoding="async"></picture></figure><div class="lz-text"><p class="lz-zeit"><span class="lz-zeit__nr">7</span>Woche 7 · Coaching</p><h3>Coaching der Führungskräfte</h3><p>In Einzelgesprächen geht es darum, was Führung jetzt anders macht: Wer entscheidet was, wie sprechen Sie über KI im Team, wo setzen Sie Grenzen.</p><p class="lz-formate"><a class="lr-chip" href="#format-coaching">Coaching für Führungskräfte</a></p></div></article>
             <article class="lz-tafel lz-tafel--mess" data-station><figure class="lz-bild"><picture><source srcset="assets/vaiacon-buerobot-academy-schreibtisch.webp" type="image/webp"><img src="assets/vaiacon-buerobot-academy-schreibtisch.png" alt="Der vaiacon-Roboter am Schreibtisch" loading="lazy" decoding="async"></picture></figure><div class="lz-text"><p class="lz-zeit"><span class="lz-zeit__nr">8</span>nach Woche 8 · Wirkung</p><h3>Wirkung messen, Ziele prüfen</h3><p>Nach den vier Wochen Lerneinheiten stellen wir dieselben Fragen wie zu Beginn, an die Führung und an das Team. Wir legen Vorher und Nachher nebeneinander.</p><div class="lz-mess"><p class="lz-mess__kopf"><span class="lz-fahne" aria-hidden="true"></span>Messpunkt · Zielcheck</p><p>Jedes Ziel aus dem Auftakt bekommt ein Ergebnis: erreicht, teilweise oder offen. Was offen ist, wird zur nächsten Etappe.</p></div><p class="lz-formate"><a class="lr-chip" href="#standortbestimmung">Standortbestimmung</a></p></div></article>
             <article class="lz-tafel lz-tafel--ziel" id="wirkung" data-station data-punkt-zeit="Nach Woche " data-punkt-titel="Wirkung und Ziele">
-              <figure class="lz-bild"><picture><source srcset="assets/vaiacon-buerobot-journey-ziel.webp" type="image/webp"><img src="assets/vaiacon-buerobot-journey-ziel.png" alt="Der vaiacon-Roboter mit Flagge am Ziel, daneben eine steigende Kurve" loading="lazy" decoding="async"></picture></figure>
+              <figure class="lz-bild"><picture><img src="assets/vaiacon-buerobot-journey-ziel-medaille.png" alt="Der vaiacon-Roboter mit Zielflagge und Medaille winkt" width="640" height="769" loading="lazy" decoding="async"></picture></figure>
               <div class="lz-text">
                 <p class="lz-zeit"><span class="lz-zeit__nr"><span class="lz-fahne" aria-hidden="true"></span></span><span>Ziel · nach Woche <span data-lz-woche>8</span></span></p>
                 <h3>Am Ende wissen Sie, ob es gewirkt hat.</h3>
@@ -515,55 +433,47 @@
           <article class="lr-format" id="format-elearning">
             <figure class="lr-format__bild"><picture><source srcset="assets/vaiacon-buerobot-journey-elearning.webp" type="image/webp"><img src="assets/vaiacon-buerobot-journey-elearning.png" alt="Der vaiacon-Roboter zum Thema Online-Kurse nach Mass" loading="lazy" decoding="async"></picture></figure>
             <h3>Online-Kurse nach Mass</h3>
-            <p><strong>Was es ist.</strong> Ein Online-Kurs aus Ihren vorhandenen Unterlagen, mit Ihren Beispielen, Quizfragen und Ihrem Auftritt. Anders als beim Lernvideo wird nichts neu gefilmt oder animiert.</p>
-            <p><strong>Wann es passt.</strong> Wenn Wissen für viele da sein soll, unabhängig von Ort und Zeit, auch für neue Mitarbeitende.</p>
-            <p class="lr-format__preis"><span data-preis="kk-elearning-lernminute">CHF 1'450 pro Kurs</span><small><span data-preis="kk-elearning-lernminute" data-preis-form="umfang">Fünf Minuten Lernzeit aus Ihren vorhandenen Unterlagen, mit Drehbuch, KI-Sprecherstimme, Quiz und zwei Freigaberunden.</span></small><small class="lr-format__nebenpreis"><span data-preis="kk-elearning-lernminute" data-preis-form="hinweis">Fünf Minuten Lernzeit heisst: So lange braucht eine Person im Durchschnitt für die Einheit. Jede weitere Minute Lernzeit CHF 290.</span></small></p>
+            <p>Wenn Wissen für alle da sein soll, auch für neue Mitarbeitende.</p>
+            <ul class="lr-format__chips"><li>aus Ihren Unterlagen</li><li>mit Quiz</li><li>5 Min Lernzeit</li></ul>
           </article>
           <article class="lr-format" id="format-video">
             <figure class="lr-format__bild"><picture><source srcset="assets/vaiacon-buerobot-journey-video.webp" type="image/webp"><img src="assets/vaiacon-buerobot-journey-video.png" alt="Der vaiacon-Roboter zum Thema Lernvideos" loading="lazy" decoding="async"></picture></figure>
             <h3>Lernvideos</h3>
-            <p><strong>Was es ist.</strong> Ein kurzes Video, das einen Ablauf oder ein Thema aus Ihrem Betrieb erklärt.</p>
-            <p><strong>Wann es passt.</strong> Wenn dieselbe Frage immer wieder kommt oder ein Ablauf sich besser zeigen als beschreiben lässt.</p>
-            <p class="lr-format__preis"><span data-preis="kk-lernvideo-screencast" data-preis-form="betrag">ab CHF 1'900</span><small>Als Bildschirmaufnahme, pro Video bis drei Minuten. <span data-preis="kk-lernvideo-screencast" data-preis-form="umfang">Bildschirm, KI-Sprecherstimme, Schnitt, eine Freigaberunde. KI-Stimme, Gestaltungsgrad und Lieferformat stehen im Angebot.</span></small><small class="lr-format__nebenpreis">Gefilmt oder animiert, bis drei Minuten: <span data-preis="kk-lernvideo" data-preis-form="ab">ab CHF 4'700</span>. <span data-preis="kk-lernvideo" data-preis-form="umfang">Dreh oder Animation, Sprecherstimme, zwei Freigaberunden.</span></small></p>
+            <p>Wenn dieselbe Frage immer wieder kommt.</p>
+            <ul class="lr-format__chips"><li>bis 3 Min</li><li>Bildschirm oder gefilmt</li><li>mit Sprecherstimme</li></ul>
           </article>
           <article class="lr-format" id="format-coaching">
             <figure class="lr-format__bild"><picture><source srcset="assets/vaiacon-buerobot-journey-coaching.webp" type="image/webp"><img src="assets/vaiacon-buerobot-journey-coaching.png" alt="Der vaiacon-Roboter zum Thema Coaching für Führungskräfte" loading="lazy" decoding="async"></picture></figure>
             <h3>Coaching für Führungskräfte</h3>
-            <p><strong>Was es ist.</strong> Einzelgespräche für Personen, die entscheiden: Wie führe ich ein Team, das mit KI arbeitet?</p>
-            <p><strong>Wann es passt.</strong> Wenn Sie vorangehen wollen, ohne alles selbst zu können, oder wenn im Team Unsicherheit herrscht.</p>
-            <p class="lr-format__preis">Einzelstunde <span data-preis="kk-coaching-fuehrung">CHF 210 pro Stunde</span> · Paket <span data-preis="kk-coaching-paket">CHF 1'190</span><small>Paket: <span data-preis="kk-coaching-paket" data-preis-form="umfang">Sechs Termine à 60 Minuten innert drei Monaten, online oder vor Ort.</span> Einzelne Stunden ausserhalb des Pakets verrechnen wir pro Stunde.</small></p>
+            <p>Wenn Sie vorangehen wollen, ohne alles selbst zu können.</p>
+            <ul class="lr-format__chips"><li>Einzelgespräch</li><li>online oder vor Ort</li><li>6er-Paket</li></ul>
           </article>
           <article class="lr-format" id="format-vor-ort">
             <figure class="lr-format__bild"><picture><source srcset="assets/vaiacon-buerobot-journey-vor-ort.webp" type="image/webp"><img src="assets/vaiacon-buerobot-journey-vor-ort.png" alt="Der vaiacon-Roboter zum Thema Begleitung der Mitarbeitenden vor Ort" loading="lazy" decoding="async"></picture></figure>
-            <h3>Begleitung der Mitarbeitenden vor Ort</h3>
-            <p><strong>Was es ist.</strong> Wir sitzen bei Ihnen im Betrieb und helfen Ihren Leuten direkt am Arbeitsplatz.</p>
-            <p><strong>Wann es passt.</strong> Wenn das Training vorbei ist und im Alltag die ersten echten Fragen auftauchen.</p>
-            <p class="lr-format__preis"><span data-preis="kk-begleitung-vor-ort-halbtag">CHF 700 pro Halbtag</span> · <span data-preis="kk-begleitung-vor-ort">CHF 1'250 pro Tag</span><small><span data-preis="kk-begleitung-vor-ort-halbtag" data-preis-form="umfang">Ohne Trainingskonzept: wir sind da und helfen.</span></small></p>
+            <h3>Begleitung vor Ort</h3>
+            <p>Wenn im Alltag die ersten echten Fragen auftauchen.</p>
+            <ul class="lr-format__chips"><li>am Arbeitsplatz</li><li>nach dem Training</li><li>Halbtag oder Tag</li></ul>
           </article>
           <article class="lr-format" id="format-training">
             <figure class="lr-format__bild"><picture><source srcset="assets/vaiacon-buerobot-schulung-zeigestab.webp" type="image/webp"><img src="assets/vaiacon-buerobot-schulung-zeigestab.png" alt="Der vaiacon-Roboter zum Thema Trainings und Workshops" loading="lazy" decoding="async"></picture></figure>
             <h3>Trainings und Workshops</h3>
-            <p><strong>Was es ist.</strong> Ihr Team übt KI an Ihren eigenen Aufgaben, bei Ihnen im Betrieb und auf Ihre Abläufe zugeschnitten.</p>
-            <p><strong>Wann es passt.</strong> Wenn alle auf denselben Stand kommen sollen, vom ersten Schritt bis zur Vorlage, die bleibt.</p>
-            <div class="lr-format__preise"><p class="lr-format__preis"><span data-preis="kk-training-halbtag">CHF 1'550 pro Halbtag</span> · <span data-preis="kk-training-tag">CHF 2'450 pro Tag</span><small><span data-preis="kk-training-halbtag" data-preis-form="umfang">Bis 15 Personen, Vorgespräch, Unterlagen, eine Nachfass-Mail.</span></small></p>
-            <p class="lr-format__preis"><span data-preis="kk-training-kurz">CHF 890 pro Termin</span><small>KI-Einstieg für kleine Teams, zwei Stunden als Webinar. <span data-preis="kk-training-kurz" data-preis-form="umfang">Bis 15 Personen, zwei Arbeitsaufgaben aus Ihrem Betrieb, Vorlagen zum Mitnehmen. Den Link schicken wir, Sie brauchen je Person nur einen Rechner mit Ton.</span></small></p></div>
+            <p>Wenn das ganze Team auf denselben Stand kommen soll.</p>
+            <ul class="lr-format__chips"><li>bis 15 Personen</li><li>eigene Aufgaben</li><li>auch als Webinar</li></ul>
           </article>
           <article class="lr-format" id="format-change">
             <figure class="lr-format__bild"><picture><source srcset="assets/vaiacon-buerobot-journey-change.webp" type="image/webp"><img src="assets/vaiacon-buerobot-journey-change.png" alt="Der vaiacon-Roboter zum Thema Veränderung begleiten" loading="lazy" decoding="async"></picture></figure>
             <h3>Veränderung begleiten</h3>
-            <p><strong>Was es ist.</strong> Wir begleiten Leitung und Team durch die Veränderung (Fachbegriff: Change Management): Kommunikation, Rollen, Widerstände, Tempo.</p>
-            <p><strong>Wann es passt.</strong> Wenn KI nicht nur ein Werkzeug ist, sondern verändert, wie bei Ihnen gearbeitet wird.</p>
-            <p class="lr-format__preis"><span data-preis="kk-change-begleitung">CHF 1'700 pro Tag</span><small><span data-preis="kk-change-begleitung" data-preis-form="hinweis">Inklusive Vorbereitung und Nachbereitung.</span></small></p>
+            <p>Wenn KI verändert, wie bei Ihnen gearbeitet wird.</p>
+            <ul class="lr-format__chips"><li>Leitung und Team</li><li>Rollen und Kommunikation</li><li>inkl. Vor- und Nachbereitung</li></ul>
           </article>
           <article class="lr-format" id="format-mikro">
             <figure class="lr-format__bild"><picture><source srcset="assets/vaiacon-buerobot-journey-mikro.webp" type="image/webp"><img src="assets/vaiacon-buerobot-journey-mikro.png" alt="Der vaiacon-Roboter zum Thema Tägliche kleine Lerneinheiten" loading="lazy" decoding="async"></picture></figure>
             <h3>Tägliche kleine Lerneinheiten</h3>
-            <p><strong>Was es ist.</strong> An 20 Arbeitstagen jeweils drei bis fünf Minuten Lernstoff zu Ihren Themen, aufs Smartphone oder an den Arbeitsplatz.</p>
-            <p><strong>Wann es passt.</strong> Wenn Gelerntes nach dem Training im Alltag haften bleiben soll.</p>
-            <p class="lr-format__preis">Einmalig <span data-preis="kk-mikro-einrichtung">CHF 900</span> · plus <span data-preis="kk-mikro-lerneinheiten">CHF 60 pro Person</span></p>
+            <p>Damit Gelerntes im Alltag haften bleibt.</p>
+            <ul class="lr-format__chips"><li>20 Arbeitstage</li><li>3–5 Min pro Tag</li><li>aufs Handy</li></ul>
           </article>
         </div>
-        <p class="lr-satz"><strong>Jede Reise ist eine Kombination.</strong> Sie zahlen nur, was Ihr Betrieb braucht. <span data-preis-satz="ab_preis">Ab-Preise sind Fixpreise nach der Erstanalyse, nie offen nach oben.</span> <span data-preis-mwst>Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer.</span></p>
+        <p class="lr-satz"><strong>Jede Reise ist eine Kombination.</strong> Sie zahlen nur, was Ihr Betrieb braucht. Was genau enthalten ist, legen wir im Erstgespräch fest.</p>
       </div>
     </section>
 
@@ -577,33 +487,46 @@
           </p>
         </div>
 
-        <div class="lr-tage">
-          <ol class="lr-tage__liste" aria-label="Eine Lernwoche in kleinen Einheiten">
-            <li class="lr-tag"><span class="lr-tag__name">Montag</span><span class="lr-tag__min">3–5 Min</span><h3>Ein Tipp</h3><p>Ein Satz, den Sie heute an einer echten Aufgabe ausprobieren.</p></li>
-            <li class="lr-tag"><span class="lr-tag__name">Dienstag</span><span class="lr-tag__min">3–5 Min</span><h3>Übung am eigenen Fall</h3><p>Eine Notiz oder ein Brief aus Ihrer Arbeit, neu formuliert mit dem Assistenten.</p></li>
-            <li class="lr-tag"><span class="lr-tag__name">Mittwoch</span><span class="lr-tag__min">3–5 Min</span><h3>Eine Frage vom Roboter</h3><p>Was hat gestern geklappt, was nicht? Zwei Sätze genügen.</p></li>
-            <li class="lr-tag"><span class="lr-tag__name">Donnerstag</span><span class="lr-tag__min">3–5 Min</span><h3>Eine Vorlage nutzen</h3><p>Eine Vorlage aus dem Training, auf einen echten Fall angewendet.</p></li>
-            <li class="lr-tag"><span class="lr-tag__name">Freitag</span><span class="lr-tag__min">3–5 Min</span><h3>Weitergeben</h3><p>Was Sie diese Woche gefunden haben, in einer Minute einer Kollegin zeigen.</p></li>
-          </ol>
-        </div>
-
-        <figure class="lr-kurve" aria-labelledby="lr-kurve-titel">
+                <figure class="lr-kurve" aria-labelledby="lr-kurve-titel">
           <div class="lr-kurve__kopf">
             <h3 id="lr-kurve-titel">Einmal schulen oder täglich dranbleiben</h3>
             <span class="lr-kurve__etikett">Prinzipskizze, keine Messung</span>
           </div>
-          <svg viewBox="0 0 680 260" role="img" aria-label="Prinzipskizze: Nach einem einzelnen Kurstag fällt das im Alltag Angekommene rasch ab. Mit kleinen täglichen Einheiten steigt es Schritt für Schritt.">
-            <path class="lr-k-achse" d="M60 16 V210 H640"/>
-            <path class="lr-k-einmal" d="M60 210 L80 210 L80 46 C 120 100, 170 160, 250 188 S 450 206, 620 208"/>
-            <path class="lr-k-taeglich" d="M60 210 L80 210 L80 120 Q95.75 184, 102.5 184 T125 140.83333333333334 Q140.75 174.83333333333334, 147.5 172.83333333333334 T170 131.66666666666666 Q185.75 165.66666666666666, 192.5 161.66666666666666 T215 122.5 Q230.75 156.5, 237.5 150.5 T260 113.33333333333334 Q275.75 147.33333333333334, 282.5 139.33333333333334 T305 104.16666666666667 Q320.75 138.16666666666669, 327.5 128.16666666666669 T350 95 Q365.75 129, 372.5 117 T395 85.83333333333334 Q410.75 119.83333333333334, 417.5 105.83333333333334 T440 76.66666666666667 Q455.75 110.66666666666667, 462.5 94.66666666666667 T485 67.5 Q500.75 101.5, 507.5 83.5 T530 58.33333333333334 Q545.75 92.33333333333334, 552.5 72.33333333333334 T575 49.16666666666667 Q590.75 83.16666666666667, 597.5 61.16666666666667 T620 40"/>
+          <svg viewBox="0 0 680 300" role="img" aria-label="Prinzipskizze: Nach einem einzelnen Kurstag fällt das im Alltag Angekommene rasch ab. Mit kleinen täglichen Einheiten, Montag Tipp, Dienstag Übung am eigenen Fall, Mittwoch Frage vom Roboter, Donnerstag Vorlage nutzen, Freitag Weitergeben, je drei bis fünf Minuten, bleibt es oben.">
+            <path class="lr-k-achse" d="M60 16 V220 H640"/>
+            <path class="lr-k-einmal" d="M60 220 L80 220 L80 50 C 120 105, 170 165, 250 195 S 450 214, 620 216"/>
+            <line class="lr-k-hilfe" x1="110" y1="65" x2="110" y2="220"/>
+            <circle class="lr-k-punkt" cx="110" cy="57" r="5"/>
+            <text class="lr-k-tagname lr-k-label" x="110" y="240" text-anchor="middle">Mo</text>
+            <text class="lr-k-einheit lr-k-label" x="110" y="257" text-anchor="middle"><tspan x="110" dy="0">Ein Tipp</tspan></text>
+            <line class="lr-k-hilfe" x1="190" y1="62" x2="190" y2="220"/>
+            <circle class="lr-k-punkt" cx="190" cy="54" r="5"/>
+            <text class="lr-k-tagname lr-k-label" x="190" y="240" text-anchor="middle">Di</text>
+            <text class="lr-k-einheit lr-k-label" x="190" y="257" text-anchor="middle"><tspan x="190" dy="0">Übung am</tspan><tspan x="190" dy="15">eigenen Fall</tspan></text>
+            <line class="lr-k-hilfe" x1="270" y1="59" x2="270" y2="220"/>
+            <circle class="lr-k-punkt" cx="270" cy="51" r="5"/>
+            <text class="lr-k-tagname lr-k-label" x="270" y="240" text-anchor="middle">Mi</text>
+            <text class="lr-k-einheit lr-k-label" x="270" y="257" text-anchor="middle"><tspan x="270" dy="0">Frage vom</tspan><tspan x="270" dy="15">Roboter</tspan></text>
+            <line class="lr-k-hilfe" x1="350" y1="56" x2="350" y2="220"/>
+            <circle class="lr-k-punkt" cx="350" cy="48" r="5"/>
+            <text class="lr-k-tagname lr-k-label" x="350" y="240" text-anchor="middle">Do</text>
+            <text class="lr-k-einheit lr-k-label" x="350" y="257" text-anchor="middle"><tspan x="350" dy="0">Vorlage</tspan><tspan x="350" dy="15">nutzen</tspan></text>
+            <line class="lr-k-hilfe" x1="430" y1="54" x2="430" y2="220"/>
+            <circle class="lr-k-punkt" cx="430" cy="46" r="5"/>
+            <text class="lr-k-tagname lr-k-label" x="430" y="240" text-anchor="middle">Fr</text>
+            <text class="lr-k-einheit lr-k-label" x="430" y="257" text-anchor="middle"><tspan x="430" dy="0">Weitergeben</tspan></text>
+            <path class="lr-k-taeglich" d="M60 220 L80 220 L80 50 Q90.5 92, 106 92 L110 57 Q138.0 86, 186 86 L190 54 Q218.0 80, 266 80 L270 51 Q298.0 74, 346 74 L350 48 Q378.0 70, 426 70 L430 46 Q451.0 64, 486 64 L490 45 Q511.0 60, 546 60 L550 44 Q570 56, 620 54"/>
             <text x="66" y="12">Was im Alltag ankommt</text>
-            <text x="638" y="232" text-anchor="end">Zeit, in Wochen</text>
-            <text class="lr-k-tag" x="84" y="40">Kurstag</text>
-            <text x="60" y="232">Start</text>
+            <text class="lr-k-tag" x="86" y="44">Kurstag</text>
+            <text x="60" y="240">Start</text>
+            <text class="lr-k-tagname lr-k-label" x="580" y="240" text-anchor="middle">Danach</text>
+            <text class="lr-k-einheit lr-k-label" x="580" y="257" text-anchor="middle">täglich weiter</text>
+            <text x="640" y="292" text-anchor="end">Zeit →</text>
           </svg>
+          <ol class="lr-kurve__tage" aria-hidden="true"><li><b>Mo</b>Ein Tipp</li><li><b>Di</b>Übung am eigenen Fall</li><li><b>Mi</b>Frage vom Roboter</li><li><b>Do</b>Vorlage nutzen</li><li><b>Fr</b>Weitergeben</li><li><b>Danach</b>täglich weiter, je 3–5 Min</li></ol>
           <ul class="lr-legende">
             <li><i class="lr-l-einmal"></i>Ein Kurstag, danach keine Übung</li>
-            <li><i></i>Kleine Einheiten, jeden Tag</li>
+            <li><i></i>Kurstag plus kleine Einheiten, jeden Tag</li>
           </ul>
           <p class="lr-kurve__fuss">
             Die Skizze zeigt ein Prinzip, keine gemessenen Werte. Dass der Abstand zwischen Lerneinheiten beeinflusst, wie lange etwas haften bleibt, ist gut untersucht, etwa in einer Auswertung von 317 Experimenten (<a href="https://pubmed.ncbi.nlm.nih.gov/16719566/" target="_blank" rel="noopener">Cepeda et al., 2006, Psychological Bulletin</a>; dort ging es um Gedächtnisaufgaben, nicht um Betriebsschulungen). Wie stark es bei Ihnen wirkt, wissen wir erst, wenn wir es gemeinsam messen.
@@ -631,27 +554,21 @@
         <p class="sv-kicker sv-kicker--on-terra">NÄCHSTER SCHRITT</p>
         <h2 class="sv-title sv-title--on-terra">Reden wir darüber, wie Ihre Lernreise aussieht.</h2>
         <p class="sv-lead sv-lead--on-terra">
-          Ein halbstündiges Erstgespräch, kostenlos und ohne Verpflichtung. Danach wissen Sie, welche Stationen sich für Ihren Betrieb lohnen.
+          Ein halbstündiges Erstgespräch, kostenlos und ohne Verpflichtung.
         </p>
         <div class="sv-actions">
           <a class="sv-button sv-button--light" id="lernreise-offerte" href="kontakt#formular">Erstgespräch vereinbaren →</a>
-          <a class="sv-button sv-button--glass" href="offerte?bereich=kompetenz">Richtpreis berechnen →</a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="sv-footer">
-    <div class="sv-footer__inner">
-      <a class="sv-footer__logo" href="#top" aria-label="Zurück nach oben">
-        <img src="assets/logo-lockup-white.svg" alt="vaiacon" width="214" height="39">
-      </a>
-      <nav class="sv-footer__links" aria-label="Weitere Seiten">
-        <a href="service">Begleitung</a><a href="offerte">Richtpreis berechnen</a><a href="ki-kmu-news/">KI-News für KMU</a><a href="referenzen">Aus der Praxis</a><a href="datenschutz">Datenschutz</a><a href="impressum">Impressum</a><a href="agb">AGB</a>
-      </nav>
-      <p class="sv-footer__adresse"><span>Vaiacon GmbH</span><span>Lehenstrasse 74, 8037 Zürich</span><span><a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a></span><span><a href="kontakt#formular">Rückruf anfordern</a></span></p>
-      <a class="sv-footer__top" href="#top">↑ Nach oben</a>
-      <div class="sv-footer__social">
+  <footer class="sv-footer vb-fuss">
+    <div class="vb-fuss__inner">
+      <div class="vb-fuss__marke">
+        <a class="sv-footer__logo" href="#top" aria-label="Zurück nach oben"><img src="assets/logo-lockup-white.svg" alt="vaiacon" width="214" height="39"></a>
+        <p class="vb-fuss__adresse">Vaiacon GmbH<br>Lehenstrasse 74<br>8037 Zürich</p>
+        <div class="sv-footer__social">
         <a href="https://www.facebook.com/vaiacon" target="_blank" rel="noopener" aria-label="vaiacon auf Facebook" title="Facebook">
           <svg width="21" height="21" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M14.9 8.1h2.4V4.3c-.4-.1-1.8-.2-3.4-.2-3.4 0-5.7 2.1-5.7 6v3.3H4.5v4.3h3.7V24h4.5v-6.3h3.7l.6-4.3h-4.3v-2.9c0-1.3.4-2.4 2.2-2.4Z"/></svg>
         </a>
@@ -662,14 +579,18 @@
           <svg width="21" height="21" viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M5.4 8.5H2.3V22h3.1V8.5ZM3.9 6.7c1 0 1.8-.7 1.8-1.7S4.9 3.3 3.9 3.3 2.1 4 2.1 5s.8 1.7 1.8 1.7ZM22 22h-3.1v-6.6c0-1.6 0-3.6-2.2-3.6s-2.5 1.7-2.5 3.5V22h-3.1V8.5h3v1.8h.1c.4-.8 1.5-2.2 4.5-2.2 3.2 0 3.8 2.1 3.8 4.9V22Z"/></svg>
         </a>
       </div>
+      </div>
+      <nav class="vb-fuss__spalte" aria-label="Angebot"><p class="vb-fuss__titel">Angebot</p><a href="learning">KI-Kompetenz</a><a href="visibility">Sichtbarkeit</a><a href="bot">Automationen</a><a href="service">Begleitung</a></nav>
+      <nav class="vb-fuss__spalte" aria-label="vaiacon"><p class="vb-fuss__titel">vaiacon</p><a href="ueber-uns">Über uns</a><a href="referenzen">Aus der Praxis</a><a href="ki-kmu-news/">KI-News für KMU</a><a href="faq">FAQ</a></nav>
+      <div class="vb-fuss__spalte"><p class="vb-fuss__titel">Kontakt</p><span class="vb-fuss__wer"><span class="vb-koepfe"><img src="assets/philip-krieger-team-klein.webp" alt="Philip Krieger" width="56" height="56"><img src="assets/andre-ulrich-team-klein.webp" alt="André Ulrich" width="56" height="56"></span><span>Philip und André antworten persönlich.</span></span><a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a><a href="kontakt#rueckruf">Rückruf anfordern</a><a href="kontakt">Kontaktseite</a></div>
     </div>
+    <div class="vb-fuss__basis"><span>© 2026 Vaiacon GmbH</span><nav aria-label="Rechtliches"><a href="datenschutz">Datenschutz</a><a href="impressum">Impressum</a><a href="agb">AGB</a></nav><a href="#top">↑ Nach oben</a></div>
   </footer>
 </div>
 <script src="ui_kits/website/api-basis.js?v=20261004-umbau"></script>
 <script src="ui_kits/website/visibility.js?v=20261007-logo-svg"></script>
 <script src="ui_kits/website/lernreise.js?v=20261011-audit" defer></script>
 <script src="ui_kits/website/lernreise-zeitleiste.js?v=20261011-audit" defer></script>
-<script src="ui_kits/website/preise.js?v=20261011-preislogik" defer></script>
 <script src="ui_kits/website/standort.js?v=20261011-audit" defer></script>
 <script src="ui_kits/website/chat.js?v=20261004-umbau"></script>
 </body>

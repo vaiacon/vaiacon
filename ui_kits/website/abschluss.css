@@ -1,0 +1,44 @@
+/* Seitenabschluss für alle Seiten: ruhiger Schlussteil + helle Fusszeile in Spalten */
+.sv-final { background: linear-gradient(180deg, #A83A08 0%, #862A03 100%); }
+.sv-final::before { opacity: .35; }
+.vb-fuss__inner, .vb-fuss__basis { box-sizing: border-box; }
+/* ---- Neuer Seitenabschluss (Varianten A/B/C) ---- */
+.vb-fuss__inner, .vb-fuss__basis, .vb-karte { box-sizing: border-box; }
+.vb-fuss { background: #862A03; color: var(--text-on-terra); }
+.vb-fuss__inner { width: min(100%, var(--content-max)); margin: 0 auto; padding: 64px 32px 40px; display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr)); gap: 40px; }
+.vb-fuss__marke { display: grid; gap: 20px; align-content: start; }
+.vb-fuss__marke .sv-footer__social { justify-content: flex-start; width: auto; }
+.vb-fuss__adresse { margin: 0; line-height: 1.6; color: var(--text-on-terra-soft); }
+.vb-fuss__spalte { display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.vb-fuss__titel { margin: 0 0 6px; font-family: var(--font-mono); font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--text-on-terra-soft); }
+.vb-fuss a { color: var(--text-on-terra); text-decoration: none; }
+.vb-fuss a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.vb-fuss__basis { width: min(100%, var(--content-max)); margin: 0 auto; padding: 20px 32px 32px; display: flex; flex-wrap: wrap; gap: 12px 28px; justify-content: space-between; border-top: 1px solid rgba(255, 240, 230, 0.2); font-size: 14px; color: var(--text-on-terra-soft); }
+.vb-fuss__basis nav { display: flex; gap: 20px; }
+.vb-fuss__wer { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; font-size: 14px; }
+.vb-koepfe { display: inline-flex; }
+.vb-koepfe img { width: 44px; height: 44px; border-radius: 50%; object-fit: cover; border: 2px solid var(--cream-card); }
+.vb-koepfe img + img { margin-left: -12px; }
+@media (max-width: 820px) { .vb-fuss__inner { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 48px 20px 32px; } .vb-fuss__marke { grid-column: 1 / -1; } .vb-fuss__basis { padding: 20px; } }
+/* C: helle Fusszeile */
+html[data-ende="hell"] .vb-fuss { background: var(--cream-50); color: var(--text-strong); }
+html[data-ende="hell"] .vb-fuss a { color: var(--text-strong); }
+html[data-ende="hell"] .vb-fuss__titel { color: var(--terra-500); }
+html[data-ende="hell"] .vb-fuss__adresse, html[data-ende="hell"] .vb-fuss__basis { color: var(--text-body); }
+html[data-ende="hell"] .vb-fuss__basis { border-top-color: var(--border-strong); }
+html[data-ende="hell"] .vb-fuss .sv-footer__logo img { content: url("../../assets/logo-lockup-terra.svg"); }
+html[data-ende="hell"] .vb-fuss .sv-footer__social a { background: rgba(178, 82, 34, 0.1); color: var(--terra-500); }
+
+/* 11.10.: Schlussteil hell, Fusszeile Terracotta – Hintergründe wechseln sich ab */
+.sv-final { background: var(--cream-card) !important; color: var(--text-strong); border-top: 1px solid var(--border-strong); }
+.sv-final::before { display: none; }
+.sv-final .sv-kicker--on-terra { color: var(--terra-500); }
+.sv-final .sv-title--on-terra { color: var(--text-strong); }
+.sv-final .sv-lead--on-terra { color: var(--text-body); }
+.sv-final .sv-button--light { background: var(--cta-bg); color: #FFFFFF; }
+.sv-final .sv-button--light:hover { background: var(--cta-bg-hover); }
+.sv-final a:not(.sv-button) { color: var(--link); }
+.vb-fuss { background: linear-gradient(180deg, #A83A08 0%, #862A03 100%) !important; }
+
+.sv-final .sv-button--glass { color: var(--terra-600); border-color: var(--border-strong); background: transparent; backdrop-filter: none; }
+.sv-final .sv-button--glass:hover, .sv-final .sv-button--glass:focus-visible { background: var(--peach-150); color: var(--terra-700); }

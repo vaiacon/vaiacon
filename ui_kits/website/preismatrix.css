@@ -17,8 +17,8 @@
 @supports (grid-template-rows: subgrid) {
   /* 8 Zeilen: fünf Teile des Spaltenkopfs (Titel, Erklärung, Beispiel, Nutzen, Preis) + drei Karten.
      So liegen Trennlinien und Preise in allen drei Spalten auf gleicher Höhe (11.10.). */
-  .pm-matrix { grid-template-rows: repeat(8, auto); }
-  .pm-spalte { display: grid; grid-template-rows: subgrid; grid-row: span 8; row-gap: 10px; }
+  .pm-matrix { grid-template-rows: repeat(5, auto); }
+  .pm-spalte { display: grid; grid-template-rows: subgrid; grid-row: span 5; row-gap: 10px; }
   .pm-spalte > .pm-col { display: grid; grid-template-rows: subgrid; grid-row: span 5; row-gap: 8px; align-content: start; }
 }
 

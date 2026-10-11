@@ -70,8 +70,8 @@ ORGANISATION = {
         "KI-Kompetenz (Trainings, Coaching, Online-Kurse), Sichtbarkeit in "
         "Suchmaschinen und KI-Antworten und Automationen von Büroarbeit; auf "
         "Wunsch mit Betreuung und Begleitung. Gedacht für Betriebe mit 5 bis 30 "
-        "Mitarbeitenden und eigenem Büro. Preise offen, Richtpreis online "
-        "berechnen. Ohne Fachchinesisch."
+        "Mitarbeitenden und eigenem Büro. Jedes Angebot besprechen wir "
+        "persönlich. Ohne Fachchinesisch."
     ),
     "email": "hallo@vaiacon.ch",
     # TELEFON: einkommentieren, sobald die 044-Nummer gebucht ist (auch in allen HTML-Seiten, tel:-Links)
@@ -145,30 +145,13 @@ def angebot(name: str, art: str, text: str, pfad: str, bereich: str | None = Non
     }
     if bereich:
         pos = [p for p in BEREICHE[bereich]["positionen"] if p.get("status") != "pruefen"]
-        preise = [p["preis"] for p in pos]
-        block["offers"] = {
-            "@type": "AggregateOffer",
-            "priceCurrency": KATALOG["waehrung"],
-            "lowPrice": min(preise),
-            "highPrice": max(preise),
-            "offerCount": len(pos),
-        }
+        # 11.10.2026: keine Preise auf der Website, jedes Angebot wird persönlich besprochen.
         eintraege = []
         for p in pos:
-            spez = {
-                "@type": "UnitPriceSpecification",
-                "priceCurrency": KATALOG["waehrung"],
-                "valueAddedTaxIncluded": bool(KATALOG["mwst_inklusive"]),
-                "minPrice" if p["ab"] else "price": p["preis"],
-            }
-            einheit = p["einheit"].removeprefix("pro ")
-            if p["einheit"] != "pauschal":
-                spez["unitText"] = einheit
             eintraege.append({
                 "@type": "Offer",
                 "itemOffered": {"@type": "Service", "name": p["titel"],
                                 "description": (p["beschreibung"] + " " + p.get("umfang", "")).strip()},
-                "priceSpecification": spez,
             })
         block["hasOfferCatalog"] = {
             "@type": "OfferCatalog",
@@ -196,7 +179,7 @@ ANGEBOTE = {
     "bot.html": angebot(
         "Automationen", "Automatisierung von Büroarbeit",
         "Belege erfassen, Offertenentwürfe erstellen, Korrespondenz und Anfragen automatisch vorbereiten, dazu "
-        "Chatbot mit Firmenwissen, Telefonassistent und Anbindung an Ihre Software. Fixpreis nach der Erstanalyse.",
+        "Chatbot mit Firmenwissen, Telefonassistent und Anbindung an Ihre Software.",
         "bot", "automationen"),
     "service.html": angebot(
         "Betreuung und Begleitung", "Betreuung und Begleitung",
@@ -209,7 +192,7 @@ ANGEBOTE = {
 
 SEITEN = [
     "index.html", "visibility.html", "learning.html", "bot.html", "service.html",
-    "offerte.html",  # ki-kmu-news/* schreibt scripts/news_bauen.py selbst (eigener ItemList-Block)
+    # ki-kmu-news/* schreibt scripts/news_bauen.py selbst (eigener ItemList-Block); offerte.html leitet weiter
     "ueber-uns.html", "referenzen.html", "faq.html", "kontakt.html", "agb.html", "datenschutz.html",
     "impressum.html",
 ]
@@ -238,7 +221,6 @@ SITEMAP = [
     ("learning", "learning.html"),
     ("bot", "bot.html"),
     ("service", "service.html"),
-    ("offerte", "offerte.html"),
     ("erstanalyse/", "erstanalyse/index.html"),
     ("referenzen", "referenzen.html"),
     ("faq", "faq.html"),
@@ -335,8 +317,7 @@ Treuhand, Praxen, Verwaltungen).
 
 Kontakt: hallo@vaiacon.ch · Lehenstrasse 74, 8037 Zürich
 Erster Schritt: kostenloses Erstgespräch (eine halbe Stunde, am Telefon oder
-am Bildschirm), der Richtpreis-Rechner (unverbindlicher Richtpreis, auf der
-Seite und per E-Mail), die kostenlose KI-Standortbestimmung für
+am Bildschirm), die kostenlose KI-Standortbestimmung für
 Führungskräfte, die kostenlose Erstanalyse zur Zeitersparnis oder der
 kostenlose Website-Check auf vaiacon.ch. Wir antworten in der Regel innert
 eines Arbeitstages. Für einen Rückruf benötigen wir Ihre Telefonnummer.
@@ -353,43 +334,27 @@ eines Arbeitstages. Für einen Rückruf benötigen wir Ihre Telefonnummer.
   Voraussetzungen dafür, dass Google und KI-Assistenten Ihr Angebot richtig
   einordnen (Fachwörter: SEO und GEO). Kostenloser Website-Check auf
   vaiacon.ch, Sichtbarkeits-Check kompakt, Sichtbarkeits-Audit vertieft,
-  Seiten überarbeiten und laufende Betreuung, mit offen genannten Preisen.
+  Seiten überarbeiten und laufende Betreuung. Nach dem Check sehen Sie Ihre
+  Punktzahl, danach melden wir uns oder Sie sich bei uns.
 - [Automationen](https://vaiacon.ch/bot): Belege erfassen, Offertenentwürfe
   erstellen, Korrespondenz und Anfragen automatisch vorbereiten, Chatbot mit
-  Firmenwissen, Telefonassistent, Anbindung an Ihre Software. Fixpreis nach
-  der Erstanalyse.
+  Firmenwissen, Telefonassistent, Anbindung an Ihre Software.
 - [Betreuung und Begleitung](https://vaiacon.ch/service): Die Betreuung hält
   alle Automationen und Chatbots am Laufen, die Vaiacon gebaut hat
-  (Überwachung, Fehlerbehebung, eine Stunde Anpassung im Monat), ein Preis je
-  Kunde. Die Begleitung ist feste Beratungs- und Arbeitszeit (vier oder acht
+  (Überwachung, Fehlerbehebung, Anpassungen). Die Begleitung ist feste Beratungs- und Arbeitszeit (vier oder acht
   Stunden im Monat) für Fragen, Team und neue Ideen. Beides kündbar auf Ende
-  Folgemonat. Dazu Beratung nach Aufwand, Anpassungen und die bezahlte
-  KI-Standortanalyse im Betrieb.
+  Folgemonat. Dazu Beratung nach Aufwand und die KI-Standortanalyse im Betrieb.
 
 ## Preise
 
-{KATALOG["mwst_hinweis"]} {SAETZE["gueltigkeit"]} Stand: {KATALOG["stand"]}.
+Auf der Website nennen wir keine Preise. Jedes Angebot schauen wir persönlich
+mit der Kundin oder dem Kunden an; am Anfang steht das kostenlose Erstgespräch.
 
-- {SAETZE["ab_preis"]}
-- {SAETZE["betreuung"]}
-- {SAETZE["betreuung_sichtbarkeit"]}
-- {SAETZE["fremdkosten"]}
-- {SAETZE["beispiel_jahr"]}
-
-Quelle: https://vaiacon.ch/daten/preise.json. Einen unverbindlichen Richtpreis
-berechnen Sie im Richtpreis-Rechner: https://vaiacon.ch/offerte
-
-{preisliste_llms()}
-
-Hinweis: Die KI-Standortanalyse im Betrieb (bezahlt) ist nicht die kostenlose
+Hinweis: Die KI-Standortanalyse im Betrieb ist nicht die kostenlose
 KI-Standortbestimmung (Selbsttest für Führungskräfte).
 
 ## Weitere Seiten
 
-- [Richtpreis berechnen](https://vaiacon.ch/offerte): Beschreiben Sie Ihr
-  Vorhaben und geben Sie Ihre Kontaktdaten an. Sie erhalten einen
-  unverbindlichen Richtpreis auf der Seite und per E-Mail. Danach klären wir
-  die offenen Punkte mit Ihnen.
 - [KI-News für KMU](https://vaiacon.ch/ki-kmu-news/): Was in der KI für Schweizer
   KMU gerade zählt, kurz, mit Quellen und mit erklärten Fachbegriffen. Neue
   Beiträge erscheinen während der Woche, dazu ein Wochenfazit.
@@ -399,7 +364,7 @@ KI-Standortbestimmung (Selbsttest für Führungskräfte).
   und wofür wir stehen.
 - [Aus der Praxis](https://vaiacon.ch/referenzen): Eine Kundin erzählt, wie ihr
   Kosmetikstudio heute mit Vaiacon arbeitet.
-- [Häufige Fragen](https://vaiacon.ch/faq): Kosten und Richtpreis, Lernformate,
+- [Häufige Fragen](https://vaiacon.ch/faq): Kosten, Lernformate,
   Datenschutz, Vorwissen, Ablauf einer Zusammenarbeit.
 - [Erstanalyse](https://vaiacon.ch/erstanalyse/): Fragebogen mit sofortiger
   Einschätzung, wie viel Zeit in wiederkehrender Büroarbeit steckt.

@@ -307,6 +307,9 @@ def textdatei(pfad: Path, katalog: dict, hinweis: str) -> list[str]:
 
 
 def texte(katalog: dict) -> list[str]:
+    # 11.10.2026: Website, llms.txt und Chat-Wissen nennen bewusst keine Preise mehr.
+    # Der Katalog daten/preise.json bleibt die interne Quelle für Offerten.
+    return []
     return (textdatei(WURZEL / "llms.txt", katalog, "python3 scripts/strukturdaten.py")
             + textdatei(WURZEL / "vaia-wissen" / "wissen.md", katalog, "python3 scripts/bot_wissen.py"))
 

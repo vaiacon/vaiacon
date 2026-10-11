@@ -557,8 +557,9 @@
 
 /* Preislogik 2026-10: Scrollspur und Bühne an die Fensterhöhe binden, aber höchstens 960 px
    (sehr hohe Fenster und Vollseiten-Aufnahmen zeigten sonst riesige leere Flächen). */
-.lz--scroll { height: calc(min(100vh, 960px) - var(--lz-oben) + (var(--lz-n, 9) - 1) * var(--lz-schritt)); }
-.lz--scroll .lz-buehne { height: calc(min(100vh, 960px) - var(--lz-oben)); }
+.lz--scroll { height: auto; }
+.lz--scroll::after { content: ""; display: block; height: calc((var(--lz-n, 9) - 1) * var(--lz-schritt)); }
+.lz--scroll .lz-buehne { height: auto; min-height: 0; padding: var(--space-6) 0; }
 
 /* ── Ergänzung Audit 11.10.2026 ─────────────────────────────────────────
    Aktive Station auch in der schmalen Leiste (nur Nummern) deutlich zeigen,

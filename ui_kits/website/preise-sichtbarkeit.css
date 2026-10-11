@@ -1,0 +1,48 @@
+/* Preisliste Sichtbarkeit: Prüfen → Umsetzen → Betreuen */
+.vb-preise { display: grid; gap: 24px; }
+.vb-preise__anker { margin: 0; text-align: center; font-weight: var(--weight-semibold, 600); color: var(--text-strong); }
+.vb-preise__spalten { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 20px; align-items: start; }
+.vb-preise__spalte { display: grid; gap: 12px; padding: 22px; background: var(--surface-card); border: 1px solid var(--border-strong); border-radius: var(--radius-lg); }
+.vb-preise__kopf { margin: 0; display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-family: var(--font-mono); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--terra-500); }
+.vb-preise__art { color: var(--text-muted); letter-spacing: .06em; }
+.vb-preise ul { margin: 0; padding: 0; list-style: none; display: grid; }
+.vb-preise__paket { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; gap: 16px; padding: 14px 0; border-top: 1px solid var(--border-strong); }
+.vb-preise__paket div { display: grid; gap: 4px; min-width: 0; flex: 1 1 12rem; }
+.vb-preise__paket strong { color: var(--text-strong); font-size: 17px; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.vb-preise__paket span { color: var(--text-body); font-size: 15px; line-height: 1.45; text-wrap: pretty; }
+.vb-preise__paket b { white-space: nowrap; color: var(--text-strong); font-size: 17px; display: grid; justify-items: end; }
+.vb-preise__paket b span { color: inherit; font-size: inherit; }
+.vb-preise__paket b, .vb-preise__paket b * { white-space: nowrap !important; }
+.vb-preise__paket b { flex-shrink: 0; }
+.vb-preise__kopf span { white-space: nowrap; }
+.vb-preise__paket b small { font-weight: 400; font-size: 13px; color: var(--text-muted); }
+.vb-preise__paket--tipp { margin: 0 -12px; padding: 14px 12px; background: var(--cream-100); border-radius: 12px; border-top-color: transparent; }
+.vb-preise__tipp { font-style: normal; font-family: var(--font-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--cream-50); background: var(--terra-500); padding: 3px 8px; border-radius: 999px; }
+.vb-preise__details { border-top: 1px solid var(--border-strong); border-bottom: 1px solid var(--border-strong); }
+.vb-preise__details summary { list-style: none; cursor: pointer; display: flex; justify-content: space-between; padding: 16px 0; font-weight: var(--weight-semibold, 600); color: var(--text-strong); }
+.vb-preise__details summary::-webkit-details-marker { display: none; }
+.vb-preise__details[open] summary span:last-child { transform: rotate(45deg); }
+.vb-preise__details dl { margin: 0 0 20px; display: grid; grid-template-columns: minmax(0, 14rem) minmax(0, 1fr); gap: 10px 24px; }
+.vb-preise__details dt { font-weight: var(--weight-semibold, 600); color: var(--text-strong); }
+.vb-preise__details dd { margin: 0; color: var(--text-body); }
+@media (max-width: 899px) {
+  .vb-preise__details dl { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+  .vb-preise__details dd { margin-bottom: 10px; }
+}
+
+/* 11.10.: Ablauf statt Preisliste */
+.vb-weg { display: grid; gap: 28px; }
+.vb-weg__titel { margin: 0; text-align: center; font-size: var(--text-h3); color: var(--text-strong); }
+.vb-weg__schritte { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 20px; counter-reset: none; }
+.vb-weg__schritte li { display: grid; gap: 6px; align-content: start; padding: 22px; background: var(--surface-card); border: 1px solid var(--border-strong); border-radius: var(--radius-lg); }
+.vb-weg__nr { display: inline-grid; place-items: center; width: 32px; height: 32px; margin-bottom: 6px; border-radius: 50%; background: var(--terra-500); color: var(--cream-50); font-family: var(--font-mono); font-weight: 700; font-size: 14px; }
+.vb-weg__schritte strong { font-size: 18px; color: var(--text-strong); }
+.vb-weg__schritte span:last-child { color: var(--text-body); line-height: 1.5; text-wrap: pretty; }
+.vb-weg__leistungen { display: grid; gap: 12px; justify-items: center; text-align: center; }
+.vb-weg__kopf { margin: 0; font-family: var(--font-mono); font-size: 13px; letter-spacing: .1em; text-transform: uppercase; color: var(--terra-500); }
+.vb-weg__chips { justify-content: center; margin: 0; }
+.vb-weg__aktionen { display: flex; flex-wrap: wrap; gap: 14px 24px; justify-content: center; align-items: center; }
+.vb-weg__link { color: var(--link); font-weight: var(--weight-semibold, 600); text-decoration: none; }
+.vb-weg__link:hover { color: var(--link-hover); text-decoration: underline; text-underline-offset: 4px; }
+.vb-weg__chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; }
+.vb-weg__chips li { padding: 6px 12px; border: 1px solid var(--border-strong); border-radius: var(--radius-pill); background: var(--surface-card); font-size: 14px; color: var(--text-strong); }

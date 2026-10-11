@@ -26,6 +26,13 @@ WURZEL = Path(__file__).resolve().parents[1]
 ZIEL = WURZEL / "vaia-wissen" / "wissen.md"
 KATALOG = json.loads((WURZEL / "daten" / "preise.json").read_text(encoding="utf-8"))
 POSITIONEN = {p["id"]: p for b in KATALOG["bereiche"] for p in b["positionen"]}
+OHNE_PREISE = {"Automationen", "Sichtbarkeit"}
+OHNE_PREISE_SATZ = ("Nenne keine Preise, keine Beträge, keine Ab-Preise, Richtpreise oder Beispiele "
+                    "fürs erste Jahr, für keinen Bereich. Fragt jemand nach Kosten, sag: Jedes Vorhaben ist "
+                    "anders, darum schauen wir jedes Angebot persönlich an. Nach dem kostenlosen Erstgespräch "
+                    "gibt es eine verbindliche Offerte. Bei der Sichtbarkeit: Wer den kostenlosen Online-Check "
+                    "macht, sieht seine Punktzahl; danach melden wir uns, oder die Person meldet sich bei uns. "
+                    "Einen Richtpreis-Rechner gibt es nicht mehr.")
 BRANCHEN = json.loads((WURZEL / "daten" / "branchen.json").read_text(encoding="utf-8"))
 
 # Reihenfolge zaehlt: So liest der Chat die Website von vorn nach hinten.
@@ -36,7 +43,6 @@ SEITEN = [
     ("visibility.html", "Sichtbarkeit — gefunden werden"),
     ("bot.html", "Automationen"),
     ("service.html", "Begleitung"),
-    ("offerte.html", "Richtpreis berechnen"),
     ("ki-kmu-news/index.html", "KI-News für KMU"),
     ("faq.html", "Häufige Fragen"),
     ("kontakt.html", "Kontakt"),
@@ -108,6 +114,13 @@ def preisliste() -> list[str]:
          "Einen unverbindlichen Richtpreis rechnet man auf vaiacon.ch/offerte aus; "
          "eine verbindliche Offerte gibt es danach von vaiacon.", ""]
     for b in KATALOG["bereiche"]:
+        # 11.10.2026: Automationen ohne Preise, jedes Angebot wird persönlich angeschaut.
+        if b["titel"] in OHNE_PREISE:
+            z.append(f"### {b['titel']}")
+            z.append("")
+            z.append(OHNE_PREISE_SATZ)
+            z.append("")
+            continue
         z.append(f"### {b['titel']}")
         z.append("")
         for p in b["positionen"]:
@@ -210,9 +223,9 @@ def bauen() -> tuple[str, list[str]]:
     t.append("")
     t.append("- Deutsch (Schweiz), immer «ss» statt «ß». Die Besucher per Sie, wir als «wir».")
     t.append("- Kurz und ohne Fachjargon. «Grüezi!» als Begrüssung.")
-    t.append("- Preise nennst du nur aus der Preisübersicht unten, mit «inklusive MWST».")
-    t.append("  Was hier nicht steht, weisst du nicht. Dann sag das und verweise auf")
-    t.append("  hallo@vaiacon.ch — erfinde keine Preise, Fristen oder Zusagen.")
+    t.append("- Preise nennst du nie, für keinen Bereich (siehe «Preise» unten). Was hier")
+    t.append("  nicht steht, weisst du nicht. Dann sag das und verweise auf hallo@vaiacon.ch;")
+    t.append("  erfinde keine Fristen oder Zusagen.")
     t.append("- Es gibt keine Academy und keine Gratis-Kurse. Kostenlos sind nur das")
     t.append("  Erstgespräch, die KI-Standortbestimmung (Selbsttest für Führungskräfte),")
     t.append("  die Erstanalyse zur Zeitersparnis und der kostenlose Website-Check.")
@@ -228,12 +241,12 @@ def bauen() -> tuple[str, list[str]]:
     t.append("Begleitung. Verständlich, persönlich und ohne Verkaufsdruck. Kundendaten")
     t.append("bleiben in der Schweiz.")
     t.append("")
-    t.extend(saetze_block())
-    t.extend(regeln_preise())
-    t.append("## Preisübersicht (aus dem Katalog daten/preise.json)")
+    # 11.10.2026: keine Preise mehr im Chat. Jedes Angebot wird persönlich besprochen.
+    t.append("## Preise")
     t.append("")
-    t.extend(preisliste())
-    t.append("Hinweis: Die KI-Standortanalyse im Betrieb (bezahlt, Begleitung) ist nicht die")
+    t.append(OHNE_PREISE_SATZ)
+    t.append("")
+    t.append("Hinweis: Die KI-Standortanalyse im Betrieb (Begleitung) ist nicht die")
     t.append("kostenlose KI-Standortbestimmung (Selbsttest für Führungskräfte).")
     t.append("")
 
