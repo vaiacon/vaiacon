@@ -128,3 +128,18 @@
   .tk-wahl.tk-wahl--aus span { font-size: 0; }
   .tk-summe { bottom: 76px; } /* über dem Knopf «Fragen Sie Vaia» */
 }
+
+/* Gruppen zum Aufklappen (details/summary). */
+.tk-gruppe { margin-bottom: var(--space-4); border: 1px solid var(--border-soft); border-radius: var(--radius-lg, 14px); background: var(--surface-card); }
+.tk-gruppe__kopf { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 2px var(--space-4); padding: var(--space-4) var(--space-5); cursor: pointer; list-style: none; }
+.tk-gruppe__kopf::-webkit-details-marker { display: none; }
+.tk-gruppe__kopf .tk-gruppe__titel { display: block; margin: 0; font-weight: 700; }
+.tk-gruppe__kopf .tk-gruppe__text { grid-column: 1 / -1; margin: 0; }
+.tk-gruppe__zahl { display: inline-flex; align-items: center; gap: var(--space-2); font-size: var(--text-body-sm); color: var(--text-muted); white-space: nowrap; }
+.tk-gruppe__zahl::after { content: ""; width: 8px; height: 8px; border-right: 2px solid var(--terra-500); border-bottom: 2px solid var(--terra-500); transform: rotate(45deg) translate(-2px, -2px); transition: transform 0.2s ease; }
+.tk-gruppe[open] .tk-gruppe__zahl::after { transform: rotate(-135deg) translate(-2px, -2px); }
+.tk-gruppe--an .tk-gruppe__zahl { color: var(--terra-600); font-weight: 600; }
+.tk-gruppe__kopf:hover .tk-gruppe__titel { color: var(--terra-600); }
+.tk-gruppe__kopf:focus-visible { outline: 2px solid var(--terra-500); outline-offset: 2px; border-radius: var(--radius-lg, 14px); }
+.tk-gruppe > .tk-liste { padding: 0 var(--space-5) var(--space-4); margin-top: 0; }
+@media (max-width: 640px) { .tk-gruppe__kopf, .tk-gruppe > .tk-liste { padding-left: var(--space-4); padding-right: var(--space-4); } }

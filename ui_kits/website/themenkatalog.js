@@ -49,7 +49,21 @@
     return liste;
   }
 
+  // Aufklappbare Gruppen: im Kopf steht, wie viele Themen gewählt sind.
+  var gruppen = form.querySelectorAll('.tk-gruppe');
+  function gruppenZaehlen(oeffnen) {
+    Array.prototype.forEach.call(gruppen, function (g) {
+      var alle = g.querySelectorAll('.tk-thema').length;
+      var an = g.querySelectorAll('.tk-thema input:checked:not([value="0"])').length;
+      var el = g.querySelector('[data-tk-zahl]');
+      if (el) el.textContent = alle + ' Themen' + (an ? ' · ' + an + ' gewählt' : '');
+      g.classList.toggle('tk-gruppe--an', an > 0);
+      if (oeffnen) g.open = an > 0;
+    });
+  }
+
   function rechnen() {
+    gruppenZaehlen(false);
     var liste = auswahl();
     var std = 0, mass = 0;
     liste.forEach(function (t) { std += t.std; if (t.mass) mass++; });
@@ -93,6 +107,7 @@
         if (r) r.checked = true;
       });
       rechnen();
+      gruppenZaehlen(true);
     });
   });
 
