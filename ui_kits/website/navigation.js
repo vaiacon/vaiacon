@@ -66,17 +66,6 @@
           ['visibility#geo', 'GEO', 'Damit KI-Assistenten Ihre Firma verstehen.'],
           ['visibility#ablauf', 'Ablauf', 'So wird aus Sichtbarkeit ein System.']
         ] }
-      ] },
-    { id: 'service', seite: 'service', titel: 'Betreuung',
-      text: 'Was läuft, braucht jemanden, der hinschaut.',
-      spalten: [
-        { titel: 'Betreuung und Begleitung', breit: true, punkte: [
-          ['service#warum', 'Warum Betreuung', 'Was heute gut läuft, braucht Pflege.'],
-          ['service#angebot', 'Das Angebot', 'Eine Anlaufstelle für unser ganzes Angebot.'],
-          ['service#betreuung', 'Betreuung', 'Für alle Automationen und Chatbots, die wir gebaut haben.'],
-          ['service#zeit', 'Begleitung', 'Regelmässige Beratung oder zuerst eine Standortanalyse.'],
-          ['erstanalyse/', 'Kostenlose Erstanalyse', 'Der Fragebogen für den ersten Überblick.']
-        ] }
       ] }
   ];
 
@@ -84,7 +73,8 @@
     ['ueber-uns', 'Über uns', 'Zwei Unternehmer, die den Geschäftsalltag kennen.', 'ueber-uns'],
     ['referenzen', 'Aus der Praxis', 'Eine Kundin erzählt.', 'referenzen'],
     ['faq', 'FAQ', 'Häufige Fragen, nach Bereich geordnet.', 'faq'],
-    ['ki-kmu-news/', 'KI-News für KMU', 'Was sich in der KI-Welt tut, für Schweizer KMU eingeordnet.', 'news']
+    ['ki-kmu-news/', 'KI-News für KMU', 'Was sich in der KI-Welt tut, für Schweizer KMU eingeordnet.', 'news'],
+    ['erstanalyse/', 'Kostenlose Erstanalyse', 'Der Fragebogen für den ersten Überblick.', 'erstanalyse']
   ];
 
   var FUSS = [
