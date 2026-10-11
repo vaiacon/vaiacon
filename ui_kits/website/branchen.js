@@ -111,11 +111,18 @@
     var m = /^#branche-([a-z-]+)$/.exec(location.hash);
     return m && daten && daten[m[1]] ? m[1] : '';
   }
-  window.addEventListener('hashchange', function () {
+  function sprung() {
     var id = ausHash();
     if (!id) return;
     zeige(id); merken(id);
     wurzel.scrollIntoView();
+  }
+  window.addEventListener('hashchange', sprung);
+  // Gleicher Hash nochmals angeklickt (Auswahl wurde inzwischen gewechselt): hashchange bleibt aus.
+  document.addEventListener('click', function (ev) {
+    var a = ev.target.closest && ev.target.closest('a[href*="#branche-"]');
+    if (!a || a.hash !== location.hash) return;
+    setTimeout(sprung, 0);
   });
 
   fetch('daten/branchen.json', { cache: 'no-cache' })
