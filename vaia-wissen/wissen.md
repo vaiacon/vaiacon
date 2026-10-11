@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 11.10.2026 · Eintrag 01c3732 KI-Einstieg als Webinar: zwei Stunden online statt im Betrieb, CHF 890 pro Termin
+> Stand: 11.10.2026 · Eintrag 7cb3772 preismatrix: Subgrid-Regel schlägt die Flex-Grundregel (Spezifität)
 
 ## Wie du antwortest
 
@@ -426,7 +426,7 @@ CHF 1'700 pro Tag Inklusive Vorbereitung und Nachbereitung.
 Tägliche kleine Lerneinheiten
 Was es ist. An 20 Arbeitstagen jeweils drei bis fünf Minuten Lernstoff zu Ihren Themen, aufs Smartphone oder an den Arbeitsplatz.
 Wann es passt. Wenn Gelerntes nach dem Training im Alltag haften bleiben soll.
-Einmalig CHF 900 · plus CHF 60 pro Person Der einmalige Betrag deckt die Anpassung an Ihren Betrieb. Das Programm dauert vier Wochen und ist ab zehn Personen buchbar. Neue Inhalte ohne vorhandene Unterlagen erstellen wir nach Aufwand. Gesamtpreis für 10 Personen CHF 1'500 , für 15 Personen CHF 1'800 , für 25 Personen CHF 2'400 .
+Einmalig CHF 900 · plus CHF 60 pro Person
 Jede Reise ist eine Kombination. Sie zahlen nur, was Ihr Betrieb braucht. Ab-Preise sind Fixpreise nach der Erstanalyse, nie offen nach oben. Alle Preise in Schweizer Franken, inklusive 8,1 % Mehrwertsteuer.
 KLEINE SCHRITTE, JEDEN TAG
 Dranbleiben macht den Unterschied.
