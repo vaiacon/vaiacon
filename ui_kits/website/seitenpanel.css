@@ -142,3 +142,16 @@ html.mit-seitenpanel .sp-knopf { display: none !important; }
 .sp-weitere { border-top-color: rgba(255, 255, 255, 0.3); }
 .sp-weitere a:hover, .sp-weitere a.an { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
 .sp-panel a:focus-visible, .sp-bereich summary:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+/* Logo oben im Panel; auf breiten Bildschirmen ersetzt es das Logo der Kopfzeile. */
+.sp-panel { padding-top: 0; }
+.sp-logo { display: flex; align-items: center; min-height: 82px; margin: 0 0 var(--space-5); padding-left: var(--space-3); }
+.sp-logo img { width: 180px; height: auto; display: block; }
+@media (min-width: 1200px) {
+  html.mit-seitenpanel .mock-header__logo { display: none; }
+}
+@media (max-width: 1199px) {
+  .sp-panel { padding-top: 0; }
+  .sp-logo { min-height: 72px; }
+  .sp-logo img { width: 160px; }
+}

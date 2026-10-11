@@ -26,7 +26,9 @@
   panel.className = 'sp-panel';
   panel.id = 'sp-panel';
   panel.setAttribute('aria-label', 'Inhalt der Website');
-  var html = '<p class="sp-kopf">Übersicht</p><nav class="sp-baum">';
+  var html = '<a class="sp-logo" href="' + (tiefe || './') + '" aria-label="vaiacon Start">' +
+    '<img src="' + tiefe + 'assets/logo-lockup-white.svg" alt="vaiacon" width="180" height="33"></a>' +
+    '<p class="sp-kopf">Übersicht</p><nav class="sp-baum">';
   BEREICHE.forEach(function (b) {
     var aktiv = b.seite === name;
     var ziel = b.seite === 'index' ? './' : b.seite;
