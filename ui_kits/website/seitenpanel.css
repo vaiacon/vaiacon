@@ -128,22 +128,21 @@ html.mit-seitenpanel .sp-knopf { display: none !important; }
   html.mit-seitenpanel .mock-header.is-solid .mock-menu-toggle span { background: var(--terra-500); }
 }
 
-/* Farbe: Terracotta mit weisser Schrift (Philip, 11.10.2026). */
-/* Panelfarbe: Terracotta hell (terra-500), gewählt am 11.10.2026. */
-:root { --sp-farbe: var(--terra-500); }
-.sp-panel { background: var(--sp-farbe); border-right: 0; color: #fff; }
-.sp-panel a, .sp-bereich summary a, .sp-weitere a { color: #fff; }
-.sp-kopf { color: rgba(255, 255, 255, 0.72); }
-.sp-bereich summary::after { border-color: rgba(255, 255, 255, 0.85); }
-.sp-bereich summary:hover { background: rgba(255, 255, 255, 0.12); }
-.sp-bereich--aktiv > summary { background: rgba(255, 255, 255, 0.16); box-shadow: inset 3px 0 0 #fff; }
-.sp-bereich ul { border-left-color: rgba(255, 255, 255, 0.3); }
-.sp-bereich li a { color: rgba(255, 255, 255, 0.82); }
-.sp-bereich li a:hover { color: #fff; }
-.sp-bereich li a.an { color: #fff; border-left-color: #fff; font-weight: 700; }
-.sp-weitere { border-top-color: rgba(255, 255, 255, 0.3); }
-.sp-weitere a:hover, .sp-weitere a.an { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
-.sp-panel a:focus-visible, .sp-bereich summary:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+/* Farbe: Creme (cream-50) mit dunkler Schrift, Terracotta als Markierung (Philip, 11.10.2026). */
+:root { --sp-farbe: var(--cream-50); }
+.sp-panel { background: var(--sp-farbe); border-right: 1px solid var(--sand-300); color: var(--ink-900); }
+.sp-panel a, .sp-bereich summary a, .sp-weitere a { color: var(--ink-900); }
+.sp-kopf { color: var(--brown-600); }
+.sp-bereich summary::after { border-color: var(--brown-600); }
+.sp-bereich summary:hover { background: rgba(28, 22, 19, 0.05); }
+.sp-bereich--aktiv > summary { background: var(--peach-100, var(--cream-100)); box-shadow: inset 3px 0 0 var(--terra-500); }
+.sp-bereich ul { border-left-color: var(--sand-300); }
+.sp-bereich li a { color: var(--brown-600); }
+.sp-bereich li a:hover { color: var(--ink-900); }
+.sp-bereich li a.an { color: var(--terra-600); border-left-color: var(--terra-500); font-weight: 700; }
+.sp-weitere { border-top-color: var(--sand-300); }
+.sp-weitere a:hover, .sp-weitere a.an { color: var(--terra-600); text-decoration: underline; text-underline-offset: 3px; }
+.sp-panel a:focus-visible, .sp-bereich summary:focus-visible { outline: 2px solid var(--terra-500); outline-offset: 2px; }
 
 /* Logo oben im Panel; auf breiten Bildschirmen ersetzt es das Logo der Kopfzeile. */
 .sp-panel { padding-top: 0; }
@@ -158,4 +157,3 @@ html.mit-seitenpanel .sp-knopf { display: none !important; }
   .sp-logo img { width: 160px; }
 }
 
-/* Sand: helle Fläche, dunkle Schrift, Terracotta als Markierung. */
