@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 11.10.2026 · Eintrag ec9390d learning: Roboter in der Zeitleiste ohne beigen Kasten, mittig und grösser
+> Stand: 11.10.2026 · Eintrag 60f0534 Merge pull request #28 from vaiacon/ohne-preise-2026-10-11
 
 ## Wie du antwortest
 
@@ -280,6 +280,164 @@ Damit Gelerntes im Alltag haften bleibt.
 3–5 Min pro Tag
 aufs Handy
 Jede Reise ist eine Kombination. Sie zahlen nur, was Ihr Betrieb braucht. Was genau enthalten ist, legen wir im Erstgespräch fest.
+DER THEMENKATALOG
+Ihr Training aus Bausteinen.
+Wählen Sie die Themen, die Ihr Team braucht, und wie tief es jeweils gehen soll. Daraus ergibt sich, ob ein Lerntag reicht oder ob es eine Woche wird.
+Kennenlernen Wir zeigen, wie es geht, alle probieren es aus.
+Anwenden Alle üben an eigenen Aufgaben aus dem Arbeitsalltag.
+Vertiefen Das Team baut eigene Lösungen und verankert sie im Alltag.
+Standard Erprobte Themen mit fertigem Ablauf und Übungen. Weil wir sie für viele Betriebe schulen, sind sie günstiger.
+Nach Mass Wir erarbeiten das Thema aus Ihren Unterlagen und Abläufen neu. Das braucht mehr Vorbereitung und kostet darum mehr.
+Zum Ausprobieren:
+Ein Lerntag · KI-Start
+Drei Tage · Werkzeuge im Alltag
+Eine Woche · KI im ganzen Betrieb
+Alles abwählen
+Grundlagen
+Was alle im Betrieb wissen sollten.
+KI verstehen Standard
+Wie Sprachmodelle arbeiten, was sie gut können und wo sie Fehler machen.
+Tiefe für «KI verstehen»
+Nicht gewählt
+Kennenlernen 1 Std
+Anwenden 2 Std
+Vertiefen 4 Std
+Gute Aufträge an die KI Standard
+Klar fragen, Beispiele geben, Ergebnisse nachschärfen. Die Grundtechnik für jedes Werkzeug.
+Tiefe für «Gute Aufträge an die KI»
+Nicht gewählt
+Kennenlernen 1½ Std
+Anwenden 3 Std
+Vertiefen 6 Std
+Datenschutz und KI Standard
+Was in welches Werkzeug darf: Kundendaten, Berufsgeheimnis, richtige Einstellungen. Nach Schweizer Datenschutzgesetz.
+Tiefe für «Datenschutz und KI»
+Nicht gewählt
+Kennenlernen 1 Std
+Anwenden 2 Std
+Vertiefen 4 Std
+Ergebnisse prüfen, Betrug erkennen Standard
+Erfundene Fakten erkennen, Quellen prüfen, gefälschte Stimmen und Mails durchschauen.
+Tiefe für «Ergebnisse prüfen, Betrug erkennen»
+Nicht gewählt
+Kennenlernen 1 Std
+Anwenden 2 Std
+Vertiefen 3 Std
+Werkzeuge im Alltag
+Erprobte Themen, die wir für jede Gruppe gleich gut schulen können.
+ChatGPT, Claude, Copilot und Gemini Standard
+Welches Werkzeug wofür taugt und welche Lizenz sich für Ihren Betrieb lohnt.
+Tiefe für «ChatGPT, Claude, Copilot und Gemini»
+Nicht gewählt
+Kennenlernen 1 Std
+Anwenden 2 Std
+Vertiefen 4 Std
+Microsoft 365 Copilot Standard
+KI in Outlook, Word, Excel und Teams: Mails, Zusammenfassungen, Auswertungen.
+Tiefe für «Microsoft 365 Copilot»
+Nicht gewählt
+Kennenlernen 1½ Std
+Anwenden 3 Std
+Vertiefen 6 Std
+Recherche mit Perplexity und Co. Standard
+Schnell recherchieren, mit Quellenangabe: Märkte, Lieferanten, Vorschriften, Mitbewerber.
+Tiefe für «Recherche mit Perplexity und Co.»
+Nicht gewählt
+Kennenlernen 1 Std
+Anwenden 2 Std
+Vertiefen 4 Std
+Texte im eigenen Ton Standard
+Mails, Offerten, Website und Social Media: Die KI schreibt vor, Sie bestimmen den Ton.
+Tiefe für «Texte im eigenen Ton»
+Nicht gewählt
+Kennenlernen 1 Std
+Anwenden 3 Std
+Vertiefen 6 Std
+Zahlen und Tabellen auswerten Standard
+Excel-Formeln, Auswertungen und Grafiken mit KI, ganz ohne Programmierkenntnisse.
+Tiefe für «Zahlen und Tabellen auswerten»
+Nicht gewählt
+Kennenlernen 1 Std
+Anwenden 3 Std
+Vertiefen 6 Std
+Besprechungen und Protokolle Standard
+Aufnehmen, abschreiben, zusammenfassen und Pendenzen ableiten, ohne den Datenschutz zu verletzen.
+Tiefe für «Besprechungen und Protokolle»
+Nicht gewählt
+Kennenlernen 1 Std
+Anwenden 2 Std
+Vertiefen 3 Std
+Bilder, Grafiken und Videos Standard
+Bildideen, Produktfotos, Präsentationen und kurze Videos, inklusive Bildrechte.
+Tiefe für «Bilder, Grafiken und Videos»
+Nicht gewählt
+Kennenlernen 1 Std
+Anwenden 3 Std
+Vertiefen 6 Std
+Claude Code: KI, die selbst arbeitet Standard
+Die KI erledigt mehrstufige Aufgaben am Computer: Dateien ordnen, Berichte bauen, kleine Werkzeuge erstellen. Für Technik-Interessierte.
+Tiefe für «Claude Code: KI, die selbst arbeitet»
+Nicht gewählt
+Kennenlernen 2 Std
+Anwenden 6 Std
+Vertiefen 12 Std
+In Ihrem Betrieb
+Diese Themen bauen wir aus Ihren Unterlagen und Abläufen neu.
+Ihre Abläufe mit KI Nach Mass
+Wir nehmen zwei bis drei Ihrer echten Abläufe und bauen sie im Training gemeinsam um.
+Tiefe für «Ihre Abläufe mit KI»
+Nicht gewählt
+Kennenlernen 2 Std
+Anwenden 6 Std
+Vertiefen 12 Std
+Vorlagen-Sammlung für Ihren Betrieb Nach Mass
+Geprüfte Vorlagen für Ihre häufigsten Aufgaben, gemeinsam erarbeitet und im Team abgelegt.
+Tiefe für «Vorlagen-Sammlung für Ihren Betrieb»
+Nicht gewählt
+Kennenlernen 2 Std
+Anwenden 4 Std
+Vertiefen 6 Std
+KI in Ihrer Branchensoftware Nach Mass
+Die KI-Funktionen Ihrer eigenen Programme, etwa Buchhaltung, Kundenverwaltung oder Branchenlösung.
+Tiefe für «KI in Ihrer Branchensoftware»
+Nicht gewählt
+Kennenlernen 1½ Std
+Anwenden 3 Std
+Vertiefen 6 Std
+Chatbot mit Firmenwissen Nach Mass
+Ihren eigenen Chatbot nutzen, sein Wissen pflegen und seine Antworten prüfen.
+Tiefe für «Chatbot mit Firmenwissen»
+Nicht gewählt
+Kennenlernen 1 Std
+Anwenden 3 Std
+Vertiefen 6 Std
+Führung und Regeln
+Für Geschäftsleitung, Teamleitung und alle, die KI im Betrieb verantworten.
+KI im Betrieb führen Standard
+Ziele setzen, Verantwortung klären, Wirkung messen.
+Tiefe für «KI im Betrieb führen»
+Nicht gewählt
+Kennenlernen 1 Std
+Anwenden 3 Std
+Vertiefen 6 Std
+Spielregeln für KI Standard
+Eine Nutzungsrichtlinie aus erprobter Vorlage: erlaubte Werkzeuge, Freigaben, Verantwortung.
+Tiefe für «Spielregeln für KI»
+Nicht gewählt
+Kennenlernen 1 Std
+Anwenden 2 Std
+Vertiefen 4 Std
+Das Team mitnehmen Standard
+Sorgen ernst nehmen, Rollen klären, offen über KI sprechen. Damit die Veränderung getragen wird.
+Tiefe für «Das Team mitnehmen»
+Nicht gewählt
+Kennenlernen 1 Std
+Anwenden 2 Std
+Vertiefen 4 Std
+Noch nichts gewählt
+Wählen Sie oben Themen und Tiefe.
+Mit dieser Auswahl anfragen →
+Gerechnet für eine Gruppe von 12 Personen. Kleinere Gruppen brauchen etwas weniger Übungszeit, grössere mehr. Ein Lerntag hat sechs Stunden Lernzeit, Pausen nicht eingerechnet. Die Tage müssen nicht am Stück sein: Wir verteilen sie auf Ihre Lernreise, auch als Webinar oder bei Ihnen im Betrieb.
 KLEINE SCHRITTE, JEDEN TAG
 Dranbleiben macht den Unterschied.
 Kurze Übungen helfen, das Gelernte im Alltag anzuwenden. Wer täglich an der eigenen Aufgabe übt, dem wird KI im Arbeitsalltag vertrauter.

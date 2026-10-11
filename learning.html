@@ -23,6 +23,7 @@
 <link rel="stylesheet" href="ui_kits/website/lernreise.css?v=20261011-formate">
 <link rel="stylesheet" href="ui_kits/website/lernreise-zeitleiste.css?v=20261011-robo">
 <link rel="stylesheet" href="ui_kits/website/standort.css?v=20261011-audit">
+<link rel="stylesheet" href="ui_kits/website/themenkatalog.css?v=20261011-handy">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
 <style>
 /* Preislogik 2026-10: Umfangsätze dürfen umbrechen, Nebenpreise stehen leiser unter dem Hauptpreis. */
@@ -477,6 +478,245 @@
       </div>
     </section>
 
+    <section id="themen" class="sv-section" aria-labelledby="themen-titel">
+      <div class="sv-wrap">
+        <div class="sv-center">
+          <p class="sv-kicker">DER THEMENKATALOG</p>
+          <h2 class="sv-title" id="themen-titel">Ihr Training aus Bausteinen.</h2>
+          <p class="sv-lead">
+            Wählen Sie die Themen, die Ihr Team braucht, und wie tief es jeweils gehen soll. Daraus ergibt sich, ob ein Lerntag reicht oder ob es eine Woche wird.
+          </p>
+        </div>
+
+        <div class="tk-erklaerung">
+          <dl class="tk-tiefen">
+            <div><dt>Kennenlernen</dt><dd>Wir zeigen, wie es geht, alle probieren es aus.</dd></div>
+            <div><dt>Anwenden</dt><dd>Alle üben an eigenen Aufgaben aus dem Arbeitsalltag.</dd></div>
+            <div><dt>Vertiefen</dt><dd>Das Team baut eigene Lösungen und verankert sie im Alltag.</dd></div>
+          </dl>
+          <div class="tk-arten">
+            <p><span class="tk-marke">Standard</span> Erprobte Themen mit fertigem Ablauf und Übungen. Weil wir sie für viele Betriebe schulen, sind sie günstiger.</p>
+            <p><span class="tk-marke tk-marke--mass">Nach Mass</span> Wir erarbeiten das Thema aus Ihren Unterlagen und Abläufen neu. Das braucht mehr Vorbereitung und kostet darum mehr.</p>
+          </div>
+        </div>
+
+        <div class="tk-vorlagen" role="group" aria-label="Beispiele zum Ausprobieren">
+          <span class="tk-vorlagen__titel">Zum Ausprobieren:</span>
+          <button type="button" class="tk-vorlage" data-tk-vorlage="tag">Ein Lerntag · KI-Start</button>
+          <button type="button" class="tk-vorlage" data-tk-vorlage="drei">Drei Tage · Werkzeuge im Alltag</button>
+          <button type="button" class="tk-vorlage" data-tk-vorlage="woche">Eine Woche · KI im ganzen Betrieb</button>
+          <button type="button" class="tk-vorlage tk-vorlage--leer" data-tk-vorlage="leer">Alles abwählen</button>
+        </div>
+
+        <form class="tk-katalog" id="themenkatalog" onsubmit="return false">
+          <div class="tk-gruppe" id="themen-grundlagen">
+            <h3 class="tk-gruppe__titel">Grundlagen</h3>
+            <p class="tk-gruppe__text">Was alle im Betrieb wissen sollten.</p>
+            <ul class="tk-liste">
+              <li class="tk-thema" data-thema="ki-verstehen" data-art="standard">
+                <div class="tk-thema__text"><h4>KI verstehen <span class="tk-marke">Standard</span></h4><p>Wie Sprachmodelle arbeiten, was sie gut können und wo sie Fehler machen.</p></div>
+                <fieldset class="tk-tiefe"><legend class="tk-sr">Tiefe für «KI verstehen»</legend>
+                  <label class="tk-wahl tk-wahl--aus"><input type="radio" name="tk-ki-verstehen" value="0" data-std="0" checked><span>Nicht gewählt</span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-ki-verstehen" value="1" data-std="1"><span><b>Kennenlernen</b><i>1 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-ki-verstehen" value="2" data-std="2"><span><b>Anwenden</b><i>2 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-ki-verstehen" value="3" data-std="4"><span><b>Vertiefen</b><i>4 Std</i></span></label>
+                </fieldset>
+              </li>
+              <li class="tk-thema" data-thema="auftraege" data-art="standard">
+                <div class="tk-thema__text"><h4>Gute Aufträge an die KI <span class="tk-marke">Standard</span></h4><p>Klar fragen, Beispiele geben, Ergebnisse nachschärfen. Die Grundtechnik für jedes Werkzeug.</p></div>
+                <fieldset class="tk-tiefe"><legend class="tk-sr">Tiefe für «Gute Aufträge an die KI»</legend>
+                  <label class="tk-wahl tk-wahl--aus"><input type="radio" name="tk-auftraege" value="0" data-std="0" checked><span>Nicht gewählt</span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-auftraege" value="1" data-std="1.5"><span><b>Kennenlernen</b><i>1½ Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-auftraege" value="2" data-std="3"><span><b>Anwenden</b><i>3 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-auftraege" value="3" data-std="6"><span><b>Vertiefen</b><i>6 Std</i></span></label>
+                </fieldset>
+              </li>
+              <li class="tk-thema" data-thema="datenschutz" data-art="standard">
+                <div class="tk-thema__text"><h4>Datenschutz und KI <span class="tk-marke">Standard</span></h4><p>Was in welches Werkzeug darf: Kundendaten, Berufsgeheimnis, richtige Einstellungen. Nach Schweizer Datenschutzgesetz.</p></div>
+                <fieldset class="tk-tiefe"><legend class="tk-sr">Tiefe für «Datenschutz und KI»</legend>
+                  <label class="tk-wahl tk-wahl--aus"><input type="radio" name="tk-datenschutz" value="0" data-std="0" checked><span>Nicht gewählt</span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-datenschutz" value="1" data-std="1"><span><b>Kennenlernen</b><i>1 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-datenschutz" value="2" data-std="2"><span><b>Anwenden</b><i>2 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-datenschutz" value="3" data-std="4"><span><b>Vertiefen</b><i>4 Std</i></span></label>
+                </fieldset>
+              </li>
+              <li class="tk-thema" data-thema="pruefen" data-art="standard">
+                <div class="tk-thema__text"><h4>Ergebnisse prüfen, Betrug erkennen <span class="tk-marke">Standard</span></h4><p>Erfundene Fakten erkennen, Quellen prüfen, gefälschte Stimmen und Mails durchschauen.</p></div>
+                <fieldset class="tk-tiefe"><legend class="tk-sr">Tiefe für «Ergebnisse prüfen, Betrug erkennen»</legend>
+                  <label class="tk-wahl tk-wahl--aus"><input type="radio" name="tk-pruefen" value="0" data-std="0" checked><span>Nicht gewählt</span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-pruefen" value="1" data-std="1"><span><b>Kennenlernen</b><i>1 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-pruefen" value="2" data-std="2"><span><b>Anwenden</b><i>2 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-pruefen" value="3" data-std="3"><span><b>Vertiefen</b><i>3 Std</i></span></label>
+                </fieldset>
+              </li>
+            </ul>
+          </div>
+          <div class="tk-gruppe" id="themen-werkzeuge">
+            <h3 class="tk-gruppe__titel">Werkzeuge im Alltag</h3>
+            <p class="tk-gruppe__text">Erprobte Themen, die wir für jede Gruppe gleich gut schulen können.</p>
+            <ul class="tk-liste">
+              <li class="tk-thema" data-thema="werkzeugwahl" data-art="standard">
+                <div class="tk-thema__text"><h4>ChatGPT, Claude, Copilot und Gemini <span class="tk-marke">Standard</span></h4><p>Welches Werkzeug wofür taugt und welche Lizenz sich für Ihren Betrieb lohnt.</p></div>
+                <fieldset class="tk-tiefe"><legend class="tk-sr">Tiefe für «ChatGPT, Claude, Copilot und Gemini»</legend>
+                  <label class="tk-wahl tk-wahl--aus"><input type="radio" name="tk-werkzeugwahl" value="0" data-std="0" checked><span>Nicht gewählt</span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-werkzeugwahl" value="1" data-std="1"><span><b>Kennenlernen</b><i>1 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-werkzeugwahl" value="2" data-std="2"><span><b>Anwenden</b><i>2 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-werkzeugwahl" value="3" data-std="4"><span><b>Vertiefen</b><i>4 Std</i></span></label>
+                </fieldset>
+              </li>
+              <li class="tk-thema" data-thema="copilot" data-art="standard">
+                <div class="tk-thema__text"><h4>Microsoft 365 Copilot <span class="tk-marke">Standard</span></h4><p>KI in Outlook, Word, Excel und Teams: Mails, Zusammenfassungen, Auswertungen.</p></div>
+                <fieldset class="tk-tiefe"><legend class="tk-sr">Tiefe für «Microsoft 365 Copilot»</legend>
+                  <label class="tk-wahl tk-wahl--aus"><input type="radio" name="tk-copilot" value="0" data-std="0" checked><span>Nicht gewählt</span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-copilot" value="1" data-std="1.5"><span><b>Kennenlernen</b><i>1½ Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-copilot" value="2" data-std="3"><span><b>Anwenden</b><i>3 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-copilot" value="3" data-std="6"><span><b>Vertiefen</b><i>6 Std</i></span></label>
+                </fieldset>
+              </li>
+              <li class="tk-thema" data-thema="perplexity" data-art="standard">
+                <div class="tk-thema__text"><h4>Recherche mit Perplexity und Co. <span class="tk-marke">Standard</span></h4><p>Schnell recherchieren, mit Quellenangabe: Märkte, Lieferanten, Vorschriften, Mitbewerber.</p></div>
+                <fieldset class="tk-tiefe"><legend class="tk-sr">Tiefe für «Recherche mit Perplexity und Co.»</legend>
+                  <label class="tk-wahl tk-wahl--aus"><input type="radio" name="tk-perplexity" value="0" data-std="0" checked><span>Nicht gewählt</span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-perplexity" value="1" data-std="1"><span><b>Kennenlernen</b><i>1 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-perplexity" value="2" data-std="2"><span><b>Anwenden</b><i>2 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-perplexity" value="3" data-std="4"><span><b>Vertiefen</b><i>4 Std</i></span></label>
+                </fieldset>
+              </li>
+              <li class="tk-thema" data-thema="texte" data-art="standard">
+                <div class="tk-thema__text"><h4>Texte im eigenen Ton <span class="tk-marke">Standard</span></h4><p>Mails, Offerten, Website und Social Media: Die KI schreibt vor, Sie bestimmen den Ton.</p></div>
+                <fieldset class="tk-tiefe"><legend class="tk-sr">Tiefe für «Texte im eigenen Ton»</legend>
+                  <label class="tk-wahl tk-wahl--aus"><input type="radio" name="tk-texte" value="0" data-std="0" checked><span>Nicht gewählt</span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-texte" value="1" data-std="1"><span><b>Kennenlernen</b><i>1 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-texte" value="2" data-std="3"><span><b>Anwenden</b><i>3 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-texte" value="3" data-std="6"><span><b>Vertiefen</b><i>6 Std</i></span></label>
+                </fieldset>
+              </li>
+              <li class="tk-thema" data-thema="zahlen" data-art="standard">
+                <div class="tk-thema__text"><h4>Zahlen und Tabellen auswerten <span class="tk-marke">Standard</span></h4><p>Excel-Formeln, Auswertungen und Grafiken mit KI, ganz ohne Programmierkenntnisse.</p></div>
+                <fieldset class="tk-tiefe"><legend class="tk-sr">Tiefe für «Zahlen und Tabellen auswerten»</legend>
+                  <label class="tk-wahl tk-wahl--aus"><input type="radio" name="tk-zahlen" value="0" data-std="0" checked><span>Nicht gewählt</span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-zahlen" value="1" data-std="1"><span><b>Kennenlernen</b><i>1 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-zahlen" value="2" data-std="3"><span><b>Anwenden</b><i>3 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-zahlen" value="3" data-std="6"><span><b>Vertiefen</b><i>6 Std</i></span></label>
+                </fieldset>
+              </li>
+              <li class="tk-thema" data-thema="besprechungen" data-art="standard">
+                <div class="tk-thema__text"><h4>Besprechungen und Protokolle <span class="tk-marke">Standard</span></h4><p>Aufnehmen, abschreiben, zusammenfassen und Pendenzen ableiten, ohne den Datenschutz zu verletzen.</p></div>
+                <fieldset class="tk-tiefe"><legend class="tk-sr">Tiefe für «Besprechungen und Protokolle»</legend>
+                  <label class="tk-wahl tk-wahl--aus"><input type="radio" name="tk-besprechungen" value="0" data-std="0" checked><span>Nicht gewählt</span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-besprechungen" value="1" data-std="1"><span><b>Kennenlernen</b><i>1 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-besprechungen" value="2" data-std="2"><span><b>Anwenden</b><i>2 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-besprechungen" value="3" data-std="3"><span><b>Vertiefen</b><i>3 Std</i></span></label>
+                </fieldset>
+              </li>
+              <li class="tk-thema" data-thema="bilder" data-art="standard">
+                <div class="tk-thema__text"><h4>Bilder, Grafiken und Videos <span class="tk-marke">Standard</span></h4><p>Bildideen, Produktfotos, Präsentationen und kurze Videos, inklusive Bildrechte.</p></div>
+                <fieldset class="tk-tiefe"><legend class="tk-sr">Tiefe für «Bilder, Grafiken und Videos»</legend>
+                  <label class="tk-wahl tk-wahl--aus"><input type="radio" name="tk-bilder" value="0" data-std="0" checked><span>Nicht gewählt</span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-bilder" value="1" data-std="1"><span><b>Kennenlernen</b><i>1 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-bilder" value="2" data-std="3"><span><b>Anwenden</b><i>3 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-bilder" value="3" data-std="6"><span><b>Vertiefen</b><i>6 Std</i></span></label>
+                </fieldset>
+              </li>
+              <li class="tk-thema" data-thema="claude-code" data-art="standard">
+                <div class="tk-thema__text"><h4>Claude Code: KI, die selbst arbeitet <span class="tk-marke">Standard</span></h4><p>Die KI erledigt mehrstufige Aufgaben am Computer: Dateien ordnen, Berichte bauen, kleine Werkzeuge erstellen. Für Technik-Interessierte.</p></div>
+                <fieldset class="tk-tiefe"><legend class="tk-sr">Tiefe für «Claude Code: KI, die selbst arbeitet»</legend>
+                  <label class="tk-wahl tk-wahl--aus"><input type="radio" name="tk-claude-code" value="0" data-std="0" checked><span>Nicht gewählt</span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-claude-code" value="1" data-std="2"><span><b>Kennenlernen</b><i>2 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-claude-code" value="2" data-std="6"><span><b>Anwenden</b><i>6 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-claude-code" value="3" data-std="12"><span><b>Vertiefen</b><i>12 Std</i></span></label>
+                </fieldset>
+              </li>
+            </ul>
+          </div>
+          <div class="tk-gruppe" id="themen-betrieb">
+            <h3 class="tk-gruppe__titel">In Ihrem Betrieb</h3>
+            <p class="tk-gruppe__text">Diese Themen bauen wir aus Ihren Unterlagen und Abläufen neu.</p>
+            <ul class="tk-liste">
+              <li class="tk-thema" data-thema="ablaeufe" data-art="mass">
+                <div class="tk-thema__text"><h4>Ihre Abläufe mit KI <span class="tk-marke tk-marke--mass">Nach Mass</span></h4><p>Wir nehmen zwei bis drei Ihrer echten Abläufe und bauen sie im Training gemeinsam um.</p></div>
+                <fieldset class="tk-tiefe"><legend class="tk-sr">Tiefe für «Ihre Abläufe mit KI»</legend>
+                  <label class="tk-wahl tk-wahl--aus"><input type="radio" name="tk-ablaeufe" value="0" data-std="0" checked><span>Nicht gewählt</span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-ablaeufe" value="1" data-std="2"><span><b>Kennenlernen</b><i>2 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-ablaeufe" value="2" data-std="6"><span><b>Anwenden</b><i>6 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-ablaeufe" value="3" data-std="12"><span><b>Vertiefen</b><i>12 Std</i></span></label>
+                </fieldset>
+              </li>
+              <li class="tk-thema" data-thema="vorlagen" data-art="mass">
+                <div class="tk-thema__text"><h4>Vorlagen-Sammlung für Ihren Betrieb <span class="tk-marke tk-marke--mass">Nach Mass</span></h4><p>Geprüfte Vorlagen für Ihre häufigsten Aufgaben, gemeinsam erarbeitet und im Team abgelegt.</p></div>
+                <fieldset class="tk-tiefe"><legend class="tk-sr">Tiefe für «Vorlagen-Sammlung für Ihren Betrieb»</legend>
+                  <label class="tk-wahl tk-wahl--aus"><input type="radio" name="tk-vorlagen" value="0" data-std="0" checked><span>Nicht gewählt</span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-vorlagen" value="1" data-std="2"><span><b>Kennenlernen</b><i>2 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-vorlagen" value="2" data-std="4"><span><b>Anwenden</b><i>4 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-vorlagen" value="3" data-std="6"><span><b>Vertiefen</b><i>6 Std</i></span></label>
+                </fieldset>
+              </li>
+              <li class="tk-thema" data-thema="software" data-art="mass">
+                <div class="tk-thema__text"><h4>KI in Ihrer Branchensoftware <span class="tk-marke tk-marke--mass">Nach Mass</span></h4><p>Die KI-Funktionen Ihrer eigenen Programme, etwa Buchhaltung, Kundenverwaltung oder Branchenlösung.</p></div>
+                <fieldset class="tk-tiefe"><legend class="tk-sr">Tiefe für «KI in Ihrer Branchensoftware»</legend>
+                  <label class="tk-wahl tk-wahl--aus"><input type="radio" name="tk-software" value="0" data-std="0" checked><span>Nicht gewählt</span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-software" value="1" data-std="1.5"><span><b>Kennenlernen</b><i>1½ Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-software" value="2" data-std="3"><span><b>Anwenden</b><i>3 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-software" value="3" data-std="6"><span><b>Vertiefen</b><i>6 Std</i></span></label>
+                </fieldset>
+              </li>
+              <li class="tk-thema" data-thema="chatbot" data-art="mass">
+                <div class="tk-thema__text"><h4>Chatbot mit Firmenwissen <span class="tk-marke tk-marke--mass">Nach Mass</span></h4><p>Ihren eigenen Chatbot nutzen, sein Wissen pflegen und seine Antworten prüfen.</p></div>
+                <fieldset class="tk-tiefe"><legend class="tk-sr">Tiefe für «Chatbot mit Firmenwissen»</legend>
+                  <label class="tk-wahl tk-wahl--aus"><input type="radio" name="tk-chatbot" value="0" data-std="0" checked><span>Nicht gewählt</span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-chatbot" value="1" data-std="1"><span><b>Kennenlernen</b><i>1 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-chatbot" value="2" data-std="3"><span><b>Anwenden</b><i>3 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-chatbot" value="3" data-std="6"><span><b>Vertiefen</b><i>6 Std</i></span></label>
+                </fieldset>
+              </li>
+            </ul>
+          </div>
+          <div class="tk-gruppe" id="themen-fuehrung">
+            <h3 class="tk-gruppe__titel">Führung und Regeln</h3>
+            <p class="tk-gruppe__text">Für Geschäftsleitung, Teamleitung und alle, die KI im Betrieb verantworten.</p>
+            <ul class="tk-liste">
+              <li class="tk-thema" data-thema="fuehren" data-art="standard">
+                <div class="tk-thema__text"><h4>KI im Betrieb führen <span class="tk-marke">Standard</span></h4><p>Ziele setzen, Verantwortung klären, Wirkung messen.</p></div>
+                <fieldset class="tk-tiefe"><legend class="tk-sr">Tiefe für «KI im Betrieb führen»</legend>
+                  <label class="tk-wahl tk-wahl--aus"><input type="radio" name="tk-fuehren" value="0" data-std="0" checked><span>Nicht gewählt</span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-fuehren" value="1" data-std="1"><span><b>Kennenlernen</b><i>1 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-fuehren" value="2" data-std="3"><span><b>Anwenden</b><i>3 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-fuehren" value="3" data-std="6"><span><b>Vertiefen</b><i>6 Std</i></span></label>
+                </fieldset>
+              </li>
+              <li class="tk-thema" data-thema="regeln" data-art="standard">
+                <div class="tk-thema__text"><h4>Spielregeln für KI <span class="tk-marke">Standard</span></h4><p>Eine Nutzungsrichtlinie aus erprobter Vorlage: erlaubte Werkzeuge, Freigaben, Verantwortung.</p></div>
+                <fieldset class="tk-tiefe"><legend class="tk-sr">Tiefe für «Spielregeln für KI»</legend>
+                  <label class="tk-wahl tk-wahl--aus"><input type="radio" name="tk-regeln" value="0" data-std="0" checked><span>Nicht gewählt</span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-regeln" value="1" data-std="1"><span><b>Kennenlernen</b><i>1 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-regeln" value="2" data-std="2"><span><b>Anwenden</b><i>2 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-regeln" value="3" data-std="4"><span><b>Vertiefen</b><i>4 Std</i></span></label>
+                </fieldset>
+              </li>
+              <li class="tk-thema" data-thema="veraenderung" data-art="standard">
+                <div class="tk-thema__text"><h4>Das Team mitnehmen <span class="tk-marke">Standard</span></h4><p>Sorgen ernst nehmen, Rollen klären, offen über KI sprechen. Damit die Veränderung getragen wird.</p></div>
+                <fieldset class="tk-tiefe"><legend class="tk-sr">Tiefe für «Das Team mitnehmen»</legend>
+                  <label class="tk-wahl tk-wahl--aus"><input type="radio" name="tk-veraenderung" value="0" data-std="0" checked><span>Nicht gewählt</span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-veraenderung" value="1" data-std="1"><span><b>Kennenlernen</b><i>1 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-veraenderung" value="2" data-std="2"><span><b>Anwenden</b><i>2 Std</i></span></label>
+                  <label class="tk-wahl"><input type="radio" name="tk-veraenderung" value="3" data-std="4"><span><b>Vertiefen</b><i>4 Std</i></span></label>
+                </fieldset>
+              </li>
+            </ul>
+          </div>
+          <div class="tk-summe" aria-live="polite" hidden>
+            <div class="tk-summe__zahlen">
+              <p class="tk-summe__dauer"><strong data-tk-dauer>Noch nichts gewählt</strong> <span data-tk-stunden></span></p>
+              <div class="tk-summe__tage" data-tk-tage aria-hidden="true"></div>
+              <p class="tk-summe__info" data-tk-info>Wählen Sie oben Themen und Tiefe.</p>
+            </div>
+            <button type="button" class="sv-button sv-button--cta tk-summe__knopf" data-tk-anfragen disabled>Mit dieser Auswahl anfragen →</button>
+          </div>
+        </form>
+        <p class="tk-fuss">Gerechnet für eine Gruppe von 12 Personen. Kleinere Gruppen brauchen etwas weniger Übungszeit, grössere mehr. Ein Lerntag hat sechs Stunden Lernzeit, Pausen nicht eingerechnet. Die Tage müssen nicht am Stück sein: Wir verteilen sie auf Ihre Lernreise, auch als Webinar oder bei Ihnen im Betrieb.</p>
+      </div>
+    </section>
+
     <section id="kleine-schritte" class="sv-section sv-section--terra">
       <div class="sv-wrap">
         <div class="sv-center">
@@ -592,6 +832,7 @@
 <script src="ui_kits/website/lernreise.js?v=20261011-audit" defer></script>
 <script src="ui_kits/website/lernreise-zeitleiste.js?v=20261011-audit" defer></script>
 <script src="ui_kits/website/standort.js?v=20261011-audit" defer></script>
+<script src="ui_kits/website/themenkatalog.js?v=20261011-start" defer></script>
 <script src="ui_kits/website/chat.js?v=20261004-umbau"></script>
 </body>
 </html>
