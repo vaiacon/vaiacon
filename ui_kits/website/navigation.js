@@ -83,7 +83,7 @@
   var MEHR = [
     ['ueber-uns', 'Über uns', 'Zwei Unternehmer, die den Geschäftsalltag kennen.', 'ueber-uns'],
     ['referenzen', 'Aus der Praxis', 'Eine Kundin erzählt.', 'referenzen'],
-    ['faq', 'Häufige Fragen', 'Antworten, nach Bereich geordnet.', 'faq'],
+    ['faq', 'FAQ', 'Häufige Fragen, nach Bereich geordnet.', 'faq'],
     ['ki-kmu-news/', 'KI-News für KMU', 'Was sich in der KI-Welt tut, für Schweizer KMU eingeordnet.', 'news']
   ];
 
@@ -388,11 +388,14 @@
     .filter(function (z) { return z[0]; });
   if (ziele.length < 2) ziele = [];
 
+  var haupt = MENUE.map(function (g) { return [g.seite, g.titel, g.seite]; })
+    .concat(MEHR.map(function (m) { return [m[0], m[1], m[3]]; }));
   /* Knopfreihe unter dem Titel für schmale Fenster */
   var reihe = null;
   if (ziele.length) {
     reihe = el('nav', 'vn-reihe');
-    reihe.setAttribute('aria-label', 'Auf dieser Seite');
+    var thema = haupt.filter(function (h) { return h[2] === seite; })[0];
+    reihe.setAttribute('aria-label', (thema ? thema[1] : 'Seite') + ': Abschnitte');
     reihe.innerHTML = '<div class="vn-reihe__innen">' +
       ziele.map(function (z) { return '<a href="#' + z[2] + '">' + esc(z[1]) + '</a>'; }).join('') + '</div>';
     if (hero && hero.parentNode) hero.parentNode.insertBefore(reihe, hero.nextSibling);
@@ -401,8 +404,6 @@
   }
 
   /* Randliste: dieselben Hauptpunkte wie die Kopfzeile, die aktuelle Seite aufgeklappt */
-  var haupt = MENUE.map(function (g) { return [g.seite, g.titel, g.seite]; })
-    .concat(MEHR.map(function (m) { return [m[0], m[1], m[3]]; }));
   if (seite !== '404') {
     var seitlich = el('nav', 'vn-seite');
     seitlich.setAttribute('aria-label', 'Seitenübersicht');
@@ -411,7 +412,7 @@
       var aktuell = h[2] === seite;
       sh += '<li' + (aktuell ? ' class="ist-aktuell"' : '') + '><a href="' + wurzel + h[0] + '"' + (aktuell ? ' aria-current="page"' : '') + '>' + esc(h[1]) + '</a>';
       if (aktuell && ziele.length) {
-        sh += '<ul class="vn-seite__unter" aria-label="Auf dieser Seite">' +
+        sh += '<ul class="vn-seite__unter" aria-label="' + esc(h[1]) + ': Abschnitte">' +
           ziele.map(function (z) { return '<li><a href="#' + z[2] + '">' + esc(z[1]) + '</a></li>'; }).join('') + '</ul>';
       }
       sh += '</li>';
