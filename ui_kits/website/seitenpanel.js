@@ -22,6 +22,14 @@
   var name = (location.pathname.split('/').pop() || 'index').replace(/\.html$/, '') || 'index';
   if (tiefe) name = 'news';
 
+  // Farbvergleich: ?farbe=hell bzw. ?farbe=dunkel gilt für den ganzen Besuch.
+  var farbe = new URLSearchParams(location.search).get('farbe');
+  try {
+    if (farbe) sessionStorage.setItem('sp-farbe', farbe);
+    else farbe = sessionStorage.getItem('sp-farbe');
+  } catch (e) {}
+  document.documentElement.classList.toggle('sp-hell', farbe === 'hell');
+
   var panel = document.createElement('aside');
   panel.className = 'sp-panel';
   panel.id = 'sp-panel';

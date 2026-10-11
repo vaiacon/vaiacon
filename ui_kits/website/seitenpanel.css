@@ -129,7 +129,10 @@ html.mit-seitenpanel .sp-knopf { display: none !important; }
 }
 
 /* Farbe: Terracotta mit weisser Schrift (Philip, 11.10.2026). */
-.sp-panel { background: var(--terra-500); border-right: 0; color: #fff; }
+/* Standard dunkles Terracotta; ?farbe=hell zeigt zum Vergleich das helle. */
+:root { --sp-farbe: #5E2611; }
+html.sp-hell { --sp-farbe: var(--terra-500); }
+.sp-panel { background: var(--sp-farbe); border-right: 0; color: #fff; }
 .sp-panel a, .sp-bereich summary a, .sp-weitere a { color: #fff; }
 .sp-kopf { color: rgba(255, 255, 255, 0.72); }
 .sp-bereich summary::after { border-color: rgba(255, 255, 255, 0.85); }
