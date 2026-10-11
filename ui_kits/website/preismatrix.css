@@ -30,7 +30,7 @@
   padding: 14px 16px 14px;
   background: var(--bg-alt);
   border-radius: var(--radius-md);
-  border-bottom: 3px solid var(--border-ink);
+  border: 1px solid var(--border-strong);
   color: var(--text-body);
   font-size: 15px;
   line-height: 1.4;
