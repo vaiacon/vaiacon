@@ -129,9 +129,12 @@ html.mit-seitenpanel .sp-knopf { display: none !important; }
 }
 
 /* Farbe: Terracotta mit weisser Schrift (Philip, 11.10.2026). */
-/* Standard dunkles Terracotta; ?farbe=hell zeigt zum Vergleich das helle. */
+/* Farbvergleich per ?farbe=… (dunkel | hell | terra600 | braun | sand). */
 :root { --sp-farbe: #5E2611; }
-html.sp-hell { --sp-farbe: var(--terra-500); }
+html.sp-f-hell { --sp-farbe: var(--terra-500); }
+html.sp-f-terra600 { --sp-farbe: var(--terra-600); }
+html.sp-f-braun { --sp-farbe: var(--brown-600); }
+html.sp-f-sand { --sp-farbe: var(--sand-200); }
 .sp-panel { background: var(--sp-farbe); border-right: 0; color: #fff; }
 .sp-panel a, .sp-bereich summary a, .sp-weitere a { color: #fff; }
 .sp-kopf { color: rgba(255, 255, 255, 0.72); }
@@ -158,3 +161,16 @@ html.sp-hell { --sp-farbe: var(--terra-500); }
   .sp-logo { min-height: 72px; }
   .sp-logo img { width: 160px; }
 }
+
+/* Sand: helle Fläche, dunkle Schrift, Terracotta als Markierung. */
+html.sp-f-sand .sp-panel, html.sp-f-sand .sp-panel a, html.sp-f-sand .sp-bereich summary a, html.sp-f-sand .sp-weitere a { color: var(--ink-900); }
+html.sp-f-sand .sp-kopf { color: var(--brown-600); }
+html.sp-f-sand .sp-bereich summary::after { border-color: var(--brown-600); }
+html.sp-f-sand .sp-bereich summary:hover { background: rgba(28, 22, 19, 0.06); }
+html.sp-f-sand .sp-bereich--aktiv > summary { background: var(--cream-50); box-shadow: inset 3px 0 0 var(--terra-500); }
+html.sp-f-sand .sp-bereich ul, html.sp-f-sand .sp-weitere { border-color: rgba(28, 22, 19, 0.15); }
+html.sp-f-sand .sp-bereich li a { color: var(--brown-600); }
+html.sp-f-sand .sp-bereich li a:hover { color: var(--ink-900); }
+html.sp-f-sand .sp-bereich li a.an, html.sp-f-sand .sp-weitere a:hover, html.sp-f-sand .sp-weitere a.an { color: var(--terra-600); border-left-color: var(--terra-500); }
+html.sp-f-sand .sp-panel a:focus-visible, html.sp-f-sand .sp-bereich summary:focus-visible { outline-color: var(--terra-500); }
+html.sp-f-sand .sp-panel { border-right: 1px solid var(--sand-300); }
