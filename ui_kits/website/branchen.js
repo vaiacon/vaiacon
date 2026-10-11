@@ -100,10 +100,23 @@
       knoepfe.push(b);
       chips.appendChild(b);
     });
-    var start = gemerkt();
+    var start = ausHash() || gemerkt();
     if (!daten[start]) start = Object.keys(daten)[0];
     zeige(start);
+    if (ausHash()) wurzel.scrollIntoView();
   }
+
+  // Sprungziel aus der Navigation: bot#branche-<id> wählt die Branche und springt zur Auswahl.
+  function ausHash() {
+    var m = /^#branche-([a-z-]+)$/.exec(location.hash);
+    return m && daten && daten[m[1]] ? m[1] : '';
+  }
+  window.addEventListener('hashchange', function () {
+    var id = ausHash();
+    if (!id) return;
+    zeige(id); merken(id);
+    wurzel.scrollIntoView();
+  });
 
   fetch('daten/branchen.json', { cache: 'no-cache' })
     .then(function (r) { return r.ok ? r.json() : null; })
