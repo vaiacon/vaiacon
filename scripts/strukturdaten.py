@@ -9,7 +9,7 @@ woertlich: die Strukturdaten im <head> jeder Seite und `llms.txt` im
 Wurzelverzeichnis.
 
 Was hineinkommt:
-- Auf jeder Seite ein Block «vaiacon GmbH» (ProfessionalService): Adresse aus
+- Auf jeder Seite ein Block «Vaiacon GmbH» (ProfessionalService): Adresse aus
   dem Impressum, E-Mail, Gruender, Profile. Telefon und UID fehlen bewusst,
   solange sie nirgends auf der Website stehen.
 - Auf den Angebotsseiten ein Block «Service», wo es einen Preis gibt mit Preis.
@@ -60,19 +60,18 @@ ORGANISATION = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "@id": f"{BASIS}/#organisation",
-    "name": "vaiacon GmbH",
+    "name": "Vaiacon GmbH",
     "alternateName": "vaiacon",
     "url": f"{BASIS}/",
     "logo": f"{BASIS}/assets/logo-lockup-terra.png",
     "image": f"{BASIS}/assets/vaiacon-buerobot-startseite.png",
     "description": (
         "vaiacon führt Schweizer KMU an KI heran, in drei Bereichen: "
-        "KI-Kompetenz (Trainings, Coaching, E-Learning), Sichtbarkeit in "
+        "KI-Kompetenz (Trainings, Coaching, Online-Kurse), Sichtbarkeit in "
         "Suchmaschinen und KI-Antworten und Automationen von Büroarbeit; auf "
-        "Wunsch mit laufender Begleitung. Gedacht für Betriebe mit 5 bis 30 "
-        "Mitarbeitenden und eigenem Büro. Preise offen und inklusive MWST, "
-        "Offerte im Offerten-Tool. Ohne Fachchinesisch, nach revDSG, auf "
-        "Schweizer Infrastruktur."
+        "Wunsch mit Betreuung und Begleitung. Gedacht für Betriebe mit 5 bis 30 "
+        "Mitarbeitenden und eigenem Büro. Preise offen, Richtpreis online "
+        "berechnen. Ohne Fachchinesisch."
     ),
     "email": "hallo@vaiacon.ch",
     # TELEFON: einkommentieren, sobald die 044-Nummer gebucht ist (auch in allen HTML-Seiten, tel:-Links)
@@ -179,30 +178,32 @@ def angebot(name: str, art: str, text: str, pfad: str, bereich: str | None = Non
     return block
 
 
-# Satz und Hinweis stehen im Katalog (mwst_satz, mwst_hinweis), nie von Hand hier.
-MWST_PROZENT = f"{KATALOG['mwst_satz']:g}".replace(".", ",")
-MWST_SATZ = f"Preise in CHF, inklusive {MWST_PROZENT} % MWST."
+# Die MWST steht nur im Katalogkopf (mwst_hinweis) und maschinenlesbar in
+# valueAddedTaxIncluded, nicht in den einzelnen Angebotsbeschreibungen (Audit 11.10.2026).
 SAETZE = KATALOG["saetze"]
 ANGEBOTE = {
     "visibility.html": angebot(
         "Sichtbarkeit", "SEO und GEO",
-        "Von Google gefunden werden und in KI-Antworten vorkommen (Fachwörter: SEO und GEO). "
-        "Kostenloser Google-Check, Check kompakt, Audit vertieft, Seiten überarbeiten und laufende Betreuung, mit offen genannten Preisen. " + MWST_SATZ,
+        "Wir verbessern die Voraussetzungen dafür, dass Google und KI-Assistenten Ihr Angebot richtig einordnen "
+        "(Fachwörter: SEO und GEO). Kostenloser Website-Check auf vaiacon.ch, Sichtbarkeits-Check kompakt, "
+        "Sichtbarkeits-Audit vertieft, Seiten überarbeiten und laufende Betreuung, mit offen genannten Preisen.",
         "visibility", "sichtbarkeit"),
     "learning.html": angebot(
         "KI-Kompetenz", "KI-Schulung und Weiterbildung",
-        "Trainings, Workshops, Coaching für Führungskräfte, E-Learning, Lernvideos und tägliche kleine Lerneinheiten, "
-        "zugeschnitten auf Ihren Betrieb. Dazu eine kostenlose KI-Standortbestimmung für Führungskräfte. " + MWST_SATZ,
+        "Trainings, Workshops, Coaching für Führungskräfte, Online-Kurse, Lernvideos und tägliche kleine Lerneinheiten, "
+        "zugeschnitten auf Ihren Betrieb. Dazu eine kostenlose KI-Standortbestimmung für Führungskräfte.",
         "learning", "ki-kompetenz"),
     "bot.html": angebot(
         "Automationen", "Automatisierung von Büroarbeit",
-        "Belege, Offerten, Korrespondenz und Anfragen automatisieren, dazu Chatbot, Telefonassistent und Anbindung "
-        "an Ihre Software. Fixpreis nach der Erstanalyse. " + MWST_SATZ,
+        "Belege erfassen, Offertenentwürfe erstellen, Korrespondenz und Anfragen automatisch vorbereiten, dazu "
+        "Chatbot mit Firmenwissen, Telefonassistent und Anbindung an Ihre Software. Fixpreis nach der Erstanalyse.",
         "bot", "automationen"),
     "service.html": angebot(
-        "Begleitung", "Betreuung und Support für das gesamte Angebot",
-        "Pflege, Updates, Support und Weiterentwicklung für Automationen, Sichtbarkeit und KI-Kompetenz, "
-        "monatlich kündbar; dazu Beratung nach Aufwand und die KI-Standortanalyse im Betrieb. " + MWST_SATZ,
+        "Betreuung und Begleitung", "Betreuung und Begleitung",
+        "Betreuung: Überwachung, Fehlerbehebung und eine Stunde Anpassung im Monat für alle Automationen und "
+        "Chatbots, die wir gebaut haben, ein Preis je Kunde. Begleitung: feste Beratungs- und Arbeitszeit für "
+        "Fragen, Team und neue Ideen. Beides kündbar auf Ende Folgemonat. Dazu Beratung nach Aufwand und die "
+        "KI-Standortanalyse im Betrieb.",
         "service", "begleitung"),
 }
 
@@ -221,7 +222,7 @@ ORGANISATION["hasOfferCatalog"] = {
     "itemListElement": [
         {"@type": "Offer", "itemOffered": {
             "@type": "Service", "name": a["name"], "serviceType": a["serviceType"], "url": a["url"],
-            "description": a["description"].replace(" " + MWST_SATZ, ""),
+            "description": a["description"],
         }}
         for a in ANGEBOTE.values()
     ],
@@ -238,6 +239,7 @@ SITEMAP = [
     ("bot", "bot.html"),
     ("service", "service.html"),
     ("offerte", "offerte.html"),
+    ("erstanalyse/", "erstanalyse/index.html"),
     ("referenzen", "referenzen.html"),
     ("faq", "faq.html"),
     ("kontakt", "kontakt.html"),
@@ -310,7 +312,7 @@ def preisliste_llms() -> str:
                 zeilen.append(f"  - {v['titel']}: {ab}CHF {chf(v['preis'])}")
             if p.get("staffel"):
                 stufen = " / ".join(chf(s["preis"]) for s in p["staffel"])
-                zeilen.append(f"  - Jede weitere Minute: CHF {stufen}" if len(p["staffel"]) == 1 else f"  - Staffel: CHF {stufen} je Lernminute")
+                zeilen.append(f"  - Jede weitere Minute: CHF {stufen}" if len(p["staffel"]) == 1 else f"  - Staffel: CHF {stufen} je Minute Lernzeit")
         zeilen.append("")
     return "\n".join(zeilen).rstrip()
 
@@ -318,40 +320,51 @@ def preisliste_llms() -> str:
 def llms_text() -> str:
     return f"""# vaiacon
 
-> vaiacon GmbH, Zürich, führt Schweizer KMU an KI heran, in drei Bereichen:
-> KI-Kompetenz (Ihr Team lernt, KI sicher einzusetzen), Sichtbarkeit (bei
-> Google gefunden und in KI-Antworten richtig genannt werden) und Automationen
-> (wiederkehrende Büroarbeit läuft von selbst). Auf Wunsch mit laufender
-> Begleitung. Ohne Fachchinesisch, nach revDSG, auf Schweizer Infrastruktur.
-> Gegründet 2026 von André Ulrich und Philip Krieger.
+> Vaiacon GmbH, Zürich, führt Schweizer KMU an KI heran, in drei Bereichen:
+> KI-Kompetenz (Ihr Team lernt, KI sicher einzusetzen), Sichtbarkeit (wir
+> verbessern die Voraussetzungen dafür, dass Google und KI-Assistenten Ihr
+> Angebot richtig einordnen) und Automationen (wiederkehrende Büroarbeit wird
+> automatisch vorbereitet). Auf Wunsch mit Betreuung und Begleitung. Ohne
+> Fachchinesisch. Gegründet 2026 von André Ulrich und Philip Krieger.
+
+Daten: Server bei Infomaniak in der Schweiz; KI-Sprachmodell von Anthropic,
+USA. Bei jeder Lösung klären wir, welche Anbieter Daten bearbeiten und wo.
 
 Für wen: Betriebe mit 5 bis 30 Mitarbeitenden und eigenem Büro (Handwerk,
 Treuhand, Praxen, Verwaltungen).
 
 Kontakt: hallo@vaiacon.ch · Lehenstrasse 74, 8037 Zürich
 Erster Schritt: kostenloses Erstgespräch (eine halbe Stunde, am Telefon oder
-am Bildschirm), das Offerten-Tool (Richtofferte in zwei Minuten, sofort auf dem
-Bildschirm und per Mail, unverbindlich), die kostenlose KI-Standortbestimmung
-für Führungskräfte, die kostenlose Erstanalyse zur Zeitersparnis oder der
-kostenlose Check der eigenen Website. Rückruf innert eines Arbeitstages.
+am Bildschirm), der Richtpreis-Rechner (unverbindlicher Richtpreis, auf der
+Seite und per E-Mail), die kostenlose KI-Standortbestimmung für
+Führungskräfte, die kostenlose Erstanalyse zur Zeitersparnis oder der
+kostenlose Website-Check auf vaiacon.ch. Wir antworten in der Regel innert
+eines Arbeitstages. Für einen Rückruf benötigen wir Ihre Telefonnummer.
 
 ## Die drei Bereiche
 
 - [KI-Kompetenz](https://vaiacon.ch/learning): Trainings und Workshops im
   Betrieb (Halbtag oder ganzer Tag, pro Gruppe), Coaching für Führungskräfte,
-  E-Learning nach Mass, Lernvideos, tägliche kleine Lerneinheiten,
-  Change-Begleitung und Begleitung der Mitarbeitenden vor Ort. Dazu die
+  Online-Kurse nach Mass, Lernvideos, tägliche kleine Lerneinheiten,
+  Veränderung begleiten und Begleitung der Mitarbeitenden vor Ort. Dazu die
   kostenlose KI-Standortbestimmung für Führungskräfte (Selbsttest mit zwölf
   Fragen): https://vaiacon.ch/learning#standortbestimmung
-- [Sichtbarkeit](https://vaiacon.ch/visibility): Von Google gefunden werden
-  und in KI-Antworten vorkommen (SEO und GEO). Kostenloser automatischer Check,
-  dazu KI-Sichtbarkeits-Check, Seiten überarbeiten und laufende Betreuung.
-- [Automationen](https://vaiacon.ch/bot): Belege, Offerten, Korrespondenz und
-  Anfragen automatisieren, Chatbot mit Firmenwissen, Telefonassistent,
-  Anbindung an Ihre Software. Fixpreis nach der Erstanalyse.
-- [Begleitung](https://vaiacon.ch/service): Betreuung und Support für alles,
-  was vaiacon aufgebaut hat, Beratung nach Aufwand, Anpassungen und die
-  bezahlte KI-Standortanalyse im Betrieb. Monatlich kündbar.
+- [Sichtbarkeit](https://vaiacon.ch/visibility): Wir verbessern die
+  Voraussetzungen dafür, dass Google und KI-Assistenten Ihr Angebot richtig
+  einordnen (Fachwörter: SEO und GEO). Kostenloser Website-Check auf
+  vaiacon.ch, Sichtbarkeits-Check kompakt, Sichtbarkeits-Audit vertieft,
+  Seiten überarbeiten und laufende Betreuung, mit offen genannten Preisen.
+- [Automationen](https://vaiacon.ch/bot): Belege erfassen, Offertenentwürfe
+  erstellen, Korrespondenz und Anfragen automatisch vorbereiten, Chatbot mit
+  Firmenwissen, Telefonassistent, Anbindung an Ihre Software. Fixpreis nach
+  der Erstanalyse.
+- [Betreuung und Begleitung](https://vaiacon.ch/service): Die Betreuung hält
+  alle Automationen und Chatbots am Laufen, die Vaiacon gebaut hat
+  (Überwachung, Fehlerbehebung, eine Stunde Anpassung im Monat), ein Preis je
+  Kunde. Die Begleitung ist feste Beratungs- und Arbeitszeit (vier oder acht
+  Stunden im Monat) für Fragen, Team und neue Ideen. Beides kündbar auf Ende
+  Folgemonat. Dazu Beratung nach Aufwand, Anpassungen und die bezahlte
+  KI-Standortanalyse im Betrieb.
 
 ## Preise
 
@@ -359,11 +372,12 @@ kostenlose Check der eigenen Website. Rückruf innert eines Arbeitstages.
 
 - {SAETZE["ab_preis"]}
 - {SAETZE["betreuung"]}
+- {SAETZE["betreuung_sichtbarkeit"]}
 - {SAETZE["fremdkosten"]}
 - {SAETZE["beispiel_jahr"]}
 
-Quelle: https://vaiacon.ch/daten/preise.json. Eine Richtofferte stellen Sie im
-Offerten-Tool zusammen: https://vaiacon.ch/offerte
+Quelle: https://vaiacon.ch/daten/preise.json. Einen unverbindlichen Richtpreis
+berechnen Sie im Richtpreis-Rechner: https://vaiacon.ch/offerte
 
 {preisliste_llms()}
 
@@ -372,21 +386,25 @@ KI-Standortbestimmung (Selbsttest für Führungskräfte).
 
 ## Weitere Seiten
 
-- [Offerte zusammenstellen](https://vaiacon.ch/offerte): Offerten-Tool,
-  Richtofferte mit echten Preisen, sofort auf dem Bildschirm und per Mail.
+- [Richtpreis berechnen](https://vaiacon.ch/offerte): Beschreiben Sie Ihr
+  Vorhaben und geben Sie Ihre Kontaktdaten an. Sie erhalten einen
+  unverbindlichen Richtpreis auf der Seite und per E-Mail. Danach klären wir
+  die offenen Punkte mit Ihnen.
 - [KI-News für KMU](https://vaiacon.ch/ki-kmu-news/): Was in der KI für Schweizer
-  KMU gerade zählt, die laufende Woche.
+  KMU gerade zählt, kurz, mit Quellen und mit erklärten Fachbegriffen. Neue
+  Beiträge erscheinen während der Woche, dazu ein Wochenfazit.
   [Archiv](https://vaiacon.ch/ki-kmu-news/archiv) ·
   [Feed](https://vaiacon.ch/ki-kmu-news/feed.xml)
 - [Über uns](https://vaiacon.ch/ueber-uns): Die zwei Gründer, wie wir arbeiten
   und wofür wir stehen.
 - [Aus der Praxis](https://vaiacon.ch/referenzen): Eine Kundin erzählt, wie ihr
-  Beauty Studio heute mit vaiacon arbeitet.
-- [Häufige Fragen](https://vaiacon.ch/faq): Kosten und Offerte, Lernformate,
+  Kosmetikstudio heute mit Vaiacon arbeitet.
+- [Häufige Fragen](https://vaiacon.ch/faq): Kosten und Richtpreis, Lernformate,
   Datenschutz, Vorwissen, Ablauf einer Zusammenarbeit.
 - [Erstanalyse](https://vaiacon.ch/erstanalyse/): Fragebogen mit sofortiger
   Einschätzung, wie viel Zeit in wiederkehrender Büroarbeit steckt.
-- [Kontakt](https://vaiacon.ch/kontakt): Erstgespräch vereinbaren.
+- [Kontakt](https://vaiacon.ch/kontakt): Erstgespräch vereinbaren oder
+  Rückruf anfordern.
 
 ## Rechtliches
 

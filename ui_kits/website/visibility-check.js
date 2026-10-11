@@ -56,7 +56,7 @@
     { schluessel: 'auswertung', titel: 'Auswertung', unterzeile: 'Wir bewerten alle Befunde und suchen Ihr grösstes Potenzial' },
   ];
 
-  // Die Auswertung dauert real 10–40 s; damit der Schritt nicht stehen
+  // Die Auswertung dauert meist unter einer Minute, kann aber einige Minuten brauchen; damit der Schritt nicht stehen
   // geblieben wirkt, wechselt seine Unterzeile ruhig durch diese Sätze.
   var AUSWERTUNG_ZEILEN = [
     'Wir bewerten alle Befunde und suchen Ihr grösstes Potenzial',
@@ -71,9 +71,9 @@
 
   var TEXT = {
     eingabe: 'Bitte eine vollständige Webadresse eingeben, z. B. ihre-firma.ch',
-    stoerung: 'Der Check ist gerade nicht verfügbar. Bitte versuchen Sie es in ein paar Minuten noch einmal.',
+    stoerung: 'Der Check ist gerade nicht verfügbar. Versuchen Sie es in einigen Minuten erneut oder schreiben Sie an hallo@vaiacon.ch.',
     netz: 'Keine Verbindung zu unserem Server. Bitte prüfen Sie Ihre Internetverbindung und versuchen Sie es noch einmal.',
-    zeit: 'Die Prüfung hat zu lange gedauert und wurde abgebrochen. Bitte versuchen Sie es noch einmal.',
+    zeit: 'Die Prüfung hat zu lange gedauert und wurde abgebrochen. Versuchen Sie es in einigen Minuten erneut oder schreiben Sie an hallo@vaiacon.ch.',
   };
 
   var reduziert = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -632,7 +632,7 @@
     bestellMeldung.setAttribute('data-art', 'fehler');
     bestellMeldung.appendChild(document.createTextNode('Die Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es noch einmal oder schreiben Sie uns an '));
     var a = el('a', null, MAIL);
-    a.href = 'mailto:' + MAIL + '?subject=' + encodeURIComponent('Sichtbarkeits-Check · ' + aktuelleDomain);
+    a.href = 'mailto:' + MAIL + '?subject=' + encodeURIComponent('Website-Check · ' + aktuelleDomain);
     bestellMeldung.appendChild(a);
     bestellMeldung.appendChild(document.createTextNode('.'));
   }
@@ -719,7 +719,7 @@
     else { feldFehler(TEXT.eingabe); feldDomain.focus(); }
   });
 
-  // Knöpfe «Check starten →» in Kopf und Schluss der Seite: hinunter zum
+  // Knöpfe «Kostenlosen Website-Check starten →» in Kopf und Schluss der Seite: hinunter zum
   // Formular und gleich ins Feld.
   Array.prototype.forEach.call(document.querySelectorAll('a[href="#check"]'), function (a) {
     a.addEventListener('click', function (ev) {

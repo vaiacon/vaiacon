@@ -3,18 +3,18 @@
   "kw": 41,
   "von": "2026-10-05",
   "bis": "2026-10-11",
-  "wochenfazit": "Diese Woche zeigt, dass die EU-Regeln für KI im Alltag ankommen. Anbieter kennzeichnen Texte nun technisch. Für Schweizer KMU heisst das: Klären Sie intern, wo KI-Texte entstehen und wer sie prüft. Ein grosser Umbau ist dafür nicht nötig.",
+  "wochenfazit": "Diese Woche ging es um die Kennzeichnung von KI-Inhalten und um KI-Helfer, die selbständig arbeiten. Google hat eine Prüfseite für sein KI-Wasserzeichen geöffnet, ein unsichtbares Erkennungszeichen in Bildern, Videos und Audio. Laut AI Weekly will OpenAI Texte aus ChatGPT in der EU ähnlich kennzeichnen. Bestätigt ist das nicht. Für Schweizer KMU heisst das: Legen Sie fest, wo im Betrieb KI-Texte entstehen und wer sie prüft. Ein grosser Umbau ist dafür nicht nötig.",
   "beitraege": [
     {
       "id": "2026-10-06-openai-versieht-texte-aus-chatgpt",
       "datum": "2026-10-06",
       "rubrik": "recht",
-      "titel": "OpenAI soll Texte aus ChatGPT in der EU mit unsichtbarem Wasserzeichen versehen",
-      "kurz": "Laut AI Weekly hat OpenAI am 5. Oktober «textGrain» vorgestellt. Das Verfahren legt ein unsichtbares Muster in die Wortwahl. AI Weekly berichtet, dass es in der EU in den kommenden Wochen für ChatGPT und Codex verpflichtend wird und API-Kunden weltweit es freiwillig einschalten können. OpenAI hat das selbst nicht bestätigt.",
-      "kmu": "AI Weekly führt die Regel auf das EU-Gesetz über künstliche Intelligenz zurück. Für die Schweiz gibt es dazu keine Angabe in den geprüften Quellen. Trifft der Bericht zu, sind Texte, die Ihr Team mit ChatGPT in der EU erstellt, künftig technisch erkennbar. Das betrifft Webseiten, Newsletter und Offerten. Sie müssen nichts einstellen. Es lohnt sich aber, im Betrieb kurz zu klären, welche Texte von KI stammen und wer sie prüft.",
-      "vaiacon": "Wir zeigen Ihrem Team im Training oder Workshop (Halbtag), wie Sie KI-Texte sauber prüfen, überarbeiten und kennzeichnen. In der KI-Standortanalyse im Betrieb schauen wir, wo bei Ihnen KI-Texte entstehen und ob ein einfacher Umgang damit genügt. Bauen Sie Assistenten über die API, klären wir mit Ihnen, ob das Wasserzeichen sinnvoll ist.",
+      "titel": "Bericht: OpenAI soll Texte aus ChatGPT in der EU unsichtbar kennzeichnen",
+      "kurz": "AI Weekly berichtet, OpenAI habe am 5. Oktober ein Verfahren namens «textGrain» vorgestellt. Es soll ein unsichtbares Muster in die Wortwahl legen, eine Art Wasserzeichen, das Software später erkennt. Laut AI Weekly wird es in der EU in den kommenden Wochen für ChatGPT und Codex verpflichtend. OpenAI hat die Meldung selbst nicht bestätigt.",
+      "kmu": "AI Weekly führt die Regel auf das EU-Gesetz über künstliche Intelligenz zurück. Ob das Verfahren eingeführt wird und welche Einstellungen nötig wären, ist noch offen. Zur Schweiz enthalten die geprüften Quellen keine Angabe. Unabhängig davon lohnt es sich, in Ihrem Betrieb festzulegen, welche Texte mit KI entstehen und wer sie prüft, etwa für Website, Newsletter und Offerten.",
+      "vaiacon": "Im Training oder Workshop (Halbtag) zeigen wir Ihrem Team, wie es KI-Texte prüft, überarbeitet und bei Bedarf kennzeichnet. In der KI-Standortanalyse im Betrieb klären wir, wo bei Ihnen KI-Texte entstehen und welche Regeln dafür genügen.",
       "bereich": "ki-kompetenz",
-      "achtung": "Das Wasserzeichen ist ein schwaches Signal. Bei kurzen oder umgeschriebenen Texten wird es schlecht erkannt. Ein fehlendes Zeichen beweist keine menschliche Autorschaft. Prüfen Sie KI-Texte weiterhin selbst. Ob und wie die Regel für Ihren Betrieb gilt, hängt vom Einzelfall ab. Das ersetzt keine Rechtsauskunft.",
+      "achtung": "Selbst wenn das Verfahren kommt: Ein Wasserzeichen in Texten ist ein schwaches Signal. Bei kurzen oder umgeschriebenen Texten wird es oft nicht erkannt, und ein fehlendes Zeichen beweist nicht, dass ein Mensch geschrieben hat. Leiten Sie aus diesem Bericht keine Pflichten ab. Massgebend sind offizielle Quellen. Das ersetzt keine Rechtsauskunft.",
       "quellen": [
         {
           "titel": "AI Weekly: OpenAI to watermark ChatGPT, Codex text in EU under AI Act",
@@ -26,16 +26,16 @@
         }
       ],
       "wichtigkeit": 2,
-      "praezisiert": "2026-10-07"
+      "praezisiert": "2026-10-11"
     },
     {
       "id": "2026-10-07-ki-agenten-vor-verschlossener-tuer",
       "datum": "2026-10-07",
       "rubrik": "markt",
       "titel": "KI-Agenten vor verschlossener Tür: Viele Websites lassen persönliche Assistenten nicht hinein",
-      "kurz": "Persönliche KI-Agenten sollen Flüge buchen, Tische reservieren oder einkaufen. Laut TechCrunch blockieren aber viele Websites solche Agenten, teils gewollt, teils durch normalen Bot-Schutz. Meta und Partner arbeiten an einem Standard, mit dem sich Agenten und Websites klar verständigen können.",
-      "kmu": "Immer mehr Menschen lassen Assistenten für sich suchen und bestellen. Ihre Website entscheidet mit, ob diese Agenten Ihr Angebot sehen und nutzen können. Prüfen Sie, ob Ihr Bot-Schutz echte Kundenagenten unbeabsichtigt abweist. Entscheiden Sie bewusst, welche Agenten Sie zulassen wollen, etwa für Terminbuchung oder Anfragen.",
-      "vaiacon": "Mit dem KI-Sichtbarkeits-Check zeigen wir Ihnen, wie KI-Assistenten Ihren Betrieb heute sehen und nennen. Bei Bedarf überarbeiten wir Ihre Seite, damit Angebot, Öffnungszeiten und Kontakt klar lesbar sind. So werden Sie auch dann gefunden, wenn Kundschaft einen Assistenten fragt.",
+      "kurz": "Persönliche KI-Agenten, also KI-Helfer, die im Auftrag einer Person im Internet handeln, sollen Flüge buchen, Tische reservieren oder einkaufen. Laut TechCrunch vom 6. Oktober blockieren viele Websites solche Agenten, teils gewollt, teils durch den normalen Schutz gegen automatische Zugriffe. Meta und Partner arbeiten an einem Standard, mit dem sich Agenten und Websites verständigen können.",
+      "kmu": "Nutzt Ihre Kundschaft solche Assistenten, entscheidet Ihre Website mit, ob diese Ihr Angebot sehen und nutzen können. Prüfen Sie, ob Ihr Schutz gegen automatische Zugriffe (Bot-Schutz) erwünschte Assistenten unbeabsichtigt abweist. Entscheiden Sie bewusst, welche Agenten Sie zulassen wollen, etwa für Terminbuchung oder Anfragen.",
+      "vaiacon": "Der kostenlose Website-Check auf vaiacon.ch zeigt automatisch, ob Google Ihr Angebot versteht und ob Ihre Seite die technischen Voraussetzungen für KI-Assistenten erfüllt. Im Sichtbarkeits-Check (kompakt) prüfen wir zusätzlich, wie Google und KI-Assistenten Ihre Firma nennen. Bei Bedarf überarbeiten wir eine Seite, damit Angebot, Öffnungszeiten und Kontakt klar erkennbar sind.",
       "bereich": "sichtbarkeit",
       "achtung": "Der gemeinsame Standard ist noch in Arbeit. Ändern Sie Ihren Bot-Schutz nicht übereilt, sondern klären Sie mit Ihrer Webagentur, was er heute blockiert.",
       "quellen": [
@@ -44,14 +44,15 @@
           "url": "https://techcrunch.com/2026/10/06/the-next-hurdle-for-ai-agents-getting-websites-to-let-them-in/"
         }
       ],
-      "wichtigkeit": 2
+      "wichtigkeit": 2,
+      "praezisiert": "2026-10-11"
     },
     {
       "id": "2026-10-07-mistral-large-4-das-europaeische",
       "datum": "2026-10-07",
       "rubrik": "modelle",
-      "titel": "Mistral Large 4: Das europäische Grossmodell ist da, offene Gewichte sollen folgen",
-      "kurz": "Das französische Unternehmen Mistral hat am 6. Oktober «Mistral Large 4» vorgestellt, ein Modell mit rund einer Billion Parametern. Es ist vorerst nur über einen öffentlichen Zugang mit Schutzmassnahmen nutzbar. Eine offene Version ist nach Sicherheitstests in etwa drei Wochen geplant.",
+      "titel": "Mistral Large 4: Das europäische Grossmodell ist da, eine offene Version soll folgen",
+      "kurz": "Das französische Unternehmen Mistral hat am 6. Oktober «Mistral Large 4» vorgestellt, laut TechCrunch ein sehr grosses Sprachmodell. Es ist vorerst nur über einen öffentlichen Zugang mit Schutzmassnahmen nutzbar. Eine offene Version, die Firmen und Anbieter selbst betreiben können, ist nach Sicherheitstests in etwa drei Wochen geplant.",
       "kmu": "Mit Mistral wächst die Auswahl an KI-Modellen aus Europa. Für Sie heisst das: Sie sind nicht auf wenige US-Anbieter angewiesen. Gerade wenn Kundendaten im Spiel sind, kann ein europäischer Anbieter oder ein offenes Modell eine Option sein. Noch ist das Modell neu, und die offene Version fehlt. Beobachten Sie die Entwicklung, ohne jetzt etwas umzustellen.",
       "vaiacon": "In der KI-Standortanalyse im Betrieb prüfen wir mit Ihnen, welche Aufgaben ein Modell erfüllen muss und welcher Anbieter dazu passt. Neue Modelle wie dieses nehmen wir dabei als Vergleich auf. Sie erhalten eine klare Empfehlung, die zu Ihrem Betrieb und Ihren Daten passt.",
       "bereich": "automationen",
@@ -62,16 +63,17 @@
           "url": "https://techcrunch.com/2026/10/06/mistrals-new-1t-model-aims-to-leapfrog-closed-and-open-rivals/"
         }
       ],
-      "wichtigkeit": 1
+      "wichtigkeit": 1,
+      "praezisiert": "2026-10-11"
     },
     {
       "id": "2026-10-09-gemini-agent-google-bringt-einen",
       "datum": "2026-10-09",
       "rubrik": "werkzeuge",
       "titel": "Gemini-Agent: Google bringt einen Helfer, der Aufgaben selbst erledigt, zuerst zu Firmenkunden",
-      "kurz": "Google hat laut TechCrunch an einem Cloud-Anlass einen einheitlichen Gemini-Agenten vorgestellt. Er plant Aufgaben selbst, greift auf Firmensysteme wie Workspace, Microsoft 365 oder Slack zu und zeigt in einem Posteingang, was er getan hat. Zuerst erhalten ihn Firmen, Privatpersonen folgen später. Zu Ländern, auch zur Schweiz, nennt der Artikel nichts.",
-      "kmu": "Solche Agenten übernehmen nicht nur Fragen, sondern ganze Arbeitsschritte, etwa Termine abstimmen, Dateien auswerten oder Tickets bearbeiten. Für Ihr KMU wird das interessant, wenn Sie bereits Google Workspace oder Microsoft 365 nutzen. Ob und wann der Agent in der Schweiz verfügbar ist, steht in der Quelle nicht. Es lohnt sich, jetzt zu überlegen, welche wiederkehrenden Aufgaben Sie einem Helfer anvertrauen würden.",
-      "vaiacon": "In der KI-Standortanalyse im Betrieb prüfen wir mit Ihnen, welche Abläufe sich für einen solchen Helfer eignen und welche Daten er dafür sehen dürfte. Was schon heute geht, setzen wir als Automation um, etwa für Belege und Offerten. So sind Sie bereit, wenn der Agent bei Ihnen ankommt.",
+      "kurz": "Google hat laut TechCrunch vom 8. Oktober an einem Cloud-Anlass einen Gemini-Agenten vorgestellt, also einen KI-Helfer, der Aufgaben selbst plant und ausführt. Er greift auf Firmensysteme wie Workspace, Microsoft 365 oder Slack zu und zeigt in einem Posteingang, was er getan hat. Zuerst erhalten ihn Firmen, Privatpersonen folgen später. Zu Ländern, auch zur Schweiz, nennt der Artikel nichts.",
+      "kmu": "Solche Agenten sollen nicht nur Fragen beantworten, sondern ganze Arbeitsschritte übernehmen, etwa Termine abstimmen, Dateien auswerten oder Anfragen bearbeiten. Interessant wird das, wenn Sie bereits Google Workspace oder Microsoft 365 nutzen. Ob und wann der Agent in der Schweiz verfügbar ist, steht in der Quelle nicht. Überlegen Sie schon jetzt, welche wiederkehrenden Aufgaben Sie einem solchen Helfer anvertrauen würden.",
+      "vaiacon": "In der KI-Standortanalyse im Betrieb prüfen wir mit Ihnen, welche Abläufe sich für einen solchen Helfer eignen und welche Daten er dafür sehen dürfte. Was schon heute geht, setzen wir als Automation um, etwa um Belege zu erfassen oder Offertenentwürfe zu erstellen.",
       "bereich": "automationen",
       "achtung": "Prüfen Sie vor dem Einsatz, welche Zugriffe ein Agent erhält und welche Personendaten er sieht. Die Quelle sagt nichts zu Datenspeicherung und Standort. Lassen Sie wichtige Ergebnisse zunächst von einer Person gegenlesen. Das ersetzt keine Rechtsauskunft.",
       "quellen": [
@@ -80,15 +82,16 @@
           "url": "https://techcrunch.com/2026/10/08/google-brings-agentic-ai-to-gemini-starting-with-businesses/"
         }
       ],
-      "wichtigkeit": 2
+      "wichtigkeit": 2,
+      "praezisiert": "2026-10-11"
     },
     {
       "id": "2026-10-09-synthid-googles-pruefseite-zeigt-ob",
       "datum": "2026-10-09",
       "rubrik": "werkzeuge",
-      "titel": "SynthID: Googles Prüfseite zeigt, ob Bilder, Videos oder Audio mit KI erzeugt wurden",
-      "kurz": "Google hat laut TechCrunch die Seite synthid.com für alle geöffnet. Dort lässt sich eine Datei hochladen, um zu prüfen, ob sie mit KI erzeugt wurde. Das gilt für Bilder, Videos und Audio. Die Prüfung beruht auf dem Wasserzeichen SynthID, das Googles Werkzeuge einbetten. Auch in der Gemini-App und im Browser Chrome ist die Prüfung eingebaut.",
-      "kmu": "Gefälschte Bilder oder Stimmen können auch Ihren Betrieb treffen, etwa in Bewerbungen, Rechnungen oder Anfragen. Die Seite ist eine einfache Hilfe für einen ersten Blick. Sie erkennt aber vermutlich nur Dateien mit einem passenden Wasserzeichen. Ein unauffälliges Ergebnis beweist deshalb noch nicht, dass eine Datei echt ist.",
+      "titel": "SynthID prüft Medien auf Googles KI-Wasserzeichen",
+      "kurz": "Google hat laut TechCrunch vom 7. Oktober die Seite synthid.com für alle geöffnet. Dort lassen sich Bilder, Videos und Audiodateien hochladen. Die Seite prüft, ob eine Datei SynthID enthält, ein unsichtbares Wasserzeichen, das Googles eigene KI-Werkzeuge einbetten. Dieselbe Prüfung ist laut dem Bericht auch in der Gemini-App und im Browser Chrome eingebaut.",
+      "kmu": "Gefälschte Bilder oder Stimmen können auch Ihren Betrieb treffen, etwa in Bewerbungen, Rechnungen oder Anfragen. Die Seite hilft für einen ersten Blick, mehr nicht. Sie erkennt nur Inhalte mit diesem Wasserzeichen. Ein unauffälliges Ergebnis beweist deshalb nicht, dass eine Datei echt ist.",
       "vaiacon": "In unseren Trainings und Workshops zeigen wir Ihrem Team, wie es KI-Inhalte einordnet und solche Prüfwerkzeuge sinnvoll nutzt. Sie erhalten dazu klare, kurze Regeln für den Alltag, zugeschnitten auf Ihren Betrieb.",
       "bereich": "ki-kompetenz",
       "achtung": "Laden Sie keine vertraulichen Dateien oder Bilder mit Personen hoch, ohne vorher zu klären, was mit den Daten geschieht. Verlassen Sie sich nicht allein auf ein Werkzeug. Das ersetzt keine Rechtsauskunft.",
@@ -98,7 +101,8 @@
           "url": "https://techcrunch.com/2026/10/07/googles-new-synthid-website-can-identify-ai-generated-media/"
         }
       ],
-      "wichtigkeit": 1
+      "wichtigkeit": 1,
+      "praezisiert": "2026-10-11"
     }
   ]
 }

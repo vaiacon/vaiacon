@@ -3,7 +3,7 @@
  * Quelle der Wahrheit ist daten/preise.json. Jedes Element mit
  *   data-preis="<Positions-id>"
  * bekommt den Preis aus dem Katalog als Text, zum Beispiel
- *   «CHF 1'550 pro Halbtag», «ab CHF 1'300 pro Ablauf», «CHF 400 pro Monat».
+ *   «CHF 1'550 pro Halbtag», «ab CHF 1'300 pro Ablauf», «CHF 190 pro Monat».
  * Einheit «pauschal» nennt nur den Betrag («CHF 850», «ab CHF 2'450»).
  *   data-preis-form="betrag"  nur Betrag («CHF 1'550», «ab CHF 1'300»)
  *   data-preis-mwst           bekommt den mwst_hinweis des Katalogs
@@ -11,20 +11,21 @@
  * Weitere Formen von data-preis-form (nur mit data-preis):
  *   zahl     nur die Zahl («1'550»)
  *   ab       «ab CHF 1'300» ohne Einheit (ohne «ab», wenn der Preis fest ist)
- *   monat / stunde   wie ohne Angabe («CHF 130 pro Monat», «CHF 170 pro Stunde»)
+ *   monat / stunde   wie ohne Angabe («CHF 190 pro Monat», «CHF 170 pro Stunde»)
  *   jahr     Beispiel erstes Jahr: Preis + 12 x Betreuung (betreuung_id),
  *            bei monatlichen Positionen 12 x Preis; «ab CHF x», wenn ab=true
  *   titel | umfang | hinweis | fremdkosten | folgekosten   Textfeld der Position
  *            (leer, wenn das Feld null ist: Element wird ausgeblendet, wenn es
  *            data-preis-leer="verbergen" traegt, sonst bleibt der Ersatztext)
- * data-preis-satz="betreuung|fremdkosten|ab_preis|beispiel_jahr|maengel|abnahme|gueltigkeit"
+ * data-preis-satz="betreuung|betreuung_sichtbarkeit|fremdkosten|ab_preis|beispiel_jahr|maengel|abnahme|gueltigkeit"
  *            bekommt den Satz aus dem Block «saetze» des Katalogs
  * data-preis-variante="<Positions-id>:<n>"
  *            Preis der n-ten Variante (0-basiert): «ab CHF 1'400» bzw. «CHF 1'500»
  *            (ab, wenn die Variante ab=true hat, sonst das ab der Position);
  *            mit data-preis-form="titel" der Titel der Variante
  * data-preis-staffel="<Positions-id>"
- *            «290 / 240 / 190 je Lernminute», gebaut aus dem Feld staffel
+ *            «jede weitere Minute CHF 290» (eine Stufe) oder
+ *            «290 / 240 / 190 je Minute Lernzeit» (mehrere Stufen), aus dem Feld staffel
  *
  * Der Text im HTML ist der Ersatz ohne JavaScript: Er bleibt stehen, wenn die
  * Position unbekannt ist oder der Katalog nicht geladen werden kann. Darum gibt
@@ -102,7 +103,7 @@
       teile.push(b);
     }
     if (teile.length === 1) return 'jede weitere Minute CHF ' + teile[0];
-    return teile.join(' / ') + ' je Lernminute';
+    return teile.join(' / ') + ' je Minute Lernzeit';
   }
 
   function einsetzen(katalog) {

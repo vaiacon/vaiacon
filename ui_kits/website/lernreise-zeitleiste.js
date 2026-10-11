@@ -49,7 +49,7 @@
         var f = doc.createElement('span'); f.className = 'lz-fahne'; f.setAttribute('aria-hidden', 'true');
         nr.appendChild(f);
         var w = t.querySelector('[data-lz-woche]');
-        zeit.textContent = (t.getAttribute('data-punkt-zeit') || 'Ab Woche ') + (w ? sauber(w) : '');
+        zeit.textContent = (t.getAttribute('data-punkt-zeit') || 'Nach Woche ') + (w ? sauber(w) : '');
         titel.textContent = t.getAttribute('data-punkt-titel') || sauber(t.querySelector('h3'));
       } else {
         nr.textContent = String(i + 1);
@@ -62,6 +62,8 @@
       }
       text.appendChild(zeit); text.appendChild(titel);
       b.appendChild(nr); b.appendChild(text);
+      /* Zugänglicher Name auch in der schmalen Ansicht, wo nur Nummer bzw. Fahne sichtbar sind */
+      b.setAttribute('aria-label', (ziel ? 'Ziel: ' : 'Station ' + (i + 1) + ': ') + titel.textContent + (zeit.textContent ? ', ' + zeit.textContent : ''));
       if (t.querySelector('.lz-mess')) {
         var fa = doc.createElement('span'); fa.className = 'lz-fahne'; fa.setAttribute('aria-hidden', 'true');
         b.appendChild(fa);
@@ -155,11 +157,15 @@
   lz.addEventListener('keydown', function (e) {
     if (e.defaultPrevented || e.altKey || e.ctrlKey || e.metaKey) return;
     if (e.target && e.target.closest && e.target.closest('dialog')) return;
-    if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
-      e.preventDefault();
-      gehZu(aktiv + (e.key === 'ArrowRight' ? 1 : -1));
-      if (punkte[aktiv] && e.target.classList && e.target.classList.contains('lz-punkt')) punkte[aktiv].focus({ preventScroll: true });
-    }
+    var ziel = e.key === 'ArrowRight' ? aktiv + 1 : e.key === 'ArrowLeft' ? aktiv - 1
+      : e.key === 'Home' ? 0 : e.key === 'End' ? tafeln.length - 1 : null;
+    if (ziel === null) return;
+    /* Pos1/Ende nur auf den Stationsknöpfen, damit die Seite sonst normal springt */
+    var aufPunkt = !!(e.target && e.target.classList && e.target.classList.contains('lz-punkt'));
+    if ((e.key === 'Home' || e.key === 'End') && !aufPunkt) return;
+    e.preventDefault();
+    gehZu(ziel);
+    if (punkte[aktiv] && aufPunkt) punkte[aktiv].focus({ preventScroll: true });
   });
 
   /* ── Dialog Zielcheck ──────────────────────────────────────────────── */

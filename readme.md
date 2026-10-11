@@ -1,7 +1,7 @@
 # vaiacon Design System
 
 **VAIACON** — Schweizer KI-Beratung & Automatisierung für KMU · [vaiacon.ch](https://vaiacon.ch)
-vaiacon GmbH · Lehenstrasse 74, 8037 Zürich · hallo@vaiacon.ch
+Vaiacon GmbH · Lehenstrasse 74, 8037 Zürich · hallo@vaiacon.ch
 Gründer: André Ulrich (Mitgründer, KMU-Experte) und Philip Krieger (Mitgründer, Coach).
 
 ## Produkte & Oberflächen
@@ -18,7 +18,7 @@ Gründer: André Ulrich (Mitgründer, KMU-Experte) und Philip Krieger (Mitgründ
 - `uploads/buerobot-*.{png,jpg}` — Maskottchen-Renderings (3D-Clay-Look)
 - Briefing-Notizen des Kunden (Palette, Typografie, Stil) — deckungsgleich mit dem Code
 
-Kein Figma, kein weiteres Repo. Es wurden keine Font-Binaries geliefert; Quicksand und IBM Plex Mono werden — exakt wie auf der Referenzseite — von Google Fonts geladen (`tokens/fonts.css`).
+Kein Figma, kein weiteres Repo. Quicksand und IBM Plex Mono liegen inzwischen als Schriftdateien unter `assets/fonts/` und werden von unserem Server geladen (`tokens/fonts.css`).
 
 ---
 
@@ -121,7 +121,7 @@ am Zeichen oder gar nicht. Die Ausnahme ist eng:
 - `tokens/typography.css` — Fonts, Grössen, Gewichte, Laufweiten
 - `tokens/spacing.css` — Layout, Abstände, Radien
 - `tokens/effects.css` — Schatten, Easing, Keyframes (breathe)
-- `tokens/fonts.css` — Google-Fonts-Import (Quicksand, IBM Plex Mono)
+- `tokens/fonts.css` — Schriften Quicksand und IBM Plex Mono, lokal aus `assets/fonts/` (keine Anfrage an Google)
 - `tokens/base.css` — Body/Link/Selection-Grundregeln
 
 **Assets** (`assets/`): Logo-Lockups (`logo-lockup-terra.png`/`logo-lockup-white.png`, massgeblich), vaiacon-Symbol & Wortmarke einzeln (× Terra/Weiss), Büro-Bot-Renderings (terra/poster/phone), Büro-Bot-Video (`buerobot-dance.mp4` — tanzender Büro-Bot, 1080p; immer muted + playsinline, spielt 1× ohne Loop. Achtung: der Projekt-Server liefert MP4 ohne Range-Support — Video per `fetch → blob → URL.createObjectURL` füttern, siehe `BuerobotVideo` in `ui_kits/website/sections-main.jsx`).
@@ -139,10 +139,19 @@ am Zeichen oder gar nicht. Die Ausnahme ist eng:
 
 **Intentional additions:** `PackageCard` hat eine dritte Variante `sand` (helle Karte mit Hairline) — für Paket-Grids in hellen Sektionen, wo Terra-Verlauf und Tinte zu schwer wirken.
 
-**Caveats:** Keine Font-Binaries (Google-Fonts-CDN wie im Original). Büro-Bot hat kein eigenes Produkt-UI in den Quellen — bewusst kein UI-Kit dafür erfunden. Das ursprüngliche Hero-Intro-Video (`ich machs_compressed.mp4`) wurde nicht mitgeliefert; dafür liegt ein Büro-Bot-Tanz-Loop unter `assets/buerobot-dance.mp4` (im UI-Kit in der Büro-Bot-Sektion eingebaut).
+**Caveats:** Büro-Bot hat kein eigenes Produkt-UI in den Quellen — bewusst kein UI-Kit dafür erfunden. Das ursprüngliche Hero-Intro-Video (`ich machs_compressed.mp4`) wurde nicht mitgeliefert; dafür liegt ein Büro-Bot-Tanz-Loop unter `assets/buerobot-dance.mp4` (im UI-Kit in der Büro-Bot-Sektion eingebaut).
 
 ## Preise
 
 Preise: eine Quelle `daten/preise.json` (Seiten per `data-preis`), Prüfskript `scripts/preise_pruefen.py`.
 Nach jeder Änderung am Katalog `scripts/strukturdaten.py` (JSON-LD, llms.txt) und `scripts/bot_wissen.py` (Chat-Wissen) laufen lassen.
 Rot im Prüfskript heisst nicht fertig; Regeln und Wörter stehen in `CLAUDE.md`.
+
+## Erstanalyse, Bibliotheken und Suchmaschinen
+
+- **Erstanalyse** liegt öffentlich unter `/erstanalyse/` (`erstanalyse/index.html`). `erstanalyse.html` und `ui_kits/website/erstanalyse.html` leiten nur dorthin weiter.
+- **Keine fremden Verteilnetze auf öffentlichen Seiten.** React 18.3.1 (Produktionsfassung) liegt unter `vendor/` (Lizenz `vendor/LICENSE-react.txt`). Die Seite lädt fertig übersetztes JavaScript, kein Babel im Browser.
+- **JSX übersetzen:** nach jeder Änderung an `ui_kits/website/erstanalyse-form.jsx` mit `.bau/bau.mjs` die Datei `erstanalyse-form.compiled.js` neu bauen und die `?v=`-Kennung in `erstanalyse/index.html` hochsetzen. `@babel/standalone` dafür ausserhalb des Repos installieren (kein `node_modules` einchecken).
+- **Eine Quelle für die Adressen:** `WORKER_URL` und `ANFRAGE_URL` stehen nur in `ui_kits/website/erstanalyse-data.js`. Die Erstanalyse gehört nicht in `_ds_bundle.js`; beim Neuerzeugen des Bundles `erstanalyse-data.js` und `erstanalyse-form.jsx` auslassen.
+- **robots.txt:** `/ui_kits/` und `/tokens/` sind gesperrt; Dateien, die öffentliche Seiten wirklich laden, stehen einzeln als `Allow`. Lädt eine Seite eine neue Datei aus `ui_kits/`, die Liste mit dem Befehl in `robots.txt` neu erzeugen.
+- **sitemap.xml** nicht von Hand ändern: `scripts/strukturdaten.py` erzeugt sie (Liste `SITEMAP` plus KI-News). Weiterleitungsseiten gehören nicht hinein.

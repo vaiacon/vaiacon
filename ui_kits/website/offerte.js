@@ -286,11 +286,15 @@
     var s = summen();
     var inkl = katalog.mwst_inklusive ? ('inkl. ' + (katalog.mwst_satz != null ? prozent(katalog.mwst_satz) + ' % ' : '') + 'MWST') : '';
     [].forEach.call(document.querySelectorAll('[data-inkl]'), function (e) { e.textContent = inkl; });
+    // Vor der Berechnung steht kein Betrag da: ein unbekannter Preis ist nicht CHF 0.
+    // Ohne laufende Positionen bleibt auch die Monatszeile weg.
+    $('of-summe').hidden = s.anzahl === 0;
     $('of-summe-einmalig').textContent = (s.ab && s.einmalig ? 'ab ' : '') + chf(s.einmalig);
     $('of-summe-monat').textContent = (s.ab && s.monatlich && hatAb('monatlich') ? 'ab ' : '') + chf(s.monatlich);
+    $('of-summe-monat').parentNode.hidden = !s.monatlich;
     $('of-summe-ab').hidden = !s.ab;
-    $('of-summary-anzahl').textContent = s.anzahl === 0 ? 'Nichts gewählt' : (s.anzahl === 1 ? '1 Position' : s.anzahl + ' Positionen');
-    var kurz = chf(s.einmalig) + (s.monatlich ? ' + ' + chf(s.monatlich) + ' / Monat' : '');
+    $('of-summary-anzahl').textContent = s.anzahl === 0 ? 'Richtpreis noch nicht berechnet' : (s.anzahl === 1 ? '1 Position' : s.anzahl + ' Positionen');
+    var kurz = s.anzahl === 0 ? '' : chf(s.einmalig) + (s.monatlich ? ' + ' + chf(s.monatlich) + ' / Monat' : '');
     $('of-summary-kurz').textContent = kurz;
 
     var liste = $('of-summary-liste');
@@ -323,7 +327,7 @@
   // Platzhalter je Bereich: ?bereich=automationen|kompetenz|sichtbarkeit. Ohne Parameter
   // ein neutrales Beispiel, das alle drei Bereiche anreisst. Beispiele erfunden, ohne Namen.
   var PLATZHALTER = {
-    automationen: 'Zum Beispiel: Wir sind ein Malerbetrieb mit zwölf Personen. Rechnungen kommen per Mail und werden von Hand abgelegt und gebucht, das kostet jede Woche einen halben Tag. Das soll von selbst laufen, und das Team soll lernen, KI im Alltag zu nutzen.',
+    automationen: 'Zum Beispiel: Wir sind ein Malerbetrieb mit zwölf Personen. Rechnungen kommen per E-Mail und werden von Hand abgelegt und gebucht, das kostet jede Woche einen halben Tag. Das soll von selbst laufen, und das Team soll lernen, KI im Alltag zu nutzen.',
     kompetenz: 'Zum Beispiel: Wir sind acht Leute im Büro. Zwei nutzen ChatGPT heimlich, die anderen gar nicht. Alle sollen sicher mit KI arbeiten und wissen, was sie eingeben dürfen und was nicht.',
     sichtbarkeit: 'Zum Beispiel: Unsere Website ist von 2019, bei Google findet uns kaum jemand, die Fotos sind alt. Wir möchten für «Sanitär Dietikon» gefunden werden und mehr Anfragen über die Seite bekommen.',
     neutral: 'Zum Beispiel: Wir sind ein Betrieb mit zwölf Personen. Das Team soll sicher mit KI arbeiten, die Website soll bei Google besser gefunden werden, und Rechnungen sollen nicht mehr von Hand abgelegt werden. Was zuerst dran ist, wissen wir noch nicht.'
@@ -360,13 +364,15 @@
   function anfordern() {
     wunsch = $('of-wunsch').value;
     var s = summen();
+    // Eine einzige Meldung, direkt am Feld. Der Fokus springt ins Feld, das
+    // Vorleseprogramm liest den Fehler dort einmal über aria-describedby.
     if (s.anzahl === 0 && wunsch.trim().length < 20) {
-      var m = $('of-anfordern-meldung');
-      m.textContent = wunsch.trim() ? 'Bitte beschreiben Sie Ihr Vorhaben in ein, zwei ganzen Sätzen.' : 'Bitte beschreiben Sie oben in Ihren Worten, was Sie vorhaben.';
-      $('of-wunsch-fehler').textContent = m.textContent;
+      $('of-wunsch-fehler').textContent = wunsch.trim() ? 'Bitte beschreiben Sie Ihr Vorhaben in ein, zwei ganzen Sätzen.' : 'Bitte beschreiben Sie kurz Ihr Vorhaben.';
+      $('of-wunsch').setAttribute('aria-invalid', 'true');
       $('of-wunsch').focus();
       return;
     }
+    $('of-wunsch').removeAttribute('aria-invalid');
     var teile = [];
     if (wunsch.trim()) teile.push('Ihre Beschreibung');
     if (s.anzahl) teile.push(s.anzahl === 1 ? '1 gewählte Position' : s.anzahl + ' gewählte Positionen');
@@ -405,7 +411,7 @@
     var ziffern = d.telefon.replace(/\D/g, '');
     if (!d.telefon) fehler('telefon', 'Bitte geben Sie Ihre Telefonnummer an, damit wir Sie anrufen können.');
     else if (!/^[\d\s+()\-./]+$/.test(d.telefon) || ziffern.length < 7 || ziffern.length > 15) fehler('telefon', 'Diese Telefonnummer sieht nicht vollständig aus. Beispiel: 044 123 45 67');
-    if (!$('of-einwilligung').checked) fehler('einwilligung', 'Bitte bestätigen Sie, dass wir Ihre Angaben für die Offerte verwenden dürfen.');
+    if (!$('of-einwilligung').checked) fehler('einwilligung', 'Bitte bestätigen Sie, dass wir Ihre Angaben für den Richtpreis verwenden dürfen.');
     kontakt = d;
     if (ersterFehler) {
       $('of-form-meldung').textContent = 'Bitte prüfen Sie die markierten Felder.';
@@ -507,8 +513,8 @@
     if (feld === 'auswahl' || feld === 'wunsch') {
       zeige('auswahl');
       var t = feld === 'wunsch' ? $('of-wunsch-fehler') : $('of-anfordern-meldung');
-      t.textContent = feld === 'wunsch' ? 'Bitte beschreiben Sie Ihr Vorhaben in ein, zwei ganzen Sätzen.' : 'Mit dieser Auswahl konnte keine Offerte erstellt werden. Bitte prüfen Sie Ihre Angaben.';
-      var z = feld === 'wunsch' ? $('of-wunsch') : null; if (z) z.focus();
+      t.textContent = feld === 'wunsch' ? 'Bitte beschreiben Sie Ihr Vorhaben in ein, zwei ganzen Sätzen.' : 'Mit diesen Angaben konnte kein Richtpreis berechnet werden. Bitte prüfen Sie Ihre Angaben.';
+      var z = feld === 'wunsch' ? $('of-wunsch') : null; if (z) { z.setAttribute('aria-invalid', 'true'); z.focus(); }
       return;
     }
     zeige('kontakt', false);
@@ -532,7 +538,7 @@
 
   // ── Ausfall ─────────────────────────────────────────────────────────────
   function mailtoText() {
-    var z = ['Guten Tag', '', 'Ich möchte gern eine Offerte für Folgendes:', ''];
+    var z = ['Guten Tag', '', 'Ich bitte um einen Richtpreis für Folgendes:', ''];
     katalog.bereiche.forEach(function (b) {
       b.positionen.forEach(function (p) {
         var a = auswahl[p.id]; if (!a) return;
@@ -558,13 +564,13 @@
   function zeigeErgebnis(a) {
     var platz = $('of-dokument-platz');
     platz.textContent = '';
-    var dok = el('article', { class: 'of-dokument', 'aria-label': 'Richtofferte ' + (a.nummer || '') });
+    var dok = el('article', { class: 'of-dokument', 'aria-label': 'Richtpreis ' + (a.nummer || '') });
 
     var logo = el('img', { class: 'of-dokument__logo', src: 'assets/logo-lockup-terra.svg', alt: 'Vaiacon', height: '30' });
     logo.addEventListener('error', function () { if (!logo.getAttribute('data-png')) { logo.setAttribute('data-png', '1'); logo.src = 'assets/logo-lockup-terra.png'; } });
     dok.appendChild(el('div', { class: 'of-dokument__marke' }, [
       logo,
-      el('span', { class: 'of-dokument__marke-zeile', text: 'Richtofferte' })
+      el('span', { class: 'of-dokument__marke-zeile', text: 'Richtpreis' })
     ]));
 
     dok.appendChild(el('header', { class: 'of-dokument__kopf' }, [
@@ -575,7 +581,7 @@
         el('span', { text: 'hallo@vaiacon.ch' })
       ]),
       el('dl', { class: 'of-dokument__meta' }, [
-        el('div', null, [el('dt', { text: 'Offertnummer' }), el('dd', { text: String(a.nummer || '') })]),
+        el('div', null, [el('dt', { text: 'Nummer' }), el('dd', { text: String(a.nummer || '') })]),
         el('div', null, [el('dt', { text: 'Datum' }), el('dd', { text: datum(a.datum) })]),
         el('div', null, [el('dt', { text: 'Gültig bis' }), el('dd', { text: datum(a.gueltig_bis) })])
       ])
@@ -595,7 +601,7 @@
 
     if (a.positionen.length) {
       var tabelle = el('table', { class: 'of-tabelle' });
-      tabelle.appendChild(el('caption', { class: 'of-nur-leser', text: 'Positionen der Offerte' }));
+      tabelle.appendChild(el('caption', { class: 'of-nur-leser', text: 'Positionen des Richtpreises' }));
       tabelle.appendChild(el('thead', null, [el('tr', null, [
         el('th', { scope: 'col', text: 'Position' }),
         el('th', { scope: 'col', class: 'zahl', text: 'Menge' }),
@@ -650,7 +656,24 @@
     }
     var abVor = a.enthaelt_ab_preise ? 'ab ' : '';
     summenZeile('Summe einmalig', abVor + chf(a.summe_einmalig), a.mwst_einmalig);
-    summenZeile('Summe monatlich', (a.enthaelt_ab_preise && Number(a.summe_monatlich) && a.positionen.some(function (p) { return p.art === 'monatlich' && p.ab; }) ? 'ab ' : '') + chf(a.summe_monatlich), a.mwst_monatlich);
+    // Laufende Kosten nur zeigen, wenn es sie gibt: «CHF 0 pro Monat» wäre bei
+    // Fremdkosten falsch, die erst nach Verbrauch feststehen.
+    var hatMonatlich = Number(a.summe_monatlich) > 0 || a.positionen.some(function (p) { return p.art === 'monatlich'; });
+    if (hatMonatlich) {
+      summenZeile('Summe monatlich', (a.enthaelt_ab_preise && Number(a.summe_monatlich) && a.positionen.some(function (p) { return p.art === 'monatlich' && p.ab; }) ? 'ab ' : '') + chf(a.summe_monatlich), a.mwst_monatlich);
+    }
+    // Fremdkosten getrennt: Lizenzen, Hosting, KI-Nutzung, Telefonie laufen nach
+    // Verbrauch. Welche anfallen, steht je Position im Katalog (Feld fremdkosten).
+    var fremd = [];
+    a.positionen.forEach(function (p) {
+      var k = positionen && p.id && positionen[p.id] ? positionen[p.id].pos.fremdkosten : '';
+      if (k && fremd.indexOf(k) < 0) fremd.push(k);
+    });
+    if (fremd.length) {
+      summe.appendChild(el('div', { class: 'of-dokument__summe' }, [el('span', { text: 'Fremdkosten' }), el('strong', { text: 'nach Verbrauch' })]));
+      var satz = katalog && katalog.saetze && katalog.saetze.fremdkosten ? String(katalog.saetze.fremdkosten) : '';
+      summe.appendChild(el('p', { class: 'of-dokument__mwst', text: fremd.join('; ') + '.' + (satz ? ' ' + satz : '') }));
+    }
     dok.appendChild(summe);
     if (a.mwst_hinweis) dok.appendChild(el('p', { class: 'of-dokument__klein', text: String(a.mwst_hinweis) }));
 
@@ -672,7 +695,7 @@
 
     var ms = $('of-mailstatus');
     if (a.mail_gesendet === true) {
-      ms.textContent = 'Per Mail unterwegs an ' + kontakt.mail;
+      ms.textContent = 'Per E-Mail unterwegs an ' + kontakt.mail;
       ms.hidden = false;
     } else {
       ms.hidden = true;
@@ -687,7 +710,7 @@
     $('of-anfordern').addEventListener('click', anfordern);
     $('of-form').addEventListener('submit', senden);
     $('of-zurueck').addEventListener('click', function () { zeige('auswahl'); });
-    $('of-aendern').addEventListener('click', function () { document.title = 'Richtpreis in zwei Minuten · vaiacon, Zürich'; zeige('auswahl'); });
+    $('of-aendern').addEventListener('click', function () { document.title = 'Richtpreis berechnen · vaiacon, Zürich'; zeige('auswahl'); });
     $('of-fehler-aendern').addEventListener('click', function () { zeige('auswahl'); });
     $('of-nochmals').addEventListener('click', function () { senden(); });
     $('of-drucken').addEventListener('click', function () { window.print(); });
@@ -696,6 +719,7 @@
       wunsch = this.value;
       $('of-wunsch-n').textContent = String(wunsch.length);
       $('of-wunsch-fehler').textContent = '';
+      this.removeAttribute('aria-invalid');
       sichern();
     });
     var toggle = $('of-summary-toggle');
@@ -718,7 +742,7 @@
     if (!platz) return;
     platz.appendChild(el('div', { class: 'of-hinweis' }, [
       el('h3', { class: 'of-hinweis__titel', text: 'Die Angebote lassen sich gerade nicht laden.' }),
-      el('p', null, ['Das tut uns leid. Schreiben Sie uns bitte kurz, was Sie interessiert, über das ', el('a', { href: 'kontakt', text: 'Kontaktformular' }), ' oder per Mail an ', el('a', { href: 'mailto:' + MAIL, text: MAIL }), '. Wir melden uns persönlich.'])
+      el('p', null, ['Das tut uns leid. Schreiben Sie uns bitte kurz, was Sie interessiert, über das ', el('a', { href: 'kontakt', text: 'Kontaktformular' }), ' oder per E-Mail an ', el('a', { href: 'mailto:' + MAIL, text: MAIL }), '. Wir melden uns persönlich.'])
     ]));
   }
 

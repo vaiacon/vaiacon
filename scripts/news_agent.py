@@ -74,6 +74,7 @@ GRENZEN = {            # (min, max) Zeichen
     "achtung": (60, 480),
 }
 FAZIT_GRENZE = (100, 700)
+STILREGELN = HIER / "news_stilregeln.md"
 
 # Verbotene Muster: (Regex, Grund)
 VERBOTE = [
@@ -86,6 +87,13 @@ VERBOTE = [
     (re.compile(r"\b(?:kursziel|kaufempfehlung|aktie[n]? (?:kaufen|steigt|faellt|fällt))\b", re.I),
      "Anlage- oder Kursaussage"),
     (re.compile(r"\b(?:angeblich|geruecht\w*|gerücht\w*|soll .{0,40} planen)\b", re.I), "Geruecht"),
+    (re.compile(r"\bin wenigen minuten\b|\bsofort\b|\bkein risiko\b|\bso werden sie (?:auch )?gefunden\b|\bgarantiert\w*\b", re.I),
+     "Versprechen (Stilregel 14)"),
+]
+# Nur im Feld «vaiacon»: unsere Woerter sind Anbindung und Chatbot mit Firmenwissen.
+VERBOTE_VAIACON = [
+    (re.compile(r"\bintegration\w*\b|\bschnittstelle\w*\b", re.I), "Wort: Anbindung statt Integration/Schnittstelle (Stilregel 18)"),
+    (re.compile(r"\bki-agent\w*\b|\bagenten?\b", re.I), "Wort: Chatbot mit Firmenwissen statt Agent (Stilregel 18)"),
 ]
 # Schweizer Medien, die Programme mit 403 abweisen, obwohl die Seite offen ist.
 # Dort gilt 403 als «vorhanden»; alles andere verlangt Status 200.
@@ -260,6 +268,9 @@ Deutsch mit Schweizer Schreibweise (ss statt ß, «Guillemets»), Sie-Form, kurz
 Titel mit Doppelpunkt: Folgt ein ganzer Satz, beginnt er gross («Apertus 2.0: Das offene Modell soll 2027 kommen»). Klein nur ohne ganzen Satz («Claude Sonnet 5.5: schneller, Listenpreise unveraendert»).
 Laengen in Zeichen: titel {GRENZEN['titel'][0]}-{GRENZEN['titel'][1]}, kurz {GRENZEN['kurz'][0]}-{GRENZEN['kurz'][1]}, kmu {GRENZEN['kmu'][0]}-{GRENZEN['kmu'][1]}, vaiacon {GRENZEN['vaiacon'][0]}-{GRENZEN['vaiacon'][1]}, achtung {GRENZEN['achtung'][0]}-{GRENZEN['achtung'][1]}.
 bereich: ki-kompetenz (Schulung), sichtbarkeit (gefunden werden), automationen (Bot, Prozesse) — der Bereich, der am besten zur Meldung passt.
+
+STILREGELN (gelten schon beim Schreiben, nicht erst im Lektorat)
+{STILREGELN.read_text(encoding="utf-8")}
 wichtigkeit: 1 (gut zu wissen), 2 (wichtig), 3 (sehr wichtig).
 
 QUELLENTREUE UND EIGENE WORTE (nicht verhandelbar)
@@ -352,7 +363,6 @@ def claude_aufruf(prompt: str, schema: dict = SCHEMA, tools: str = "WebSearch,We
 
 # --------------------------------------------------------------------------- Lektorat
 
-STILREGELN = HIER / "news_stilregeln.md"
 TEXTFELDER = ("titel", "kurz", "kmu", "vaiacon", "achtung")
 LEKTOR_SCHEMA = {
     "type": "object",
@@ -385,6 +395,7 @@ Mach die Texte sprachlich sauber und natuerlich. Halte dich an die Stilregeln un
 
 STRENG
 - Inhalt bleibt gleich: keine neuen Fakten, Zahlen, Namen, Daten oder Leistungen, nichts weglassen, was eine Aussage traegt.
+- Ausnahme: Uebertreibungen, Versprechen und Zahlen ohne Quelle nach den Stilregeln 14 und 17 abschwaechen oder streichen.
 - Ist ein Satz schon gut, lass ihn stehen. Schreibe nicht um des Umschreibens willen.
 - Gleiche Reihenfolge und gleiche Anzahl Beitraege wie in der Eingabe.
 - Laengen in Zeichen einhalten: {grenzen}, wochenfazit {FAZIT_GRENZE[0]}-{FAZIT_GRENZE[1]}.
@@ -553,6 +564,10 @@ def pruefe_beitrag(b: dict, tag: date, bisherige: list, quellen_live: bool = Tru
         for muster, grund in VERBOTE:
             if muster.search(t):
                 fehler.append("%s: %s" % (feld, grund))
+        if feld == "vaiacon":
+            for muster, grund in VERBOTE_VAIACON:
+                if muster.search(t):
+                    fehler.append("%s: %s" % (feld, grund))
         if "!" in t:
             fehler.append("%s: Ausrufezeichen" % feld)
     # Philip 06.10.2026: nie schreiben, wofuer man uns nicht braucht.

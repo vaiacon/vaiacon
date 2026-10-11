@@ -70,6 +70,50 @@
     meldung.dataset.art = art || '';
   }
 
+  /* Fehler je Feld: Text unter dem Feld, aria-invalid am Feld, Fokus aufs
+     erste fehlerhafte Feld. Das Feld nennt seinen Fehler über aria-describedby. */
+  function feldFehler(name, text) {
+    var feld = formular.querySelector('[name="' + name + '"]');
+    if (!feld) return;
+    var ziel = feld.getAttribute('aria-describedby');
+    var platz = ziel ? document.getElementById(ziel) : null;
+    if (text) feld.setAttribute('aria-invalid', 'true');
+    else feld.removeAttribute('aria-invalid');
+    if (platz) platz.textContent = text || '';
+  }
+
+  function pruefe(d) {
+    var fehler = [];
+    function pflicht(name, ok, text) {
+      feldFehler(name, ok ? '' : text);
+      if (!ok) fehler.push(name);
+    }
+    pflicht('name', !!d.name, 'Bitte geben Sie Ihren Namen ein.');
+    if (rueckruf) {
+      pflicht('telefon', d.telefon.replace(/\D/g, '').length >= 9,
+        d.telefon ? 'Bitte prüfen Sie die Telefonnummer, zum Beispiel 044 123 45 67.' : 'Bitte geben Sie Ihre Telefonnummer ein.');
+    } else {
+      pflicht('mail', /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(d.mail),
+        d.mail ? 'Bitte prüfen Sie die E-Mail-Adresse, zum Beispiel name@firma.ch.' : 'Bitte geben Sie Ihre E-Mail-Adresse ein.');
+      pflicht('nachricht', !!d.nachricht, 'Bitte schreiben Sie kurz, worum es geht.');
+    }
+    if (fehler.length) {
+      var erstes = formular.querySelector('[name="' + fehler[0] + '"]');
+      if (erstes) erstes.focus();
+      sagen(fehler.length === 1 ? 'Ein Feld ist noch nicht richtig ausgefüllt.' : 'Einige Felder sind noch nicht richtig ausgefüllt.', 'fehler');
+      return false;
+    }
+    return true;
+  }
+
+  // Ein korrigiertes Feld verliert seine Fehlermeldung beim Tippen.
+  formular.addEventListener('input', function (ev) {
+    var feld = ev.target;
+    if (feld && feld.getAttribute && feld.getAttribute('aria-invalid') === 'true') {
+      feldFehler(feld.name, '');
+    }
+  });
+
   function alsText(d) {
     if (rueckruf) {
       return [
@@ -107,14 +151,11 @@
       d = {
         name: wert('name'),
         telefon: wert('telefon'),
-        wunschzeit: wert('wunschzeit') || 'egal',
+        wunschzeit: wert('wunschzeit') || 'zeitlich flexibel',
         stichwort: wert('stichwort'),
         fangfrage: wert('fangfrage'),
       };
-      if (!d.name || !d.telefon) {
-        sagen('Bitte Name und Telefonnummer ausfüllen.', 'fehler');
-        return;
-      }
+      if (!pruefe(d)) return;
     } else {
       d = {
         name: wert('name'),
@@ -124,10 +165,7 @@
         nachricht: wert('nachricht'),
         fangfrage: wert('fangfrage'),   // Honigtopf, bleibt bei Menschen leer
       };
-      if (!d.name || !d.mail || !d.nachricht) {
-        sagen('Bitte Name, E-Mail und Nachricht ausfüllen.', 'fehler');
-        return;
-      }
+      if (!pruefe(d)) return;
     }
 
     if (!ZIEL) { insMailprogramm(d); return; }
@@ -158,8 +196,8 @@
       if (!antwort.ok) throw new Error('Dienst antwortet mit ' + antwort.status);
       formular.reset();
       sagen(rueckruf
-        ? 'Danke. Wir rufen Sie zurück, zum gewünschten Zeitpunkt.'
-        : 'Danke, Ihre Nachricht ist bei uns. Wir antworten in der Regel innert eines Arbeitstages.', 'gut');
+        ? 'Danke, Ihr Rückrufwunsch ist bei uns angekommen. Wir melden uns in der Regel innert eines Arbeitstages und berücksichtigen Ihre Wunschzeit, soweit es möglich ist.'
+        : 'Danke, Ihre Nachricht ist bei uns angekommen. Wir antworten in der Regel innert eines Arbeitstages.', 'gut');
     }).catch(function () {
       // Kein Dienst erreichbar: Weg 2. Kein Fehler für den Besucher, nur ein
       // anderer Weg — die Nachricht ist ja fertig geschrieben.

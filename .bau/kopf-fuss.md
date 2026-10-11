@@ -123,9 +123,9 @@ Eine Ebene tiefer wieder `../ui_kits/website/…`. Dienste immer als `window.VAI
         <img src="assets/logo-lockup-white.svg" alt="vaiacon">
       </a>
       <nav class="sv-footer__links" aria-label="Weitere Seiten">
-        <a href="service">Begleitung</a><a href="offerte">Offerte anfragen</a><a href="ki-kmu-news/">KI-KMU-News</a><a href="datenschutz">Datenschutz und Impressum</a><a href="agb">AGB</a>
+        <a href="service">Begleitung</a><a href="offerte">Richtpreis berechnen</a><a href="ki-kmu-news/">KI-KMU-News</a><a href="datenschutz">Datenschutz und Impressum</a><a href="agb">AGB</a>
       </nav>
-      <p class="sv-footer__adresse"><span>vaiacon GmbH</span><span>Lehenstrasse 74, 8037 Zürich</span><span><a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a></span></p>
+      <p class="sv-footer__adresse"><span>Vaiacon GmbH</span><span>Lehenstrasse 74, 8037 Zürich</span><span><a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a></span></p>
       <a class="sv-footer__top" href="#top">↑ Nach oben</a>
       <div class="sv-footer__social">
         <a href="https://www.facebook.com/vaiacon" target="_blank" rel="noopener" aria-label="vaiacon auf Facebook" title="Facebook">
@@ -151,9 +151,9 @@ Eine Ebene tiefer wieder `../ui_kits/website/…`. Dienste immer als `window.VAI
         <img src="../assets/logo-lockup-white.svg" alt="vaiacon">
       </a>
       <nav class="sv-footer__links" aria-label="Weitere Seiten">
-        <a href="../service">Begleitung</a><a href="../offerte">Offerte anfragen</a><a href="../ki-kmu-news/">KI-KMU-News</a><a href="../datenschutz">Datenschutz und Impressum</a><a href="../agb">AGB</a>
+        <a href="../service">Begleitung</a><a href="../offerte">Richtpreis berechnen</a><a href="../ki-kmu-news/">KI-KMU-News</a><a href="../datenschutz">Datenschutz und Impressum</a><a href="../agb">AGB</a>
       </nav>
-      <p class="sv-footer__adresse"><span>vaiacon GmbH</span><span>Lehenstrasse 74, 8037 Zürich</span><span><a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a></span></p>
+      <p class="sv-footer__adresse"><span>Vaiacon GmbH</span><span>Lehenstrasse 74, 8037 Zürich</span><span><a href="mailto:hallo@vaiacon.ch">hallo@vaiacon.ch</a></span></p>
       <a class="sv-footer__top" href="#top">↑ Nach oben</a>
       <div class="sv-footer__social">
         <a href="https://www.facebook.com/vaiacon" target="_blank" rel="noopener" aria-label="vaiacon auf Facebook" title="Facebook">

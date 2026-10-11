@@ -3,8 +3,9 @@
 // Baut alles in #standort-app auf: Auftakt, Profil (3 Auswahlfragen), zwölf
 // Fragen in vier Bereichen, Ergebnis aus den Punkten (sofort, ohne Server) und
 // darunter die Einschätzung von Vaia aus POST /api/standort. Fällt der Dienst
-// aus, steht an derselben Stelle ein Ersatztext, der nach Stufe und
-// schwächstem Bereich zusammengesetzt wird — der Besucher sieht keinen Fehler.
+// aus, steht an derselben Stelle eine «Standardisierte Orientierung», nach
+// festen Regeln aus Stufe und schwächstem Bereich zusammengesetzt und als
+// solche gekennzeichnet (seit 11.10.2026), mit «Erneut versuchen».
 //
 // Texte aus der Antwort des Dienstes werden nur per textContent eingesetzt.
 // Es wird nichts gespeichert (kein Cookie, kein localStorage).
@@ -100,7 +101,7 @@
     // ── Möglichkeiten ──
     { bereich: 'moeglichkeiten', typ: 'mehrfach', leerErlaubt: true,
       text: 'Was davon lässt sich heute zuverlässig automatisieren?',
-      hinweis: 'Wählen Sie alles, was Ihrer Meinung nach geht. Mehrfachauswahl möglich.',
+      hinweis: 'Wählen Sie alles, was Ihrer Meinung nach geht. Mehrfachauswahl möglich. Halten Sie nichts davon für machbar, gehen Sie ohne Auswahl weiter.',
       optionen: [
         { text: 'Belege erfassen und für die Buchhaltung vorkontieren', real: true },
         { text: 'Geschäftsentscheide ohne Kontrolle treffen' },
@@ -112,10 +113,16 @@
         { text: 'Bewerbungen allein von der KI auswählen und absagen lassen' },
         { text: 'Sitzungen mitschreiben und Aufgaben daraus ableiten', real: true }
       ],
+      // Regel (11.10.2026): Jede richtige Antwort zählt eins, jede falsche zieht
+      // zwei ab. Die Punkte sind der Anteil an allen richtigen Antworten (hier
+      // sechs) mal vier, abgerundet. Volle vier Punkte gibt es also nur, wenn
+      // alle richtigen und keine falsche gewählt sind; ohne Auswahl null Punkte.
       bewerte: function (sel, opt) {
         var treffer = 0, falsch = 0;
+        var alle = opt.filter(function (o) { return o.real; }).length;
         sel.forEach(function (i) { if (opt[i].real) treffer++; else falsch++; });
-        return Math.min(4, Math.round(4 * Math.max(0, treffer - 2 * falsch) / 5));
+        if (!alle) return 0;
+        return Math.min(4, Math.floor(4 * Math.max(0, treffer - 2 * falsch) / alle));
       } },
 
     { bereich: 'moeglichkeiten', typ: 'einzel',
@@ -304,28 +311,27 @@
   // ── Auftakt ─────────────────────────────────────────────────────────────
   function zeigeAuftakt(scrollen) {
     st.ansicht = 'auftakt';
-    var titel = el('h3', { tabindex: '-1', text: 'In rund vier Minuten wissen Sie, wo Ihr Betrieb mit KI steht.' });
+    var titel = el('h3', { tabindex: '-1', text: 'In wenigen Minuten sehen Sie, wo Ihr Betrieb mit KI steht.' });
     var knopf = el('button', { class: 'sv-button sv-button--cta', type: 'button', text: 'Standort bestimmen',
       onclick: function () { zeigeProfil(true); } });
     var wurzel = el('div', { class: 'st-bildschirm st-auftakt' }, [
       el('div', { class: 'st-auftakt__text' }, [
         el('p', { class: 'sv-kicker', text: 'Standortbestimmung für Führungskräfte' }),
         titel,
-        el('p', { text: 'Wir fragen, was Sie von Automationen verstehen, ob Sie wissen, was heute alles möglich ist, und was bei Ihnen schon im Einsatz ist. Danach schreibt Ihnen Vaia eine ehrliche Einschätzung: wo Sie stehen und was sich als Nächstes lohnt.' }),
+        el('p', { text: 'Drei Angaben zu Ihrem Betrieb und zwölf kurze Fragen. Wir fragen, was Sie von Automationen verstehen, was heute möglich ist und was bei Ihnen schon im Einsatz ist. Danach sehen Sie Ihre Stufe und eine Einschätzung, was sich als Nächstes lohnt.' }),
         el('ul', { class: 'st-fakten', 'aria-label': 'Eckdaten' }, [
-          el('li', { text: 'Rund 4 Minuten' }),
-          el('li', { text: '12 Fragen' }),
+          el('li', { text: '3 Angaben, 12 Fragen' }),
           el('li', { text: 'Ohne Anmeldung' }),
-          el('li', { text: 'Keine Personendaten' })
+          el('li', { text: 'Wir fragen weder Namen noch Kontaktdaten ab' })
         ]),
         knopf,
         el('p', { class: 'st-klein' }, [
-          'Ihre Antworten gehen nur für diese Auswertung an unseren KI-Dienst. Namen oder Kontaktdaten fragen wir nicht ab. Mehr dazu in der ',
+          'Ihre drei Angaben und Ihre Antworten gehen nur für diese Auswertung an unseren KI-Dienst. Im Browser speichern wir nichts. Mehr dazu in der ',
           el('a', { href: href('datenschutz'), text: 'Datenschutzerklärung' }), '.'
         ])
       ]),
       el('div', { class: 'st-auftakt__bild' }, [
-        el('p', { class: 'st-blase', text: 'Grüezi! Ich stelle Ihnen zwölf kurze Fragen, ohne Prüfungsstress.' }),
+        el('p', { class: 'st-blase', text: 'Grüezi! Erst drei Angaben, dann zwölf kurze Fragen, ohne Prüfungsstress.' }),
         roboter('Der vaiacon-Roboter hält einen Kompass')
       ])
     ]);
@@ -335,13 +341,15 @@
   // ── Profil ──────────────────────────────────────────────────────────────
   function zeigeProfil(scrollen) {
     st.ansicht = 'profil';
-    var titel = el('h3', { class: 'st-profil-titel', tabindex: '-1', text: 'Kurz vorab: drei Angaben zu Ihnen' });
-    var weiter = el('button', { class: 'sv-button sv-button--cta', type: 'button', text: 'Weiter →' });
-    var hinweis = el('p', { class: 'st-klein', id: 'st-profil-hinweis', text: 'Bitte wählen Sie in jeder Zeile eine Antwort.' });
+    var titel = el('h3', { class: 'st-profil-titel', tabindex: '-1', text: 'Kurz vorab: drei Angaben zu Ihrem Betrieb' });
+    var weiter = el('button', { class: 'sv-button sv-button--cta', type: 'button', text: 'Weiter →', 'aria-describedby': 'st-profil-hinweis' });
+    var hinweis = el('p', { class: 'st-klein', id: 'st-profil-hinweis', 'aria-live': 'polite' });
 
     function pruefen() {
-      var fertig = PROFIL.every(function (g) { return st.profil[g.id]; });
+      var fehlt = PROFIL.filter(function (g) { return !st.profil[g.id]; }).map(function (g) { return g.titel; });
+      var fertig = !fehlt.length;
       if (fertig) weiter.removeAttribute('disabled'); else weiter.setAttribute('disabled', '');
+      hinweis.textContent = fertig ? '' : 'Bitte wählen Sie je eine Antwort. Es fehlt noch: ' + fehlt.join(', ') + '.';
       hinweis.hidden = fertig;
     }
 
@@ -366,7 +374,7 @@
     weiter.addEventListener('click', function () { zeigeFrage(0, true); });
     var wurzel = el('section', { class: 'st-bildschirm st-karte', 'aria-labelledby': 'st-profil-t' }, [
       titel,
-      el('p', { class: 'st-hinweis', text: 'So können wir die Einschätzung auf Ihren Betrieb zuschneiden. Namen fragen wir nicht ab.' })
+      el('p', { class: 'st-hinweis', text: 'So können wir die Einschätzung auf Ihren Betrieb zuschneiden. Namen und Kontaktdaten fragen wir nicht ab.' })
     ].concat(gruppen, [
       fang,
       el('div', { class: 'st-nav' }, [
@@ -397,14 +405,27 @@
     var aufl = el('div', { class: 'st-aufloesung', role: 'status' });
     aufl.hidden = true;
     var optEls = [];
+    var fehltId = 'st-fehlt-' + i;
+    var fehlt = el('p', { class: 'st-klein st-fehlt', id: fehltId, 'aria-live': 'polite' });
+    weiter.setAttribute('aria-describedby', fehltId);
+
+    // Weiter nur mit gültiger Antwort; sonst sagt ein Satz, was fehlt.
+    function freigeben(ok) {
+      if (ok) weiter.removeAttribute('disabled'); else weiter.setAttribute('disabled', '');
+      fehlt.textContent = ok ? '' : (f.typ === 'mehrfach'
+        ? 'Bitte wählen Sie mindestens eine Antwort oder «Nichts davon».'
+        : 'Bitte wählen Sie eine Antwort.');
+      fehlt.hidden = ok;
+    }
 
     function antwortSetzen(sel) {
+      var ok = sel.length > 0 || !!f.leerErlaubt;
+      if (!ok) { delete st.antw[i]; freigeben(false); return; }
       var a = { sel: sel.slice() };
       if (f.typ === 'einzel') a.punkte = f.optionen[sel[0]].punkte;
       else if (f.typ === 'mehrfach') a.punkte = f.bewerte(sel, f.optionen);
       st.antw[i] = a;
-      var ok = sel.length > 0 || !!f.leerErlaubt;
-      if (ok) weiter.removeAttribute('disabled'); else weiter.setAttribute('disabled', '');
+      freigeben(true);
     }
 
     if (f.typ === 'wissen') {
@@ -454,7 +475,7 @@
       var gut = gewaehlt === rn;
       aufl.replaceChildren(el('strong', { text: gut ? 'Genau. ' : 'Nicht ganz. ' }), f.erklaerung);
       aufl.hidden = false;
-      weiter.removeAttribute('disabled');
+      freigeben(true);
     }
 
     function wissenWaehlen(n) {
@@ -467,14 +488,13 @@
 
     // Frühere Antwort wiederherstellen (nach «Zurück»)
     var alt = st.antw[i];
-    if (alt) {
-      if (f.typ === 'wissen') wissenZeigen(alt.sel[0]);
-      else {
-        alt.sel.forEach(function (n) { optEls[n].checked = true; });
-        weiter.removeAttribute('disabled');
-      }
-    } else if (f.typ === 'mehrfach' && f.leerErlaubt) {
-      weiter.removeAttribute('disabled');
+    if (alt && f.typ === 'wissen') {
+      wissenZeigen(alt.sel[0]);
+    } else if (alt) {
+      alt.sel.forEach(function (n) { optEls[n].checked = true; });
+      freigeben(alt.sel.length > 0 || !!f.leerErlaubt);
+    } else {
+      freigeben(f.typ === 'mehrfach' && !!f.leerErlaubt);
     }
 
     weiter.addEventListener('click', function () {
@@ -505,7 +525,8 @@
         el('button', { class: 'st-zurueck', type: 'button', text: '← Zurück',
           onclick: function () { if (i === 0) zeigeProfil(true); else zeigeFrage(i - 1, true); } }),
         weiter
-      ])
+      ]),
+      fehlt
     ]);
     zeige(wurzel, titel, scrollen);
   }
@@ -660,20 +681,21 @@
     var stufe = STUFEN[erg.stufe - 1].name;
     return {
       kurzfazit: 'Sie sind als «' + stufe + '» unterwegs: Sie wissen, was möglich ist, aber bisher fehlt der feste Rahmen.',
-      einschaetzung: 'Ihre Antworten zeigen ein ordentliches Grundverständnis. Sie unterscheiden sauber zwischen Chat-Assistent und Automation und haben ein Gespür dafür, was sich heute zuverlässig abgeben lässt.\n\nIm Betrieb selbst ist KI noch eher Sache einzelner Personen. Solange Zuständigkeit, Zeit und Messung offen bleiben, versickert viel von dem, was möglich wäre.\n\nDas ist kein Mangel, sondern die typische Lage vieler Betriebe Ihrer Grösse: Die Grundlage steht, der nächste Schritt ist ein erster Ablauf, der verlässlich läuft.',
+      einschaetzung: 'Ihre Antworten zeigen ein ordentliches Grundverständnis. Sie unterscheiden sauber zwischen Chat-Assistent und Automation und haben ein Gespür dafür, was sich heute zuverlässig abgeben lässt.\n\nIm Betrieb selbst ist KI noch eher Sache einzelner Personen. Solange Zuständigkeit, Zeit und Messung offen bleiben, versickert viel von dem, was möglich wäre.\n\nDas ist kein Mangel, sondern die Lage vieler Betriebe Ihrer Grösse: Die Grundlage steht, der nächste Schritt ist ein erster Ablauf, der verlässlich läuft.',
       staerken: ['Sie kennen die wichtigen Begriffe und wissen, worauf es beim Datenschutz ankommt.', 'Sie haben einen realistischen Blick darauf, was KI heute kann und was nicht.'],
       luecken: ['Niemand ist ausdrücklich zuständig, deshalb bleibt KI ein Nebenthema.', 'Ob sich ein Einsatz lohnt, wird nicht gemessen. Das macht Entscheide schwer.', 'Wiederkehrende Büroarbeiten werden noch von Hand erledigt.'],
       empfehlungen: [
         { titel: 'Einen ersten Ablauf automatisieren', text: 'Wir suchen mit Ihnen die zwei, drei Arbeiten mit dem grössten Hebel und rechnen den Nutzen vorab durch.', bereich: 'automationen' },
         { titel: 'Team und Spielregeln', text: 'Eine kurze Schulung klärt Begriffe, Datenschutz und Regeln für den Alltag und nimmt dem Team die Scheu.', bereich: 'ki-kompetenz' },
-        { titel: 'In KI-Antworten gefunden werden', text: 'Ein kostenloser Check zeigt, ob KI-Systeme Ihre Website als Quelle erkennen.', bereich: 'sichtbarkeit' }
+        { titel: 'Website-Grundlagen prüfen', text: 'Der kostenlose Website-Check auf vaiacon.ch prüft Inhalte und technische Grundlagen Ihrer Website und zeigt, was sich verbessern lässt.', bereich: 'sichtbarkeit' }
       ],
       warum_gespraech: 'Sie haben die Grundlage, es fehlt der erste feste Schritt. In einem unverbindlichen Erstgespräch klären wir, welche Abläufe sich bei Ihnen zuerst lohnen und was das ungefähr kostet.'
     };
   }
 
   // Ersatztext, wenn der Dienst nicht antwortet. Aus Stufe und schwächstem
-  // Bereich zusammengesetzt; es steht nirgends, dass etwas ausgefallen ist.
+  // Bereich nach festen Regeln zusammengesetzt; die Anzeige kennzeichnet ihn als
+  // «Standardisierte Orientierung» (quelle: 'standard'), nicht als Text von Vaia.
   function ersatzText(erg) {
     var stufe = STUFEN[erg.stufe - 1];
     var schwach = erg.bereiche[0], stark = erg.bereiche[0];
@@ -730,13 +752,14 @@
         ? { titel: 'Einen ersten Ablauf automatisieren', text: 'Wir suchen die zwei, drei Arbeiten mit dem grössten Hebel und rechnen den Nutzen vorab durch.', bereich: 'automationen' }
         : { titel: 'Team und Spielregeln', text: 'Eine kurze Schulung klärt Begriffe, Datenschutz und Regeln für den Alltag und nimmt dem Team die Scheu.', bereich: 'ki-kompetenz' });
     } else {
-      empf.push({ titel: 'Nutzen verbreitern', text: 'Wir prüfen, welche weiteren Abläufe sich mit dem Erreichten verbinden lassen und wo ein Agent sinnvoll wäre.', bereich: 'automationen' });
+      empf.push({ titel: 'Nutzen verbreitern', text: 'Wir prüfen, welche weiteren Abläufe sich mit dem Erreichten verbinden lassen und wo ein Chatbot mit Firmenwissen sinnvoll wäre.', bereich: 'automationen' });
     }
-    empf.push({ titel: 'In KI-Antworten gefunden werden', text: 'Ein kostenloser Check zeigt, ob Google und KI-Systeme Ihre Website als Quelle erkennen.', bereich: 'sichtbarkeit' });
+    empf.push({ titel: 'Website-Grundlagen prüfen', text: 'Der kostenlose Website-Check auf vaiacon.ch prüft Inhalte und technische Grundlagen Ihrer Website und zeigt, was sich verbessern lässt.', bereich: 'sichtbarkeit' });
 
     return {
+      quelle: 'standard',
       kurzfazit: 'Sie sind auf Stufe ' + erg.stufe + ' («' + stufe.name + '»), am meisten Luft nach oben liegt bei «' + schwach.titel + '».',
-      einschaetzung: einstieg + ' Mit ' + erg.gesamt + ' von ' + erg.max + ' Punkten' + groesse + ' sind Sie ' + (erg.stufe >= 4 ? 'klar vorn' : erg.stufe === 3 ? 'solide in der Mitte' : 'am Anfang eines Weges, der sich lohnt') + '.\n\n' + TEXT[schwach.id].satz + '\n\nDas ist eine erste Orientierung aus zwölf Fragen, kein Gutachten. Wie viel Zeit und Geld im Einzelnen liegen bleibt, lässt sich erst im Gespräch über Ihre konkreten Abläufe sagen.',
+      einschaetzung: einstieg + ' Mit ' + erg.gesamt + ' von ' + erg.max + ' Punkten' + groesse + ' sind Sie ' + (erg.stufe >= 4 ? 'klar vorn' : erg.stufe === 3 ? 'solide in der Mitte' : 'am Anfang eines Weges, der sich lohnt') + '.\n\n' + TEXT[schwach.id].satz + '\n\nDas ist eine allgemeine Orientierung aus zwölf Fragen, kein Gutachten. Wie viel Zeit und Geld im Einzelnen liegen bleibt, lässt sich erst im Gespräch über Ihre konkreten Abläufe sagen.',
       staerken: [TEXT[stark.id].staerke].concat(erg.stufe >= 3 ? ['Sie sind bereit, KI als Führungsthema zu betrachten, und haben sich Zeit dafür genommen.'] : ['Sie nehmen sich die Zeit, Ihren Stand ehrlich zu prüfen. Das ist der erste Schritt.']),
       luecken: [TEXT[schwach.id].luecke],
       empfehlungen: empf,
@@ -769,8 +792,10 @@
     function fertig(daten) {
       if (lauf !== st.lauf) return;            // inzwischen neu gestartet
       window.clearInterval(st.timer); st.timer = null;
-      zeigeKi(daten, box);
-      ansage.textContent = 'Ihre Einschätzung liegt vor.';
+      zeigeKi(daten, box, function () { holeEinschaetzung(erg, box, ansage); });
+      ansage.textContent = daten.quelle === 'standard'
+        ? 'Die persönliche Einschätzung ist gerade nicht verfügbar. Eine standardisierte Orientierung liegt vor.'
+        : 'Ihre Einschätzung liegt vor.';
     }
 
     if (probe === 'fehler') {
@@ -823,11 +848,17 @@
     ]);
   }
 
-  function zeigeKi(d, box) {
+  function zeigeKi(d, box, nochmal) {
     var kinder = [];
+    var standard = d.quelle === 'standard';
 
     var kopf = el('div', { class: 'st-ki-kopf' }, [
-      el('span', { class: 'sv-label', text: 'Einschätzung von Vaia' }),
+      el('span', { class: 'sv-label', text: standard ? 'Standardisierte Orientierung' : 'Einschätzung von Vaia' }),
+      standard ? el('p', { class: 'st-hinweis st-ersatz' }, [
+        'Die persönliche Einschätzung von Vaia konnte gerade nicht erstellt werden. Hier steht eine allgemeine Einschätzung nach festen Regeln, aus Ihrer Stufe und Ihrem schwächsten Bereich. ',
+        nochmal ? el('button', { class: 'st-link st-ersatz__knopf', type: 'button', text: 'Persönliche Einschätzung erneut versuchen',
+          onclick: nochmal }) : null
+      ]) : null,
       el('h3', { class: 'st-fazit', tabindex: '-1', text: d.kurzfazit }),
       el('div', { class: 'st-text' }, absaetze(d.einschaetzung).map(function (t) { return el('p', { text: t }); }))
     ]);
@@ -858,7 +889,7 @@
       d.warum_gespraech ? el('p', { text: d.warum_gespraech }) : null,
       el('div', { class: 'st-gespraech__knoepfe' }, [
         el('a', { class: 'sv-button sv-button--light', href: href('kontakt#formular'), text: 'Erstgespräch vereinbaren →' }),
-        el('a', { class: 'sv-button sv-button--glass', href: href('offerte'), text: 'Offerte erfassen →' })
+        el('a', { class: 'sv-button sv-button--glass', href: href('offerte'), text: 'Richtpreis berechnen →' })
       ])
     ]));
 
@@ -867,7 +898,9 @@
       el('button', { class: 'sv-button st-knopf-zweit', type: 'button', text: 'Ergebnis drucken', onclick: function () { window.print(); } })
     ]));
 
-    kinder.push(el('p', { class: 'st-klein st-ki-fuss', text: 'Die Einschätzung ist eine Orientierung auf Grundlage Ihrer zwölf Antworten, kein Gutachten. Sie wurde von einer KI formuliert.' }));
+    kinder.push(el('p', { class: 'st-klein st-ki-fuss', text: standard
+      ? 'Allgemeine Einschätzung: nach festen Regeln aus Ihrer Stufe und Ihren Punkten zusammengestellt, nicht von einer KI formuliert und kein Gutachten.'
+      : 'Die Einschätzung ist eine Orientierung auf Grundlage Ihrer zwölf Antworten, kein Gutachten. Sie wurde von einer KI formuliert.' }));
 
     box.replaceChildren.apply(box, kinder);
   }
