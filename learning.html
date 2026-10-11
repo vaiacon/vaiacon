@@ -43,7 +43,8 @@
   .lr-kurve svg .lr-k-label { display: none; }
   .lr-kurve__tage { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 16px; margin: 12px 0 0; padding: 0; list-style: none; font-size: 14px; color: var(--text-strong); }
   .lr-kurve__tage li { display: flex; gap: 8px; align-items: baseline; }
-  .lr-kurve__tage b { font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--terra-600); min-width: 2.2em; }
+  .lr-kurve__tage b { font-family: var(--font-mono); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--terra-600); min-width: 2.2em; flex: none; }
+  .lr-kurve__tage li:last-child { grid-column: 1 / -1; }
 }
 /* Richtpreise und Einstiegsangebot (kopie, 11.10.2026) */
 .lr-angebot { display: grid; gap: 2px; margin: var(--space-5) 0 0; padding: var(--space-4) var(--space-5); max-width: 30rem; border: 1px solid rgba(255,255,255,.45); border-radius: var(--radius-lg); background: rgba(255,255,255,.14); color: var(--text-on-terra); text-decoration: none; }
