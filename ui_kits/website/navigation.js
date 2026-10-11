@@ -251,6 +251,9 @@
   kopf.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && offenId) { e.preventDefault(); schliessen(true); }
   });
+  kopf.addEventListener('click', function (e) {
+    if (e.target.closest('.vn-flaeche a')) { clearTimeout(zuTimer); setze(null); }
+  });
   kopf.addEventListener('focusout', function () {
     setTimeout(function () { if (offenId && !kopf.contains(document.activeElement) && fest) setze(null); }, 0);
   });
