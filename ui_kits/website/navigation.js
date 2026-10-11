@@ -134,14 +134,18 @@
     '<img class="vn-logo__hell" src="' + wurzel + 'assets/logo-lockup-white.svg" alt="" width="214" height="39">' +
     '<img class="vn-logo__dunkel" src="' + wurzel + 'assets/logo-lockup-terra.svg" alt="vaiacon" width="214" height="39"></a>' +
     '<nav class="vn-haupt" aria-label="Hauptnavigation"><ul class="vn-liste">';
-  MENUE.forEach(function (g) {
-    var aktuell = istAktuell(g.seite);
+  var MEHR_GRUPPE = { id: 'mehr', seite: null, titel: 'Mehr', text: 'Wer wir sind und was sich in der KI-Welt tut.',
+    spalten: [{ titel: 'Firma und Wissen', breit: true, punkte: MEHR.map(function (m) { return [m[0], m[1], m[2]]; }) }] };
+  MENUE.concat([MEHR_GRUPPE]).forEach(function (g) {
+    var istMehr = g.id === 'mehr';
+    var aktuell = istMehr ? MEHR.some(function (m) { return istAktuell(m[3]); }) : istAktuell(g.seite);
     h += '<li class="vn-eintrag" data-id="' + g.id + '">' +
-      '<a class="vn-punkt" href="' + wurzel + g.seite + '"' + (aktuell ? ' aria-current="page"' : '') + '>' + esc(g.titel) + '</a>' +
+      (istMehr ? '<button class="vn-punkt vn-punkt--knopf" type="button" data-mehr="1"' + (aktuell ? ' aria-current="page"' : '') + '>Mehr</button>'
+        : '<a class="vn-punkt" href="' + wurzel + g.seite + '"' + (aktuell ? ' aria-current="page"' : '') + '>' + esc(g.titel) + '</a>') +
       '<button class="vn-auf" type="button" aria-expanded="false" aria-controls="vn-f-' + g.id + '" aria-label="' + esc(g.titel) + ': Unterpunkte">' + PFEIL + '</button>' +
       '<div class="vn-flaeche" id="vn-f-' + g.id + '"><div class="vn-karte">' +
       '<div class="vn-intro"><p class="vn-kicker">' + esc(g.titel) + '</p><p class="vn-lead">' + esc(g.text) + '</p>' +
-      '<a class="vn-zur" href="' + wurzel + g.seite + '">Zur Seite ' + esc(g.titel) + ' <span aria-hidden="true">→</span></a></div>' +
+      (istMehr ? '' : '<a class="vn-zur" href="' + wurzel + g.seite + '">Zur Seite ' + esc(g.titel) + ' <span aria-hidden="true">→</span></a>') + '</div>' +
       '<div class="vn-spalten">';
     g.spalten.forEach(function (sp) {
       h += '<div class="vn-spalte' + (sp.breit ? ' vn-spalte--breit' : '') + '"><p class="vn-spalte__titel">' + esc(sp.titel) + '</p><ul>';
@@ -150,11 +154,7 @@
       });
       h += '</ul></div>';
     });
-    h += '</div><div class="vn-mehr"><p class="vn-spalte__titel">Mehr</p><ul>';
-    MEHR.forEach(function (m) {
-      h += '<li><a href="' + wurzel + m[0] + '"' + (istAktuell(m[3]) ? ' aria-current="page"' : '') + '><span class="vn-t">' + esc(m[1]) + '</span><span class="vn-z">' + esc(m[2]) + '</span></a></li>';
-    });
-    h += '</ul></div></div></div></li>';
+    h += '</div></div></div></li>';
   });
   h += '</ul></nav>' +
     '<a class="vn-kontakt" href="' + wurzel + 'kontakt"' + (seite === 'kontakt' ? ' aria-current="page"' : '') + '>Kontakt</a>' +
@@ -233,6 +233,8 @@
       clearTimeout(zuTimer);
       zuTimer = setTimeout(function () { if (!fest) setze(null); }, 150);
     });
+    var nameKnopf = li.querySelector('[data-mehr]');
+    if (nameKnopf) nameKnopf.addEventListener('click', function () { li.querySelector('.vn-auf').click(); });
     li.querySelector('.vn-auf').addEventListener('click', function () {
       if (offenId === id && (fest || !hover.matches)) setze(null);
       else setze(id, true);
@@ -405,7 +407,10 @@
         if (t[1] && t[1].indexOf('branche-') === 0) { eintrag.tief = true; branchen.push(eintrag); } else nav.push(eintrag);
       });
     });
-    if (!aktuell || !ziele.length) return nav.concat(branchen);
+    /* Randliste: die Branchen nicht einzeln, nur ein Sprung zum Branchen-Abschnitt */
+    if (branchen.length) nav.splice(1, 0, { href: aktuell ? '#preise' : wurzel + 'bot#preise', id: 'preise', titel: 'Branchen' });
+    branchen = [];
+    if (!aktuell || !ziele.length) return nav;
     /* Aktuelle Seite mit Abschnitten: gleiche Ziele zusammenführen, nichts doppelt */
     var aus = [], genutzt = {};
     ziele.forEach(function (z) {
