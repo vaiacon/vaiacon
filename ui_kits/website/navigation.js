@@ -450,7 +450,7 @@
         sh += '<div class="vn-seite__huelle' + (offen0 ? '' : ' ist-zu') + '" id="' + uid + '"><ul class="vn-seite__unter" aria-label="' + esc(g.titel) + ': Abschnitte">' +
           subs.map(function (x) {
             if (aktuell && x.id) beobachtet.push(x.id);
-            return '<li' + (x.tief ? ' class="ist-tief"' : '') + '><a href="' + esc(x.href) + '">' + esc(x.titel) + '</a></li>';
+            return '<li' + (x.tief ? ' class="ist-tief"' : '') + '><a href="' + esc(x.href) + '">' + esc(x.titel).replace('Standortbestimmung', 'Standort\u00ADbestimmung') + '</a></li>';
           }).join('') + '</ul></div>';
       }
       sh += '</li>';
