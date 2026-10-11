@@ -933,40 +933,7 @@
   line-height: 1;
 }
 
-/* Gesichter und Preisrahmen im Abschnitt «So fängt es an» */
-.st-gesichter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 28px;
-  margin: 36px 0 0;
-  font-size: var(--text-size-body);
-  color: var(--text-body);
-}
-
-.st-gesichter__paar {
-  display: flex;
-}
-
-.st-gesichter__foto {
-  width: 128px;
-  height: 128px;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: 50% 20%;
-  border: 3px solid var(--cream-50);
-  background: var(--cream-50);
-}
-
-.st-gesichter__foto + .st-gesichter__foto {
-  margin-left: -28px;
-}
-
-.st-gesichter__text {
-  margin: 0;
-  text-align: left;
-}
-
+/* Preisrahmen im Abschnitt «So fängt es an» (die Gesichter stehen seit 11.10.2026 nur noch unter «Willkommen») */
 .st-preisrahmen {
   max-width: 44rem;
   margin: 20px auto 0;
@@ -996,26 +963,6 @@
   text-align: center;
 }
 
-@media (max-width: 599px) {
-  .st-gesichter {
-    flex-direction: column;
-    gap: 16px;
-    text-align: center;
-  }
-
-  .st-gesichter__foto {
-    width: 104px;
-    height: 104px;
-  }
-
-  .st-gesichter__foto + .st-gesichter__foto {
-    margin-left: -22px;
-  }
-
-  .st-gesichter__text {
-    text-align: center;
-  }
-}
 
 
 /* Willkommen: Standbild der beiden Gründer unter dem Karussell (Audit 11.10.2026:
