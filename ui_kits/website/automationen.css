@@ -40,12 +40,13 @@
 .bst__satz { margin: 0; font-size: 14.5px; line-height: 1.45; color: var(--text-body); }
 .bst__bild {
   margin: 0;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 5 / 6;
   border-radius: var(--radius-md, 12px);
   overflow: hidden;
   background: var(--cream-50, #FBF4EE);
 }
-.bst__bild img { display: block; width: 100%; height: 100%; object-fit: cover; }
+/* Büro-Bots sind Hochformat und freigestellt: ganz zeigen, nicht beschneiden. */
+.bst__bild img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: 50% 100%; }
 .bst__schluss {
   margin: 22px auto 0;
   max-width: 60ch;

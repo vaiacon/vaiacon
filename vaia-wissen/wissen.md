@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 11.10.2026 · Eintrag 60f0534 Merge pull request #28 from vaiacon/ohne-preise-2026-10-11
+> Stand: 11.10.2026 · Eintrag d94b81b KI-Kompetenz: Themenkatalog als modulares Trainingssystem
 
 ## Wie du antwortest
 
