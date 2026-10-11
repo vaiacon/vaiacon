@@ -25,7 +25,7 @@
     ['treuhand', 'Treuhand', 'Belege kommen spät, unvollständig, durcheinander'],
     ['arztpraxis', 'Arztpraxis', 'Leere Stühle durch nicht abgesagte Termine'],
     ['sanitaer-heizung', 'Sanitär und Heizung', 'Regierapport täglich erfassen und unterschreiben'],
-    ['agentur', 'Agentur', 'Monatsberichte zusammentragen frisst Stunden'],
+    ['kosmetik', 'Kosmetik', 'Termine werden kurzfristig abgesagt, der Stuhl bleibt leer'],
     ['restaurant', 'Restaurant', 'Reservierte Tische bleiben leer'],
     ['immobilien', 'Immobilien', 'Gleiche Interessentenfragen, jeden Tag neu'],
     ['alle', 'Für alle Branchen', 'Aufgaben, die in jedem Betrieb vorkommen']

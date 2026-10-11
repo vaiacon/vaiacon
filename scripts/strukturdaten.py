@@ -224,7 +224,7 @@ SITEMAP = [
     ("automationen-treuhand", "automationen-treuhand.html"),
     ("automationen-arztpraxis", "automationen-arztpraxis.html"),
     ("automationen-sanitaer-heizung", "automationen-sanitaer-heizung.html"),
-    ("automationen-agentur", "automationen-agentur.html"),
+    ("automationen-kosmetik", "automationen-kosmetik.html"),
     ("automationen-restaurant", "automationen-restaurant.html"),
     ("automationen-immobilien", "automationen-immobilien.html"),
     ("service", "service.html"),

@@ -20,7 +20,7 @@ from pathlib import Path
 
 WURZEL = Path(__file__).resolve().parents[1]
 BASIS = "https://vaiacon.ch"
-VERSION = "20261011-branchen1"
+VERSION = "20261012-nav14"
 
 # (Überschrift, Lead, Schlusssatz) je Branche
 TEXTE = {
@@ -44,10 +44,10 @@ TEXTE = {
         "Rapport, Wartungserinnerung und Rechnung entstehen direkt aus dem Einsatz. Das Büro muss nicht mehr hinterhertelefonieren.",
         "Lassen Sie prüfen, was in Ihrem Betrieb für Sanitär und Heizung von selbst laufen kann.",
     ),
-    "agentur": (
-        "Weniger Berichte tippen, mehr Projekte liefern.",
-        "Monatsberichte, Stunden und Feedback sammeln sich von selbst. Sie sehen früh, wenn ein Budget kippt.",
-        "Lassen Sie prüfen, was in Ihrer Agentur von selbst laufen kann.",
+    "kosmetik": (
+        "Weniger Nachrichten, mehr Zeit für Ihre Kundschaft.",
+        "Termine, Erinnerungen und Nachsorge laufen im Hintergrund. Notizen und Allergien sind Gesundheitsdaten: Wer sie sehen darf und wo sie liegen, klären wir vorab mit Ihnen.",
+        "Lassen Sie prüfen, was in Ihrem Studio von selbst laufen kann.",
     ),
     "restaurant": (
         "Weniger Administration, mehr Gäste am Tisch.",
