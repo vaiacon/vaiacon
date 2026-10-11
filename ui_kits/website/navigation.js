@@ -379,60 +379,79 @@
     }
   }
 
-  /* ---------- Auf dieser Seite ---------- */
+  /* ---------- Randliste links (Seiten) und «Auf dieser Seite» ---------- */
   var liste = SEITEN[seite];
-  if (liste && seite === rel.replace(/\/$/, '')) {
-    var ziele = liste.map(function (z) { return [document.getElementById(z[0]), z[1], z[0]]; })
-      .filter(function (z) { return z[0]; });
-    if (ziele.length > 1) {
-      var seitlich = el('nav', 'vn-seite');
-      seitlich.setAttribute('aria-label', 'Auf dieser Seite');
-      seitlich.innerHTML = '<p class="vn-seite__titel">Auf dieser Seite</p><ul>' +
-        ziele.map(function (z) { return '<li><a href="#' + z[2] + '">' + esc(z[1]) + '</a></li>'; }).join('') + '</ul>';
-      document.body.appendChild(seitlich);
+  var imBand = {}, alle = [];
+  var hero = document.getElementById('top');
+  var ziele = (liste && seite === rel.replace(/\/$/, '') ? liste : [])
+    .map(function (z) { return [document.getElementById(z[0]), z[1], z[0]]; })
+    .filter(function (z) { return z[0]; });
+  if (ziele.length < 2) ziele = [];
 
-      var reihe = el('nav', 'vn-reihe');
-      reihe.setAttribute('aria-label', 'Auf dieser Seite');
-      reihe.innerHTML = '<div class="vn-reihe__innen">' +
-        ziele.map(function (z) { return '<a href="#' + z[2] + '">' + esc(z[1]) + '</a>'; }).join('') + '</div>';
-      var hero = document.getElementById('top');
-      if (hero && hero.parentNode) hero.parentNode.insertBefore(reihe, hero.nextSibling);
-      else if (ziele[0][0].parentNode) ziele[0][0].parentNode.insertBefore(reihe, ziele[0][0]);
+  /* Knopfreihe unter dem Titel für schmale Fenster */
+  var reihe = null;
+  if (ziele.length) {
+    reihe = el('nav', 'vn-reihe');
+    reihe.setAttribute('aria-label', 'Auf dieser Seite');
+    reihe.innerHTML = '<div class="vn-reihe__innen">' +
+      ziele.map(function (z) { return '<a href="#' + z[2] + '">' + esc(z[1]) + '</a>'; }).join('') + '</div>';
+    if (hero && hero.parentNode) hero.parentNode.insertBefore(reihe, hero.nextSibling);
+    else if (ziele[0][0].parentNode) ziele[0][0].parentNode.insertBefore(reihe, ziele[0][0]);
+    alle = alle.concat([].slice.call(reihe.querySelectorAll('a')));
+  }
 
-      var alle = [].slice.call(seitlich.querySelectorAll('a')).concat([].slice.call(reihe.querySelectorAll('a')));
-      var imBand = {};
-      function markieren() {
-        var aktuell = null;
-        ziele.forEach(function (z) { if (imBand[z[2]]) aktuell = z[2]; });
-        if (!aktuell) return;
-        alle.forEach(function (a) {
-          var an = a.getAttribute('href') === '#' + aktuell;
-          if (an) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
-        });
-        var chip = reihe.querySelector('a[aria-current]');
-        var innen = reihe.firstChild;
-        if (chip && innen && innen.scrollWidth > innen.clientWidth) {
-          innen.scrollLeft = chip.offsetLeft - (innen.clientWidth - chip.offsetWidth) / 2;
-        }
+  /* Randliste: dieselben Hauptpunkte wie die Kopfzeile, die aktuelle Seite aufgeklappt */
+  var haupt = MENUE.map(function (g) { return [g.seite, g.titel, g.seite]; })
+    .concat(MEHR.map(function (m) { return [m[0], m[1], m[3]]; }));
+  if (seite !== '404') {
+    var seitlich = el('nav', 'vn-seite');
+    seitlich.setAttribute('aria-label', 'Seitenübersicht');
+    var sh = '<ul class="vn-seite__haupt">';
+    haupt.forEach(function (h) {
+      var aktuell = h[2] === seite;
+      sh += '<li' + (aktuell ? ' class="ist-aktuell"' : '') + '><a href="' + wurzel + h[0] + '"' + (aktuell ? ' aria-current="page"' : '') + '>' + esc(h[1]) + '</a>';
+      if (aktuell && ziele.length) {
+        sh += '<ul class="vn-seite__unter" aria-label="Auf dieser Seite">' +
+          ziele.map(function (z) { return '<li><a href="#' + z[2] + '">' + esc(z[1]) + '</a></li>'; }).join('') + '</ul>';
       }
-      if ('IntersectionObserver' in window) {
-        var io = new IntersectionObserver(function (eintr) {
-          eintr.forEach(function (e) { imBand[e.target.id] = e.isIntersecting; });
-          markieren();
-        }, { rootMargin: '0px 0px -65% 0px', threshold: 0 });
-        ziele.forEach(function (z) { io.observe(z[0]); });
+      sh += '</li>';
+    });
+    seitlich.innerHTML = sh + '</ul>';
+    document.body.appendChild(seitlich);
+    alle = alle.concat([].slice.call(seitlich.querySelectorAll('.vn-seite__unter a')));
+
+    var fussEl = document.querySelector('footer');
+    var seitlichSteuern = function () {
+      var y = window.pageYOffset || 0, vh = window.innerHeight;
+      var zeigt = y > (hero ? hero.offsetHeight * 0.6 : 200);
+      if (fussEl && fussEl.getBoundingClientRect().top < vh * 0.85) zeigt = false;
+      seitlich.classList.toggle('ist-sichtbar', zeigt);
+    };
+    window.addEventListener('scroll', seitlichSteuern, { passive: true });
+    window.addEventListener('resize', seitlichSteuern);
+    seitlichSteuern();
+  }
+
+  if (ziele.length) {
+    var markieren = function () {
+      var aktuell = null;
+      ziele.forEach(function (z) { if (imBand[z[2]]) aktuell = z[2]; });
+      if (!aktuell) return;
+      alle.forEach(function (a) {
+        if (a.getAttribute('href') === '#' + aktuell) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+      });
+      var chip = reihe.querySelector('a[aria-current]');
+      var innen = reihe.firstChild;
+      if (chip && innen && innen.scrollWidth > innen.clientWidth) {
+        innen.scrollLeft = chip.offsetLeft - (innen.clientWidth - chip.offsetWidth) / 2;
       }
-      /* Die seitliche Liste erscheint erst unter dem Seitenkopf und weicht der Fusszeile. */
-      var fussEl = document.querySelector('footer');
-      function seitlichSteuern() {
-        var y = window.pageYOffset || 0, vh = window.innerHeight;
-        var zeigt = y > (hero ? hero.offsetHeight * 0.7 : 300);
-        if (fussEl && fussEl.getBoundingClientRect().top < vh * 0.85) zeigt = false;
-        seitlich.classList.toggle('ist-sichtbar', zeigt);
-      }
-      window.addEventListener('scroll', seitlichSteuern, { passive: true });
-      window.addEventListener('resize', seitlichSteuern);
-      seitlichSteuern();
+    };
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (eintr) {
+        eintr.forEach(function (e) { imBand[e.target.id] = e.isIntersecting; });
+        markieren();
+      }, { rootMargin: '0px 0px -65% 0px', threshold: 0 });
+      ziele.forEach(function (z) { io.observe(z[0]); });
     }
   }
 })();
