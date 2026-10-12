@@ -1,29 +1,194 @@
-/* Zweig «blender»: Hero-Hintergrund «Bausteine» (in Blender gerendert, 8 s Endlosschleife).
-   Das Video füllt die Bühne und trägt den Terracotta-Verlauf selbst; der Verlauf der Bühne bleibt als Rückfall darunter. */
-.bl-hero {
+/* Zweig «blender»: neuer Hero «Eine Form, drei Wege» und Scroll-Szene.
+   Hero: ruhige Creme-Fläche, Text links, in Blender gerendertes Objekt rechts (Endlosschleife).
+   Szene: ca. 250vh hoher Abschnitt; die Form zerfällt beim Scrollen in drei Teile (Bildfolge auf <canvas>). */
+
+/* Seite beginnt unter dem festen Kopf; der Hero ist hell */
+.bl-buehne {
+  position: relative;
+  background: var(--cream-100);
+  color: var(--ink-900);
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding: 96px 0 40px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.bl-buehne__inner {
+  width: min(100%, 1320px);
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(0, 1.22fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(8px, 3vw, 48px);
+}
+.bl-kicker {
+  margin: 0 0 clamp(14px, 2vh, 22px);
+  max-width: 34em;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--terra-500);
+}
+.bl-headline {
+  margin: 0;
+  font-size: clamp(36px, 4.5vw, 70px);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  color: var(--ink-900);
+  text-wrap: balance;
+}
+.bl-headline span { display: block; color: var(--terra-500); }
+.bl-sub {
+  margin: clamp(18px, 3vh, 30px) 0 0;
+  max-width: 31em;
+  font-size: clamp(17px, 1.35vw, 20px);
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--brown-600);
+}
+.bl-cta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 14px;
+  margin-top: clamp(22px, 3.6vh, 38px);
+}
+.bl-cta .sv-button { white-space: normal; }
+.bl-cta .sv-button--ghost {
+  background: transparent;
+  color: var(--ink-900);
+  border-color: var(--border-strong);
+  box-shadow: none;
+}
+.bl-cta .sv-button--ghost:hover,
+.bl-cta .sv-button--ghost:focus-visible { background: var(--cream-card); border-color: var(--ink-900); }
+
+/* Objekt: Poster (LCP) liegt unten, das Video blendet darüber ein, sobald es läuft.
+   Weicher Rand, damit eine winzige Farbabweichung des Videos zur Seite nie als Kante auffällt. */
+.bl-objekt {
+  position: relative;
+  width: 100%;
+  max-width: min(640px, 78vh);
+  justify-self: end;
+  aspect-ratio: 1 / 1;
+  pointer-events: none;
+  -webkit-mask-image: radial-gradient(closest-side, #000 82%, transparent 100%);
+          mask-image: radial-gradient(closest-side, #000 82%, transparent 100%);
+}
+.bl-objekt__bild,
+.bl-objekt__video {
   position: absolute;
   inset: 0;
-  z-index: 0;
-  overflow: hidden;
-  pointer-events: none;
-  opacity: 0.5;
-}
-.bl-hero__video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: 50% 50%;
   display: block;
+  object-fit: contain;
+}
+.bl-objekt__video { opacity: 0; transition: opacity 0.6s ease; }
+.bl-objekt.is-laeuft .bl-objekt__video { opacity: 1; }
+
+/* ───── Scroll-Szene ───── */
+.bl-szene {
+  position: relative;
+  background: var(--cream-100);
+  color: var(--ink-900);
+  padding: 8px 0 72px;
+}
+.bl-szene__titel {
+  position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden;
+  clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.bl-szene__sticky {
+  width: min(100%, 1240px);
+  margin: 0 auto;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
+.bl-szene__canvas,
+.bl-szene__still {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 1;
+  margin: 0 auto;
+  -webkit-mask-image: radial-gradient(closest-side, #000 86%, transparent 100%);
+          mask-image: radial-gradient(closest-side, #000 86%, transparent 100%);
+}
+.bl-szene__canvas { display: none; }
+.bl-szene__texte {
+  width: min(100%, 1100px, calc((100svh - 410px) * 2));
+  margin-left: auto; margin-right: auto;
+  padding: 0 7%; box-sizing: content-box;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 8px;
+}
+.bl-text h3 {
+  margin: 0 0 10px;
+  font-size: clamp(24px, 2.2vw, 32px);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  line-height: 1.12;
+}
+.bl-text p { margin: 0 0 16px; font-size: 17px; font-weight: 600; line-height: 1.55; color: var(--brown-600); }
+.bl-text__aktion { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+.bl-text .st-mehr { color: var(--terra-500); font-weight: 700; text-decoration: none; }
+.bl-text .st-mehr:hover, .bl-text .st-mehr:focus-visible { color: var(--terra-600); text-decoration: underline; }
+.bl-text .sv-start { width: 100%; max-width: 320px; }
+.bl-text .sv-start__fehler { margin: 6px 0 0; font-size: 14px; }
+
+/* Aktiv (Skript läuft, Bewegung erlaubt): Abschnitt wird hoch, Bühne klebt oben */
+.bl-szene.bl-an { height: 250vh; padding: 0; }
+.bl-an .bl-szene__sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  height: 100svh;
+  padding-top: 82px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+.bl-an .bl-szene__canvas {
+  display: block;
+  width: min(100%, 1100px, calc((100svh - 410px) * 2));
+}
+.bl-an .bl-szene__still { display: none; }
+.bl-an .bl-text { opacity: 0; transform: translateY(14px); transition: opacity 0.45s ease, transform 0.45s ease; }
+.bl-an .bl-text.is-sichtbar { opacity: 1; transform: none; }
+.bl-an .bl-text:not(.is-sichtbar) { pointer-events: none; }
+
+@media (max-width: 900px) {
+  .bl-buehne { min-height: 0; align-items: flex-start; padding: 92px 0 24px; }
+  .bl-buehne__inner { grid-template-columns: 1fr; gap: 0; padding: 0 20px; }
+  .bl-objekt { justify-self: center; max-width: min(430px, 92vw); margin-top: 8px; }
+  .bl-headline { font-size: clamp(34px, 9.4vw, 52px); }
+  .bl-kicker { font-size: 12px; }
 }
 
+/* Mobil: Ausschnitt der Bildfolge folgt dem aktiven Teil, es steht immer nur ein Text da */
 @media (max-width: 760px) {
-  /* Hochformat: rechte Bausteingruppe zeigen, nicht die leere Mitte */
-  .bl-hero__video { object-position: 84% 50%; }
-  .bl-hero { opacity: 0.45; }
+  .bl-szene__still { aspect-ratio: 2 / 1; }
+  .bl-szene__texte { grid-template-columns: 1fr; gap: 28px; margin-top: 12px; }
+  .bl-an .bl-szene__sticky { padding: 76px 20px 16px; justify-content: flex-start; }
+  .bl-an .bl-szene__canvas { width: min(100%, 380px); aspect-ratio: 320 / 350; }
+  .bl-szene__texte { width: 100%; padding: 0; }
+  .bl-an .bl-szene__texte { position: relative; display: block; min-height: 250px; margin-top: 4px; }
+  .bl-an .bl-text { position: absolute; inset: 0 0 auto 0; }
 }
 
-/* Bewegung reduziert: nur das Standbild (Poster); Video wird per Skript angehalten, hier zusätzlich ausgeblendet */
 @media (prefers-reduced-motion: reduce) {
-  .bl-hero__video { display: none; }
-  .bl-hero { background: url("../../assets/blender/hero-bausteine-poster.jpg") 50% 50% / cover no-repeat; }
+  .bl-objekt__video { display: none; }
 }
+
+/* .sv-page schnitt mit overflow-x:hidden die Sticky-Bühne ab (macht den Container zum Scroll-Bereich); clip tut dasselbe ohne diese Nebenwirkung */
+.sv-page { overflow-x: clip; overflow-y: visible; }

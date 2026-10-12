@@ -126,7 +126,7 @@
   /* ---------- Kopfzeile ---------- */
   var kopf = el('header', 'vn');
   kopf.id = 'vn';
-  var hell = !!document.querySelector('.ea-wrap, #root .ea-wrap') || /erstanalyse/.test(rel);
+  var hell = !!document.querySelector('.ea-wrap, #root .ea-wrap, [data-nav-hell]') || /erstanalyse/.test(rel);
   if (hell) kopf.className += ' vn--hell';
 
   var h = '<div class="vn-leiste">' +
