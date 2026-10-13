@@ -47,10 +47,8 @@
       text: 'Formate, die über Wochen ineinandergreifen.',
       spalten: [
         { titel: 'Lernen im Betrieb', breit: true, punkte: [
-          ['learning#lernreise', 'Die Lernreise', 'Stationen, die über Wochen ineinandergreifen.'],
           ['learning#formate', 'Die Formate', 'Sieben Formate, die sich kombinieren lassen.'],
-          ['learning#themen-top', 'Die Themen', 'Zehn Themen, die oft gefragt sind.'],
-          ['learning#standortbestimmung', 'Standortbestimmung', 'Zwölf kurze Fragen: Wo steht Ihr Betrieb mit KI?']
+          ['learning#themen-top', 'Die Themen', 'Zehn Themen, die oft gefragt sind.']
         ] }
       ] },
     { id: 'visibility', seite: 'visibility', titel: 'Sichtbarkeit',
@@ -79,8 +77,8 @@
       ['bot', 'Automationen'], ['visibility', 'Sichtbarkeit'], ['learning', 'KI-Kompetenz'],
       ['service', 'Betreuung und Begleitung'], ['erstanalyse/', 'Kostenlose Erstanalyse']] },
     { titel: 'Lernen', links: [
-      ['learning#lernreise', 'Die Lernreise'], ['learning#formate', 'Die Formate'],
-      ['learning#themen-top', 'Die Themen'], ['learning#standortbestimmung', 'Standortbestimmung']] },
+      ['learning#formate', 'Die Formate'],
+      ['learning#themen-top', 'Die Themen']] },
     { titel: 'Firma', links: [
       ['ueber-uns', 'Über uns'], ['referenzen', 'Aus der Praxis'], ['faq', 'FAQ'],
       ['ki-kmu-news/', 'KI-News für KMU'], ['kontakt', 'Kontakt']] }
@@ -90,8 +88,7 @@
   /* «Auf dieser Seite»: [Anker, Beschriftung] */
   var SEITEN = {
     bot: [['preise', 'Branchen'], ['ihr-fall', 'Ihr Fall']],
-    learning: [['lernreise', 'Lernreise'], ['formate', 'Formate'], ['themen-top', 'Themen'],
-      ['standortbestimmung', 'Standortbestimmung']],
+    learning: [['formate', 'Formate'], ['themen-top', 'Themen']],
     faq: [['faq-allgemein', 'Allgemein'], ['faq-learning', 'KI-Kompetenz'], ['faq-bot', 'Automationen'],
       ['faq-visibility', 'Sichtbarkeit'], ['faq-service', 'Betreuung']]
   };

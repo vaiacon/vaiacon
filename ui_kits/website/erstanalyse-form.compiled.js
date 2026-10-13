@@ -410,9 +410,9 @@ function EaSuccess({
     className: "ea-result-vorbehalt"
   }, "Eine Sch\xE4tzung, keine Zusage. Welche L\xF6sungswege dahinter stecken und was sie kosten, besprechen wir im kostenlosen Erstgespr\xE4ch.")), kleinst ? /*#__PURE__*/React.createElement("p", {
     className: "ea-lead"
-  }, "F\xFCr einen Betrieb Ihrer Gr\xF6sse ist eine KI-Schulung oft ein guter erster Schritt. Mit der ", /*#__PURE__*/React.createElement("a", {
-    href: ROOT + 'learning#standortbestimmung'
-  }, "kostenlosen KI-Standortbestimmung"), " sehen Sie, wo Sie stehen. Ein Gespr\xE4ch mit uns bleibt jederzeit m\xF6glich.") : null, /*#__PURE__*/React.createElement("div", {
+  }, "F\xFCr einen Betrieb Ihrer Gr\xF6sse ist eine KI-Schulung oft ein guter erster Schritt. Wie das bei Ihnen aussehen k\xF6nnte, besprechen wir gern im ", /*#__PURE__*/React.createElement("a", {
+    href: ROOT + 'kontakt#formular'
+  }, "kostenlosen Erstgespr\xE4ch"), ".") : null, /*#__PURE__*/React.createElement("div", {
     className: "ea-success-ctas"
   }, kleinst ? /*#__PURE__*/React.createElement(EaButton, {
     variant: "cta",

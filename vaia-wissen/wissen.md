@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 13.10.2026 · Eintrag f58f85a Bot-Wissen: Stand nach Themen Top 10, ohne Kurzfilm und Anbindungen
+> Stand: 13.10.2026 · Eintrag 96fb132 Navigationskapsel bleibt beim Scrollen sichtbar, Startseite ohne «So fängt es an»
 
 ## Wie du antwortest
 
@@ -14,8 +14,8 @@
   nicht steht, weisst du nicht. Dann sag das und verweise auf hallo@vaiacon.ch;
   erfinde keine Fristen oder Zusagen.
 - Es gibt keine Academy und keine Gratis-Kurse. Kostenlos sind nur das
-  Erstgespräch, die KI-Standortbestimmung (Selbsttest für Führungskräfte),
-  die Erstanalyse zur Zeitersparnis und der kostenlose Website-Check.
+  Erstgespräch, die Erstanalyse zur Zeitersparnis und der kostenlose
+  Website-Check.
 - Nimm keine Personendaten entgegen. Wer ein persönliches Anliegen hat,
   soll schreiben oder einen Termin buchen.
 
@@ -31,9 +31,6 @@ bleiben in der Schweiz.
 ## Preise
 
 Nenne keine Preise, keine Beträge, keine Ab-Preise, Richtpreise oder Beispiele fürs erste Jahr, für keinen Bereich. Fragt jemand nach Kosten, sag: Jedes Vorhaben ist anders, darum schauen wir jedes Angebot persönlich an. Nach dem kostenlosen Erstgespräch gibt es eine verbindliche Offerte. Bei der Sichtbarkeit: Wer den kostenlosen Online-Check macht, sieht seine Punktzahl; danach melden wir uns, oder die Person meldet sich bei uns. Einen Richtpreis-Rechner gibt es nicht mehr.
-
-Hinweis: Die KI-Standortanalyse im Betrieb (Begleitung) ist nicht die
-kostenlose KI-Standortbestimmung (Selbsttest für Führungskräfte).
 
 ## Referenz
 
@@ -72,7 +69,7 @@ Zum Inhalt springen
 KI-Beratung für Schweizer KMU: Schulung, Sichtbarkeit und Automatisierung
 KI-Kompetenz
 Ihr Team lernt KI an den eigenen Aufgaben: Trainings, Coaching und kurze tägliche Lerneinheiten.
-KI-Standort bestimmen →
+Erstgespräch vereinbaren →
 Mehr erfahren →
 Sichtbarkeit
 Gefunden werden, wenn Ihre Kundschaft bei Google sucht oder eine KI fragt.
@@ -102,7 +99,7 @@ Sichtbarkeit →
 «Wir verlieren viel Zeit mit wiederkehrenden Aufgaben.»
 Automationen →
 «Ich weiss nicht, wo ich anfangen soll.»
-KI-Standort bestimmen →
+Erstgespräch →
 WOFÜR WIR STEHEN
 KI ist für uns nicht das Produkt, sondern das Werkzeug.
 Wir verkaufen keine Technik, sondern Wissen im Team, Auffindbarkeit und zurückgewonnene Zeit. Wo sich etwas nicht rechnet, sagen wir das.
@@ -147,13 +144,13 @@ Ein halbstündiges Erstgespräch, kostenlos und unverbindlich. Danach wissen Sie
 Erstgespräch vereinbaren →
 Zeit sparen: Erstanalyse →
 
-### KI-Kompetenz (inkl. KI-Standortbestimmung)
+### KI-Kompetenz
 
 Zum Inhalt springen
 KI-KOMPETENZ
 KI-Schulungen für Schweizer KMU
 Ein einzelner Kurstag reicht selten, damit KI im Alltag ankommt. Eine Lernreise verbindet über mehrere Wochen Training, tägliche Einheiten, Begleitung am Arbeitsplatz und Coaching.
-KI-Standort bestimmen →
+Erstgespräch vereinbaren →
 Kurz gesagt
 Für wen ist es geeignet
 Betriebe, deren Team und Führungskräfte KI sicher und nützlich einsetzen sollen.
@@ -167,69 +164,6 @@ Ablauf
 Kostenloses halbstündiges Erstgespräch, danach eine Lernreise über mehrere Wochen mit Stationen nach Ihrem Bedarf.
 Region
 Gesamte Deutschschweiz
-DIE LERNREISE
-Acht Wochen, vom Ausgangspunkt bis zur Wirkung.
-Ein Beispiel, wie die Bausteine zusammenspielen. Gemessen wird am Anfang, unterwegs und am Ende.
-1 Woche 0 · Standort
-Standortbestimmung
-Drei Angaben zu Ihrem Betrieb und zwölf kurze Fragen. So wird sichtbar, was schon funktioniert und wo es noch Unterstützung braucht.
-Messpunkt · Wo stehen wir?
-Fragen Sie im Team: Wer nutzt KI, wofür und wie sicher? Messen Sie ausserdem, wie lange eine häufige Aufgabe heute dauert.
-Standortbestimmung
-2 Woche 1 · Auftakt
-Gespräch mit der Teamleitung
-Die Teamleitung klärt Ziel, Rollen und Spielregeln, bevor das Team startet. Wir begleiten das Gespräch mit unserer Erfahrung.
-Messpunkt · Ziele festlegen
-Wir legen zwei bis drei messbare Ziele fest. Zum Beispiel: alle arbeiten mit denselben geprüften Vorlagen. Zu jedem Ziel halten wir fest, woran wir es messen, welcher Wert gelten soll und bis wann.
-Veränderung begleiten
-3 Woche 2 · Training
-Training im Team
-Ein halber Tag, in dem alle auf denselben Stand gebracht werden. Was Einzelne bereits gefunden haben, wird zum gemeinsamen Wissen.
-Training, Halbtag
-4 Woche 3 · Video
-Lernvideo aus Ihrem Alltag
-Was Ihre Mitarbeitenden bereits beherrschen, wird zu einem kurzen Video. Neue Mitarbeitende können das Video jederzeit ansehen und den Ablauf lernen.
-Lernvideo
-5 Woche 5–8 · Täglich
-Tägliche kleine Lerneinheiten
-An 20 Arbeitstagen jeweils drei bis fünf Minuten: ein Tipp, eine Übung am eigenen Fall, eine kurze Kontrollfrage. Vier Wochen lang, am Arbeitsplatz oder auf dem Smartphone.
-Messpunkt · Zwischenstand
-Die Antworten auf die tägliche Frage zeigen laufend, was sitzt. Nach zwei Wochen sehen Sie, wo das Team steht. Wir passen die Übungen dort an, wo noch Unterstützung nötig ist.
-Kleine Lerneinheiten
-6 Woche 6 · Vor Ort
-Begleitung am Arbeitsplatz
-Ein Tag, an dem wir Sie im Betrieb besuchen. Wir helfen dort, wo es im Alltag hakt, und beantworten die Fragen, die im Training nicht aufkamen.
-Begleitung vor Ort
-7 Woche 7 · Coaching
-Coaching der Führungskräfte
-In Einzelgesprächen geht es darum, was Führung jetzt anders macht: Wer entscheidet was, wie sprechen Sie über KI im Team, wo setzen Sie Grenzen.
-Coaching für Führungskräfte
-8 nach Woche 8 · Wirkung
-Wirkung messen, Ziele prüfen
-Nach den vier Wochen Lerneinheiten stellen wir dieselben Fragen wie zu Beginn, an die Führung und an das Team. Wir legen Vorher und Nachher nebeneinander.
-Messpunkt · Zielcheck
-Jedes Ziel aus dem Auftakt bekommt ein Ergebnis: erreicht, teilweise oder offen. Was offen ist, wird zur nächsten Etappe.
-Standortbestimmung
-Ziel · nach Woche 8
-Am Ende wissen Sie, ob es gewirkt hat.
-An vier Stellen der Reise wird gemessen, immer gleich: vorher, unterwegs und nach dem Ende der Übungsphase. Ausgewertet wird nur für die Gruppe, nie für einzelne Personen.
-1 · Wissen Sitzt es?
-2 · Anwenden Wird es genutzt?
-3 · Zeit Spart es etwas?
-4 · Ziele Ist erreicht, was wir wollten?
-So sieht der Zielcheck aus →
-So sieht der Zielcheck aus · Muster mit erfundenen Werten
-Schliessen
-Ziel aus dem Auftakt Vorher Nachher Ergebnis
-Alle erledigen mindestens eine wiederkehrende Aufgabe regelmässig mit KI 4 von 15 13 von 15 teilweise
-Eine Offerte ist in 5 statt 45 Minuten fertig, ohne zusätzliche Korrekturen 45 Minuten 5 Minuten, Korrekturen wie bisher erreicht
-Bis Woche 8 entstehen mindestens 4 von 5 Offerten aus einer geprüften Vorlage keine Vorlage 6 Vorlagen, in 4 von 5 Offerten genutzt erreicht
-Alle wissen, welche Werkzeuge Kundendaten bekommen dürfen keine Regel Regel steht, 11 von 15 kennen sie offen, nächste Etappe
-Zielwert und Zeitpunkt legen wir im Auftakt fest. Den Zielcheck erhalten Sie am Ende als eine Seite, mit Vorher und Nachher und einem Vorschlag für die nächsten Wochen.
-Station 1 von 9
-‹ Zurück Weiter ›
-Eine Beispielreise, kein fester Plan.
-Erstgespräch vereinbaren →
 DIE FORMATE
 Sieben Bausteine, frei kombiniert.
 Online-Kurse nach Mass
@@ -284,10 +218,6 @@ Microsoft Copilot
 Mistral
 Midjourney
 Markennamen gehören ihren Inhabern.
-Standortbestimmung
-Wo steht Ihr Betrieb mit KI?
-Drei Angaben zu Ihrem Betrieb und zwölf kurze Fragen. Danach sehen Sie Ihre Stufe und eine Einschätzung, was sich als Nächstes lohnt.
-Die Standortbestimmung braucht JavaScript. Wenn Sie wissen möchten, wo Ihr Betrieb mit KI steht, schreiben Sie uns kurz über die Kontaktseite . Wir melden uns persönlich.
 NÄCHSTER SCHRITT
 Reden wir darüber, wie Ihre Lernreise aussieht.
 Ein halbstündiges Erstgespräch, kostenlos.
@@ -611,8 +541,6 @@ Was kostet es? +
 Jedes Vorhaben ist anders. Darum nennen wir auf der Website keine Preise, sondern schauen jedes Angebot persönlich mit Ihnen an. Nach dem kostenlosen Erstgespräch erhalten Sie von uns eine verbindliche Offerte.
 Was ist im Preis enthalten, auch Reise und Spesen? +
 Im Preis ist die gesamte Arbeit von Vaiacon enthalten, auch Reisezeit und Reisekosten innerhalb der Schweiz. Räume, Technik, Material vor Ort und Verpflegung stellen Sie. Auf Wunsch organisieren wir das gegen Aufpreis.
-Was ist die KI-Standortbestimmung? +
-Ein kostenloser Selbsttest für Führungskräfte: zwölf kurze Fragen, ein ehrliches Ergebnis und eine persönliche Einschätzung, was sich als Nächstes lohnt. Sie finden ihn bei KI-Kompetenz . Nicht zu verwechseln mit der KI-Standortanalyse im Betrieb: Dort schauen wir uns Ihren Betrieb an und legen Ihnen einen Bericht mit den besten nächsten Schritten vor.
 Was sind die KI-News für KMU? +
 Unsere Übersicht zu dem, was in der KI für Schweizer KMU gerade zählt, kurz, mit Quellen und mit erklärten Fachbegriffen. Neue Beiträge erscheinen während der Woche, dazu ein Wochenfazit. Die laufende Woche steht auf der Seite KI-News für KMU , frühere Ausgaben liegen im Archiv , und wer möchte, abonniert sie als Feed.
 Was passiert mit unseren Daten? +
@@ -766,11 +694,11 @@ DATENSCHUTZ
 Was mit Ihren Daten geschieht.
 Massgebend ist das revidierte Schweizer Datenschutzgesetz (revDSG). Wir erheben so wenig wie möglich und erklären hier alles, was auf dieser Website und im Kundenportal tatsächlich passiert.
 Kurz gesagt
-Diese Website verlangt kein Konto und führt keine Besucherstatistik. Sie läuft auf einem Server von Infomaniak in der Schweiz. Einiges geht ins Ausland: alles, was ein Sprachmodell für Sie auswertet. Das sind der Chat mit Vaia, der kostenlose Website-Check, die Erstanalyse, der Richtpreis-Rechner, die Einordnung «Ihr Fall» und die KI-Standortbestimmung. Das Sprachmodell stammt von Anthropic in den USA. Jedes davon ist unten einzeln erklärt, und der Abschnitt «Bekanntgabe ins Ausland» fasst zusammen, auf welcher Grundlage das geschieht.
+Diese Website verlangt kein Konto und führt keine Besucherstatistik. Sie läuft auf einem Server von Infomaniak in der Schweiz. Einiges geht ins Ausland: alles, was ein Sprachmodell für Sie auswertet. Das sind der Chat mit Vaia, der kostenlose Website-Check, die Erstanalyse, der Richtpreis-Rechner, die Einordnung «Ihr Fall». Das Sprachmodell stammt von Anthropic in den USA. Jedes davon ist unten einzeln erklärt, und der Abschnitt «Bekanntgabe ins Ausland» fasst zusammen, auf welcher Grundlage das geschieht.
 Diese Erklärung gilt auch für das Kundenportal unter kunden.vaiacon.ch. Dort speichern wir mehr, weil es dort nötig ist. Was genau, steht weiter unten.
 Was beim Aufruf dieser Seite geschieht
 Die Website liegt bei Infomaniak in der Schweiz. Wir führen kein Zugriffsprotokoll und speichern keine IP-Adressen. Wer diese Seiten nur liest, hinterlässt bei uns also keine Spur.
-Anders ist es dort, wo Sie selbst etwas absenden: im Chat, im Kontaktformular, beim Rückruf, im kostenlosen Website-Check, in der Erstanalyse, im Richtpreis-Rechner, bei der Einordnung «Ihr Fall» und in der KI-Standortbestimmung. Alle sind unten beschrieben.
+Anders ist es dort, wo Sie selbst etwas absenden: im Chat, im Kontaktformular, beim Rückruf, im kostenlosen Website-Check, in der Erstanalyse, im Richtpreis-Rechner, bei der Einordnung «Ihr Fall». Alle sind unten beschrieben.
 Schriften
 Die Schriften Quicksand und IBM Plex Mono liegen auf unserem eigenen Server in der Schweiz und werden von dort geladen. Beim Aufruf dieser Website geht dafür keine Anfrage an Google oder einen anderen Dritten.
 Chat mit Vaia
@@ -804,11 +732,6 @@ Auf der Seite Automationen beschreiben Sie einen Fall aus Ihrem Betrieb in wenig
 Ihr Text geht an unseren Server in der Schweiz und von dort an Anthropic (USA), den Anbieter des Sprachmodells Claude. Das Sprachmodell schätzt, welcher Umfang zu Ihrem Fall passt, und wählt passende Leistungen aus unserem Preiskatalog. Ihre Kontaktangaben gehen nicht mit. Was Sie in den Text schreiben, geht unverändert mit. Schreiben Sie darum bitte keine Namen oder vertraulichen Kundendaten hinein.
 Dieser Dienst selbst speichert nichts. Die Einordnung schicken wir Ihnen per E-Mail; die Seite zeigt nur eine Bestätigung. Gleichzeitig geht Ihr Fall samt Einordnung und Kontaktangaben als Anfrage an uns. Wir behandeln sie wie eine Anfrage über das Kontaktformular.
 Zum Schutz vor Missbrauch ist die Zahl der Einordnungen je Besucher begrenzt. Dafür hält der Server Ihre IP-Adresse im Arbeitsspeicher. Wie lange, steht unter «Aufbewahrung und Löschung».
-KI-Standortbestimmung
-Die KI-Standortbestimmung stellt zwölf Fragen zum Umgang mit KI. Vorab geben Sie Ihre Rolle, Ihre Branche und die Grösse Ihres Betriebs an. Namen oder Kontaktdaten fragen wir nicht ab.
-Diese Angaben und Ihre Antworten gehen an unseren Server in der Schweiz und von dort an Anthropic (USA), den Anbieter des Sprachmodells Claude. Es schreibt Ihre persönliche Einschätzung.
-Unser Server speichert Ihre Antworten nicht. Er vermerkt nur, dass eine Auswertung stattgefunden hat, mit Stufe und Punktzahl und ohne Bezug zu Ihnen.
-Zum Schutz vor Missbrauch ist die Zahl der Auswertungen je Besucher begrenzt. Dafür hält der Server Ihre IP-Adresse im Arbeitsspeicher. Wie lange, steht unter «Aufbewahrung und Löschung».
 Kundenportal kunden.vaiacon.ch
 Wer bei uns ein Projekt hat, meldet sich im Kundenportal mit E-Mail-Adresse und Passwort an und sieht dort die Vorschau seiner Website. Das Portal läuft auf demselben Schweizer Server wie diese Website.
 Anders als hier speichern wir im Portal etwas, und zwar nur das:
@@ -832,18 +755,18 @@ Den Rückrufwunsch löschen wir wie eine Anfrage über das Kontaktformular, sieh
 Unsere Dienstleister
 Diese Firmen arbeiten in unserem Auftrag und kommen dabei mit Daten in Berührung. Mehr sind es nicht:
 Infomaniak (Schweiz) · betreibt den Server für Website, Kundenportal und unser internes System und hostet unser Mail-Konto
-Anthropic (USA) · stellt das Sprachmodell hinter dem Chat mit Vaia, dem kostenlosen Website-Check, der Erstanalyse, dem Richtpreis, der Einordnung «Ihr Fall» und der KI-Standortbestimmung
+Anthropic (USA) · stellt das Sprachmodell hinter dem Chat mit Vaia, dem kostenlosen Website-Check, der Erstanalyse, dem Richtpreis, der Einordnung «Ihr Fall»
 Keine dieser Firmen darf Ihre Daten für eigene Zwecke verwenden. Wir geben nichts an Werbenetzwerke oder Adresshändler weiter und verkaufen keine Daten.
 Bekanntgabe ins Ausland
 Wohin Daten gehen und auf welcher Grundlage:
-Anthropic (Chat mit Vaia, kostenloser Website-Check, Erstanalyse, Richtpreis, Einordnung «Ihr Fall», KI-Standortbestimmung) · USA · Standardvertragsklauseln im Data Processing Addendum, das zusammen mit den Commercial Terms automatisch gilt
+Anthropic (Chat mit Vaia, kostenloser Website-Check, Erstanalyse, Richtpreis, Einordnung «Ihr Fall») · USA · Standardvertragsklauseln im Data Processing Addendum, das zusammen mit den Commercial Terms automatisch gilt
 Infomaniak (Hosting und Mail) · Schweiz · keine Bekanntgabe ins Ausland
 Für alles, was an Anthropic geht, gilt: Anthropic trainiert seine Modelle nicht mit unseren Inhalten. Das steht zusammen mit der Löschfrist in den Commercial Terms und im Data Processing Addendum .
 Aufbewahrung und Löschung
 Wir behalten nichts länger, als es gebraucht wird. Alle Fristen auf einen Blick:
-Sperre im Chat, im kostenlosen Website-Check, in der Erstanalyse, beim Richtpreis, bei der Einordnung «Ihr Fall» und in der KI-Standortbestimmung · Ihre IP-Adresse liegt nur im Arbeitsspeicher des Servers, höchstens 24 Stunden. Ausnahmen: Wer die Sperre der Erstanalyse auslöst, steht im Betriebsprotokoll dieses Dienstes, bis er neu aufgesetzt wird. Der Website-Check vermerkt jede Prüfung mit Domain und IP-Adresse in seinem Betriebsprotokoll, ebenfalls bis der Dienst neu aufgesetzt wird
+Sperre im Chat, im kostenlosen Website-Check, in der Erstanalyse, beim Richtpreis, bei der Einordnung «Ihr Fall» · Ihre IP-Adresse liegt nur im Arbeitsspeicher des Servers, höchstens 24 Stunden. Ausnahmen: Wer die Sperre der Erstanalyse auslöst, steht im Betriebsprotokoll dieses Dienstes, bis er neu aufgesetzt wird. Der Website-Check vermerkt jede Prüfung mit Domain und IP-Adresse in seinem Betriebsprotokoll, ebenfalls bis der Dienst neu aufgesetzt wird
 Browser-Kennung des Website-Checks · bleibt im lokalen Speicher Ihres Browsers, bis Sie die Websitedaten löschen
-Was Anthropic für uns auswertet (Chat, kostenloser Website-Check, Erstanalyse, Richtpreis, Einordnung «Ihr Fall», KI-Standortbestimmung) · höchstens 30 Tage bei Anthropic
+Was Anthropic für uns auswertet (Chat, kostenloser Website-Check, Erstanalyse, Richtpreis, Einordnung «Ihr Fall») · höchstens 30 Tage bei Anthropic
 Bericht aus dem kostenlosen Website-Check · 30 Tage auf unserem Server
 Richtpreise aus dem Richtpreis-Rechner · 180 Tage auf unserem Server, mit Ihrem Text, ohne Kontaktdaten
 Einordnung «Ihr Fall» · beim Dienst selbst nichts; die Anfrage an uns wie in der nächsten Zeile
@@ -882,7 +805,7 @@ Es gilt Schweizer Recht. Für bestehende Verträge gelten die AGB, die bei Vertr
 Diese Allgemeinen Geschäftsbedingungen (AGB) regeln sämtliche Geschäftsbeziehungen zwischen der Vaiacon GmbH (nachfolgend «Anbieterin») und ihren Kunden im Zusammenhang mit Beratungsdienstleistungen, Unternehmensentwicklung, Prozessautomatisierung, Digitalisierung, Entwicklung und Implementierung von Software- und KI-Lösungen, Schulungen und Lerninhalten sowie der Betreuung laufender Lösungen. Abweichende Bedingungen des Kunden gelten nur, sofern sie von der Anbieterin ausdrücklich und schriftlich anerkannt wurden.
 2. Vertragsabschluss
 Ein Vertrag kommt durch die schriftliche Annahme einer Offerte, die Unterzeichnung eines Vertrages oder die schriftliche Beauftragung durch den Kunden zustande. Die Anbieterin ist berechtigt, Anfragen ohne Angabe von Gründen abzulehnen.
-Kostenlos und unverbindlich sind das Erstgespräch, die Erstanalyse, die KI-Standortbestimmung, der kostenlose Website-Check auf vaiacon.ch sowie Richtpreise und Fall-Einordnungen auf vaiacon.ch. Durch sie entsteht kein Vertrag. Der kostenlose Website-Check ist eine automatische Prüfung der öffentlich zugänglichen Website.
+Kostenlos und unverbindlich sind das Erstgespräch, die Erstanalyse, der kostenlose Website-Check auf vaiacon.ch sowie Richtpreise und Fall-Einordnungen auf vaiacon.ch. Durch sie entsteht kein Vertrag. Der kostenlose Website-Check ist eine automatische Prüfung der öffentlich zugänglichen Website.
 Bezahlte Prüfungen der Sichtbarkeit, etwa der Check kompakt oder das Audit, vertieft, sind eigene Leistungen. Für sie gilt die Offerte. Ein vorher gebuchter Kompakt-Check wird beim vertieften Audit angerechnet.
 3. Leistungsumfang
 Die Anbieterin arbeitet in drei Bereichen: KI-Kompetenz (Trainings, Workshops, Einzelcoachings, E-Learnings und Videos nach Mass, Begleitung vor Ort, Begleitung von Veränderungen im Team), Sichtbarkeit (Auffindbarkeit bei Suchmaschinen und KI-Assistenten) und Automationen (Analyse von Arbeitsabläufen, Automationen, Chatbots mit Firmenwissen, Software- und Schnittstellenentwicklung, Anbindung von KI an bestehende Programme). Dazu kommen die Betreuung der gebauten Automationen und Chatbots sowie die Begleitung mit fester Beratungszeit. Der konkrete Leistungsumfang ergibt sich aus Offerte oder Vertrag.
@@ -916,7 +839,7 @@ Urheberrechte, Konzepte, Methoden, Frameworks, Bibliotheken, Vorlagen, Prompts, 
 Lerninhalte, die die Anbieterin eigens für den Kunden erstellt (E-Learnings, Videos, Unterlagen), darf der Kunde nach vollständiger Zahlung zeitlich unbeschränkt im eigenen Betrieb nutzen. Die Weitergabe an Dritte und der Weiterverkauf brauchen die schriftliche Zustimmung der Anbieterin.
 11. Gewährleistung
 Die Anbieterin schuldet eine sorgfältige Leistungserbringung, jedoch keinen bestimmten wirtschaftlichen Erfolg.
-Platzierungen in Suchmaschinen und Nennungen durch KI-Assistenten hängen von Dritten ab und werden nicht zugesichert. Analysen, Standortbestimmungen und Berichte sind Einschätzungen und Empfehlungen, keine Zusage eines Erfolgs.
+Platzierungen in Suchmaschinen und Nennungen durch KI-Assistenten hängen von Dritten ab und werden nicht zugesichert. Analysen und Berichte sind Einschätzungen und Empfehlungen, keine Zusage eines Erfolgs.
 11a. Projektabnahme
 Nach Abschluss eines Projektes oder einer Projektphase wird der Kunde zur Abnahme aufgefordert. Erfolgt innerhalb von zehn Arbeitstagen weder eine begründete schriftliche Mängelrüge noch eine Ablehnung der Abnahme, gilt die Leistung als abgenommen. Unerhebliche Mängel berechtigen nicht zur Verweigerung der Abnahme.
 Abgenommen ist ein Ablauf, wenn der Normalfall, fehlende und falsche Daten, ein Schnittstellenausfall und eine Doppelauslösung geprüft sind und die Rechte stimmen.
