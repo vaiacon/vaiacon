@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 13.10.2026 · Eintrag 10eefd6 Kopfzeile: eigener Reiter Assistenten
+> Stand: 13.10.2026 · Eintrag 62f78a0 Bot-Wissen: Telefon-Assistent und Chatbot mit Firmenwissen aufgenommen
 
 ## Wie du antwortest
 
@@ -375,7 +375,7 @@ Eine Einordnung, keine verbindliche Offerte. Ob Standard oder individuell, klär
 
 Zum Inhalt springen
 TELEFON-ASSISTENT UND CHATBOT
-Ihr Betrieb ist erreichbar. Auch wenn gerade niemand abnehmen kann.
+Ihr Betrieb antwortet. Immer.
 Wir richten bei Ihnen einen Telefon-Assistenten ein, der Anrufe entgegennimmt, und einen Chatbot, der Fragen aus Ihren eigenen Unterlagen beantwortet. Aus einer Hand: einrichten, abstimmen, anbinden, testen und betreuen.
 Erstgespräch vereinbaren →
 Telefon-Assistent ansehen →
