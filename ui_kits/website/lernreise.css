@@ -195,4 +195,5 @@
 @media (max-width: 640px) {
   .lr-fx__liste { grid-template-columns: minmax(0, 1fr); }
   .lr-fx__ico { width: 52px; height: 52px; }
+  .lr-fx__bild img { max-width: 140px; }
 }
