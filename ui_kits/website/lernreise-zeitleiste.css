@@ -593,7 +593,7 @@
 
 /* ── Symbol statt Roboter (Ergänzung 2026-10-13) ─────────────────────────
    Jede Station zeigt das Symbol ihres Bausteins (assets/formate/*.webp)
-   auf einer ruhigen Fläche, dazu die Woche gross im Hintergrund. Die
+   auf einer ruhigen Fläche. Die
    Bewegung beim Scrollen bleibt (Regeln für .lz-bild img oben). */
 .lz-bild--symbol {
   align-items: center;
@@ -601,16 +601,6 @@
   border: 1px solid var(--border-strong);
 }
 .lz-bild--symbol::after { display: none; }
-.lz-bild__woche {
-  position: absolute;
-  top: var(--space-4);
-  left: var(--space-5);
-  z-index: 0;
-  color: var(--terra-600);
-  font: 600 13px/1 var(--font-sans);
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
 .lz-bild--symbol img,
 .lz--an .lz-bild--symbol img {
   width: 200px;

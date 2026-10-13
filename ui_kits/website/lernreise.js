@@ -242,7 +242,7 @@
         ? '<div class="lz-mess"><p class="lz-mess__kopf"><span class="lz-fahne" aria-hidden="true"></span>Messpunkt · ' + esc(st.mess.art) + '</p><p>' + esc(st.mess.text) + '</p></div>'
         : '';
       h += '<article class="lz-tafel' + (st.mess ? ' lz-tafel--mess' : '') + '" data-station>' +
-        '<figure class="lz-bild lz-bild--symbol"><span class="lz-bild__woche" aria-hidden="true">' + esc(wochenLabel(i, L.length, total, st.rolle)) + '</span>' +
+        '<figure class="lz-bild lz-bild--symbol">' +
           '<img src="' + basis + 'assets/formate/' + SYMBOL[st.bild] + '.webp?v=20261013" alt="" width="320" height="320" loading="lazy" decoding="async">' +
         '</figure>' +
         '<div class="lz-text">' +
