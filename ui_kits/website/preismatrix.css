@@ -210,11 +210,17 @@
   font-family: var(--font-mono, "IBM Plex Mono", monospace); font-size: 11.5px; letter-spacing: 0;
 }
 .pm-branchen__nervt {
+  position: relative;
+  overflow: hidden;
   margin-top: 18px;
-  padding: 20px 24px 22px;
-  background: var(--terra-500);
+  padding: 22px 24px 24px;
+  /* Verlauf statt Flachfarbe: oben links heller, unten rechts dunkles Terracotta */
+  background:
+    radial-gradient(90% 140% at 0% 0%, rgba(255, 214, 186, 0.22) 0%, rgba(255, 214, 186, 0) 55%),
+    linear-gradient(135deg, var(--terra-500) 0%, #B5532F 55%, #8A3A1E 100%);
   color: var(--cream-50);
   border-radius: var(--radius-lg);
+  box-shadow: 0 14px 34px rgba(92, 36, 18, 0.18);
 }
 .pm-branchen__nervt[hidden] { display: none; }
 .pm-branchen__nervt b {
@@ -235,10 +241,14 @@
   background: var(--peach-200);
   vertical-align: middle;
 }
-.pm-branchen__nervt ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px 22px; }
+.pm-branchen__nervt ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+/* Jede Aussage ein eigenes, leicht abgesetztes Feld */
 .pm-branchen__nervt li {
   position: relative;
-  padding-left: 26px;
+  padding: 14px 16px 15px 50px;
+  background: rgba(255, 250, 244, 0.10);
+  border: 1px solid rgba(255, 236, 222, 0.22);
+  border-radius: var(--radius-md, 12px);
   font-size: 16.5px;
   line-height: 1.4;
   font-weight: var(--weight-semibold);
@@ -246,10 +256,15 @@
 }
 .pm-branchen__nervt li::before {
   content: "✕";
-  position: absolute; left: 0; top: 1px;
+  position: absolute; left: 14px; top: 14px;
+  display: grid; place-items: center;
+  width: 24px; height: 24px;
+  border-radius: 50%;
+  background: rgba(255, 236, 222, 0.18);
   font-family: var(--font-mono, "IBM Plex Mono", monospace);
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 700;
+  line-height: 1;
   color: var(--peach-200);
 }
 .pm-branchen__liste { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
@@ -260,6 +275,8 @@
   .pm-branchen__nervt { padding: 16px 18px 18px; }
   .pm-branchen__nervt b { font-size: 21px; }
   .pm-branchen__nervt ul { grid-template-columns: 1fr; gap: 8px; }
+  .pm-branchen__nervt li { padding: 12px 14px 13px 46px; }
+  .pm-branchen__nervt li::before { left: 12px; top: 12px; }
   .pm-branchen__nervt li { font-size: 15.5px; }
   .pm-branchen__chips { justify-content: center; gap: 8px; }
   .pm-branchen__chips button { width: calc(25% - 6px); font-size: 13px; padding: 8px 3px 10px; hyphens: auto; }
