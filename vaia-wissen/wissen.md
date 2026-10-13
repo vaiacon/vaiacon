@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 11.10.2026 · Eintrag d94b81b KI-Kompetenz: Themenkatalog als modulares Trainingssystem
+> Stand: 11.10.2026 · Eintrag fce01cb Startseite: Gruenderfotos und Satz unter Schritt 3 entfernt
 
 ## Wie du antwortest
 
@@ -118,7 +118,6 @@ Sie erhalten von uns einen schriftlichen Vorschlag, was wir umsetzen würden. We
 03
 Umsetzung in Ihrem Tempo
 Nach Ihrer Freigabe setzen wir die vereinbarte Lösung um. Wir fangen klein an, mit einer Massnahme, die trägt. Alles Weitere entscheiden Sie, wenn Sie den Nutzen gesehen haben. Auf Wunsch begleiten wir Sie danach weiter .
-Sie sprechen mit Philip oder André.
 HÄUFIGE FRAGEN
 Kurz beantwortet.
 Alle Fragen und Antworten →
@@ -443,6 +442,7 @@ Dranbleiben macht den Unterschied.
 Kurze Übungen helfen, das Gelernte im Alltag anzuwenden. Wer täglich an der eigenen Aufgabe übt, dem wird KI im Arbeitsalltag vertrauter.
 Einmal schulen oder täglich dranbleiben
 Prinzipskizze, keine Messung
+Was im Alltag ankommt
 Mo
 Ein Tipp
 Di
@@ -459,6 +459,7 @@ Start
 Danach
 täglich weiter
 Zeit →
+Start Zeit →
 Mo Ein Tipp
 Di Übung am eigenen Fall
 Mi Frage vom Roboter

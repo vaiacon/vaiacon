@@ -102,7 +102,7 @@ function Faq() {
 
 /* 09 · Kontakt (Terracotta-Finale) */
 const SOCIAL_LINKS = [
-  { label: 'Facebook', href: 'https://www.facebook.com/vaiacon', icon: 'facebook' },
+  { label: 'Facebook', href: 'https://www.facebook.com/profile.php?id=61594980906435', icon: 'facebook' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/company/vaiacon', icon: 'linkedin' },
   { label: 'Instagram', href: 'https://www.instagram.com/vaiacon', icon: 'instagram' },
 ];
