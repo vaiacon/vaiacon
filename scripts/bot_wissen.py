@@ -39,7 +39,7 @@ BRANCHEN = json.loads((WURZEL / "daten" / "branchen.json").read_text(encoding="u
 SEITEN = [
     ("index.html", "Startseite"),
     ("ueber-uns.html", "Über uns"),
-    ("learning.html", "KI-Kompetenz (inkl. KI-Standortbestimmung)"),
+    ("learning.html", "KI-Kompetenz"),
     ("visibility.html", "Sichtbarkeit — gefunden werden"),
     ("bot.html", "Automationen"),
     ("service.html", "Begleitung"),
@@ -227,8 +227,8 @@ def bauen() -> tuple[str, list[str]]:
     t.append("  nicht steht, weisst du nicht. Dann sag das und verweise auf hallo@vaiacon.ch;")
     t.append("  erfinde keine Fristen oder Zusagen.")
     t.append("- Es gibt keine Academy und keine Gratis-Kurse. Kostenlos sind nur das")
-    t.append("  Erstgespräch, die KI-Standortbestimmung (Selbsttest für Führungskräfte),")
-    t.append("  die Erstanalyse zur Zeitersparnis und der kostenlose Website-Check.")
+    t.append("  Erstgespräch, die Erstanalyse zur Zeitersparnis und der kostenlose")
+    t.append("  Website-Check.")
     t.append("- Nimm keine Personendaten entgegen. Wer ein persönliches Anliegen hat,")
     t.append("  soll schreiben oder einen Termin buchen.")
     t.append("")
@@ -245,9 +245,6 @@ def bauen() -> tuple[str, list[str]]:
     t.append("## Preise")
     t.append("")
     t.append(OHNE_PREISE_SATZ)
-    t.append("")
-    t.append("Hinweis: Die KI-Standortanalyse im Betrieb (Begleitung) ist nicht die")
-    t.append("kostenlose KI-Standortbestimmung (Selbsttest für Führungskräfte).")
     t.append("")
 
     t.extend(referenz())

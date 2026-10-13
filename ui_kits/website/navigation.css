@@ -16,7 +16,6 @@ html.vn-sperre, html.vn-sperre body { overflow: hidden; }
   pointer-events: none;
 }
 .vn > * { pointer-events: auto; }
-.vn--weg { transform: translateY(-140%); }
 
 .vn-leiste {
   position: relative;

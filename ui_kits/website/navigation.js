@@ -47,10 +47,8 @@
       text: 'Formate, die über Wochen ineinandergreifen.',
       spalten: [
         { titel: 'Lernen im Betrieb', breit: true, punkte: [
-          ['learning#lernreise', 'Die Lernreise', 'Stationen, die über Wochen ineinandergreifen.'],
           ['learning#formate', 'Die Formate', 'Sieben Formate, die sich kombinieren lassen.'],
-          ['learning#themen-top', 'Die Themen', 'Zehn Themen, die oft gefragt sind.'],
-          ['learning#standortbestimmung', 'Standortbestimmung', 'Zwölf kurze Fragen: Wo steht Ihr Betrieb mit KI?']
+          ['learning#themen-top', 'Die Themen', 'Zehn Themen, die oft gefragt sind.']
         ] }
       ] },
     { id: 'visibility', seite: 'visibility', titel: 'Sichtbarkeit',
@@ -60,8 +58,7 @@
           ['visibility#check', 'Website-Check', 'Wie gut ist Ihre Website für Google und KI-Assistenten vorbereitet?'],
           ['visibility#einfach-erklaert', 'Einfach erklärt', 'Sichtbarkeit beginnt damit, dass Ihr Angebot verstanden wird.'],
           ['visibility#seo', 'SEO', 'Damit Google Ihr Angebot einordnen kann.'],
-          ['visibility#geo', 'GEO', 'Damit KI-Assistenten Ihre Firma verstehen.'],
-          ['visibility#ablauf', 'Ablauf', 'So wird aus Sichtbarkeit ein System.']
+          ['visibility#geo', 'GEO', 'Damit KI-Assistenten Ihre Firma verstehen.']
         ] }
       ] }
   ];
@@ -79,8 +76,8 @@
       ['bot', 'Automationen'], ['visibility', 'Sichtbarkeit'], ['learning', 'KI-Kompetenz'],
       ['service', 'Betreuung und Begleitung'], ['erstanalyse/', 'Kostenlose Erstanalyse']] },
     { titel: 'Lernen', links: [
-      ['learning#lernreise', 'Die Lernreise'], ['learning#formate', 'Die Formate'],
-      ['learning#themen-top', 'Die Themen'], ['learning#standortbestimmung', 'Standortbestimmung']] },
+      ['learning#formate', 'Die Formate'],
+      ['learning#themen-top', 'Die Themen']] },
     { titel: 'Firma', links: [
       ['ueber-uns', 'Über uns'], ['referenzen', 'Aus der Praxis'], ['faq', 'FAQ'],
       ['ki-kmu-news/', 'KI-News für KMU'], ['kontakt', 'Kontakt']] }
@@ -90,8 +87,7 @@
   /* «Auf dieser Seite»: [Anker, Beschriftung] */
   var SEITEN = {
     bot: [['preise', 'Branchen'], ['ihr-fall', 'Ihr Fall']],
-    learning: [['lernreise', 'Lernreise'], ['formate', 'Formate'], ['themen-top', 'Themen'],
-      ['standortbestimmung', 'Standortbestimmung']],
+    learning: [['formate', 'Formate'], ['themen-top', 'Themen']],
     faq: [['faq-allgemein', 'Allgemein'], ['faq-learning', 'KI-Kompetenz'], ['faq-bot', 'Automationen'],
       ['faq-visibility', 'Sichtbarkeit'], ['faq-service', 'Betreuung']]
   };
@@ -207,7 +203,6 @@
     offenId = id;
     fest = id ? !!istFest : false;
     kopf.classList.toggle('hat-offen', !!id);
-    if (id) zeigen();
   }
   function schliessen(fokus) {
     var vorher = offenId;
@@ -306,27 +301,20 @@
   if (schmal.addEventListener) schmal.addEventListener('change', breiteWechsel);
   else if (schmal.addListener) schmal.addListener(breiteWechsel);
 
-  /* ---------- Pille und Wegsgleiten ---------- */
-  var letzteY = Math.max(0, window.pageYOffset || 0), pille = false, weg = false, wartet = false;
-  function zeigen() { weg = false; kopf.classList.remove('vn--weg'); }
+  /* ---------- Pille (bleibt beim Scrollen immer sichtbar, Philips Wunsch 13.10.2026) ---------- */
+  var letzteY = Math.max(0, window.pageYOffset || 0), pille = false, wartet = false;
   function beiScroll() {
     wartet = false;
     var y = Math.max(0, window.pageYOffset || 0);
     if (!pille && y > 40) pille = true;
     else if (pille && y < 20) pille = false;
     kopf.classList.toggle('vn--pille', pille);
-    var gehalten = vOffen || offenId || kopf.contains(document.activeElement) && kopf.matches(':focus-within');
-    if (gehalten || y <= 200) weg = false;
-    else if (y > letzteY) weg = true;
-    else if (y < letzteY) weg = false;
-    kopf.classList.toggle('vn--weg', weg);
     if (offenId && y > letzteY + 4 && !fest) setze(null);
     letzteY = y;
   }
   window.addEventListener('scroll', function () {
     if (!wartet) { wartet = true; requestAnimationFrame(beiScroll); }
   }, { passive: true });
-  kopf.addEventListener('focusin', zeigen);
   beiScroll();
 
   /* ---------- Fusszeile ---------- */
@@ -376,6 +364,9 @@
     .map(function (z) { return [document.getElementById(z[0]), z[1], z[0]]; })
     .filter(function (z) { return z[0]; });
   if (ziele.length < 2) ziele = [];
+  /* Keine Seitennavigation (Randliste links, Knopfreihe unter dem Titel), die Navigation oben reicht (Philips Wunsch 13.10.2026) */
+  var RANDNAVI = false;
+  if (!RANDNAVI) ziele = [];
 
   var haupt = MENUE.map(function (g) { return [g.seite, g.titel, g.seite]; })
     .concat(MEHR.map(function (m) { return [m[0], m[1], m[3]]; }));
@@ -425,7 +416,7 @@
   var SPEICHER = 'vn-seite-offen';
   var gemerkt = function () { try { return JSON.parse(sessionStorage.getItem(SPEICHER)) || {}; } catch (e) { return {}; } };
   var merken = function (id, offen) { try { var m = gemerkt(); m[id] = offen; sessionStorage.setItem(SPEICHER, JSON.stringify(m)); } catch (e) { /* ohne Speicher */ } };
-  if (seite !== '404') {
+  if (RANDNAVI && seite !== '404') {
     seitlich = el('nav', 'vn-seite');
     seitlich.setAttribute('aria-label', 'Seitenübersicht');
     var sh = '<ul class="vn-seite__haupt">', nr = 0, vorher = gemerkt();

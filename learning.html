@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="KI-Schulungen für Schweizer KMU als Lernreise über mehrere Wochen. Training, Coaching, Begleitung vor Ort, Online-Kurse und Lernvideos nach Ihrem Bedarf. Mit kostenloser KI-Standortbestimmung.">
+<meta name="description" content="KI-Schulungen für Schweizer KMU als Lernreise über mehrere Wochen. Training, Coaching, Begleitung vor Ort, Online-Kurse und Lernvideos nach Ihrem Bedarf.">
 <link rel="canonical" href="https://vaiacon.ch/learning">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="vaiacon">
 <meta property="og:locale" content="de_CH">
 <meta property="og:title" content="KI-Kompetenz als Lernreise für Schweizer KMU · vaiacon">
-<meta property="og:description" content="KI-Schulungen für Schweizer KMU als Lernreise über mehrere Wochen. Training, Coaching, Begleitung vor Ort, Online-Kurse und Lernvideos nach Ihrem Bedarf. Mit kostenloser KI-Standortbestimmung.">
+<meta property="og:description" content="KI-Schulungen für Schweizer KMU als Lernreise über mehrere Wochen. Training, Coaching, Begleitung vor Ort, Online-Kurse und Lernvideos nach Ihrem Bedarf.">
 <meta property="og:url" content="https://vaiacon.ch/learning">
 <meta property="og:image" content="https://vaiacon.ch/assets/vorschau-schulung.jpg">
 <meta property="og:image:width" content="1200">
@@ -21,8 +21,6 @@
 <link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20261005-vorschlag">
 <link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261011-preislogik">
 <link rel="stylesheet" href="ui_kits/website/lernreise.css?v=20261013-themen10b">
-<link rel="stylesheet" href="ui_kits/website/lernreise-zeitleiste.css?v=20261013-symbole2">
-<link rel="stylesheet" href="ui_kits/website/standort.css?v=20261011-audit">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261013-handy">
 <style>
 /* Preislogik 2026-10: Umfangsätze dürfen umbrechen, Nebenpreise stehen leiser unter dem Hauptpreis. */
@@ -37,6 +35,7 @@
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="ui_kits/website/abschluss.css">
+  <link rel="stylesheet" href="ui_kits/website/navigation.css?v=20261013-immer">
 <!-- Strukturdaten: erzeugt von scripts/strukturdaten.py, nicht von Hand aendern -->
 <script type="application/ld+json">
 {
@@ -101,7 +100,7 @@
           "name": "KI-Kompetenz",
           "serviceType": "KI-Schulung und Weiterbildung",
           "url": "https://vaiacon.ch/learning",
-          "description": "Trainings, Workshops, Coaching für Führungskräfte, Online-Kurse, Lernvideos und tägliche kleine Lerneinheiten, zugeschnitten auf Ihren Betrieb. Dazu eine kostenlose KI-Standortbestimmung für Führungskräfte."
+          "description": "Trainings, Workshops, Coaching für Führungskräfte, Online-Kurse, Lernvideos und tägliche kleine Lerneinheiten, zugeschnitten auf Ihren Betrieb."
         }
       },
       {
@@ -134,7 +133,7 @@
   "@type": "Service",
   "name": "KI-Kompetenz",
   "serviceType": "KI-Schulung und Weiterbildung",
-  "description": "Trainings, Workshops, Coaching für Führungskräfte, Online-Kurse, Lernvideos und tägliche kleine Lerneinheiten, zugeschnitten auf Ihren Betrieb. Dazu eine kostenlose KI-Standortbestimmung für Führungskräfte.",
+  "description": "Trainings, Workshops, Coaching für Führungskräfte, Online-Kurse, Lernvideos und tägliche kleine Lerneinheiten, zugeschnitten auf Ihren Betrieb.",
   "url": "https://vaiacon.ch/learning",
   "provider": {
     "@id": "https://vaiacon.ch/#organisation"
@@ -169,6 +168,14 @@
           "@type": "Service",
           "name": "Training oder Workshop im Betrieb, ganzer Tag",
           "description": "Ein ganzer Tag für Ihr Team: Grundlagen, Übungen an Ihren Fällen und konkrete nächste Schritte. Nur bei zwei Gruppen oder Vertiefung. Der Halbtag ist der Standard."
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Ganztages-Training mit Ihrem Team, Einstiegsangebot",
+          "description": "Ein ganzer Tag für Ihr Team: Grundlagen, Übungen an Ihren Aufgaben und konkrete nächste Schritte. Aus unseren erprobten Bausteinen zusammengestellt. Ganzer Tag, eine Gruppe bis 15 Personen, Programm aus unseren Bausteinen, Unterlagen inklusive."
         }
       },
       {
@@ -256,7 +263,6 @@
 }
 </script>
 <!-- Strukturdaten Ende -->
-  <link rel="stylesheet" href="ui_kits/website/navigation.css?v=20261013-randliste">
 </head>
 <body>
 <a class="sv-skip" href="#inhalt">Zum Inhalt springen</a>
@@ -310,7 +316,7 @@
             Ein einzelner Kurstag reicht selten, damit KI im Alltag ankommt. Eine Lernreise verbindet über mehrere Wochen Training, tägliche Einheiten, Begleitung am Arbeitsplatz und Coaching.
           </p>
           <div class="sv-actions">
-            <a class="sv-button sv-button--light" href="#standortbestimmung">KI-Standort bestimmen →</a>
+            <a class="sv-button sv-button--light" href="kontakt#formular">Erstgespräch vereinbaren →</a>
           </div>
         </div>
         <div class="sv-hero__visual" aria-label="KI-Kompetenz Übersicht">
@@ -339,74 +345,6 @@
             <dt>Region</dt>
             <dd>Gesamte Deutschschweiz</dd>
           </dl>
-        </div>
-      </div>
-    </section>
-
-    <section id="lernreise" class="sv-section">
-      <div class="sv-wrap">
-        <div class="sv-center">
-          <p class="sv-kicker">DIE LERNREISE</p>
-          <h2 class="sv-title">Acht Wochen, vom Ausgangspunkt bis zur Wirkung.</h2>
-          <p class="sv-lead">
-            Ein Beispiel, wie die Bausteine zusammenspielen. Gemessen wird am Anfang, unterwegs und am Ende.
-          </p>
-        </div>
-
-        <div id="lernreise-app">
-
-
-          <div class="lz" id="lernreise-zeitleiste">
-            <div class="lz-buehne">
-              <nav class="lz-leiste" aria-label="Stationen"></nav>
-              <div class="lz-karte">
-                <div class="lz-tafeln" id="lernreise-tafeln">
-            <article class="lz-tafel lz-tafel--mess" data-station><figure class="lz-bild lz-bild--symbol"><img src="assets/formate/standort.webp?v=20261013" alt="" width="320" height="320" loading="lazy" decoding="async"></figure><div class="lz-text"><p class="lz-zeit"><span class="lz-zeit__nr">1</span>Woche 0 · Standort</p><h3>Standortbestimmung</h3><p>Drei Angaben zu Ihrem Betrieb und zwölf kurze Fragen. So wird sichtbar, was schon funktioniert und wo es noch Unterstützung braucht.</p><div class="lz-mess"><p class="lz-mess__kopf"><span class="lz-fahne" aria-hidden="true"></span>Messpunkt · Wo stehen wir?</p><p>Fragen Sie im Team: Wer nutzt KI, wofür und wie sicher? Messen Sie ausserdem, wie lange eine häufige Aufgabe heute dauert.</p></div><p class="lz-formate"><a class="lr-chip" href="#standortbestimmung">Standortbestimmung</a></p></div></article>
-            <article class="lz-tafel lz-tafel--mess" data-station><figure class="lz-bild lz-bild--symbol"><img src="assets/formate/change.webp?v=20261013" alt="" width="320" height="320" loading="lazy" decoding="async"></figure><div class="lz-text"><p class="lz-zeit"><span class="lz-zeit__nr">2</span>Woche 1 · Auftakt</p><h3>Gespräch mit der Teamleitung</h3><p>Die Teamleitung klärt Ziel, Rollen und Spielregeln, bevor das Team startet. Wir begleiten das Gespräch mit unserer Erfahrung.</p><div class="lz-mess"><p class="lz-mess__kopf"><span class="lz-fahne" aria-hidden="true"></span>Messpunkt · Ziele festlegen</p><p>Wir legen zwei bis drei messbare Ziele fest. Zum Beispiel: alle arbeiten mit denselben geprüften Vorlagen. Zu jedem Ziel halten wir fest, woran wir es messen, welcher Wert gelten soll und bis wann.</p></div><p class="lz-formate"><a class="lr-chip" href="#format-change">Veränderung begleiten</a></p></div></article>
-            <article class="lz-tafel" data-station><figure class="lz-bild lz-bild--symbol"><img src="assets/formate/training.webp?v=20261013" alt="" width="320" height="320" loading="lazy" decoding="async"></figure><div class="lz-text"><p class="lz-zeit"><span class="lz-zeit__nr">3</span>Woche 2 · Training</p><h3>Training im Team</h3><p>Ein halber Tag, in dem alle auf denselben Stand gebracht werden. Was Einzelne bereits gefunden haben, wird zum gemeinsamen Wissen.</p><p class="lz-formate"><a class="lr-chip" href="#format-training">Training, Halbtag</a></p></div></article>
-            <article class="lz-tafel" data-station><figure class="lz-bild lz-bild--symbol"><img src="assets/formate/video.webp?v=20261013" alt="" width="320" height="320" loading="lazy" decoding="async"></figure><div class="lz-text"><p class="lz-zeit"><span class="lz-zeit__nr">4</span>Woche 3 · Video</p><h3>Lernvideo aus Ihrem Alltag</h3><p>Was Ihre Mitarbeitenden bereits beherrschen, wird zu einem kurzen Video. Neue Mitarbeitende können das Video jederzeit ansehen und den Ablauf lernen.</p><p class="lz-formate"><a class="lr-chip" href="#format-video">Lernvideo</a></p></div></article>
-            <article class="lz-tafel lz-tafel--mess" data-station><figure class="lz-bild lz-bild--symbol"><img src="assets/formate/mikro.webp?v=20261013" alt="" width="320" height="320" loading="lazy" decoding="async"></figure><div class="lz-text"><p class="lz-zeit"><span class="lz-zeit__nr">5</span>Woche 5–8 · Täglich</p><h3>Tägliche kleine Lerneinheiten</h3><p>An 20 Arbeitstagen jeweils drei bis fünf Minuten: ein Tipp, eine Übung am eigenen Fall, eine kurze Kontrollfrage. Vier Wochen lang, am Arbeitsplatz oder auf dem Smartphone.</p><div class="lz-mess"><p class="lz-mess__kopf"><span class="lz-fahne" aria-hidden="true"></span>Messpunkt · Zwischenstand</p><p>Die Antworten auf die tägliche Frage zeigen laufend, was sitzt. Nach zwei Wochen sehen Sie, wo das Team steht. Wir passen die Übungen dort an, wo noch Unterstützung nötig ist.</p></div><p class="lz-formate"><a class="lr-chip" href="#format-mikro">Kleine Lerneinheiten</a></p></div></article>
-            <article class="lz-tafel" data-station><figure class="lz-bild lz-bild--symbol"><img src="assets/formate/vor-ort.webp?v=20261013" alt="" width="320" height="320" loading="lazy" decoding="async"></figure><div class="lz-text"><p class="lz-zeit"><span class="lz-zeit__nr">6</span>Woche 6 · Vor Ort</p><h3>Begleitung am Arbeitsplatz</h3><p>Ein Tag, an dem wir Sie im Betrieb besuchen. Wir helfen dort, wo es im Alltag hakt, und beantworten die Fragen, die im Training nicht aufkamen.</p><p class="lz-formate"><a class="lr-chip" href="#format-vor-ort">Begleitung vor Ort</a></p></div></article>
-            <article class="lz-tafel" data-station><figure class="lz-bild lz-bild--symbol"><img src="assets/formate/coaching.webp?v=20261013" alt="" width="320" height="320" loading="lazy" decoding="async"></figure><div class="lz-text"><p class="lz-zeit"><span class="lz-zeit__nr">7</span>Woche 7 · Coaching</p><h3>Coaching der Führungskräfte</h3><p>In Einzelgesprächen geht es darum, was Führung jetzt anders macht: Wer entscheidet was, wie sprechen Sie über KI im Team, wo setzen Sie Grenzen.</p><p class="lz-formate"><a class="lr-chip" href="#format-coaching">Coaching für Führungskräfte</a></p></div></article>
-            <article class="lz-tafel lz-tafel--mess" data-station><figure class="lz-bild lz-bild--symbol"><img src="assets/formate/standort.webp?v=20261013" alt="" width="320" height="320" loading="lazy" decoding="async"></figure><div class="lz-text"><p class="lz-zeit"><span class="lz-zeit__nr">8</span>nach Woche 8 · Wirkung</p><h3>Wirkung messen, Ziele prüfen</h3><p>Nach den vier Wochen Lerneinheiten stellen wir dieselben Fragen wie zu Beginn, an die Führung und an das Team. Wir legen Vorher und Nachher nebeneinander.</p><div class="lz-mess"><p class="lz-mess__kopf"><span class="lz-fahne" aria-hidden="true"></span>Messpunkt · Zielcheck</p><p>Jedes Ziel aus dem Auftakt bekommt ein Ergebnis: erreicht, teilweise oder offen. Was offen ist, wird zur nächsten Etappe.</p></div><p class="lz-formate"><a class="lr-chip" href="#standortbestimmung">Standortbestimmung</a></p></div></article>
-            <article class="lz-tafel lz-tafel--ziel" id="wirkung" data-station data-punkt-zeit="Nach Woche " data-punkt-titel="Wirkung und Ziele">
-              <figure class="lz-bild lz-bild--symbol"><img src="assets/formate/ziel.webp?v=20261013" alt="" width="320" height="320" loading="lazy" decoding="async"></figure>
-              <div class="lz-text">
-                <p class="lz-zeit"><span class="lz-zeit__nr"><span class="lz-fahne" aria-hidden="true"></span></span><span>Ziel · nach Woche <span data-lz-woche>8</span></span></p>
-                <h3>Am Ende wissen Sie, ob es gewirkt hat.</h3>
-                <p>An vier Stellen der Reise wird gemessen, immer gleich: vorher, unterwegs und nach dem Ende der Übungsphase. Ausgewertet wird nur für die Gruppe, nie für einzelne Personen.</p>
-                <ul class="lz-fragen"><li><span>1 · Wissen</span><strong>Sitzt es?</strong></li><li><span>2 · Anwenden</span><strong>Wird es genutzt?</strong></li><li><span>3 · Zeit</span><strong>Spart es etwas?</strong></li><li><span>4 · Ziele</span><strong>Ist erreicht, was wir wollten?</strong></li></ul>
-                <button class="lz-link" type="button" data-lz-dialog="lernreise-zielcheck">So sieht der Zielcheck aus →</button>
-                <dialog class="lz-dialog" id="lernreise-zielcheck" aria-label="Zielcheck, Muster">
-                  <div class="lz-dialog__kopf"><p>So sieht der Zielcheck aus · Muster mit erfundenen Werten</p><button class="lz-knopf" type="button" data-lz-schliessen>Schliessen</button></div>
-                  <div class="lz-tabelle">
-                    <table>
-                      <thead><tr><th>Ziel aus dem Auftakt</th><th>Vorher</th><th>Nachher</th><th>Ergebnis</th></tr></thead>
-                      <tbody>
-                        <tr><td>Alle erledigen mindestens eine wiederkehrende Aufgabe regelmässig mit KI</td><td data-k="Vorher">4 von 15</td><td data-k="Nachher">13 von 15</td><td data-k="Ergebnis"><span class="lz-marke lz-marke--teilweise">teilweise</span></td></tr>
-                        <tr><td>Eine Offerte ist in 5 statt 45 Minuten fertig, ohne zusätzliche Korrekturen</td><td data-k="Vorher">45 Minuten</td><td data-k="Nachher">5 Minuten, Korrekturen wie bisher</td><td data-k="Ergebnis"><span class="lz-marke lz-marke--erreicht">erreicht</span></td></tr>
-                        <tr><td>Bis Woche 8 entstehen mindestens 4 von 5 Offerten aus einer geprüften Vorlage</td><td data-k="Vorher">keine Vorlage</td><td data-k="Nachher">6 Vorlagen, in 4 von 5 Offerten genutzt</td><td data-k="Ergebnis"><span class="lz-marke lz-marke--erreicht">erreicht</span></td></tr>
-                        <tr><td>Alle wissen, welche Werkzeuge Kundendaten bekommen dürfen</td><td data-k="Vorher">keine Regel</td><td data-k="Nachher">Regel steht, 11 von 15 kennen sie</td><td data-k="Ergebnis"><span class="lz-marke lz-marke--offen">offen, nächste Etappe</span></td></tr>
-                      </tbody>
-                    </table>
-                  </div>
-                  <p class="lz-dialog__fuss">Zielwert und Zeitpunkt legen wir im Auftakt fest. Den Zielcheck erhalten Sie am Ende als eine Seite, mit Vorher und Nachher und einem Vorschlag für die nächsten Wochen.</p>
-                </dialog>
-              </div>
-            </article>
-                </div>
-                <div class="lz-karte__fuss">
-                  <p class="lz-stand" aria-live="polite">Station 1 von 9</p>
-                  <div class="lz-knoepfe"><button class="lz-knopf" type="button" data-lz-zurueck>‹ Zurück</button><button class="lz-knopf" type="button" data-lz-weiter>Weiter ›</button></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="lz-schluss">
-            <p>Eine Beispielreise, kein fester Plan.</p>
-            <a class="sv-button sv-button--cta" href="kontakt#formular">Erstgespräch vereinbaren →</a>
-          </div>
         </div>
       </div>
     </section>
@@ -479,19 +417,6 @@
       </div>
     </section>
 
-    <section id="standortbestimmung" class="sv-section" aria-labelledby="standort-titel">
-      <div class="sv-wrap">
-        <div class="sv-center">
-          <p class="sv-kicker">Standortbestimmung</p>
-          <h2 id="standort-titel">Wo steht Ihr Betrieb mit KI?</h2>
-          <p class="sv-lead">Drei Angaben zu Ihrem Betrieb und zwölf kurze Fragen. Danach sehen Sie Ihre Stufe und eine Einschätzung, was sich als Nächstes lohnt.</p>
-        </div>
-        <div id="standort-app">
-          <p>Die Standortbestimmung braucht JavaScript. Wenn Sie wissen möchten, wo Ihr Betrieb mit KI steht, schreiben Sie uns kurz über die <a href="kontakt">Kontaktseite</a>. Wir melden uns persönlich.</p>
-        </div>
-      </div>
-    </section>
-
     <section id="kontakt" class="sv-final">
       <div class="sv-wrap sv-center">
         <p class="sv-kicker sv-kicker--on-terra">NÄCHSTER SCHRITT</p>
@@ -532,10 +457,7 @@
 </div>
 <script src="ui_kits/website/api-basis.js?v=20261004-umbau"></script>
 <script src="ui_kits/website/visibility.js?v=20261007-logo-svg"></script>
-<script src="ui_kits/website/lernreise.js?v=20261013-symbole2" defer></script>
-<script src="ui_kits/website/lernreise-zeitleiste.js?v=20261011-audit" defer></script>
-<script src="ui_kits/website/standort.js?v=20261011-audit" defer></script>
 <script src="ui_kits/website/chat.js?v=20261013-handy"></script>
-<script src="ui_kits/website/navigation.js?v=20261013-ohnefilm" defer></script>
+<script src="ui_kits/website/navigation.js?v=20261013-ohnerand" defer></script>
 </body>
 </html>
