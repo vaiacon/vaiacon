@@ -47,16 +47,6 @@
       }
       window.sessionStorage.removeItem('vaiacon-lernreise');
     }
-    /* Vom Themenkatalog (learning.html#themen) kommt die Auswahl mit. */
-    var themen = window.sessionStorage.getItem('vaiacon-themen');
-    if (themen && feld && !feld.value) {
-      feld.value = 'Wir interessieren uns für ein Training aus Ihrem Themenkatalog. Unsere Auswahl:\n\n' + themen + '\n\nGruppengrösse und Wünsche: ';
-      if (herkunft) {
-        herkunft.textContent = 'Ihre Auswahl aus dem Themenkatalog ist bereits eingetragen. Ergänzen Sie, was Ihnen wichtig ist.';
-        herkunft.hidden = false;
-      }
-      window.sessionStorage.removeItem('vaiacon-themen');
-    }
   } catch (e) { /* ohne Speicher bleibt das Formular leer */ }
   Array.prototype.forEach.call(formulare, einrichten);
 

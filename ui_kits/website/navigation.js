@@ -50,8 +50,7 @@
         { titel: 'Lernen im Betrieb', breit: true, punkte: [
           ['learning#lernreise', 'Die Lernreise', 'Stationen, die über Wochen ineinandergreifen.'],
           ['learning#formate', 'Die Formate', 'Sieben Formate, die sich kombinieren lassen.'],
-          ['learning#themen', 'Themenkatalog', 'Ihr Training aus Bausteinen.'],
-          ['learning#kleine-schritte', 'Kleine Schritte', 'Kurze Übungen, damit das Gelernte im Alltag bleibt.'],
+          ['learning#themen-top', 'Die Themen', 'Zehn Themen, die oft gefragt sind.'],
           ['learning#standortbestimmung', 'Standortbestimmung', 'Zwölf kurze Fragen: Wo steht Ihr Betrieb mit KI?']
         ] }
       ] },
@@ -82,7 +81,7 @@
       ['service', 'Betreuung und Begleitung'], ['erstanalyse/', 'Kostenlose Erstanalyse']] },
     { titel: 'Lernen', links: [
       ['learning#lernreise', 'Die Lernreise'], ['learning#formate', 'Die Formate'],
-      ['learning#themen', 'Themenkatalog'], ['learning#standortbestimmung', 'Standortbestimmung']] },
+      ['learning#themen-top', 'Die Themen'], ['learning#standortbestimmung', 'Standortbestimmung']] },
     { titel: 'Firma', links: [
       ['ueber-uns', 'Über uns'], ['referenzen', 'Aus der Praxis'], ['faq', 'FAQ'],
       ['ki-kmu-news/', 'KI-News für KMU'], ['kontakt', 'Kontakt']] }
@@ -92,8 +91,8 @@
   /* «Auf dieser Seite»: [Anker, Beschriftung] */
   var SEITEN = {
     bot: [['preise', 'Branchen'], ['beispiele', 'Im Alltag'], ['ihr-fall', 'Ihr Fall']],
-    learning: [['lernreise', 'Lernreise'], ['formate', 'Formate'], ['themen', 'Themenkatalog'],
-      ['kleine-schritte', 'Kleine Schritte'], ['standortbestimmung', 'Standortbestimmung']],
+    learning: [['lernreise', 'Lernreise'], ['formate', 'Formate'], ['themen-top', 'Themen'],
+      ['standortbestimmung', 'Standortbestimmung']],
     faq: [['faq-allgemein', 'Allgemein'], ['faq-learning', 'KI-Kompetenz'], ['faq-bot', 'Automationen'],
       ['faq-visibility', 'Sichtbarkeit'], ['faq-service', 'Betreuung']]
   };
