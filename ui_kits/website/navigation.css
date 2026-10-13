@@ -266,3 +266,35 @@ html.vn-sperre, html.vn-sperre body { overflow: hidden; }
   .vn, .vn-leiste, .vn-flaeche, .vn-voll, .vn-seite, .vn-seite a, .vn-seite__unter li, .vn-seite a::before, .vn-seite__huelle, .vn-seite__auf .vn-pfeil, .vn-pfeil, .vn-punkt::after, .vn-menue__balken i, .vn-logo img { transition: none !important; }
   html.vn-an { scroll-behavior: auto; }
 }
+
+/* Randliste schöner (Ergänzung 2026-10-13) */
+/* Weiter ohne Fläche: ruhigere Typografie, feine Schiene, aktiver Abschnitt als Terra-Strich. */
+.vn-seite { width: 150px; -webkit-font-smoothing: antialiased; }
+.vn-seite a { letter-spacing: 0.005em; transition: color 0.25s ease, transform 0.25s cubic-bezier(.2,.7,.2,1); }
+.vn-seite .vn-seite__name { font: 650 15px/1.3 var(--font-sans); letter-spacing: -0.005em; padding: 7px 0; }
+.vn-seite__haupt > li + li { margin-top: 2px; }
+.vn-seite .ist-aktuell > .vn-seite__kopf > .vn-seite__name { color: var(--rl-akzent); }
+.vn-seite__auf { opacity: 0.6; transition: opacity 0.2s ease, color 0.2s ease; }
+.vn-seite__kopf:hover .vn-seite__auf, .vn-seite__auf:hover { opacity: 1; }
+.vn-seite__auf .vn-pfeil { transition: transform 0.3s cubic-bezier(.2,.7,.2,1); }
+.vn-seite__unter { margin: 2px 0 8px 1px; }
+.vn-seite__unter li { border-left-color: color-mix(in srgb, var(--rl-linie) 55%, transparent); }
+.vn-seite__unter a {
+  font-size: 13px; line-height: 1.3; font-weight: 400; letter-spacing: 0.01em;
+  padding-top: 4px; padding-bottom: 4px;
+}
+.vn-seite__unter a:hover { transform: translateX(2px); }
+.vn-seite__unter a[aria-current] { font-weight: 600; color: var(--rl-text); }
+/* Aktiv: kein Punkt, sondern ein 2-px-Strich auf der Schiene */
+.vn-seite__unter a[aria-current]::before {
+  left: -2px; top: 1px; bottom: 1px; width: 2px; height: auto; margin-top: 0;
+  border-radius: 2px; background: var(--rl-akzent);
+  animation: vn-seite-strich 0.35s cubic-bezier(.2,.7,.2,1) both; transform-origin: top;
+}
+.vn-seite__unter li.ist-tief a[aria-current]::before { left: -14px; }
+@keyframes vn-seite-strich { from { transform: scaleY(0.2); opacity: 0; } to { transform: scaleY(1); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .vn-seite a, .vn-seite__auf { transition: none !important; }
+  .vn-seite__unter a:hover { transform: none; }
+  .vn-seite__unter a[aria-current]::before { animation: none; }
+}
