@@ -33,15 +33,13 @@
 
   /* Jeder Punkt: [Ziel, Titel, Zeile]. Ziel = Seite oder Seite#anker. */
   var MENUE = [
-    { id: 'bot', seite: 'bot', titel: 'Automationen',
-      text: 'Viele wiederkehrende Aufgaben lassen sich automatisieren.',
+    { id: 'learning', seite: 'learning', titel: 'KI-Kompetenz',
+      text: 'Formate, die über Wochen ineinandergreifen.',
       spalten: [
-        { titel: 'Aufbau', punkte: [
-          ['bot#ihr-fall', 'Ihr Fall', 'Beschreiben Sie in zwei Sätzen, was jede Woche Zeit frisst.']
-        ] },
-        { titel: 'Nach Branche', breit: true, punkte: BRANCHEN.map(function (b) {
-          return ['bot#branche-' + b[0], b[1], b[2]];
-        }) }
+        { titel: 'Lernen im Betrieb', breit: true, punkte: [
+          ['learning#formate', 'Die Formate', 'Sieben Formate, die sich kombinieren lassen.'],
+          ['learning#themen-top', 'Die Themen', 'Zehn Themen, die oft gefragt sind.']
+        ] }
       ] },
     { id: 'assistenten', seite: 'assistenten', titel: 'Assistenten',
       text: 'Telefon-Assistent und Chatbot mit Firmenwissen, für Sie eingerichtet.',
@@ -49,14 +47,6 @@
         { titel: 'Für Ihre Kundschaft', breit: true, punkte: [
           ['assistenten#telefon', 'Telefon-Assistent', 'Nimmt Anrufe entgegen, auch wenn niemand Zeit hat.'],
           ['assistenten#chatbot', 'Chatbot mit Firmenwissen', 'Beantwortet Fragen aus Ihren eigenen Unterlagen.']
-        ] }
-      ] },
-    { id: 'learning', seite: 'learning', titel: 'KI-Kompetenz',
-      text: 'Formate, die über Wochen ineinandergreifen.',
-      spalten: [
-        { titel: 'Lernen im Betrieb', breit: true, punkte: [
-          ['learning#formate', 'Die Formate', 'Sieben Formate, die sich kombinieren lassen.'],
-          ['learning#themen-top', 'Die Themen', 'Zehn Themen, die oft gefragt sind.']
         ] }
       ] },
     { id: 'visibility', seite: 'visibility', titel: 'Sichtbarkeit',
@@ -68,6 +58,16 @@
           ['visibility#seo', 'SEO', 'Damit Google Ihr Angebot einordnen kann.'],
           ['visibility#geo', 'GEO', 'Damit KI-Assistenten Ihre Firma verstehen.']
         ] }
+      ] },
+    { id: 'bot', seite: 'bot', titel: 'Automationen',
+      text: 'Viele wiederkehrende Aufgaben lassen sich automatisieren.',
+      spalten: [
+        { titel: 'Aufbau', punkte: [
+          ['bot#ihr-fall', 'Ihr Fall', 'Beschreiben Sie in zwei Sätzen, was jede Woche Zeit frisst.']
+        ] },
+        { titel: 'Nach Branche', breit: true, punkte: BRANCHEN.map(function (b) {
+          return ['bot#branche-' + b[0], b[1], b[2]];
+        }) }
       ] }
   ];
 
