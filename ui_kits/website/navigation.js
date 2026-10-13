@@ -15,7 +15,7 @@
   var rel = location.pathname.slice(wurzel.length).replace(/\.html$/, '').replace(/\/index$/, '/');
   var seite = rel === '' ? 'start'
     : rel.indexOf('ki-kmu-news') === 0 ? 'news'
-    : rel.indexOf('automationen-') === 0 || rel === 'assistenten' ? 'bot'
+    : rel.indexOf('automationen-') === 0 ? 'bot'
     : rel.indexOf('erstanalyse') === 0 ? 'erstanalyse'
     : rel.replace(/\/$/, '');
 
@@ -37,12 +37,19 @@
       text: 'Viele wiederkehrende Aufgaben lassen sich automatisieren.',
       spalten: [
         { titel: 'Aufbau', punkte: [
-          ['bot#ihr-fall', 'Ihr Fall', 'Beschreiben Sie in zwei Sätzen, was jede Woche Zeit frisst.'],
-          ['assistenten', 'Telefon und Chatbot', 'Anrufe und Kundenfragen beantworten, auch wenn niemand Zeit hat.']
+          ['bot#ihr-fall', 'Ihr Fall', 'Beschreiben Sie in zwei Sätzen, was jede Woche Zeit frisst.']
         ] },
         { titel: 'Nach Branche', breit: true, punkte: BRANCHEN.map(function (b) {
           return ['bot#branche-' + b[0], b[1], b[2]];
         }) }
+      ] },
+    { id: 'assistenten', seite: 'assistenten', titel: 'Assistenten',
+      text: 'Telefon-Assistent und Chatbot mit Firmenwissen, für Sie eingerichtet.',
+      spalten: [
+        { titel: 'Für Ihre Kundschaft', breit: true, punkte: [
+          ['assistenten#telefon', 'Telefon-Assistent', 'Nimmt Anrufe entgegen, auch wenn niemand Zeit hat.'],
+          ['assistenten#chatbot', 'Chatbot mit Firmenwissen', 'Beantwortet Fragen aus Ihren eigenen Unterlagen.']
+        ] }
       ] },
     { id: 'learning', seite: 'learning', titel: 'KI-Kompetenz',
       text: 'Formate, die über Wochen ineinandergreifen.',
