@@ -37,7 +37,6 @@
       text: 'Viele wiederkehrende Aufgaben lassen sich automatisieren.',
       spalten: [
         { titel: 'Aufbau', punkte: [
-          ['bot#bausteine', 'Bausteine', 'Immer dieselben fünf Teile, für Ihren Betrieb zusammengesetzt.'],
           ['bot#beispiele', 'Beispiele im Alltag', 'Belege, Offerten und Freigaben laufen von selbst.'],
           ['bot#ihr-fall', 'Ihr Fall', 'Beschreiben Sie in zwei Sätzen, was jede Woche Zeit frisst.']
         ] },
@@ -92,7 +91,7 @@
 
   /* «Auf dieser Seite»: [Anker, Beschriftung] */
   var SEITEN = {
-    bot: [['bausteine', 'Bausteine'], ['preise', 'Branchen'], ['beispiele', 'Im Alltag'], ['ihr-fall', 'Ihr Fall']],
+    bot: [['preise', 'Branchen'], ['beispiele', 'Im Alltag'], ['ihr-fall', 'Ihr Fall']],
     learning: [['lernreise', 'Lernreise'], ['formate', 'Formate'], ['themen', 'Themenkatalog'],
       ['kleine-schritte', 'Kleine Schritte'], ['standortbestimmung', 'Standortbestimmung']],
     faq: [['faq-allgemein', 'Allgemein'], ['faq-learning', 'KI-Kompetenz'], ['faq-bot', 'Automationen'],
@@ -103,7 +102,7 @@
   function esc(t) {
     return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
-  /* Ziel «bot#bausteine» → Verweis. Auf der eigenen Seite nur '#bausteine'. */
+  /* Ziel «bot#beispiele» → Verweis. Auf der eigenen Seite nur '#beispiele'. */
   function href(ziel) {
     var t = ziel.split('#'), s = t[0], a = t[1] ? '#' + t[1] : '';
     if (s && s === seite && a) return a;
