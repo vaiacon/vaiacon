@@ -1,7 +1,7 @@
-/* Startseite: Bühne mit den drei Bereichen und die News-Vorschau.
+/* Startseite: Bühne mit den vier Bereichen und die News-Vorschau.
    Reines JS. Die Wahl des Startbereichs trifft das kleine Skript direkt unter der Bühne in
    index.html (damit nichts flackert); hier wird nur der Stand gelesen.
-   Ohne dieses Skript bleibt alles lesbar: drei Karten nebeneinander oder untereinander. */
+   Ohne dieses Skript bleibt alles lesbar: vier Karten nebeneinander oder untereinander. */
 (function () {
   'use strict';
 
@@ -16,19 +16,19 @@
   var steuer = document.getElementById('st-steuer');
   var zurueck = document.getElementById('st-zurueck');
   var vor = document.getElementById('st-vor');
-  if (tabs.length !== 3 || panels.length !== 3) return;
+  if (tabs.length !== 4 || panels.length !== 4) return;
 
   var DAUER = 7000;
-  var NAMEN = ['ki-kompetenz', 'sichtbarkeit', 'automationen'];
-  var HINWEISE = ['KI-Kompetenz', 'Sichtbarkeit', 'Automationen'];
-  var POSITIONEN = ['mitte', 'rechts', 'links'];
+  var NAMEN = ['ki-kompetenz', 'assistenten', 'sichtbarkeit', 'automationen'];
+  var HINWEISE = ['KI-Kompetenz', 'Assistenten', 'Sichtbarkeit', 'Automationen'];
+  var POSITIONEN = ['mitte', 'rechts', 'hinten', 'links'];
 
   var mqSpalten = window.matchMedia('(min-width: 1024px)');   /* Karussell; darunter wischbar */
   var mqRuhe = window.matchMedia('(prefers-reduced-motion: reduce)');
   var mqHover = window.matchMedia('(hover: hover)');
 
   var aktiv = parseInt(stage.getAttribute('data-aktiv'), 10);
-  if (!(aktiv >= 0 && aktiv < 3)) aktiv = 0;
+  if (!(aktiv >= 0 && aktiv < 4)) aktiv = 0;
 
   var nutzerPause = false;   // Pause-Knopf oder bewusste Wahl
   var halten = {};           // Gründe, die kurz anhalten: hover, fokus, eingabe, sichtbar
@@ -50,7 +50,7 @@
   function spur(i) { return tabs[i].querySelector('.st-reiter__spur > span'); }
 
   function balken(anteil) {
-    for (var i = 0; i < 3; i++) {
+    for (var i = 0; i < 4; i++) {
       var s = spur(i);
       if (!s) continue;
       if (i !== aktiv) { s.style.transform = ''; continue; }
@@ -60,16 +60,16 @@
 
   function setze(i, optionen) {
     optionen = optionen || {};
-    if (i < 0) i = 2;
-    if (i > 2) i = 0;
+    if (i < 0) i = 3;
+    if (i > 3) i = 0;
     var gewechselt = i !== aktiv;
     aktiv = i;
     stage.setAttribute('data-aktiv', String(i));
     if (reiter) reiter.setAttribute('data-aktiv', String(i));
-    for (var k = 0; k < 3; k++) {
+    for (var k = 0; k < 4; k++) {
       var an = k === i;
       if (an) panels[k].setAttribute('data-aktiv', ''); else panels[k].removeAttribute('data-aktiv');
-      panels[k].setAttribute('data-pos', POSITIONEN[(k - i + 3) % 3]);
+      panels[k].setAttribute('data-pos', POSITIONEN[(k - i + 4) % 4]);
       tabs[k].setAttribute('aria-selected', an ? 'true' : 'false');
       tabs[k].setAttribute('tabindex', an ? '0' : '-1');
       var voll = panels[k].querySelector('.st-voll');
@@ -105,7 +105,7 @@
     scrollTimer = setTimeout(function () {
       var mitte = stage.scrollLeft + parseFloat(getComputedStyle(stage).scrollPaddingLeft || 0);
       var bester = 0, abstand = Infinity;
-      for (var i = 0; i < 3; i++) {
+      for (var i = 0; i < 4; i++) {
         var d = Math.abs(panels[i].offsetLeft - mitte);
         if (d < abstand) { abstand = d; bester = i; }
       }
@@ -130,10 +130,10 @@
     tab.addEventListener('click', function () { waehle(i); });
     tab.addEventListener('keydown', function (e) {
       var ziel = -1;
-      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') ziel = (i + 1) % 3;
-      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') ziel = (i + 2) % 3;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') ziel = (i + 1) % 4;
+      else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') ziel = (i + 3) % 4;
       else if (e.key === 'Home') ziel = 0;
-      else if (e.key === 'End') ziel = 2;
+      else if (e.key === 'End') ziel = 3;
       if (ziel < 0) return;
       e.preventDefault();
       waehle(ziel);
@@ -149,8 +149,8 @@
     });
   });
 
-  if (zurueck) zurueck.addEventListener('click', function () { waehle((aktiv + 2) % 3); });
-  if (vor) vor.addEventListener('click', function () { waehle((aktiv + 1) % 3); });
+  if (zurueck) zurueck.addEventListener('click', function () { waehle((aktiv + 3) % 4); });
+  if (vor) vor.addEventListener('click', function () { waehle((aktiv + 1) % 4); });
 
   /* ───── Pause ───── */
 
