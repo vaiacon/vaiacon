@@ -25,7 +25,9 @@
 <link rel="stylesheet" href="ui_kits/website/start.css?v=20261011-audit">
 <link rel="stylesheet" href="ui_kits/website/start-ruhig.css?v=20261005-ohne-preise">
 <link rel="stylesheet" href="ui_kits/website/verbesserungen.css">
-<link rel="stylesheet" href="ui_kits/website/blender.css?v=20261013-buehne3">
+<link rel="stylesheet" href="ui_kits/website/blender.css?v=20261013-vorspann">
+<script>/* ?weiss: weisse Fassung auf dunklem Terracotta; bl-vorspann: Logo fliegt beim Laden ein */
+(function(){var h=document.documentElement;try{if(/[?&]weiss(\b|=|&|$)/.test(location.search))h.classList.add('bl-weiss');if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!(navigator.connection&&navigator.connection.saveData))h.classList.add('bl-vorspann')}catch(e){}})();</script>
 <link rel="preload" as="image" href="assets/blender/szene/001.webp" fetchpriority="high" media="(min-width: 761px)">
 <link rel="preload" as="image" href="assets/blender/szene-mobil/001.webp" fetchpriority="high" media="(max-width: 760px)">
 <link rel="icon" type="image/png" href="assets/blender/logo-3d/favicon-32.png" sizes="32x32">
@@ -214,6 +216,7 @@
 
   <main id="inhalt">
     <section id="top" class="bl-szene" data-nav-hell aria-labelledby="st-titel" data-bl-szene>
+      <script>if(document.documentElement.classList.contains('bl-weiss'))document.currentScript.parentNode.removeAttribute('data-nav-hell');</script>
       <div class="bl-szene__sticky">
         <div class="bl-szene__bild" aria-hidden="true">
           <canvas class="bl-szene__canvas" width="1280" height="640"></canvas>
@@ -448,7 +451,7 @@
 <script src="ui_kits/website/visibility.js?v=20261007-logo-svg" defer></script>
 <script src="ui_kits/website/chat.js?v=20261004-umbau" defer></script>
 <script src="ui_kits/website/check-start.js?v=20261004-check" defer></script>
-<script src="ui_kits/website/blender-scroll.js?v=20261013-buehne3" defer></script>
+<script src="ui_kits/website/blender-scroll.js?v=20261013-vorspann" defer></script>
 <script src="ui_kits/website/navigation.js?v=20261012-3d" defer></script>
 </body>
 </html>

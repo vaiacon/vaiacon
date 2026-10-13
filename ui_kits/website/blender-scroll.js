@@ -1,5 +1,7 @@
 /* Startseite, Zweig «blender»: Startbühne mit dem 3D-Logo.
-   Bild 1 der Bildfolge ist das fertige Logo und steht als Standbild über dem Einstiegstext.
+   Beim Laden fliegen V-Pfeil und Buchstaben ein (Vorspann, 132 Bilder, 30 fps, gleiche Kamera wie die Szene);
+   das letzte Vorspann-Bild endet genau auf Bild 1 der Scroll-Szene, dann übernimmt das Scrollen.
+   Wer schon scrollt, überspringt den Vorspann. Ohne Skript steht Bild 1 als Standbild da.
    Mit dem ersten Scrollen läuft die Bildfolge auf <canvas> (das Bild folgt der Scroll-Position),
    der Einstiegstext blendet aus, die drei Bereiche erscheinen an ihren Stationen.
    Desktop: 90 Bilder 1280x640, alle drei Texte nacheinander.
@@ -14,7 +16,16 @@
 
   /* ───── Scroll-Szene ───── */
   var szene = document.querySelector('[data-bl-szene]');
-  if (!szene || reduziert || spar) return;
+  if (!szene) return;
+  /* Weisse Fassung (?weiss): eigene, durchsichtige Bildsätze; der Terracotta-Grund kommt aus dem CSS */
+  var X = document.documentElement.classList.contains('bl-weiss') ? '-weiss' : '';
+  if (X) {
+    var st = szene.querySelector('.bl-szene__still'), qu = szene.querySelector('picture source');
+    if (qu) qu.srcset = 'assets/blender/szene-weiss-mobil/001.webp';
+    if (st) st.src = 'assets/blender/szene-weiss/001.webp';
+    document.documentElement.classList.add('bl-weiss-bild');
+  }
+  if (reduziert || spar) return;
   var canvas = szene.querySelector('canvas');
   var texte = Array.prototype.slice.call(szene.querySelectorAll('.bl-text'));
   var intro = szene.querySelector('.bl-intro');
@@ -28,7 +39,7 @@
   function festlegen() {
     mobil = mq.matches;
     N = mobil ? 46 : 90;
-    DIR = mobil ? 'assets/blender/szene-mobil/' : 'assets/blender/szene/';
+    DIR = 'assets/blender/szene' + X + (mobil ? '-mobil/' : '/');
     BW = mobil ? 800 : 1280;
     BH = mobil ? 400 : 640;
     /* Mobil: Ausschnitt 40 % der Bildbreite */
@@ -47,6 +58,12 @@
   var laeuft = false;
   var bereit = false;   /* Canvas hat gezeichnet, Standbild darf weg */
 
+  /* Vorspann: 'warten' (Bilder laden), 'laeuft', 'fertig' */
+  var VN = 132, VFPS = 30;
+  var wurzel = document.documentElement;
+  var vorspann = wurzel.classList.contains('bl-vorspann') ? 'warten' : 'fertig';
+  var vbilder = [], vgeladen = 0, vt0 = 0, vZeit = 0;
+
   var SPALTEN = [0.22, 0.5, 0.78]; /* Lage der drei Teile im Endbild */
 
   function glatt(a, b, x) { x = Math.max(0, Math.min(1, (x - a) / (b - a))); return x * x * (3 - 2 * x); }
@@ -57,21 +74,60 @@
     start = true;
     szene.classList.add('bl-an');
     texte.forEach(function (t) { t.classList.remove('is-sichtbar'); });
-    var i = 0;
+    messen();
+    if (vorspann === 'warten' && ziel > 0.003) vorspannEnde();
+    /* Reihenfolge: Szenenbild 1 (kommt aus dem Zwischenspeicher), dann der Vorspann, dann der Rest der Szene */
+    var liste = [[0, false]], j;
+    if (vorspann === 'warten') for (j = 0; j < VN; j++) liste.push([j, true]);
+    for (j = 1; j < N; j++) liste.push([j, false]);
+    var i = 0, offen = 0, satz = DIR, vsatz = 'assets/blender/vorspann' + X + (mobil ? '-mobil/' : '/');
     function weiter() {
-      /* in Reihenfolge, zwei gleichzeitig; erst das erste Bild, dann der Rest */
-      while (i < N && (i - geladen) < 3) {
-        (function (k) {
+      while (i < liste.length && offen < 4) {
+        if (liste[i][1] && vorspann !== 'warten') { i++; continue; }   /* Vorspann übersprungen: nicht mehr laden */
+        (function (k, v) {
           var img = new Image();
           img.decoding = 'async';
-          img.onload = img.onerror = function () { geladen++; if (img.naturalWidth) bilder[k] = img; zeichnen(true); weiter(); };
-          img.src = DIR + ('00' + (k + 1)).slice(-3) + '.webp';
-        })(i);
+          offen++;
+          img.onload = img.onerror = function () {
+            offen--;
+            if (satz !== DIR) return;    /* inzwischen auf den anderen Bildsatz gewechselt */
+            if (v) { vgeladen++; if (img.naturalWidth) vbilder[k] = img; if (vgeladen === VN) vorspannStart(); }
+            else { geladen++; if (img.naturalWidth) bilder[k] = img; zeichnen(true); }
+            weiter();
+          };
+          img.src = (v ? vsatz : DIR) + ('00' + (k + 1)).slice(-3) + '.webp';
+        })(liste[i][0], liste[i][1]);
         i++;
       }
     }
     weiter();
-    messen();
+    if (vorspann === 'warten') vZeit = setTimeout(function () { if (vorspann === 'warten') vorspannEnde(); }, 5000);
+    anfordern();
+  }
+
+  /* ───── Vorspann ───── */
+  function vorspannStart() {
+    if (vorspann !== 'warten') return;
+    clearTimeout(vZeit);
+    vorspann = 'laeuft'; vt0 = 0;
+    requestAnimationFrame(spielen);
+  }
+  function spielen(jetzt) {
+    if (vorspann !== 'laeuft') return;
+    if (!vt0) vt0 = jetzt;       /* startet erst, wenn der Tab sichtbar ist */
+    var k = Math.floor((jetzt - vt0) / 1000 * VFPS);
+    if (k >= VN || ziel > 0.003) { vorspannEnde(); return; }
+    for (var d = k; d >= 0; d--) if (vbilder[d]) { malen(vbilder[d], 1, 0.5); break; }
+    requestAnimationFrame(spielen);
+  }
+  function vorspannEnde() {
+    if (vorspann === 'fertig') return;
+    clearTimeout(vZeit);
+    vorspann = 'fertig';
+    vbilder = [];
+    wurzel.classList.remove('bl-vorspann');
+    zuletzt = -1;
+    zeichnen(true);
     anfordern();
   }
 
@@ -95,6 +151,7 @@
   function anteil(sm) { return 1 - 0.6 * glatt(0, 0.16, sm); }
 
   function zeichnen(erzwingen) {
+    if (vorspann !== 'fertig') return;
     var q = aktuell;
     var s = mobil ? klemm(q / 0.7, 0, 1) : klemm(q / 0.8, 0, 1);
     var img = bildFuer(s);
@@ -103,6 +160,10 @@
     var schluessel = Math.round(s * (N - 1)) + ':' + Math.round(cx * 1000) + ':' + Math.round(f * 1000) + (mobil ? 'm' : '');
     if (!erzwingen && schluessel === zuletzt) return;
     zuletzt = schluessel;
+    malen(img, f, cx);
+  }
+
+  function malen(img, f, cx) {
     var W = img.naturalWidth, H = img.naturalHeight;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     if (mobil) {
@@ -160,6 +221,7 @@
   window.addEventListener('resize', function () {
     var war = mobil;
     if (mq.matches !== war) {
+      vorspannEnde();
       festlegen(); bilder = []; geladen = 0; start = false; zuletzt = -1; bereit = false;
       szene.classList.remove('bl-bereit');
       laden();
@@ -167,6 +229,6 @@
     beiScroll();
   });
 
-  /* Die Bühne ist der Seitenanfang: sofort laden. Bild 1 ist dieselbe Datei wie das Standbild und kommt aus dem Zwischenspeicher. */
+  /* Die Bühne ist der Seitenanfang: sofort laden. Szenenbild 1 ist dieselbe Datei wie das Standbild und kommt aus dem Zwischenspeicher. */
   laden();
 })();

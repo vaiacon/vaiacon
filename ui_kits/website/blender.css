@@ -193,5 +193,43 @@
   .bl-an .bl-text { grid-area: 1 / 1; }
 }
 
+/* ───── Vorspann: das Standbild (fertiges Logo) bleibt verborgen, bis das Logo eingeflogen ist.
+   Sicherung ohne Skript: nach 6 s erscheint es trotzdem. ───── */
+.bl-vorspann .bl-szene__still { animation: bl-zeigen 0s linear 6s both; }
+@keyframes bl-zeigen { from { visibility: hidden; } to { visibility: visible; } }
+
+/* ───── Weisse Fassung (?weiss): weisses Logo auf dunklem Terracotta-Verlauf ───── */
+.bl-weiss {
+  --bl-grund: radial-gradient(120% 85% at 50% 36%, #A64B2A 0%, #8A3A1E 42%, #5C2412 100%);
+}
+.bl-weiss .bl-szene { background: #5C2412 var(--bl-grund); color: #FFFDF8; }
+.bl-weiss .bl-an .bl-szene__sticky,
+.bl-weiss .bl-szene.bl-an .bl-szene__sticky { background: var(--bl-grund); }
+.bl-weiss .bl-szene.bl-an { background: #5C2412; }
+.bl-weiss:not(.bl-weiss-bild) .bl-szene__still { visibility: hidden; }
+.bl-weiss .bl-kicker { color: #F4C3A6; }
+.bl-weiss .bl-headline { color: #FFFDF8; }
+.bl-weiss .bl-headline span { color: #F6B892; }
+.bl-weiss .bl-sub,
+.bl-weiss .bl-text p { color: rgba(255, 246, 236, 0.84); }
+.bl-weiss .bl-text h3 { color: #FFFDF8; }
+.bl-weiss .bl-text .st-mehr { color: #F6C1A3; }
+.bl-weiss .bl-text .st-mehr:hover,
+.bl-weiss .bl-text .st-mehr:focus-visible { color: #FFFDF8; }
+.bl-weiss .bl-szene .sv-button:not(.sv-button--ghost) { background: #FFFDF8; color: var(--terra-600); box-shadow: 0 10px 28px rgba(40, 12, 4, 0.28); }
+.bl-weiss .bl-szene .sv-button:not(.sv-button--ghost):hover,
+.bl-weiss .bl-szene .sv-button:not(.sv-button--ghost):focus-visible { background: var(--cream-100); color: var(--terra-700); }
+.bl-weiss .bl-cta .sv-button--ghost { color: #FFFDF8; border-color: rgba(255, 253, 248, 0.55); }
+.bl-weiss .bl-cta .sv-button--ghost:hover,
+.bl-weiss .bl-cta .sv-button--ghost:focus-visible { background: rgba(255, 253, 248, 0.1); border-color: #FFFDF8; }
+.bl-weiss .bl-text .sv-start__feld input { border-color: rgba(255, 253, 248, 0.85); }
+.bl-weiss .bl-text .sv-start__fehler { color: #FFD9C7; }
+.bl-weiss .bl-szene :focus-visible { outline-color: #FFFDF8; }
+@media (max-width: 760px) {
+  .bl-weiss .bl-cta .sv-button--ghost { color: #F6C1A3; border: 0; background: none; }
+  .bl-weiss .bl-cta .sv-button--ghost:hover,
+  .bl-weiss .bl-cta .sv-button--ghost:focus-visible { color: #FFFDF8; background: none; }
+}
+
 /* .sv-page schnitt mit overflow-x:hidden die Sticky-Bühne ab (macht den Container zum Scroll-Bereich); clip tut dasselbe ohne diese Nebenwirkung */
 .sv-page { overflow-x: clip; overflow-y: visible; }
