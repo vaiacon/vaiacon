@@ -1,16 +1,16 @@
-/* Startseite: die Bühne mit den drei Bereichen, Wegweiser, News, Preise.
+/* Startseite: die Bühne mit den vier Bereichen, Wegweiser, News, Preise.
    Baut auf den Tokens (tokens/*.css) und visibility.css auf.
 
    Die Zustände der Bühne stehen in ihrem Abschnitt.                                          */
 
 /* ───────── Bühne: Karussell direkt auf Terracotta (seit 05.10.2026) ─────────
 
-   Keine Kopfzeile, keine hellen Karten. Ein Bereich steht gross in der Mitte, die beiden
+   Keine Kopfzeile, keine hellen Karten. Ein Bereich steht gross in der Mitte, die
    anderen klein und blass links und rechts daneben.
 
    Zustände:
-   - ohne JS: drei Bereiche untereinander (ab 1024px nebeneinander), alles ausgeschrieben
-   - mit JS (html.st-js), ab 1024px: Karussell; start.js setzt data-pos = links|mitte|rechts
+   - ohne JS: vier Bereiche untereinander (ab 1024px nebeneinander), alles ausgeschrieben
+   - mit JS (html.st-js), ab 1024px: Karussell; start.js setzt data-pos = links|mitte|rechts|hinten
    - mit JS, darunter: wischbar, ein Bereich pro Bildschirmbreite                          */
 
 .st-buehne {
@@ -114,11 +114,14 @@
 .st-bild {
   position: relative;
   display: block;
-  width: 190px;
+  width: calc(190px * var(--bf, 1));
   margin: 0 0 18px;
   pointer-events: none;
   filter: drop-shadow(0 26px 30px rgba(60, 16, 0, 0.35));
 }
+
+/* Schmalerer Roboter (Seitenverhältnis 529:820): gleiche Höhe wie die übrigen */
+#st-ass .st-bild { --bf: 0.776; }
 
 .st-bild img {
   display: block;
@@ -441,7 +444,7 @@
 
 @media (min-width: 1024px) {
   html:not(.st-js) .st-stage {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 32px;
   }
 
@@ -486,6 +489,14 @@
     transform: translateX(calc(-50% + var(--st-versatz))) scale(var(--st-klein));
   }
 
+  /* Vierte Karte: liegt hinter der Mitte, unsichtbar, und fährt beim Wechsel nach aussen */
+  .st-js .st-panel[data-pos="hinten"] {
+    z-index: 0;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(-50%) scale(calc(var(--st-klein) * 0.8));
+  }
+
   .st-js .st-panel[data-pos="links"]:hover,
   .st-js .st-panel[data-pos="rechts"]:hover {
     opacity: 0.68;
@@ -504,7 +515,7 @@
   }
 
   .st-js .st-bild {
-    width: calc(var(--st-hoehe) * 0.4);
+    width: calc(var(--st-hoehe) * 0.4 * var(--bf, 1));
     margin-bottom: 20px;
   }
 
@@ -532,7 +543,7 @@
 @media (min-width: 1024px) and (max-height: 780px) {
   .st-buehne { --st-hoehe: clamp(470px, calc(100svh - 176px), 560px); }
   .st-buehne__inner { padding-top: calc(var(--st-kopfzeile) + 12px); padding-bottom: 22px; }
-  .st-js .st-bild { width: calc(var(--st-hoehe) * 0.36); margin-bottom: 14px; }
+  .st-js .st-bild { width: calc(var(--st-hoehe) * 0.36 * var(--bf, 1)); margin-bottom: 14px; }
   .st-voll { gap: 18px; }
   .st-steuer { margin-top: 16px; }
 }
@@ -595,7 +606,7 @@
   }
 
   .st-bild {
-    width: 150px;
+    width: calc(150px * var(--bf, 1));
     margin-bottom: 14px;
   }
 
