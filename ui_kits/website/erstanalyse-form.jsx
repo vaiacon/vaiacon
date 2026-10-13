@@ -312,7 +312,7 @@ function EaSuccess({ answers, result, zugestellt }) {
         <p className="ea-result-vorbehalt">Eine Schätzung, keine Zusage. Welche Lösungswege dahinter stecken und was sie kosten, besprechen wir im kostenlosen Erstgespräch.</p>
       </div>
       {kleinst ? (
-        <p className="ea-lead">Für einen Betrieb Ihrer Grösse ist eine KI-Schulung oft ein guter erster Schritt. Mit der <a href={ROOT + 'learning#standortbestimmung'}>kostenlosen KI-Standortbestimmung</a> sehen Sie, wo Sie stehen. Ein Gespräch mit uns bleibt jederzeit möglich.</p>
+        <p className="ea-lead">Für einen Betrieb Ihrer Grösse ist eine KI-Schulung oft ein guter erster Schritt. Wie das bei Ihnen aussehen könnte, besprechen wir gern im <a href={ROOT + 'kontakt#formular'}>kostenlosen Erstgespräch</a>.</p>
       ) : null}
       <div className="ea-success-ctas">
         {kleinst ? (

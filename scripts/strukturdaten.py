@@ -174,7 +174,7 @@ ANGEBOTE = {
     "learning.html": angebot(
         "KI-Kompetenz", "KI-Schulung und Weiterbildung",
         "Trainings, Workshops, Coaching für Führungskräfte, Online-Kurse, Lernvideos und tägliche kleine Lerneinheiten, "
-        "zugeschnitten auf Ihren Betrieb. Dazu eine kostenlose KI-Standortbestimmung für Führungskräfte.",
+        "zugeschnitten auf Ihren Betrieb.",
         "learning", "ki-kompetenz"),
     "bot.html": angebot(
         "Automationen", "Automatisierung von Büroarbeit",
@@ -324,8 +324,7 @@ Treuhand, Praxen, Verwaltungen).
 
 Kontakt: hallo@vaiacon.ch · Lehenstrasse 74, 8037 Zürich
 Erster Schritt: kostenloses Erstgespräch (eine halbe Stunde, am Telefon oder
-am Bildschirm), die kostenlose KI-Standortbestimmung für
-Führungskräfte, die kostenlose Erstanalyse zur Zeitersparnis oder der
+am Bildschirm), die kostenlose Erstanalyse zur Zeitersparnis oder der
 kostenlose Website-Check auf vaiacon.ch. Wir antworten in der Regel innert
 eines Arbeitstages. Für einen Rückruf benötigen wir Ihre Telefonnummer.
 
@@ -334,9 +333,7 @@ eines Arbeitstages. Für einen Rückruf benötigen wir Ihre Telefonnummer.
 - [KI-Kompetenz](https://vaiacon.ch/learning): Trainings und Workshops im
   Betrieb (Halbtag oder ganzer Tag, pro Gruppe), Coaching für Führungskräfte,
   Online-Kurse nach Mass, Lernvideos, tägliche kleine Lerneinheiten,
-  Veränderung begleiten und Begleitung der Mitarbeitenden vor Ort. Dazu die
-  kostenlose KI-Standortbestimmung für Führungskräfte (Selbsttest mit zwölf
-  Fragen): https://vaiacon.ch/learning#standortbestimmung
+  Veränderung begleiten und Begleitung der Mitarbeitenden vor Ort.
 - [Sichtbarkeit](https://vaiacon.ch/visibility): Wir verbessern die
   Voraussetzungen dafür, dass Google und KI-Assistenten Ihr Angebot richtig
   einordnen (Fachwörter: SEO und GEO). Kostenloser Website-Check auf
@@ -356,9 +353,6 @@ eines Arbeitstages. Für einen Rückruf benötigen wir Ihre Telefonnummer.
 
 Auf der Website nennen wir keine Preise. Jedes Angebot schauen wir persönlich
 mit der Kundin oder dem Kunden an; am Anfang steht das kostenlose Erstgespräch.
-
-Hinweis: Die KI-Standortanalyse im Betrieb ist nicht die kostenlose
-KI-Standortbestimmung (Selbsttest für Führungskräfte).
 
 ## Weitere Seiten
 

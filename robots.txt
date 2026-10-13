@@ -27,10 +27,7 @@ Allow: /ui_kits/website/erstanalyse-form.compiled.js
 Allow: /ui_kits/website/ihrfall.js
 Allow: /ui_kits/website/kontakt.js
 Allow: /ui_kits/website/kundenstimme.css
-Allow: /ui_kits/website/lernreise-zeitleiste.css
-Allow: /ui_kits/website/lernreise-zeitleiste.js
 Allow: /ui_kits/website/lernreise.css
-Allow: /ui_kits/website/lernreise.js
 Allow: /ui_kits/website/mockup-entwurf.css
 Allow: /ui_kits/website/news.css
 Allow: /ui_kits/website/news.js
@@ -39,8 +36,6 @@ Allow: /ui_kits/website/offerte.js
 Allow: /ui_kits/website/preise.js
 Allow: /ui_kits/website/preismatrix.css
 Allow: /ui_kits/website/preismatrix.js
-Allow: /ui_kits/website/standort.css
-Allow: /ui_kits/website/standort.js
 Allow: /ui_kits/website/start-ruhig.css
 Allow: /ui_kits/website/start.css
 Allow: /ui_kits/website/start.js
