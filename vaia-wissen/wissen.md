@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 13.10.2026 · Eintrag 96fb132 Navigationskapsel bleibt beim Scrollen sichtbar, Startseite ohne «So fängt es an»
+> Stand: 13.10.2026 · Eintrag eae4a5e KI-Standortbestimmung und Lernreise-Zeitleiste entfernt (Philips Wunsch)
 
 ## Wie du antwortest
 
@@ -305,20 +305,6 @@ Wir sorgen für klare Antworten in Ihren Inhalten.
 ✓ Wir erklären Begriffe, Abläufe, Nutzen und Grenzen ohne Fachjargon.
 ✓ Wir machen Angaben zu Erfahrung, Referenzen, Standort und Leistungen gut sichtbar.
 ✓ Wir strukturieren Inhalte so, dass KI-Systeme Zusammenhänge erkennen.
-ABLAUF
-So wird aus Sichtbarkeit ein System.
-01
-Wir verstehen Ihr Angebot.
-Welche Leistungen tragen Ihren Betrieb, welche Kunden passen?
-02
-Wir prüfen Ihre heutige Sichtbarkeit.
-Wir schauen Website, Inhalte, Suchbegriffe, lokale Auffindbarkeit und die Verständlichkeit Ihrer wichtigsten Seiten an.
-03
-Wir setzen Prioritäten.
-Nicht alles muss sofort gemacht werden. Sie erhalten eine klare Reihenfolge: zuerst das, was für Ihren Betrieb am meisten zählt.
-04
-Wir verbessern Seiten und Inhalte.
-Wir schreiben, strukturieren und optimieren so, dass Kunden, Google und KI-Systeme Ihr Angebot leichter verstehen.
 ERGEBNIS
 Sie erhalten Klarheit, bessere Inhalte und klare nächste Schritte.
 Website-Prüfung.
