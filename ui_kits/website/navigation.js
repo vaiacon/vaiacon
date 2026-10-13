@@ -37,7 +37,6 @@
       text: 'Viele wiederkehrende Aufgaben lassen sich automatisieren.',
       spalten: [
         { titel: 'Aufbau', punkte: [
-          ['bot#beispiele', 'Beispiele im Alltag', 'Belege, Offerten und Freigaben laufen von selbst.'],
           ['bot#ihr-fall', 'Ihr Fall', 'Beschreiben Sie in zwei Sätzen, was jede Woche Zeit frisst.']
         ] },
         { titel: 'Nach Branche', breit: true, punkte: BRANCHEN.map(function (b) {
@@ -90,7 +89,7 @@
 
   /* «Auf dieser Seite»: [Anker, Beschriftung] */
   var SEITEN = {
-    bot: [['preise', 'Branchen'], ['beispiele', 'Im Alltag'], ['ihr-fall', 'Ihr Fall']],
+    bot: [['preise', 'Branchen'], ['ihr-fall', 'Ihr Fall']],
     learning: [['lernreise', 'Lernreise'], ['formate', 'Formate'], ['themen-top', 'Themen'],
       ['standortbestimmung', 'Standortbestimmung']],
     faq: [['faq-allgemein', 'Allgemein'], ['faq-learning', 'KI-Kompetenz'], ['faq-bot', 'Automationen'],
@@ -101,7 +100,7 @@
   function esc(t) {
     return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
   }
-  /* Ziel «bot#beispiele» → Verweis. Auf der eigenen Seite nur '#beispiele'. */
+  /* Ziel «bot#ihr-fall» → Verweis. Auf der eigenen Seite nur '#ihr-fall'. */
   function href(ziel) {
     var t = ziel.split('#'), s = t[0], a = t[1] ? '#' + t[1] : '';
     if (s && s === seite && a) return a;

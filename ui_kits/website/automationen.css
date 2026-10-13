@@ -1,4 +1,4 @@
-/* Automationen (bot.html): Bausteine, Kurzfilm, Beispiele als Aufklapper und
+/* Automationen (bot.html): Bausteine, Beispiele als Aufklapper und
    «Ihr Fall in zwei Sätzen». Farben, Schriften, Radien aus tokens/.
    Ersetzt automationen-film.css und beispiele.css (seit 10.10.2026, eine Seite). */
 
@@ -62,18 +62,6 @@
   .bst__kopf { grid-area: kopf; }
   .bst__satz { grid-area: satz; }
 }
-
-/* ── Kurzfilm ─────────────────────────────────────────────────────────── */
-.af-film {
-  margin: 28px auto 0;
-  max-width: 980px;
-  border: 1px solid var(--border-strong);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-  background: var(--bg-dark);
-  aspect-ratio: 16 / 9;
-}
-.af-film video { display: block; width: 100%; height: 100%; object-fit: cover; }
 
 /* ── Sprossen-Marke ───────────────────────────────────────────────────── */
 .bsp-tag {
