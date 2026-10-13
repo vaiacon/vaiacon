@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 11.10.2026 · Eintrag fce01cb Startseite: Gruenderfotos und Satz unter Schritt 3 entfernt
+> Stand: 13.10.2026 · Eintrag e9ab5a7 /bot: Kasten «Anbindungen» entfernt
 
 ## Wie du antwortest
 
@@ -95,7 +95,6 @@ André Ulrich Mitgründer, Strategie und Marketing
 Mehr über uns →
 ORIENTIERUNG
 Wo ist der Bedarf am grössten?
-Wählen Sie die passende Option für Ihren Betrieb. Wir zeigen Ihnen den passenden Anfang.
 «Mein Team nutzt KI selten und nicht gezielt.»
 KI-Kompetenz →
 «Wir sind online unsichtbar.»
@@ -106,7 +105,7 @@ Automationen →
 KI-Standort bestimmen →
 WOFÜR WIR STEHEN
 KI ist für uns nicht das Produkt, sondern das Werkzeug.
-Wir verkaufen keine Technik, sondern Wissen im Team, Auffindbarkeit und zurückgewonnene Zeit. Wo sich etwas nicht rechnet, sagen wir das. Auch wenn es uns einen Auftrag kostet. Bei jeder Lösung klären wir mit Ihnen, welche Anbieter Daten bearbeiten und wo.
+Wir verkaufen keine Technik, sondern Wissen im Team, Auffindbarkeit und zurückgewonnene Zeit. Wo sich etwas nicht rechnet, sagen wir das.
 SO FÄNGT ES AN
 So beginnt die Zusammenarbeit.
 01
@@ -129,7 +128,7 @@ Wie beginnt eine Zusammenarbeit? +
 Am Anfang steht ein unverbindliches Gespräch am Telefon oder am Bildschirm. Danach klären wir, ob KI-Kompetenz, Sichtbarkeit, Automationen, Begleitung oder eine Kombination davon sinnvoll ist.
 NÄCHSTER SCHRITT
 Welche vaiacon-Lösung passt zu Ihrem Betrieb?
-Im unverbindlichen Gespräch klären wir, ob KI-Kompetenz, Sichtbarkeit, Automationen oder eine Kombination der richtige nächste Schritt ist. Simpel · Klar · Persönlich.
+Eine halbe Stunde, kostenlos: Wir klären, ob KI-Kompetenz, Sichtbarkeit, Automationen oder eine Kombination der richtige Schritt ist.
 Erstgespräch vereinbaren →
 
 ### Über uns
@@ -141,7 +140,7 @@ Wer wir sind ↓
 Wofür wir stehen ↓
 WARUM VAIACON
 Zwei Unternehmer, die den Geschäftsalltag kennen.
-Wir haben erkannt, dass gerade kleine und mittlere Unternehmen Mühe haben, KI und Automatisierungen sinnvoll in ihren Betrieb zu integrieren. Darum haben wir 2026 vaiacon gegründet: um genau solche Betriebe zu begleiten, persönlich und auf Augenhöhe. Am meisten bewirken wir in Betrieben mit 5 bis 30 Mitarbeitenden und eigenem Büro: Handwerk, Treuhand, Praxen, Verwaltungen. Unser Angebot hat drei Bereiche: KI-Kompetenz , Sichtbarkeit und Automationen .
+Wir haben erkannt, dass gerade kleine und mittlere Unternehmen Mühe haben, KI und Automatisierungen sinnvoll in ihren Betrieb zu integrieren. Darum haben wir 2026 vaiacon gegründet: um genau solche Betriebe zu begleiten, persönlich und auf Augenhöhe. Unser Angebot hat drei Bereiche: KI-Kompetenz , Sichtbarkeit und Automationen .
 André Ulrich
 Mitgründer · Strategie und Marketing
 André führt seit 20 Jahren ein eigenes Unternehmen im Bereich Facility Management und in der Textilreinigung. Dazu war er Verwaltungsrat und Bewirtschafter bei einer kleinen Immobilienfirma in Zürich. Offerten, Auftragsbestätigungen, E-Mails, Dossiers, Beiträge für Social Media: Die Arbeit, die sich jede Woche wiederholt, kennt er aus eigener Erfahrung. Bei vaiacon kümmert er sich um Strategie und Marketing.
@@ -149,10 +148,10 @@ Philip Krieger
 Mitgründer · Technik und Coaching
 Philip bringt zehn Jahre Erfahrung als Trainer bei einem der grössten Schweizer Telekommunikationsanbieter mit. Er ist Ausbilder mit eidgenössischem Fachausweis und hat über Jahre Lösungen für die digitale Transformation und die Einführung von KI begleitet. Bei vaiacon ist er für Technik, Coaching und Support zuständig.
 SO ARBEITEN WIR
-Das Erstgespräch führt einer von uns beiden, am Telefon oder am Bildschirm. Wir antworten in der Regel innert eines Arbeitstages. Für einen Rückruf benötigen wir Ihre Telefonnummer. Sie sprechen immer direkt mit einem der Gründer.
+Das Erstgespräch führt einer von uns beiden, am Telefon oder am Bildschirm. Sie sprechen immer direkt mit einem der Gründer.
 WOFÜR WIR STEHEN
 KI ist für uns nicht das Produkt, sondern das Werkzeug.
-Wir verkaufen keine Technik, sondern zurückgewonnene Zeit. Wenn sich etwas für Sie nicht rechnet, sagen wir es Ihnen. Auch dann, wenn es uns einen Auftrag kostet. Unsere Website betreiben wir auf Schweizer Infrastruktur. Bei jeder Lösung klären wir, welche Anbieter Daten bearbeiten und wo.
+Wir verkaufen keine Technik, sondern zurückgewonnene Zeit. Wenn sich etwas für Sie nicht rechnet, sagen wir es Ihnen. Auch dann, wenn es uns einen Auftrag kostet. Bei jeder Lösung klären wir, welche Anbieter Daten bearbeiten und wo.
 NÄCHSTER SCHRITT
 Lernen wir uns kennen.
 Ein halbstündiges Erstgespräch, kostenlos und unverbindlich. Danach wissen Sie, ob und wo wir Ihrem Betrieb weiterhelfen.
@@ -164,7 +163,7 @@ Zeit sparen: Erstanalyse →
 Zum Inhalt springen
 KI-KOMPETENZ
 KI-Schulungen für Schweizer KMU
-Ein einzelner Kurstag reicht selten, damit KI im Alltag ankommt. Eine Lernreise verbindet über mehrere Wochen Training, kurze tägliche Einheiten, Begleitung am Arbeitsplatz und Coaching der Führung. Welche Teile Sie brauchen, legen wir gemeinsam fest.
+Ein einzelner Kurstag reicht selten, damit KI im Alltag ankommt. Eine Lernreise verbindet über mehrere Wochen Training, tägliche Einheiten, Begleitung am Arbeitsplatz und Coaching.
 KI-Standort bestimmen →
 Kurz gesagt
 Für wen ist es geeignet
@@ -173,13 +172,15 @@ Problem
 Nach einem einzelnen Kurstag fehlt oft die Übung, damit das Gelernte im Arbeitsalltag ankommt.
 Was Sie bekommen
 Eine Lernreise nach Ihrem Bedarf aus Training, täglichen kleinen Lerneinheiten, Begleitung am Arbeitsplatz und Führungscoaching.
+Themen
+Prompting-Grundlagen, Texte, Mails und Offerten, Recherche und Zusammenfassen, Copilot im Büroalltag, Datenschutz und KI-Regeln, Excel und Datenanalyse, Bilder und Präsentationen, Protokolle und Meetings, eigene Assistenten, kleine Automationen. Auch weitere Themen, auf die Abläufe des Betriebs zugeschnitten.
 Ablauf
 Kostenloses halbstündiges Erstgespräch, danach eine Lernreise über mehrere Wochen mit Stationen nach Ihrem Bedarf.
 Region
 Gesamte Deutschschweiz
 DIE LERNREISE
-Formate, die über Wochen ineinandergreifen.
-Die Stationen lassen sich passend zu Ihrem Bedarf verbinden. Welche Sie wirklich brauchen, legen wir im Erstgespräch fest.
+Acht Wochen, vom Ausgangspunkt bis zur Wirkung.
+Ein Beispiel, wie die Bausteine zusammenspielen. Gemessen wird am Anfang, unterwegs und am Ende.
 1 Woche 0 · Standort
 Standortbestimmung
 Drei Angaben zu Ihrem Betrieb und zwölf kurze Fragen. So wird sichtbar, was schon funktioniert und wo es noch Unterstützung braucht.
@@ -202,7 +203,7 @@ Was Ihre Mitarbeitenden bereits beherrschen, wird zu einem kurzen Video. Neue Mi
 Lernvideo
 5 Woche 5–8 · Täglich
 Tägliche kleine Lerneinheiten
-An 20 Arbeitstagen jeweils drei bis fünf Minuten: ein Tipp, eine Übung am eigenen Fall, eine Frage vom Roboter. Vier Wochen lang, am Arbeitsplatz oder auf dem Smartphone.
+An 20 Arbeitstagen jeweils drei bis fünf Minuten: ein Tipp, eine Übung am eigenen Fall, eine kurze Kontrollfrage. Vier Wochen lang, am Arbeitsplatz oder auf dem Smartphone.
 Messpunkt · Zwischenstand
 Die Antworten auf die tägliche Frage zeigen laufend, was sitzt. Nach zwei Wochen sehen Sie, wo das Team steht. Wir passen die Übungen dort an, wo noch Unterstützung nötig ist.
 Kleine Lerneinheiten
@@ -238,244 +239,69 @@ Alle wissen, welche Werkzeuge Kundendaten bekommen dürfen keine Regel Regel ste
 Zielwert und Zeitpunkt legen wir im Auftakt fest. Den Zielcheck erhalten Sie am Ende als eine Seite, mit Vorher und Nachher und einem Vorschlag für die nächsten Wochen.
 Station 1 von 9
 ‹ Zurück Weiter ›
-Das ist eine Beispielreise, kein fester Plan. Welche Stationen Sie wirklich brauchen, legen wir im Erstgespräch mit Ihnen fest.
+Eine Beispielreise, kein fester Plan.
 Erstgespräch vereinbaren →
 DIE FORMATE
-Die passenden Formate für Ihren Betrieb.
-Sieben Formate, die sich kombinieren lassen. Jedes entsteht aus Ihren Aufgaben, Ihren Unterlagen und Ihrem Alltag.
+Sieben Bausteine, frei kombiniert.
 Online-Kurse nach Mass
-Wenn Wissen für alle da sein soll, auch für neue Mitarbeitende.
-aus Ihren Unterlagen
-mit Quiz
-5 Min Lernzeit
+Aus Ihren Unterlagen, mit Quiz, 5 Minuten Lernzeit.
 Lernvideos
-Wenn dieselbe Frage immer wieder kommt.
-bis 3 Min
-Bildschirm oder gefilmt
-mit Sprecherstimme
+Bis 3 Minuten, für Fragen, die immer wieder kommen.
 Coaching für Führungskräfte
-Wenn Sie vorangehen wollen, ohne alles selbst zu können.
-Einzelgespräch
-online oder vor Ort
-6er-Paket
+Einzelgespräche, online oder vor Ort, im 6er-Paket.
 Begleitung vor Ort
-Wenn im Alltag die ersten echten Fragen auftauchen.
-am Arbeitsplatz
-nach dem Training
-Halbtag oder Tag
+Halbtag oder Tag am Arbeitsplatz, nach dem Training.
 Trainings und Workshops
-Wenn das ganze Team auf denselben Stand kommen soll.
-bis 15 Personen
-eigene Aufgaben
-auch als Webinar
+Bis 15 Personen, an eigenen Aufgaben, auch als Webinar.
 Veränderung begleiten
-Wenn KI verändert, wie bei Ihnen gearbeitet wird.
-Leitung und Team
-Rollen und Kommunikation
-inkl. Vor- und Nachbereitung
+Für Leitung und Team, wenn KI Rollen und Abläufe ändert.
 Tägliche kleine Lerneinheiten
-Damit Gelerntes im Alltag haften bleibt.
-20 Arbeitstage
-3–5 Min pro Tag
-aufs Handy
-Jede Reise ist eine Kombination. Sie zahlen nur, was Ihr Betrieb braucht. Was genau enthalten ist, legen wir im Erstgespräch fest.
-DER THEMENKATALOG
-Ihr Training aus Bausteinen.
-Wählen Sie die Themen, die Ihr Team braucht, und wie tief es jeweils gehen soll. Daraus ergibt sich, ob ein Lerntag reicht oder ob es eine Woche wird.
-Kennenlernen Wir zeigen, wie es geht, alle probieren es aus.
-Anwenden Alle üben an eigenen Aufgaben aus dem Arbeitsalltag.
-Vertiefen Das Team baut eigene Lösungen und verankert sie im Alltag.
-Standard Erprobte Themen mit fertigem Ablauf und Übungen. Weil wir sie für viele Betriebe schulen, sind sie günstiger.
-Nach Mass Wir erarbeiten das Thema aus Ihren Unterlagen und Abläufen neu. Das braucht mehr Vorbereitung und kostet darum mehr.
-Zum Ausprobieren:
-Ein Lerntag · KI-Start
-Drei Tage · Werkzeuge im Alltag
-Eine Woche · KI im ganzen Betrieb
-Alles abwählen
-Grundlagen
-Was alle im Betrieb wissen sollten.
-KI verstehen Standard
-Wie Sprachmodelle arbeiten, was sie gut können und wo sie Fehler machen.
-Tiefe für «KI verstehen»
-Nicht gewählt
-Kennenlernen 1 Std
-Anwenden 2 Std
-Vertiefen 4 Std
-Gute Aufträge an die KI Standard
-Klar fragen, Beispiele geben, Ergebnisse nachschärfen. Die Grundtechnik für jedes Werkzeug.
-Tiefe für «Gute Aufträge an die KI»
-Nicht gewählt
-Kennenlernen 1½ Std
-Anwenden 3 Std
-Vertiefen 6 Std
-Datenschutz und KI Standard
-Was in welches Werkzeug darf: Kundendaten, Berufsgeheimnis, richtige Einstellungen. Nach Schweizer Datenschutzgesetz.
-Tiefe für «Datenschutz und KI»
-Nicht gewählt
-Kennenlernen 1 Std
-Anwenden 2 Std
-Vertiefen 4 Std
-Ergebnisse prüfen, Betrug erkennen Standard
-Erfundene Fakten erkennen, Quellen prüfen, gefälschte Stimmen und Mails durchschauen.
-Tiefe für «Ergebnisse prüfen, Betrug erkennen»
-Nicht gewählt
-Kennenlernen 1 Std
-Anwenden 2 Std
-Vertiefen 3 Std
-Werkzeuge im Alltag
-Erprobte Themen, die wir für jede Gruppe gleich gut schulen können.
-ChatGPT, Claude, Copilot und Gemini Standard
-Welches Werkzeug wofür taugt und welche Lizenz sich für Ihren Betrieb lohnt.
-Tiefe für «ChatGPT, Claude, Copilot und Gemini»
-Nicht gewählt
-Kennenlernen 1 Std
-Anwenden 2 Std
-Vertiefen 4 Std
-Microsoft 365 Copilot Standard
-KI in Outlook, Word, Excel und Teams: Mails, Zusammenfassungen, Auswertungen.
-Tiefe für «Microsoft 365 Copilot»
-Nicht gewählt
-Kennenlernen 1½ Std
-Anwenden 3 Std
-Vertiefen 6 Std
-Recherche mit Perplexity und Co. Standard
-Schnell recherchieren, mit Quellenangabe: Märkte, Lieferanten, Vorschriften, Mitbewerber.
-Tiefe für «Recherche mit Perplexity und Co.»
-Nicht gewählt
-Kennenlernen 1 Std
-Anwenden 2 Std
-Vertiefen 4 Std
-Texte im eigenen Ton Standard
-Mails, Offerten, Website und Social Media: Die KI schreibt vor, Sie bestimmen den Ton.
-Tiefe für «Texte im eigenen Ton»
-Nicht gewählt
-Kennenlernen 1 Std
-Anwenden 3 Std
-Vertiefen 6 Std
-Zahlen und Tabellen auswerten Standard
-Excel-Formeln, Auswertungen und Grafiken mit KI, ganz ohne Programmierkenntnisse.
-Tiefe für «Zahlen und Tabellen auswerten»
-Nicht gewählt
-Kennenlernen 1 Std
-Anwenden 3 Std
-Vertiefen 6 Std
-Besprechungen und Protokolle Standard
-Aufnehmen, abschreiben, zusammenfassen und Pendenzen ableiten, ohne den Datenschutz zu verletzen.
-Tiefe für «Besprechungen und Protokolle»
-Nicht gewählt
-Kennenlernen 1 Std
-Anwenden 2 Std
-Vertiefen 3 Std
-Bilder, Grafiken und Videos Standard
-Bildideen, Produktfotos, Präsentationen und kurze Videos, inklusive Bildrechte.
-Tiefe für «Bilder, Grafiken und Videos»
-Nicht gewählt
-Kennenlernen 1 Std
-Anwenden 3 Std
-Vertiefen 6 Std
-Claude Code: KI, die selbst arbeitet Standard
-Die KI erledigt mehrstufige Aufgaben am Computer: Dateien ordnen, Berichte bauen, kleine Werkzeuge erstellen. Für Technik-Interessierte.
-Tiefe für «Claude Code: KI, die selbst arbeitet»
-Nicht gewählt
-Kennenlernen 2 Std
-Anwenden 6 Std
-Vertiefen 12 Std
-In Ihrem Betrieb
-Diese Themen bauen wir aus Ihren Unterlagen und Abläufen neu.
-Ihre Abläufe mit KI Nach Mass
-Wir nehmen zwei bis drei Ihrer echten Abläufe und bauen sie im Training gemeinsam um.
-Tiefe für «Ihre Abläufe mit KI»
-Nicht gewählt
-Kennenlernen 2 Std
-Anwenden 6 Std
-Vertiefen 12 Std
-Vorlagen-Sammlung für Ihren Betrieb Nach Mass
-Geprüfte Vorlagen für Ihre häufigsten Aufgaben, gemeinsam erarbeitet und im Team abgelegt.
-Tiefe für «Vorlagen-Sammlung für Ihren Betrieb»
-Nicht gewählt
-Kennenlernen 2 Std
-Anwenden 4 Std
-Vertiefen 6 Std
-KI in Ihrer Branchensoftware Nach Mass
-Die KI-Funktionen Ihrer eigenen Programme, etwa Buchhaltung, Kundenverwaltung oder Branchenlösung.
-Tiefe für «KI in Ihrer Branchensoftware»
-Nicht gewählt
-Kennenlernen 1½ Std
-Anwenden 3 Std
-Vertiefen 6 Std
-Chatbot mit Firmenwissen Nach Mass
-Ihren eigenen Chatbot nutzen, sein Wissen pflegen und seine Antworten prüfen.
-Tiefe für «Chatbot mit Firmenwissen»
-Nicht gewählt
-Kennenlernen 1 Std
-Anwenden 3 Std
-Vertiefen 6 Std
-Führung und Regeln
-Für Geschäftsleitung, Teamleitung und alle, die KI im Betrieb verantworten.
-KI im Betrieb führen Standard
-Ziele setzen, Verantwortung klären, Wirkung messen.
-Tiefe für «KI im Betrieb führen»
-Nicht gewählt
-Kennenlernen 1 Std
-Anwenden 3 Std
-Vertiefen 6 Std
-Spielregeln für KI Standard
-Eine Nutzungsrichtlinie aus erprobter Vorlage: erlaubte Werkzeuge, Freigaben, Verantwortung.
-Tiefe für «Spielregeln für KI»
-Nicht gewählt
-Kennenlernen 1 Std
-Anwenden 2 Std
-Vertiefen 4 Std
-Das Team mitnehmen Standard
-Sorgen ernst nehmen, Rollen klären, offen über KI sprechen. Damit die Veränderung getragen wird.
-Tiefe für «Das Team mitnehmen»
-Nicht gewählt
-Kennenlernen 1 Std
-Anwenden 2 Std
-Vertiefen 4 Std
-Noch nichts gewählt
-Wählen Sie oben Themen und Tiefe.
-Mit dieser Auswahl anfragen →
-Gerechnet für eine Gruppe von 12 Personen. Kleinere Gruppen brauchen etwas weniger Übungszeit, grössere mehr. Ein Lerntag hat sechs Stunden Lernzeit, Pausen nicht eingerechnet. Die Tage müssen nicht am Stück sein: Wir verteilen sie auf Ihre Lernreise, auch als Webinar oder bei Ihnen im Betrieb.
-KLEINE SCHRITTE, JEDEN TAG
-Dranbleiben macht den Unterschied.
-Kurze Übungen helfen, das Gelernte im Alltag anzuwenden. Wer täglich an der eigenen Aufgabe übt, dem wird KI im Arbeitsalltag vertrauter.
-Einmal schulen oder täglich dranbleiben
-Prinzipskizze, keine Messung
-Was im Alltag ankommt
-Mo
-Ein Tipp
-Di
-Übung am eigenen Fall
-Mi
-Frage vom Roboter
-Do
-Vorlage nutzen
-Fr
-Weitergeben
-Was im Alltag ankommt
-Kurstag
-Start
-Danach
-täglich weiter
-Zeit →
-Start Zeit →
-Mo Ein Tipp
-Di Übung am eigenen Fall
-Mi Frage vom Roboter
-Do Vorlage nutzen
-Fr Weitergeben
-Danach täglich weiter, je 3–5 Min
-Ein Kurstag, danach keine Übung
-Kurstag plus kleine Einheiten, jeden Tag
-Die Skizze zeigt ein Prinzip, keine gemessenen Werte. Dass der Abstand zwischen Lerneinheiten beeinflusst, wie lange etwas haften bleibt, ist gut untersucht, etwa in einer Auswertung von 317 Experimenten ( Cepeda et al., 2006, Psychological Bulletin ; dort ging es um Gedächtnisaufgaben, nicht um Betriebsschulungen). Wie stark es bei Ihnen wirkt, wissen wir erst, wenn wir es gemeinsam messen.
+20 Arbeitstage, 3–5 Minuten, aufs Handy.
+Sie zahlen nur, was Ihr Betrieb braucht.
+DIE THEMEN
+Zehn Themen, die oft gefragt sind.
+Eine Auswahl. Was Ihr Team braucht, schulen wir, an Ihren eigenen Aufgaben.
+Prompting-Grundlagen
+Klar fragen, brauchbare Antworten erhalten.
+Texte, Mails, Offerten
+Entwürfe in Minuten, im eigenen Ton.
+Recherche und Zusammenfassen
+Lange Texte und Quellen schnell erfassen.
+Copilot im Büroalltag
+KI in Word, Excel, Outlook und Teams nutzen.
+Datenschutz und KI-Regeln
+Klar festhalten, was erlaubt ist und was nicht.
+Excel und Datenanalyse
+Zahlen auswerten, ohne Formeln zu büffeln.
+Bilder und Präsentationen
+Folien und Visuals schneller gestalten.
+Protokolle und Meetings
+Aus Gesprächen werden Protokolle und Aufgaben.
+Eigene Assistenten
+KI mit dem Wissen Ihres Betriebs.
+Kleine Automationen
+Wiederkehrende Aufgaben laufen von selbst.
+Ihr Thema fehlt?
+Wir schulen auch, was hier nicht steht, auf Ihre Abläufe zugeschnitten.
+Thema besprechen →
+Wir schulen mit den Werkzeugen, die Ihr Team nutzt
+ChatGPT
+Gemini
+Claude
+Perplexity
+DeepL
+Notion
+Microsoft Copilot
+Mistral
+Midjourney
+Markennamen gehören ihren Inhabern.
 Standortbestimmung
 Wo steht Ihr Betrieb mit KI?
 Drei Angaben zu Ihrem Betrieb und zwölf kurze Fragen. Danach sehen Sie Ihre Stufe und eine Einschätzung, was sich als Nächstes lohnt.
 Die Standortbestimmung braucht JavaScript. Wenn Sie wissen möchten, wo Ihr Betrieb mit KI steht, schreiben Sie uns kurz über die Kontaktseite . Wir melden uns persönlich.
 NÄCHSTER SCHRITT
 Reden wir darüber, wie Ihre Lernreise aussieht.
-Ein halbstündiges Erstgespräch, kostenlos und ohne Verpflichtung.
+Ein halbstündiges Erstgespräch, kostenlos.
 Erstgespräch vereinbaren →
 
 ### Sichtbarkeit — gefunden werden
@@ -483,7 +309,7 @@ Erstgespräch vereinbaren →
 Zum Inhalt springen
 SICHTBARKEIT
 SEO und GEO für Schweizer KMU: verständlich für Google und KI‑Assistenten
-Wir verbessern die Voraussetzungen dafür, dass Google und KI-Assistenten Ihr Angebot richtig einordnen: mit SEO für Suchmaschinen und GEO für KI-Antworten. Starten Sie mit dem kostenlosen Website-Check auf vaiacon.ch.
+Wir verbessern die Voraussetzungen dafür, dass Google und KI-Assistenten Ihr Angebot richtig einordnen: mit SEO für Suchmaschinen und GEO für KI-Antworten.
 Kostenlosen Website-Check starten →
 Kurz gesagt
 Für wen
@@ -500,10 +326,22 @@ Region
 Gesamte Deutschschweiz
 KOSTENLOSER WEBSITE-CHECK
 Wie gut ist Ihre Website für Google und KI-Assistenten vorbereitet?
-Wir prüfen Struktur, Inhalte und technische Grundlagen Ihrer öffentlich zugänglichen Website. Der Check zeigt Verbesserungsmöglichkeiten. Tatsächliche Rankings und KI-Nennungen prüft er nicht.
+Wir prüfen Struktur, Inhalte und technische Grundlagen Ihrer Website. Rankings und KI-Nennungen prüft der Check nicht.
 Ihre Domain
 Check starten →
-Kostenlos und unverbindlich, automatisch ausgewertet. Geprüft werden die Startseite, robots.txt, Sitemap, llms.txt sowie die verlinkte Kontakt- und Impressumsseite. Der Check dauert einige Minuten. Die Punkte sind eine Einschätzung, keine Zusage. Tiefer gehen die bezahlten Prüfungen .
+Kostenlos, meist in unter einer Minute. Die Punkte sind eine Einschätzung, keine Zusage.
+Was genau geprüft wird
+Die Startseite, robots.txt, Sitemap, llms.txt sowie die verlinkte Kontakt- und Impressumsseite, in fünf Schritten: erreichbar, technische Grundlagen, strukturierte Daten, KI-Sichtbarkeit (GEO), Inhalt und Vertrauen. Tiefer gehen die bezahlten Prüfungen .
+Muster
+72
+von 100
+So sieht Ihr Ergebnis aus
+beispiel-firma.ch
+Website erreichen 100
+Technische Grundlagen 80
+Strukturierte Daten 45
+KI-Sichtbarkeit (GEO) 60
+Inhalt & Vertrauen 75
 Wir prüfen
 Nochmals prüfen
 0
@@ -518,10 +356,9 @@ Firma
 Telefon
 Fangfrage
 Bericht anfordern →
-Sie erhalten den vollständigen Bericht per E-Mail. Mehr dazu in der Datenschutzerklärung .
+Sie erhalten den vollständigen Bericht per E-Mail.
 EINFACH ERKLÄRT
 Sichtbarkeit beginnt damit, dass Ihr Angebot verstanden wird.
-Viele Websites sehen gut aus, beantworten aber die Fragen der Kunden nicht klar genug. Dann weiss Google zu wenig, KI-Systeme finden keine sauberen Aussagen und Interessenten bleiben unsicher.
 SEO
 Suchmaschinen verstehen Ihre Website.
 SEO sorgt dafür, dass Google erkennt, was Sie anbieten, für wen es gedacht ist und in welcher Region Sie relevant sind.
@@ -530,13 +367,7 @@ KI-Systeme finden klare Antworten.
 GEO bereitet Ihre Inhalte so auf, dass KI-Assistenten Ihre Leistungen, Fakten und Angaben zu Erfahrung und Referenzen sauber einordnen können.
 WARUM ES WICHTIG IST
 Kunden fragen heute anders.
-Früher tippte man einzelne Suchwörter ein. Heute stellen Menschen ganze Fragen: «Wer kann mir in Zürich eine Website verbessern?» oder «Welche Firma hilft meinem Betrieb mit KI?». Ihre Website muss auf solche Fragen eine klare Antwort geben.
-Ohne Struktur bleibt Ihr Angebot unscharf.
-Wenn Leistungen, Zielgruppen und Orte nicht klar beschrieben sind, kann eine Suchmaschine Ihre Seite schwer einordnen.
-KI-Antworten wählen verständliche Quellen.
-KI-Systeme bevorzugen Inhalte, die konkrete Fragen beantworten, Begriffe erklären und Vertrauen aufbauen.
-Sichtbarkeit entscheidet vor dem ersten Gespräch.
-Wer online nicht klar auffindbar ist, wird oft gar nicht angefragt, auch wenn das Angebot fachlich sehr gut ist.
+Heute stellen Menschen ganze Fragen: «Wer kann mir in Zürich eine Website verbessern?» oder «Welche Firma hilft meinem Betrieb mit KI?». Ihre Website muss auf solche Fragen eine klare Antwort geben.
 SEO
 Damit Google Ihr Angebot einordnen kann.
 SEO ist keine Magie. Es ist saubere Ordnung: klare Seiten, verständliche Texte, passende Suchbegriffe, schnelle Orientierung und technische Grundlagen, die Google nicht ausbremsen.
@@ -557,10 +388,9 @@ Wir sorgen für klare Antworten in Ihren Inhalten.
 ✓ Wir strukturieren Inhalte so, dass KI-Systeme Zusammenhänge erkennen.
 ABLAUF
 So wird aus Sichtbarkeit ein System.
-Wir starten bewusst einfach. Sie müssen keine SEO-Begriffe kennen und kein KI-Vorwissen mitbringen. Wir übersetzen das Thema in konkrete Schritte für Ihr Unternehmen.
 01
 Wir verstehen Ihr Angebot.
-Welche Leistungen tragen Ihren Betrieb? Welche Kunden passen? Welche Fragen kommen im Verkauf immer wieder?
+Welche Leistungen tragen Ihren Betrieb, welche Kunden passen?
 02
 Wir prüfen Ihre heutige Sichtbarkeit.
 Wir schauen Website, Inhalte, Suchbegriffe, lokale Auffindbarkeit und die Verständlichkeit Ihrer wichtigsten Seiten an.
@@ -581,8 +411,8 @@ Texte mit klaren Antworten, FAQ-Blöcke und Leistungsseiten, die auch ohne Vorwi
 Regelmässige Prüfung.
 Mit laufender Betreuung prüfen wir regelmässig, welche Fragen auftauchen und welche Inhalte ergänzt werden sollten.
 So geht es weiter
-1 Online-Check machen Domain eingeben, kostenlos und in wenigen Sekunden.
-2 Punktzahl sehen Sie sehen sofort, wie gut Google und KI-Assistenten Ihre Website verstehen.
+1 Online-Check machen Domain eingeben, kostenlos und meist in unter einer Minute.
+2 Punktzahl sehen Sofort, für Google und KI-Assistenten.
 3 Wir melden uns Oder Sie sich bei uns. Gemeinsam schauen wir, was sich für Ihren Betrieb lohnt.
 Was wir danach für Sie tun können
 Vertiefte Prüfung mit Mitbewerbern
@@ -591,10 +421,9 @@ Seiten überarbeiten
 Google-Profil und Bewertungen
 Laufende Betreuung für Google und KI
 Website kostenlos prüfen →
-Direkt Kontakt aufnehmen →
 NÄCHSTER SCHRITT
 Lassen Sie prüfen, ob Ihr Angebot online klar verstanden wird.
-Der kostenlose Website-Check zeigt nach einigen Minuten, wo SEO und GEO auf Ihrer Website am meisten verbessern können.
+Der kostenlose Website-Check zeigt, wo SEO und GEO am meisten verbessern können.
 Kostenlosen Website-Check starten →
 
 ### Automationen
@@ -621,20 +450,6 @@ Ihr Fall
 Auf der Seite beschreiben Sie Ihren Fall in zwei Sätzen und geben E-Mail und Telefon an. Die Einordnung kommt per E-Mail, nicht auf der Seite: welcher Umfang zu Ihrem Fall passt, und ob ein Standard reicht oder die Lösung individuell wird. Beschreibung und Kontaktangaben gehen als Anfrage an uns.
 Region
 Gesamte Deutschschweiz
-BAUSTEINE
-Viele wiederkehrende Aufgaben lassen sich automatisieren.
-Eine Automation ist kein Produkt aus dem Regal. Sie besteht immer aus denselben fünf Teilen, die wir für Ihren Betrieb zusammensetzen.
-1 Etwas kommt rein
-Der Anstoss: Etwas trifft bei Ihnen ein, auf welchem Weg auch immer.
-2 Informationen werden geprüft
-Nach festen Regeln oder mit KI, wenn sie dafür sinnvoll ist.
-3 Es wird entschieden
-Nach Ihren Regeln: Manches läuft durch, anderes wartet auf Ihr OK.
-4 Etwas passiert
-Das Ergebnis landet dort, wo Sie arbeiten: im Programm, im Ordner, beim Kunden.
-5 Sie erfahren davon
-Sie behalten den Überblick, ohne nachschauen zu müssen.
-Jedes Beispiel weiter unten ist eine Kombination aus diesen Teilen. Ihres auch.
 AUS DER PRAXIS
 Welche Beispiele gibt es in Ihrer Branche?
 1 Einfache Automation Eine feste Regel in einem Programm
@@ -646,41 +461,29 @@ Was Sie davon haben Weniger Abtippen. Unklare Angaben werden zur Prüfung vorgel
 3 Komplette Automation Mehrere Schritte über bis zu drei Programme. Standardfälle laufen automatisch, Ausnahmen bleiben sichtbar.
 Von der Anfrage bis zur Rechnung in einem Fluss. Freigaben und Ausnahmen landen bei Ihnen.
 Was Sie davon haben Der Ablauf hängt nicht mehr an einer Person, die Rechnung geht am Tag des Abschlusses raus.
-Betreuung auf Wunsch: Überwachung, Fehlerbehebung und laufende Anpassungen für alle Automationen und Chatbots, die wir für Sie gebaut haben.
 Was gehört zu welcher Grösse?
 Einfache Automation , zum Beispiel der kleine Ablauf: Ein Auslöser, eine Regel, ein Zielprogramm (das Programm, in dem das Ergebnis landet), ohne weitere Anbindung.
 Mittelgrosse Automation: Mittlere Abläufe verbinden Programme oder ergänzen eine Entscheidung oder Freigabe. Der genaue Umfang steht beim gewählten Angebot.
 Komplette Automation , zum Beispiel der Auftragsablauf: Anfrage, Offerte, Auftrag, Rechnung mit bis zu drei Programmen über fertige Verbindungen (Standard-Connectoren), Daten je Programm in eine Richtung, bis 15 Felder je Übergabe. Rückmeldungen an ein Programm, Altsysteme und weitere Programme sind zusätzliche Anbindungen.
 Wann ist ein Ablauf abgenommen?
 Abgenommen ist ein Ablauf, wenn der Normalfall, fehlende und falsche Daten, ein Schnittstellenausfall und eine Doppelauslösung geprüft sind und die Rechte stimmen.
-Doppelauslösung heisst: Dasselbe Ereignis kommt zweimal an, etwa eine Rechnung, die zweimal gemailt wird. Der Ablauf darf sie trotzdem nur einmal verarbeiten.
-Mängel beheben wir 90 Tage nach der Übergabe ohne Rechnung.
-Anbindungen
-Wenn eine Automation ein weiteres Programm braucht, kommt die Anbindung dazu. Es gibt zwei Wege: den Standard-Connector, also eine fertige Verbindung zwischen Programmen, oder eine individuelle Anbindung.
-Anbindung, Standard-Connector
-Für gängige Programme mit fertigem Connector: Bexio, Google Workspace, Microsoft 365, HubSpot, Make oder Zapier.
-Anbindung, individuell
-Wenn kein Standard-Connector passt, etwa bei Branchensoftware, Kundenverzeichnis oder Altsystemen.
-IN 22 SEKUNDEN
-So sieht das im Alltag aus.
-Belege, Offerten und Freigaben laufen von selbst. Ihr Fall steht im Feld darunter.
 IHR FALL
 Ihr Fall in zwei Sätzen.
-Beschreiben Sie, was bei Ihnen jede Woche Zeit frisst. Unsere Einordnung bekommen Sie per E-Mail: welcher Umfang zu Ihrem Fall passt, und ob ein Standard reicht oder es individuell wird. Das Angebot schauen wir danach persönlich mit Ihnen an.
+Beschreiben Sie, was bei Ihnen jede Woche Zeit frisst. Die Einordnung kommt per E-Mail: welcher Umfang passt, Standard oder individuell.
 1 Beschreiben
 2 E-Mail und Telefon
 3 Einordnung per E-Mail
 Was frisst bei Ihnen Zeit?
 Ohne Namen und Kundendaten, bitte
-An diese Adresse schicken wir die Einordnung. Die Telefonnummer brauchen wir, falls etwas unklar ist:
+Telefon nur für Rückfragen:
 E-Mail
 Telefon
 0 Zeichen, mindestens 20
 Einordnung anfordern
-Ihre Beschreibung geht zusammen mit Ihren Kontaktangaben als Anfrage an uns. Die Einordnung schicken wir an Ihre E-Mail. Wir antworten in der Regel innert eines Arbeitstages.
+Wir antworten in der Regel innert eines Arbeitstages.
 Unterwegs
 Die Einordnung ist unterwegs.
-Sie bekommen sie an , in der Regel innert eines Arbeitstages. Wir melden uns, wenn etwas offen ist.
+Sie bekommen sie an , in der Regel innert eines Arbeitstages.
 Eine Einordnung, keine verbindliche Offerte. Ob Standard oder individuell, klären wir gemeinsam in der Erstanalyse.
 
 ### Begleitung
@@ -701,7 +504,6 @@ Weiterentwickeln statt stillstehen.
 Was einmal läuft, zeigt oft, was sich als Nächstes lohnt. Wir bringen die Vorschläge, Sie entscheiden. Nichts wird ohne Ihre Zustimmung gebaut.
 WAS WIR BETREUEN
 Eine Anlaufstelle für unser ganzes Angebot.
-Für Automationen und Chatbots gibt es die Betreuung, für die Sichtbarkeit eigene Betreuungspakete und für Fragen und neue Ideen die Begleitung.
 Automationen
 Läuft jede Automation noch so, wie sie soll? Mit der Betreuung spielen wir Updates ein, ziehen geänderte Anbindungen nach und halten Vorlagen aktuell.
 Sichtbarkeit
@@ -710,7 +512,6 @@ KI-Kompetenz
 Fragen aus dem Alltag nach der Schulung, eine Auffrischung, wenn sich ein Werkzeug ändert: Dafür ist die Begleitung da.
 BETREUUNG
 Eine Betreuung für alles, was wir gebaut haben.
-Eine Betreuung für alle Automationen und Chatbots, die wir für Sie gebaut haben. Das Angebot schauen wir persönlich mit Ihnen an.
 Betreuung
 Überwachung, Fehlerbehebung, eine Stunde Anpassung im Monat, Reaktion innert eines Arbeitstags. Beim Telefonassistenten ist die Telefonnummer enthalten; Gesprächsminuten und KI-Nutzung rechnen wir nach Verbrauch ab.
 Beim Telefonassistenten
@@ -728,7 +529,7 @@ Ausbau
 Weitere Wünsche besprechen wir mit Ihnen und setzen sie nach Aufwand um.
 BEGLEITUNG
 Regelmässige Beratung oder zuerst eine Standortanalyse.
-Die Begleitung ist feste Beratungs- und Arbeitszeit für Ihr Team und neue Ideen rund um KI. Den Betrieb Ihrer Automationen deckt die Betreuung ab. Oder Sie beginnen mit einem Blick auf den ganzen Betrieb.
+Feste Beratungs- und Arbeitszeit für Ihr Team und neue Ideen rund um KI, oder zuerst ein Blick auf den ganzen Betrieb.
 Begleitung, 4 Std. im Monat
 Kündbar auf Ende Folgemonat. Nicht genutzte Zeit wird einen Monat übertragen.
 Begleitung, 8 Std. im Monat
@@ -776,6 +577,7 @@ Was das für Ihr KMU heisst →
 AI Weekly berichtet, OpenAI habe am 5. Oktober ein Verfahren namens «textGrain» vorgestellt. Es soll ein unsichtbares Muster in die Wortwahl legen, eine Art Wasserzeichen, das Software später erkennt. Laut AI Weekly wird es in der EU in den kommenden Wochen für ChatGPT und Codex verpflichtend. OpenAI hat die Meldung selbst nicht bestätigt.
 Was das für Ihr KMU heisst →
 Die letzten Wochen
+KW 42 · 12. – 18. Oktober 2026 0 Beiträge
 KW 41 · 5. – 11. Oktober 2026 5 Beiträge
 KW 40 · 28. September – 4. Oktober 2026 7 Beiträge
 Alle Wochen im Archiv · RSS-Feed abonnieren
@@ -906,13 +708,13 @@ hallo@vaiacon.ch ↗
 Zum Inhalt springen
 KONTAKT
 Welche vaiacon-Lösung passt zu Ihrem Betrieb?
-Im unverbindlichen Erstgespräch klären wir, ob KI-Kompetenz, Sichtbarkeit, Automationen oder eine Kombination der richtige nächste Schritt ist. Eine halbe Stunde, kostenlos und unverbindlich. Wir antworten in der Regel innert eines Arbeitstages. Für einen Rückruf benötigen wir Ihre Telefonnummer.
+Im Erstgespräch klären wir, ob KI-Kompetenz, Sichtbarkeit, Automationen oder eine Kombination der richtige nächste Schritt ist. Eine halbe Stunde, kostenlos. Wir antworten in der Regel innert eines Arbeitstages.
 Nachricht schreiben →
 Rückruf anfordern →
 Lieber zuerst selbst prüfen? Kostenlose Erstanalyse · Kostenloser Website-Check auf vaiacon.ch ·
 LIEBER ANGERUFEN WERDEN?
 Rückruf anfordern
-Für einen Rückruf benötigen wir Ihren Namen und Ihre Telefonnummer. Wir melden uns in der Regel innert eines Arbeitstages und richten uns nach Ihrer Wunschzeit, soweit es möglich ist.
+Wir richten uns nach Ihrer Wunschzeit, soweit es möglich ist.
 Felder mit * sind Pflichtfelder.
 Name *
 Telefonnummer *
@@ -938,7 +740,7 @@ Unsere Einschätzung
 Sie erhalten schriftlich, was wir empfehlen, mit Aufwand und Preis. Auch dann, wenn die Empfehlung lautet, vorerst nichts zu tun.
 SCHREIBEN SIE UNS
 Ein paar Zeilen genügen.
-Sagen Sie uns kurz, worum es geht. Wir antworten in der Regel innert eines Arbeitstages. Für einen Rückruf benötigen wir Ihre Telefonnummer.
+Sagen Sie uns kurz, worum es geht.
 Lieber reden? Rückruf anfordern →
 Felder mit * sind Pflichtfelder.
 Name *
@@ -950,13 +752,13 @@ Fangfrage
 Das Formular sendet Ihre Angaben an unseren eigenen Server in der Schweiz. Wir verwenden sie nur, um Ihre Anfrage zu bearbeiten. Mehr dazu in der Datenschutzerklärung .
 Nachricht senden →
 SO ERREICHEN SIE UNS
-Simpel · Klar · Persönlich
+Simpel · Klar · Persönlich
 Formular
-Ein paar Zeilen genügen. Wir antworten in der Regel innert eines Arbeitstages. Zum Formular →
+Ein paar Zeilen genügen. Zum Formular →
 E-Mail
 Schreiben Sie uns, was Sie beschäftigt. hallo@vaiacon.ch
 Rückruf
-Für einen Rückruf benötigen wir Ihre Telefonnummer. Ihre Wunschzeit berücksichtigen wir, soweit es möglich ist. Rückruf anfordern →
+Wunschzeit angeben, wir rufen an. Rückruf anfordern →
 
 ### Datenschutz und Impressum
 
@@ -1259,24 +1061,24 @@ Komplette Automation:
 - Von Anfrage bis Rechnung: Anfrage → Besichtigung → Offerte → Rapport → Rechnung
 - Social-Media-Funnel Heizungsersatz: Beitrag → Formular → Vorprüfung → Beratungstermin
 
-#### Agentur
+#### Kosmetik
 
-Das nervt: Monatsberichte zusammentragen frisst Stunden Feedback verstreut auf Mail, Chat, PDF Stunden spät erfasst, Budget läuft unbemerkt über
+Das nervt: Termine werden kurzfristig abgesagt, der Stuhl bleibt leer Nachfragen per Nachricht, auch abends und am Wochenende Pflegeprodukte und Gutscheine laufen nebenher
 
 Einfache Automation:
-- Monatsbericht automatisch: Social Media + Analytics → fertiger Bericht → Kunde
-- Zeiterfassung per Erinnerung: Freitag → Erinnerung an fehlende Stunden
-- Briefing-Formular zu Aufgabe: Briefing-Formular → Aufgabe mit Frist im Board
+- Terminerinnerung mit Absagelink: Tag vorher → SMS oder Mail → Absagelink
+- Nachsorge nach der Behandlung: Behandlung erledigt → Pflegehinweise per Mail
+- Bewertungsanfrage: Termin vorbei → Dank mit Bewertungslink
 
 Mittelgrosse Automation:
-- Feedback bündeln: Mail + Chat → eine Korrekturliste pro Projekt
-- Budgetwarnung im Projekt: Stunden fast verbraucht → Warnung → Nachofferte-Vorschlag
-- Neukunden über Social Media: Beitrag → Formular → KI-Prüfung → Erstgespräch gebucht
+- Warteliste zum Nachrücken: Absage → Nachricht an Wartende → erste Zusage im Kalender
+- Folgetermin vorschlagen: Nach drei Wochen → Erinnerung ans Auffüllen → Terminlink
+- Gutschein online verkaufen: Bestellung → Zahlung per TWINT → Gutschein-PDF per Mail
 
 Komplette Automation:
-- Vom Briefing zur Rechnung: Briefing → Offerte → Start → Zeiten → Rechnung → Mahnung
-- Content-Pipeline mit Freigabe: Idee → Entwurf → Kundenfreigabe → Veröffentlichung → Report
-- Retainer-Abrechnung automatisch: Retainer-Rechnung mit Stundennachweis → Versand → Mahnung
+- Vom Termin bis zum Folgetermin: Buchung → Erinnerung → Nachrücken → Nachsorge → Folgetermin
+- Kundenkarte mit Einwilligung: Formular mit Einwilligung → Karte mit Notizen und Allergien → nur für das Studio sichtbar
+- Pflegeprodukte nachbestellen: Bestand tief → Bestellentwurf → Freigabe durch das Studio
 
 #### Restaurant
 
