@@ -506,13 +506,13 @@
         if (istTerracotta(getComputedStyle(e))) dunkleFlaechen.push(e);
       });
     };
-    var eintraege = [].slice.call(seitlich.querySelectorAll('.vn-seite__kopf, .vn-seite__unter li'));
+    var randEintraege = [].slice.call(seitlich.querySelectorAll('.vn-seite__kopf, .vn-seite__unter li'));
     var farbeGeplant = false;
     var farbeSetzen = function () {
       farbeGeplant = false;
       if (!seitlich.classList.contains('ist-sichtbar')) return;
       var rects = dunkleFlaechen.map(function (e) { return e.getBoundingClientRect(); });
-      eintraege.forEach(function (e) {
+      randEintraege.forEach(function (e) {
         var r = e.getBoundingClientRect(), mitte = r.top + r.height / 2, dunkel = false;
         for (var i = 0; i < rects.length; i++) if (mitte >= rects[i].top && mitte < rects[i].bottom) { dunkel = true; break; }
         if (e.classList.contains('auf-dunkel') !== dunkel) e.classList.toggle('auf-dunkel', dunkel);
