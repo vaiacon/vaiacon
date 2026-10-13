@@ -2752,7 +2752,7 @@ picture {
 
 .sv-cx__balken li {
   display: grid;
-  grid-template-columns: 9.5rem minmax(0, 1fr) 2rem;
+  grid-template-columns: 10.5rem minmax(0, 1fr) 2rem;
   align-items: center;
   gap: var(--space-3);
   font-size: var(--text-body-sm);
@@ -2812,7 +2812,7 @@ picture {
 @media (max-width: 860px) {
   .sv-cx {
     grid-template-columns: minmax(0, 1fr);
-    gap: var(--space-8);
+    gap: var(--space-9);
   }
 
   .sv-cx__muster {
@@ -2860,7 +2860,7 @@ picture {
 #ablauf .sv-steps li:not(:last-child)::after {
   content: "";
   width: 2px;
-  height: var(--space-8);
+  height: var(--space-9);
   margin: var(--space-2) 0;
   background: linear-gradient(180deg, var(--terra-500), var(--peach-200));
 }
