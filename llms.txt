@@ -34,6 +34,11 @@ eines Arbeitstages. Für einen Rückruf benötigen wir Ihre Telefonnummer.
 - [Automationen](https://vaiacon.ch/bot): Belege erfassen, Offertenentwürfe
   erstellen, Korrespondenz und Anfragen automatisch vorbereiten, Chatbot mit
   Firmenwissen, Telefonassistent, Anbindung an Ihre Software.
+- [Telefon-Assistent und Chatbot mit Firmenwissen](https://vaiacon.ch/assistenten):
+  Der Telefon-Assistent nimmt Anrufe entgegen, beantwortet Fragen, erfasst Termine
+  und Rückrufe und verbindet bei Bedarf weiter (Schweizer Hochdeutsch, auf Wunsch
+  Mundart verstehen). Der Chatbot beantwortet Fragen aus Ihren eigenen Unterlagen.
+  Einrichtung, Anbindung, Tests und Betreuung aus einer Hand, nach revDSG.
 - [Betreuung und Begleitung](https://vaiacon.ch/service): Die Betreuung hält
   alle Automationen und Chatbots am Laufen, die Vaiacon gebaut hat
   (Überwachung, Fehlerbehebung, Anpassungen). Die Begleitung ist feste Beratungs- und Arbeitszeit (vier oder acht
