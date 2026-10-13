@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 13.10.2026 · Eintrag 182a4a1 Sichtbarkeit ohne Abschnitt «Ablauf», keine Seitennavigation mehr (Randliste und Knopfreihe), Philips Wunsch
+> Stand: 13.10.2026 · Eintrag b89fa12 Kontakt: Links in «So erreichen Sie uns» je in eigenem Absatz
 
 ## Wie du antwortest
 
@@ -608,7 +608,6 @@ Welche vaiacon-Lösung passt zu Ihrem Betrieb?
 Im Erstgespräch klären wir, ob KI-Kompetenz, Sichtbarkeit, Automationen oder eine Kombination der richtige nächste Schritt ist. Eine halbe Stunde, kostenlos. Wir antworten in der Regel innert eines Arbeitstages.
 Nachricht schreiben →
 Rückruf anfordern →
-Lieber zuerst selbst prüfen? Kostenlose Erstanalyse · Kostenloser Website-Check auf vaiacon.ch ·
 LIEBER ANGERUFEN WERDEN?
 Rückruf anfordern
 Wir richten uns nach Ihrer Wunschzeit, soweit es möglich ist.
@@ -651,11 +650,14 @@ Nachricht senden →
 SO ERREICHEN SIE UNS
 Simpel · Klar · Persönlich
 Formular
-Ein paar Zeilen genügen. Zum Formular →
+Ein paar Zeilen genügen.
+Zum Formular →
 E-Mail
-Schreiben Sie uns, was Sie beschäftigt. hallo@vaiacon.ch
+Schreiben Sie uns, was Sie beschäftigt.
+hallo@vaiacon.ch
 Rückruf
-Wunschzeit angeben, wir rufen an. Rückruf anfordern →
+Wunschzeit angeben, wir rufen an.
+Rückruf anfordern →
 
 ### Datenschutz und Impressum
 
