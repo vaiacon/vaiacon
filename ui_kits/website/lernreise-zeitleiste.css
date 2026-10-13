@@ -590,3 +590,27 @@
   .lz-bild:not(.lz-bild--ziel) img { margin-bottom: 0; }
   .lz--an .lz-bild:not(.lz-bild--ziel) img { height: 300px; }
 }
+
+/* ── Symbol statt Roboter (Ergänzung 2026-10-13) ─────────────────────────
+   Jede Station zeigt das Symbol ihres Bausteins (assets/formate/*.webp)
+   auf einer ruhigen Fläche. Die
+   Bewegung beim Scrollen bleibt (Regeln für .lz-bild img oben). */
+.lz-bild--symbol {
+  align-items: center;
+  background: linear-gradient(160deg, var(--peach-100) 0%, var(--bg-page) 70%);
+  border: 1px solid var(--border-strong);
+}
+.lz-bild--symbol::after { display: none; }
+.lz-bild--symbol img,
+.lz--an .lz-bild--symbol img {
+  width: 200px;
+  height: 200px;
+  margin: 0;
+  object-fit: contain;
+}
+.lz--an .lz-bild--symbol { min-height: 340px; }
+@media (max-width: 899px) {
+  .lz--an .lz-bild--symbol { min-height: 0; padding: var(--space-6) 0 var(--space-4); }
+  .lz-bild--symbol img,
+  .lz--an .lz-bild--symbol img { width: 112px; height: 112px; margin: 0; }
+}

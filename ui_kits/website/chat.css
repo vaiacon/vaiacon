@@ -164,6 +164,15 @@
   .vc-chat__log { max-height: 46vh; }
   .vc-chat__fab { padding: 12px 18px; font-size: 14.5px; }
 }
+.vc-chat__fab-ico { display: none; }
+
+/* Handy: runder Knopf mit Sprechblase statt Pille mit Text, damit er weniger
+   von der Seite verdeckt (Ergänzung 2026-10-13). */
+@media (max-width: 640px) {
+  .vc-chat__fab { width: 52px; height: 52px; padding: 0; justify-content: center; box-shadow: 4px 4px 0 rgba(28, 22, 19, 0.85); }
+  .vc-chat__fab-dot, .vc-chat__fab-text { display: none; }
+  .vc-chat__fab-ico { display: block; width: 24px; height: 24px; }
+}
 
 /* Wer das Anheben nicht will, bekommt es ohne Bewegung. */
 @media (prefers-reduced-motion: reduce) {

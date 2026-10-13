@@ -174,3 +174,19 @@
     .lr-format, .lr-format:nth-child(5), .lr-format:nth-child(7) { grid-column: auto / span 1; }
   }
 }
+
+/* ── Formate kompakt (Ergänzung 2026-10-13) ─────────────────────────────
+   Sieben Kacheln mit Symbol im Stil der Branchen-Symbole
+   (assets/formate/*.webp), ohne Roboter. */
+.lr-fx { max-width: 960px; margin: var(--space-11) auto 0; }
+.lr-fx__liste { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-3); text-align: left; }
+.lr-fx__item { display: flex; align-items: center; gap: var(--space-4); padding: var(--space-3) var(--space-4); border: 1px solid var(--border-strong); border-radius: var(--radius-lg); background: var(--surface-card); scroll-margin-top: 96px; }
+.lr-fx__item:target { border-color: var(--terra-500); box-shadow: 0 0 0 2px var(--peach-200); }
+.lr-fx__ico { flex: none; width: 64px; height: 64px; object-fit: contain; }
+.lr-fx__item h3 { margin: 0 0 2px; color: var(--text-strong); font-size: 16.5px; line-height: var(--leading-snug); font-weight: var(--weight-semibold); }
+.lr-fx__item p { margin: 0; color: var(--text-body); font-size: var(--text-body-sm); line-height: var(--leading-body); }
+.lr-fx__item:last-child:nth-child(odd) { grid-column: 1 / -1; }
+@media (max-width: 640px) {
+  .lr-fx__liste { grid-template-columns: minmax(0, 1fr); }
+  .lr-fx__ico { width: 52px; height: 52px; }
+}

@@ -22,6 +22,11 @@
     coaching: 'journey-coaching',
     wirkung: 'academy-schreibtisch'
   };
+  /* Symbol je Rolle (assets/formate/*.webp, Stil der Branchen-Symbole), seit 2026-10-13 statt Roboter. */
+  var SYMBOL = {
+    standort: 'standort', auftakt: 'change', training: 'training', video: 'video', mikro: 'mikro',
+    elearning: 'elearning', vorort: 'vor-ort', coaching: 'coaching', wirkung: 'standort'
+  };
   var ALT = {
     standort: 'Der vaiacon-Roboter hält ein Tablet in der Hand',
     auftakt: 'Der vaiacon-Roboter heisst mit offener Hand willkommen',
@@ -149,7 +154,7 @@
 
     L.push({
       bild: 'mikro', rolle: 'Täglich', titel: 'Tägliche kleine Lerneinheiten',
-      text: 'An 20 Arbeitstagen jeweils drei bis fünf Minuten: ein Tipp, eine Übung am eigenen Fall, eine Frage vom Roboter. Vier Wochen lang, am Arbeitsplatz oder auf dem Smartphone.' + z.zusatz,
+      text: 'An 20 Arbeitstagen jeweils drei bis fünf Minuten: ein Tipp, eine Übung am eigenen Fall, eine kurze Kontrollfrage. Vier Wochen lang, am Arbeitsplatz oder auf dem Smartphone.' + z.zusatz,
       mess: { art: 'Zwischenstand', text: 'Die Antworten auf die tägliche Frage zeigen laufend, was sitzt. Nach zwei Wochen sehen Sie, wo das Team steht. Wir passen die Übungen dort an, wo noch Unterstützung nötig ist.' },
       formate: ['kk-mikro-lerneinheiten'], ids: ['kk-mikro-lerneinheiten']
     });
@@ -237,10 +242,9 @@
         ? '<div class="lz-mess"><p class="lz-mess__kopf"><span class="lz-fahne" aria-hidden="true"></span>Messpunkt · ' + esc(st.mess.art) + '</p><p>' + esc(st.mess.text) + '</p></div>'
         : '';
       h += '<article class="lz-tafel' + (st.mess ? ' lz-tafel--mess' : '') + '" data-station>' +
-        '<figure class="lz-bild"><picture>' +
-          '<source srcset="' + basis + 'assets/vaiacon-buerobot-' + BILD[st.bild] + '.webp" type="image/webp">' +
-          '<img src="' + basis + 'assets/vaiacon-buerobot-' + BILD[st.bild] + '.png" alt="' + esc(ALT[st.bild]) + '" loading="lazy" decoding="async">' +
-        '</picture></figure>' +
+        '<figure class="lz-bild lz-bild--symbol">' +
+          '<img src="' + basis + 'assets/formate/' + SYMBOL[st.bild] + '.webp?v=20261013" alt="" width="320" height="320" loading="lazy" decoding="async">' +
+        '</figure>' +
         '<div class="lz-text">' +
           '<p class="lz-zeit"><span class="lz-zeit__nr">' + (i + 1) + '</span>' + esc(wochenLabel(i, L.length, total, st.rolle)) + ' · ' + esc(st.rolle) + '</p>' +
           '<h3>' + esc(st.titel) + '</h3>' +

@@ -125,13 +125,13 @@
   /* ---------- Kopfzeile ---------- */
   var kopf = el('header', 'vn');
   kopf.id = 'vn';
-  var hell = !!document.querySelector('.ea-wrap, #root .ea-wrap, [data-nav-hell]') || /erstanalyse/.test(rel);
+  var hell = !!document.querySelector('.ea-wrap, #root .ea-wrap') || /erstanalyse/.test(rel);
   if (hell) kopf.className += ' vn--hell';
 
   var h = '<div class="vn-leiste">' +
     '<a class="vn-logo" href="' + wurzel + '" aria-label="vaiacon Start">' +
-    '<img class="vn-logo__hell l3d" src="' + wurzel + 'assets/blender/logo-3d/lockup-hell-2x.webp" srcset="' + wurzel + 'assets/blender/logo-3d/lockup-hell-1x.webp 1x, ' + wurzel + 'assets/blender/logo-3d/lockup-hell-2x.webp 2x" alt="" width="220" height="45">' +
-    '<img class="vn-logo__dunkel l3d" src="' + wurzel + 'assets/blender/logo-3d/lockup-2x.webp" srcset="' + wurzel + 'assets/blender/logo-3d/lockup-1x.webp 1x, ' + wurzel + 'assets/blender/logo-3d/lockup-2x.webp 2x" alt="vaiacon" width="220" height="45"></a>' +
+    '<img class="vn-logo__hell" src="' + wurzel + 'assets/logo-lockup-white.svg" alt="" width="214" height="39">' +
+    '<img class="vn-logo__dunkel" src="' + wurzel + 'assets/logo-lockup-terra.svg" alt="vaiacon" width="214" height="39"></a>' +
     '<nav class="vn-haupt" aria-label="Hauptnavigation"><ul class="vn-liste">';
   var MEHR_GRUPPE = { id: 'mehr', seite: null, titel: 'Mehr', text: 'Wer wir sind und was sich in der KI-Welt tut.',
     spalten: [{ titel: 'Firma und Wissen', breit: true, punkte: MEHR.map(function (m) { return [m[0], m[1], m[2]]; }) }] };
@@ -169,7 +169,7 @@
   voll.setAttribute('aria-modal', 'true');
   voll.setAttribute('aria-label', 'Menü');
   var v = '<div class="vn-voll__kopf">' +
-    '<a class="vn-voll__logo" href="' + wurzel + '" aria-label="vaiacon Start"><img class="l3d" src="' + wurzel + 'assets/blender/logo-3d/lockup-2x.webp" srcset="' + wurzel + 'assets/blender/logo-3d/lockup-1x.webp 1x, ' + wurzel + 'assets/blender/logo-3d/lockup-2x.webp 2x" alt="vaiacon" width="220" height="45"></a>' +
+    '<a class="vn-voll__logo" href="' + wurzel + '" aria-label="vaiacon Start"><img src="' + wurzel + 'assets/logo-lockup-terra.svg" alt="vaiacon" width="214" height="39"></a>' +
     '<button class="vn-voll__zu" type="button">Schliessen <span aria-hidden="true">×</span></button></div>' +
     '<div class="vn-voll__inhalt"><ul class="vn-v-liste">';
   MENUE.forEach(function (g) {
@@ -506,13 +506,13 @@
         if (istTerracotta(getComputedStyle(e))) dunkleFlaechen.push(e);
       });
     };
-    var eintraege = [].slice.call(seitlich.querySelectorAll('.vn-seite__kopf, .vn-seite__unter li'));
+    var randEintraege = [].slice.call(seitlich.querySelectorAll('.vn-seite__kopf, .vn-seite__unter li'));
     var farbeGeplant = false;
     var farbeSetzen = function () {
       farbeGeplant = false;
       if (!seitlich.classList.contains('ist-sichtbar')) return;
       var rects = dunkleFlaechen.map(function (e) { return e.getBoundingClientRect(); });
-      eintraege.forEach(function (e) {
+      randEintraege.forEach(function (e) {
         var r = e.getBoundingClientRect(), mitte = r.top + r.height / 2, dunkel = false;
         for (var i = 0; i < rects.length; i++) if (mitte >= rects[i].top && mitte < rects[i].bottom) { dunkel = true; break; }
         if (e.classList.contains('auf-dunkel') !== dunkel) e.classList.toggle('auf-dunkel', dunkel);

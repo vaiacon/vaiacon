@@ -20,14 +20,14 @@
 <link rel="stylesheet" href="styles.css?v=20261005-vorschlag">
 <link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20261005-vorschlag">
 <link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261009-fakten-versteckt">
-<link rel="stylesheet" href="ui_kits/website/chat.css?v=20261004-vaia-fuss">
-<link rel="stylesheet" href="ui_kits/website/preismatrix.css?v=20261013-nervt2">
+<link rel="stylesheet" href="ui_kits/website/chat.css?v=20261013-handy">
+<link rel="stylesheet" href="ui_kits/website/preismatrix.css?v=20261011-haarlinie3">
 <link rel="stylesheet" href="ui_kits/website/automationen.css?v=20261011-karten-schmal">
 <link rel="icon" href="favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="stylesheet" href="ui_kits/website/abschluss.css">
-<link rel="stylesheet" href="ui_kits/website/branchenseite.css?v=20261012-nav18-3d">
+<link rel="stylesheet" href="ui_kits/website/branchenseite.css?v=20261012-nav17">
 <!-- Strukturdaten: erzeugt von scripts/strukturdaten.py, nicht von Hand aendern -->
 <script type="application/ld+json">
 {
@@ -239,7 +239,7 @@
 }
 </script>
 <!-- Strukturdaten Ende -->
-  <link rel="stylesheet" href="ui_kits/website/navigation.css?v=20261012-nav18-3d">
+  <link rel="stylesheet" href="ui_kits/website/navigation.css?v=20261012-nav17">
 </head>
 <body>
 <a class="sv-skip" href="#inhalt">Zum Inhalt springen</a>
@@ -380,7 +380,6 @@
             </div>
           </div>
           <div class="pm-regeln">
-            <p>Betreuung auf Wunsch: Überwachung, Fehlerbehebung und laufende Anpassungen für alle Automationen und Chatbots, die wir für Sie gebaut haben.</p>
             <details class="pm-regeln__auf">
               <summary>Was gehört zu welcher Grösse?</summary>
               <p><b>Einfache Automation</b>, zum Beispiel der kleine Ablauf: Ein Auslöser, eine Regel, ein Zielprogramm (das Programm, in dem das Ergebnis landet), ohne weitere Anbindung.</p>
@@ -390,13 +389,11 @@
             <details class="pm-regeln__auf">
               <summary>Wann ist ein Ablauf abgenommen?</summary>
               <p>Abgenommen ist ein Ablauf, wenn der Normalfall, fehlende und falsche Daten, ein Schnittstellenausfall und eine Doppelauslösung geprüft sind und die Rechte stimmen.</p>
-              <p>Doppelauslösung heisst: Dasselbe Ereignis kommt zweimal an, etwa eine Rechnung, die zweimal gemailt wird. Der Ablauf darf sie trotzdem nur einmal verarbeiten.</p>
-              <p>Mängel beheben wir 90 Tage nach der Übergabe ohne Rechnung.</p>
             </details>
           </div>
           <div class="pm-anbindung" id="anbindungen">
             <h3 class="pm-anbindung__titel">Anbindungen</h3>
-            <p class="pm-anbindung__lead">Wenn eine Automation ein weiteres Programm braucht, kommt die Anbindung dazu. Es gibt zwei Wege: den Standard-Connector, also eine fertige Verbindung zwischen Programmen, oder eine individuelle Anbindung.</p>
+            <p class="pm-anbindung__lead">Braucht eine Automation ein weiteres Programm, kommt eine Anbindung dazu: Standard-Connector (fertige Verbindung) oder individuell.</p>
             <ul class="pm-anbindung__liste">
               <li>
                 <p class="pm-anbindung__kopf"><b>Anbindung, Standard-Connector</b></p>
@@ -437,7 +434,7 @@
           <p class="sv-kicker">IHR FALL</p>
           <h2 class="sv-title" id="if-titel">Ihr Fall in zwei Sätzen.</h2>
           <p class="sv-lead">
-            Beschreiben Sie, was bei Ihnen jede Woche Zeit frisst. Unsere Einordnung bekommen Sie per E-Mail: welcher Umfang zu Ihrem Fall passt, und ob ein Standard reicht oder es individuell wird. Das Angebot schauen wir danach persönlich mit Ihnen an.
+            Beschreiben Sie, was bei Ihnen jede Woche Zeit frisst. Die Einordnung kommt per E-Mail: welcher Umfang passt, Standard oder individuell.
           </p>
           <ol class="if__schritte" aria-label="So läuft es">
             <li><span>1</span>Beschreiben</li>
@@ -452,7 +449,7 @@
           </div>
           <textarea id="if-text" name="wunsch" rows="4" maxlength="1500" aria-describedby="if-zaehler if-hinweis" placeholder="Bei uns kommen Rechnungen per Mail, jemand druckt sie aus und tippt sie in die Buchhaltung …"></textarea>
           <div class="if__kontakt" id="if-kontakt" hidden>
-            <p class="if__kontakt-satz">An diese Adresse schicken wir die Einordnung. Die Telefonnummer brauchen wir, falls etwas unklar ist:</p>
+            <p class="if__kontakt-satz">Telefon nur für Rückfragen:</p>
             <div class="if__felder">
               <label class="if__feld"><span>E-Mail</span><input type="email" id="if-mail" name="mail" autocomplete="email" inputmode="email" maxlength="160" placeholder="name@firma.ch"></label>
               <label class="if__feld"><span>Telefon</span><input type="tel" id="if-telefon" name="telefon" autocomplete="tel" inputmode="tel" maxlength="60" placeholder="044 123 45 67"></label>
@@ -462,13 +459,13 @@
             <p class="if__zaehler" id="if-zaehler"><span id="if-n">0</span> Zeichen, mindestens 20</p>
             <button type="submit" class="sv-button sv-button--cta" id="if-knopf">Einordnung anfordern</button>
           </div>
-          <p class="if__hinweis" id="if-hinweis">Ihre Beschreibung geht zusammen mit Ihren Kontaktangaben als Anfrage an uns. Die Einordnung schicken wir an Ihre E-Mail. Wir antworten in der Regel innert eines Arbeitstages.</p>
+          <p class="if__hinweis" id="if-hinweis">Wir antworten in der Regel innert eines Arbeitstages.</p>
           <p class="if__fehler" id="if-fehler" role="alert" hidden></p>
         </form>
         <div class="if__danke" id="if-danke" hidden role="status">
           <p class="if__kopf"><span class="if__kicker">Unterwegs</span></p>
           <p class="if__satz">Die Einordnung ist unterwegs.</p>
-          <p class="if__danke-text">Sie bekommen sie an <strong id="if-danke-mail"></strong>, in der Regel innert eines Arbeitstages. Wir melden uns, wenn etwas offen ist.</p>
+          <p class="if__danke-text">Sie bekommen sie an <strong id="if-danke-mail"></strong>, in der Regel innert eines Arbeitstages.</p>
           <p class="if__fuss">Eine Einordnung, keine verbindliche Offerte. Ob Standard oder individuell, klären wir gemeinsam in der Erstanalyse.</p>
         </div>
       </div>
@@ -503,9 +500,9 @@
 <script src="ui_kits/website/api-basis.js?v=20261004-umbau"></script>
 <script src="ui_kits/website/visibility.js?v=20261007-logo-svg"></script>
 <script src="ui_kits/website/preismatrix.js?v=20261010-ohne-detail"></script>
-<script src="ui_kits/website/branchen.js?v=20261012-nav18-3d"></script>
+<script src="ui_kits/website/branchen.js?v=20261012-nav17"></script>
 <script src="ui_kits/website/ihrfall.js?v=20261010-mail"></script>
-<script src="ui_kits/website/chat.js?v=20261004-umbau"></script>
-<script src="ui_kits/website/navigation.js?v=20261013-ohne-bausteine" defer></script>
+<script src="ui_kits/website/chat.js?v=20261013-handy"></script>
+<script src="ui_kits/website/navigation.js?v=20261013-menue-handy" defer></script>
 </body>
 </html>
