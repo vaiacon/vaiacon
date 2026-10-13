@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 13.10.2026 · Eintrag 055da5e Kontakt: Absatz «Lieber zuerst selbst prüfen?» entfernt
+> Stand: 13.10.2026 · Eintrag 10eefd6 Kopfzeile: eigener Reiter Assistenten
 
 ## Wie du antwortest
 
@@ -344,6 +344,14 @@ Mittelgrosse Automation: Mittlere Abläufe verbinden Programme oder ergänzen ei
 Komplette Automation , zum Beispiel der Auftragsablauf: Anfrage, Offerte, Auftrag, Rechnung mit bis zu drei Programmen über fertige Verbindungen (Standard-Connectoren), Daten je Programm in eine Richtung, bis 15 Felder je Übergabe. Rückmeldungen an ein Programm, Altsysteme und weitere Programme sind zusätzliche Anbindungen.
 Wann ist ein Ablauf abgenommen?
 Abgenommen ist ein Ablauf, wenn der Normalfall, fehlende und falsche Daten, ein Schnittstellenausfall und eine Doppelauslösung geprüft sind und die Rechte stimmen.
+TELEFON UND CHAT
+Erreichbar, auch wenn niemand abnehmen kann.
+Wir richten bei Ihnen einen Telefon-Assistenten und einen Chatbot mit Firmenwissen ein: aus einer Hand, nach Schweizer Datenschutz.
+Telefon-Assistent
+Nimmt Anrufe entgegen, beantwortet Fragen, erfasst Termine und Rückrufe und verbindet bei Bedarf weiter.
+Chatbot mit Firmenwissen
+Beantwortet Fragen auf Ihrer Website oder im Team aus Ihren eigenen Unterlagen.
+Mehr zu Telefon und Chatbot →
 IHR FALL
 Ihr Fall in zwei Sätzen.
 Beschreiben Sie, was bei Ihnen jede Woche Zeit frisst. Die Einordnung kommt per E-Mail: welcher Umfang passt, Standard oder individuell.
@@ -362,6 +370,51 @@ Unterwegs
 Die Einordnung ist unterwegs.
 Sie bekommen sie an , in der Regel innert eines Arbeitstages.
 Eine Einordnung, keine verbindliche Offerte. Ob Standard oder individuell, klären wir gemeinsam in der Erstanalyse.
+
+### Telefon-Assistent und Chatbot mit Firmenwissen
+
+Zum Inhalt springen
+TELEFON-ASSISTENT UND CHATBOT
+Ihr Betrieb ist erreichbar. Auch wenn gerade niemand abnehmen kann.
+Wir richten bei Ihnen einen Telefon-Assistenten ein, der Anrufe entgegennimmt, und einen Chatbot, der Fragen aus Ihren eigenen Unterlagen beantwortet. Aus einer Hand: einrichten, abstimmen, anbinden, testen und betreuen.
+Erstgespräch vereinbaren →
+Telefon-Assistent ansehen →
+Kurz gesagt
+Für wen
+Schweizer KMU, bei denen Anrufe und immer gleiche Kundenfragen Zeit kosten.
+Telefon-Assistent
+Der Telefon-Assistent nimmt Anrufe entgegen, beantwortet Fragen, erfasst das Anliegen, nimmt einen Termin oder Rückruf auf und verbindet bei Bedarf mit einer Person in Ihrem Betrieb weiter. Er spricht in natürlicher Stimme Schweizer Hochdeutsch und kann auf Wunsch Mundart verstehen.
+Chatbot mit Firmenwissen
+Der Chatbot beantwortet Fragen auf Ihrer Website oder intern im Team aus Ihren eigenen Unterlagen: Preislisten, häufige Fragen, Handbücher und Abläufe. Er antwortet, er handelt nicht.
+Aus einer Hand
+Einrichtung, Wissen einpflegen, Stimme und Ton abstimmen, Anbindung an Kalender, Kundenverwaltung und Telefonanlage, Tests und Betreuung.
+Datenschutz
+Nach dem Schweizer Datenschutzgesetz (revDSG): Wahl des Hostings, keine Gesprächsdaten ohne Zweck, Hinweis an Anrufende.
+Region
+Gesamte Deutschschweiz
+TELEFON-ASSISTENT
+Jeder Anruf wird angenommen.
+Auch in der Mittagspause oder wenn Sie beim Kunden sind.
+✓ Beantwortet häufige Fragen
+✓ Nimmt Termin oder Rückruf auf
+✓ Verbindet bei Bedarf weiter
+✓ Meldung per E-Mail oder Kalender
+Schweizer Hochdeutsch, Mundart auf Wunsch (vorab getestet).
+CHATBOT MIT FIRMENWISSEN
+Antworten aus Ihren eigenen Unterlagen.
+Fragen auf Ihrer Website oder im Team, beantwortet aus Ihren Dokumenten.
+✓ Antwortet aus Ihren Unterlagen
+✓ Sagt offen, wenn er etwas nicht weiss
+✓ Offene Fälle per E-Mail an Sie
+✓ Bleibt aktuell, wir pflegen nach
+Beantwortet Fragen, löst aber keine Bestellungen oder Buchungen aus.
+AUS EINER HAND
+Wir richten ein und betreuen.
+Von der Einrichtung bis zum laufenden Betrieb haben Sie eine Ansprechperson. Daten bearbeiten wir nach dem Schweizer Datenschutzgesetz (revDSG).
+NÄCHSTER SCHRITT
+Erzählen Sie uns, wer bei Ihnen anruft.
+Im kostenlosen Erstgespräch klären wir, ob sich ein Telefon-Assistent, ein Chatbot oder beides für Ihren Betrieb lohnt.
+Erstgespräch vereinbaren →
 
 ### Begleitung
 
