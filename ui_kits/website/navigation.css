@@ -297,3 +297,6 @@ html.vn-sperre, html.vn-sperre body { overflow: hidden; }
   .vn-seite__unter a:hover { transform: none; }
   .vn-seite__unter a[aria-current]::before { animation: none; }
 }
+
+/* Handy: «Nach oben» nicht unter dem runden Vaia-Knopf (13.10.2026) */
+@media (max-width: 679px) { .vb-fuss .vb-fuss__basis { padding-right: 72px; } }
