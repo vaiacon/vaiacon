@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 13.10.2026 · Eintrag b89fa12 Kontakt: Links in «So erreichen Sie uns» je in eigenem Absatz
+> Stand: 13.10.2026 · Eintrag 055da5e Kontakt: Absatz «Lieber zuerst selbst prüfen?» entfernt
 
 ## Wie du antwortest
 
@@ -86,32 +86,10 @@ Automationen
 Anhalten
 WILLKOMMEN
 Wer hinter vaiacon steht
-Philip Krieger und André Ulrich haben vaiacon gegründet, um Schweizer KMU persönlich zu begleiten.
+Philip Krieger und André Ulrich haben vaiacon gegründet, um Schweizer KMU persönlich zu begleiten. KI ist für uns das Werkzeug, nicht das Produkt. Wo sich etwas nicht rechnet, sagen wir das.
 Philip Krieger Mitgründer, Technik und Coaching
 André Ulrich Mitgründer, Strategie und Marketing
 Mehr über uns →
-ORIENTIERUNG
-Wo ist der Bedarf am grössten?
-«Mein Team nutzt KI selten und nicht gezielt.»
-KI-Kompetenz →
-«Wir sind online unsichtbar.»
-Sichtbarkeit →
-«Wir verlieren viel Zeit mit wiederkehrenden Aufgaben.»
-Automationen →
-«Ich weiss nicht, wo ich anfangen soll.»
-Erstgespräch →
-WOFÜR WIR STEHEN
-KI ist für uns nicht das Produkt, sondern das Werkzeug.
-Wir verkaufen keine Technik, sondern Wissen im Team, Auffindbarkeit und zurückgewonnene Zeit. Wo sich etwas nicht rechnet, sagen wir das.
-HÄUFIGE FRAGEN
-Kurz beantwortet.
-Alle Fragen und Antworten →
-Was macht vaiacon? +
-vaiacon führt Schweizer KMU an KI heran, in drei Bereichen: KI-Kompetenz (Ihr Team lernt, KI sicher einzusetzen), Sichtbarkeit (wir verbessern die Voraussetzungen dafür, dass Google und KI-Assistenten Ihr Angebot richtig einordnen) und Automationen (wiederkehrende Büroarbeit wird automatisch vorbereitet). Auf Wunsch begleiten wir das Ganze laufend. Unser Büro ist in Zürich, wir arbeiten für Betriebe in der gesamten Deutschschweiz.
-Für wen ist vaiacon gedacht? +
-Am meisten bewirken wir in Betrieben mit 5 bis 30 Mitarbeitenden und eigenem Büro, etwa im Handwerk, in Treuhandbüros, Praxen und Verwaltungen. Dort fällt genug Büroarbeit an, damit sich eine Automation oder eine Schulung rechnet.
-Wie beginnt eine Zusammenarbeit? +
-Am Anfang steht ein unverbindliches Gespräch am Telefon oder am Bildschirm. Danach klären wir, ob KI-Kompetenz, Sichtbarkeit, Automationen, Begleitung oder eine Kombination davon sinnvoll ist.
 NÄCHSTER SCHRITT
 Welche vaiacon-Lösung passt zu Ihrem Betrieb?
 Eine halbe Stunde, kostenlos: Wir klären, ob KI-Kompetenz, Sichtbarkeit, Automationen oder eine Kombination der richtige Schritt ist.
