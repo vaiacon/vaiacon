@@ -200,12 +200,13 @@
 
 /* ───── Weisse Fassung (?weiss): weisses Logo auf dunklem Terracotta-Verlauf ───── */
 .bl-weiss {
-  --bl-grund: radial-gradient(120% 85% at 50% 36%, #A64B2A 0%, #8A3A1E 42%, #5C2412 100%);
+  /* frischer, aber rot bleibend (Farbton 12-15°, nicht Richtung Orange); Rand nur leicht dunkler */
+  --bl-grund: radial-gradient(120% 85% at 50% 36%, #BC5634 0%, #A2432A 42%, #7F301B 100%);
 }
-.bl-weiss .bl-szene { background: #5C2412 var(--bl-grund); color: #FFFDF8; }
-.bl-weiss .bl-an .bl-szene__sticky,
-.bl-weiss .bl-szene.bl-an .bl-szene__sticky { background: var(--bl-grund); }
-.bl-weiss .bl-szene.bl-an { background: #5C2412; }
+.bl-weiss .bl-szene { background: #7F301B var(--bl-grund); color: #FFFDF8; }
+/* Bühne über die ganze Breite: sonst steht neben den 1240 px ein dunkler Streifen */
+.bl-weiss .bl-szene.bl-an .bl-szene__sticky { width: 100%; background: var(--bl-grund); }
+.bl-weiss .bl-szene.bl-an { background: #7F301B; }
 .bl-weiss:not(.bl-weiss-bild) .bl-szene__still { visibility: hidden; }
 .bl-weiss .bl-kicker { color: #F4C3A6; }
 .bl-weiss .bl-headline { color: #FFFDF8; }
