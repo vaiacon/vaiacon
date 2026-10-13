@@ -58,8 +58,7 @@
           ['visibility#check', 'Website-Check', 'Wie gut ist Ihre Website für Google und KI-Assistenten vorbereitet?'],
           ['visibility#einfach-erklaert', 'Einfach erklärt', 'Sichtbarkeit beginnt damit, dass Ihr Angebot verstanden wird.'],
           ['visibility#seo', 'SEO', 'Damit Google Ihr Angebot einordnen kann.'],
-          ['visibility#geo', 'GEO', 'Damit KI-Assistenten Ihre Firma verstehen.'],
-          ['visibility#ablauf', 'Ablauf', 'So wird aus Sichtbarkeit ein System.']
+          ['visibility#geo', 'GEO', 'Damit KI-Assistenten Ihre Firma verstehen.']
         ] }
       ] }
   ];
@@ -365,6 +364,9 @@
     .map(function (z) { return [document.getElementById(z[0]), z[1], z[0]]; })
     .filter(function (z) { return z[0]; });
   if (ziele.length < 2) ziele = [];
+  /* Keine Seitennavigation (Randliste links, Knopfreihe unter dem Titel), die Navigation oben reicht (Philips Wunsch 13.10.2026) */
+  var RANDNAVI = false;
+  if (!RANDNAVI) ziele = [];
 
   var haupt = MENUE.map(function (g) { return [g.seite, g.titel, g.seite]; })
     .concat(MEHR.map(function (m) { return [m[0], m[1], m[3]]; }));
@@ -414,7 +416,7 @@
   var SPEICHER = 'vn-seite-offen';
   var gemerkt = function () { try { return JSON.parse(sessionStorage.getItem(SPEICHER)) || {}; } catch (e) { return {}; } };
   var merken = function (id, offen) { try { var m = gemerkt(); m[id] = offen; sessionStorage.setItem(SPEICHER, JSON.stringify(m)); } catch (e) { /* ohne Speicher */ } };
-  if (seite !== '404') {
+  if (RANDNAVI && seite !== '404') {
     seitlich = el('nav', 'vn-seite');
     seitlich.setAttribute('aria-label', 'Seitenübersicht');
     var sh = '<ul class="vn-seite__haupt">', nr = 0, vorher = gemerkt();
