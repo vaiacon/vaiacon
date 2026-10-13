@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 13.10.2026 · Eintrag e9ab5a7 /bot: Kasten «Anbindungen» entfernt
+> Stand: 13.10.2026 · Eintrag f58f85a Bot-Wissen: Stand nach Themen Top 10, ohne Kurzfilm und Anbindungen
 
 ## Wie du antwortest
 
@@ -106,17 +106,6 @@ KI-Standort bestimmen →
 WOFÜR WIR STEHEN
 KI ist für uns nicht das Produkt, sondern das Werkzeug.
 Wir verkaufen keine Technik, sondern Wissen im Team, Auffindbarkeit und zurückgewonnene Zeit. Wo sich etwas nicht rechnet, sagen wir das.
-SO FÄNGT ES AN
-So beginnt die Zusammenarbeit.
-01
-Erstgespräch
-Eine halbe Stunde am Telefon oder am Bildschirm. Was kostet heute am meisten Zeit, was wurde schon versucht, wo ist der grösste Handlungsbedarf? Kostenlos und unverbindlich.
-02
-Empfehlung
-Sie erhalten von uns einen schriftlichen Vorschlag, was wir umsetzen würden. Wenn sich keine Massnahme lohnt, sagen wir Ihnen das.
-03
-Umsetzung in Ihrem Tempo
-Nach Ihrer Freigabe setzen wir die vereinbarte Lösung um. Wir fangen klein an, mit einer Massnahme, die trägt. Alles Weitere entscheiden Sie, wenn Sie den Nutzen gesehen haben. Auf Wunsch begleiten wir Sie danach weiter .
 HÄUFIGE FRAGEN
 Kurz beantwortet.
 Alle Fragen und Antworten →

@@ -207,7 +207,6 @@
     offenId = id;
     fest = id ? !!istFest : false;
     kopf.classList.toggle('hat-offen', !!id);
-    if (id) zeigen();
   }
   function schliessen(fokus) {
     var vorher = offenId;
@@ -306,27 +305,20 @@
   if (schmal.addEventListener) schmal.addEventListener('change', breiteWechsel);
   else if (schmal.addListener) schmal.addListener(breiteWechsel);
 
-  /* ---------- Pille und Wegsgleiten ---------- */
-  var letzteY = Math.max(0, window.pageYOffset || 0), pille = false, weg = false, wartet = false;
-  function zeigen() { weg = false; kopf.classList.remove('vn--weg'); }
+  /* ---------- Pille (bleibt beim Scrollen immer sichtbar, Philips Wunsch 13.10.2026) ---------- */
+  var letzteY = Math.max(0, window.pageYOffset || 0), pille = false, wartet = false;
   function beiScroll() {
     wartet = false;
     var y = Math.max(0, window.pageYOffset || 0);
     if (!pille && y > 40) pille = true;
     else if (pille && y < 20) pille = false;
     kopf.classList.toggle('vn--pille', pille);
-    var gehalten = vOffen || offenId || kopf.contains(document.activeElement) && kopf.matches(':focus-within');
-    if (gehalten || y <= 200) weg = false;
-    else if (y > letzteY) weg = true;
-    else if (y < letzteY) weg = false;
-    kopf.classList.toggle('vn--weg', weg);
     if (offenId && y > letzteY + 4 && !fest) setze(null);
     letzteY = y;
   }
   window.addEventListener('scroll', function () {
     if (!wartet) { wartet = true; requestAnimationFrame(beiScroll); }
   }, { passive: true });
-  kopf.addEventListener('focusin', zeigen);
   beiScroll();
 
   /* ---------- Fusszeile ---------- */
