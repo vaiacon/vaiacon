@@ -121,7 +121,7 @@
 }
 
 /* Schmalerer Roboter (Seitenverhältnis 529:820): gleiche Höhe wie die übrigen */
-#st-ass .st-bild { --bf: 0.776; }
+#st-ass .st-bild { --bf: 0.88; }
 
 .st-bild img {
   display: block;
