@@ -2594,3 +2594,285 @@ picture {
   margin-top: var(--space-4);
   margin-bottom: var(--space-6);
 }
+
+/* ── Ergänzung 2026-10-13: Check-Eyecatcher ─────────────────────────────
+   Philip: «der Bereich ist sonst fahl und langweilig». Drei Akzente:
+   1) #check: Pfirsich-Fläche mit Terra-Streifen, Eingabe links, rechts eine
+      Muster-Karte (Ring zählt auf 72, fünf Balken füllen sich). Die Karte
+      verschwindet, sobald der echte Check lädt oder der Bericht steht.
+   2) Ergebnis-Karten mit Symbolen im Branchen-Stil.
+   3) Ablauf 01–04 als Terra-Kreise mit Verbindungslinie. */
+
+.sv-section--check {
+  position: relative;
+  background: linear-gradient(180deg, var(--peach-100) 0%, var(--peach-100) 70%, var(--bg-page) 100%);
+}
+
+.sv-section--check::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 6px;
+  background: linear-gradient(90deg, var(--terra-600), var(--terra-500) 60%, var(--peach-200));
+}
+
+.sv-cx {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 25rem);
+  align-items: center;
+  gap: var(--space-9);
+  width: min(100%, 60rem);
+  margin: var(--space-9) auto 0;
+}
+
+.sv-cx__eingabe {
+  text-align: left;
+}
+
+.sv-cx__eingabe .sv-check__form {
+  width: 100%;
+  margin: 0;
+  justify-content: flex-start;
+}
+
+.sv-cx__eingabe .sv-check__feld {
+  flex: 1 1 16rem;
+}
+
+.sv-cx__details {
+  margin-top: var(--space-4);
+  font-size: var(--text-body-sm);
+  color: var(--brown-600);
+}
+
+.sv-cx__details summary {
+  cursor: pointer;
+  width: fit-content;
+  font-weight: var(--weight-semibold);
+  color: var(--terra-600);
+}
+
+.sv-cx__details p {
+  margin: var(--space-2) 0 0;
+  line-height: var(--leading-body);
+}
+
+/* Muster-Karte */
+.sv-cx__muster {
+  position: relative;
+  padding: var(--space-6);
+  background: var(--surface-card);
+  border: 2px solid var(--border-ink);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-comic);
+  text-align: left;
+}
+
+.sv-cx__stempel {
+  position: absolute;
+  top: -14px;
+  right: 18px;
+  margin: 0;
+  padding: 4px 12px;
+  font-family: var(--font-mono);
+  font-size: var(--text-overline);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-badge);
+  text-transform: uppercase;
+  color: var(--cream-50);
+  background: var(--terra-500);
+  border-radius: 999px;
+  transform: rotate(3deg);
+}
+
+.sv-cx__kopf {
+  display: flex;
+  align-items: center;
+  gap: var(--space-5);
+}
+
+.sv-cx__ring {
+  flex: 0 0 auto;
+  width: 6.5rem;
+  height: 6.5rem;
+}
+
+.sv-cx__ring-spur {
+  fill: none;
+  stroke: var(--sand-200);
+  stroke-width: 11;
+}
+
+.sv-cx__ring-wert {
+  fill: none;
+  stroke: var(--terra-500);
+  stroke-width: 11;
+  stroke-linecap: round;
+  stroke-dasharray: 326.73;
+  stroke-dashoffset: 91.48; /* 72 von 100 */
+  transition: stroke-dashoffset 1.4s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.sv-cx__ring-zahl {
+  font-family: var(--font-sans);
+  font-size: 36px;
+  font-weight: var(--weight-bold);
+  letter-spacing: -0.02em;
+  fill: var(--text-strong);
+}
+
+.sv-cx__ring-von {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  fill: var(--brown-600);
+}
+
+.sv-cx__titel {
+  margin: 0;
+  font-weight: var(--weight-semibold);
+  color: var(--text-strong);
+  line-height: var(--leading-snug);
+}
+
+.sv-cx__domain {
+  margin: 4px 0 0;
+  font-family: var(--font-mono);
+  font-size: var(--text-body-sm);
+  color: var(--brown-600);
+}
+
+.sv-cx__balken {
+  display: grid;
+  gap: 10px;
+  margin: var(--space-5) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sv-cx__balken li {
+  display: grid;
+  grid-template-columns: 9.5rem minmax(0, 1fr) 2rem;
+  align-items: center;
+  gap: var(--space-3);
+  font-size: var(--text-body-sm);
+  color: var(--text-body);
+}
+
+.sv-cx__spur {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--sand-200);
+  overflow: hidden;
+}
+
+.sv-cx__fuell {
+  display: block;
+  height: 100%;
+  width: var(--wert);
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--terra-600), var(--terra-500));
+  transition: width 0.9s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.sv-cx__balken li:nth-child(2) .sv-cx__fuell { transition-delay: 0.15s; }
+.sv-cx__balken li:nth-child(3) .sv-cx__fuell { transition-delay: 0.3s; }
+.sv-cx__balken li:nth-child(4) .sv-cx__fuell { transition-delay: 0.45s; }
+.sv-cx__balken li:nth-child(5) .sv-cx__fuell { transition-delay: 0.6s; }
+
+.sv-cx__wert {
+  font-family: var(--font-mono);
+  font-weight: var(--weight-semibold);
+  text-align: right;
+  color: var(--text-strong);
+}
+
+.sv-cx__fuss {
+  margin: var(--space-4) 0 0;
+  font-size: var(--text-overline);
+  color: var(--brown-600);
+}
+
+/* Startzustand vor dem Hineinscrollen (setzt nur das Skript) */
+.sv-cx--warten .sv-cx__ring-wert { stroke-dashoffset: 326.73; }
+.sv-cx--warten .sv-cx__fuell { width: 0; }
+
+/* Echter Check läuft oder Bericht steht: Muster weg, Eingabe in die Mitte */
+#check:has(#sv-check-ladend:not([hidden])) .sv-cx__muster,
+#check:has(#sv-check-report:not([hidden])) .sv-cx__muster {
+  display: none;
+}
+
+#check:has(#sv-check-ladend:not([hidden])) .sv-cx,
+#check:has(#sv-check-report:not([hidden])) .sv-cx {
+  grid-template-columns: minmax(0, 36rem);
+  justify-content: center;
+}
+
+@media (max-width: 860px) {
+  .sv-cx {
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--space-8);
+  }
+
+  .sv-cx__muster {
+    width: min(100%, 25rem);
+    justify-self: center;
+    box-sizing: border-box;
+  }
+}
+
+@media (max-width: 700px) {
+  .sv-cx__eingabe .sv-check__feld { flex: 0 0 auto; }
+  .sv-cx__muster { padding: var(--space-5); }
+  .sv-cx__ring { width: 5.5rem; height: 5.5rem; }
+  .sv-cx__balken li { grid-template-columns: 8rem minmax(0, 1fr) 1.75rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sv-cx__ring-wert,
+  .sv-cx__fuell { transition: none; }
+}
+
+/* Ergebnis-Karten mit Symbol */
+.sv-card--symbol {
+  display: flex;
+  flex-direction: column;
+}
+
+.sv-card__ico {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+}
+
+/* Ablauf: Terra-Kreise mit Verbindungslinie */
+#ablauf .sv-steps {
+  border-top: 0;
+}
+
+#ablauf .sv-steps li {
+  position: relative;
+  padding: 0;
+  border-bottom: 0;
+}
+
+#ablauf .sv-steps li:not(:last-child)::after {
+  content: "";
+  width: 2px;
+  height: var(--space-8);
+  margin: var(--space-2) 0;
+  background: linear-gradient(180deg, var(--terra-500), var(--peach-200));
+}
+
+#ablauf .sv-step__no {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background: var(--terra-500);
+  color: var(--cream-50);
+  font-size: var(--text-body);
+  box-shadow: 0 8px 18px -6px rgba(156, 69, 23, 0.55);
+}

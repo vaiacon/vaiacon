@@ -44,3 +44,31 @@
   window.addEventListener('scroll', syncHeader, { passive: true });
   syncHeader();
 }());
+
+// Muster-Karte im Check (Ergänzung 2026-10-13): Ring zählt beim Hineinscrollen
+// von 0 auf 72, die Balken füllen sich per CSS. Ohne Skript oder bei
+// reduzierter Bewegung steht der Endzustand sofort da.
+(function () {
+  var karte = document.getElementById('sv-cx-muster');
+  var zahl = document.getElementById('sv-cx-zahl');
+  if (!karte || !zahl || !('IntersectionObserver' in window)) return;
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var ziel = 72;
+  karte.classList.add('sv-cx--warten');
+  zahl.textContent = '0';
+  var beob = new IntersectionObserver(function (eintraege) {
+    if (!eintraege[0].isIntersecting) return;
+    beob.disconnect();
+    // ein Bild warten, damit der Startzustand gezeichnet ist und die Übergänge greifen
+    requestAnimationFrame(function () {
+      karte.classList.remove('sv-cx--warten');
+      var start = performance.now(), dauer = 1400;
+      (function schritt(jetzt) {
+        var t = Math.min(1, (jetzt - start) / dauer);
+        zahl.textContent = String(Math.round(ziel * (1 - Math.pow(1 - t, 3))));
+        if (t < 1) requestAnimationFrame(schritt);
+      })(start);
+    });
+  }, { threshold: 0.4 });
+  beob.observe(karte);
+})();

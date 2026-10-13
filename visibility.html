@@ -20,7 +20,7 @@
 <title>Sichtbarkeit bei Google und KI-Assistenten · vaiacon</title>
 <link rel="stylesheet" href="styles.css?v=20261005-vorschlag">
 <link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20261005-vorschlag">
-<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261011-preislogik2">
+<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261013-check-eyecatcher">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261013-handy">
 <link rel="stylesheet" href="ui_kits/website/kundenstimme.css?v=20261005-vorschlag">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -278,7 +278,7 @@
       </div>
     </section>
 
-    <section id="check" class="sv-section">
+    <section id="check" class="sv-section sv-section--check">
       <div class="sv-wrap">
         <div class="sv-center">
           <p class="sv-kicker">KOSTENLOSER WEBSITE-CHECK</p>
@@ -288,14 +288,47 @@
           </p>
         </div>
 
-        <form class="sv-check__form" id="sv-check-form" novalidate>
-          <label class="sv-check__feld">
-            <span class="sv-check__feld-label">Ihre Domain</span>
-            <input type="text" id="sv-check-domain" name="domain" placeholder="ihre-firma.ch" autocomplete="off" autocapitalize="none" spellcheck="false" inputmode="url" required>
-          </label>
-          <button class="sv-button sv-button--cta" type="submit" id="sv-check-knopf">Check starten →</button>
-        </form>
-        <p class="sv-check__hinweis">Kostenlos und unverbindlich, automatisch ausgewertet. Geprüft werden die Startseite, robots.txt, Sitemap, llms.txt sowie die verlinkte Kontakt- und Impressumsseite. Der Check dauert einige Minuten. Die Punkte sind eine Einschätzung, keine Zusage. Tiefer gehen die <a href="#stufen">bezahlten Prüfungen</a>.</p>
+        <div class="sv-cx">
+          <div class="sv-cx__eingabe">
+            <form class="sv-check__form" id="sv-check-form" novalidate>
+              <label class="sv-check__feld">
+                <span class="sv-check__feld-label">Ihre Domain</span>
+                <input type="text" id="sv-check-domain" name="domain" placeholder="ihre-firma.ch" autocomplete="off" autocapitalize="none" spellcheck="false" inputmode="url" required>
+              </label>
+              <button class="sv-button sv-button--cta" type="submit" id="sv-check-knopf">Check starten →</button>
+            </form>
+            <p class="sv-check__hinweis">Kostenlos und unverbindlich, automatisch ausgewertet, meist in unter einer Minute. Die Punkte sind eine Einschätzung, keine Zusage.</p>
+            <details class="sv-cx__details">
+              <summary>Was genau geprüft wird</summary>
+              <p>Die Startseite, robots.txt, Sitemap, llms.txt sowie die verlinkte Kontakt- und Impressumsseite, in fünf Schritten: erreichbar, technische Grundlagen, strukturierte Daten, KI-Sichtbarkeit (GEO), Inhalt und Vertrauen. Bei langsamen Websites kann es einige Minuten dauern. Tiefer gehen die <a href="#stufen">bezahlten Prüfungen</a>.</p>
+            </details>
+          </div>
+
+          <!-- Muster-Karte (Ergänzung 2026-10-13): zeigt, wie ein Ergebnis aussieht. Beispielwerte, verschwindet, sobald der echte Check läuft. -->
+          <aside class="sv-cx__muster" id="sv-cx-muster" aria-label="Muster eines Ergebnisses mit Beispielwerten">
+            <p class="sv-cx__stempel">Muster</p>
+            <div class="sv-cx__kopf">
+              <svg class="sv-cx__ring" viewBox="0 0 120 120" aria-hidden="true">
+                <circle class="sv-cx__ring-spur" cx="60" cy="60" r="52"></circle>
+                <circle class="sv-cx__ring-wert" id="sv-cx-ring-wert" cx="60" cy="60" r="52" transform="rotate(-90 60 60)"></circle>
+                <text class="sv-cx__ring-zahl" id="sv-cx-zahl" x="60" y="62" text-anchor="middle" dominant-baseline="middle">72</text>
+                <text class="sv-cx__ring-von" x="60" y="86" text-anchor="middle">von 100</text>
+              </svg>
+              <div>
+                <p class="sv-cx__titel">So sieht Ihr Ergebnis aus</p>
+                <p class="sv-cx__domain">beispiel-firma.ch</p>
+              </div>
+            </div>
+            <ul class="sv-cx__balken">
+              <li><span class="sv-cx__name">Website erreichen</span><span class="sv-cx__spur"><span class="sv-cx__fuell" style="--wert:100%"></span></span><span class="sv-cx__wert">100</span></li>
+              <li><span class="sv-cx__name">Technische Grundlagen</span><span class="sv-cx__spur"><span class="sv-cx__fuell" style="--wert:80%"></span></span><span class="sv-cx__wert">80</span></li>
+              <li><span class="sv-cx__name">Strukturierte Daten</span><span class="sv-cx__spur"><span class="sv-cx__fuell" style="--wert:45%"></span></span><span class="sv-cx__wert">45</span></li>
+              <li><span class="sv-cx__name">KI-Sichtbarkeit (GEO)</span><span class="sv-cx__spur"><span class="sv-cx__fuell" style="--wert:60%"></span></span><span class="sv-cx__wert">60</span></li>
+              <li><span class="sv-cx__name">Inhalt &amp; Vertrauen</span><span class="sv-cx__spur"><span class="sv-cx__fuell" style="--wert:75%"></span></span><span class="sv-cx__wert">75</span></li>
+            </ul>
+            <p class="sv-cx__fuss">Beispielwerte. Ihre Punkte sehen Sie nach dem Check.</p>
+          </aside>
+        </div>
         <p class="sv-check__fehler" id="sv-check-fehler" role="alert" hidden></p>
 
         <!-- Ansagen für Screenreader: ein Satz je Schritt, nicht die ganze Liste -->
@@ -522,19 +555,23 @@
           <h2 class="sv-title">Sie erhalten Klarheit, bessere Inhalte und klare nächste Schritte.</h2>
         </div>
         <div class="sv-card-grid sv-card-grid--four">
-          <article class="sv-card sv-card--sand">
+          <article class="sv-card sv-card--sand sv-card--symbol">
+            <img class="sv-card__ico" src="assets/sichtbarkeit/pruefung.webp?v=20261013" alt="" width="320" height="320" loading="lazy" decoding="async">
             <h3>Website-Prüfung.</h3>
             <p>Eine verständliche Einschätzung, wo Ihre Website heute steht und was fehlt.</p>
           </article>
-          <article class="sv-card sv-card--sand">
+          <article class="sv-card sv-card--sand sv-card--symbol">
+            <img class="sv-card__ico" src="assets/sichtbarkeit/plan.webp?v=20261013" alt="" width="320" height="320" loading="lazy" decoding="async">
             <h3>Massnahmenplan.</h3>
             <p>Konkrete Empfehlungen für Seiten, Begriffe, Struktur, lokale Auffindbarkeit und technische Grundlagen.</p>
           </article>
-          <article class="sv-card sv-card--sand">
+          <article class="sv-card sv-card--sand sv-card--symbol">
+            <img class="sv-card__ico" src="assets/sichtbarkeit/antworten.webp?v=20261013" alt="" width="320" height="320" loading="lazy" decoding="async">
             <h3>Klare Inhalte für KI-Antworten.</h3>
             <p>Texte mit klaren Antworten, FAQ-Blöcke und Leistungsseiten, die auch ohne Vorwissen verstanden werden.</p>
           </article>
-          <article class="sv-card sv-card--sand">
+          <article class="sv-card sv-card--sand sv-card--symbol">
+            <img class="sv-card__ico" src="assets/sichtbarkeit/pruefung-laufend.webp?v=20261013" alt="" width="320" height="320" loading="lazy" decoding="async">
             <h3>Regelmässige Prüfung.</h3>
             <p>Mit laufender Betreuung prüfen wir regelmässig, welche Fragen auftauchen und welche Inhalte ergänzt werden sollten.</p>
           </article>
@@ -543,7 +580,7 @@
         <div class="vs-stufen vb-weg" id="stufen">
           <h3 class="vb-weg__titel">So geht es weiter</h3>
           <ol class="vb-weg__schritte">
-            <li><span class="vb-weg__nr">1</span><strong>Online-Check machen</strong><span>Domain eingeben, kostenlos und in wenigen Sekunden.</span></li>
+            <li><span class="vb-weg__nr">1</span><strong>Online-Check machen</strong><span>Domain eingeben, kostenlos und meist in unter einer Minute.</span></li>
             <li><span class="vb-weg__nr">2</span><strong>Punktzahl sehen</strong><span>Sie sehen sofort, wie gut Google und KI-Assistenten Ihre Website verstehen.</span></li>
             <li><span class="vb-weg__nr">3</span><strong>Wir melden uns</strong><span>Oder Sie sich bei uns. Gemeinsam schauen wir, was sich für Ihren Betrieb lohnt.</span></li>
           </ol>
@@ -586,7 +623,7 @@
         <p class="sv-kicker sv-kicker--on-terra">NÄCHSTER SCHRITT</p>
         <h2 class="sv-title sv-title--on-terra">Lassen Sie prüfen, ob Ihr Angebot online klar verstanden wird.</h2>
         <p class="sv-lead sv-lead--on-terra">
-          Der kostenlose Website-Check zeigt nach einigen Minuten, wo SEO und GEO auf Ihrer Website am meisten verbessern können.
+          Der kostenlose Website-Check zeigt meist nach unter einer Minute, wo SEO und GEO auf Ihrer Website am meisten verbessern können.
         </p>
         <div class="sv-actions">
           <a class="sv-button sv-button--light" href="#check">Kostenlosen Website-Check starten →</a>
@@ -620,7 +657,7 @@
   </footer>
 </div>
 <script src="ui_kits/website/api-basis.js?v=20261004-umbau"></script>
-<script src="ui_kits/website/visibility.js?v=20261007-logo-svg"></script>
+<script src="ui_kits/website/visibility.js?v=20261013-check-eyecatcher"></script>
 <script src="ui_kits/website/visibility-check.js?v=20261007-besucher"></script>
 <script src="ui_kits/website/chat.js?v=20261013-handy"></script>
 <script src="ui_kits/website/navigation.js?v=20261013-menue-handy" defer></script>
