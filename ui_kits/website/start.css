@@ -365,9 +365,9 @@
 
 .st-reiter {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-  width: min(100%, 400px);
+  width: min(100%, 500px);
 }
 
 .st-reiter__tab {
