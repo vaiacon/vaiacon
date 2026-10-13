@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 11.10.2026 · Eintrag fce01cb Startseite: Gruenderfotos und Satz unter Schritt 3 entfernt
+> Stand: 12.10.2026 · Eintrag 62c6ae7 KI-News für KMU 2026-10-12: neue Woche
 
 ## Wie du antwortest
 
@@ -664,6 +664,16 @@ Wenn kein Standard-Connector passt, etwa bei Branchensoftware, Kundenverzeichnis
 IN 22 SEKUNDEN
 So sieht das im Alltag aus.
 Belege, Offerten und Freigaben laufen von selbst. Ihr Fall steht im Feld darunter.
+KUNDENBEDIENUNG
+Ihre Kunden erreichen Sie auch, wenn Sie nicht da sind.
+Ein Assistent beantwortet die häufigen Fragen, hält Termine und Rückrufe fest und übergibt an Sie, wenn ein Mensch gefragt ist. Sie legen vorher fest, was er sagen darf.
+Chatbot
+Auf Ihrer Website oder in WhatsApp, rund um die Uhr. Er antwortet aus Ihren Unterlagen, nimmt Terminwünsche auf und gibt das Gespräch an einen Menschen weiter, wenn er nicht weiterkommt.
+Telefon-Assistent
+Nimmt Anrufe an, spricht mit natürlicher Stimme Hochdeutsch und versteht Schweizerdeutsch. Er beantwortet häufige Fragen, nimmt Termine oder Rückrufe auf und verbindet bei Bedarf weiter. Vor dem Start testen wir ihn mit Beispielen aus Ihrem Alltag.
+Wo es heikel wird, übernimmt ein Mensch. Wann, legen wir mit Ihnen fest.
+Datenschutz: Wir halten uns an das revidierte Datenschutzgesetz (revDSG). Ein Sprachmodell oder ein Telefonanbieter kann im Ausland arbeiten; welche Anbieter das sind, legen wir vor dem Start offen.
+Ihren Fall einordnen →
 IHR FALL
 Ihr Fall in zwei Sätzen.
 Beschreiben Sie, was bei Ihnen jede Woche Zeit frisst. Unsere Einordnung bekommen Sie per E-Mail: welcher Umfang zu Ihrem Fall passt, und ob ein Standard reicht oder es individuell wird. Das Angebot schauen wir danach persönlich mit Ihnen an.
@@ -776,6 +786,7 @@ Was das für Ihr KMU heisst →
 AI Weekly berichtet, OpenAI habe am 5. Oktober ein Verfahren namens «textGrain» vorgestellt. Es soll ein unsichtbares Muster in die Wortwahl legen, eine Art Wasserzeichen, das Software später erkennt. Laut AI Weekly wird es in der EU in den kommenden Wochen für ChatGPT und Codex verpflichtend. OpenAI hat die Meldung selbst nicht bestätigt.
 Was das für Ihr KMU heisst →
 Die letzten Wochen
+KW 42 · 12. – 18. Oktober 2026 0 Beiträge
 KW 41 · 5. – 11. Oktober 2026 5 Beiträge
 KW 40 · 28. September – 4. Oktober 2026 7 Beiträge
 Alle Wochen im Archiv · RSS-Feed abonnieren
