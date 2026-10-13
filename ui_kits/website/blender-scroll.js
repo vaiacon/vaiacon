@@ -1,5 +1,5 @@
 /* Startseite, Zweig «blender»:
-   1. Hero-Video (Endlosschleife) blendet über das Poster, sobald es läuft.
+   1. Logo-Intro (einmal) blendet über das Poster, danach folgt nahtlos die Schleife.
    2. Scroll-Szene: Bildfolge auf <canvas>, das Bild folgt der Scroll-Position.
       Desktop: 90 Bilder 1280x640, alle drei Texte erscheinen nacheinander.
       Mobil (<= 760 px): 46 Bilder 800x400, der Ausschnitt folgt dem aktiven Teil, ein Text zur Zeit.
@@ -11,17 +11,31 @@
   try { reduziert = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
   try { spar = !!(navigator.connection && navigator.connection.saveData); } catch (e) {}
 
-  /* ───── Hero-Video ───── */
-  var objekt = document.querySelector('.bl-objekt');
-  var video = objekt && objekt.querySelector('video');
-  if (video) {
-    if (reduziert) {
-      try { video.pause(); } catch (e) {}
-    } else {
-      video.addEventListener('playing', function () { objekt.classList.add('is-laeuft'); });
-      var p = video.play && video.play();
-      if (p && p.catch) p.catch(function () { /* Poster bleibt */ });
-    }
+  /* ───── Logo-Bühne: Intro einmal, danach nahtlos die Schleife ───── */
+  var buehne = document.querySelector('.bl-logo');
+  var vIntro = buehne && buehne.querySelector('[data-b="intro"]');
+  var vLoop = buehne && buehne.querySelector('[data-b="loop"]');
+  if (vIntro && vLoop && !reduziert && !spar) {
+    var hoch = window.matchMedia('(max-width: 760px)').matches;
+    var webm = !!(vIntro.canPlayType && vIntro.canPlayType('video/webm; codecs="vp9"'));
+    var quelle = function (n) { return 'assets/blender/logo-' + n + '-' + (hoch ? 'hoch' : 'breit') + (webm ? '.webm' : '.mp4'); };
+    vLoop.preload = 'auto'; vLoop.src = quelle('loop'); vLoop.load();
+    vIntro.preload = 'auto'; vIntro.src = quelle('intro');
+    var zurSchleife = function () {
+      var q = vLoop.play();
+      var an = function () { buehne.classList.add('is-loop'); };
+      vLoop.addEventListener('playing', an, { once: true });
+      if (q && q.catch) q.catch(function () { /* letztes Intro-Bild bleibt stehen */ });
+    };
+    vIntro.addEventListener('playing', function () { buehne.classList.add('is-intro'); }, { once: true });
+    vIntro.addEventListener('ended', zurSchleife, { once: true });
+    var p = vIntro.play();
+    if (p && p.catch) p.catch(function () { /* Poster (fertiges Logo) bleibt */ });
+    /* Tab im Hintergrund: Schleife anhalten, spart Strom */
+    document.addEventListener('visibilitychange', function () {
+      if (!buehne.classList.contains('is-loop')) return;
+      if (document.hidden) vLoop.pause(); else { var r = vLoop.play(); if (r && r.catch) r.catch(function () {}); }
+    });
   }
 
   /* ───── Scroll-Szene ───── */
@@ -125,21 +139,21 @@
     for (var k = 0; k < texte.length; k++) {
       var an;
       if (mobil) {
-        an = q >= [0.5, 0.67, 0.84][k] && (k === 2 || q < [0.67, 0.84, 1.1][k]);
+        var sm = klemm(q / 0.7, 0, 1), TS = [0.40, 0.70, 0.94]; an = sm >= TS[k] && (k === 2 || sm < TS[k + 1]);
       } else {
-        an = klemm(q / 0.8, 0, 1) >= 0.64 + 0.07 * k;
+        an = klemm(q / 0.8, 0, 1) >= [0.40, 0.70, 0.94][k];
       }
       texte[k].classList.toggle('is-sichtbar', an);
     }
   }
 
   function cxZiel() {
-    var q = ziel;
+    var q = klemm(ziel / 0.7, 0, 1);
     var a = SPALTEN.map(function (x) { return klemm(x, 0.2, 0.8); });
     var v = 0.5;
-    v += (a[0] - 0.5) * glatt(0.38, 0.52, q);
-    v += (a[1] - a[0]) * glatt(0.62, 0.72, q);
-    v += (a[2] - a[1]) * glatt(0.79, 0.89, q);
+    v += (a[0] - 0.5) * glatt(0.16, 0.30, q);
+    v += (a[1] - a[0]) * glatt(0.48, 0.60, q);
+    v += (a[2] - a[1]) * glatt(0.76, 0.88, q);
     return v;
   }
 

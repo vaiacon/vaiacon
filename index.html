@@ -11,10 +11,10 @@
 <meta property="og:title" content="KI-Kompetenz, Sichtbarkeit, Automationen für KMU · vaiacon">
 <meta property="og:description" content="KI für Schweizer KMU: Lernreise fürs Team, besser gefunden bei Google und in KI-Antworten, Büroarbeit automatisieren. Jedes Angebot persönlich besprochen.">
 <meta property="og:url" content="https://vaiacon.ch/">
-<meta property="og:image" content="https://vaiacon.ch/assets/vorschau-startseite.jpg">
+<meta property="og:image" content="https://vaiacon.ch/assets/blender/logo-3d/social-1200x630.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Der vaiacon-Roboter winkt, daneben: Digitale Sichtbarkeit und KI-Kompetenz für Schweizer KMU.">
+<meta property="og:image:alt" content="Das 3D-Logo von vaiacon: Pfeil-V und Schriftzug in Terracotta.">
 <meta name="twitter:card" content="summary_large_image">
 <title>KI-Kompetenz, Sichtbarkeit, Automationen für KMU · vaiacon</title>
 <link rel="stylesheet" href="styles.css?v=20261005-vorschlag">
@@ -26,10 +26,11 @@
 <link rel="stylesheet" href="ui_kits/website/start-ruhig.css?v=20261005-ohne-preise">
 <link rel="stylesheet" href="ui_kits/website/verbesserungen.css">
 <link rel="stylesheet" href="ui_kits/website/blender.css?v=20261012-form">
-<link rel="preload" as="image" href="assets/blender/hero-form-poster.webp" fetchpriority="high">
-<link rel="icon" href="favicon.ico" sizes="any">
-<link rel="icon" type="image/png" href="favicon-32.png" sizes="32x32">
-<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/blender/logo-poster-breit.webp" fetchpriority="high" media="(min-width: 761px)">
+<link rel="preload" as="image" href="assets/blender/logo-poster-hoch.webp" fetchpriority="high" media="(max-width: 760px)">
+<link rel="icon" type="image/png" href="assets/blender/logo-3d/favicon-32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="assets/blender/logo-3d/icon-192.png" sizes="192x192">
+<link rel="apple-touch-icon" href="assets/blender/logo-3d/icon-180.png">
 <!-- Strukturdaten: erzeugt von scripts/strukturdaten.py, nicht von Hand aendern -->
 <script type="application/ld+json">
 {
@@ -167,7 +168,7 @@
 }
 </script>
 <!-- Strukturdaten Ende -->
-  <link rel="stylesheet" href="ui_kits/website/navigation.css?v=20261012-nav17">
+  <link rel="stylesheet" href="ui_kits/website/navigation.css?v=20261012-nav18-3d">
 </head>
 <body>
 <a class="sv-skip" href="#inhalt">Zum Inhalt springen</a>
@@ -175,7 +176,7 @@
   <header class="mock-header sv-header" data-solid="always">
     <div class="mock-header__inner">
       <a class="mock-header__logo" href="#top" aria-label="vaiacon Start">
-        <img src="assets/logo-lockup-terra.svg" alt="vaiacon" width="214" height="39">
+        <img class="l3d" src="assets/blender/logo-3d/lockup-2x.webp" srcset="assets/blender/logo-3d/lockup-1x.webp 1x, assets/blender/logo-3d/lockup-2x.webp 2x" alt="vaiacon" width="220" height="45">
       </a>
       <button class="mock-menu-toggle" type="button" aria-label="Menü öffnen" aria-controls="mock-mobile-menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -214,6 +215,14 @@
   <main id="inhalt">
     <section id="top" class="bl-buehne" data-nav-hell aria-labelledby="st-titel">
       <div class="bl-buehne__inner">
+        <div class="bl-logo" aria-hidden="true">
+          <picture>
+            <source media="(max-width: 760px)" srcset="assets/blender/logo-poster-hoch.webp">
+            <img class="bl-logo__bild" src="assets/blender/logo-poster-breit.webp" width="1600" height="500" alt="" fetchpriority="high" decoding="async">
+          </picture>
+          <video class="bl-logo__loop" muted loop playsinline preload="none" tabindex="-1" data-b="loop"></video>
+          <video class="bl-logo__intro" muted playsinline preload="none" tabindex="-1" data-b="intro"></video>
+        </div>
         <div class="bl-text-block">
           <h1 id="st-titel" class="bl-kicker">KI-Beratung für Schweizer KMU: Schulung, Sichtbarkeit und Automatisierung</h1>
           <p class="bl-headline">KI für KMU verständlich erklärt, <span>zuverlässig umgesetzt</span></p>
@@ -222,13 +231,6 @@
             <a class="sv-button sv-button--cta" href="#kontakt">Erstgespräch <span aria-hidden="true">&nbsp;→</span></a>
             <a class="sv-button sv-button--ghost" href="erstanalyse.html" aria-label="Kostenlose Online-Erstanalyse öffnen">Kostenlose Online-Erstanalyse <span aria-hidden="true">&nbsp;→</span></a>
           </div>
-        </div>
-        <div class="bl-objekt" aria-hidden="true">
-          <img class="bl-objekt__bild" src="assets/blender/hero-form-poster.webp" width="900" height="900" alt="" fetchpriority="high" decoding="async">
-          <video class="bl-objekt__video" autoplay muted loop playsinline preload="metadata" tabindex="-1">
-            <source src="assets/blender/hero-form.webm" type="video/webm">
-            <source src="assets/blender/hero-form.mp4" type="video/mp4">
-          </video>
         </div>
       </div>
     </section>
@@ -427,7 +429,7 @@
   <footer class="sv-footer vb-fuss">
     <div class="vb-fuss__inner">
       <div class="vb-fuss__marke">
-        <a class="sv-footer__logo" href="#top" aria-label="Zurück nach oben"><img src="assets/logo-lockup-white.svg" alt="vaiacon" width="214" height="39"></a>
+        <a class="sv-footer__logo" href="#top" aria-label="Zurück nach oben"><img class="l3d" src="assets/blender/logo-3d/lockup-hell-2x.webp" srcset="assets/blender/logo-3d/lockup-hell-1x.webp 1x, assets/blender/logo-3d/lockup-hell-2x.webp 2x" alt="vaiacon" width="220" height="45"></a>
         <p class="vb-fuss__adresse">Vaiacon GmbH<br>Lehenstrasse 74<br>8037 Zürich</p>
         <div class="sv-footer__social">
         <a href="https://www.facebook.com/vaiacon" target="_blank" rel="noopener" aria-label="vaiacon auf Facebook" title="Facebook">
@@ -453,6 +455,6 @@
 <script src="ui_kits/website/chat.js?v=20261004-umbau" defer></script>
 <script src="ui_kits/website/check-start.js?v=20261004-check" defer></script>
 <script src="ui_kits/website/blender-scroll.js?v=20261012-form" defer></script>
-<script src="ui_kits/website/navigation.js?v=20261012-form" defer></script>
+<script src="ui_kits/website/navigation.js?v=20261012-3d" defer></script>
 </body>
 </html>

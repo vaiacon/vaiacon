@@ -266,3 +266,11 @@ html.vn-sperre, html.vn-sperre body { overflow: hidden; }
   .vn, .vn-leiste, .vn-flaeche, .vn-voll, .vn-seite, .vn-seite a, .vn-seite__unter li, .vn-seite a::before, .vn-seite__huelle, .vn-seite__auf .vn-pfeil, .vn-pfeil, .vn-punkt::after, .vn-menue__balken i, .vn-logo img { transition: none !important; }
   html.vn-an { scroll-behavior: auto; }
 }
+
+/* 3D-Logo (Alternative, Zweig blender): Bild traegt 8 Einheiten Rand fuer den Schatten; Hoehe = alte Hoehe x 1,149, Rand per Minus-Abstand ausgeglichen */
+.vn-logo img.l3d { height: 34.5px; margin: -2.25px -2.2px; }
+.vn--pille .vn-logo img.l3d { height: 27.6px; margin: -1.8px -1.8px; }
+.vn-voll__logo img.l3d { height: 29.9px; width: auto; margin: -1.95px -1.9px; }
+@media (max-width: 999px) { .vn-logo img.l3d { height: 27.6px; margin: -1.8px -1.8px; } }
+.mock-header__logo img.l3d { width: auto; height: 44.8px; margin: -2.9px; }
+.sv-footer__logo img.l3d { height: 27.6px; width: auto; margin: -1.8px; }
