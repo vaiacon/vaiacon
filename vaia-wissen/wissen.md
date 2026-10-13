@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 13.10.2026 · Eintrag eae4a5e KI-Standortbestimmung und Lernreise-Zeitleiste entfernt (Philips Wunsch)
+> Stand: 13.10.2026 · Eintrag 182a4a1 Sichtbarkeit ohne Abschnitt «Ablauf», keine Seitennavigation mehr (Randliste und Knopfreihe), Philips Wunsch
 
 ## Wie du antwortest
 
@@ -319,12 +319,6 @@ So geht es weiter
 1 Online-Check machen Domain eingeben, kostenlos und meist in unter einer Minute.
 2 Punktzahl sehen Sofort, für Google und KI-Assistenten.
 3 Wir melden uns Oder Sie sich bei uns. Gemeinsam schauen wir, was sich für Ihren Betrieb lohnt.
-Was wir danach für Sie tun können
-Vertiefte Prüfung mit Mitbewerbern
-Massnahmenplan
-Seiten überarbeiten
-Google-Profil und Bewertungen
-Laufende Betreuung für Google und KI
 Website kostenlos prüfen →
 NÄCHSTER SCHRITT
 Lassen Sie prüfen, ob Ihr Angebot online klar verstanden wird.

@@ -2876,3 +2876,7 @@ picture {
   font-size: var(--text-body);
   box-shadow: 0 8px 18px -6px rgba(156, 69, 23, 0.55);
 }
+
+/* Sichtbarkeit: GEO und «Ergebnis» stehen seit dem Wegfall von «Ablauf» direkt
+   aufeinander, beide hell; die Haarlinie dazwischen wirkte wie ein schwarzer Strich (2026-10-13). */
+#geo.sv-section { border-bottom: 0; }
