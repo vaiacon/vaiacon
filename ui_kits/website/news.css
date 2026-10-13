@@ -334,3 +334,5 @@ a.nw-tag--voll:focus-visible { outline: 3px solid var(--terra-500); outline-offs
 .nw-wochen__links { margin: var(--space-4) 0 0; display: flex; flex-wrap: wrap; gap: 6px 14px; font-weight: var(--weight-bold); }
 .nw-wochen__links a { color: var(--terra-600); }
 .nw-redaktion .sv-wrap, .nw-wochen .sv-wrap { text-align: left; }
+/* Handy: Trennpunkt zwischen den Links entfällt, wenn sie untereinander stehen */
+@media (max-width: 520px) { .nw-schluss__links [aria-hidden], .nw-wochen__links [aria-hidden] { display: none; } .nw-schluss__links { flex-direction: column; align-items: center; } }

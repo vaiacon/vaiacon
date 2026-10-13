@@ -23,7 +23,7 @@ from PIL import Image
 
 WURZEL = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 HTML_DIR = os.path.join(WURZEL, '.bau', 'branchen-bots')
-PORT = 8765
+PORT = int(os.environ.get('VORSCHAU_PORT', '8765'))
 B, H = 480, 576          # Szene, dreifach der Kachel (160x192)
 GRUND = '#FBF4EE'
 
@@ -195,7 +195,36 @@ def immobilien():
     return szene(BASEN['willkommen'], 470, 6, 104, 38, '', '', haus, schluessel)
 
 
-SZENEN = {'malerbetrieb': maler, 'restaurant': restaurant, 'arztpraxis': arzt, 'immobilien': immobilien}
+def kosmetik():
+    # Willkommen-Pose: in der ausgestreckten Hand ein Nagellackfläschchen, dahinter Handspiegel und Pflegetiegel.
+    spiegel = '''
+<g filter="url(#schatten)">
+<rect x="402" y="300" width="14" height="150" rx="7" fill="url(#holz)" transform="rotate(14 409 300)"/>
+<ellipse cx="392" cy="236" rx="62" ry="76" fill="url(#silber)" transform="rotate(14 392 236)"/>
+<ellipse cx="392" cy="236" rx="50" ry="64" fill="url(#glas)" transform="rotate(14 392 236)"/>
+</g>
+<path d="M358 196 Q372 168 394 164" stroke="#fff" stroke-width="7" opacity=".75" fill="none" stroke-linecap="round"/>
+<ellipse cx="400" cy="566" rx="56" ry="8" fill="#3E1606" opacity=".16"/>
+<g filter="url(#schatten)">
+<rect x="360" y="516" width="84" height="46" rx="10" fill="#fff"/>
+<rect x="354" y="500" width="96" height="24" rx="9" fill="url(#farbe)"/>
+<path d="M372 538 h60" stroke="#E2652C" stroke-width="5" stroke-linecap="round" opacity=".6"/>
+</g>
+<path d="M444 120 l5 12 l12 5 l-12 5 l-5 12 l-5 -12 l-12 -5 l12 -5 z" fill="#E2B83A"/>
+<path d="M256 96 l3.5 8 l8 3.5 l-8 3.5 l-3.5 8 l-3.5 -8 l-8 -3.5 l8 -3.5 z" fill="#E2B83A"/>
+'''
+    lack = '''
+<g transform="translate(344,262)" filter="url(#schatten)">
+<rect x="-17" y="-8" width="34" height="50" rx="9" fill="url(#farbe)"/>
+<rect x="-12" y="-2" width="7" height="38" rx="3.5" fill="#fff" opacity=".35"/>
+<rect x="-10" y="-44" width="20" height="38" rx="6" fill="#2E2E2E"/>
+<rect x="-10" y="-44" width="20" height="9" rx="4" fill="#4A4A4A"/>
+</g>
+'''
+    return szene(BASEN['willkommen'], 470, 6, 104, 38, '', '', spiegel, lack)
+
+
+SZENEN = {'malerbetrieb': maler, 'restaurant': restaurant, 'arztpraxis': arzt, 'immobilien': immobilien, 'kosmetik': kosmetik}
 
 
 def main():

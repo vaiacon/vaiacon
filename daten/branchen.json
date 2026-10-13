@@ -223,60 +223,54 @@
       "https://suissetec.ch/de/software-digitalisierung.html"
     ]
   },
-  "agentur": {
-    "name": "Agentur",
+  "kosmetik": {
+    "name": "Kosmetik",
     "nervt": [
-      "Monatsberichte zusammentragen frisst Stunden",
-      "Feedback verstreut auf Mail, Chat, PDF",
-      "Stunden spät erfasst, Budget läuft unbemerkt über"
+      "Termine werden kurzfristig abgesagt, der Stuhl bleibt leer",
+      "Nachfragen per Nachricht, auch abends und am Wochenende",
+      "Pflegeprodukte und Gutscheine laufen nebenher"
     ],
     "einfach": [
       {
-        "titel": "Monatsbericht automatisch",
-        "satz": "Social Media + Analytics → fertiger Bericht → Kunde"
+        "titel": "Terminerinnerung mit Absagelink",
+        "satz": "Tag vorher → SMS oder Mail → Absagelink"
       },
       {
-        "titel": "Zeiterfassung per Erinnerung",
-        "satz": "Freitag → Erinnerung an fehlende Stunden"
+        "titel": "Nachsorge nach der Behandlung",
+        "satz": "Behandlung erledigt → Pflegehinweise per Mail"
       },
       {
-        "titel": "Briefing-Formular zu Aufgabe",
-        "satz": "Briefing-Formular → Aufgabe mit Frist im Board"
+        "titel": "Bewertungsanfrage",
+        "satz": "Termin vorbei → Dank mit Bewertungslink"
       }
     ],
     "verbunden": [
       {
-        "titel": "Feedback bündeln",
-        "satz": "Mail + Chat → eine Korrekturliste pro Projekt"
+        "titel": "Warteliste zum Nachrücken",
+        "satz": "Absage → Nachricht an Wartende → erste Zusage im Kalender"
       },
       {
-        "titel": "Budgetwarnung im Projekt",
-        "satz": "Stunden fast verbraucht → Warnung → Nachofferte-Vorschlag"
+        "titel": "Folgetermin vorschlagen",
+        "satz": "Nach drei Wochen → Erinnerung ans Auffüllen → Terminlink"
       },
       {
-        "titel": "Neukunden über Social Media",
-        "satz": "Beitrag → Formular → KI-Prüfung → Erstgespräch gebucht"
+        "titel": "Gutschein online verkaufen",
+        "satz": "Bestellung → Zahlung per TWINT → Gutschein-PDF per Mail"
       }
     ],
     "ganzer_ablauf": [
       {
-        "titel": "Vom Briefing zur Rechnung",
-        "satz": "Briefing → Offerte → Start → Zeiten → Rechnung → Mahnung"
+        "titel": "Vom Termin bis zum Folgetermin",
+        "satz": "Buchung → Erinnerung → Nachrücken → Nachsorge → Folgetermin"
       },
       {
-        "titel": "Content-Pipeline mit Freigabe",
-        "satz": "Idee → Entwurf → Kundenfreigabe → Veröffentlichung → Report"
+        "titel": "Kundenkarte mit Einwilligung",
+        "satz": "Formular mit Einwilligung → Karte mit Notizen und Allergien → nur für das Studio sichtbar"
       },
       {
-        "titel": "Retainer-Abrechnung automatisch",
-        "satz": "Retainer-Rechnung mit Stundennachweis → Versand → Mahnung"
+        "titel": "Pflegeprodukte nachbestellen",
+        "satz": "Bestand tief → Bestellentwurf → Freigabe durch das Studio"
       }
-    ],
-    "_quellen": [
-      "https://metricool.com/de/social-media-report-erstellen/",
-      "https://filestage.io/de/blog/freigabeprozess/",
-      "https://www.zep.de/branche/agenturen",
-      "https://prowebsolutions.ch/leistungen/automatisierung/"
     ]
   },
   "restaurant": {

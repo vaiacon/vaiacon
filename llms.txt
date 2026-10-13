@@ -25,7 +25,10 @@ eines Arbeitstages. Für einen Rückruf benötigen wir Ihre Telefonnummer.
 - [KI-Kompetenz](https://vaiacon.ch/learning): Trainings und Workshops im
   Betrieb (Halbtag oder ganzer Tag, pro Gruppe), Coaching für Führungskräfte,
   Online-Kurse nach Mass, Lernvideos, tägliche kleine Lerneinheiten,
-  Veränderung begleiten und Begleitung der Mitarbeitenden vor Ort. Dazu die
+  Veränderung begleiten und Begleitung der Mitarbeitenden vor Ort. Themen
+  unter anderem: Prompting, Texte und Offerten, Recherche, Copilot im Büro,
+  Datenschutz und KI-Regeln, Excel und Datenanalyse, Bilder und Präsentationen,
+  Protokolle, eigene Assistenten, kleine Automationen. Dazu die
   kostenlose KI-Standortbestimmung für Führungskräfte (Selbsttest mit zwölf
   Fragen): https://vaiacon.ch/learning#standortbestimmung
 - [Sichtbarkeit](https://vaiacon.ch/visibility): Wir verbessern die
