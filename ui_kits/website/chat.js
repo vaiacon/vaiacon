@@ -35,8 +35,10 @@
         '<button type="submit" aria-label="Frage senden">→</button>' +
       '</form>' +
     '</div>' +
-    '<button class="vc-chat__fab" type="button" aria-expanded="false">' +
-      '<span class="vc-chat__fab-dot" aria-hidden="true"></span>Fragen Sie Vaia' +
+    '<button class="vc-chat__fab" type="button" aria-expanded="false" aria-label="Fragen Sie Vaia">' +
+      '<span class="vc-chat__fab-dot" aria-hidden="true"></span>' +
+      '<svg class="vc-chat__fab-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3h11A2.5 2.5 0 0 1 20 5.5v8a2.5 2.5 0 0 1-2.5 2.5H10l-4.5 4v-4h0A2.5 2.5 0 0 1 4 13.5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>' +
+      '<span class="vc-chat__fab-text">Fragen Sie Vaia</span>' +
     '</button>';
   document.body.appendChild(wurzel);
 
