@@ -1,102 +1,13 @@
-/* Zweig «blender»: neuer Hero «Eine Form, drei Wege» und Scroll-Szene.
-   Hero: ruhige Creme-Fläche, das 3D-Logo (V-Pfeil + Schriftzug, in Blender gerendert) als Bühne über der Überschrift: Intro einmal, danach Schleife.
-   Szene: ca. 250vh hoher Abschnitt; die Form zerfällt beim Scrollen in drei Teile (Bildfolge auf <canvas>). */
+/* Zweig «blender»: Startbühne mit dem 3D-Logo.
+   Oben steht das Logo (erstes Bild der Bildfolge), darunter der Einstiegstext.
+   Mit dem ersten Scrollen löst sich der V-Pfeil und führt durch die drei Bereiche
+   (Bildfolge auf <canvas>, ca. 250vh hoher Abschnitt, die Bühne klebt oben). */
 
-/* Seite beginnt unter dem festen Kopf; der Hero ist hell */
-.bl-buehne {
-  position: relative;
-  background: var(--cream-100);
-  color: var(--ink-900);
-  min-height: 100vh;
-  min-height: 100svh;
-  display: flex;
-  align-items: center;
-  padding: 96px 0 40px;
-  box-sizing: border-box;
-  overflow: hidden;
-}
-.bl-buehne__inner {
-  width: min(100%, 1320px);
-  margin: 0 auto;
-  padding: 0 24px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: clamp(8px, 2vh, 24px);
-}
-.bl-kicker {
-  margin: 0 0 clamp(14px, 2vh, 22px);
-  max-width: 34em;
-  font-size: 13px;
-  font-weight: 700;
-  line-height: 1.5;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--terra-500);
-}
-.bl-headline {
-  margin: 0;
-  font-size: clamp(36px, 4.5vw, 70px);
-  font-weight: 600;
-  line-height: 1.04;
-  letter-spacing: -0.025em;
-  color: var(--ink-900);
-  text-wrap: balance;
-}
-.bl-headline span { display: block; color: var(--terra-500); }
-.bl-sub {
-  margin: clamp(18px, 3vh, 30px) 0 0;
-  max-width: 31em;
-  font-size: clamp(17px, 1.35vw, 20px);
-  font-weight: 600;
-  line-height: 1.55;
-  color: var(--brown-600);
-}
-.bl-cta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px 14px;
-  margin-top: clamp(22px, 3.6vh, 38px);
-}
-.bl-cta .sv-button { white-space: normal; }
-.bl-cta .sv-button--ghost {
-  background: transparent;
-  color: var(--ink-900);
-  border-color: var(--border-strong);
-  box-shadow: none;
-}
-.bl-cta .sv-button--ghost:hover,
-.bl-cta .sv-button--ghost:focus-visible { background: var(--cream-card); border-color: var(--ink-900); }
-
-/* Logo-Bühne: Poster (fertiges Logo, LCP) liegt unten. Intro-Video (einmal) und Schleife liegen darüber,
-   beide auf Creme gerendert; weicher Rand, damit eine winzige Farbabweichung nie als Kante auffällt. */
-.bl-logo {
-  position: relative;
-  width: min(100%, 1180px, calc((100svh - 330px) * 3.2));
-  min-width: min(100%, 560px);
-  aspect-ratio: 1600 / 500;
-  margin: 0 auto;
-  pointer-events: none;
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent), linear-gradient(180deg, transparent, #000 6%, #000 94%, transparent);
-  -webkit-mask-composite: source-in;
-          mask-image: linear-gradient(90deg, transparent, #000 4%, #000 96%, transparent), linear-gradient(180deg, transparent, #000 6%, #000 94%, transparent);
-          mask-composite: intersect;
-}
-.bl-logo picture, .bl-logo__bild, .bl-logo__intro, .bl-logo__loop {
-  position: absolute; inset: 0; width: 100%; height: 100%; display: block; object-fit: contain;
-}
-.bl-logo__intro, .bl-logo__loop { opacity: 0; }
-.bl-logo.is-intro .bl-logo__intro { opacity: 1; }
-.bl-logo.is-loop .bl-logo__loop { opacity: 1; }
-.bl-logo.is-loop .bl-logo__intro { opacity: 0; }
-
-/* ───── Scroll-Szene ───── */
 .bl-szene {
   position: relative;
   background: var(--cream-100);
   color: var(--ink-900);
-  padding: 8px 0 72px;
+  padding: 96px 0 72px;
 }
 .bl-szene__titel {
   position: absolute; width: 1px; height: 1px; margin: -1px; padding: 0; overflow: hidden;
@@ -108,25 +19,82 @@
   padding: 0 24px;
   box-sizing: border-box;
 }
+
+/* Logo-Bild: Standbild (LCP, gleiche Datei wie Bild 1) liegt über dem Canvas, bis das Canvas gezeichnet hat */
+.bl-szene__bild {
+  position: relative;
+  width: min(100%, 1040px);
+  aspect-ratio: 2 / 1;
+  margin: 0 auto;
+  pointer-events: none;
+}
 .bl-szene__canvas,
 .bl-szene__still {
   display: block;
   width: 100%;
-  height: auto;
-  aspect-ratio: 2 / 1;
-  margin: 0 auto;
-  -webkit-mask-image: radial-gradient(closest-side, #000 86%, transparent 100%);
-          mask-image: radial-gradient(closest-side, #000 86%, transparent 100%);
+  height: 100%;
+  object-fit: contain;
+  -webkit-mask-image: radial-gradient(closest-side, #000 80%, transparent 100%);
+          mask-image: radial-gradient(closest-side, #000 80%, transparent 100%);
 }
 .bl-szene__canvas { display: none; }
+.bl-szene__bild picture { position: absolute; inset: 0; }
+
+/* Einstiegstext unter dem Logo */
+.bl-intro { text-align: center; }
+.bl-kicker {
+  margin: 0 auto clamp(10px, 1.6vh, 18px);
+  max-width: 40em;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--terra-500);
+}
+.bl-headline {
+  margin: 0;
+  font-size: clamp(32px, 3.5vw, 56px);
+  font-weight: 600;
+  line-height: 1.04;
+  letter-spacing: -0.025em;
+  color: var(--ink-900);
+  text-wrap: balance;
+}
+.bl-headline span { display: block; color: var(--terra-500); }
+.bl-sub {
+  margin: clamp(14px, 2.2vh, 24px) auto 0;
+  max-width: 34em;
+  font-size: clamp(16px, 1.25vw, 19px);
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--brown-600);
+}
+.bl-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 14px;
+  margin-top: clamp(18px, 2.8vh, 30px);
+}
+.bl-cta .sv-button { white-space: normal; }
+.bl-cta .sv-button--ghost {
+  background: transparent;
+  color: var(--ink-900);
+  border-color: var(--border-strong);
+  box-shadow: none;
+}
+.bl-cta .sv-button--ghost:hover,
+.bl-cta .sv-button--ghost:focus-visible { background: var(--cream-card); border-color: var(--ink-900); }
+
+/* Die drei Bereiche */
 .bl-szene__texte {
-  width: min(100%, 1100px, calc((100svh - 410px) * 2));
-  margin-left: auto; margin-right: auto;
-  padding: 0 7%; box-sizing: content-box;
+  width: min(100%, 1100px);
+  margin: 56px auto 0;
+  box-sizing: border-box;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 28px;
-  margin-top: 8px;
 }
 .bl-text h3 {
   margin: 0 0 10px;
@@ -139,53 +107,92 @@
 .bl-text__aktion { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
 .bl-text .st-mehr { color: var(--terra-500); font-weight: 700; text-decoration: none; }
 .bl-text .st-mehr:hover, .bl-text .st-mehr:focus-visible { color: var(--terra-600); text-decoration: underline; }
-.bl-text .sv-start { width: 100%; max-width: 320px; }
-.bl-text .sv-start__fehler { margin: 6px 0 0; font-size: 14px; }
 
-/* Aktiv (Skript läuft, Bewegung erlaubt): Abschnitt wird hoch, Bühne klebt oben */
+/* Knöpfe so breit und hoch wie das Domain-Feld, in allen drei Bereichen gleich */
+.bl-text .sv-button,
+.bl-text .sv-start { width: 100%; max-width: 320px; }
+.bl-text .sv-button {
+  box-sizing: border-box;
+  min-height: 50px;
+  justify-content: center;
+  text-align: center;
+  white-space: normal;
+}
+.bl-text .sv-start { display: flex; flex-direction: column; align-items: stretch; gap: 10px; }
+.bl-text .sv-start__feld { flex: none; width: 100%; }
+.bl-text .sv-start__feld input { border-color: var(--border-strong); }
+.bl-text .sv-start .sv-button { flex: none; max-width: none; }
+.bl-text .sv-start__fehler { margin: 0; font-size: 14px; color: #8C1D18; }
+
+/* ───── Aktiv (Skript läuft, Bewegung erlaubt): Abschnitt wird hoch, Bühne klebt oben ───── */
 .bl-szene.bl-an { height: 250vh; padding: 0; }
 .bl-an .bl-szene__sticky {
+  --bl-text-h: 330px;
   position: sticky;
   top: 0;
   height: 100vh;
   height: 100svh;
   padding-top: 82px;
-  padding-bottom: 20px;
+  padding-bottom: 24px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow: hidden;
 }
-.bl-an .bl-szene__canvas {
-  display: block;
-  width: min(100%, 1100px, calc((100svh - 410px) * 2));
+.bl-an .bl-szene__bild {
+  flex: none;
+  width: min(100%, 1040px, max(520px, calc((100svh - 106px - var(--bl-text-h)) * 2)));
 }
-.bl-an .bl-szene__still { display: none; }
-.bl-an .bl-text { opacity: 0; transform: translateY(14px); transition: opacity 0.45s ease, transform 0.45s ease; }
-.bl-an .bl-text.is-sichtbar { opacity: 1; transform: none; }
-.bl-an .bl-text:not(.is-sichtbar) { pointer-events: none; }
+.bl-an .bl-szene__canvas { display: block; }
+.bl-an.bl-bereit .bl-szene__bild picture { display: none; }
+
+/* Einstieg und Bereiche liegen übereinander; das Skript blendet um */
+.bl-an .bl-szene__unten { display: grid; min-height: var(--bl-text-h); align-items: start; }
+.bl-an .bl-intro,
+.bl-an .bl-szene__texte { grid-area: 1 / 1; }
+.bl-an .bl-szene__texte { margin-top: 8px; }
+.bl-an .bl-intro,
+.bl-an .bl-text {
+  transition: opacity 0.45s ease, transform 0.45s ease, visibility 0s linear 0s;
+}
+.bl-an .bl-intro.is-weg,
+.bl-an .bl-text:not(.is-sichtbar) {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.45s ease, transform 0.45s ease, visibility 0s linear 0.45s;
+}
+.bl-an .bl-intro.is-weg { transform: translateY(-12px); }
+.bl-an .bl-text:not(.is-sichtbar) { transform: translateY(14px); }
 
 @media (max-width: 900px) {
-  .bl-buehne { min-height: 0; align-items: flex-start; padding: 92px 0 24px; }
-  .bl-buehne__inner { padding: 0 20px; gap: 0; }
-  .bl-logo { width: min(100%, 520px); min-width: 0; aspect-ratio: 720 / 640; margin-top: 4px; }
-  .bl-headline { font-size: clamp(34px, 9.4vw, 52px); }
+  .bl-szene { padding-top: 88px; }
+  .bl-headline { font-size: clamp(30px, 7.6vw, 46px); }
   .bl-kicker { font-size: 12px; }
 }
 
-/* Mobil: Ausschnitt der Bildfolge folgt dem aktiven Teil, es steht immer nur ein Text da */
+/* Mobil: Logo erst ganz, dann folgt der Ausschnitt dem aktiven Teil; es steht immer nur ein Text da */
 @media (max-width: 760px) {
-  .bl-szene__still { aspect-ratio: 2 / 1; }
-  .bl-szene__texte { grid-template-columns: 1fr; gap: 28px; margin-top: 12px; }
-  .bl-an .bl-szene__sticky { padding: 76px 20px 16px; justify-content: flex-start; }
-  .bl-an .bl-szene__canvas { width: min(100%, 380px); aspect-ratio: 320 / 350; }
-  .bl-szene__texte { width: 100%; padding: 0; }
-  .bl-an .bl-szene__texte { position: relative; display: block; min-height: 250px; margin-top: 4px; }
-  .bl-an .bl-text { position: absolute; inset: 0 0 auto 0; }
-}
+  .bl-szene__sticky { padding: 0 20px; }
+  .bl-szene__texte { grid-template-columns: 1fr; gap: 28px; margin-top: 32px; }
+  .bl-kicker { font-size: 11px; letter-spacing: 0.06em; }
+  .bl-sub { font-size: 15px; }
+  .bl-cta { flex-direction: column; align-items: center; gap: 10px; }
+  .bl-cta .sv-button--ghost {
+    min-height: 0; padding: 4px 0; border: 0; background: none;
+    color: var(--terra-500); font-weight: 700;
+  }
+  .bl-cta .sv-button--ghost:hover,
+  .bl-cta .sv-button--ghost:focus-visible { background: none; color: var(--terra-600); text-decoration: underline; }
 
-@media (prefers-reduced-motion: reduce) {
-  .bl-logo__intro, .bl-logo__loop { display: none; }
+  .bl-an .bl-szene__sticky { --bl-text-h: 390px; padding: 72px 20px 14px; justify-content: flex-start; }
+  .bl-an .bl-szene__bild {
+    width: min(100%, 380px, max(200px, calc((100svh - 86px - var(--bl-text-h)) * 320 / 350)));
+    aspect-ratio: 320 / 350;
+  }
+  .bl-an .bl-szene__unten { margin-top: 4px; }
+  .bl-an .bl-szene__texte { display: grid; margin-top: 0; }
+  .bl-an .bl-text { grid-area: 1 / 1; }
 }
 
 /* .sv-page schnitt mit overflow-x:hidden die Sticky-Bühne ab (macht den Container zum Scroll-Bereich); clip tut dasselbe ohne diese Nebenwirkung */

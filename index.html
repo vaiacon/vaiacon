@@ -25,9 +25,9 @@
 <link rel="stylesheet" href="ui_kits/website/start.css?v=20261011-audit">
 <link rel="stylesheet" href="ui_kits/website/start-ruhig.css?v=20261005-ohne-preise">
 <link rel="stylesheet" href="ui_kits/website/verbesserungen.css">
-<link rel="stylesheet" href="ui_kits/website/blender.css?v=20261012-form">
-<link rel="preload" as="image" href="assets/blender/logo-poster-breit.webp" fetchpriority="high" media="(min-width: 761px)">
-<link rel="preload" as="image" href="assets/blender/logo-poster-hoch.webp" fetchpriority="high" media="(max-width: 760px)">
+<link rel="stylesheet" href="ui_kits/website/blender.css?v=20261013-buehne">
+<link rel="preload" as="image" href="assets/blender/szene/001.webp" fetchpriority="high" media="(min-width: 761px)">
+<link rel="preload" as="image" href="assets/blender/szene-mobil/001.webp" fetchpriority="high" media="(max-width: 760px)">
 <link rel="icon" type="image/png" href="assets/blender/logo-3d/favicon-32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="assets/blender/logo-3d/icon-192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/blender/logo-3d/icon-180.png">
@@ -213,65 +213,59 @@
   </header>
 
   <main id="inhalt">
-    <section id="top" class="bl-buehne" data-nav-hell aria-labelledby="st-titel">
-      <div class="bl-buehne__inner">
-        <div class="bl-logo" aria-hidden="true">
-          <picture>
-            <source media="(max-width: 760px)" srcset="assets/blender/logo-poster-hoch.webp">
-            <img class="bl-logo__bild" src="assets/blender/logo-poster-breit.webp" width="1600" height="500" alt="" fetchpriority="high" decoding="async">
-          </picture>
-          <video class="bl-logo__loop" muted loop playsinline preload="none" tabindex="-1" data-b="loop"></video>
-          <video class="bl-logo__intro" muted playsinline preload="none" tabindex="-1" data-b="intro"></video>
-        </div>
-        <div class="bl-text-block">
-          <h1 id="st-titel" class="bl-kicker">KI-Beratung für Schweizer KMU: Schulung, Sichtbarkeit und Automatisierung</h1>
-          <p class="bl-headline">KI für KMU verständlich erklärt, <span>zuverlässig umgesetzt</span></p>
-          <p class="bl-sub">Wir analysieren Abläufe, setzen digitale Lösungen um und begleiten Teams, bis sie im Alltag funktionieren.</p>
-          <div class="bl-cta">
-            <a class="sv-button sv-button--cta" href="#kontakt">Erstgespräch <span aria-hidden="true">&nbsp;→</span></a>
-            <a class="sv-button sv-button--ghost" href="erstanalyse.html" aria-label="Kostenlose Online-Erstanalyse öffnen">Kostenlose Online-Erstanalyse <span aria-hidden="true">&nbsp;→</span></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="bereiche" class="bl-szene" aria-labelledby="bl-szene-titel" data-bl-szene>
+    <section id="top" class="bl-szene" data-nav-hell aria-labelledby="st-titel" data-bl-szene>
       <div class="bl-szene__sticky">
-        <h2 id="bl-szene-titel" class="bl-szene__titel">Unsere drei Bereiche</h2>
-        <canvas class="bl-szene__canvas" width="1280" height="640" aria-hidden="true"></canvas>
-        <img class="bl-szene__still" src="assets/blender/szene-still.webp" width="1280" height="640" alt="" loading="lazy" decoding="async">
-        <div class="bl-szene__texte">
-          <article class="bl-text" id="bl-auto" data-k="0">
-            <h3>Automationen</h3>
-            <p>Belege, Offerten und Posteingang werden automatisch vorbereitet, damit Ihr Team Zeit für Wichtiges hat.</p>
-            <div class="bl-text__aktion">
-              <a class="sv-button sv-button--cta" href="kontakt#formular">Erstgespräch vereinbaren →</a>
-              <a class="st-mehr" href="bot">Mehr erfahren <span aria-hidden="true">→</span></a>
+        <div class="bl-szene__bild" aria-hidden="true">
+          <canvas class="bl-szene__canvas" width="1280" height="640"></canvas>
+          <picture>
+            <source media="(max-width: 760px)" srcset="assets/blender/szene-mobil/001.webp" width="800" height="400">
+            <img class="bl-szene__still" src="assets/blender/szene/001.webp" width="1280" height="640" alt="" fetchpriority="high" decoding="async">
+          </picture>
+        </div>
+        <div class="bl-szene__unten">
+          <div class="bl-intro">
+            <h1 id="st-titel" class="bl-kicker">KI-Beratung für Schweizer KMU: Schulung, Sichtbarkeit und Automatisierung</h1>
+            <p class="bl-headline">KI für KMU verständlich erklärt, <span>zuverlässig umgesetzt</span></p>
+            <p class="bl-sub">Wir analysieren Abläufe, setzen digitale Lösungen um und begleiten Teams, bis sie im Alltag funktionieren.</p>
+            <div class="bl-cta">
+              <a class="sv-button sv-button--cta" href="#kontakt">Erstgespräch <span aria-hidden="true">&nbsp;→</span></a>
+              <a class="sv-button sv-button--ghost" href="erstanalyse.html" aria-label="Kostenlose Online-Erstanalyse öffnen">Kostenlose Online-Erstanalyse <span aria-hidden="true">&nbsp;→</span></a>
             </div>
-          </article>
-          <article class="bl-text" id="bl-sicht" data-k="1">
-            <h3>Sichtbarkeit</h3>
-            <p>Gefunden werden, wenn Ihre Kundschaft bei Google sucht oder eine KI fragt.</p>
-            <div class="bl-text__aktion">
-              <form class="sv-start st-start" id="sv-start-form" action="https://vaiacon.ch/visibility#check" method="get" novalidate>
-                <div class="sv-start__feld">
-                  <label class="sv-start__label" for="sv-start-domain">Ihre Domain</label>
-                  <input type="text" id="sv-start-domain" name="domain" placeholder="ihre-firma.ch" autocomplete="off" autocapitalize="none" spellcheck="false" inputmode="url" required>
-                </div>
-                <button class="sv-button sv-button--cta" type="submit">Website kostenlos prüfen →</button>
-                <p class="sv-start__fehler" id="sv-start-fehler" role="alert" hidden></p>
-              </form>
-              <a class="st-mehr" href="visibility">Mehr erfahren <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
-          <article class="bl-text" id="bl-ki" data-k="2">
-            <h3>KI-Kompetenz</h3>
-            <p>Ihr Team lernt KI an den eigenen Aufgaben: Trainings, Coaching und kurze tägliche Lerneinheiten.</p>
-            <div class="bl-text__aktion">
-              <a class="sv-button sv-button--cta" href="learning#standortbestimmung">KI-Standort bestimmen →</a>
-              <a class="st-mehr" href="learning">Mehr erfahren <span aria-hidden="true">→</span></a>
-            </div>
-          </article>
+          </div>
+          <h2 id="bl-szene-titel" class="bl-szene__titel">Unsere drei Bereiche</h2>
+          <div class="bl-szene__texte">
+            <article class="bl-text" id="bl-auto" data-k="0">
+              <h3>Automationen</h3>
+              <p>Belege, Offerten und Posteingang werden automatisch vorbereitet, damit Ihr Team Zeit für Wichtiges hat.</p>
+              <div class="bl-text__aktion">
+                <a class="sv-button sv-button--cta" href="kontakt#formular">Erstgespräch vereinbaren →</a>
+                <a class="st-mehr" href="bot">Mehr erfahren <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+            <article class="bl-text" id="bl-sicht" data-k="1">
+              <h3>Sichtbarkeit</h3>
+              <p>Gefunden werden, wenn Ihre Kundschaft bei Google sucht oder eine KI fragt.</p>
+              <div class="bl-text__aktion">
+                <form class="sv-start st-start" id="sv-start-form" action="https://vaiacon.ch/visibility#check" method="get" novalidate>
+                  <div class="sv-start__feld">
+                    <label class="sv-start__label" for="sv-start-domain">Ihre Domain</label>
+                    <input type="text" id="sv-start-domain" name="domain" placeholder="ihre-firma.ch" autocomplete="off" autocapitalize="none" spellcheck="false" inputmode="url" required>
+                  </div>
+                  <button class="sv-button sv-button--cta" type="submit">Website kostenlos prüfen →</button>
+                  <p class="sv-start__fehler" id="sv-start-fehler" role="alert" hidden></p>
+                </form>
+                <a class="st-mehr" href="visibility">Mehr erfahren <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+            <article class="bl-text" id="bl-ki" data-k="2">
+              <h3>KI-Kompetenz</h3>
+              <p>Ihr Team lernt KI an den eigenen Aufgaben: Trainings, Coaching und kurze tägliche Lerneinheiten.</p>
+              <div class="bl-text__aktion">
+                <a class="sv-button sv-button--cta" href="learning#standortbestimmung">KI-Standort bestimmen →</a>
+                <a class="st-mehr" href="learning">Mehr erfahren <span aria-hidden="true">→</span></a>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
@@ -454,7 +448,7 @@
 <script src="ui_kits/website/visibility.js?v=20261007-logo-svg" defer></script>
 <script src="ui_kits/website/chat.js?v=20261004-umbau" defer></script>
 <script src="ui_kits/website/check-start.js?v=20261004-check" defer></script>
-<script src="ui_kits/website/blender-scroll.js?v=20261012-form" defer></script>
+<script src="ui_kits/website/blender-scroll.js?v=20261013-buehne" defer></script>
 <script src="ui_kits/website/navigation.js?v=20261012-3d" defer></script>
 </body>
 </html>

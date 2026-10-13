@@ -1,9 +1,10 @@
-/* Startseite, Zweig «blender»:
-   1. Logo-Intro (einmal) blendet über das Poster, danach folgt nahtlos die Schleife.
-   2. Scroll-Szene: Bildfolge auf <canvas>, das Bild folgt der Scroll-Position.
-      Desktop: 90 Bilder 1280x640, alle drei Texte erscheinen nacheinander.
-      Mobil (<= 760 px): 46 Bilder 800x400, der Ausschnitt folgt dem aktiven Teil, ein Text zur Zeit.
-      Reduzierte Bewegung / Datensparen / ohne Skript: ein Standbild und alle drei Texte untereinander. */
+/* Startseite, Zweig «blender»: Startbühne mit dem 3D-Logo.
+   Bild 1 der Bildfolge ist das fertige Logo und steht als Standbild über dem Einstiegstext.
+   Mit dem ersten Scrollen läuft die Bildfolge auf <canvas> (das Bild folgt der Scroll-Position),
+   der Einstiegstext blendet aus, die drei Bereiche erscheinen an ihren Stationen.
+   Desktop: 90 Bilder 1280x640, alle drei Texte nacheinander.
+   Mobil (<= 760 px): 46 Bilder 800x400; erst das ganze Logo, dann folgt der Ausschnitt dem aktiven Teil, ein Text zur Zeit.
+   Reduzierte Bewegung / Datensparen / ohne Skript: Logo, Einstieg und alle drei Texte untereinander. */
 (function () {
   'use strict';
 
@@ -11,38 +12,12 @@
   try { reduziert = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (e) {}
   try { spar = !!(navigator.connection && navigator.connection.saveData); } catch (e) {}
 
-  /* ───── Logo-Bühne: Intro einmal, danach nahtlos die Schleife ───── */
-  var buehne = document.querySelector('.bl-logo');
-  var vIntro = buehne && buehne.querySelector('[data-b="intro"]');
-  var vLoop = buehne && buehne.querySelector('[data-b="loop"]');
-  if (vIntro && vLoop && !reduziert && !spar) {
-    var hoch = window.matchMedia('(max-width: 760px)').matches;
-    var webm = !!(vIntro.canPlayType && vIntro.canPlayType('video/webm; codecs="vp9"'));
-    var quelle = function (n) { return 'assets/blender/logo-' + n + '-' + (hoch ? 'hoch' : 'breit') + (webm ? '.webm' : '.mp4'); };
-    vLoop.preload = 'auto'; vLoop.src = quelle('loop'); vLoop.load();
-    vIntro.preload = 'auto'; vIntro.src = quelle('intro');
-    var zurSchleife = function () {
-      var q = vLoop.play();
-      var an = function () { buehne.classList.add('is-loop'); };
-      vLoop.addEventListener('playing', an, { once: true });
-      if (q && q.catch) q.catch(function () { /* letztes Intro-Bild bleibt stehen */ });
-    };
-    vIntro.addEventListener('playing', function () { buehne.classList.add('is-intro'); }, { once: true });
-    vIntro.addEventListener('ended', zurSchleife, { once: true });
-    var p = vIntro.play();
-    if (p && p.catch) p.catch(function () { /* Poster (fertiges Logo) bleibt */ });
-    /* Tab im Hintergrund: Schleife anhalten, spart Strom */
-    document.addEventListener('visibilitychange', function () {
-      if (!buehne.classList.contains('is-loop')) return;
-      if (document.hidden) vLoop.pause(); else { var r = vLoop.play(); if (r && r.catch) r.catch(function () {}); }
-    });
-  }
-
   /* ───── Scroll-Szene ───── */
   var szene = document.querySelector('[data-bl-szene]');
   if (!szene || reduziert || spar) return;
   var canvas = szene.querySelector('canvas');
   var texte = Array.prototype.slice.call(szene.querySelectorAll('.bl-text'));
+  var intro = szene.querySelector('.bl-intro');
   if (!canvas || !canvas.getContext) return;
   var ctx = canvas.getContext('2d');
   if (!ctx) return;
@@ -70,6 +45,7 @@
   var cx = 0.5;         /* Mobil: Mitte des Ausschnitts (Anteil der Bildbreite) */
   var zuletzt = -1;
   var laeuft = false;
+  var bereit = false;   /* Canvas hat gezeichnet, Standbild darf weg */
 
   var SPALTEN = [0.22, 0.5, 0.78]; /* Lage der drei Teile im Endbild */
 
@@ -115,27 +91,37 @@
     return null;
   }
 
+  /* Mobil: Anteil der Bildbreite im Ausschnitt; am Anfang das ganze Logo, dann 40 % */
+  function anteil(sm) { return 1 - 0.6 * glatt(0, 0.16, sm); }
+
   function zeichnen(erzwingen) {
     var q = aktuell;
     var s = mobil ? klemm(q / 0.7, 0, 1) : klemm(q / 0.8, 0, 1);
     var img = bildFuer(s);
     if (!img) return;
-    var schluessel = Math.round(s * (N - 1)) * 1000 + Math.round(cx * 1000) + (mobil ? 1e7 : 0);
+    var f = mobil ? anteil(s) : 1;
+    var schluessel = Math.round(s * (N - 1)) + ':' + Math.round(cx * 1000) + ':' + Math.round(f * 1000) + (mobil ? 'm' : '');
     if (!erzwingen && schluessel === zuletzt) return;
     zuletzt = schluessel;
     var W = img.naturalWidth, H = img.naturalHeight;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     if (mobil) {
-      var sw = W * 0.4, sh = H * 0.875;
-      var sx = klemm(cx * W - sw / 2, 0, W - sw);
-      ctx.drawImage(img, sx, (H - sh) / 2, sw, sh, 0, 0, canvas.width, canvas.height);
+      /* Ausschnitt im Seitenverhältnis des Canvas; was über das Bild hinausragt, bleibt leer (Seitenfarbe) */
+      var sw = W * f, sh = sw * canvas.height / canvas.width;
+      var sx = klemm(cx * W - sw / 2, 0, W - sw), sy = (H - sh) / 2;
+      var x0 = Math.max(sx, 0), y0 = Math.max(sy, 0), x1 = Math.min(sx + sw, W), y1 = Math.min(sy + sh, H);
+      var k = canvas.width / sw;
+      ctx.drawImage(img, x0, y0, x1 - x0, y1 - y0, (x0 - sx) * k, (y0 - sy) * k, (x1 - x0) * k, (y1 - y0) * k);
     } else {
       ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
     }
+    if (!bereit) { bereit = true; szene.classList.add('bl-bereit'); }
   }
 
   function texteSetzen() {
     var q = aktuell;
+    var s0 = mobil ? klemm(q / 0.7, 0, 1) : klemm(q / 0.8, 0, 1);
+    if (intro) intro.classList.toggle('is-weg', s0 >= (mobil ? 0.18 : 0.22));
     for (var k = 0; k < texte.length; k++) {
       var an;
       if (mobil) {
@@ -174,17 +160,13 @@
   window.addEventListener('resize', function () {
     var war = mobil;
     if (mq.matches !== war) {
-      festlegen(); bilder = []; geladen = 0; start = false; zuletzt = -1;
+      festlegen(); bilder = []; geladen = 0; start = false; zuletzt = -1; bereit = false;
+      szene.classList.remove('bl-bereit');
       laden();
     }
     beiScroll();
   });
 
-  /* nach dem ersten Bild der Seite: Ruhe abwarten, dann laden */
-  function nachErstemBild() {
-    if ('requestIdleCallback' in window) window.requestIdleCallback(laden, { timeout: 2500 });
-    else setTimeout(laden, 800);
-  }
-  if (document.readyState === 'complete') nachErstemBild();
-  else window.addEventListener('load', nachErstemBild);
+  /* Die Bühne ist der Seitenanfang: sofort laden. Bild 1 ist dieselbe Datei wie das Standbild und kommt aus dem Zwischenspeicher. */
+  laden();
 })();
