@@ -88,14 +88,16 @@
           var img = new Image();
           img.decoding = 'async';
           offen++;
-          img.onload = img.onerror = function () {
+          function fertig() {
             offen--;
             if (satz !== DIR) return;    /* inzwischen auf den anderen Bildsatz gewechselt */
             if (v) { vgeladen++; if (img.naturalWidth) vbilder[k] = img; if (vgeladen === VN) vorspannStart(); }
             else { geladen++; if (img.naturalWidth) bilder[k] = img; zeichnen(true); }
             weiter();
-          };
+          }
           img.src = (v ? vsatz : DIR) + ('00' + (k + 1)).slice(-3) + '.webp';
+          /* decode(): das Bild ist entschlüsselt, bevor es zum ersten Mal gezeichnet wird (sonst Ruckler beim ersten Durchlauf) */
+          if (img.decode) img.decode().then(fertig, fertig); else img.onload = img.onerror = fertig;
         })(liste[i][0], liste[i][1]);
         i++;
       }
@@ -115,9 +117,12 @@
   function spielen(jetzt) {
     if (vorspann !== 'laeuft') return;
     if (!vt0) vt0 = jetzt;       /* startet erst, wenn der Tab sichtbar ist */
-    var k = Math.floor((jetzt - vt0) / 1000 * VFPS);
+    var pos = (jetzt - vt0) / 1000 * VFPS, k = Math.floor(pos);
     if (k >= VN || ziel > 0.003) { vorspannEnde(); return; }
-    for (var d = k; d >= 0; d--) if (vbilder[d]) { malen(vbilder[d], 1, 0.5); break; }
+    /* zwischen zwei Vorspann-Bildern überblenden: 30 Bilder/s wirken so auf 60/120-Hz-Bildschirmen flüssig; nach dem letzten folgt Szenenbild 1 */
+    var b = k + 1 < VN ? vbilder[k + 1] : bilder[0];
+    if (vbilder[k]) malen(vbilder[k], b, pos - k, 1, 0.5);
+    else for (var d = k; d >= 0; d--) if (vbilder[d]) { malen(vbilder[d], null, 0, 1, 0.5); break; }
     requestAnimationFrame(spielen);
   }
   function vorspannEnde() {
@@ -154,28 +159,39 @@
     if (vorspann !== 'fertig') return;
     var q = aktuell;
     var s = mobil ? klemm(q / 0.7, 0, 1) : klemm(q / 0.8, 0, 1);
-    var img = bildFuer(s);
-    if (!img) return;
+    var pos = s * (N - 1), k = Math.min(Math.floor(pos), N - 1), t = pos - k;
+    var a = bilder[k], b = k + 1 < N ? bilder[k + 1] : null;
+    if (!a || (t > 0.004 && !b)) { a = bildFuer(s); b = null; t = 0; }   /* Nachbarn noch nicht geladen: nächstes Bild */
+    if (!a) return;
     var f = mobil ? anteil(s) : 1;
-    var schluessel = Math.round(s * (N - 1)) + ':' + Math.round(cx * 1000) + ':' + Math.round(f * 1000) + (mobil ? 'm' : '');
+    var schluessel = Math.round(pos * 24) + ':' + Math.round(cx * 1000) + ':' + Math.round(f * 1000) + (mobil ? 'm' : '');
     if (!erzwingen && schluessel === zuletzt) return;
     zuletzt = schluessel;
-    malen(img, f, cx);
+    malen(a, b, t, f, cx);
   }
 
-  function malen(img, f, cx) {
-    var W = img.naturalWidth, H = img.naturalHeight;
+  /* Bild a, mit Anteil t zu Bild b überblendet. «lighter» addiert die (vormultiplizierten) Pixel:
+     (1-t)·a + t·b ist so auch bei durchsichtigen Bildern exakt, Schatten werden in der Mitte nicht heller. */
+  function malen(a, b, t, f, cx) {
+    var W = a.naturalWidth, H = a.naturalHeight;
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    var zug;
     if (mobil) {
       /* Ausschnitt im Seitenverhältnis des Canvas; was über das Bild hinausragt, bleibt leer (Seitenfarbe) */
       var sw = W * f, sh = sw * canvas.height / canvas.width;
       var sx = klemm(cx * W - sw / 2, 0, W - sw), sy = (H - sh) / 2;
       var x0 = Math.max(sx, 0), y0 = Math.max(sy, 0), x1 = Math.min(sx + sw, W), y1 = Math.min(sy + sh, H);
       var k = canvas.width / sw;
-      ctx.drawImage(img, x0, y0, x1 - x0, y1 - y0, (x0 - sx) * k, (y0 - sy) * k, (x1 - x0) * k, (y1 - y0) * k);
+      zug = function (img) { ctx.drawImage(img, x0, y0, x1 - x0, y1 - y0, (x0 - sx) * k, (y0 - sy) * k, (x1 - x0) * k, (y1 - y0) * k); };
     } else {
-      ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+      zug = function (img) { ctx.drawImage(img, 0, 0, canvas.width, canvas.height); };
     }
+    if (b && t > 0.004 && t < 0.996) {
+      ctx.globalCompositeOperation = 'lighter';
+      ctx.globalAlpha = 1 - t; zug(a);
+      ctx.globalAlpha = t; zug(b);
+      ctx.globalAlpha = 1; ctx.globalCompositeOperation = 'source-over';
+    } else zug(b && t >= 0.996 ? b : a);
     if (!bereit) { bereit = true; szene.classList.add('bl-bereit'); }
   }
 
@@ -204,15 +220,18 @@
     return v;
   }
 
-  function takt() {
+  var tz = 0;
+  function takt(jetzt) {
     laeuft = false;
+    /* Glättung je Zeit statt je Bild: auf 60- und 120-Hz-Bildschirmen gleich schnell */
+    var n = tz ? klemm((jetzt - tz) / 16.7, 0.25, 4) : 1; tz = jetzt;
     var d = ziel - aktuell;
-    if (Math.abs(d) < 0.0004) aktuell = ziel; else aktuell += d * 0.16;
+    if (Math.abs(d) < 0.0004) aktuell = ziel; else aktuell += d * (1 - Math.pow(1 - 0.16, n));
     var cz = mobil ? cxZiel() : 0.5;
-    if (Math.abs(cz - cx) < 0.0005) cx = cz; else cx += (cz - cx) * 0.18;
+    if (Math.abs(cz - cx) < 0.0005) cx = cz; else cx += (cz - cx) * (1 - Math.pow(1 - 0.18, n));
     zeichnen(false);
     texteSetzen();
-    if (aktuell !== ziel || cx !== cz) anfordern();
+    if (aktuell !== ziel || cx !== cz) anfordern(); else tz = 0;
   }
   function anfordern() { if (!laeuft) { laeuft = true; requestAnimationFrame(takt); } }
 
