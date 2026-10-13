@@ -48,6 +48,7 @@
         "satz": "Beitrag → Formular → KI-Einordnung → Besichtigung"
       }
     ],
+    "kundenbedienung": "Der Chatbot nimmt Anfragen samt Fotos auf und schlägt einen Besichtigungstermin vor. Am Telefon wird ein Rückruf notiert, wenn Sie auf der Baustelle sind.",
     "_quellen": [
       "https://baunex.ch/blog/malersoftware-schweiz-vergleich/",
       "https://werkli.ch/",
@@ -104,6 +105,7 @@
         "satz": "Zeiterfassung → Honorarrechnung → Zahlungsabgleich → Mahnung"
       }
     ],
+    "kundenbedienung": "Der Chatbot beantwortet Fragen zu Unterlagen und Fristen und nimmt Beratungstermine auf. Fachfragen gehen an Sie.",
     "_quellen": [
       "https://www.bdo.ch/de-ch/publikationen/digitale-transformation-treuhand",
       "https://treuflow.ch/",
@@ -160,6 +162,7 @@
         "satz": "Formular + Einwilligung vorab → direkt ins Dossier"
       }
     ],
+    "kundenbedienung": "Der Telefon-Assistent nimmt Terminanfragen und Rückrufwünsche auf und nennt Öffnungszeiten. Medizinische Auskünfte gibt er nicht; Notfälle gehen sofort an einen Menschen.",
     "_quellen": [
       "https://www.fonea.ch/blog/no-shows-reduzieren-praxis-ki-telefon",
       "https://www.doctena.com/de-ch/blog/non-classifiee-de-ch/no-shows-arztpraxis-reduzieren",
@@ -216,6 +219,7 @@
         "satz": "Beitrag → Formular → Vorprüfung → Beratungstermin"
       }
     ],
+    "kundenbedienung": "Der Telefon-Assistent nimmt Störungsmeldungen mit Adresse und Dringlichkeit auf und verbindet Notfälle an den Pikettdienst.",
     "_quellen": [
       "https://suissetec.ch/de/web-app-wartung-und-instandhaltung.html",
       "https://baunex.ch/blog/regierapport-digital-handwerker-schweiz/",
@@ -272,6 +276,7 @@
         "satz": "Retainer-Rechnung mit Stundennachweis → Versand → Mahnung"
       }
     ],
+    "kundenbedienung": "Der Chatbot auf der Website beantwortet Fragen zu Leistungen und Ablauf und nimmt Erstgespräche auf.",
     "_quellen": [
       "https://metricool.com/de/social-media-report-erstellen/",
       "https://filestage.io/de/blog/freigabeprozess/",
@@ -328,6 +333,7 @@
         "satz": "Rechnung per Mail → kontieren → Zahlung → verbucht"
       }
     ],
+    "kundenbedienung": "Telefon-Assistent und Chatbot nehmen Tischreservationen auf und nennen Öffnungszeiten und Menü. Bei Allergien übernimmt das Team.",
     "_quellen": [
       "https://www.nzz.ch/zuerich/in-schweizer-restaurants-bleiben-hunderttausende-tische-leer-trotz-reservation-das-gastgewerbe-reagiert-empfindlich-sagt-ein-experte-ld.1879710",
       "https://www.htr.ch/story/gastronomie/fachkraeftemangel-wirkt-sich-auf-online-bewertungen-aus-37445",
@@ -384,6 +390,7 @@
         "satz": "Mietzinsen + Aufträge + Leerstand → Monatsbericht → Versand"
       }
     ],
+    "kundenbedienung": "Der Chatbot beantwortet Fragen zum Inserat, nimmt Besichtigungsanfragen auf und gibt Interessenten an Sie weiter.",
     "_quellen": [
       "https://edana.ch/en/2026/02/09/how-ai-is-redefining-property-management-in-switzerland/",
       "https://www.moneycab.com/?p=1008295",
@@ -448,6 +455,7 @@
         "titel": "Lieferantenrechnungen verarbeiten",
         "satz": "Rechnung per Mail → kontieren → Zahlung → verbucht"
       }
-    ]
+    ],
+    "kundenbedienung": "Chatbot oder Telefon-Assistent beantwortet häufige Fragen, nimmt Termine und Rückrufe auf und übergibt an Sie."
   }
 }

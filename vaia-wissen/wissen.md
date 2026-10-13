@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 12.10.2026 · Eintrag 62c6ae7 KI-News für KMU 2026-10-12: neue Woche
+> Stand: 13.10.2026 · Eintrag c5b792e Automationen: Bereich Kundenbedienung (Chatbot und Telefon-Assistent)
 
 ## Wie du antwortest
 
@@ -1198,6 +1198,8 @@ Realistische Use Cases je Branche, geordnet nach den drei Sprossen (Einfache, Mi
 
 Das nervt: Mehrfach abtippen: Aufmass, Rapport, Offerte Offerten liegen, Nachfassen vergessen Arbeitszeiten kommen spät von der Baustelle
 
+Kunden bedienen (Chatbot oder Telefon-Assistent): Der Chatbot nimmt Anfragen samt Fotos auf und schlägt einen Besichtigungstermin vor. Am Telefon wird ein Rückruf notiert, wenn Sie auf der Baustelle sind.
+
 Einfache Automation:
 - Bewertungsbitte nach Abnahme: Abnahme → Nachricht mit Bewertungslink → Referenz
 - Rapport-Foto ablegen: WhatsApp-Foto → Projektordner, benannt
@@ -1216,6 +1218,8 @@ Komplette Automation:
 #### Treuhand
 
 Das nervt: Belege kommen spät, unvollständig, durcheinander Fehlende Unterlagen von Hand nachfragen Fristen als einzelne Termine statt Ablauf
+
+Kunden bedienen (Chatbot oder Telefon-Assistent): Der Chatbot beantwortet Fragen zu Unterlagen und Fristen und nimmt Beratungstermine auf. Fachfragen gehen an Sie.
 
 Einfache Automation:
 - Belege von selbst ablegen: Beleg per Mail oder App → benannt → Mandantenordner
@@ -1236,6 +1240,8 @@ Komplette Automation:
 
 Das nervt: Leere Stühle durch nicht abgesagte Termine Telefon bindet das Team: Rezepte, Termine Berichte und Dokumentation fressen Zeit
 
+Kunden bedienen (Chatbot oder Telefon-Assistent): Der Telefon-Assistent nimmt Terminanfragen und Rückrufwünsche auf und nennt Öffnungszeiten. Medizinische Auskünfte gibt er nicht; Notfälle gehen sofort an einen Menschen.
+
 Einfache Automation:
 - Terminerinnerung mit Absagelink: Tag vorher → Mail oder SMS → Absagelink
 - Recall für Vorsorge: Kein Check seit einem Jahr → Einladung → Termin
@@ -1254,6 +1260,8 @@ Komplette Automation:
 #### Sanitär und Heizung
 
 Das nervt: Regierapport täglich erfassen und unterschreiben Wartungsverträge von Hand, Termine vergessen Zeit und Material spät im Büro, Rechnung auch
+
+Kunden bedienen (Chatbot oder Telefon-Assistent): Der Telefon-Assistent nimmt Störungsmeldungen mit Adresse und Dringlichkeit auf und verbindet Notfälle an den Pikettdienst.
 
 Einfache Automation:
 - Wartungserinnerung an Kunden: Vor Intervall → Terminanfrage an Kunden
@@ -1274,6 +1282,8 @@ Komplette Automation:
 
 Das nervt: Monatsberichte zusammentragen frisst Stunden Feedback verstreut auf Mail, Chat, PDF Stunden spät erfasst, Budget läuft unbemerkt über
 
+Kunden bedienen (Chatbot oder Telefon-Assistent): Der Chatbot auf der Website beantwortet Fragen zu Leistungen und Ablauf und nimmt Erstgespräche auf.
+
 Einfache Automation:
 - Monatsbericht automatisch: Social Media + Analytics → fertiger Bericht → Kunde
 - Zeiterfassung per Erinnerung: Freitag → Erinnerung an fehlende Stunden
@@ -1292,6 +1302,8 @@ Komplette Automation:
 #### Restaurant
 
 Das nervt: Reservierte Tische bleiben leer Schlechte Google-Bewertungen unbeantwortet Keine Zeit für Administration im Dienstplan
+
+Kunden bedienen (Chatbot oder Telefon-Assistent): Telefon-Assistent und Chatbot nehmen Tischreservationen auf und nennen Öffnungszeiten und Menü. Bei Allergien übernimmt das Team.
 
 Einfache Automation:
 - Reservations-Bestätigung: Reservation → Bestätigung → Erinnerung mit Absagelink
@@ -1312,6 +1324,8 @@ Komplette Automation:
 
 Das nervt: Gleiche Interessentenfragen, jeden Tag neu Dossiers unvollständig, Rückfragen von Hand Schadenmeldungen verstreut auf Mail und Telefon
 
+Kunden bedienen (Chatbot oder Telefon-Assistent): Der Chatbot beantwortet Fragen zum Inserat, nimmt Besichtigungsanfragen auf und gibt Interessenten an Sie weiter.
+
 Einfache Automation:
 - Eingangsbestätigung für Interessenten: Portal-Anfrage → Antwort mit Unterlagenliste → Eintrag
 - Besichtigungserinnerung: Termin gebucht → Erinnerung mit Absagelink → Kalender
@@ -1328,6 +1342,8 @@ Komplette Automation:
 - Eigentümerbericht: Mietzinsen + Aufträge + Leerstand → Monatsbericht → Versand
 
 #### Für alle Branchen
+
+Kunden bedienen (Chatbot oder Telefon-Assistent): Chatbot oder Telefon-Assistent beantwortet häufige Fragen, nimmt Termine und Rückrufe auf und übergibt an Sie.
 
 Einfache Automation:
 - Bewertungen einholen: Auftrag erledigt → Nachricht mit Bewertungslink

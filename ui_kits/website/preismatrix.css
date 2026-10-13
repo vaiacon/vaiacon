@@ -216,6 +216,9 @@
   color: var(--cream-50);
   border-radius: var(--radius-lg);
 }
+.pm-branchen__kb { margin: 14px 0 0; padding: 12px 16px; background: var(--surface-card); border: 1px solid var(--border-strong); border-radius: var(--radius-lg); font-size: 14.5px; line-height: 1.45; color: var(--text-body); }
+.pm-branchen__kb[hidden] { display: none; }
+.pm-branchen__kb b { color: var(--text-strong); margin-right: 4px; }
 .pm-branchen__nervt[hidden] { display: none; }
 .pm-branchen__nervt b {
   display: block;

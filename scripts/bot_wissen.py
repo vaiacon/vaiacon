@@ -276,6 +276,9 @@ def bauen() -> tuple[str, list[str]]:
         if b.get("nervt"):
             t.append("Das nervt: " + " ".join(b["nervt"]))
             t.append("")
+        if b.get("kundenbedienung"):
+            t.append("Kunden bedienen (Chatbot oder Telefon-Assistent): " + b["kundenbedienung"])
+            t.append("")
         for sk, nm in (("einfach", "Einfache Automation"), ("verbunden", "Mittelgrosse Automation"), ("ganzer_ablauf", "Komplette Automation")):
             t.append(f"{nm}:")
             for u in b.get(sk, []):

@@ -10,6 +10,7 @@
   var chips = wurzel.querySelector('.pm-branchen__chips');
   var listen = wurzel.querySelectorAll('[data-sprosse]');
   var nervt = wurzel.querySelector('.pm-branchen__nervt');
+  var kb = wurzel.querySelector('.pm-branchen__kb');
   if (!chips || !listen.length) return;
   var SPEICHER = 'vaiacon-branche';
   var daten = null, knoepfe = [];
@@ -54,6 +55,11 @@
       var hat = b.nervt && b.nervt.length;
       nervt.hidden = !hat;
       if (n && hat) fuellen(n, b.nervt, false);
+    }
+    if (kb) {
+      var kt = kb.querySelector('span');
+      kb.hidden = !b.kundenbedienung;
+      if (kt) kt.textContent = b.kundenbedienung || '';
     }
     for (var k = 0; k < knoepfe.length; k++) {
       var an = knoepfe[k].getAttribute('data-branche') === id;
