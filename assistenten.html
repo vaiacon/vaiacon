@@ -32,7 +32,10 @@
 .as-zwei--um { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
 .as-zwei--um .as-bild { order: 2; }
 .as-bild { margin: 0; display: flex; justify-content: center; }
-.as-bild img { display: block; width: auto; max-width: 100%; max-height: 26rem; height: auto; }
+.as-bild img { display: block; width: 100%; max-width: 30rem; height: auto; }
+.as-hero-bild { margin: 0; }
+.as-hero-bild img { display: block; width: 100%; height: auto; border-radius: var(--radius-lg, 20px); box-shadow: 0 18px 48px rgba(0,0,0,.28); }
+.as-bild img { border-radius: var(--radius-lg, 20px); }
 .as-zwei > div { text-align: left; }
 .as-zwei .sv-checklist li .as-text { color: var(--text-body); font-weight: var(--weight-regular, 400); }
 .as-zwei h2 { text-wrap: balance; }
@@ -46,7 +49,7 @@
 @media (max-width: 820px) {
   .as-zwei, .as-zwei--um { grid-template-columns: minmax(0, 1fr); gap: var(--space-6); }
   .as-zwei--um .as-bild { order: 0; }
-  .as-bild img { max-height: 18rem; }
+  .as-bild img { max-width: 100%; }
 }
 </style>
 <!-- Strukturdaten: erzeugt von scripts/strukturdaten.py, nicht von Hand aendern -->
@@ -216,9 +219,7 @@
           </div>
         </div>
         <div class="sv-hero__visual" aria-label="Telefon-Assistent und Chatbot">
-          <figure class="sv-hero__robot sv-hero__robot--frei" style="--bot-verhaeltnis: 529 / 820">
-            <picture><source srcset="assets/assistenten/roboter-telefon.webp" type="image/webp"><img src="assets/assistenten/roboter-telefon.png" alt="Der vaiacon-Roboter mit Headset hält einen Telefonhörer und führt ein Kundengespräch" width="529" height="820" fetchpriority="high"></picture>
-          </figure>
+          <figure class="as-hero-bild"><picture><source srcset="assets/assistenten/szene-hero.webp" type="image/webp"><img src="assets/assistenten/szene-hero.jpg" alt="Smartphone und Tischtelefon mit Schallwellen, daneben ein Laptop mit Chatfenster und Ordner mit Firmenunterlagen" width="1200" height="800" fetchpriority="high"></picture></figure>
         </div>
       </div>
     </section>
@@ -249,21 +250,19 @@
       <div class="sv-wrap">
         <div class="as-zwei">
           <figure class="as-bild">
-            <picture><source srcset="assets/assistenten/roboter-telefon.webp" type="image/webp"><img src="assets/assistenten/roboter-telefon.png" alt="Der vaiacon-Roboter mit Headset am Telefon" width="529" height="820" loading="lazy" decoding="async"></picture>
+            <picture><source srcset="assets/assistenten/szene-telefon.webp" type="image/webp"><img src="assets/assistenten/szene-telefon.jpg" alt="Smartphone und Tischtelefon mit Schallwellen, daneben Kalender und Rückrufnotiz in einem Salon" width="900" height="900" loading="lazy" decoding="async"></picture>
           </figure>
           <div>
             <p class="sv-kicker">TELEFON-ASSISTENT</p>
             <h2 class="sv-title">Jeder Anruf wird angenommen.</h2>
-            <p class="sv-lead">
-              Ob Mittagspause, Baustelle oder Behandlung: Der Telefon-Assistent nimmt den Anruf entgegen und sorgt dafür, dass nichts verloren geht.
-            </p>
+            <p class="sv-lead">Jeder Anruf wird entgegengenommen, nichts geht verloren.</p>
             <ul class="sv-checklist">
-              <li><span aria-hidden="true">✓</span><span class="as-text">Beantwortet häufige Fragen, zum Beispiel zu Öffnungszeiten.</span></li>
-              <li><span aria-hidden="true">✓</span><span class="as-text">Nimmt Termine und Rückrufe auf.</span></li>
-              <li><span aria-hidden="true">✓</span><span class="as-text">Verbindet bei Bedarf mit einer Person weiter.</span></li>
-              <li><span aria-hidden="true">✓</span><span class="as-text">Meldet Ihnen per E-Mail oder im Kalender, was angefallen ist.</span></li>
+              <li><span aria-hidden="true">✓</span><span class="as-text">Beantwortet häufige Fragen</span></li>
+              <li><span aria-hidden="true">✓</span><span class="as-text">Nimmt Termin oder Rückruf auf</span></li>
+              <li><span aria-hidden="true">✓</span><span class="as-text">Verbindet bei Bedarf weiter</span></li>
+              <li><span aria-hidden="true">✓</span><span class="as-text">Meldung per E-Mail oder Kalender</span></li>
             </ul>
-            <p class="as-hinweis">Natürliche Stimme in Schweizer Hochdeutsch. Mundart versteht er auf Wunsch; wie gut das bei Ihrer Kundschaft klappt, prüfen wir vor dem Start mit Beispielanrufen.</p>
+            <p class="as-hinweis">Schweizer Hochdeutsch, Mundart auf Wunsch (vorab getestet).</p>
           </div>
         </div>
       </div>
@@ -273,21 +272,19 @@
       <div class="sv-wrap">
         <div class="as-zwei as-zwei--um">
           <figure class="as-bild">
-            <picture><source srcset="assets/assistenten/roboter-wissen.webp" type="image/webp"><img src="assets/assistenten/roboter-wissen.png" alt="Der vaiacon-Roboter hält ein Buch, daneben eine Sprechblase mit Häkchen und Ordner" width="570" height="820" loading="lazy" decoding="async"></picture>
+            <picture><source srcset="assets/assistenten/szene-wissen.webp" type="image/webp"><img src="assets/assistenten/szene-wissen.jpg" alt="Laptop mit Chatfenster, dahinter Ordner, Preisliste und Handbuch, aus denen die Antwort kommt" width="900" height="900" loading="lazy" decoding="async"></picture>
           </figure>
           <div>
             <p class="sv-kicker">CHATBOT MIT FIRMENWISSEN</p>
             <h2 class="sv-title">Antworten aus Ihren eigenen Unterlagen.</h2>
-            <p class="sv-lead">
-              Der Chatbot kennt, was in Ihrem Betrieb gilt: Preislisten, häufige Fragen, Handbücher und Abläufe. Er beantwortet damit Fragen auf Ihrer Website oder intern im Team.
-            </p>
+            <p class="sv-lead">Fragen auf Ihrer Website oder im Team, beantwortet aus Ihren Dokumenten.</p>
             <ul class="sv-checklist">
-              <li><span aria-hidden="true">✓</span><span class="as-text">Antwortet nur aus Ihren Unterlagen.</span></li>
-              <li><span aria-hidden="true">✓</span><span class="as-text">Sagt offen, wenn er etwas nicht weiss.</span></li>
-              <li><span aria-hidden="true">✓</span><span class="as-text">Gibt offene Fälle per E-Mail an Sie weiter.</span></li>
-              <li><span aria-hidden="true">✓</span><span class="as-text">Neue Unterlagen nehmen wir in der Betreuung auf.</span></li>
+              <li><span aria-hidden="true">✓</span><span class="as-text">Antwortet aus Ihren Unterlagen</span></li>
+              <li><span aria-hidden="true">✓</span><span class="as-text">Sagt offen, wenn er etwas nicht weiss</span></li>
+              <li><span aria-hidden="true">✓</span><span class="as-text">Offene Fälle per E-Mail an Sie</span></li>
+              <li><span aria-hidden="true">✓</span><span class="as-text">Bleibt aktuell, wir pflegen nach</span></li>
             </ul>
-            <p class="as-hinweis">Er antwortet, er handelt nicht: Bestellungen und Buchungen löst er nicht von selbst aus.</p>
+            <p class="as-hinweis">Beantwortet Fragen, löst aber keine Bestellungen oder Buchungen aus.</p>
           </div>
         </div>
       </div>
