@@ -35,6 +35,10 @@
 .as-bild img { display: block; width: auto; max-width: 100%; max-height: 26rem; height: auto; }
 .as-zwei h2 { text-wrap: balance; }
 .as-zwei .sv-checklist { margin-top: var(--space-5); }
+.as-zwei .sv-checklist { gap: var(--space-3); }
+.as-zwei .sv-checklist li { justify-content: flex-start; align-items: flex-start; text-align: left; font-size: var(--text-body); }
+.as-zwei .sv-checklist li > span:first-child { flex: 0 0 1.25rem; }
+.as-hinweis { margin: var(--space-5) 0 0; padding: var(--space-4) var(--space-5); border-left: 3px solid var(--accent); background: var(--surface-sand, rgba(0,0,0,.04)); border-radius: var(--radius-md, 8px); color: var(--text-body); font-size: var(--text-body-sm); line-height: var(--leading-body); }
 .as-kleingedruckt { margin: var(--space-6) auto 0; max-width: 46rem; text-align: center; color: var(--text-body); font-size: var(--text-body-sm); line-height: var(--leading-body); }
 .sv-card--symbol h3 { text-wrap: balance; }
 @media (max-width: 820px) {
@@ -252,15 +256,14 @@
               Ob Mittagspause, Baustelle oder Behandlung: Der Telefon-Assistent nimmt den Anruf entgegen und sorgt dafür, dass nichts verloren geht.
             </p>
             <ul class="sv-checklist">
-              <li><span aria-hidden="true">✓</span> Er nimmt Anrufe entgegen und beantwortet häufige Fragen, zum Beispiel zu Öffnungszeiten und Ablauf.</li>
-              <li><span aria-hidden="true">✓</span> Er erfasst das Anliegen und nimmt einen Termin oder Rückruf auf.</li>
-              <li><span aria-hidden="true">✓</span> Er verbindet auf Wunsch mit einer Person weiter, wenn es dringend ist oder ein Mensch gefragt ist.</li>
-              <li><span aria-hidden="true">✓</span> Natürliche Stimme, Schweizer Hochdeutsch. Auf Wunsch versteht er auch Mundart.</li>
-              <li><span aria-hidden="true">✓</span> Sie erfahren per E-Mail oder im Kalender, was angefallen ist.</li>
+              <li><span aria-hidden="true">✓</span><span class="as-text">Beantwortet häufige Fragen, zum Beispiel zu Öffnungszeiten.</span></li>
+              <li><span aria-hidden="true">✓</span><span class="as-text">Nimmt Termine und Rückrufe auf.</span></li>
+              <li><span aria-hidden="true">✓</span><span class="as-text">Verbindet bei Bedarf mit einer Person weiter.</span></li>
+              <li><span aria-hidden="true">✓</span><span class="as-text">Meldet Ihnen per E-Mail oder im Kalender, was angefallen ist.</span></li>
             </ul>
+            <p class="as-hinweis">Natürliche Stimme in Schweizer Hochdeutsch. Mundart versteht er auf Wunsch; wie gut das bei Ihrer Kundschaft klappt, prüfen wir vor dem Start mit Beispielanrufen.</p>
           </div>
         </div>
-        <p class="as-kleingedruckt">Zur Mundart: Wie gut das Verstehen bei Ihrer Kundschaft klappt, hängt von Dialekt und Gesprächsqualität ab. Wir prüfen es vor dem Start mit Beispielanrufen und sagen Ihnen offen, was gut geht und was nicht.</p>
       </div>
     </section>
 
@@ -277,11 +280,12 @@
               Der Chatbot kennt, was in Ihrem Betrieb gilt: Preislisten, häufige Fragen, Handbücher und Abläufe. Er beantwortet damit Fragen auf Ihrer Website oder intern im Team.
             </p>
             <ul class="sv-checklist">
-              <li><span aria-hidden="true">✓</span> Er antwortet nur aus Ihren Unterlagen und sagt offen, wenn er etwas nicht weiss.</li>
-              <li><span aria-hidden="true">✓</span> Offene Fälle gibt er per E-Mail an Sie weiter.</li>
-              <li><span aria-hidden="true">✓</span> Neue Unterlagen nehmen wir in der Betreuung für Sie auf, damit er aktuell bleibt.</li>
-              <li><span aria-hidden="true">✓</span> Er antwortet, er handelt nicht: Bestellungen und Buchungen löst er nicht von selbst aus.</li>
+              <li><span aria-hidden="true">✓</span><span class="as-text">Antwortet nur aus Ihren Unterlagen.</span></li>
+              <li><span aria-hidden="true">✓</span><span class="as-text">Sagt offen, wenn er etwas nicht weiss.</span></li>
+              <li><span aria-hidden="true">✓</span><span class="as-text">Gibt offene Fälle per E-Mail an Sie weiter.</span></li>
+              <li><span aria-hidden="true">✓</span><span class="as-text">Neue Unterlagen nehmen wir in der Betreuung auf.</span></li>
             </ul>
+            <p class="as-hinweis">Er antwortet, er handelt nicht: Bestellungen und Buchungen löst er nicht von selbst aus.</p>
           </div>
         </div>
       </div>
