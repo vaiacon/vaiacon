@@ -26,10 +26,10 @@
 <link rel="stylesheet" href="ui_kits/website/start-ruhig.css?v=20261005-ohne-preise">
 <link rel="stylesheet" href="ui_kits/website/verbesserungen.css">
 <link rel="stylesheet" href="ui_kits/website/blender.css?v=20261013-vorspann">
-<script>/* ?weiss: weisse Fassung auf dunklem Terracotta; bl-vorspann: Logo fliegt beim Laden ein */
-(function(){var h=document.documentElement;try{if(/[?&]weiss(\b|=|&|$)/.test(location.search))h.classList.add('bl-weiss');if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!(navigator.connection&&navigator.connection.saveData))h.classList.add('bl-vorspann')}catch(e){}})();</script>
-<link rel="preload" as="image" href="assets/blender/szene/001.webp" fetchpriority="high" media="(min-width: 761px)">
-<link rel="preload" as="image" href="assets/blender/szene-mobil/001.webp" fetchpriority="high" media="(max-width: 760px)">
+<script>/* Standard: weisses Logo auf dunklem Terracotta (bl-weiss); ?creme: Creme-Fassung; bl-vorspann: Logo fliegt beim Laden ein */
+(function(){var h=document.documentElement;try{if(!/[?&]creme(\b|=|&|$)/.test(location.search))h.classList.add('bl-weiss');if(!matchMedia('(prefers-reduced-motion: reduce)').matches&&!(navigator.connection&&navigator.connection.saveData))h.classList.add('bl-vorspann')}catch(e){}})();</script>
+<link rel="preload" as="image" href="assets/blender/szene-weiss/001.webp" fetchpriority="high" media="(min-width: 761px)">
+<link rel="preload" as="image" href="assets/blender/szene-weiss-mobil/001.webp" fetchpriority="high" media="(max-width: 760px)">
 <link rel="icon" type="image/png" href="assets/blender/logo-3d/favicon-32.png" sizes="32x32">
 <link rel="icon" type="image/png" href="assets/blender/logo-3d/icon-192.png" sizes="192x192">
 <link rel="apple-touch-icon" href="assets/blender/logo-3d/icon-180.png">
