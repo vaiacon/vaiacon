@@ -42,6 +42,7 @@ SEITEN = [
     ("learning.html", "KI-Kompetenz"),
     ("visibility.html", "Sichtbarkeit — gefunden werden"),
     ("bot.html", "Automationen"),
+    ("assistenten.html", "Telefon-Assistent und Chatbot mit Firmenwissen"),
     ("service.html", "Begleitung"),
     ("ki-kmu-news/index.html", "KI-News für KMU"),
     ("faq.html", "Häufige Fragen"),

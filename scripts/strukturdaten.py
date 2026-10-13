@@ -190,8 +190,17 @@ ANGEBOTE = {
         "service", "begleitung"),
 }
 
+# Eigene Angebotsseite, nicht im Firmenkatalog (dort steht sie schon unter Automationen: Chatbot, Telefonassistent).
+ANGEBOTE["assistenten.html"] = angebot(
+    "Telefon-Assistent und Chatbot mit Firmenwissen", "Telefon-Assistent und Chatbot",
+    "Vaiacon richtet bei Schweizer KMU einen Telefon-Assistenten (nimmt Anrufe entgegen, beantwortet Fragen, "
+    "erfasst Termine und Rückrufe, verbindet weiter) und einen Chatbot mit Firmenwissen (beantwortet Fragen aus den "
+    "eigenen Unterlagen) ein. Einrichtung, Wissen einpflegen, Stimme und Ton, Anbindung, Tests und Betreuung aus einer "
+    "Hand, nach Schweizer Datenschutz (revDSG).",
+    "assistenten")
+
 SEITEN = [
-    "index.html", "visibility.html", "learning.html", "bot.html", "service.html",
+    "index.html", "visibility.html", "learning.html", "bot.html", "service.html", "assistenten.html",
     # ki-kmu-news/* schreibt scripts/news_bauen.py selbst (eigener ItemList-Block); offerte.html leitet weiter
     "ueber-uns.html", "referenzen.html", "faq.html", "kontakt.html", "agb.html", "datenschutz.html",
     "impressum.html",
@@ -207,7 +216,7 @@ ORGANISATION["hasOfferCatalog"] = {
             "@type": "Service", "name": a["name"], "serviceType": a["serviceType"], "url": a["url"],
             "description": a["description"],
         }}
-        for a in ANGEBOTE.values()
+        for k, a in ANGEBOTE.items() if k != "assistenten.html"
     ],
 }
 
@@ -227,6 +236,7 @@ SITEMAP = [
     ("automationen-kosmetik", "automationen-kosmetik.html"),
     ("automationen-restaurant", "automationen-restaurant.html"),
     ("automationen-immobilien", "automationen-immobilien.html"),
+    ("assistenten", "assistenten.html"),
     ("service", "service.html"),
     ("erstanalyse/", "erstanalyse/index.html"),
     ("referenzen", "referenzen.html"),
@@ -343,6 +353,11 @@ eines Arbeitstages. Für einen Rückruf benötigen wir Ihre Telefonnummer.
 - [Automationen](https://vaiacon.ch/bot): Belege erfassen, Offertenentwürfe
   erstellen, Korrespondenz und Anfragen automatisch vorbereiten, Chatbot mit
   Firmenwissen, Telefonassistent, Anbindung an Ihre Software.
+- [Telefon-Assistent und Chatbot mit Firmenwissen](https://vaiacon.ch/assistenten):
+  Der Telefon-Assistent nimmt Anrufe entgegen, beantwortet Fragen, erfasst Termine
+  und Rückrufe und verbindet bei Bedarf weiter (Schweizer Hochdeutsch, auf Wunsch
+  Mundart verstehen). Der Chatbot beantwortet Fragen aus Ihren eigenen Unterlagen.
+  Einrichtung, Anbindung, Tests und Betreuung aus einer Hand, nach revDSG.
 - [Betreuung und Begleitung](https://vaiacon.ch/service): Die Betreuung hält
   alle Automationen und Chatbots am Laufen, die Vaiacon gebaut hat
   (Überwachung, Fehlerbehebung, Anpassungen). Die Begleitung ist feste Beratungs- und Arbeitszeit (vier oder acht
