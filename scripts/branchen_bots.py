@@ -38,9 +38,9 @@ DEFS = '''
 <defs>
   <linearGradient id="weiss" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#E4DDD3"/></linearGradient>
   <linearGradient id="silber" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FAFAFA"/><stop offset=".5" stop-color="#B9BCC0"/><stop offset="1" stop-color="#E8E9EB"/></linearGradient>
-  <linearGradient id="farbe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EE7436"/><stop offset="1" stop-color="#CF5520"/></linearGradient>
+  <linearGradient id="farbe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C8653B"/><stop offset="1" stop-color="#BB512B"/></linearGradient>
   <linearGradient id="putz" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#F3E8D8"/><stop offset="1" stop-color="#E6D8C3"/></linearGradient>
-  <linearGradient id="dach" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9602B"/><stop offset="1" stop-color="#974320"/></linearGradient>
+  <linearGradient id="dach" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#B95B35"/><stop offset="1" stop-color="#974320"/></linearGradient>
   <linearGradient id="glas" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#DDEBF0"/><stop offset="1" stop-color="#A9C3CE"/></linearGradient>
   <linearGradient id="holz" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D7B58D"/><stop offset="1" stop-color="#B98F62"/></linearGradient>
   <filter id="schatten" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#3E1606" flood-opacity=".28"/></filter>
@@ -118,7 +118,7 @@ def restaurant():
 <g filter="url(#schatten)">
 <path d="M192 286 L158 268 Q150 284 158 302 Z" fill="#AD5029"/>
 <path d="M192 286 L226 268 Q234 284 226 302 Z" fill="#AD5029"/>
-<rect x="182" y="274" width="20" height="24" rx="6" fill="#8E3F16"/>
+<rect x="182" y="274" width="20" height="24" rx="6" fill="#873E1F"/>
 </g>
 <path d="M166 276 Q176 282 186 284 M218 276 Q208 282 198 284" stroke="#fff" stroke-width="2.5" opacity=".35" fill="none" stroke-linecap="round"/>
 '''
@@ -166,19 +166,19 @@ def immobilien():
     # Das Haus ist höher und breiter als der Bot.
     haus = '''
 <ellipse cx="300" cy="568" rx="190" ry="10" fill="#3E1606" opacity=".16"/>
-<rect x="394" y="84" width="34" height="86" rx="3" fill="#B86A3A"/>
-<rect x="388" y="76" width="46" height="14" rx="3" fill="#8E4D26"/>
+<rect x="394" y="84" width="34" height="86" rx="3" fill="#B06842"/>
+<rect x="388" y="76" width="46" height="14" rx="3" fill="#874B2D"/>
 <g filter="url(#schatten)">
 <rect x="150" y="214" width="326" height="354" rx="6" fill="url(#putz)"/>
 <path d="M118 228 L303 62 L492 228 Z" fill="url(#dach)"/>
-<path d="M118 228 L303 62 L492 228" stroke="#7E3510" stroke-width="4" fill="none" stroke-linejoin="round"/>
+<path d="M118 228 L303 62 L492 228" stroke="#783519" stroke-width="4" fill="none" stroke-linejoin="round"/>
 </g>
 <path d="M150 560 H476" stroke="#CDBB9E" stroke-width="12"/>
 <rect x="372" y="244" width="72" height="84" rx="4" fill="#fff"/>
 <rect x="379" y="251" width="58" height="70" rx="2" fill="url(#glas)"/>
 <path d="M408 251 V321 M379 286 H437" stroke="#fff" stroke-width="5"/>
 <rect x="354" y="368" width="102" height="196" rx="4" fill="#fff"/>
-<path d="M362 564 V404 Q362 376 405 376 Q448 376 448 404 V564 Z" fill="#8E3F16"/>
+<path d="M362 564 V404 Q362 376 405 376 Q448 376 448 404 V564 Z" fill="#873E1F"/>
 <path d="M376 560 V412 Q376 392 405 392" stroke="#fff" stroke-width="3" opacity=".25" fill="none"/>
 <circle cx="378" cy="476" r="6.5" fill="#E8C766"/>
 <rect x="340" y="560" width="130" height="14" rx="4" fill="#CFC5B8"/>
