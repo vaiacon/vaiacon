@@ -41,14 +41,6 @@
           ['learning#themen-top', 'Die Themen', 'Zehn Themen, die oft gefragt sind.']
         ] }
       ] },
-    { id: 'assistenten', seite: 'assistenten', titel: 'Assistenten',
-      text: 'Telefon-Assistent und Chatbot mit Firmenwissen, für Sie eingerichtet.',
-      spalten: [
-        { titel: 'Für Ihre Kundschaft', breit: true, punkte: [
-          ['assistenten#telefon', 'Telefon-Assistent', 'Nimmt Anrufe entgegen, auch wenn niemand Zeit hat.'],
-          ['assistenten#chatbot', 'Chatbot mit Firmenwissen', 'Beantwortet Fragen aus Ihren eigenen Unterlagen.']
-        ] }
-      ] },
     { id: 'visibility', seite: 'visibility', titel: 'Sichtbarkeit',
       text: 'Damit Google und KI-Assistenten Ihr Angebot verstehen.',
       spalten: [
