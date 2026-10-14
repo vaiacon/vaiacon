@@ -17,6 +17,7 @@
   .raster { max-width: 1180px; margin: 0 auto; padding: 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 22px; }
   .v { background: var(--card); border-radius: 22px; overflow: hidden; box-shadow: 0 1px 0 rgba(28,22,19,.08), 0 12px 30px -18px rgba(28,22,19,.35); }
   .v.heute { outline: 2px dashed var(--muted); outline-offset: 3px; }
+  .nr { position: absolute; z-index: 2; left: 14px; top: 62px; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: var(--cream50); color: var(--deep); font: 700 24px/1 'Quicksand', sans-serif; box-shadow: 0 8px 20px -8px rgba(40,10,0,.6); }
   .hero { position: relative; height: 270px; background: var(--hero); color: #fff; padding: 16px 18px; overflow: hidden; }
   .nav { display: flex; align-items: center; justify-content: space-between; background: rgba(251,244,238,.96); border-radius: 999px; padding: 6px 6px 6px 16px; color: var(--ink); font-weight: 700; font-size: 13px; }
   .nav span.links { display: flex; gap: 12px; font-weight: 600; color: var(--brown); font-size: 12px; }
@@ -46,18 +47,18 @@
 <body>
 <header class="kopf">
   <h1>Terracotta-Varianten für vaiacon.ch</h1>
-  <p>Je Karte: Startbereich, Farbband (Abschnitte und Fusszeile), Knopf, Link und kleine Überschrift. Gestrichelt umrandet ist der heutige Stand. Mit der Maus über einen Knopf zeigt die Farbe beim Darüberfahren.</p>
+  <p>Je Karte: Startbereich, Farbband (Abschnitte und Fusszeile), Knopf, Link und kleine Überschrift. Nummer 0 (gestrichelt) ist der heutige Stand. Mit der Maus über einen Knopf zeigt die Farbe beim Darüberfahren.</p>
 </header>
 <main class="raster" id="raster"></main>
 <script>
   var V = [
-    { k: 'heute', n: 'Heute', d: 'Orange mit Rostbraun', hero: ['#FA8C4A','#EB702B','#B24009','#862A03'], sec: ['#A83A08','#D75A20'], btn: '#E2652C', btnh: '#F4793E', link: '#B25222', deep: '#A83A08' },
-    { k: 'A', n: 'A · Ziegel', d: 'klassisches Terracotta, warm', hero: ['#EE9A76','#D8724D','#AE4F2E','#77311E'], sec: ['#9E4429','#C8653F'], btn: '#C2613F', btnh: '#D27250', link: '#A84E30', deep: '#93402A' },
-    { k: 'B', n: 'B · Gebrannter Ton', d: 'zwischen heute und Terracotta', hero: ['#F5A273','#E07A4E','#B5532E','#80351D'], sec: ['#A5461F','#D16B3F'], btn: '#CC6A42', btnh: '#DB7B52', link: '#A9512E', deep: '#9A431F' },
-    { k: 'C', n: 'C · Ziegelrot', d: 'rötlicher, kräftig', hero: ['#EC917A','#D0604A','#A6402D','#6C2318'], sec: ['#93362A','#C2533F'], btn: '#BA4A36', btnh: '#CB5A45', link: '#9E3E2A', deep: '#8A3324' },
-    { k: 'D', n: 'D · Erdig', d: 'gedämpft, staubig, ruhig', hero: ['#E2A487','#C77D5C','#9C5A40','#673A29'], sec: ['#87503A','#B56E50'], btn: '#B5654A', btnh: '#C4755A', link: '#95533B', deep: '#7E4733' },
-    { k: 'E', n: 'E · Siena', d: 'dunkel und edel', hero: ['#DE8D61','#BC623C','#8E4426','#5A2917'], sec: ['#7C3A20','#AE5833'], btn: '#A9542F', btnh: '#BA643D', link: '#8E4426', deep: '#7C3A20' },
-    { k: 'F', n: 'F · Rosé-Ton', d: 'heller, rosiger Ton (Tontöpfe)', hero: ['#F2AE92','#DE8566','#BC6246','#86412E'], sec: ['#A9563D','#D5805F'], btn: '#C96F52', btnh: '#D87F62', link: '#A65A40', deep: '#97503A' }
+    { k: 'heute', n: '0 · Heute', d: 'Orange mit Rostbraun', hero: ['#FA8C4A','#EB702B','#B24009','#862A03'], sec: ['#A83A08','#D75A20'], btn: '#E2652C', btnh: '#F4793E', link: '#B25222', deep: '#A83A08' },
+    { k: '1', n: '1 · Ziegel', d: 'klassisches Terracotta, warm', hero: ['#EE9A76','#D8724D','#AE4F2E','#77311E'], sec: ['#9E4429','#C8653F'], btn: '#C2613F', btnh: '#D27250', link: '#A84E30', deep: '#93402A' },
+    { k: '2', n: '2 · Gebrannter Ton', d: 'zwischen heute und Terracotta', hero: ['#F5A273','#E07A4E','#B5532E','#80351D'], sec: ['#A5461F','#D16B3F'], btn: '#CC6A42', btnh: '#DB7B52', link: '#A9512E', deep: '#9A431F' },
+    { k: '3', n: '3 · Ziegelrot', d: 'rötlicher, kräftig', hero: ['#EC917A','#D0604A','#A6402D','#6C2318'], sec: ['#93362A','#C2533F'], btn: '#BA4A36', btnh: '#CB5A45', link: '#9E3E2A', deep: '#8A3324' },
+    { k: '4', n: '4 · Erdig', d: 'gedämpft, staubig, ruhig', hero: ['#E2A487','#C77D5C','#9C5A40','#673A29'], sec: ['#87503A','#B56E50'], btn: '#B5654A', btnh: '#C4755A', link: '#95533B', deep: '#7E4733' },
+    { k: '5', n: '5 · Siena', d: 'dunkel und edel', hero: ['#DE8D61','#BC623C','#8E4426','#5A2917'], sec: ['#7C3A20','#AE5833'], btn: '#A9542F', btnh: '#BA643D', link: '#8E4426', deep: '#7C3A20' },
+    { k: '6', n: '6 · Rosé-Ton', d: 'heller, rosiger Ton (Tontöpfe)', hero: ['#F2AE92','#DE8566','#BC6246','#86412E'], sec: ['#A9563D','#D5805F'], btn: '#C96F52', btnh: '#D87F62', link: '#A65A40', deep: '#97503A' }
   ];
   function lum(h) { var c = [1,3,5].map(function (i) { var v = parseInt(h.substr(i,2),16)/255; return v <= .03928 ? v/12.92 : Math.pow((v+.055)/1.055, 2.4); }); return .2126*c[0] + .7152*c[1] + .0722*c[2]; }
   function kr(a, b) { var x = lum(a), y = lum(b); return ((Math.max(x,y)+.05)/(Math.min(x,y)+.05)).toFixed(1); }
@@ -67,7 +68,7 @@
     var st = '--hero:' + hero + ';--section:' + sec + ';--btn:' + v.btn + ';--btnh:' + v.btnh + ';--link:' + v.link + ';--deep:' + v.deep;
     var farben = [['hell', v.hero[0]], ['mitte', v.hero[1]], ['Knopf', v.btn], ['Link', v.link], ['dunkel', v.hero[3]]];
     return '<section class="v' + (v.k === 'heute' ? ' heute' : '') + '" style="' + st + '">' +
-      '<div class="hero"><div class="nav">vaiacon<span class="links"><span>KI-Kompetenz</span><span>Sichtbarkeit</span></span><span class="knopf">Kontakt</span></div>' +
+      '<div class="hero"><span class="nr">' + (v.k === 'heute' ? '0' : v.k) + '</span><div class="nav">vaiacon<span class="links"><span>KI-Kompetenz</span><span>Sichtbarkeit</span></span><span class="knopf">Kontakt</span></div>' +
       '<h2>KI, die im Alltag mitarbeitet.</h2><span class="knopf hell">Erstgespräch vereinbaren</span><img src="../assets/vaiacon-buerobot-startseite.webp" alt=""></div>' +
       '<div class="band"></div>' +
       '<div class="inhalt"><div class="kicker">Automationen</div><h3>Weniger Kleinkram.</h3><p>Wiederkehrende Aufgaben laufen von allein. <a href="#">Beispiele ansehen</a></p>' +
