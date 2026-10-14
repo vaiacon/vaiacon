@@ -190,7 +190,7 @@ body {
 .mock-hero::before {
   z-index: 1;
   background:
-    radial-gradient(68% 48% at 50% 102%, rgba(248, 154, 87, 0.42) 0%, rgba(248, 154, 87, 0) 72%),
+    radial-gradient(68% 48% at 50% 102%, rgba(244, 147, 96, 0.42) 0%, rgba(244, 147, 96, 0) 72%),
     radial-gradient(100% 64% at 50% -12%, rgba(67, 22, 4, 0.24) 0%, rgba(67, 22, 4, 0) 62%);
 }
 

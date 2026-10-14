@@ -49,7 +49,7 @@ function UeberUns() {
           <TeamCard src="../../assets/andre-ulrich-team.png?v=20260720-andre-bg-clean" alt="Porträt von André Ulrich" name="André Ulrich" role="Mitgründer · KMU-Experte" />
           <TeamCard src="../../assets/philip-krieger-team.png" alt="Porträt von Philip Krieger" name="Philip Krieger" role="Mitgründer · Coach" />
           <QuoteCard
-            logoSrc="../../assets/logo-mark-terra-symbol-white.png"
+            logoSrc="../../assets/logo-mark-terra-symbol-white.png?v=20261014"
             quote="Klarheit schafft bessere Entscheidungen."
             style={{ gridColumn: '1 / -1', minHeight: 200 }}
           />

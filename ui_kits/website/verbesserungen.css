@@ -49,7 +49,7 @@ html[data-fuss="sand"] .sv-footer { background: var(--sand-200); color: var(--te
 html[data-fuss="sand"] .sv-footer a, html[data-fuss="sand"] .sv-footer__links a, html[data-fuss="sand"] .sv-footer__top { color: var(--text-strong); }
 html[data-fuss="sand"] .sv-footer p { color: var(--text-body); }
 html[data-fuss="sand"] .sv-footer__social a { background: rgba(28, 22, 19, 0.08); }
-html[data-fuss="sand"] .sv-footer__logo img, html[data-fuss="creme"] .sv-footer__logo img { content: url("../../assets/logo-lockup-terra.svg"); }
+html[data-fuss="sand"] .sv-footer__logo img, html[data-fuss="creme"] .sv-footer__logo img { content: url("../../assets/logo-lockup-terra.svg?v=20261014"); }
 /* Ein Block: Fusszeile setzt den Schlussteil nahtlos fort */
 html[data-fuss="block"] .sv-footer { background: #7F2E11; }
 html[data-fuss="block"] .sv-footer__inner { border-top: 1px solid rgba(255, 240, 230, 0.22); }
@@ -104,7 +104,7 @@ html[data-ende="hell"] .vb-fuss a { color: var(--text-strong); }
 html[data-ende="hell"] .vb-fuss__titel { color: var(--terra-500); }
 html[data-ende="hell"] .vb-fuss__adresse, html[data-ende="hell"] .vb-fuss__basis { color: var(--text-body); }
 html[data-ende="hell"] .vb-fuss__basis { border-top-color: var(--border-strong); }
-html[data-ende="hell"] .vb-fuss .sv-footer__logo img { content: url("../../assets/logo-lockup-terra.svg"); }
+html[data-ende="hell"] .vb-fuss .sv-footer__logo img { content: url("../../assets/logo-lockup-terra.svg?v=20261014"); }
 html[data-ende="hell"] .vb-fuss .sv-footer__social a { background: rgba(173, 80, 41, 0.1); color: var(--terra-500); }
 
 /* 11.10.: Schlussteil hell, Fusszeile Terracotta – Hintergründe wechseln sich ab */

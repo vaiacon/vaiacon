@@ -106,7 +106,7 @@
   width: 420px;
   height: 420px;
   border-radius: 50%;
-  background: radial-gradient(closest-side, rgba(255, 196, 150, 0.5), rgba(255, 170, 110, 0.16) 60%, rgba(255, 170, 110, 0) 100%);
+  background: radial-gradient(closest-side, rgba(255, 197, 159, 0.5), rgba(247, 167, 119, 0.16) 60%, rgba(247, 167, 119, 0) 100%);
   transform: translate(-50%, -14%);
   pointer-events: none;
 }

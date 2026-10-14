@@ -60,14 +60,14 @@ function App() {
       <div className="site-header-shell">
         <div className="header-desktop">
           <SiteHeader
-            logoSrc="../../assets/logo-lockup-terra-symbol-cream.png"
+            logoSrc="../../assets/logo-lockup-terra-symbol-cream.png?v=20261014"
             links={NAV_LINKS}
             active={active}
             ctaLabel={null}
           />
         </div>
         <MobileHeader
-          logoSrc="../../assets/logo-lockup-terra-symbol-cream.png"
+          logoSrc="../../assets/logo-lockup-terra-symbol-cream.png?v=20261014"
           links={NAV_LINKS}
           active={active}
           ctaLabel={null}

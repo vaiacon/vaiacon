@@ -12,7 +12,7 @@ export function QuoteCard({ logoSrc, quote, attribution, style }) {
         «{quote}»
       </blockquote>
       {attribution ? (
-        <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: '14px', fontWeight: 600, color: 'rgba(233, 140, 88, 0.9)' }}>{attribution}</p>
+        <p style={{ margin: 0, fontFamily: 'var(--font-sans)', fontSize: '14px', fontWeight: 600, color: 'rgba(230, 142, 98, 0.9)' }}>{attribution}</p>
       ) : null}
     </article>
   );

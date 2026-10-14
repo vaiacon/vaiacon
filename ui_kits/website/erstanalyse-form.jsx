@@ -416,7 +416,7 @@ function ErstanalyseApp() {
       <header className="mock-header is-solid">
         <div className="mock-header__inner">
           <a className="mock-header__logo" href={ROOT} aria-label="vaiacon Startseite">
-            <img src={ROOT + 'assets/logo-lockup-terra.png'} alt="vaiacon" />
+            <img src={ROOT + 'assets/logo-lockup-terra.png?v=20261014'} alt="vaiacon" />
           </a>
           <a className="ea-back" href={ROOT}>Zurück zur Startseite →</a>
         </div>

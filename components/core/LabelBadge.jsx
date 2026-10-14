@@ -3,7 +3,7 @@ import React from 'react';
 const BADGE_TONES = {
   peach:   { color: 'var(--terra-600)', background: 'var(--peach-150)', border: 'none' },
   onTerra: { color: 'var(--peach-100)', background: 'rgba(255, 244, 236, 0.16)', border: '1px solid rgba(255, 255, 255, 0.3)' },
-  onDark:  { color: 'var(--orange-300)', background: 'rgba(233, 140, 88, 0.13)', border: '1px solid rgba(233, 140, 88, 0.4)' },
+  onDark:  { color: 'var(--orange-300)', background: 'rgba(230, 142, 98, 0.13)', border: '1px solid rgba(230, 142, 98, 0.4)' },
 };
 
 /** Gesperrtes UPPERCASE-Mini-Badge: «KOSTENLOS & UNVERBINDLICH», «PAKET 01 · ARBEITSWEISE». */

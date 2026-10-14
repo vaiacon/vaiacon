@@ -6,7 +6,7 @@ window.ACADEMY_PLANS = [
     tile: 'Der Einstieg ohne Fachchinesisch: was die Werkzeuge können, wie Sie sie ansprechen und woran Sie eine falsche Antwort erkennen.',
     lead: 'Bevor wir automatisieren, klären wir das Handwerk: was diese Werkzeuge heute wirklich leisten, wie man sie anspricht, woran Sie eine erfundene Antwort erkennen und wie Sie eine Routine aufbauen, die eine Woche später noch steht.',
     bild: 'Bild: Inhaber am Laptop im Betrieb',
-    img: 'assets/lernplan-01.png',
+    img: 'assets/lernplan-01.png?v=20261014',
     takeaways: ['Prompt-Karte A5', 'Startanleitung Schritt für Schritt', '30-Minuten-Wochenplan', 'Vergleich der gängigen Assistenten', 'Prüfliste gegen erfundene Antworten'],
     lessons: [
       ['Was KI heute kann und was nicht', 'VIDEO', '3 Min'],
@@ -96,7 +96,7 @@ window.ACADEMY_PLANS = [
     tile: 'Was rein darf und was nie: revDSG, Anonymisieren, Cloud-Standort.',
     lead: 'Die Lektionen, die vor allen anderen kommen sollten: welche Daten Sie nie eingeben, wie Sie Kundenangaben in 2 Minuten anonymisieren und was das revDSG von Ihrem Betrieb verlangt.',
     bild: 'Bild: Aktenordner und Bildschirm',
-    img: 'assets/lernplan-02.png',
+    img: 'assets/lernplan-02.png?v=20261014',
     takeaways: ['Merkblatt «nie eingeben»', 'Anonymisierungs-Vorlage', 'Sicherheits-Check auf einer Seite'],
     lessons: [
       ['Was Sie nie eingeben dürfen', 'VIDEO + CHECK', '6 Min', {
@@ -180,7 +180,7 @@ window.ACADEMY_PLANS = [
     tile: 'Der Posteingang zuerst: Antworten, die nach Ihnen klingen.',
     lead: 'Wo die meisten Stunden verschwinden: im Postfach. Sie bauen Bausteine für Ihre häufigsten Antworten, lernen den Ton treffen und behalten die heiklen Mails selbst in der Hand.',
     bild: 'Bild: Postfach am Morgen',
-    img: 'assets/lernplan-03.png',
+    img: 'assets/lernplan-03.png?v=20261014',
     takeaways: ['Ton-Profil Ihres Betriebs', 'Baustein-Set für Standardantworten', 'Leitfaden für heikle Mails'],
     lessons: [
       ['Ihre Zeitfresser im Postfach finden', 'ÜBUNG', '6 Min', {
@@ -253,7 +253,7 @@ window.ACADEMY_PLANS = [
     tile: 'Aus 5 Stichworten eine Offerte in Ihrer Struktur.',
     lead: 'Vom Stichwort zur fertigen Offerte, mit Ihren Positionen, Ihrer Preislogik und Ihrem Schlusssatz. Danach folgen Nachfassen und Auftragsbestätigung, damit nichts liegen bleibt.',
     bild: 'Bild: Offerte auf dem Bürotisch',
-    img: 'assets/lernplan-04.png',
+    img: 'assets/lernplan-04.png?v=20261014',
     takeaways: ['Offerten-Gerüst (Word)', 'Preislogik-Beschrieb', 'Nachfass-Sequenz (2 Mails)'],
     lessons: [
       ['Offerten aus Stichworten', 'WERKSTATT', '8 Min', {
@@ -324,7 +324,7 @@ window.ACADEMY_PLANS = [
     tile: 'Belegstapel, Spesen, Mahnwesen bis zur Übergabe ans Treuhandbüro.',
     lead: 'Der Papierkram, den niemand mag: Belege vorsortieren, Spesen erfassen, Zahlungseingänge prüfen. Am Ende steht ein Monatsabschluss, der eine halbe Stunde dauert statt einen Abend.',
     bild: 'Bild: Belege und Kaffeetasse',
-    img: 'assets/lernplan-05.png',
+    img: 'assets/lernplan-05.png?v=20261014',
     takeaways: ['Belegübergabe-Checkliste', 'Mahn-Textbausteine', 'Monatsabschluss-Ablauf'],
     lessons: [
       ['Belege vorsortieren fürs Treuhandbüro', 'WERKSTATT', '7 Min', {
@@ -386,7 +386,7 @@ window.ACADEMY_PLANS = [
     tile: 'Aus Notizen werden Protokolle, Aufgaben und Betriebswissen.',
     lead: 'Sitzungen enden meist mit Notizen, die niemand mehr liest. Hier entstehen daraus Protokolle, Aufgabenlisten mit Termin und ein Betriebshandbuch, das mitwächst.',
     bild: 'Bild: Sitzungstisch mit Notizblock',
-    img: 'assets/lernplan-06.png',
+    img: 'assets/lernplan-06.png?v=20261014',
     takeaways: ['Protokoll-Vorlage', 'Aufgaben-Extraktion (Prompt)', 'Gerüst fürs Betriebshandbuch'],
     lessons: [
       ['Sitzungsnotizen zu Protokollen', 'WERKSTATT', '7 Min', {
@@ -446,7 +446,7 @@ window.ACADEMY_PLANS = [
     tile: 'Sichtbar bleiben in Ihrer Sprache, ohne Agentur, ohne Verkaufsdruck.',
     lead: 'Website-Texte, Anfragen, Referenzen und ein Rhythmus, den Sie auch im Frühling halten. Alles in Ihrer Sprache und mit einer klaren Grenze, was Chefsache bleibt.',
     bild: 'Bild: Handwerker mit Kunde vor Ort',
-    img: 'assets/lernplan-07.png',
+    img: 'assets/lernplan-07.png?v=20261014',
     takeaways: ['Tonalitäts-Profil', 'Floskel-Filter für Website-Texte', 'Referenz-Anfrage (Vorlage)'],
     lessons: [
       ['Ihre Sprache festhalten: das Tonalitäts-Profil', 'WERKSTATT', '7 Min', {
@@ -519,7 +519,7 @@ window.ACADEMY_PLANS = [
     tile: 'Ein digitaler Mitarbeiter für die 20 häufigsten Fragen.',
     lead: 'Der vaiaconBot beantwortet, was sich täglich wiederholt, und gibt sauber an den Menschen ab, wenn es persönlich wird. Sie legen in dieser Werkstatt das Wissen dafür an.',
     bild: 'Bild: vaiaconBot am Telefon',
-    img: 'assets/vaiacon-buerobot-phone.png',
+    img: 'assets/vaiacon-buerobot-phone.png?v=20261014',
     takeaways: ['Fragenkatalog (20 Fragen)', 'Übergabe-Regeln an den Menschen', 'Qualitäts-Check zum Mitlesen'],
     lessons: [
       ['Die 20 häufigsten Fragen sammeln', 'ÜBUNG', '6 Min', {
@@ -591,7 +591,7 @@ window.ACADEMY_PLANS = [
     tile: 'Vom einzelnen Handgriff zum verlässlichen Ablauf.',
     lead: 'Für Betriebe, die den ersten Nutzen gesehen haben und jetzt Struktur wollen: beschreiben, bauen, verbinden, prüfen, inklusive Rückfallplan, wenn etwas nicht läuft.',
     bild: 'Bild: Werkstatt-Whiteboard mit Ablauf',
-    img: 'assets/lernplan-09.png',
+    img: 'assets/lernplan-09.png?v=20261014',
     takeaways: ['Prozess-Steckbrief', 'Ablauf-Bauplan', 'Rückfallplan (eine Seite)'],
     lessons: [
       ['Vom Handgriff zum Prozess: sauber beschreiben', 'WERKSTATT', '8 Min', {
@@ -676,7 +676,7 @@ window.ACADEMY_PLANS = [
     tile: 'Rechnen statt hoffen: Kosten, Nutzen, Quartals-Entscheid.',
     lead: 'Was bringt es wirklich? Sie rechnen Ihren eigenen Fall durch, vergleichen Lizenzen und entscheiden pro Quartal, was bleibt und was wieder verschwindet.',
     bild: 'Bild: Notizblock mit Zahlen',
-    img: 'assets/lernplan-10.png',
+    img: 'assets/lernplan-10.png?v=20261014',
     takeaways: ['Business-Case-Rechner', 'Lizenz-Vergleichsblatt', 'Quartals-Entscheid (Vorlage)'],
     lessons: [
       ['Kosten und Nutzen rechnen', 'ÜBUNG', '8 Min', {
@@ -714,7 +714,7 @@ window.ACADEMY_PLANS = [
     tile: 'Regeln, Rollen und der Umgang mit Skepsis im Team.',
     lead: 'KI im Betrieb ist Führungsarbeit. Sie schreiben eine Richtlinie auf einer Seite, klären Rollen und Freigaben und nehmen die Mitarbeitenden mit, statt sie zu überfahren.',
     bild: 'Bild: Team im Pausenraum',
-    img: 'assets/lernplan-11.png',
+    img: 'assets/lernplan-11.png?v=20261014',
     takeaways: ['KI-Richtlinie auf einer Seite', 'Rollen- und Freigabe-Matrix', 'Schulungsplan fürs Team'],
     lessons: [
       ['Eine KI-Richtlinie auf einer Seite', 'WERKSTATT', '8 Min', {
