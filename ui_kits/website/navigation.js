@@ -55,7 +55,9 @@
       text: 'Viele wiederkehrende Aufgaben lassen sich automatisieren.',
       spalten: [
         { titel: 'Aufbau', punkte: [
-          ['bot#ihr-fall', 'Ihr Fall', 'Beschreiben Sie in zwei Sätzen, was jede Woche Zeit frisst.']
+          ['bot#ihr-fall', 'Ihr Fall', 'Beschreiben Sie in zwei Sätzen, was jede Woche Zeit frisst.'],
+          ['assistenten#telefon', 'Telefon-Assistent', 'Nimmt Anrufe entgegen, auch wenn niemand Zeit hat.'],
+          ['assistenten#chatbot', 'Chatbot mit Firmenwissen', 'Beantwortet Fragen aus Ihren eigenen Unterlagen.']
         ] },
         { titel: 'Nach Branche', breit: true, punkte: BRANCHEN.map(function (b) {
           return ['bot#branche-' + b[0], b[1], b[2]];
