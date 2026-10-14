@@ -21,6 +21,9 @@
   .hinweis { font-size: 13px; color: var(--muted); font-weight: 600; min-height: 1.2em; }
   .raster { max-width: 1180px; margin: 0 auto; padding: 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(340px, 100%), 1fr)); gap: 22px; }
   .v { background: var(--card); border-radius: 22px; overflow: hidden; box-shadow: 0 1px 0 rgba(28,22,19,.08), 0 12px 30px -18px rgba(28,22,19,.35); display: flex; flex-direction: column; }
+  .gruppe { grid-column: 1 / -1; margin: 22px 0 -4px; font-size: 22px; }
+  .warum { margin: 0; padding: 0 18px 6px; color: var(--brown); font-size: 13.5px; font-weight: 500; line-height: 1.45; }
+  .v.tipp { outline: 3px solid var(--btn); outline-offset: 3px; }
   .v.heute { outline: 2px dashed var(--muted); outline-offset: 3px; }
   .v.meine { outline: 3px solid var(--btn); outline-offset: 3px; }
   .nr { position: absolute; z-index: 2; left: 14px; top: 62px; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: var(--cream50); color: var(--deep); font: 700 24px/1 'Quicksand', sans-serif; box-shadow: 0 8px 20px -8px rgba(40,10,0,.6); }
@@ -75,8 +78,8 @@
 <body>
 
 <header class="kopf">
-  <h1>Welches Terracotta für vaiacon.ch?</h1>
-  <p>Je Karte: Startbereich, Farbband, Knopf, Link und kleine Überschrift. Nummer 0 (gestrichelt) ist der heutige Stand. Jede Person hat eine Stimme und kann sie jederzeit ändern. Die Stimmen sehen alle mit dem Link.</p>
+  <h1>Welche Farbe für vaiacon.ch?</h1>
+  <p>Je Karte: Startbereich, Farbband, Knopf, Link und kleine Überschrift. Drei Gruppen: Terracotta (0–6), Bunt (B1–B8) und Ideen mit Begründung (I1–I7). Gestrichelt ist die Farbe, die jetzt live ist (2), umrandet die Empfehlung von Claude (I1). Jede Person hat eine Stimme und kann sie jederzeit ändern. Die Stimmen sehen alle mit dem Link.</p>
   <div class="wer"><label for="wer-name">Dein Vorname</label><input id="wer-name" maxlength="40" placeholder="z. B. Philip" autocomplete="given-name"></div>
   <div class="stand" id="stand">Noch keine Stimmen.</div>
   <div class="hinweis" id="hinweis">Abstimmung wird geladen …</div>
@@ -92,13 +95,28 @@
 
 <script>
   var V = [
-    { k: '0', n: 'Heute', d: 'Orange mit Rostbraun', hero: ['#FA8C4A','#EB702B','#B24009','#862A03'], sec: ['#A83A08','#D75A20'], btn: '#E2652C', btnh: '#F4793E', link: '#B25222', deep: '#A83A08' },
+    { k: '0', g: 'Terracotta', n: 'Orange', d: 'Stand bis 14.10.', hero: ['#FA8C4A','#EB702B','#B24009','#862A03'], sec: ['#A83A08','#D75A20'], btn: '#E2652C', btnh: '#F4793E', link: '#B25222', deep: '#A83A08' },
     { k: '1', n: 'Ziegel', d: 'klassisches Terracotta, warm', hero: ['#EE9A76','#D8724D','#AE4F2E','#77311E'], sec: ['#9E4429','#C8653F'], btn: '#C2613F', btnh: '#D27250', link: '#A84E30', deep: '#93402A' },
-    { k: '2', n: 'Gebrannter Ton', d: 'zwischen heute und Terracotta', hero: ['#F5A273','#E07A4E','#B5532E','#80351D'], sec: ['#A5461F','#D16B3F'], btn: '#CC6A42', btnh: '#DB7B52', link: '#A9512E', deep: '#9A431F' },
+    { k: '2', n: 'Gebrannter Ton', d: 'jetzt live', hero: ['#F5A273','#E07A4E','#B5532E','#80351D'], sec: ['#A5461F','#D16B3F'], btn: '#CC6A42', btnh: '#DB7B52', link: '#A9512E', deep: '#9A431F' },
     { k: '3', n: 'Ziegelrot', d: 'rötlicher, kräftig', hero: ['#EC917A','#D0604A','#A6402D','#6C2318'], sec: ['#93362A','#C2533F'], btn: '#BA4A36', btnh: '#CB5A45', link: '#9E3E2A', deep: '#8A3324' },
     { k: '4', n: 'Erdig', d: 'gedämpft, staubig, ruhig', hero: ['#E2A487','#C77D5C','#9C5A40','#673A29'], sec: ['#87503A','#B56E50'], btn: '#B5654A', btnh: '#C4755A', link: '#95533B', deep: '#7E4733' },
     { k: '5', n: 'Siena', d: 'dunkel und edel', hero: ['#DE8D61','#BC623C','#8E4426','#5A2917'], sec: ['#7C3A20','#AE5833'], btn: '#A9542F', btnh: '#BA643D', link: '#8E4426', deep: '#7C3A20' },
-    { k: '6', n: 'Rosé-Ton', d: 'heller, rosiger Ton (Tontöpfe)', hero: ['#F2AE92','#DE8566','#BC6246','#86412E'], sec: ['#A9563D','#D5805F'], btn: '#C96F52', btnh: '#D87F62', link: '#A65A40', deep: '#97503A' }
+    { k: '6', n: 'Rosé-Ton', d: 'heller, rosiger Ton (Tontöpfe)', hero: ['#F2AE92','#DE8566','#BC6246','#86412E'], sec: ['#A9563D','#D5805F'], btn: '#C96F52', btnh: '#D87F62', link: '#A65A40', deep: '#97503A' },
+    { g: 'Bunt', k: 'B1', n: 'Türkis', d: 'Lagune, frisch und hell', hero: ['#8AF0E2','#2EC4B6','#13877D','#0A4B47'], sec: ['#0E6F67','#1FA396'], btn: '#14897E', btnh: '#1AA194', link: '#0F7A70', deep: '#0B5A53' },
+    { k: 'B2', n: 'Türkis + Koralle', d: 'Lagune mit warmen Knöpfen', hero: ['#8AF0E2','#2EC4B6','#13877D','#0A4B47'], sec: ['#0E6F67','#1FA396'], btn: '#D9533A', btnh: '#E8674D', link: '#0F7A70', deep: '#0B5A53' },
+    { k: 'B3', n: 'Petrol', d: 'tiefes Blaugrün, seriös', hero: ['#7CC3D4','#2C7F99','#15506A','#0A2A3B'], sec: ['#123F55','#1F6680'], btn: '#1F6E8C', btnh: '#2A82A3', link: '#1A6480', deep: '#123F55' },
+    { k: 'B4', n: 'Nachtblau + Koralle', d: 'dunkle Bühne, leuchtende Knöpfe', hero: ['#5A6CC0','#2B3A7A','#1A2452','#0D1330'], sec: ['#1A2452','#2F3F85'], btn: '#D9533A', btnh: '#E8674D', link: '#2B3A9A', deep: '#1A2452' },
+    { k: 'B5', n: 'Aubergine', d: 'Violett, verspielt', hero: ['#D2AEF2','#9461C9','#5E338F','#32184F'], sec: ['#4A2475','#7A44B0'], btn: '#7A45BA', btnh: '#8C58CC', link: '#6B3AA8', deep: '#4A2475' },
+    { k: 'B6', n: 'Magenta', d: 'Pink, laut', hero: ['#FFB0D8','#F0569E','#B81F6A','#6B0C3D'], sec: ['#9C1A5A','#D63A84'], btn: '#C92B74', btnh: '#DA3F87', link: '#B0246A', deep: '#8A1650' },
+    { k: 'B7', n: 'Limette', d: 'Neongrün auf Waldgrund', hero: ['#DDF58A','#A3D132','#5E8C1A','#2E4A0C'], sec: ['#3E6312','#5E8C1A'], btn: '#4A7A10', btnh: '#578E14', link: '#4A7410', deep: '#3E6312' },
+    { k: 'B8', n: 'Senf + Tinte', d: 'Gelb mit schwarzen Knöpfen', hero: ['#FFE08A','#F2B21E','#B37F0A','#5C3F05'], sec: ['#8A6208','#C48E10'], btn: '#1C1613', btnh: '#3A2F28', link: '#8A6208', deep: '#5C3F05' },
+    { g: 'Ideen mit Begründung', k: 'I1', e: true, n: 'Salbei + Terracotta', d: 'Empfehlung von Claude', w: 'Ruhiges Grün für Vertrauen, die heutigen Terracotta-Knöpfe bleiben. Wirkt natürlich und nahbar, hebt sich vom KI-Blau der Konkurrenz ab, die Marke bleibt erkennbar.', hero: ['#C9DEC2','#8FB08A','#5B7F58','#2F4A30'], sec: ['#3E5E3F','#5F8560'], btn: '#C8613E', btnh: '#D77350', link: '#4E7550', deep: '#3E5E3F' },
+    { k: 'I2', n: 'Tiefseeblau + Bernstein', d: 'Vertrauen und Wärme', w: 'Blau steht für Verlässlichkeit, Bernstein hält es freundlich. Klassisch für Beratung, aber nicht kalt.', hero: ['#7C9BD0','#34558F','#1D335E','#0E1A33'], sec: ['#1D335E','#2E4C80'], btn: '#B8740F', btnh: '#C9841A', link: '#2E4C80', deep: '#1D335E' },
+    { k: 'I3', n: 'Waldgrün', d: 'Schweizer Seriosität', w: 'Erinnert an Treuhand und Bank, aber lebendiger. Passt, wenn Vaiacon vor allem solide wirken soll.', hero: ['#8FC4A8','#3E8566','#1F5640','#0E2E22'], sec: ['#1A4A37','#2E6E52'], btn: '#237052', btnh: '#2D8662', link: '#1F6448', deep: '#1A4A37' },
+    { k: 'I4', n: 'Pflaume + Pfirsich', d: 'warm und eigen', w: 'Ungewöhnlich für eine KI-Firma, darum gut erinnerbar. Der Pfirsich nimmt die Wärme der heutigen Marke mit.', hero: ['#EDB3C0','#B9637A','#7E3550','#451A2C'], sec: ['#6A2A44','#9A4A66'], btn: '#C95F47', btnh: '#D87259', link: '#8A3A5A', deep: '#6A2A44' },
+    { k: 'I5', n: 'Graphit + Signalorange', d: 'technisch und klar', w: 'Dunkle Bühne, der Roboter leuchtet heraus, das alte Orange als einziger Farbtupfer. Wirkt präzise, eher Werkzeug als Wohnzimmer.', hero: ['#7A7E85','#3E4248','#25282C','#121416'], sec: ['#25282C','#3A3E44'], btn: '#D85E26', btnh: '#E87036', link: '#B25222', deep: '#25282C' },
+    { k: 'I6', n: 'Indigo bis Türkis', d: 'modern, «KI»-Gefühl', w: 'Der Verlauf, den man von Tech-Firmen kennt. Wirkt sofort digital, aber auch austauschbarer.', hero: ['#86E6EC','#3BA3C9','#3A5BB0','#23266B'], sec: ['#2A3A8F','#2E7FB0'], btn: '#3A4FC4', btnh: '#4C62D6', link: '#3446B0', deep: '#23266B' },
+    { k: 'I7', n: 'Koralle', d: 'herzlich, verspielt', w: 'Rötlicher und heller als heute, sehr freundlich. Gut, wenn die Zielgruppe kleine Betriebe ohne Technik-Hintergrund sind.', hero: ['#FFBCA8','#F27C62','#C24E3A','#7A2618'], sec: ['#A63A28','#D9604A'], btn: '#C44A33', btnh: '#D45C45', link: '#B0402B', deep: '#8F301F' }
   ];
   function lum(h) { var c = [1,3,5].map(function (i) { var v = parseInt(h.substr(i,2),16)/255; return v <= .03928 ? v/12.92 : Math.pow((v+.055)/1.055, 2.4); }); return .2126*c[0] + .7152*c[1] + .0722*c[2]; }
   function kr(a, b) { var x = lum(a), y = lum(b); return ((Math.max(x,y)+.05)/(Math.min(x,y)+.05)).toFixed(1); }
@@ -108,13 +126,13 @@
     var sec = 'linear-gradient(178deg, ' + v.sec[0] + ' 0%, ' + v.sec[1] + ' 100%)';
     var st = '--hero:' + hero + ';--section:' + sec + ';--btn:' + v.btn + ';--btnh:' + v.btnh + ';--link:' + v.link + ';--deep:' + v.deep;
     var farben = [['hell', v.hero[0]], ['mitte', v.hero[1]], ['Knopf', v.btn], ['Link', v.link], ['dunkel', v.hero[3]]];
-    return '<section class="v' + (v.k === '0' ? ' heute' : '') + '" id="karte-' + v.k + '" style="' + st + '">' +
-      '<div class="hero"><span class="nr">' + v.k + '</span><div class="nav">vaiacon<span class="links"><span>KI-Kompetenz</span><span>Sichtbarkeit</span></span><span class="knopf">Kontakt</span></div>' +
+    return (v.g ? '<h2 class="gruppe">' + v.g + '</h2>' : '') + '<section class="v' + (v.k === '2' ? ' heute' : '') + (v.e ? ' tipp' : '') + '" id="karte-' + v.k + '" style="' + st + '">' +
+      '<div class="hero"><span class="nr"' + (v.k.length > 1 ? ' style="font-size:17px"' : '') + '>' + v.k + '</span><div class="nav">vaiacon<span class="links"><span>KI-Kompetenz</span><span>Sichtbarkeit</span></span><span class="knopf">Kontakt</span></div>' +
       '<h2>KI, die im Alltag mitarbeitet.</h2><span class="knopf hell">Erstgespräch vereinbaren</span><img src="../assets/vaiacon-buerobot-startseite.webp" alt=""></div>' +
       '<div class="band"></div>' +
       '<div class="inhalt"><div class="kicker">Automationen</div><h3>Weniger Kleinkram.</h3><p>Wiederkehrende Aufgaben laufen von allein. <a href="#karte-' + v.k + '">Beispiele ansehen</a></p>' +
       '<span class="knopf">Erstanalyse starten</span></div>' +
-      '<div class="name"><b>' + v.k + ' · ' + v.n + '</b><i>' + v.d + '</i></div>' +
+      '<div class="name"><b>' + v.k + ' · ' + v.n + '</b><i>' + v.d + '</i></div>' + (v.w ? '<p class="warum">' + v.w + '</p>' : '') +
       '<div class="muster">' + farben.map(function (f) { return '<div><span style="--c:' + f[1] + '"></span><small>' + f[0] + '<br>' + f[1] + '</small></div>'; }).join('') + '</div>' +
       '<div class="kontrast">Weiss auf Knopf ' + kr('#FFFFFF', v.btn) + ' : 1 · Link auf Creme ' + kr(v.link, '#F4EDE1') + ' : 1</div>' +
       '<div class="wahl"><button type="button" id="wahl-' + v.k + '" data-k="' + v.k + '" aria-pressed="false" disabled>Für ' + v.k + ' stimmen</button>' +
