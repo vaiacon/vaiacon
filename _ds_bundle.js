@@ -4733,7 +4733,7 @@ function Hero({
       position: 'absolute',
       inset: 0,
       pointerEvents: 'none',
-      background: 'radial-gradient(62% 46% at 55% 102%, rgba(244,147,96,0.5) 0%, rgba(244,147,96,0) 70%), radial-gradient(90% 60% at 50% -8%, rgba(70,26,6,0.35) 0%, rgba(70,26,6,0) 60%)'
+      background: 'radial-gradient(62% 46% at 55% 102%, rgba(244,147,96,0.4) 0%, rgba(244,147,96,0) 70%), radial-gradient(90% 60% at 50% -8%, rgba(70,26,6,0.35) 0%, rgba(70,26,6,0) 60%)'
     }
   }), /*#__PURE__*/React.createElement("div", {
     className: "hero-robot",
