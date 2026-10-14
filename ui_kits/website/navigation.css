@@ -72,14 +72,14 @@ html.vn-sperre, html.vn-sperre body { overflow: hidden; }
 
 .vn-kontakt {
   flex: 0 0 auto; padding: 12px 22px; border-radius: 999px;
-  background: var(--terra-600); color: var(--cream-50);
+  background: var(--cta-bg); color: #FFFFFF;
   font: 700 15px/1 var(--font-sans); text-decoration: none;
   box-shadow: var(--shadow-cta);
   transition: background 0.2s ease, transform 0.2s ease;
 }
-.vn--hell .vn-kontakt, .vn--pille .vn-kontakt { background: var(--terra-600); color: var(--cream-50); }
+.vn--hell .vn-kontakt, .vn--pille .vn-kontakt { background: var(--cta-bg); color: #FFFFFF; }
 .vn:not(.vn--pille):not(.vn--hell) .vn-kontakt { background: var(--cream-50); color: var(--terra-700); box-shadow: none; }
-.vn-kontakt:hover { transform: translateY(-1px); background: var(--terra-700); color: var(--cream-50); }
+.vn-kontakt:hover { transform: translateY(-1px); background: var(--cta-bg-hover); color: #FFFFFF; }
 .vn-kontakt[aria-current="page"] { outline: 2px solid currentColor; outline-offset: 2px; }
 
 /* ---------- Ausklapp-Fläche ---------- */
