@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261009-fakten-versteckt">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261013-handy">
 <link rel="stylesheet" href="ui_kits/website/kundenstimme.css?v=20261005-vorschlag">
-<link rel="stylesheet" href="ui_kits/website/start.css?v=20261013-vier2">
+<link rel="stylesheet" href="ui_kits/website/start.css?v=20261011-ohne-gesichter">
 <link rel="stylesheet" href="ui_kits/website/start-ruhig.css?v=20261005-ohne-preise">
 <link rel="stylesheet" href="ui_kits/website/verbesserungen.css?v=20261011-gruender3">
 <link rel="icon" href="favicon.ico" sizes="any">
@@ -182,7 +182,7 @@
       <div class="st-buehne__inner">
         <h1 id="st-titel" class="st-titel">KI-Beratung für Schweizer KMU: Schulung, Sichtbarkeit und Automatisierung</h1>
 
-        <div class="st-stage" id="st-stage" data-aktiv="0" aria-roledescription="Karussell" aria-label="Unsere vier Bereiche">
+        <div class="st-stage" id="st-stage" data-aktiv="0" aria-roledescription="Karussell" aria-label="Unsere drei Bereiche">
           <article class="st-panel" id="st-ki" data-bereich="ki-kompetenz" data-pos="mitte" data-aktiv>
             <picture class="st-bild" data-schleife="assets/video/vaiacon-buerobot-schulung-zeigestab" data-fassung="4" data-rand="1 1 0 0"><source srcset="assets/vaiacon-buerobot-schulung-zeigestab.webp" type="image/webp"><img src="assets/vaiacon-buerobot-schulung-zeigestab.png" alt="Der vaiacon-Roboter erklärt etwas mit dem Zeigestab" width="512" height="616" fetchpriority="high"></picture>
             <div class="st-voll" id="st-voll-ki" role="tabpanel" aria-labelledby="st-reiter-ki">
@@ -197,21 +197,7 @@
             </div>
           </article>
 
-          <article class="st-panel" id="st-ass" data-bereich="assistenten" data-pos="rechts">
-            <picture class="st-bild" data-schleife="assets/video/vaiacon-buerobot-assistent" data-fassung="2" data-rand="1 0 1 0"><source srcset="assets/vaiacon-buerobot-assistent.webp" type="image/webp"><img src="assets/vaiacon-buerobot-assistent.png" alt="Der vaiacon-Roboter mit Headset spricht freundlich ins Mikrofon" width="451" height="616"></picture>
-            <div class="st-voll" id="st-voll-ass" role="tabpanel" aria-labelledby="st-reiter-ass">
-              <div class="st-voll__kopf">
-                <h2 class="st-voll__titel">Assistenten</h2>
-                <p class="st-voll__lead">Ein Telefon-Assistent und ein Chatbot mit Firmenwissen, die Ihre Kundschaft rund um die Uhr abholen.</p>
-              </div>
-              <div class="st-haken">
-                <a class="sv-button sv-button--light" href="kontakt#formular">Erstgespräch vereinbaren →</a>
-                <a class="st-mehr" href="assistenten">Mehr erfahren <span aria-hidden="true">→</span></a>
-              </div>
-            </div>
-          </article>
-
-          <article class="st-panel" id="st-sicht" data-bereich="sichtbarkeit" data-pos="hinten">
+          <article class="st-panel" id="st-sicht" data-bereich="sichtbarkeit" data-pos="rechts">
             <picture class="st-bild" data-schleife="assets/video/vaiacon-buerobot-sichtbarkeit-lupe" data-fassung="4" data-rand="0 0 0 8"><source srcset="assets/vaiacon-buerobot-sichtbarkeit-lupe.webp" type="image/webp"><img src="assets/vaiacon-buerobot-sichtbarkeit-lupe.png" alt="Der vaiacon-Roboter hält eine Lupe hoch" width="512" height="616"></picture>
             <div class="st-voll" id="st-voll-sicht" role="tabpanel" aria-labelledby="st-reiter-sicht">
               <div class="st-voll__kopf">
@@ -251,13 +237,9 @@
           <button class="st-pfeil" type="button" id="st-zurueck" aria-label="Vorheriger Bereich">
             <svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 3 5 8l5 5"/></svg>
           </button>
-          <div class="st-reiter" role="tablist" aria-label="Unsere vier Bereiche">
+          <div class="st-reiter" role="tablist" aria-label="Unsere drei Bereiche">
             <button class="st-reiter__tab" role="tab" type="button" id="st-reiter-ki" aria-controls="st-voll-ki" aria-selected="true">
               <span class="st-reiter__name">KI-Kompetenz</span>
-              <span class="st-reiter__spur" aria-hidden="true"><span></span></span>
-            </button>
-            <button class="st-reiter__tab" role="tab" type="button" id="st-reiter-ass" aria-controls="st-voll-ass" aria-selected="false" tabindex="-1">
-              <span class="st-reiter__name">Assistenten</span>
               <span class="st-reiter__spur" aria-hidden="true"><span></span></span>
             </button>
             <button class="st-reiter__tab" role="tab" type="button" id="st-reiter-sicht" aria-controls="st-voll-sicht" aria-selected="false" tabindex="-1">
@@ -282,7 +264,7 @@
       </div>
     </section>
     <script>
-    /* Startbereich je Besuch reihum (oder nach #ki-kompetenz|#assistenten|#sichtbarkeit|#automationen). Läuft sofort,
+    /* Startbereich je Besuch reihum (oder nach #ki-kompetenz|#sichtbarkeit|#automationen). Läuft sofort,
        damit die Bühne nicht erst im falschen Zustand erscheint. Ohne diese Zeile bleibt es bei KI-Kompetenz. */
     (function () {
       var stage = document.getElementById('st-stage');
@@ -293,13 +275,13 @@
       try { i = namen.indexOf((location.hash || '').replace('#', '')); } catch (e) {}
       if (i >= 0) { quelle = 'adresse'; }
       else {
-        i = Math.floor(Math.random() * 4);
+        i = Math.floor(Math.random() * 3);
         try {
           var gemerkt = window.sessionStorage.getItem('vaiacon-start-bereich');
-          if (gemerkt !== null && /^[0-3]$/.test(gemerkt)) { i = +gemerkt; }
+          if (gemerkt !== null && /^[012]$/.test(gemerkt)) { i = +gemerkt; }
           else {
             var zuletzt = window.localStorage.getItem('vaiacon-start-bereich');
-            if (zuletzt !== null && /^[0-3]$/.test(zuletzt)) i = (+zuletzt + 1) % 4;
+            if (zuletzt !== null && /^[012]$/.test(zuletzt)) i = (+zuletzt + 1) % 3;
             window.localStorage.setItem('vaiacon-start-bereich', String(i));
             window.sessionStorage.setItem('vaiacon-start-bereich', String(i));
           }
@@ -308,10 +290,10 @@
       stage.setAttribute('data-aktiv', String(i));
       stage.setAttribute('data-quelle', quelle);
       var p = stage.querySelectorAll('.st-panel');
-      var pos = ['mitte', 'rechts', 'hinten', 'links'];
+      var pos = ['mitte', 'rechts', 'links'];
       for (var k = 0; k < p.length; k++) {
         if (k === i) p[k].setAttribute('data-aktiv', ''); else p[k].removeAttribute('data-aktiv');
-        p[k].setAttribute('data-pos', pos[(k - i + 4) % 4]);
+        p[k].setAttribute('data-pos', pos[(k - i + 3) % 3]);
       }
     })();
     </script>
@@ -398,7 +380,7 @@
 <script src="ui_kits/website/visibility.js?v=20261007-logo-svg" defer></script>
 <script src="ui_kits/website/chat.js?v=20261013-handy" defer></script>
 <script src="ui_kits/website/check-start.js?v=20261004-check" defer></script>
-<script src="ui_kits/website/start.js?v=20261013-vier" defer></script>
+<script src="ui_kits/website/start.js?v=20261009-wechsel-mobil" defer></script>
 <script src="ui_kits/website/bot-schleife.js?v=20261007" defer></script>
 <script src="ui_kits/website/navigation.js?v=20261013-ohnerand" defer></script>
 </body>
