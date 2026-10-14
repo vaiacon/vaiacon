@@ -42,7 +42,8 @@ body {
   overflow: hidden;
   background: var(--grad-terra-hero);
   color: var(--text-on-terra);
-  border-bottom: 2px solid var(--border-ink);
+  /* Kein Comic-Rand mehr (14.10.2026): Der 2px-Strich in --border-ink stand
+     unter jedem Kopf als schwarze Trennlinie. */
 }
 
 .sv-hero::after {
@@ -332,6 +333,13 @@ picture {
   overflow: hidden;
   background: var(--grad-terra-section);
   color: var(--text-on-terra);
+  /* Die Haarlinie der Abschnitte wird auf Terracotta zum dunkelbraunen Strich
+     (14.10.2026); Farbband und Abschnitt davor stossen ohne Linie aneinander. */
+  border-bottom: 0;
+}
+
+.sv-section:has(+ .sv-section--terra) {
+  border-bottom: 0;
 }
 
 .sv-section--terra::before {
