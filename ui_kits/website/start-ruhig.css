@@ -5,10 +5,10 @@
 
 .vc-chat__fab {
   border: 0;
-  background: #CC6A42;
-  box-shadow: 0 14px 30px -12px rgba(169, 81, 46, 0.65);
+  background: #D26336;
+  box-shadow: 0 14px 30px -12px rgba(173, 80, 41, 0.65);
 }
 
 .vc-chat__fab:hover {
-  background: #DB7B52;
+  background: #E37647;
 }
