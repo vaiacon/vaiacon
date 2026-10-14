@@ -70,7 +70,7 @@
   font-size: 12.5px;
   font-weight: var(--weight-semibold);
   padding: 2px 10px;
-  border: 1.5px solid var(--terra-500, #A9512E);
+  border: 1.5px solid var(--terra-500, #AD5029);
   border-radius: var(--radius-pill);
   color: var(--terra-600);
   background: transparent;
@@ -186,7 +186,7 @@
   background: var(--cream-card);
   color: var(--text-strong);
   border: 1px solid var(--border-strong);
-  border-left: 3px solid var(--terra-500, #A9512E);
+  border-left: 3px solid var(--terra-500, #AD5029);
   border-radius: var(--radius-sm, 6px);
 }
 .bsp__nutzen b { display: block; font-size: 15.5px; line-height: 1.2; letter-spacing: var(--tracking-tight); font-weight: var(--weight-bold); }
@@ -204,7 +204,7 @@
 }
 .bsp__teile span { position: relative; }
 .bsp__teile span + span { margin-left: 16px; }
-.bsp__teile span + span::before { content: "→"; position: absolute; left: -15px; top: 2px; color: var(--terra-500, #A9512E); }
+.bsp__teile span + span::before { content: "→"; position: absolute; left: -15px; top: 2px; color: var(--terra-500, #AD5029); }
 
 /* Heute / Danach als Ablauf-Streifen */
 .bsp__vergleich {
@@ -220,8 +220,8 @@
   position: absolute;
   right: -17px; top: 50%;
   width: 9px; height: 9px;
-  border-top: 2px solid var(--terra-500, #A9512E);
-  border-right: 2px solid var(--terra-500, #A9512E);
+  border-top: 2px solid var(--terra-500, #AD5029);
+  border-right: 2px solid var(--terra-500, #AD5029);
   transform: translateY(-50%) rotate(45deg);
 }
 .bsp__danach { border: 1px solid var(--border-strong); background: var(--cream-card); padding: 16px 20px; }
@@ -249,7 +249,7 @@
   width: 28px; height: 28px;
   border-radius: 50%;
   background: var(--cream-card);
-  border: 1.5px solid var(--terra-500, #A9512E);
+  border: 1.5px solid var(--terra-500, #AD5029);
   color: var(--terra-600);
   font-family: var(--font-mono, "IBM Plex Mono", monospace);
   font-size: 12.5px;
@@ -260,15 +260,15 @@
   position: absolute;
   left: 36px; right: -14px; top: 13px;
   height: 1.5px;
-  background: var(--terra-500, #A9512E);
+  background: var(--terra-500, #AD5029);
 }
 .bsp__danach li:not(:last-child)::after {
   content: "";
   position: absolute;
   right: -14px; top: 9.5px;
   width: 7px; height: 7px;
-  border-top: 1.5px solid var(--terra-500, #A9512E);
-  border-right: 1.5px solid var(--terra-500, #A9512E);
+  border-top: 1.5px solid var(--terra-500, #AD5029);
+  border-right: 1.5px solid var(--terra-500, #AD5029);
   transform: rotate(45deg);
 }
 

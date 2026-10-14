@@ -16,12 +16,12 @@
   --brown-300: #C9BFB5;    /* dezente Pfeile/Glyphs */
 
   /* ---- Terracotta (Markenakzent) ---- */
-  --terra-500: #A9512E;    /* Standard-Akzent, Links, Kicker */
-  --terra-600: #8F4224;    /* Link-Hover, Text auf hellen CTAs */
-  --terra-700: #A5461F;    /* tiefes Terracotta: Gradient-Start, Chat-Header */
-  --orange-500: #CC6A42;   /* heller CTA-Akzent (Nav-CTA, Akzent auf Dunkel) */
-  --orange-400: #DB7B52;   /* CTA-Hover */
-  --orange-300: #E3906A;   /* helle Akzente auf dunklem Grund */
+  --terra-500: #AD5029;    /* Standard-Akzent, Links, Kicker */
+  --terra-600: #974320;    /* Link-Hover, Text auf hellen CTAs */
+  --terra-700: #A33F19;    /* tiefes Terracotta: Gradient-Start, Chat-Header */
+  --orange-500: #D26336;   /* heller CTA-Akzent (Nav-CTA, Akzent auf Dunkel) */
+  --orange-400: #E37647;   /* CTA-Hover */
+  --orange-300: #E68E62;   /* helle Akzente auf dunklem Grund */
 
   /* ---- Peach (zarte Flächen & Highlights) ---- */
   --peach-100: #FFF3E8;    /* hellste Peach-Fläche, Text auf Terra */
@@ -29,13 +29,13 @@
   --peach-200: #FFD9C2;    /* Highlight-Ziffern, Checks auf Terra */
 
   /* ---- Verläufe ---- */
-  --grad-terra-section: linear-gradient(180deg, #A5461F 0%, #C66237 100%); /* @kind color */
-  --grad-terra-finale: linear-gradient(178deg, #A5461F 0%, #B04F27 35%, #BD5A31 60%, #C66237 82%, #D16B3F 100%); /* @kind color */
-  --grad-package: linear-gradient(170deg, #B9603A 0%, #9C4927 100%); /* @kind color */
-  --glow-peach: radial-gradient(62% 46% at 50% 104%, rgba(245, 162, 115, 0.5) 0%, rgba(245, 162, 115, 0) 70%); /* @kind color */
+  --grad-terra-section: linear-gradient(180deg, #A33F19 0%, #C85A2C 100%); /* @kind color */
+  --grad-terra-finale: linear-gradient(178deg, #A33F19 0%, #B34B21 35%, #BE5327 60%, #C85A2C 82%, #D06030 100%); /* @kind color */
+  --grad-package: linear-gradient(170deg, #BA5C30 0%, #9F4922 100%); /* @kind color */
+  --glow-peach: radial-gradient(62% 46% at 50% 104%, rgba(244, 147, 96, 0.5) 0%, rgba(244, 147, 96, 0) 70%); /* @kind color */
   /* Radiale Terra-Bühnen (Hero-Stand / Footer) — eingefrorene Standardwerte der Landingpage (glow 90 %) */
-  --grad-terra-hero: radial-gradient(72% 52% at 50% 54%, #F5A273 0%, #E07A4E 26%, #B5532E 60%, #80351D 100%), #80351D; /* @kind color */
-  --grad-terra-footer: radial-gradient(80% 130% at 50% 14%, #F5A273 0%, #E07A4E 28%, #B5532E 62%, #80351D 100%), #80351D; /* @kind color */
+  --grad-terra-hero: radial-gradient(72% 52% at 50% 54%, #F49360 0%, #E2713C 26%, #B0481C 60%, #7F2E11 100%), #7F2E11; /* @kind color */
+  --grad-terra-footer: radial-gradient(80% 130% at 50% 14%, #F49360 0%, #E2713C 28%, #B0481C 62%, #7F2E11 100%), #7F2E11; /* @kind color */
 
   /* ---- Ränder & Linien ---- */
   --border-strong: rgba(28, 22, 19, 0.32);   /* Standard-Hairline (Karten, Trenner) */
@@ -59,5 +59,5 @@
   --link-hover: var(--terra-600);
   --cta-bg: var(--orange-500);
   --cta-bg-hover: var(--orange-400);
-  --selection: rgba(169, 81, 46, 0.22);
+  --selection: rgba(173, 80, 41, 0.22);
 }
