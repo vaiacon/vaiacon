@@ -79,7 +79,7 @@
 
 <header class="kopf">
   <h1>Welche Farbe für vaiacon.ch?</h1>
-  <p>Je Karte: Startbereich, Farbband, Knopf, Link und kleine Überschrift. Drei Gruppen: Terracotta (0–6), Bunt (B1–B8) und Ideen mit Begründung (I1–I7). Gestrichelt ist die Farbe, die jetzt live ist (2), umrandet die Empfehlung von Claude (I1). Jede Person hat eine Stimme und kann sie jederzeit ändern. Die Stimmen sehen alle mit dem Link.</p>
+  <p>Je Karte: Startbereich, Farbband, Knopf, Link und kleine Überschrift. Drei Gruppen: Terracotta (0–6), Bunt (B1–B8) und Ideen mit Begründung (I1–I7). Gestrichelt ist die Farbe, die jetzt live ist (2), umrandet die Empfehlung von Claude (I1). Jede Person hat drei Stimmen für drei verschiedene Farben und kann sie jederzeit verschieben. Die Stimmen sehen alle mit dem Link.</p>
   <div class="wer"><label for="wer-name">Dein Vorname</label><input id="wer-name" maxlength="40" placeholder="z. B. Philip" autocomplete="given-name"></div>
   <div class="stand" id="stand">Noch keine Stimmen.</div>
   <div class="hinweis" id="hinweis">Abstimmung wird geladen …</div>
@@ -152,17 +152,21 @@
     var b = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s));
     return Array.from(new Uint8Array(b)).map(function (x) { return x.toString(16).padStart(2, '0'); }).join('').slice(0, 12);
   }
+  var PRO_PERSON = 3;
   function meine() { return stimmen.find(function (s) { return s.id === ichId; }); }
+  function wahlen(s) { return s ? (s.wahlen || (s.wahl ? [s.wahl] : [])) : []; }
 
   function knoepfe() {
     var an = !schreibt && nameFeld.value.trim().length > 0;
-    V.forEach(function (v) { document.getElementById('wahl-' + v.k).disabled = !an; });
-    notizKnopf.disabled = !an || !meine();
+    var mw = wahlen(meine()), voll = mw.length >= PRO_PERSON;
+    V.forEach(function (v) { document.getElementById('wahl-' + v.k).disabled = !an || (voll && mw.indexOf(v.k) < 0); });
+    notizKnopf.disabled = !an || !mw.length;
   }
 
   function zeichnen() {
     var zaehl = {}; V.forEach(function (v) { zaehl[v.k] = []; });
-    stimmen.forEach(function (s) { if (zaehl[s.wahl]) zaehl[s.wahl].push(s); });
+    var gesamt = 0;
+    stimmen.forEach(function (s) { wahlen(s).forEach(function (w) { if (zaehl[w]) { zaehl[w].push(s); gesamt++; } }); });
     var ich = meine();
     V.forEach(function (v) {
       var liste = zaehl[v.k];
@@ -175,17 +179,19 @@
         var c = document.createElement('span'); c.className = 'kopf-chip'; c.textContent = s.name; leute.appendChild(c);
         if (s.notiz) { var d = document.createElement('div'); var b = document.createElement('b'); b.textContent = s.name + ': '; d.appendChild(b); d.appendChild(document.createTextNode(s.notiz)); notizen.appendChild(d); }
       });
-      var mein = ich && ich.wahl === v.k;
+      var mein = wahlen(ich).indexOf(v.k) >= 0;
       document.getElementById('karte-' + v.k).classList.toggle('meine', !!mein);
       var kn = document.getElementById('wahl-' + v.k);
       kn.setAttribute('aria-pressed', mein ? 'true' : 'false');
-      kn.textContent = mein ? 'Deine Wahl' : 'Für ' + v.k + ' stimmen';
+      kn.textContent = mein ? 'Deine Stimme ✓' : (wahlen(ich).length >= PRO_PERSON ? 'Keine Stimme frei' : 'Stimme geben');
+      kn.title = mein ? 'Nochmals klicken nimmt die Stimme zurück' : '';
     });
     var stand = document.getElementById('stand'); stand.replaceChildren();
     var rang = V.filter(function (v) { return zaehl[v.k].length; }).sort(function (a, b) { return zaehl[b.k].length - zaehl[a.k].length; });
     if (!rang.length) stand.textContent = 'Noch keine Stimmen.';
     else {
-      var s = document.createElement('span'); s.textContent = stimmen.length + (stimmen.length === 1 ? ' Stimme:' : ' Stimmen:'); stand.appendChild(s);
+      var s = document.createElement('span'); var pers = stimmen.filter(function (x) { return wahlen(x).length; }).length;
+      s.textContent = pers + (pers === 1 ? ' Person, ' : ' Personen, ') + gesamt + (gesamt === 1 ? ' Stimme:' : ' Stimmen:'); stand.appendChild(s);
       rang.forEach(function (v) {
         var c = document.createElement('span'); c.className = 'chip';
         var b = document.createElement('b'); b.style.background = v.btn; b.textContent = v.k; c.appendChild(b);
@@ -193,6 +199,7 @@
       });
     }
     if (ich && document.activeElement !== notizText) notizText.value = ich.notiz || '';
+    if (!hinweis.dataset.fehler && nameFeld.value.trim()) { var frei = PRO_PERSON - wahlen(ich).length; hinweis.textContent = frei ? 'Du hast noch ' + frei + ' von ' + PRO_PERSON + ' Stimmen frei.' : 'Alle drei Stimmen vergeben. Ein Klick auf «Deine Stimme ✓» nimmt eine zurück.'; }
     knoepfe();
   }
 
@@ -206,24 +213,26 @@
     } catch (e) { hinweis.dataset.fehler = '1'; hinweis.textContent = 'Die Stimmen lassen sich gerade nicht laden.'; }
   }
 
-  async function senden(wahl, notiz) {
+  async function senden(liste, notiz) {
     var name = nameFeld.value.trim();
     if (!name) { hinweis.textContent = 'Bitte zuerst deinen Vornamen eintragen.'; nameFeld.focus(); return; }
     schreibt = true; knoepfe();
     try {
-      var r = await fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ schluessel: schluessel, name: name, wahl: wahl, notiz: notiz }) });
+      var r = await fetch(API, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ schluessel: schluessel, name: name, wahlen: liste, notiz: notiz }) });
       var j = await r.json();
       if (!r.ok) throw new Error(j.fehler || r.status);
-      stimmen = j.stimmen || []; hinweis.textContent = 'Gespeichert.';
+      stimmen = j.stimmen || [];
     } catch (e) { hinweis.textContent = 'Speichern ging nicht. Bitte gleich nochmals versuchen.'; }
     schreibt = false; zeichnen();
   }
 
   document.getElementById('raster').addEventListener('click', function (e) {
     var kn = e.target.closest('button[data-k]'); if (!kn || kn.disabled) return;
-    var ich = meine(); senden(kn.dataset.k, ich ? ich.notiz : '');
+    var ich = meine(), mw = wahlen(ich).slice(), i = mw.indexOf(kn.dataset.k);
+    if (i >= 0) mw.splice(i, 1); else if (mw.length < PRO_PERSON) mw.push(kn.dataset.k); else return;
+    senden(mw, ich ? ich.notiz : '');
   });
-  notizKnopf.addEventListener('click', function () { var ich = meine(); if (ich) senden(ich.wahl, notizText.value.trim().slice(0, 200)); });
+  notizKnopf.addEventListener('click', function () { var ich = meine(); if (ich) senden(wahlen(ich), notizText.value.trim().slice(0, 200)); });
   nameFeld.addEventListener('input', function () { merk('abst-name', nameFeld.value.trim()); knoepfe(); });
 
   (async function start() {
@@ -231,7 +240,7 @@
     if (!schluessel) { schluessel = (crypto.randomUUID ? crypto.randomUUID() : String(Math.random()).slice(2) + Date.now()).replace(/[^A-Za-z0-9-]/g, ''); merk('abst-schluessel', schluessel); }
     ichId = await hash(schluessel);
     nameFeld.value = merk('abst-name') || '';
-    hinweis.textContent = 'Vornamen eintragen, dann eine Nummer wählen. Du kannst deine Stimme jederzeit ändern.';
+    hinweis.textContent = 'Vornamen eintragen, dann bis zu drei Farben wählen. Nochmals klicken nimmt eine Stimme zurück.';
     await laden();
     setInterval(function () { if (!document.hidden && !schreibt) laden(); }, 8000);
   })();
