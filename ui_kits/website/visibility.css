@@ -1055,7 +1055,7 @@ picture {
   inset: -14% -26% -4%;
   z-index: -1;
   border-radius: 999px;
-  background: radial-gradient(60% 50% at 50% 52%, rgba(244, 147, 96, 0.5), transparent 72%);
+  background: radial-gradient(60% 50% at 50% 52%, rgba(244, 147, 96, 0.4), transparent 72%);
 }
 
 .sv-hero__robot--frei::after {

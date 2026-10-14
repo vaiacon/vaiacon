@@ -32,9 +32,9 @@
   --grad-terra-section: linear-gradient(180deg, #A33F19 0%, #C85A2C 100%); /* @kind color */
   --grad-terra-finale: linear-gradient(178deg, #A33F19 0%, #B34B21 35%, #BE5327 60%, #C85A2C 82%, #D06030 100%); /* @kind color */
   --grad-package: linear-gradient(170deg, #BA5C30 0%, #9F4922 100%); /* @kind color */
-  --glow-peach: radial-gradient(62% 46% at 50% 104%, rgba(244, 147, 96, 0.5) 0%, rgba(244, 147, 96, 0) 70%); /* @kind color */
+  --glow-peach: radial-gradient(62% 46% at 50% 104%, rgba(244, 147, 96, 0.4) 0%, rgba(244, 147, 96, 0) 70%); /* @kind color */
   /* Radiale Terra-Bühnen (Hero-Stand / Footer) — eingefrorene Standardwerte der Landingpage (glow 90 %) */
-  --grad-terra-hero: radial-gradient(72% 52% at 50% 54%, #F49360 0%, #E2713C 26%, #B0481C 60%, #7F2E11 100%), #7F2E11; /* @kind color */
+  --grad-terra-hero: radial-gradient(72% 52% at 50% 54%, #EB8653 0%, #DC6A36 24%, #AC451B 58%, #7F2E11 100%), #7F2E11; /* @kind color */
   --grad-terra-footer: radial-gradient(80% 130% at 50% 14%, #F49360 0%, #E2713C 28%, #B0481C 62%, #7F2E11 100%), #7F2E11; /* @kind color */
 
   /* ---- Ränder & Linien ---- */
