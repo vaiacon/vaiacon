@@ -9,7 +9,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[1]
 # Quellbild als Argument uebergeben: python3 scripts/rebrand_logo_assets.py <pfad>
 SOURCE = Path(sys.argv[1]) if len(sys.argv) > 1 else ROOT / "assets" / "vaiacon-logo.jpeg"
-BRAND_ORANGE = (230, 78, 42)
+BRAND_ORANGE = (210, 99, 54)  # #D26336 seit 14.10.2026
 
 ASSET_DIRECTORIES = [
     ROOT / "assets",

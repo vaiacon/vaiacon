@@ -29,7 +29,7 @@ Dateien und Farben wie bisher:
   lockup  = Symbol und Schriftzug, 595×109  (PNG jetzt 4× so gross)
   mark    = nur das Symbol, links 182×109 des Lockups
   wordmark= nur der Schriftzug, Ausschnitt 369×73 ab x=226, y=19
-Terracotta (230, 78, 42) oder Weiss. Die Namen «terra-symbol-white» und
+Terracotta (210, 99, 54) = #D26336 (seit 14.10.2026, davor 230, 78, 42) oder Weiss. Die Namen «terra-symbol-white» und
 «terra-symbol-cream» sind aelter als die Farben: Sie haben im Bestand dieselbe
 Farbe wie «white» beziehungsweise «terra» und behalten sie.
 
@@ -56,7 +56,7 @@ ZIELE = [WURZEL / "assets", WURZEL / "academy" / "assets", WURZEL / "uploads"]
 BREITE, HOEHE = 595, 109          # Lockup in Ursprungs-Pixeln
 MASSSTAB = 4                       # Ausgabe: 4 Pixel je Ursprungs-Pixel
 UEBERABTASTUNG = 4                 # innen noch einmal 4×4 fuer weiche Kanten
-TERRA, WEISS = (230, 78, 42), (255, 255, 255)
+TERRA, WEISS = (210, 99, 54), (255, 255, 255)
 SCHRIFTZUG_AB_X = 215              # rechts davon liegt der Schriftzug, links das Symbol
 SYMBOL_GLAETTEN = 1.5              # Pixel entlang der Kontur (hoeher = ruhiger, Feinheiten gehen verloren)
 SYMBOL_TOLERANZ = 0.9              # groesster Abstand der Kurven zur Kontur in Pixeln
