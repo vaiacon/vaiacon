@@ -20,7 +20,7 @@ WURZEL = Path(__file__).resolve().parents[1]
 # verbietet ausdruecklich, das Logo umzufaerben oder zu verzerren.
 ZEICHEN = WURZEL / "assets" / "logo-mark-white.png"
 
-TERRA = (168, 58, 8)        # --terra-700, der tiefe Marken-Ton
+TERRA = (165, 70, 31)        # --terra-700, der tiefe Marken-Ton
 
 
 def kachel(kante: int, randanteil: float = 0.10, rund: bool = False) -> Image.Image:

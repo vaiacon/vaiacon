@@ -22,7 +22,7 @@
   padding: 13px 20px;
   border-radius: 999px;
   border: 2px solid #1C1613;
-  background: #A83A08;
+  background: #A5461F;
   color: #FBF4EE;
   font-family: inherit;
   font-size: 15px;
@@ -31,7 +31,7 @@
   box-shadow: 6px 6px 0 rgba(28, 22, 19, 0.85);
   transition: transform 0.3s cubic-bezier(.22, 1, .36, 1), background 0.3s ease;
 }
-.vc-chat__fab:hover { transform: translateY(-4px); background: #9C4517; }
+.vc-chat__fab:hover { transform: translateY(-4px); background: #8F4224; }
 /* Ragt der Kopf der Seite über den unteren Bildschirmrand, blendet chat.js den
    Knopf aus (data-ueber-kopf), bis der Kopf hinausgescrollt ist — sonst läge er
    auf Text oder Knöpfen (26.09.2026). Sanft, wie alles an der Marke. */
@@ -61,7 +61,7 @@
 .vc-chat__head {
   display: flex; align-items: center; justify-content: space-between; gap: 12px;
   padding: 14px 16px;
-  background: #A83A08;
+  background: #A5461F;
   color: #FBF4EE;
 }
 .vc-chat__head strong { font-size: 15.5px; font-weight: 700; }
@@ -98,7 +98,7 @@
   margin-left: auto;
   font-size: 14px;
   line-height: 1;
-  color: #B25222;
+  color: #A9512E;
   transition: transform 0.3s cubic-bezier(.22, 1, .36, 1);
 }
 .vc-chat__hinweis[open] > summary::after { transform: rotate(45deg); }
@@ -106,8 +106,8 @@
   margin: 0;
   padding: 0 16px 10px;
 }
-.vc-chat__hinweis a { color: #B25222; text-decoration: underline; text-underline-offset: 2px; }
-.vc-chat__hinweis a:hover { color: #9C4517; }
+.vc-chat__hinweis a { color: #A9512E; text-decoration: underline; text-underline-offset: 2px; }
+.vc-chat__hinweis a:hover { color: #8F4224; }
 
 .vc-chat__log {
   padding: 16px;
@@ -125,7 +125,7 @@
   white-space: pre-wrap;
 }
 .vc-chat__msg--bot { align-self: flex-start; background: #FFFDF8; border: 1px solid rgba(28,22,19,.32); color: #1C1613; }
-.vc-chat__msg--user { align-self: flex-end; background: #B25222; color: #FFFDF8; }
+.vc-chat__msg--user { align-self: flex-end; background: #A9512E; color: #FFFDF8; }
 
 .vc-chat__form {
   display: flex; gap: 8px; padding: 12px;
@@ -140,14 +140,14 @@
   font-family: inherit; font-size: 15px; color: #1C1613;
   background: #FFFDF8;
 }
-.vc-chat__form input:focus { outline: 2px solid rgba(178,82,34,.35); outline-offset: 1px; }
+.vc-chat__form input:focus { outline: 2px solid rgba(169,81,46,.35); outline-offset: 1px; }
 .vc-chat__form button {
   flex: none; width: 44px;
   border: 1.5px solid #1C1613; border-radius: 999px;
-  background: #E2652C; color: #FFFDF8;
+  background: #CC6A42; color: #FFFDF8;
   font-size: 17px; font-weight: 700; cursor: pointer;
 }
-.vc-chat__form button:hover { background: #F4793E; }
+.vc-chat__form button:hover { background: #DB7B52; }
 .vc-chat__form button[disabled] { opacity: 0.5; cursor: default; }
 
 /* Handy: ebenfalls schwebend und mitlaufend. Der Knopf bleibt unten rechts,

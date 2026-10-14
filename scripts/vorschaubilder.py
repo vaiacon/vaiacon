@@ -77,8 +77,8 @@ VORLAGE = """<!DOCTYPE html>
 <style>
   html, body {{ margin: 0; width: 1200px; height: 630px; overflow: hidden; }}
   body {{ position: relative; font-family: 'Quicksand', sans-serif;
-    background: radial-gradient(62% 46% at 50% 104%, rgba(244, 158, 96, 0.5) 0%, rgba(244, 158, 96, 0) 70%),
-      radial-gradient(60% 80% at 76% 56%, #FA8C4A 0%, #EB702B 26%, #B24009 62%, #862A03 100%), #862A03; }}
+    background: radial-gradient(62% 46% at 50% 104%, rgba(245, 162, 115, 0.5) 0%, rgba(245, 162, 115, 0) 70%),
+      radial-gradient(60% 80% at 76% 56%, #F5A273 0%, #E07A4E 26%, #B5532E 62%, #80351D 100%), #80351D; }}
   .text {{ position: absolute; left: 72px; top: 64px; bottom: 60px; width: 560px; display: flex; flex-direction: column; }}
   .logo {{ width: 214px; height: auto; display: block; }}
   .kicker {{ margin: auto 0 22px; font-size: 20px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #FFD9C2; }}
@@ -86,7 +86,7 @@ VORLAGE = """<!DOCTYPE html>
   .adresse {{ margin-top: auto; font-size: 22px; font-weight: 600; color: rgba(255, 240, 230, 0.92); }}
   .bot {{ position: absolute; right: 60px; bottom: 44px; }}
   .bot::before {{ content: ""; position: absolute; inset: -14% -26% -4%; border-radius: 999px;
-    background: radial-gradient(60% 50% at 50% 52%, rgba(244, 158, 96, 0.5), transparent 72%); }}
+    background: radial-gradient(60% 50% at 50% 52%, rgba(245, 162, 115, 0.5), transparent 72%); }}
   .bot::after {{ content: ""; position: absolute; left: 12%; right: 12%; bottom: 1%; height: 5%; border-radius: 999px;
     background: rgba(62, 22, 6, 0.5); filter: blur(9px); }}
   .bot img {{ position: relative; z-index: 1; display: block; max-height: 500px; max-width: 500px;

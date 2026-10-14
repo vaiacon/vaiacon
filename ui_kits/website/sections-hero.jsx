@@ -15,7 +15,7 @@ function Hero({ tweaks }) {
   return (
     <section id="top" data-screen-label="Hero" style={{ position: 'relative', height: '100vh', overflow: 'hidden', background: 'var(--grad-terra-hero)' }}>
       {/* Licht von unten, Abdunklung oben */}
-      <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', background: 'radial-gradient(62% 46% at 55% 102%, rgba(244,158,96,0.5) 0%, rgba(244,158,96,0) 70%), radial-gradient(90% 60% at 50% -8%, rgba(70,26,6,0.35) 0%, rgba(70,26,6,0) 60%)' }}></div>
+      <div style={{ position: 'absolute', inset: 0, pointerEvents: 'none', background: 'radial-gradient(62% 46% at 55% 102%, rgba(245,162,115,0.5) 0%, rgba(245,162,115,0) 70%), radial-gradient(90% 60% at 50% -8%, rgba(70,26,6,0.35) 0%, rgba(70,26,6,0) 60%)' }}></div>
 
       {/* Büro-Bot-Bühne — unten verankert; Maske lässt die Antenne frei (solid ab 7 % Bildhöhe).
           Zentrierung über Flex-Wrapper (breathe-Keyframes überschreiben transform!). */}

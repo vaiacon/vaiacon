@@ -1,10 +1,10 @@
 /* Seitenabschluss für alle Seiten: ruhiger Schlussteil + helle Fusszeile in Spalten */
-.sv-final { background: linear-gradient(180deg, #A83A08 0%, #862A03 100%); }
+.sv-final { background: linear-gradient(180deg, #A5461F 0%, #80351D 100%); }
 .sv-final::before { opacity: .35; }
 .vb-fuss__inner, .vb-fuss__basis { box-sizing: border-box; }
 /* ---- Neuer Seitenabschluss (Varianten A/B/C) ---- */
 .vb-fuss__inner, .vb-fuss__basis, .vb-karte { box-sizing: border-box; }
-.vb-fuss { background: #862A03; color: var(--text-on-terra); }
+.vb-fuss { background: #80351D; color: var(--text-on-terra); }
 .vb-fuss__inner { width: min(100%, var(--content-max)); margin: 0 auto; padding: 64px 32px 40px; display: grid; grid-template-columns: minmax(0, 1.4fr) repeat(3, minmax(0, 1fr)); gap: 40px; }
 .vb-fuss__marke { display: grid; gap: 20px; align-content: start; }
 .vb-fuss__marke .sv-footer__social { justify-content: flex-start; width: auto; }
@@ -27,7 +27,7 @@ html[data-ende="hell"] .vb-fuss__titel { color: var(--terra-500); }
 html[data-ende="hell"] .vb-fuss__adresse, html[data-ende="hell"] .vb-fuss__basis { color: var(--text-body); }
 html[data-ende="hell"] .vb-fuss__basis { border-top-color: var(--border-strong); }
 html[data-ende="hell"] .vb-fuss .sv-footer__logo img { content: url("../../assets/logo-lockup-terra.svg"); }
-html[data-ende="hell"] .vb-fuss .sv-footer__social a { background: rgba(178, 82, 34, 0.1); color: var(--terra-500); }
+html[data-ende="hell"] .vb-fuss .sv-footer__social a { background: rgba(169, 81, 46, 0.1); color: var(--terra-500); }
 
 /* 11.10.: Schlussteil hell, Fusszeile Terracotta – Hintergründe wechseln sich ab */
 .sv-final { background: var(--cream-card) !important; color: var(--text-strong); border-top: 1px solid var(--border-strong); }
@@ -38,7 +38,7 @@ html[data-ende="hell"] .vb-fuss .sv-footer__social a { background: rgba(178, 82,
 .sv-final .sv-button--light { background: var(--cta-bg); color: #FFFFFF; }
 .sv-final .sv-button--light:hover { background: var(--cta-bg-hover); }
 .sv-final a:not(.sv-button) { color: var(--link); }
-.vb-fuss { background: linear-gradient(180deg, #A83A08 0%, #862A03 100%) !important; }
+.vb-fuss { background: linear-gradient(180deg, #A5461F 0%, #80351D 100%) !important; }
 
 .sv-final .sv-button--glass { color: var(--terra-600); border-color: var(--border-strong); background: transparent; backdrop-filter: none; }
 .sv-final .sv-button--glass:hover, .sv-final .sv-button--glass:focus-visible { background: var(--peach-150); color: var(--terra-700); }

@@ -40,7 +40,7 @@ DEFS = '''
   <linearGradient id="silber" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#FAFAFA"/><stop offset=".5" stop-color="#B9BCC0"/><stop offset="1" stop-color="#E8E9EB"/></linearGradient>
   <linearGradient id="farbe" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#EE7436"/><stop offset="1" stop-color="#CF5520"/></linearGradient>
   <linearGradient id="putz" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#F3E8D8"/><stop offset="1" stop-color="#E6D8C3"/></linearGradient>
-  <linearGradient id="dach" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9602B"/><stop offset="1" stop-color="#9C4517"/></linearGradient>
+  <linearGradient id="dach" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#C9602B"/><stop offset="1" stop-color="#8F4224"/></linearGradient>
   <linearGradient id="glas" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#DDEBF0"/><stop offset="1" stop-color="#A9C3CE"/></linearGradient>
   <linearGradient id="holz" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#D7B58D"/><stop offset="1" stop-color="#B98F62"/></linearGradient>
   <filter id="schatten" x="-20%" y="-20%" width="140%" height="150%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#3E1606" flood-opacity=".28"/></filter>
@@ -107,7 +107,7 @@ def maler():
 <path d="M148 108 L170 16 Q214 6 258 16 L284 110 Z" fill="url(#weiss)" stroke="#CFC5B8" stroke-width="3" stroke-linejoin="round"/>
 </g>
 <path d="M186 100 L192 30 M228 100 V16 M266 100 L252 28" stroke="#DDD4C8" stroke-width="3" fill="none" stroke-linecap="round"/>
-<circle cx="200" cy="52" r="6" fill="#E2652C"/><circle cx="244" cy="44" r="4.5" fill="#E2652C"/><circle cx="224" cy="72" r="3.5" fill="#E2652C"/>
+<circle cx="200" cy="52" r="6" fill="#CC6A42"/><circle cx="244" cy="44" r="4.5" fill="#CC6A42"/><circle cx="224" cy="72" r="3.5" fill="#CC6A42"/>
 '''
     return szene(BASEN['willkommen'], 470, 6, 104, 38, muetze, '', wand, rahmen + eimer)
 
@@ -116,8 +116,8 @@ def restaurant():
     # Willkommen-Pose: der Bot als Bedienung, Fliege und ein Tablett mit Servierglocke auf der Hand.
     fliege = '''
 <g filter="url(#schatten)">
-<path d="M192 286 L158 268 Q150 284 158 302 Z" fill="#B25222"/>
-<path d="M192 286 L226 268 Q234 284 226 302 Z" fill="#B25222"/>
+<path d="M192 286 L158 268 Q150 284 158 302 Z" fill="#A9512E"/>
+<path d="M192 286 L226 268 Q234 284 226 302 Z" fill="#A9512E"/>
 <rect x="182" y="274" width="20" height="24" rx="6" fill="#8E3F16"/>
 </g>
 <path d="M166 276 Q176 282 186 284 M218 276 Q208 282 198 284" stroke="#fff" stroke-width="2.5" opacity=".35" fill="none" stroke-linecap="round"/>
@@ -208,7 +208,7 @@ def kosmetik():
 <g filter="url(#schatten)">
 <rect x="360" y="516" width="84" height="46" rx="10" fill="#fff"/>
 <rect x="354" y="500" width="96" height="24" rx="9" fill="url(#farbe)"/>
-<path d="M372 538 h60" stroke="#E2652C" stroke-width="5" stroke-linecap="round" opacity=".6"/>
+<path d="M372 538 h60" stroke="#CC6A42" stroke-width="5" stroke-linecap="round" opacity=".6"/>
 </g>
 <path d="M444 120 l5 12 l12 5 l-12 5 l-5 12 l-5 -12 l-12 -5 l12 -5 z" fill="#E2B83A"/>
 <path d="M256 96 l3.5 8 l8 3.5 l-8 3.5 l-3.5 8 l-3.5 -8 l-8 -3.5 l8 -3.5 z" fill="#E2B83A"/>

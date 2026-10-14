@@ -157,7 +157,7 @@ body {
 
 .mock-header.is-solid .mock-header__contact:hover,
 .mock-header.is-solid .mock-header__contact:focus-visible {
-  background: rgba(178, 82, 34, 0.08);
+  background: rgba(169, 81, 46, 0.08);
   color: var(--terra-500);
 }
 
@@ -769,8 +769,8 @@ body {
     padding: 12px 18px 14px;
     box-sizing: border-box;
     background: var(--bg-page);
-    border-top: 1px solid rgba(178, 82, 34, 0.1);
-    border-bottom: 1px solid rgba(178, 82, 34, 0.18);
+    border-top: 1px solid rgba(169, 81, 46, 0.1);
+    border-bottom: 1px solid rgba(169, 81, 46, 0.18);
     box-shadow: 0 22px 42px rgba(64, 31, 8, 0.14);
   }
 
@@ -1665,7 +1665,7 @@ body {
 .mock-mobile-nav a.mock-header__contact[aria-current] {
   color: #FFFFFF;
   text-decoration: none;
-  box-shadow: 0 0 0 3px rgba(178, 82, 34, 0.25);
+  box-shadow: 0 0 0 3px rgba(169, 81, 46, 0.25);
 }
 
 /* ── Zum Inhalt springen ─────────────────────────────────────────────────
