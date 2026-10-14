@@ -566,8 +566,8 @@
     platz.textContent = '';
     var dok = el('article', { class: 'of-dokument', 'aria-label': 'Richtpreis ' + (a.nummer || '') });
 
-    var logo = el('img', { class: 'of-dokument__logo', src: 'assets/logo-lockup-terra.svg', alt: 'Vaiacon', height: '30' });
-    logo.addEventListener('error', function () { if (!logo.getAttribute('data-png')) { logo.setAttribute('data-png', '1'); logo.src = 'assets/logo-lockup-terra.png'; } });
+    var logo = el('img', { class: 'of-dokument__logo', src: 'assets/logo-lockup-terra.svg?v=20261014', alt: 'Vaiacon', height: '30' });
+    logo.addEventListener('error', function () { if (!logo.getAttribute('data-png')) { logo.setAttribute('data-png', '1'); logo.src = 'assets/logo-lockup-terra.png?v=20261014'; } });
     dok.appendChild(el('div', { class: 'of-dokument__marke' }, [
       logo,
       el('span', { class: 'of-dokument__marke-zeile', text: 'Richtpreis' })

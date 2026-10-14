@@ -561,7 +561,7 @@ function ErstanalyseApp() {
     href: ROOT,
     "aria-label": "vaiacon Startseite"
   }, /*#__PURE__*/React.createElement("img", {
-    src: ROOT + 'assets/logo-lockup-terra.png',
+    src: ROOT + 'assets/logo-lockup-terra.png?v=20261014',
     alt: "vaiacon"
   })), /*#__PURE__*/React.createElement("a", {
     className: "ea-back",

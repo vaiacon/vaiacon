@@ -48,7 +48,7 @@ function BuerobotVideo() {
   const [failed, setFailed] = React.useState(false);
   React.useEffect(() => {
     let url = null, cancelled = false;
-    fetch('../../assets/buerobot-dance.mp4')
+    fetch('../../assets/buerobot-dance.mp4?v=20261014')
       .then((r) => { if (!r.ok) throw new Error('http ' + r.status); return r.blob(); })
       .then((b) => {
         if (cancelled) return;
@@ -68,7 +68,7 @@ function BuerobotVideo() {
     return (
       <img
         data-comment-anchor="tanzender-roboter"
-        src="../../assets/vaiacon-buerobot-phone.png"
+        src="../../assets/vaiacon-buerobot-phone.png?v=20261014"
         alt="Büro-Bot am Telefon"
         style={{ width: '100%', maxWidth: 600, aspectRatio: '16 / 9', objectFit: 'cover', display: 'block', borderRadius: 18 }}
       />

@@ -21,7 +21,7 @@ function NavLink({ href, active, onClick, children }) {
 
 /** Website-Header: vaiacon-Lockup, Nav, oranger Pill-CTA. */
 export function SiteHeader({
-  logoSrc = 'assets/logo-lockup-terra.png',
+  logoSrc = 'assets/logo-lockup-terra.png?v=20261014',
   logoHeight = 56,
   links = [],
   active,

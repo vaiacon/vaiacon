@@ -20,7 +20,7 @@ window.ACADEMY_PLANS = [{
   tile: 'Der Einstieg ohne Fachchinesisch — was die Werkzeuge können und wie Sie sie ansprechen.',
   lead: 'Bevor wir automatisieren, klären wir das Handwerk: was diese Werkzeuge heute wirklich leisten, wie man sie anspricht und wie Sie eine Routine aufbauen, die eine Woche später noch steht.',
   bild: 'Bild: Inhaber am Laptop im Betrieb',
-  img: 'assets/lernplan-01.png',
+  img: 'assets/lernplan-01.png?v=20261014',
   takeaways: ['Prompt-Karte A5', 'Startanleitung Schritt für Schritt', '30-Minuten-Wochenplan'],
   lessons: [['Was KI heute kann — und was nicht', 'VIDEO', '8 Min'], ['Das erste Gespräch mit einem Assistenten', 'WERKSTATT', '12 Min'], ['Gute Anweisungen: die vier Bausteine', 'WERKSTATT', '18 Min'], ['Eigene Dokumente befragen', 'WERKSTATT', '15 Min'], ['Ihr Wochenrhythmus: 30 Minuten, die bleiben', 'ÜBUNG', '12 Min']]
 }, {
@@ -32,7 +32,7 @@ window.ACADEMY_PLANS = [{
   tile: 'Was rein darf und was nie: revDSG, Anonymisieren, Cloud-Standort.',
   lead: 'Die Lektionen, die vor allen anderen kommen sollten: welche Daten Sie nie eingeben, wie Sie Kundenangaben in zwei Minuten anonymisieren und was das revDSG von Ihrem Betrieb verlangt.',
   bild: 'Bild: Aktenordner und Bildschirm',
-  img: 'assets/lernplan-02.png',
+  img: 'assets/lernplan-02.png?v=20261014',
   takeaways: ['Merkblatt «nie eingeben»', 'Anonymisierungs-Vorlage', 'Sicherheits-Check auf einer Seite'],
   lessons: [['Was Sie nie eingeben dürfen', 'VIDEO + CHECK', '14 Min'], ['revDSG in vier Sätzen', 'VIDEO', '12 Min'], ['Kundendaten anonymisieren — schnell und sauber', 'WERKSTATT', '16 Min'], ['Auftragsverarbeitung und Cloud-Standort', 'VIDEO', '15 Min'], ['Der Sicherheits-Check für Ihren Betrieb', 'ÜBUNG', '18 Min']]
 }, {
@@ -44,7 +44,7 @@ window.ACADEMY_PLANS = [{
   tile: 'Der Posteingang zuerst — Antworten, die nach Ihnen klingen.',
   lead: 'Wo die meisten Stunden verschwinden: im Postfach. Sie bauen Bausteine für Ihre häufigsten Antworten, lernen den Ton treffen und behalten die heiklen Mails selbst in der Hand.',
   bild: 'Bild: Postfach am Morgen',
-  img: 'assets/lernplan-03.png',
+  img: 'assets/lernplan-03.png?v=20261014',
   takeaways: ['Ton-Profil Ihres Betriebs', 'Baustein-Set für Standardantworten', 'Leitfaden für heikle Mails'],
   lessons: [['Ihre Zeitfresser im Postfach finden', 'ÜBUNG', '15 Min'], ['Mails, die nach Ihnen klingen', 'WERKSTATT', '20 Min'], ['Standardantworten als Bausteine', 'WERKSTATT', '18 Min'], ['Heikle Mails: Reklamation, Mahnung, Absage', 'WERKSTATT', '17 Min'], ['Mehrsprachig antworten (F · I · E)', 'WERKSTATT', '12 Min']]
 }, {
@@ -56,7 +56,7 @@ window.ACADEMY_PLANS = [{
   tile: 'Aus fünf Stichworten eine Offerte in Ihrer Struktur.',
   lead: 'Vom Stichwort zur fertigen Offerte — mit Ihren Positionen, Ihrer Preislogik und Ihrem Schlusssatz. Danach folgen Nachfassen und Auftragsbestätigung, damit nichts liegen bleibt.',
   bild: 'Bild: Offerte auf dem Bürotisch',
-  img: 'assets/lernplan-04.png',
+  img: 'assets/lernplan-04.png?v=20261014',
   takeaways: ['Offerten-Gerüst (Word)', 'Preislogik-Beschrieb', 'Nachfass-Sequenz (3 Mails)'],
   lessons: [['Offerten aus Stichworten', 'WERKSTATT', '22 Min'], ['Ihre Preislogik hinterlegen', 'WERKSTATT', '18 Min'], ['Leistungsbeschriebe, die überzeugen', 'WERKSTATT', '16 Min'], ['Nachfassen ohne Verkaufsdruck', 'WERKSTATT', '18 Min'], ['Auftragsbestätigung und Übergabe', 'WERKSTATT', '14 Min']]
 }, {
@@ -68,7 +68,7 @@ window.ACADEMY_PLANS = [{
   tile: 'Belegstapel, Spesen, Mahnwesen — bis zur Übergabe ans Treuhandbüro.',
   lead: 'Der Papierkram, den niemand mag: Belege vorsortieren, Spesen erfassen, Zahlungseingänge prüfen. Am Ende steht ein Monatsabschluss, der eine halbe Stunde dauert statt einen Abend.',
   bild: 'Bild: Belege und Kaffeetasse',
-  img: 'assets/lernplan-05.png',
+  img: 'assets/lernplan-05.png?v=20261014',
   takeaways: ['Belegübergabe-Checkliste', 'Mahn-Textbausteine', 'Monatsabschluss-Ablauf'],
   lessons: [['Belege vorsortieren fürs Treuhandbüro', 'WERKSTATT', '18 Min'], ['Spesen und Quittungen ohne Zettelchaos', 'WERKSTATT', '16 Min'], ['Zahlungseingänge und Mahnwesen', 'WERKSTATT', '17 Min'], ['Monatsabschluss in einer halben Stunde', 'WERKSTATT', '20 Min'], ['Was der Treuhänder von Ihnen braucht', 'VIDEO', '12 Min']]
 }, {
@@ -80,7 +80,7 @@ window.ACADEMY_PLANS = [{
   tile: 'Aus Notizen werden Protokolle, Aufgaben und Betriebswissen.',
   lead: 'Sitzungen enden meist mit Notizen, die niemand mehr liest. Hier entstehen daraus Protokolle, Aufgabenlisten mit Termin — und ein Betriebshandbuch, das mitwächst.',
   bild: 'Bild: Sitzungstisch mit Notizblock',
-  img: 'assets/lernplan-06.png',
+  img: 'assets/lernplan-06.png?v=20261014',
   takeaways: ['Protokoll-Vorlage', 'Aufgaben-Extraktion (Prompt)', 'Gerüst fürs Betriebshandbuch'],
   lessons: [['Sitzungsnotizen zu Protokollen', 'WERKSTATT', '16 Min'], ['Aufgaben und Termine herausziehen', 'WERKSTATT', '15 Min'], ['Wissen festhalten: das Betriebshandbuch', 'WERKSTATT', '18 Min'], ['Ihre Vorlagen-Bibliothek aufbauen', 'ÜBUNG', '12 Min']]
 }, {
@@ -92,7 +92,7 @@ window.ACADEMY_PLANS = [{
   tile: 'Sichtbar bleiben in Ihrer Sprache — ohne Agentur, ohne Verkaufsdruck.',
   lead: 'Website-Texte, Anfragen, Referenzen und ein Rhythmus, den Sie auch im Frühling halten. Alles in Ihrer Sprache — und mit einer klaren Grenze, was Chefsache bleibt.',
   bild: 'Bild: Handwerker mit Kunde vor Ort',
-  img: 'assets/lernplan-07.png',
+  img: 'assets/lernplan-07.png?v=20261014',
   takeaways: ['Tonalitäts-Profil', 'Textgerüst für Leistungsseiten', 'Referenz-Anfrage (Vorlage)'],
   lessons: [['Ihre Sprache festhalten: das Tonalitäts-Profil', 'WERKSTATT', '18 Min'], ['Website-Texte, die nicht nach KI klingen', 'WERKSTATT', '20 Min'], ['Anfragen in drei Minuten qualifizieren', 'WERKSTATT', '16 Min'], ['Bewertungen und Referenzen einholen', 'ÜBUNG', '14 Min'], ['Ein Rhythmus, den Sie halten können', 'ÜBUNG', '20 Min'], ['Was Chefsache bleibt', 'VIDEO', '10 Min']]
 }, {
@@ -104,7 +104,7 @@ window.ACADEMY_PLANS = [{
   tile: 'Ein digitaler Mitarbeiter für die zwanzig häufigsten Fragen.',
   lead: 'Der vaiaconBot beantwortet, was sich täglich wiederholt — und gibt sauber an den Menschen ab, wenn es persönlich wird. Sie bauen ihn in dieser Werkstatt selbst.',
   bild: 'Bild: vaiaconBot am Telefon',
-  img: 'assets/vaiacon-buerobot-phone.png',
+  img: 'assets/vaiacon-buerobot-phone.png?v=20261014',
   takeaways: ['Fragenkatalog (20 Fragen)', 'Übergabe-Regeln an den Menschen', 'Qualitäts-Check zum Mitlesen'],
   lessons: [['Die zwanzig häufigsten Fragen sammeln', 'ÜBUNG', '14 Min'], ['Ein vaiaconBot für die häufigen Fragen', 'WERKSTATT', '24 Min'], ['Übergabe an den Menschen — sauber geregelt', 'WERKSTATT', '16 Min'], ['Telefonnotizen und Rückrufe', 'WERKSTATT', '14 Min'], ['Qualität prüfen: mitlesen und nachschärfen', 'ÜBUNG', '15 Min']]
 }, {
@@ -116,7 +116,7 @@ window.ACADEMY_PLANS = [{
   tile: 'Vom einzelnen Handgriff zum verlässlichen Ablauf.',
   lead: 'Für Betriebe, die den ersten Nutzen gesehen haben und jetzt Struktur wollen: beschreiben, bauen, verbinden, prüfen — inklusive Rückfallplan, wenn etwas nicht läuft.',
   bild: 'Bild: Werkstatt-Whiteboard mit Ablauf',
-  img: 'assets/lernplan-09.png',
+  img: 'assets/lernplan-09.png?v=20261014',
   takeaways: ['Prozess-Steckbrief', 'Ablauf-Bauplan', 'Rückfallplan (eine Seite)'],
   lessons: [['Vom Handgriff zum Prozess: sauber beschreiben', 'WERKSTATT', '20 Min'], ['Der erste automatische Ablauf', 'WERKSTATT', '26 Min'], ['Verbindungen ohne Programmieren', 'WERKSTATT', '24 Min'], ['Daten sauber halten', 'WERKSTATT', '18 Min'], ['Wenn es schiefgeht: der Rückfallplan', 'WERKSTATT', '15 Min'], ['Aus einem Ablauf zehn machen', 'ÜBUNG', '20 Min']]
 }, {
@@ -128,7 +128,7 @@ window.ACADEMY_PLANS = [{
   tile: 'Rechnen statt hoffen: Kosten, Nutzen, Quartals-Entscheid.',
   lead: 'Was bringt es wirklich? Sie rechnen Ihren eigenen Fall durch, vergleichen Lizenzen und entscheiden pro Quartal, was bleibt und was wieder verschwindet.',
   bild: 'Bild: Notizblock mit Zahlen',
-  img: 'assets/lernplan-10.png',
+  img: 'assets/lernplan-10.png?v=20261014',
   takeaways: ['Business-Case-Rechner', 'Lizenz-Vergleichsblatt', 'Quartals-Entscheid (Vorlage)'],
   lessons: [['Kosten und Nutzen rechnen', 'ÜBUNG', '22 Min'], ['Angebote und Lizenzen vergleichen', 'VIDEO', '14 Min'], ['Wann sich Eigenbau lohnt — und wann nicht', 'VIDEO', '14 Min'], ['Der Quartals-Entscheid: was bleibt, was fliegt', 'ÜBUNG', '18 Min']]
 }, {
@@ -140,7 +140,7 @@ window.ACADEMY_PLANS = [{
   tile: 'Regeln, Rollen und der Umgang mit Skepsis im Team.',
   lead: 'KI im Betrieb ist Führungsarbeit. Sie schreiben eine Richtlinie auf einer Seite, klären Rollen und Freigaben und nehmen die Mitarbeitenden mit, statt sie zu überfahren.',
   bild: 'Bild: Team im Pausenraum',
-  img: 'assets/lernplan-11.png',
+  img: 'assets/lernplan-11.png?v=20261014',
   takeaways: ['KI-Richtlinie auf einer Seite', 'Rollen- und Freigabe-Matrix', 'Schulungsplan fürs Team'],
   lessons: [['Eine KI-Richtlinie auf einer Seite', 'WERKSTATT', '20 Min'], ['Mitarbeitende mitnehmen statt überfahren', 'VIDEO', '14 Min'], ['Wer darf was? Rollen und Freigaben', 'WERKSTATT', '16 Min'], ['Umgang mit Skepsis im Team', 'VIDEO', '12 Min'], ['KI-Kompetenz messen: der kleine Check', 'ÜBUNG', '15 Min']]
 }];
@@ -2528,7 +2528,7 @@ function NavLink({
 
 /** Website-Header: vaiacon-Lockup, lowercase-Nav, oranger Pill-CTA. */
 function SiteHeader({
-  logoSrc = 'assets/logo-lockup-terra.png',
+  logoSrc = 'assets/logo-lockup-terra.png?v=20261014',
   logoHeight = 56,
   links = [],
   active,
@@ -2689,12 +2689,12 @@ function App() {
   }, /*#__PURE__*/React.createElement("div", {
     className: "header-desktop"
   }, /*#__PURE__*/React.createElement(SiteHeader, {
-    logoSrc: "../../assets/logo-lockup-terra-symbol-cream.png",
+    logoSrc: "../../assets/logo-lockup-terra-symbol-cream.png?v=20261014",
     links: NAV_LINKS,
     active: active,
     ctaLabel: null
   })), /*#__PURE__*/React.createElement(MobileHeader, {
-    logoSrc: "../../assets/logo-lockup-terra-symbol-cream.png",
+    logoSrc: "../../assets/logo-lockup-terra-symbol-cream.png?v=20261014",
     links: NAV_LINKS,
     active: active,
     ctaLabel: null
@@ -3808,7 +3808,7 @@ function Header() {
     href: "#top",
     "aria-label": "vaiacon Start"
   }, /*#__PURE__*/React.createElement("img", {
-    src: asset(solid || menuOpen ? 'logo-lockup-terra.png' : 'logo-lockup-white.png'),
+    src: asset(solid || menuOpen ? 'logo-lockup-terra.png?v=20261014' : 'logo-lockup-white.png'),
     alt: "vaiacon"
   })), /*#__PURE__*/React.createElement("button", {
     className: "mock-menu-toggle",
@@ -3909,7 +3909,7 @@ function Hero() {
     className: "mock-hero__robot",
     "aria-hidden": "true"
   }, /*#__PURE__*/React.createElement("img", {
-    src: asset('vaiacon-buerobot-hero.png'),
+    src: asset('vaiacon-buerobot-hero.png?v=20261014'),
     alt: ""
   })), /*#__PURE__*/React.createElement("a", {
     className: "mock-stamp",
@@ -3972,11 +3972,11 @@ function Learning() {
     className: "mock-learning-visual"
   }, /*#__PURE__*/React.createElement("img", {
     className: "mock-learning-image",
-    src: asset('vaiacon-buerobot-academy.png'),
+    src: asset('vaiacon-buerobot-academy.png?v=20261014'),
     alt: "vaiaconBot am Schreibtisch beim Erstellen eines Lernmoduls"
   }), /*#__PURE__*/React.createElement("img", {
     className: "mock-learning-image mock-learning-image--bot",
-    src: asset('vaiacon-buerobot-learning.png'),
+    src: asset('vaiacon-buerobot-learning.png?v=20261014'),
     alt: "vaiaconBot als Lehrer vor einem Whiteboard"
   }))));
 }
@@ -4121,7 +4121,7 @@ function Faq() {
     className: "mock-title"
   }, "Die wichtigsten Fragen und Antworten zu vaiacon."), /*#__PURE__*/React.createElement("img", {
     className: "mock-faq-robot",
-    src: asset('vaiacon-buerobot-faq-transparent.png?v=20260903-alpha'),
+    src: asset('vaiacon-buerobot-faq-transparent.png?v=20261014'),
     alt: "vaiaconBot beantwortet Fragen"
   })), /*#__PURE__*/React.createElement("div", null, FAQS.map(([question, answer], index) => /*#__PURE__*/React.createElement(FaqItem, {
     key: question,
@@ -4291,7 +4291,7 @@ function Header() {
     href: "#top",
     "aria-label": "vaiacon Start"
   }, /*#__PURE__*/React.createElement("img", {
-    src: asset(solid || menuOpen ? 'logo-lockup-terra.png' : 'logo-lockup-white.png'),
+    src: asset(solid || menuOpen ? 'logo-lockup-terra.png?v=20261014' : 'logo-lockup-white.png'),
     alt: "vaiacon"
   })), /*#__PURE__*/React.createElement("button", {
     className: "mock-menu-toggle",
@@ -4392,7 +4392,7 @@ function Hero() {
     className: "mock-hero__robot",
     "aria-hidden": "true"
   }, /*#__PURE__*/React.createElement("img", {
-    src: asset('vaiacon-buerobot-hero.png'),
+    src: asset('vaiacon-buerobot-hero.png?v=20261014'),
     alt: ""
   })), /*#__PURE__*/React.createElement("a", {
     className: "mock-stamp",
@@ -4455,11 +4455,11 @@ function Learning() {
     className: "mock-learning-visual"
   }, /*#__PURE__*/React.createElement("img", {
     className: "mock-learning-image",
-    src: asset('vaiacon-buerobot-academy.png'),
+    src: asset('vaiacon-buerobot-academy.png?v=20261014'),
     alt: "vaiaconBot am Schreibtisch beim Erstellen eines Lernmoduls"
   }), /*#__PURE__*/React.createElement("img", {
     className: "mock-learning-image mock-learning-image--bot",
-    src: asset('vaiacon-buerobot-learning.png'),
+    src: asset('vaiacon-buerobot-learning.png?v=20261014'),
     alt: "vaiaconBot als Lehrer vor einem Whiteboard"
   }))));
 }
@@ -4604,7 +4604,7 @@ function Faq() {
     className: "mock-title"
   }, "Die wichtigsten Fragen und Antworten zu vaiacon."), /*#__PURE__*/React.createElement("img", {
     className: "mock-faq-robot",
-    src: asset('vaiacon-buerobot-faq-transparent.png?v=20260903-alpha'),
+    src: asset('vaiacon-buerobot-faq-transparent.png?v=20261014'),
     alt: "vaiaconBot beantwortet Fragen"
   })), /*#__PURE__*/React.createElement("div", null, FAQS.map(([question, answer], index) => /*#__PURE__*/React.createElement(FaqItem, {
     key: question,
@@ -4757,7 +4757,7 @@ function Hero({
       animation: 'breathe 6.5s ease-in-out infinite'
     }
   }, /*#__PURE__*/React.createElement("img", {
-    src: "../../assets/vaiacon-buerobot-hero.png",
+    src: "../../assets/vaiacon-buerobot-hero.png?v=20261014",
     alt: "B\xFCro-Bot zeigt nach oben",
     style: {
       width: '100%',
@@ -5050,7 +5050,7 @@ function UeberUns() {
     name: "Philip Krieger",
     role: "Mitgr\xFCnder \xB7 Coach"
   }), /*#__PURE__*/React.createElement(QuoteCard, {
-    logoSrc: "../../assets/logo-mark-terra-symbol-white.png",
+    logoSrc: "../../assets/logo-mark-terra-symbol-white.png?v=20261014",
     quote: "Klarheit schafft bessere Entscheidungen.",
     style: {
       gridColumn: '1 / -1',
@@ -5505,7 +5505,7 @@ function BuerobotVideo() {
   React.useEffect(() => {
     let url = null,
       cancelled = false;
-    fetch('../../assets/buerobot-dance.mp4').then(r => {
+    fetch('../../assets/buerobot-dance.mp4?v=20261014').then(r => {
       if (!r.ok) throw new Error('http ' + r.status);
       return r.blob();
     }).then(b => {
@@ -5529,7 +5529,7 @@ function BuerobotVideo() {
   if (failed) {
     return /*#__PURE__*/React.createElement("img", {
       "data-comment-anchor": "tanzender-roboter",
-      src: "../../assets/vaiacon-buerobot-phone.png",
+      src: "../../assets/vaiacon-buerobot-phone.png?v=20261014",
       alt: "B\xFCro-Bot am Telefon",
       style: {
         width: '100%',
@@ -6673,7 +6673,7 @@ function Header() {
     href: "./",
     "aria-label": "vaiacon Start"
   }, /*#__PURE__*/React.createElement("img", {
-    src: asset('logo-lockup-terra.png'),
+    src: asset('logo-lockup-terra.png?v=20261014'),
     alt: "vaiacon"
   })), /*#__PURE__*/React.createElement("button", {
     className: "mock-menu-toggle",
@@ -6810,7 +6810,7 @@ function Header() {
     href: "./",
     "aria-label": "vaiacon Start"
   }, /*#__PURE__*/React.createElement("img", {
-    src: asset('logo-lockup-terra.png'),
+    src: asset('logo-lockup-terra.png?v=20261014'),
     alt: "vaiacon"
   })), /*#__PURE__*/React.createElement("button", {
     className: "mock-menu-toggle",

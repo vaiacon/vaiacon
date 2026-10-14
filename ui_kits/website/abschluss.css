@@ -26,7 +26,7 @@ html[data-ende="hell"] .vb-fuss a { color: var(--text-strong); }
 html[data-ende="hell"] .vb-fuss__titel { color: var(--terra-500); }
 html[data-ende="hell"] .vb-fuss__adresse, html[data-ende="hell"] .vb-fuss__basis { color: var(--text-body); }
 html[data-ende="hell"] .vb-fuss__basis { border-top-color: var(--border-strong); }
-html[data-ende="hell"] .vb-fuss .sv-footer__logo img { content: url("../../assets/logo-lockup-terra.svg"); }
+html[data-ende="hell"] .vb-fuss .sv-footer__logo img { content: url("../../assets/logo-lockup-terra.svg?v=20261014"); }
 html[data-ende="hell"] .vb-fuss .sv-footer__social a { background: rgba(173, 80, 41, 0.1); color: var(--terra-500); }
 
 /* 11.10.: Schlussteil hell, Fusszeile Terracotta – Hintergründe wechseln sich ab */

@@ -20,7 +20,7 @@
   </div>
   <script>
     /* Server liefert MP4 ohne Range-Support — komplett laden und als Blob füttern. */
-    fetch('../assets/buerobot-dance.mp4')
+    fetch('../assets/buerobot-dance.mp4?v=20261014')
       .then(function (r) { if (!r.ok) throw new Error('http ' + r.status); return r.blob(); })
       .then(function (b) {
         var v = document.getElementById('vid');

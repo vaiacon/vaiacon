@@ -12,7 +12,7 @@
     const isSolid = immer || window.scrollY > 24 || toggle.getAttribute('aria-expanded') === 'true';
     header.classList.toggle('is-solid', isSolid);
     // Pfad des Logos bleibt, wie die Seite ihn trägt (Wurzel oder «../»); nur die Farbe wechselt.
-    logo.setAttribute('src', logo.getAttribute('src').replace(/logo-lockup-(white|terra)\.\w+$/, isSolid ? 'logo-lockup-terra.svg' : 'logo-lockup-white.svg'));
+    logo.setAttribute('src', logo.getAttribute('src').replace(/logo-lockup-(white|terra)\.\w+$/, isSolid ? 'logo-lockup-terra.svg?v=20261014' : 'logo-lockup-white.svg'));
   }
 
   function closeMenu() {

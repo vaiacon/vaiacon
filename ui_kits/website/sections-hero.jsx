@@ -22,7 +22,7 @@ function Hero({ tweaks }) {
       <div className="hero-robot" style={{ position: 'absolute', left: 0, right: 0, bottom: `${t.robotBottom}vh`, height: `${t.robotHeight}vh`, display: 'flex', justifyContent: 'center', pointerEvents: 'none' }}>
         <div style={{ position: 'relative', left: `${t.robotX}vw`, height: '100%', aspectRatio: '16 / 9', flex: 'none', animation: 'breathe 6.5s ease-in-out infinite' }}>
           <img
-            src="../../assets/vaiacon-buerobot-hero.png"
+            src="../../assets/vaiacon-buerobot-hero.png?v=20261014"
             alt="Büro-Bot zeigt nach oben"
             style={{
               width: '100%', height: '100%', objectFit: 'cover', display: 'block',
