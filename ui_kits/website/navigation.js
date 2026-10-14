@@ -303,14 +303,14 @@
   if (schmal.addEventListener) schmal.addEventListener('change', breiteWechsel);
   else if (schmal.addListener) schmal.addListener(breiteWechsel);
 
-  /* ---------- Pille (bleibt beim Scrollen immer sichtbar, Philips Wunsch 13.10.2026) ---------- */
-  var letzteY = Math.max(0, window.pageYOffset || 0), pille = false, wartet = false;
+  /* ---------- Feste Leiste: bleibt immer oben, wird beim Scrollen flach und solide (Philips Wunsch 14.10.2026) ---------- */
+  var letzteY = Math.max(0, window.pageYOffset || 0), festeLeiste = false, wartet = false;
   function beiScroll() {
     wartet = false;
     var y = Math.max(0, window.pageYOffset || 0);
-    if (!pille && y > 40) pille = true;
-    else if (pille && y < 20) pille = false;
-    kopf.classList.toggle('vn--pille', pille);
+    if (!festeLeiste && y > 24) festeLeiste = true;
+    else if (festeLeiste && y < 8) festeLeiste = false;
+    kopf.classList.toggle('vn--fest', festeLeiste);
     if (offenId && y > letzteY + 4 && !fest) setze(null);
     letzteY = y;
   }

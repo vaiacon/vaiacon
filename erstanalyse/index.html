@@ -15,7 +15,7 @@
 <meta property="og:url" content="https://vaiacon.ch/erstanalyse/">
 <link rel="stylesheet" href="../styles.css?v=20261005-vorschlag">
 <link rel="stylesheet" href="../ui_kits/website/mockup-entwurf.css?v=20261005-vorschlag">
-<link rel="stylesheet" href="../ui_kits/website/navigation.css?v=20261013-fuss">
+<link rel="stylesheet" href="../ui_kits/website/navigation.css?v=20261014-fest">
 <link rel="icon" href="../favicon.ico" sizes="any">
 <link rel="icon" type="image/png" href="../favicon-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="../apple-touch-icon.png">
@@ -37,7 +37,7 @@
   .ea-back:hover { color: var(--terra-500); }
 
   /* Fortschritt: Pflichtangaben und Anteil beantworteter Fragen */
-  .ea-progress { position: sticky; top: 0; z-index: 20; background: var(--cream-100); border-bottom: 1px solid var(--border-soft); }
+  .ea-progress { position: sticky; top: var(--vn-hoehe, 0px); z-index: 20; background: var(--cream-100); border-bottom: 1px solid var(--border-soft); }
   .ea-progress-inner { max-width: 860px; margin: 0 auto; padding: 11px clamp(18px, 4vw, 32px); box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
   .ea-progress-track { flex: 1 1 120px; height: 6px; border-radius: var(--radius-pill); background: var(--sand-300); overflow: hidden; }
   .ea-progress-fill { height: 100%; border-radius: var(--radius-pill); background: var(--terra-500); transition: width 0.4s cubic-bezier(0.22, 1, 0.36, 1); }
@@ -168,6 +168,6 @@
 <script src="../ui_kits/website/api-basis.js?v=20261004-umbau"></script>
 <script src="../ui_kits/website/erstanalyse-data.js?v=20261011-audit"></script>
 <script src="../ui_kits/website/erstanalyse-form.compiled.js?v=20261013-ohnestandort"></script>
-<script src="../ui_kits/website/navigation.js?v=20261013-ohnerand" defer></script>
+<script src="../ui_kits/website/navigation.js?v=20261014-fest" defer></script>
 </body>
 </html>
