@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 13.10.2026 · Eintrag 62f78a0 Bot-Wissen: Telefon-Assistent und Chatbot mit Firmenwissen aufgenommen
+> Stand: 14.10.2026 · Eintrag 456ff82 Sichtbarkeit: Hero-Titel gekürzt
 
 ## Wie du antwortest
 
@@ -205,7 +205,7 @@ Erstgespräch vereinbaren →
 
 Zum Inhalt springen
 SICHTBARKEIT
-SEO und GEO für Schweizer KMU: verständlich für Google und KI‑Assistenten
+SEO und GEO für Schweizer KMU
 Wir verbessern die Voraussetzungen dafür, dass Google und KI-Assistenten Ihr Angebot richtig einordnen: mit SEO für Suchmaschinen und GEO für KI-Antworten.
 Kostenlosen Website-Check starten →
 Kurz gesagt
