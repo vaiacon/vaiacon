@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="de-CH">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Farbideen</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<style>
+  :root { --cream: #F4EDE1; --cream50: #FBF4EE; --card: #FFFDF8; --ink: #1C1613; --brown: #5A524B; --muted: #8C8178; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--cream); color: var(--ink); font-family: 'Quicksand', -apple-system, sans-serif; }
+  header.kopf { max-width: 1180px; margin: 0 auto; padding: 32px 16px 8px; }
+  header.kopf h1 { margin: 0 0 6px; font-size: 28px; }
+  header.kopf p { margin: 0; color: var(--brown); font-weight: 500; }
+  .raster { max-width: 1180px; margin: 0 auto; padding: 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 22px; }
+  .v { background: var(--card); border-radius: 22px; overflow: hidden; box-shadow: 0 1px 0 rgba(28,22,19,.08), 0 12px 30px -18px rgba(28,22,19,.35); }
+  .v.heute { outline: 2px dashed var(--muted); outline-offset: 3px; }
+  .nr { position: absolute; z-index: 2; left: 14px; top: 62px; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; background: var(--cream50); color: var(--deep); font: 700 24px/1 'Quicksand', sans-serif; box-shadow: 0 8px 20px -8px rgba(40,10,0,.6); }
+  .hero { position: relative; height: 270px; background: var(--hero); color: #fff; padding: 16px 18px; overflow: hidden; }
+  .nav { display: flex; align-items: center; justify-content: space-between; background: rgba(251,244,238,.96); border-radius: 999px; padding: 6px 6px 6px 16px; color: var(--ink); font-weight: 700; font-size: 13px; }
+  .nav span.links { display: flex; gap: 12px; font-weight: 600; color: var(--brown); font-size: 12px; }
+  .knopf { display: inline-block; border: 0; border-radius: 999px; padding: 9px 16px; font: 700 13px/1 'Quicksand', sans-serif; background: var(--btn); color: #fff; box-shadow: 0 12px 26px -12px rgba(60,20,5,.5); cursor: pointer; transition: background .2s; }
+  .knopf:hover { background: var(--btnh); }
+  .hero h2 { position: absolute; left: 18px; bottom: 54px; margin: 0; font-size: 25px; line-height: 1.12; max-width: 58%; text-shadow: 0 1px 12px rgba(40,10,0,.25); }
+  .hero .hell { position: absolute; left: 18px; bottom: 16px; background: var(--cream50); color: var(--deep); box-shadow: 0 12px 26px -12px rgba(40,10,0,.6); }
+  .hero img { position: absolute; right: -4px; bottom: -6px; height: 205px; }
+  .band { height: 46px; background: var(--section); }
+  .inhalt { padding: 18px 18px 14px; }
+  .kicker { font: 500 11px/1 'IBM Plex Mono', monospace; letter-spacing: .1em; text-transform: uppercase; color: var(--link); }
+  .inhalt h3 { margin: 8px 0 4px; font-size: 19px; }
+  .inhalt p { margin: 0 0 12px; color: var(--brown); font-size: 14px; font-weight: 500; }
+  .inhalt a { color: var(--link); font-weight: 700; text-decoration: none; border-bottom: 1.5px solid currentColor; }
+  .zeile { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+  .name { display: flex; align-items: baseline; gap: 8px; padding: 0 18px 4px; }
+  .name b { font-size: 18px; }
+  .name i { font-style: normal; color: var(--muted); font-size: 13px; font-weight: 600; }
+  .muster { display: flex; padding: 10px 18px 18px; gap: 6px; }
+  .muster div { flex: 1; }
+  .muster span { display: block; height: 34px; border-radius: 8px; background: var(--c); border: 1px solid rgba(28,22,19,.1); }
+  .muster small { display: block; margin-top: 4px; font: 500 10px/1.2 'IBM Plex Mono', monospace; color: var(--muted); }
+  .warum { margin: 0; padding: 0 18px 6px; color: var(--brown); font-size: 13.5px; font-weight: 500; line-height: 1.45; }
+  .v.tipp { outline: 3px solid var(--btn); outline-offset: 3px; }
+  .kontrast { font: 500 11px/1.3 'IBM Plex Mono', monospace; color: var(--muted); padding: 0 18px 16px; }
+  @media (max-width: 420px) { .raster { grid-template-columns: 1fr; } .hero h2 { font-size: 21px; } }
+</style>
+</head>
+<body>
+<header class="kopf">
+  <h1>Farbideen für vaiacon.ch</h1>
+  <p>Je Karte: Startbereich, Farbband (Abschnitte und Fusszeile), Knopf, Link und kleine Überschrift. Nummer 0 (gestrichelt) ist die Farbe, die jetzt live ist. 1 bis 8 sind bewusst andere Richtungen. Mit der Maus über einen Knopf zeigt die Farbe beim Darüberfahren.</p>
+</header>
+<main class="raster" id="raster"></main>
+<script>
+  var V = [
+    { k: 'heute', n: '0 · Heute', d: 'Gebrannter Ton (live)', w: 'Zum Vergleich.', hero: ['#F5A273','#E07A4E','#B5532E','#80351D'], sec: ['#A5461F','#D16B3F'], btn: '#CC6A42', btnh: '#DB7B52', link: '#A9512E', deep: '#A5461F' },
+    { k: '1', e: true, n: '1 · Salbei + Terracotta', d: 'Meine Empfehlung', w: 'Ruhiges Grün für Vertrauen, die heutigen Terracotta-Knöpfe bleiben. Wirkt natürlich und nahbar, hebt sich vom KI-Blau der Konkurrenz ab, die Marke bleibt erkennbar.', hero: ['#C9DEC2','#8FB08A','#5B7F58','#2F4A30'], sec: ['#3E5E3F','#5F8560'], btn: '#C8613E', btnh: '#D77350', link: '#4E7550', deep: '#3E5E3F' },
+    { k: '2', n: '2 · Tiefseeblau + Bernstein', d: 'Vertrauen und Wärme', w: 'Blau steht für Verlässlichkeit, Bernstein hält es freundlich. Klassisch für Beratung, aber nicht kalt.', hero: ['#7C9BD0','#34558F','#1D335E','#0E1A33'], sec: ['#1D335E','#2E4C80'], btn: '#B8740F', btnh: '#C9841A', link: '#2E4C80', deep: '#1D335E' },
+    { k: '3', n: '3 · Waldgrün', d: 'Schweizer Seriosität', w: 'Erinnert an Treuhand und Bank, aber lebendiger. Passt, wenn Vaiacon vor allem solide wirken soll.', hero: ['#8FC4A8','#3E8566','#1F5640','#0E2E22'], sec: ['#1A4A37','#2E6E52'], btn: '#237052', btnh: '#2D8662', link: '#1F6448', deep: '#1A4A37' },
+    { k: '4', n: '4 · Pflaume + Pfirsich', d: 'warm und eigen', w: 'Ungewöhnlich für eine KI-Firma, darum gut erinnerbar. Der Pfirsich nimmt die Wärme der heutigen Marke mit.', hero: ['#EDB3C0','#B9637A','#7E3550','#451A2C'], sec: ['#6A2A44','#9A4A66'], btn: '#C95F47', btnh: '#D87259', link: '#8A3A5A', deep: '#6A2A44' },
+    { k: '5', n: '5 · Graphit + Signalorange', d: 'technisch und klar', w: 'Dunkle Bühne, der Roboter leuchtet heraus, das alte Orange als einziger Farbtupfer. Wirkt präzise, eher Werkzeug als Wohnzimmer.', hero: ['#7A7E85','#3E4248','#25282C','#121416'], sec: ['#25282C','#3A3E44'], btn: '#D85E26', btnh: '#E87036', link: '#B25222', deep: '#25282C' },
+    { k: '6', n: '6 · Indigo bis Türkis', d: 'modern, «KI»-Gefühl', w: 'Der Verlauf, den man von Tech-Firmen kennt. Wirkt sofort digital, aber auch austauschbarer.', hero: ['#86E6EC','#3BA3C9','#3A5BB0','#23266B'], sec: ['#2A3A8F','#2E7FB0'], btn: '#3A4FC4', btnh: '#4C62D6', link: '#3446B0', deep: '#23266B' },
+    { k: '7', n: '7 · Koralle', d: 'herzlich, verspielt', w: 'Rötlicher und heller als heute, sehr freundlich. Gut, wenn die Zielgruppe kleine Betriebe ohne Technik-Hintergrund sind.', hero: ['#FFBCA8','#F27C62','#C24E3A','#7A2618'], sec: ['#A63A28','#D9604A'], btn: '#C44A33', btnh: '#D45C45', link: '#B0402B', deep: '#8F301F' }
+  ];
+  function lum(h) { var c = [1,3,5].map(function (i) { var v = parseInt(h.substr(i,2),16)/255; return v <= .03928 ? v/12.92 : Math.pow((v+.055)/1.055, 2.4); }); return .2126*c[0] + .7152*c[1] + .0722*c[2]; }
+  function kr(a, b) { var x = lum(a), y = lum(b); return ((Math.max(x,y)+.05)/(Math.min(x,y)+.05)).toFixed(1); }
+  var html = V.map(function (v) {
+    var hero = 'radial-gradient(72% 52% at 50% 54%, ' + v.hero[0] + ' 0%, ' + v.hero[1] + ' 26%, ' + v.hero[2] + ' 60%, ' + v.hero[3] + ' 100%), ' + v.hero[3];
+    var sec = 'linear-gradient(178deg, ' + v.sec[0] + ' 0%, ' + v.sec[1] + ' 100%)';
+    var st = '--hero:' + hero + ';--section:' + sec + ';--btn:' + v.btn + ';--btnh:' + v.btnh + ';--link:' + v.link + ';--deep:' + v.deep;
+    var farben = [['hell', v.hero[0]], ['mitte', v.hero[1]], ['Knopf', v.btn], ['Link', v.link], ['dunkel', v.hero[3]]];
+    return '<section class="v' + (v.k === 'heute' ? ' heute' : '') + (v.e ? ' tipp' : '') + '" style="' + st + '">' +
+      '<div class="hero"><span class="nr">' + (v.k === 'heute' ? '0' : v.k) + '</span><div class="nav">vaiacon<span class="links"><span>KI-Kompetenz</span><span>Sichtbarkeit</span></span><span class="knopf">Kontakt</span></div>' +
+      '<h2>KI, die im Alltag mitarbeitet.</h2><span class="knopf hell">Erstgespräch vereinbaren</span><img src="../assets/vaiacon-buerobot-startseite.webp" alt=""></div>' +
+      '<div class="band"></div>' +
+      '<div class="inhalt"><div class="kicker">Automationen</div><h3>Weniger Kleinkram.</h3><p>Wiederkehrende Aufgaben laufen von allein. <a href="#">Beispiele ansehen</a></p>' +
+      '<div class="zeile"><span class="knopf">Erstanalyse starten</span></div></div>' +
+      '<div class="name"><b>' + v.n + '</b><i>' + v.d + '</i></div>' + (v.w ? '<p class="warum">' + v.w + '</p>' : '') +
+      '<div class="muster">' + farben.map(function (f) { return '<div><span style="--c:' + f[1] + '"></span><small>' + f[0] + '<br>' + f[1] + '</small></div>'; }).join('') + '</div>' +
+      '<div class="kontrast">Weiss auf Knopf ' + kr('#FFFFFF', v.btn) + ' : 1 · Link auf Creme ' + kr(v.link, '#F4EDE1') + ' : 1</div>' +
+      '</section>';
+  }).join('');
+  document.getElementById('raster').innerHTML = html;
+</script>
+</body>
+</html>
