@@ -1441,7 +1441,7 @@ function QuoteCard({
       fontFamily: 'var(--font-sans)',
       fontSize: '14px',
       fontWeight: 600,
-      color: 'rgba(233, 140, 88, 0.9)'
+      color: 'rgba(227, 144, 106, 0.9)'
     }
   }, attribution) : null);
 }
@@ -2040,8 +2040,8 @@ const BADGE_TONES = {
   },
   onDark: {
     color: 'var(--orange-300)',
-    background: 'rgba(233, 140, 88, 0.13)',
-    border: '1px solid rgba(233, 140, 88, 0.4)'
+    background: 'rgba(227, 144, 106, 0.13)',
+    border: '1px solid rgba(227, 144, 106, 0.4)'
   }
 };
 
@@ -4733,7 +4733,7 @@ function Hero({
       position: 'absolute',
       inset: 0,
       pointerEvents: 'none',
-      background: 'radial-gradient(62% 46% at 55% 102%, rgba(244,158,96,0.5) 0%, rgba(244,158,96,0) 70%), radial-gradient(90% 60% at 50% -8%, rgba(70,26,6,0.35) 0%, rgba(70,26,6,0) 60%)'
+      background: 'radial-gradient(62% 46% at 55% 102%, rgba(245,162,115,0.5) 0%, rgba(245,162,115,0) 70%), radial-gradient(90% 60% at 50% -8%, rgba(70,26,6,0.35) 0%, rgba(70,26,6,0) 60%)'
     }
   }), /*#__PURE__*/React.createElement("div", {
     className: "hero-robot",

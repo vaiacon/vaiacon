@@ -1047,7 +1047,7 @@ picture {
   inset: -14% -26% -4%;
   z-index: -1;
   border-radius: 999px;
-  background: radial-gradient(60% 50% at 50% 52%, rgba(244, 158, 96, 0.5), transparent 72%);
+  background: radial-gradient(60% 50% at 50% 52%, rgba(245, 162, 115, 0.5), transparent 72%);
 }
 
 .sv-hero__robot--frei::after {
@@ -2181,7 +2181,7 @@ picture {
 }
 
 .sv-check__bestell-form input:focus-visible {
-  box-shadow: 0 0 0 3px rgba(178, 82, 34, 0.28);
+  box-shadow: 0 0 0 3px rgba(169, 81, 46, 0.28);
 }
 
 .sv-check__bestell-form input[aria-invalid="true"] {
@@ -2874,7 +2874,7 @@ picture {
   background: var(--terra-500);
   color: var(--cream-50);
   font-size: var(--text-body);
-  box-shadow: 0 8px 18px -6px rgba(156, 69, 23, 0.55);
+  box-shadow: 0 8px 18px -6px rgba(143, 66, 36, 0.55);
 }
 
 /* Sichtbarkeit: GEO und «Ergebnis» stehen seit dem Wegfall von «Ablauf» direkt

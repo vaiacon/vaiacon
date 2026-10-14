@@ -56,7 +56,7 @@ Kein Figma, kein weiteres Repo. Quicksand und IBM Plex Mono liegen inzwischen al
 
 **Grundstimmung.** Warme, erdige Palette auf Creme — ein sonniges, spielzeughaftes Terracotta-Universum. Alles ist weich: stark gerundete Ecken, sanfte Animationen, grosszügiger Weissraum. Kontrast entsteht durch dunkle Tinte (#1C1613) und satte Terracotta-Flächen, nie durch harte Schwarz/Weiss-Kanten.
 
-**Farben.** Seiten wechseln zwischen Creme #F4EDE1 und Sand #EAE0CC als alternierende Sektionsflächen; Karten sind #FFFDF8 oder Sand mit Hairline. Dunkle Statement-Sektionen in #171210. Terracotta-Sektionen als Verlauf `#A83A08 → #CA5019` (Finale mit 5 Stops bis #D75A20) plus Peach-Glow (`radial-gradient rgba(244,158,96,0.5)`). Akzent ist Terracotta #B25222 (Links, Kicker, Ziffern), heller CTA-Akzent #E2652C (Hover #F4793E), auf dunklem Grund #E98C58/#FFD9C2. Max. 2 helle Hintergrundfarben pro Seite; dunkle und Terracotta-Sektionen sind bewusste Rhythmus-Akzente.
+**Farben.** Seiten wechseln zwischen Creme #F4EDE1 und Sand #EAE0CC als alternierende Sektionsflächen; Karten sind #FFFDF8 oder Sand mit Hairline. Dunkle Statement-Sektionen in #171210. Terracotta-Sektionen als Verlauf `#A5461F → #C66237` (Finale mit 5 Stops bis #D16B3F) plus Peach-Glow (`radial-gradient rgba(245,162,115,0.5)`). Akzent ist Terracotta #A9512E (Links, Kicker, Ziffern), heller CTA-Akzent #CC6A42 (Hover #DB7B52), auf dunklem Grund #E3906A/#FFD9C2. Max. 2 helle Hintergrundfarben pro Seite; dunkle und Terracotta-Sektionen sind bewusste Rhythmus-Akzente.
 
 **Typografie.** Quicksand für alles — Headlines w600 mit negativer Laufweite (−0.02…−0.035em) und enger Zeilenhöhe (1.05–1.08), Body w500 mit lockerer Zeilenhöhe (1.65–1.7), UI-Elemente w600/700. IBM Plex Mono nur für Zahlen-Details, Timecodes, technische Zeilen. Kein Serif, nirgends. Krumme, exakte Grössen sind Absicht (13.5px, 16.5px, 17.5px, 18.5px) — nicht auf Raster runden.
 
@@ -70,7 +70,7 @@ Kein Figma, kein weiteres Repo. Quicksand und IBM Plex Mono liegen inzwischen al
 
 **Animation.** Sanft und federnd. Hover-Lifts `translateY(-4…-6px)` mit `cubic-bezier(0.22,1,0.36,1)` (0.4s); Listenzeilen schieben sich bei Hover nach rechts (`padding-left` wächst) und tönen den Grund auf #E2D5BC; Farb-Hover 0.3s ease. Scroll-Reveals: `opacity 0 → 1` + `translateY(14px → 0)` mit `cubic-bezier(0.3,0.72,0.06,1)`, gestaffelt in 80–120ms-Schritten. Dauer-Animation: `breathe` (scale 1→1.011, 6.5s). Nichts blinkt, nichts dreht schnell.
 
-**Hover-Zustände.** Links: Farbe → Terracotta. Buttons: hellere Füllung (#E2652C → #F4793E) oder Lift + stärkerer Schatten. Karten: Lift ohne Schattenzuwachs. Sticker: Lift + leichte Rotation (−1deg).
+**Hover-Zustände.** Links: Farbe → Terracotta. Buttons: hellere Füllung (#CC6A42 → #DB7B52) oder Lift + stärkerer Schatten. Karten: Lift ohne Schattenzuwachs. Sticker: Lift + leichte Rotation (−1deg).
 
 **Layout.** Inhalt max 1160px, Header max 1280px, Sektionspadding 72–88px vertikal / 32px horizontal (mobil 20px). Grids mit `repeat(auto-fit, minmax(min(280–420px,100%),1fr))`. Header schwebt sticky über dem Hero. Chatbot fix unten rechts. Grosszügige Gaps (22–64px).
 
@@ -78,7 +78,7 @@ Kein Figma, kein weiteres Repo. Quicksand und IBM Plex Mono liegen inzwischen al
 
 **Bildwelt.** 3D-Clay-Look: weiche, spielzeughafte Objekte in Terracotta + Creme auf warmem Grund (siehe `assets/buerobot-*`). Fotos (Team) in weich gerundeten Masken (16px) innerhalb von Sand-Karten. Bildstimmung immer warm; kein S/W, kein kühles Blau.
 
-**Selection.** `rgba(178,82,34,0.22)` — auch Textauswahl ist Terracotta.
+**Selection.** `rgba(169,81,46,0.22)` — auch Textauswahl ist Terracotta.
 
 ---
 
@@ -89,7 +89,7 @@ Kein Figma, kein weiteres Repo. Quicksand und IBM Plex Mono liegen inzwischen al
 - → weiter / senden / Listenpfeil (dezent in #C9BFB5) · ↗ externer Link · ↑ nach oben
 - ✓ Checks: auf hell direkt in Terracotta; auf Terra-Flächen in #FFD9C2, optional in 22px-Quadrat (radius 6px, `rgba(255,244,236,0.15)` + Hairline)
 - + FAQ-Indikator (rotiert 45° zu ×) · ▶ Video-Marker · × schliessen
-- Punkt-Indikator: 9px-Kreis in #E2652C (Chat-Button «online»)
+- Punkt-Indikator: 9px-Kreis in #CC6A42 (Chat-Button «online»)
 
 **Kein Emoji.** Ein einzelnes ✎ (Redesign-Notizen, intern) ist die Ausnahme, kein Muster.
 

@@ -2,7 +2,7 @@
 export interface KickerProps {
   /** zweistellig als String: «01», «02» … ohne Nummer für freie Eyebrows */
   number?: string;
-  /** terra auf hell (Standard) · onTerra = Peach-Weiss · onDark = Orange #E2652C */
+  /** terra auf hell (Standard) · onTerra = Peach-Weiss · onDark = Orange #CC6A42 */
   tone?: 'terra' | 'onTerra' | 'onDark';
   style?: React.CSSProperties;
   children?: React.ReactNode;
