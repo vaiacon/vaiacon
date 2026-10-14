@@ -79,7 +79,7 @@
 
 <header class="kopf">
   <h1>Welche Farbe für vaiacon.ch?</h1>
-  <p>Je Karte: Startbereich, Farbband, Knopf, Link und kleine Überschrift. Drei Gruppen: Terracotta (0–6), Bunt (B1–B8) und Ideen mit Begründung (I1–I7). Gestrichelt ist die Farbe, die jetzt live ist (2), umrandet die Empfehlung von Claude (I1). Jede Person hat drei Stimmen für drei verschiedene Farben und kann sie jederzeit verschieben. Die Stimmen sehen alle mit dem Link.</p>
+  <p>Je Karte: Startbereich, Farbband, Knopf, Link und kleine Überschrift. Drei Gruppen: Terracotta (0–6), Bunt (B1–B8) und Ideen mit Begründung (I1–I7). Gestrichelt ist die Farbe, die jetzt live ist (01, zwischen 0 und 1), umrandet die Empfehlung von Claude (I1). Jede Person hat drei Stimmen für drei verschiedene Farben und kann sie jederzeit verschieben. Die Stimmen sehen alle mit dem Link.</p>
   <div class="wer"><label for="wer-name">Dein Vorname</label><input id="wer-name" maxlength="40" placeholder="z. B. Philip" autocomplete="given-name"></div>
   <div class="stand" id="stand">Noch keine Stimmen.</div>
   <div class="hinweis" id="hinweis">Abstimmung wird geladen …</div>
@@ -96,8 +96,9 @@
 <script>
   var V = [
     { k: '0', g: 'Terracotta', n: 'Orange', d: 'Stand bis 14.10.', hero: ['#FA8C4A','#EB702B','#B24009','#862A03'], sec: ['#A83A08','#D75A20'], btn: '#E2652C', btnh: '#F4793E', link: '#B25222', deep: '#A83A08' },
+    { k: '01', n: 'Zwischen 0 und 1', d: 'jetzt live', hero: ['#F49360','#E2713C','#B0481C','#7F2E11'], sec: ['#A33F19','#D06030'], btn: '#D26336', btnh: '#E37647', link: '#AD5029', deep: '#A33F19' },
     { k: '1', n: 'Ziegel', d: 'klassisches Terracotta, warm', hero: ['#EE9A76','#D8724D','#AE4F2E','#77311E'], sec: ['#9E4429','#C8653F'], btn: '#C2613F', btnh: '#D27250', link: '#A84E30', deep: '#93402A' },
-    { k: '2', n: 'Gebrannter Ton', d: 'jetzt live', hero: ['#F5A273','#E07A4E','#B5532E','#80351D'], sec: ['#A5461F','#D16B3F'], btn: '#CC6A42', btnh: '#DB7B52', link: '#A9512E', deep: '#9A431F' },
+    { k: '2', n: 'Gebrannter Ton', d: 'war am 14.10. kurz live', hero: ['#F5A273','#E07A4E','#B5532E','#80351D'], sec: ['#A5461F','#D16B3F'], btn: '#CC6A42', btnh: '#DB7B52', link: '#A9512E', deep: '#9A431F' },
     { k: '3', n: 'Ziegelrot', d: 'rötlicher, kräftig', hero: ['#EC917A','#D0604A','#A6402D','#6C2318'], sec: ['#93362A','#C2533F'], btn: '#BA4A36', btnh: '#CB5A45', link: '#9E3E2A', deep: '#8A3324' },
     { k: '4', n: 'Erdig', d: 'gedämpft, staubig, ruhig', hero: ['#E2A487','#C77D5C','#9C5A40','#673A29'], sec: ['#87503A','#B56E50'], btn: '#B5654A', btnh: '#C4755A', link: '#95533B', deep: '#7E4733' },
     { k: '5', n: 'Siena', d: 'dunkel und edel', hero: ['#DE8D61','#BC623C','#8E4426','#5A2917'], sec: ['#7C3A20','#AE5833'], btn: '#A9542F', btnh: '#BA643D', link: '#8E4426', deep: '#7C3A20' },
@@ -126,7 +127,7 @@
     var sec = 'linear-gradient(178deg, ' + v.sec[0] + ' 0%, ' + v.sec[1] + ' 100%)';
     var st = '--hero:' + hero + ';--section:' + sec + ';--btn:' + v.btn + ';--btnh:' + v.btnh + ';--link:' + v.link + ';--deep:' + v.deep;
     var farben = [['hell', v.hero[0]], ['mitte', v.hero[1]], ['Knopf', v.btn], ['Link', v.link], ['dunkel', v.hero[3]]];
-    return (v.g ? '<h2 class="gruppe">' + v.g + '</h2>' : '') + '<section class="v' + (v.k === '2' ? ' heute' : '') + (v.e ? ' tipp' : '') + '" id="karte-' + v.k + '" style="' + st + '">' +
+    return (v.g ? '<h2 class="gruppe">' + v.g + '</h2>' : '') + '<section class="v' + (v.k === '01' ? ' heute' : '') + (v.e ? ' tipp' : '') + '" id="karte-' + v.k + '" style="' + st + '">' +
       '<div class="hero"><span class="nr"' + (v.k.length > 1 ? ' style="font-size:17px"' : '') + '>' + v.k + '</span><div class="nav">vaiacon<span class="links"><span>KI-Kompetenz</span><span>Sichtbarkeit</span></span><span class="knopf">Kontakt</span></div>' +
       '<h2>KI, die im Alltag mitarbeitet.</h2><span class="knopf hell">Erstgespräch vereinbaren</span><img src="../assets/vaiacon-buerobot-startseite.webp" alt=""></div>' +
       '<div class="band"></div>' +
