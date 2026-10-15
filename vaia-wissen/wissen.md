@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 15.10.2026 · Eintrag d12f31d Strukturdaten-Skript kennt den Cache-Zusatz an Logo und Bild (#30)
+> Stand: 15.10.2026 · Eintrag a844d40 Merge remote-tracking branch 'origin/main' into claude/webseite-terminal-qgquuk
 
 ## Wie du antwortest
 
@@ -132,7 +132,7 @@ Zwei Unternehmer, die den Geschäftsalltag kennen.
 Wir haben erkannt, dass gerade kleine und mittlere Unternehmen Mühe haben, KI und Automatisierungen sinnvoll in ihren Betrieb zu integrieren. Darum haben wir 2026 vaiacon gegründet: um genau solche Betriebe zu begleiten, persönlich und auf Augenhöhe. Unser Angebot hat drei Bereiche: KI-Kompetenz , Sichtbarkeit und Automationen .
 André Ulrich
 Mitgründer · Strategie und Marketing
-André führt seit 20 Jahren ein eigenes Unternehmen im Bereich Facility Management und in der Textilreinigung. Dazu war er Verwaltungsrat und Bewirtschafter bei einer kleinen Immobilienfirma in Zürich. Offerten, Auftragsbestätigungen, E-Mails, Dossiers, Beiträge für Social Media: Die Arbeit, die sich jede Woche wiederholt, kennt er aus eigener Erfahrung. Bei vaiacon kümmert er sich um Strategie und Marketing.
+André führt seit 20 Jahren ein eigenes Unternehmen und ist gelernter Immobilienbewirtschafter. Offerten, Auftragsbestätigungen, E-Mails, Dossiers, Beiträge für Social Media: Die Arbeit, die sich jede Woche wiederholt, kennt er aus eigener Erfahrung. Bei vaiacon kümmert er sich um Strategie und Marketing.
 Philip Krieger
 Mitgründer · Technik und Coaching
 Philip bringt zehn Jahre Erfahrung als Trainer bei einem der grössten Schweizer Telekommunikationsanbieter mit. Er ist Ausbilder mit eidgenössischem Fachausweis und hat über Jahre Lösungen für die digitale Transformation und die Einführung von KI begleitet. Bei vaiacon ist er für Technik, Coaching und Support zuständig.
