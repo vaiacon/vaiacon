@@ -53,6 +53,9 @@ from pathlib import Path
 WURZEL = Path(__file__).resolve().parents[1]
 AUSGABE = WURZEL   # Ziel der Dateien; main() setzt es bei --ziel um
 BASIS = "https://vaiacon.ch"
+# Cache-Zusatz fuer Logo und Bild, wie im Rest der Seiten (?v=…). Nach einem neuen
+# Logo oder Bild hier nachziehen, sonst zeigen die Strukturdaten das alte (Philip 14.10.2026).
+BILDSTAND = "20261014"
 ANFANG = "<!-- Strukturdaten: erzeugt von scripts/strukturdaten.py, nicht von Hand aendern -->"
 ENDE = "<!-- Strukturdaten Ende -->"
 
@@ -63,8 +66,8 @@ ORGANISATION = {
     "name": "Vaiacon GmbH",
     "alternateName": "vaiacon",
     "url": f"{BASIS}/",
-    "logo": f"{BASIS}/assets/logo-lockup-terra.png",
-    "image": f"{BASIS}/assets/vaiacon-buerobot-startseite.png",
+    "logo": f"{BASIS}/assets/logo-lockup-terra.png?v={BILDSTAND}",
+    "image": f"{BASIS}/assets/vaiacon-buerobot-startseite.png?v={BILDSTAND}",
     "description": (
         "vaiacon führt Schweizer KMU an KI heran, in drei Bereichen: "
         "KI-Kompetenz (Trainings, Coaching, Online-Kurse), Sichtbarkeit in "
