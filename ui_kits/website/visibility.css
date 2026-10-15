@@ -2888,3 +2888,13 @@ picture {
 /* Sichtbarkeit: GEO und «Ergebnis» stehen seit dem Wegfall von «Ablauf» direkt
    aufeinander, beide hell; die Haarlinie dazwischen wirkte wie ein schwarzer Strich (2026-10-13). */
 #geo.sv-section { border-bottom: 0; }
+
+/* Handy: Knöpfe dürfen umbrechen (15.10.2026). «Kostenlosen Website-Check starten →»
+   steht mit white-space: nowrap auf 320px (und mit grosser Systemschrift auch auf 360px)
+   breiter als die Spalte; der Kopf wurde dadurch breiter als der Bildschirm, der Text
+   sass nicht mehr mittig und wurde rechts abgeschnitten. Das Raster des Kopfs darf
+   ausserdem nie breiter werden als der Bildschirm. */
+@media (max-width: 599px) {
+  .sv-button { white-space: normal; text-align: center; }
+  .sv-hero { grid-template-columns: minmax(0, 1fr); }
+}
