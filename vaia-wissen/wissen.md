@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 14.10.2026 · Eintrag 456ff82 Sichtbarkeit: Hero-Titel gekürzt
+> Stand: 15.10.2026 · Eintrag c0a10c0 Handy: Knoepfe duerfen umbrechen, Kopf der Sichtbarkeit nicht mehr breiter als der Bildschirm
 
 ## Wie du antwortest
 
@@ -90,6 +90,21 @@ Philip Krieger und André Ulrich haben vaiacon gegründet, um Schweizer KMU pers
 Philip Krieger Mitgründer, Technik und Coaching
 André Ulrich Mitgründer, Strategie und Marketing
 Mehr über uns →
+HÄUFIGE FRAGEN
+Kurz beantwortet.
+Alle Fragen und Antworten →
+Was macht vaiacon? +
+vaiacon führt Schweizer KMU an KI heran, in drei Bereichen: KI-Kompetenz (Ihr Team lernt, KI sicher einzusetzen), Sichtbarkeit (wir verbessern die Voraussetzungen dafür, dass Google und KI-Assistenten Ihr Angebot richtig einordnen) und Automationen (wiederkehrende Büroarbeit wird automatisch vorbereitet). Auf Wunsch begleiten wir das Ganze laufend. Unser Büro ist in Zürich, wir arbeiten für Betriebe in der gesamten Deutschschweiz.
+Für welche Betriebe eignet sich vaiacon? +
+Am meisten bewirken wir in Betrieben mit 5 bis 30 Mitarbeitenden und eigenem Büro, etwa im Handwerk, in Treuhandbüros, Praxen und Verwaltungen. Dort fällt genug Büroarbeit an, damit sich eine Automation oder eine Schulung rechnet.
+Was kostet ein Erstgespräch? +
+Nichts. Das Erstgespräch ist kostenlos und unverbindlich: eine halbe Stunde am Telefon oder am Bildschirm. Wir klären, was in Ihrem Betrieb heute am meisten Zeit kostet und ob KI-Kompetenz, Sichtbarkeit, Automationen oder eine Kombination der richtige nächste Schritt ist.
+Wie beginnt eine Zusammenarbeit? +
+Am Anfang steht ein unverbindliches Gespräch am Telefon oder am Bildschirm. Danach klären wir, ob KI-Kompetenz, Sichtbarkeit, Automationen, Begleitung oder eine Kombination davon sinnvoll ist.
+Was passiert mit unseren Daten? +
+Wir arbeiten nach dem revDSG. Unsere Website betreiben wir auf Schweizer Infrastruktur. Bei jeder Lösung klären wir, welche Anbieter Daten bearbeiten und wo. Vor der Umsetzung legen wir mit Ihnen fest, welche Daten ein Werkzeug überhaupt sehen darf, und halten Kundendaten dort heraus, wo sie nicht hingehören.
+Brauche ich technisches Vorwissen? +
+Nein. Die Inhalte und die Umsetzung werden so erklärt, dass Unternehmer und Mitarbeitende ohne technisches Vorwissen mitkommen.
 NÄCHSTER SCHRITT
 Welche vaiacon-Lösung passt zu Ihrem Betrieb?
 Eine halbe Stunde, kostenlos: Wir klären, ob KI-Kompetenz, Sichtbarkeit, Automationen oder eine Kombination der richtige Schritt ist.

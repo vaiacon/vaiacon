@@ -13,6 +13,11 @@ es hält uns also nichts auf ausser Absprache.
   Arbeit des anderen und setzt die eigene sauber obendrauf, statt beides zu verknoten.
 - **Kleines direkt auf `main`**, Grösseres in einem eigenen Zweig mit
   Zusammenführungsanfrage. `main` ist der Stand, der live geht.
+- **Claude** pusht in Cloud-Sitzungen nur auf den eigenen Arbeitszweig, nicht auf
+  `main`. Kleines (Text, Farbe, Kleinkram an einer Seite) führt Claude nach dem
+  Testen selbst über eine Zusammenführungsanfrage nach `main` zusammen, als ein
+  einziger Commit. Grösseres und alles mit Preisen bleibt als offene Anfrage
+  stehen, bis Philip oder André zusammenführt.
 - ⛔ **Nie `--force`.** Das überschreibt den Stand auf GitHub mit dem eigenen, statt
   ihn zusammenzuführen — es ist der einzige Weg, auf dem hier Arbeit wirklich
   verschwindet.

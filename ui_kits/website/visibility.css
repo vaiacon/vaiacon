@@ -1715,9 +1715,10 @@ picture {
   animation: sv-check-dreh 0.9s linear infinite;
 }
 
+/* Fertig heisst bestanden: grün wie «Gut» im Bericht */
 .sv-check__schritt[data-zustand="fertig"] .sv-check__schritt-zeichen {
-  border-color: var(--terra-500);
-  background: var(--terra-500);
+  border-color: #2E7D4F;
+  background: #2E7D4F;
 }
 
 /* Haken aus zwei Rändern */
