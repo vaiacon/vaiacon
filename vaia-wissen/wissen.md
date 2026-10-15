@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 15.10.2026 · Eintrag c0a10c0 Handy: Knoepfe duerfen umbrechen, Kopf der Sichtbarkeit nicht mehr breiter als der Bildschirm
+> Stand: 15.10.2026 · Eintrag d12f31d Strukturdaten-Skript kennt den Cache-Zusatz an Logo und Bild (#30)
 
 ## Wie du antwortest
 
@@ -90,6 +90,16 @@ Philip Krieger und André Ulrich haben vaiacon gegründet, um Schweizer KMU pers
 Philip Krieger Mitgründer, Technik und Coaching
 André Ulrich Mitgründer, Strategie und Marketing
 Mehr über uns →
+ORIENTIERUNG
+Wo ist der Bedarf am grössten?
+«Mein Team nutzt KI selten und nicht gezielt.»
+KI-Kompetenz →
+«Wir sind online unsichtbar.»
+Sichtbarkeit →
+«Wir verlieren viel Zeit mit wiederkehrenden Aufgaben.»
+Automationen →
+«Ich weiss nicht, wo ich anfangen soll.»
+Erstgespräch →
 HÄUFIGE FRAGEN
 Kurz beantwortet.
 Alle Fragen und Antworten →
