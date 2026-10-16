@@ -1,26 +1,26 @@
 [
   {
+    "titel": "GPT-Live-1.1: OpenAI kündigt bessere Sprachfunktion an, auch auf Deutsch",
+    "datum": "2026-10-16",
+    "rubrik": "werkzeuge",
+    "kurz": "OpenAI kündigte am 15. Oktober in seinem Forum die Version GPT-Live-1.1 für die Sprachfunktion an. Laut OpenAI bringt sie 13 neue Stimmen und bessere Aussprache in mehreren Sprachen, darunter Deutsch. Die Version werde für alle Nutzer ausgeliefert. Für Entwickler soll sie «bald» folgen.",
+    "adresse": "ki-kmu-news/2026-kw42#2026-10-16-gpt-live-1-1-openai",
+    "bild": "assets/vaiacon-buerobot-news-werkzeuge.png"
+  },
+  {
+    "titel": "Bericht: Googles Warenkorb «Universal Cart» ist in den USA gestartet",
+    "datum": "2026-10-16",
+    "rubrik": "markt",
+    "kurz": "TechCrunch berichtete am 15. Oktober, Google habe das Einkaufswerkzeug «Universal Cart» in den USA eingeführt. Laut Artikel sammelt es Produkte verschiedener Händler aus der Google-Suche und der Gemini-App und meldet Preissenkungen. Der Bezahlvorgang ist laut Artikel an Googles offenen Standard «Universal Commerce Protocol» gekoppelt.",
+    "adresse": "ki-kmu-news/2026-kw42#2026-10-16-bericht-googles-warenkorb-universal-cart",
+    "bild": "assets/vaiacon-buerobot-news-markt.png"
+  },
+  {
     "titel": "Gemini-Agent: Google bringt einen Helfer, der Aufgaben selbst erledigt, zuerst zu Firmenkunden",
     "datum": "2026-10-09",
     "rubrik": "werkzeuge",
     "kurz": "Google hat laut TechCrunch vom 8. Oktober an einem Cloud-Anlass einen Gemini-Agenten vorgestellt, also einen KI-Helfer, der Aufgaben selbst plant und ausführt. Er greift auf Firmensysteme wie Workspace, Microsoft 365 oder Slack zu und zeigt in einem Posteingang, was er getan hat. Zuerst erhalten ihn Firmen, Privatpersonen folgen später. Zu Ländern, auch zur Schweiz, nennt der Artikel nichts.",
     "adresse": "ki-kmu-news/2026-kw41#2026-10-09-gemini-agent-google-bringt-einen",
     "bild": "assets/vaiacon-buerobot-news-werkzeuge.png"
-  },
-  {
-    "titel": "SynthID prüft Medien auf Googles KI-Wasserzeichen",
-    "datum": "2026-10-09",
-    "rubrik": "werkzeuge",
-    "kurz": "Google hat laut TechCrunch vom 7. Oktober die Seite synthid.com für alle geöffnet. Dort lassen sich Bilder, Videos und Audiodateien hochladen. Die Seite prüft, ob eine Datei SynthID enthält, ein unsichtbares Wasserzeichen, das Googles eigene KI-Werkzeuge einbetten. Dieselbe Prüfung ist laut dem Bericht auch in der Gemini-App und im Browser Chrome eingebaut.",
-    "adresse": "ki-kmu-news/2026-kw41#2026-10-09-synthid-googles-pruefseite-zeigt-ob",
-    "bild": "assets/vaiacon-buerobot-news-werkzeuge.png"
-  },
-  {
-    "titel": "KI-Agenten vor verschlossener Tür: Viele Websites lassen persönliche Assistenten nicht hinein",
-    "datum": "2026-10-07",
-    "rubrik": "markt",
-    "kurz": "Persönliche KI-Agenten, also KI-Helfer, die im Auftrag einer Person im Internet handeln, sollen Flüge buchen, Tische reservieren oder einkaufen. Laut TechCrunch vom 6. Oktober blockieren viele Websites solche Agenten, teils gewollt, teils durch den normalen Schutz gegen automatische Zugriffe. Meta und Partner arbeiten an einem Standard, mit dem sich Agenten und Websites verständigen können.",
-    "adresse": "ki-kmu-news/2026-kw41#2026-10-07-ki-agenten-vor-verschlossener-tuer",
-    "bild": "assets/vaiacon-buerobot-news-markt.png"
   }
 ]
