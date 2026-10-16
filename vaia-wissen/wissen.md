@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 16.10.2026 · Eintrag 7597220 Startseite: Wegweiser Problem und Loesung, Willkommen entfernt
+> Stand: 16.10.2026 · Eintrag c031b30 Menue: neue Zeilen bei KI-Kompetenz und Sichtbarkeit
 
 ## Wie du antwortest
 
@@ -99,7 +99,7 @@ Online zu wenig sichtbar. «Wir sind online unsichtbar. Wie sorge ich dafür, da
 →
 Sichtbarkeit
 Gefunden, weil man Sie versteht.
-Menschen, Google und KI-Assistenten verstehen schneller, was Sie anbieten, für wen es passt und wo Sie tätig sind. Klare Leistungsseiten, Antworten auf häufige Fragen und saubere technische Grundlagen verbessern Ihre Chancen, bei passenden Suchanfragen sichtbar zu werden. Sie erhalten einen detaillierten Check Ihrer Website mit klaren Prioritäten, statt vager SEO-Massnahmen. So sehen Sie im Detail, was noch fehlt und wie wir es verbessern können.
+Wir sorgen dafür, dass Menschen, Google und KI-Assistenten verstehen, was Sie anbieten, für wen es passt und wo Sie tätig sind. Klare Leistungsseiten, Antworten auf häufige Fragen und saubere technische Grundlagen verbessern Ihre Chancen, bei passenden Suchanfragen sichtbar zu werden. Sie erhalten einen detaillierten Check Ihrer Website mit klaren Prioritäten, statt vager SEO-Massnahmen. So sehen Sie im Detail, was noch fehlt und wie wir es verbessern können.
 Mehr erfahren →
 Zu viel Routinearbeit. «Wir verlieren viel Zeit mit wiederkehrenden Aufgaben. Wie sorge ich dafür, dass mein Team effizienter wird und sich auf die wesentlichen Aufgaben konzentrieren kann?»
 →
