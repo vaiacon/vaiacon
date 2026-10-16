@@ -222,7 +222,6 @@
 }
 
 .st-mehr:focus-visible,
-.st-weg__karte:focus-visible,
 .st-start input:focus-visible {
   outline: 3px solid var(--terra-500);
   outline-offset: 3px;
@@ -621,92 +620,6 @@
   gap: 40px;
 }
 
-.st-weg__liste {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 16px;
-  text-align: left;
-}
-
-.st-weg__liste li {
-  display: flex;
-}
-
-.st-weg__karte {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 26px;
-  width: 100%;
-  box-sizing: border-box;
-  min-height: 210px;
-  padding: 26px 24px 22px;
-  border: 1.5px solid var(--border-strong);
-  border-radius: var(--radius-lg);
-  background: var(--cream-card);
-  text-decoration: none;
-  color: var(--text-strong);
-  transition: transform var(--duration-med) var(--ease-spring), border-color var(--duration-med) var(--ease-spring), box-shadow var(--duration-med) var(--ease-spring), background var(--duration-med) var(--ease-spring);
-}
-
-.st-weg__karte:hover,
-.st-weg__karte:focus-visible {
-  transform: translateY(-4px);
-  border-color: var(--border-ink);
-  box-shadow: 6px 8px 0 rgba(28, 22, 19, 0.85);
-}
-
-.st-weg__karte--offen {
-  background: var(--peach-100);
-}
-
-.st-weg__satz {
-  font-size: clamp(20px, 1.75vw, 23px);
-  line-height: 1.3;
-  font-weight: var(--weight-semibold);
-  letter-spacing: var(--tracking-tight);
-  text-wrap: balance;
-}
-
-.st-weg__ziel {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding-top: 14px;
-  border-top: 1.5px solid var(--border-soft);
-}
-
-.st-weg__bereich {
-  font-size: 13.5px;
-  font-weight: var(--weight-bold);
-  letter-spacing: var(--tracking-kicker);
-  text-transform: uppercase;
-  color: var(--terra-500);
-}
-
-.st-weg__pfeil {
-  display: grid;
-  place-items: center;
-  flex: 0 0 auto;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  background: var(--terra-500);
-  color: #fff;
-  font-weight: var(--weight-bold);
-  transition: transform var(--duration-med) var(--ease-spring);
-}
-
-.st-weg__karte:hover .st-weg__pfeil,
-.st-weg__karte:focus-visible .st-weg__pfeil {
-  transform: translateX(4px);
-}
-
 .st-weg__fuss {
   margin: 0;
   font-size: var(--text-size-body);
@@ -838,11 +751,6 @@
 
 /* ───────── Breiten ───────── */
 
-@media (max-width: 1179px) {
-  .st-weg__liste { grid-template-columns: repeat(2, 1fr); }
-  .st-weg__karte { min-height: 180px; }
-}
-
 @media (max-width: 899px) {
   .st-news__liste { grid-template-columns: 1fr; }
   .st-news__karte { flex-direction: row; }
@@ -850,8 +758,6 @@
 }
 
 @media (max-width: 719px) {
-  .st-weg__liste { grid-template-columns: 1fr; }
-  .st-weg__karte { min-height: 0; gap: 18px; }
 
   .st-news__karte { flex-direction: column; }
   .st-news__bild { width: 100%; flex: none; aspect-ratio: 16 / 9; }
@@ -868,14 +774,10 @@
   .st-voll__lead,
   .st-voll__titel,
   .st-haken,
-  .st-weg__karte,
-  .st-weg__pfeil,
   .st-news__karte {
     transition: none !important;
   }
 
-  .st-weg__karte:hover,
-  .st-weg__karte:focus-visible,
   .st-news__karte:hover,
   .st-news__karte:focus-visible {
     transform: none;
@@ -933,7 +835,7 @@
   line-height: 1;
 }
 
-/* Preisrahmen im Abschnitt «So fängt es an» (die Gesichter stehen seit 11.10.2026 nur noch unter «Willkommen») */
+/* Preisrahmen im Abschnitt «So fängt es an» */
 .st-preisrahmen {
   max-width: 44rem;
   margin: 20px auto 0;
@@ -963,46 +865,6 @@
   text-align: center;
 }
 
-
-
-/* Willkommen: Standbild der beiden Gründer unter dem Karussell (Audit 11.10.2026:
-   das angekündigte Video gab es nicht, Rahmen und «Video folgt» sind entfernt). */
-.st-willkommen__rahmen {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  max-width: 52rem;
-  margin: 32px auto 0;
-  padding: clamp(28px, 6vw, 56px) 16px;
-  box-sizing: border-box;
-  border-radius: var(--radius-lg);
-  background:
-    radial-gradient(circle at 20% 15%, rgba(251, 244, 238, 0.22), transparent 55%),
-    linear-gradient(135deg, var(--terra-500), var(--terra-600));
-  box-shadow: 0 22px 44px -26px rgba(151, 67, 32, 0.7);
-}
-
-.st-willkommen .sv-actions {
-  margin-top: 28px;
-}
-
-.st-willkommen__gesichter {
-  display: flex;
-}
-
-.st-willkommen__gesichter img {
-  width: clamp(72px, 14vw, 120px);
-  height: clamp(72px, 14vw, 120px);
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: 50% 20%;
-  border: 4px solid var(--cream-50);
-  background: var(--cream-50);
-}
-
-.st-willkommen__gesichter img + img {
-  margin-left: calc(clamp(72px, 14vw, 120px) / -4);
-}
 
 
 /* ───────── Audit 11.10.2026: Steuerung bei 320–430 px ─────────
@@ -1046,4 +908,143 @@
   .sv-button:focus-visible {
     transform: none;
   }
+}
+
+/* ───────── Wegweiser: Bedarf und Lösung (Entwurf 16.10.2026) ───────── */
+
+.st-pfad__kopf,
+.st-pfad__paar {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) 34px minmax(0, 7fr);
+  column-gap: 20px;
+  align-items: stretch;
+}
+
+.st-pfad__kopf {
+  margin-top: 8px;
+  text-align: left;
+  font-size: 13.5px;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--text-body);
+}
+
+.st-pfad__kopf span { padding-bottom: 10px; border-bottom: 1px solid var(--border-strong); }
+.st-pfad__kopf span:nth-child(2) { border-bottom: 0; }
+.st-pfad__kopf span:nth-child(3) { color: var(--terra-500); }
+
+.st-pfad__liste {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: left;
+}
+
+.st-pfad__problem,
+.st-pfad__loesung {
+  margin: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 26px 28px;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-lg);
+  color: var(--text-strong);
+  text-decoration: none;
+}
+
+.st-pfad__problem { background: var(--cream-card); justify-content: center; }
+.st-pfad__loesung {
+  background: var(--peach-100);
+  transition: transform var(--duration-med) var(--ease-spring), border-color var(--duration-med) var(--ease-spring);
+}
+
+.st-pfad__loesung:hover,
+.st-pfad__loesung:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--terra-500);
+}
+
+.st-pfad__loesung:focus-visible { outline: 3px solid var(--terra-500); outline-offset: 3px; }
+
+.st-pfad__titel {
+  font-size: clamp(19px, 1.6vw, 22px);
+  line-height: 1.3;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-tight);
+  text-wrap: balance;
+}
+
+.st-pfad__zitat { font-size: var(--text-body-sm, 15px); line-height: 1.5; color: var(--text-body); }
+
+.st-pfad__bereich {
+  font-size: 13px;
+  font-weight: var(--weight-bold);
+  letter-spacing: var(--tracking-kicker);
+  text-transform: uppercase;
+  color: var(--terra-500);
+}
+
+.st-pfad__text { font-size: var(--text-body-sm, 15px); line-height: 1.55; color: var(--text-strong); }
+
+.st-pfad__mehr {
+  margin-top: 6px;
+  font-size: 14.5px;
+  font-weight: var(--weight-bold);
+  color: var(--terra-600);
+}
+
+.st-pfad__pfeil {
+  align-self: center;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--terra-500);
+  color: #fff;
+  font-weight: var(--weight-bold);
+}
+
+.st-pfad__fuss {
+  padding-top: 28px;
+  border-top: 1px solid var(--border-strong);
+  text-align: center;
+  text-wrap: balance;
+}
+
+/* Unter 900 px: Lage und Lösung bilden eine zusammenhängende Karte, kein Pfeil nötig */
+@media (max-width: 899px) {
+  .st-pfad__kopf,
+  .st-pfad__pfeil { display: none; }
+
+  .st-pfad__liste { gap: 18px; }
+
+  .st-pfad__paar {
+    grid-template-columns: minmax(0, 1fr);
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .st-pfad__problem,
+  .st-pfad__loesung { border: 0; border-radius: 0; padding: 22px 22px; }
+  .st-pfad__problem { border-bottom: 1px solid var(--border-strong); }
+  .st-pfad__loesung:hover,
+  .st-pfad__loesung:focus-visible { transform: none; background: var(--peach-150, var(--peach-100)); outline-offset: -3px; }
+}
+
+@media (max-width: 599px) {
+  .st-pfad__mehr { display: inline-flex; align-items: center; gap: 0.3em; min-height: 44px; margin-top: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .st-pfad__loesung { transition: none; }
+  .st-pfad__loesung:hover,
+  .st-pfad__loesung:focus-visible { transform: none; }
 }

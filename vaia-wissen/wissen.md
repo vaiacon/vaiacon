@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 15.10.2026 · Eintrag a844d40 Merge remote-tracking branch 'origin/main' into claude/webseite-terminal-qgquuk
+> Stand: 16.10.2026 · Eintrag 7e8dd52 KI-News für KMU 2026-10-16: GPT-Live-1.1: OpenAI kündigt bessere Sprachfunktion an, auch; Bericht: Googles Warenkorb «Universal Cart» ist in den USA g
 
 ## Wie du antwortest
 
@@ -84,22 +84,36 @@ KI-Kompetenz
 Sichtbarkeit
 Automationen
 Anhalten
-WILLKOMMEN
-Wer hinter vaiacon steht
-Philip Krieger und André Ulrich haben vaiacon gegründet, um Schweizer KMU persönlich zu begleiten. KI ist für uns das Werkzeug, nicht das Produkt. Wo sich etwas nicht rechnet, sagen wir das.
-Philip Krieger Mitgründer, Technik und Coaching
-André Ulrich Mitgründer, Strategie und Marketing
-Mehr über uns →
-ORIENTIERUNG
-Wo ist der Bedarf am grössten?
-«Mein Team nutzt KI selten und nicht gezielt.»
-KI-Kompetenz →
-«Wir sind online unsichtbar.»
-Sichtbarkeit →
-«Wir verlieren viel Zeit mit wiederkehrenden Aufgaben.»
-Automationen →
-«Ich weiss nicht, wo ich anfangen soll.»
-Erstgespräch →
+ORIENTIERUNG UND NUTZEN
+Vom Problem zur passenden Lösung
+Erkennen Sie sich wieder? Wir zeigen Ihnen, was wir für Sie tun können.
+Das Problem
+Unsere Lösung für Sie
+KI wird selten und falsch genutzt. «Mein Team nutzt KI selten und nicht gezielt. Wie sorge ich dafür, dass mein Team KI versteht und sattelfest in der Anwendung wird?»
+→
+KI-Kompetenz
+KI, die im Alltag ankommt.
+Ihr Team lernt mit uns die Anwendung von KI und baut Prozesse selbstständig und sicher in Ihren Betrieb ein. Ihr Team nutzt KI dann für echte Aufgaben wie E-Mails, Recherche, Protokolle oder Excel. Kurze Lernimpulse und Begleitung sorgen dafür, dass das Wissen nach dem Training im Arbeitsalltag bleibt. Somit gewinnt Ihr Team an Sicherheit und spart bei passenden Aufgaben spürbar Zeit.
+Mehr erfahren →
+Online zu wenig sichtbar. «Wir sind online unsichtbar. Wie sorge ich dafür, dass mein Betrieb auf Google besser gefunden wird und wie erhöhe ich die Chancen, dass wir von KI-Assistenten empfohlen werden?»
+→
+Sichtbarkeit
+Gefunden, weil man Sie versteht.
+Menschen, Google und KI-Assistenten verstehen schneller, was Sie anbieten, für wen es passt und wo Sie tätig sind. Klare Leistungsseiten, Antworten auf häufige Fragen und saubere technische Grundlagen verbessern Ihre Chancen, bei passenden Suchanfragen sichtbar zu werden. Sie erhalten einen detaillierten Check Ihrer Website mit klaren Prioritäten, statt vager SEO-Massnahmen. So sehen Sie im Detail, was noch fehlt und wie wir es verbessern können.
+Mehr erfahren →
+Zu viel Routinearbeit. «Wir verlieren viel Zeit mit wiederkehrenden Aufgaben. Wie sorge ich dafür, dass mein Team effizienter wird und sich auf die wesentlichen Aufgaben konzentrieren kann?»
+→
+Automationen
+Weniger Routine, mehr Zeit.
+Wir erarbeiten gemeinsam mit Ihnen Lösungen, welche massgeschneidert sind für Ihren Betrieb. Mit dem Ziel, dass Informationen nicht mehr mehrfach übertragen werden und Standardfälle zuverlässig weiter laufen. Offerten, Belege oder Anfragen landen schneller am richtigen Ort; Ihr Team kümmert sich nur noch um Ausnahmefälle. So bleibt weniger liegen und Abläufe hängen nicht an einer einzelnen Person.
+Mehr erfahren →
+Der Einstieg ist unklar. «Ich weiss nicht, wo ich anfangen soll. Wie finde ich heraus, wo unser grösster Bedarf ist und welche Angebote wir am besten nutzen sollten?»
+→
+Erstgespräch
+Mit Klarheit anfangen.
+Reden Sie mit uns. Im gemeinsamen Gespräch finden wir heraus, welche unserer Lösungen zu Ihnen und zu Ihrem Unternehmen passen. Sollten wir der Meinung sein, dass es keinen Handlungsbedarf gibt, werden wir Ihnen dies auch genau so sagen. Das Erstgespräch ist absolut kostenlos und unverbindlich. Wir freuen uns auf Sie!
+Erstgespräch vereinbaren →
+Haben Sie sich für eine oder mehrere unserer Lösungen entschieden? Die Begleitung → hält es aktuell und entwickelt es gemeinsam mit Ihnen weiter.
 HÄUFIGE FRAGEN
 Kurz beantwortet.
 Alle Fragen und Antworten →
@@ -519,20 +533,14 @@ Zum Inhalt springen
 KI-NEWS FÜR KMU · MIT WOCHENFAZIT
 KI-News für Schweizer KMU: was Neuigkeiten für Ihren Betrieb heissen
 Neue Beiträge während der Woche, mit Wochenfazit. Zu jeder Meldung: was passiert ist, was sie für ein KMU mit 5 bis 30 Mitarbeitenden heisst und worauf Sie achten sollten. Mit Quellen, Fachbegriffe kurz erklärt.
-Wochenfazit KW 41 Diese Woche ging es um die Kennzeichnung von KI-Inhalten und um KI-Helfer, die selbständig arbeiten. Google hat eine Prüfseite für sein KI-Wasserzeichen geöffnet, ein unsichtbares Erkennungszeichen in Bildern, Videos und Audio. Laut AI Weekly will OpenAI Texte aus ChatGPT in der EU ähnlich kennzeichnen. Bestätigt ist das nicht. Für Schweizer KMU heisst das: Legen Sie fest, wo im Betrieb KI-Texte entstehen und wer sie prüft. Ein grosser Umbau ist dafür nicht nötig.
-Aktuelle Woche: KW 41 · 5. – 11. Oktober 2026 · ganze Woche lesen →
-Google hat laut TechCrunch vom 8. Oktober an einem Cloud-Anlass einen Gemini-Agenten vorgestellt, also einen KI-Helfer, der Aufgaben selbst plant und ausführt. Er greift auf Firmensysteme wie Workspace, Microsoft 365 oder Slack zu und zeigt in einem Posteingang, was er getan hat. Zuerst erhalten ihn Firmen, Privatpersonen folgen später. Zu Ländern, auch zur Schweiz, nennt der Artikel nichts.
+Wochenfazit KW 42 Laut TechCrunch hat Meta diese Woche zwei grosse Sprachmodelle veröffentlicht. Die Leistungsangaben stammen vom Anbieter, und zur Schweiz nennt der Artikel nichts. Für Betriebe bleibt es sinnvoll, neue Modelle an eigenen Aufgaben zu prüfen, bevor sie wechseln.
+Aktuelle Woche: KW 42 · 12. – 18. Oktober 2026 · ganze Woche lesen →
+OpenAI kündigte am 15. Oktober in seinem Forum die Version GPT-Live-1.1 für die Sprachfunktion an. Laut OpenAI bringt sie 13 neue Stimmen und bessere Aussprache in mehreren Sprachen, darunter Deutsch. Die Version werde für alle Nutzer ausgeliefert. Für Entwickler soll sie «bald» folgen.
 Was das für Ihr KMU heisst →
-Google hat laut TechCrunch vom 7. Oktober die Seite synthid.com für alle geöffnet. Dort lassen sich Bilder, Videos und Audiodateien hochladen. Die Seite prüft, ob eine Datei SynthID enthält, ein unsichtbares Wasserzeichen, das Googles eigene KI-Werkzeuge einbetten. Dieselbe Prüfung ist laut dem Bericht auch in der Gemini-App und im Browser Chrome eingebaut.
-Was das für Ihr KMU heisst →
-Persönliche KI-Agenten, also KI-Helfer, die im Auftrag einer Person im Internet handeln, sollen Flüge buchen, Tische reservieren oder einkaufen. Laut TechCrunch vom 6. Oktober blockieren viele Websites solche Agenten, teils gewollt, teils durch den normalen Schutz gegen automatische Zugriffe. Meta und Partner arbeiten an einem Standard, mit dem sich Agenten und Websites verständigen können.
-Was das für Ihr KMU heisst →
-Das französische Unternehmen Mistral hat am 6. Oktober «Mistral Large 4» vorgestellt, laut TechCrunch ein sehr grosses Sprachmodell. Es ist vorerst nur über einen öffentlichen Zugang mit Schutzmassnahmen nutzbar. Eine offene Version, die Firmen und Anbieter selbst betreiben können, ist nach Sicherheitstests in etwa drei Wochen geplant.
-Was das für Ihr KMU heisst →
-AI Weekly berichtet, OpenAI habe am 5. Oktober ein Verfahren namens «textGrain» vorgestellt. Es soll ein unsichtbares Muster in die Wortwahl legen, eine Art Wasserzeichen, das Software später erkennt. Laut AI Weekly wird es in der EU in den kommenden Wochen für ChatGPT und Codex verpflichtend. OpenAI hat die Meldung selbst nicht bestätigt.
+TechCrunch berichtete am 15. Oktober, Google habe das Einkaufswerkzeug «Universal Cart» in den USA eingeführt. Laut Artikel sammelt es Produkte verschiedener Händler aus der Google-Suche und der Gemini-App und meldet Preissenkungen. Der Bezahlvorgang ist laut Artikel an Googles offenen Standard «Universal Commerce Protocol» gekoppelt.
 Was das für Ihr KMU heisst →
 Die letzten Wochen
-KW 42 · 12. – 18. Oktober 2026 0 Beiträge
+KW 42 · 12. – 18. Oktober 2026 2 Beiträge
 KW 41 · 5. – 11. Oktober 2026 5 Beiträge
 KW 40 · 28. September – 4. Oktober 2026 7 Beiträge
 Alle Wochen im Archiv · RSS-Feed abonnieren
