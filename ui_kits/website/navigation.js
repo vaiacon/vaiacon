@@ -34,7 +34,7 @@
   /* Jeder Punkt: [Ziel, Titel, Zeile]. Ziel = Seite oder Seite#anker. */
   var MENUE = [
     { id: 'learning', seite: 'learning', titel: 'KI-Kompetenz',
-      text: 'Formate, die über Wochen ineinandergreifen.',
+      text: 'KI-Anwendungen erlernen und sicher in den Betrieb integrieren.',
       spalten: [
         { titel: 'Lernen im Betrieb', breit: true, punkte: [
           ['learning#formate', 'Die Formate', 'Sieben Formate, die sich kombinieren lassen.'],
@@ -42,7 +42,7 @@
         ] }
       ] },
     { id: 'visibility', seite: 'visibility', titel: 'Sichtbarkeit',
-      text: 'Damit Google und KI-Assistenten Ihr Angebot verstehen.',
+      text: 'Damit Sie auf Google besser gefunden werden und sich die Chancen erhöhen, von KI-Assistenten empfohlen zu werden.',
       spalten: [
         { titel: 'Gefunden werden', breit: true, punkte: [
           ['visibility#check', 'Website-Check', 'Wie gut ist Ihre Website für Google und KI-Assistenten vorbereitet?'],

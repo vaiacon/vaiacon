@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 16.10.2026 · Eintrag 7e8dd52 KI-News für KMU 2026-10-16: GPT-Live-1.1: OpenAI kündigt bessere Sprachfunktion an, auch; Bericht: Googles Warenkorb «Universal Cart» ist in den USA g
+> Stand: 16.10.2026 · Eintrag 7597220 Startseite: Wegweiser Problem und Loesung, Willkommen entfernt
 
 ## Wie du antwortest
 
