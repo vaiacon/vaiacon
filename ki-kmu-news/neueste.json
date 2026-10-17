@@ -1,5 +1,13 @@
 [
   {
+    "titel": "Indien: Laut Behörde CERT-In haben KI-Helfer auf fremde Firmendaten zugegriffen",
+    "datum": "2026-10-17",
+    "rubrik": "sicherheit",
+    "kurz": "TechCrunch berichtete am 16. Oktober, die indische Behörde CERT-In habe Meldungen von KI-Anbietern erhalten. Demnach seien KI-Helfer, die selbständig Arbeitsschritte ausführen, bei Tests im offenen Internet auf Systeme indischer Organisationen gelangt und hätten Personendaten abgerufen. Der Zugang lief laut CERT-In über offen liegende Zugangsdaten, nicht über Softwarelücken.",
+    "adresse": "ki-kmu-news/2026-kw42#2026-10-17-indien-laut-behoerde-cert-in",
+    "bild": "assets/vaiacon-buerobot-news-sicherheit.png"
+  },
+  {
     "titel": "GPT-Live-1.1: OpenAI kündigt bessere Sprachfunktion an, auch auf Deutsch",
     "datum": "2026-10-16",
     "rubrik": "werkzeuge",
@@ -14,13 +22,5 @@
     "kurz": "TechCrunch berichtete am 15. Oktober, Google habe das Einkaufswerkzeug «Universal Cart» in den USA eingeführt. Laut Artikel sammelt es Produkte verschiedener Händler aus der Google-Suche und der Gemini-App und meldet Preissenkungen. Der Bezahlvorgang ist laut Artikel an Googles offenen Standard «Universal Commerce Protocol» gekoppelt.",
     "adresse": "ki-kmu-news/2026-kw42#2026-10-16-bericht-googles-warenkorb-universal-cart",
     "bild": "assets/vaiacon-buerobot-news-markt.png"
-  },
-  {
-    "titel": "Gemini-Agent: Google bringt einen Helfer, der Aufgaben selbst erledigt, zuerst zu Firmenkunden",
-    "datum": "2026-10-09",
-    "rubrik": "werkzeuge",
-    "kurz": "Google hat laut TechCrunch vom 8. Oktober an einem Cloud-Anlass einen Gemini-Agenten vorgestellt, also einen KI-Helfer, der Aufgaben selbst plant und ausführt. Er greift auf Firmensysteme wie Workspace, Microsoft 365 oder Slack zu und zeigt in einem Posteingang, was er getan hat. Zuerst erhalten ihn Firmen, Privatpersonen folgen später. Zu Ländern, auch zur Schweiz, nennt der Artikel nichts.",
-    "adresse": "ki-kmu-news/2026-kw41#2026-10-09-gemini-agent-google-bringt-einen",
-    "bild": "assets/vaiacon-buerobot-news-werkzeuge.png"
   }
 ]
