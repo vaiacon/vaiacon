@@ -1,0 +1,27 @@
+{
+  "jahr": 2026,
+  "kw": 43,
+  "von": "2026-10-19",
+  "bis": "2026-10-25",
+  "wochenfazit": "Laut TechCrunch hat Meta eine umstrittene Passage zur Nutzung von Website-Inhalten in den Bedingungen für Geschäftskonten gestrichen. Die Bedingungen selbst haben wir nicht geprüft. Sonst gab es seit dem 17. Oktober keine Meldung, die für Betriebe mit fünf bis 30 Mitarbeitenden etwas ändert.",
+  "beitraege": [
+    {
+      "id": "2026-10-19-techcrunch-meta-streicht-passage-zu",
+      "datum": "2026-10-19",
+      "rubrik": "recht",
+      "titel": "TechCrunch: Meta streicht Passage zu Website-Inhalten und KI-Training aus Geschäftsbedingungen",
+      "kurz": "TechCrunch berichtete am 17. Oktober, Meta habe aus den Bedingungen für Geschäftskonten eine Passage entfernt. Rechtsexperten hatten sie so gelesen, dass Meta Inhalte von Websites der Kundschaft auch für KI-Training nutzen dürfte. Laut Meta ändert sich nichts daran, wie die Firma das Web durchsucht.",
+      "kmu": "Haben Sie ein Meta-Geschäftskonto, etwa für Werbung auf Facebook oder Instagram, lohnt sich ein Blick in die Bedingungen. Klären Sie, wer das Konto bei Ihnen verwaltet und welche Bedingungen akzeptiert wurden. Die Passage ist laut dem Bericht inzwischen gestrichen.",
+      "vaiacon": "In der KI-Standortanalyse im Betrieb klären wir mit Ihnen, welche Konten und Werkzeuge Inhalte Ihrer Firma berühren. Daraus halten wir Spielregeln fest. Im Training oder Workshop (Halbtag) lernt Ihr Team, Nutzungsbedingungen von KI- und Werbewerkzeugen gezielt zu prüfen.",
+      "bereich": "ki-kompetenz",
+      "achtung": "TechCrunch stützt sich auf Berichte von Nieman Lab und The Verge sowie eine Aussage von Meta. Die Bedingungen selbst haben wir nicht geprüft. Zur Schweiz enthalten die geprüften Quellen keine Angabe. Das ersetzt keine Rechtsauskunft.",
+      "quellen": [
+        {
+          "titel": "TechCrunch: Meta removes language that raised scraping and AI training concerns",
+          "url": "https://techcrunch.com/2026/10/17/meta-removes-language-that-raised-scraping-and-ai-training-concerns/"
+        }
+      ],
+      "wichtigkeit": 1
+    }
+  ]
+}

@@ -1,5 +1,13 @@
 [
   {
+    "titel": "TechCrunch: Meta streicht Passage zu Website-Inhalten und KI-Training aus Geschäftsbedingungen",
+    "datum": "2026-10-19",
+    "rubrik": "recht",
+    "kurz": "TechCrunch berichtete am 17. Oktober, Meta habe aus den Bedingungen für Geschäftskonten eine Passage entfernt. Rechtsexperten hatten sie so gelesen, dass Meta Inhalte von Websites der Kundschaft auch für KI-Training nutzen dürfte. Laut Meta ändert sich nichts daran, wie die Firma das Web durchsucht.",
+    "adresse": "ki-kmu-news/2026-kw43#2026-10-19-techcrunch-meta-streicht-passage-zu",
+    "bild": "assets/vaiacon-buerobot-news-recht.png"
+  },
+  {
     "titel": "Indien: Laut Behörde CERT-In haben KI-Helfer auf fremde Firmendaten zugegriffen",
     "datum": "2026-10-17",
     "rubrik": "sicherheit",
@@ -14,13 +22,5 @@
     "kurz": "OpenAI kündigte am 15. Oktober in seinem Forum die Version GPT-Live-1.1 für die Sprachfunktion an. Laut OpenAI bringt sie 13 neue Stimmen und bessere Aussprache in mehreren Sprachen, darunter Deutsch. Die Version werde für alle Nutzer ausgeliefert. Für Entwickler soll sie «bald» folgen.",
     "adresse": "ki-kmu-news/2026-kw42#2026-10-16-gpt-live-1-1-openai",
     "bild": "assets/vaiacon-buerobot-news-werkzeuge.png"
-  },
-  {
-    "titel": "Bericht: Googles Warenkorb «Universal Cart» ist in den USA gestartet",
-    "datum": "2026-10-16",
-    "rubrik": "markt",
-    "kurz": "TechCrunch berichtete am 15. Oktober, Google habe das Einkaufswerkzeug «Universal Cart» in den USA eingeführt. Laut Artikel sammelt es Produkte verschiedener Händler aus der Google-Suche und der Gemini-App und meldet Preissenkungen. Der Bezahlvorgang ist laut Artikel an Googles offenen Standard «Universal Commerce Protocol» gekoppelt.",
-    "adresse": "ki-kmu-news/2026-kw42#2026-10-16-bericht-googles-warenkorb-universal-cart",
-    "bild": "assets/vaiacon-buerobot-news-markt.png"
   }
 ]
