@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 19.10.2026 · Eintrag 847ba45 Website-Check scrollt auf dem Handy mit, Netzwerkzeichen aus der Fusszeile
+> Stand: 19.10.2026 · Eintrag 09abad2 Strukturdaten: Profil-Adressen (sameAs) entfernt, bis die Profile stehen
 
 ## Wie du antwortest
 
@@ -147,9 +147,11 @@ Wir haben erkannt, dass gerade kleine und mittlere Unternehmen Mühe haben, KI u
 André Ulrich
 Mitgründer · Strategie und Marketing
 André führt seit 20 Jahren ein eigenes Unternehmen und ist gelernter Immobilienbewirtschafter. Offerten, Auftragsbestätigungen, E-Mails, Dossiers, Beiträge für Social Media: Die Arbeit, die sich jede Woche wiederholt, kennt er aus eigener Erfahrung. Bei vaiacon kümmert er sich um Strategie und Marketing.
+andre.ulrich@vaiacon.ch
 Philip Krieger
 Mitgründer · Technik und Coaching
 Philip bringt zehn Jahre Erfahrung als Trainer bei einem der grössten Schweizer Telekommunikationsanbieter mit. Er ist Ausbilder mit eidgenössischem Fachausweis und hat über Jahre Lösungen für die digitale Transformation und die Einführung von KI begleitet. Bei vaiacon ist er für Technik, Coaching und Support zuständig.
+philip.krieger@vaiacon.ch
 SO ARBEITEN WIR
 Das Erstgespräch führt einer von uns beiden, am Telefon oder am Bildschirm. Sie sprechen immer direkt mit einem der Gründer.
 WOFÜR WIR STEHEN

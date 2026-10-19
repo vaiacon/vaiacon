@@ -1458,6 +1458,27 @@ picture {
   margin-top: var(--space-11);
 }
 
+/* «Über uns» (19.10.2026): persönliche Mailadresse unter der Vorstellung jedes Gründers. */
+.sv-team-mail {
+  margin: 0;
+}
+
+.sv-team-mail a {
+  font-weight: var(--weight-semibold);
+  color: var(--terra-600);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 599px) {
+  .sv-team-mail a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+  }
+}
+
 .sv-team-foto {
   width: 100%;
   max-width: 220px;
