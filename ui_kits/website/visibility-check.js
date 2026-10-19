@@ -101,6 +101,31 @@
     element.scrollIntoView({ behavior: reduziert ? 'auto' : 'smooth', block: block || 'start' });
   }
 
+  // Mitscrollen (vor allem auf dem Handy): Läuft der Check, soll man den Fortschritt und am Ende
+  // das Ergebnis sehen, ohne zu wischen. Steht das Element schon im Bild, bleibt die Seite stehen.
+  // Sobald die Person selbst scrollt oder tippt, folgt die Seite nicht mehr (nutzerScrollt).
+  var nutzerScrollt = false;
+  ['touchstart', 'wheel', 'keydown', 'mousedown'].forEach(function (name) {
+    window.addEventListener(name, function () { nutzerScrollt = true; }, { passive: true });
+  });
+
+  function imBild(element) {
+    var r = element.getBoundingClientRect();
+    return r.top >= 80 && r.bottom <= window.innerHeight - 12;
+  }
+
+  function folgen(element, block, sofort) {
+    if (!element || element.hidden || nutzerScrollt || imBild(element)) return;
+    if (sofort) {
+      var wurzel = document.documentElement, vorher = wurzel.style.scrollBehavior;
+      wurzel.style.scrollBehavior = 'auto';
+      element.scrollIntoView({ block: block || 'center' });
+      wurzel.style.scrollBehavior = vorher;
+    } else {
+      rollen(element, block || 'center');
+    }
+  }
+
   function el(tag, klasse, text) {
     var e = document.createElement(tag);
     if (klasse) e.className = klasse;
@@ -234,6 +259,7 @@
 
     if (lauf.aktuell < SCHRITTE.length) {
       zustand(lauf.aktuell, 'laeuft');
+      folgen(zeilen[lauf.aktuell].li, 'center');
       lauf.seit = Date.now();
       sagen('Prüft: ' + SCHRITTE[lauf.aktuell].titel);
       if (SCHRITTE[lauf.aktuell].schluessel === 'auswertung') unterzeilenStart(zeilen[lauf.aktuell]);
@@ -298,6 +324,8 @@
     ladendDomain.textContent = domain;
     schritteBauen();
     ladend.hidden = false;
+    nutzerScrollt = false;
+    folgen(ladend, 'start');
     besetzt(true);
     laufStarten();
 
@@ -412,6 +440,7 @@
       return;
     }
     problemZeigen(text, art !== 'bremse');
+    folgen(problem, 'center');
     sagen(text);
   }
 
@@ -751,6 +780,8 @@
       wurzel.style.scrollBehavior = 'auto';
       ziel.scrollIntoView({ block: 'start' });
       wurzel.style.scrollBehavior = vorher;
+      // Läuft der Check schon, soll der Fortschritt im Bild stehen, nicht nur das Formular.
+      folgen(ladend, 'start', true);
     };
     if (document.readyState === 'complete') hinZumCheck();
     else window.addEventListener('load', hinZumCheck, { once: true });

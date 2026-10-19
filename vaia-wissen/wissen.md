@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 16.10.2026 · Eintrag c031b30 Menue: neue Zeilen bei KI-Kompetenz und Sichtbarkeit
+> Stand: 19.10.2026 · Eintrag 07ab9a0 KI-News für KMU 2026-10-19: TechCrunch: Meta streicht Passage zu Website-Inhalten und KI
 
 ## Wie du antwortest
 
@@ -533,14 +533,13 @@ Zum Inhalt springen
 KI-NEWS FÜR KMU · MIT WOCHENFAZIT
 KI-News für Schweizer KMU: was Neuigkeiten für Ihren Betrieb heissen
 Neue Beiträge während der Woche, mit Wochenfazit. Zu jeder Meldung: was passiert ist, was sie für ein KMU mit 5 bis 30 Mitarbeitenden heisst und worauf Sie achten sollten. Mit Quellen, Fachbegriffe kurz erklärt.
-Wochenfazit KW 42 Laut TechCrunch hat Meta diese Woche zwei grosse Sprachmodelle veröffentlicht. Die Leistungsangaben stammen vom Anbieter, und zur Schweiz nennt der Artikel nichts. Für Betriebe bleibt es sinnvoll, neue Modelle an eigenen Aufgaben zu prüfen, bevor sie wechseln.
-Aktuelle Woche: KW 42 · 12. – 18. Oktober 2026 · ganze Woche lesen →
-OpenAI kündigte am 15. Oktober in seinem Forum die Version GPT-Live-1.1 für die Sprachfunktion an. Laut OpenAI bringt sie 13 neue Stimmen und bessere Aussprache in mehreren Sprachen, darunter Deutsch. Die Version werde für alle Nutzer ausgeliefert. Für Entwickler soll sie «bald» folgen.
-Was das für Ihr KMU heisst →
-TechCrunch berichtete am 15. Oktober, Google habe das Einkaufswerkzeug «Universal Cart» in den USA eingeführt. Laut Artikel sammelt es Produkte verschiedener Händler aus der Google-Suche und der Gemini-App und meldet Preissenkungen. Der Bezahlvorgang ist laut Artikel an Googles offenen Standard «Universal Commerce Protocol» gekoppelt.
+Wochenfazit KW 43 Laut TechCrunch hat Meta eine umstrittene Passage zur Nutzung von Website-Inhalten in den Bedingungen für Geschäftskonten gestrichen. Die Bedingungen selbst haben wir nicht geprüft. Sonst gab es seit dem 17. Oktober keine Meldung, die für Betriebe mit fünf bis 30 Mitarbeitenden etwas ändert.
+Aktuelle Woche: KW 43 · 19. – 25. Oktober 2026 · ganze Woche lesen →
+TechCrunch berichtete am 17. Oktober, Meta habe aus den Bedingungen für Geschäftskonten eine Passage entfernt. Rechtsexperten hatten sie so gelesen, dass Meta Inhalte von Websites der Kundschaft auch für KI-Training nutzen dürfte. Laut Meta ändert sich nichts daran, wie die Firma das Web durchsucht.
 Was das für Ihr KMU heisst →
 Die letzten Wochen
-KW 42 · 12. – 18. Oktober 2026 2 Beiträge
+KW 43 · 19. – 25. Oktober 2026 1 Beitrag
+KW 42 · 12. – 18. Oktober 2026 3 Beiträge
 KW 41 · 5. – 11. Oktober 2026 5 Beiträge
 KW 40 · 28. September – 4. Oktober 2026 7 Beiträge
 Alle Wochen im Archiv · RSS-Feed abonnieren
