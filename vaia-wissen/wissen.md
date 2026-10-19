@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 19.10.2026 · Eintrag 07ab9a0 KI-News für KMU 2026-10-19: TechCrunch: Meta streicht Passage zu Website-Inhalten und KI
+> Stand: 19.10.2026 · Eintrag 847ba45 Website-Check scrollt auf dem Handy mit, Netzwerkzeichen aus der Fusszeile
 
 ## Wie du antwortest
 
