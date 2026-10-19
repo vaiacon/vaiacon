@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 19.10.2026 · Eintrag 4f2c816 Ueber uns: persoenliche Mailadressen der Gruender
+> Stand: 19.10.2026 · Eintrag 444d7f9 Handy: Chat-Streifen faengt keine Beruehrungen mehr ab
 
 ## Wie du antwortest
 

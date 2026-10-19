@@ -755,7 +755,9 @@
       ev.preventDefault();
       rollen(document.getElementById('check'), 'start');
       if (window.history && history.replaceState) history.replaceState(null, '', '#check');
-      feldDomain.focus({ preventScroll: true });
+      // Am Handy nicht von Hand ins Feld springen (19.10.2026, Android/Chrome): Ein Feld, das ein Skript
+      // fokussiert hat, ohne dass die Tastatur aufgeht, ignoriert das Antippen. Dort tippt man selbst.
+      if (!window.matchMedia || !window.matchMedia('(pointer: coarse)').matches) feldDomain.focus({ preventScroll: true });
     });
   });
 
