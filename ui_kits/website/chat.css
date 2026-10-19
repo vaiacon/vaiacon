@@ -166,6 +166,14 @@
 }
 .vc-chat__fab-ico { display: none; }
 
+/* Der Behälter spannt auf dem Handy die ganze Breite auf (left und right, siehe oben), ist aber nur ein
+   leerer Streifen von 52px Höhe. Ohne diese Regel fängt er Berührungen ab: Ein Feld, das gerade in
+   diesem Streifen am unteren Bildrand liegt, lässt sich nicht antippen, bis man weiterscrollt
+   (Fehler 19.10.2026, Android: Domain-Feld auf Startseite und «Visibility»). Bedienbar bleiben
+   nur Knopf und geöffnetes Fenster. */
+.vc-chat { pointer-events: none; }
+.vc-chat__fab, .vc-chat__panel { pointer-events: auto; }
+
 /* Handy: runder Knopf mit Sprechblase statt Pille mit Text, damit er weniger
    von der Seite verdeckt (Ergänzung 2026-10-13). */
 @media (max-width: 640px) {
