@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 20.10.2026 · Eintrag b235c0a KI-News für KMU 2026-10-20: Wochenfazit
+> Stand: 20.10.2026 · Eintrag 9c21f7e Impressum: UID CHE-177.275.934, auch in den Strukturdaten (taxID)
 
 ## Wie du antwortest
 
@@ -721,8 +721,8 @@ E-Mail
 Schreiben Sie uns, was Sie beschäftigt.
 hallo@vaiacon.ch
 Rückruf
-Wunschzeit angeben, wir rufen an.
-Rückruf anfordern →
+Wunschzeit angeben, wir rufen an. Oder rufen Sie uns an:
+044 500 10 56 · Rückruf anfordern →
 
 ### Datenschutz und Impressum
 

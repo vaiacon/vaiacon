@@ -10,8 +10,8 @@ Wurzelverzeichnis.
 
 Was hineinkommt:
 - Auf jeder Seite ein Block «Vaiacon GmbH» (ProfessionalService): Adresse aus
-  dem Impressum, E-Mail, Gruender, Profile. Telefon und UID fehlen bewusst,
-  solange sie nirgends auf der Website stehen.
+  dem Impressum, E-Mail, Gruender, Profile. Telefon und UID stehen
+  im Impressum und in der Fusszeile.
 - Auf den Angebotsseiten ein Block «Service», wo es einen Preis gibt mit Preis.
 - Im Firmenblock zusaetzlich die Angebotsbereiche (hasOfferCatalog).
 - `sitemap.xml` mit lastmod je Seite (letzter Commit, sonst heute).
@@ -77,8 +77,7 @@ ORGANISATION = {
         "persönlich. Ohne Fachchinesisch."
     ),
     "email": "hallo@vaiacon.ch",
-    # TELEFON: einkommentieren, sobald die 044-Nummer gebucht ist (auch in allen HTML-Seiten, tel:-Links)
-    # "telephone": "+41 44 000 00 00",
+    "telephone": "+41 44 500 10 56",
     "foundingDate": "2026",
     "taxID": "CHE-177.275.934",
     "address": {
@@ -333,7 +332,7 @@ USA. Bei jeder Lösung klären wir, welche Anbieter Daten bearbeiten und wo.
 Für wen: Betriebe mit 5 bis 30 Mitarbeitenden und eigenem Büro (Handwerk,
 Treuhand, Praxen, Verwaltungen).
 
-Kontakt: hallo@vaiacon.ch · Lehenstrasse 74, 8037 Zürich
+Kontakt: hallo@vaiacon.ch · 044 500 10 56 · Lehenstrasse 74, 8037 Zürich
 Erster Schritt: kostenloses Erstgespräch (eine halbe Stunde, am Telefon oder
 am Bildschirm), die kostenlose Erstanalyse zur Zeitersparnis oder der
 kostenlose Website-Check auf vaiacon.ch. Wir antworten in der Regel innert
