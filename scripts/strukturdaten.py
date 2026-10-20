@@ -80,6 +80,7 @@ ORGANISATION = {
     # TELEFON: einkommentieren, sobald die 044-Nummer gebucht ist (auch in allen HTML-Seiten, tel:-Links)
     # "telephone": "+41 44 000 00 00",
     "foundingDate": "2026",
+    "taxID": "CHE-177.275.934",
     "address": {
         "@type": "PostalAddress",
         "streetAddress": "Lehenstrasse 74",

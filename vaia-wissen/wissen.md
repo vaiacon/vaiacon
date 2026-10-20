@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 19.10.2026 · Eintrag 444d7f9 Handy: Chat-Streifen faengt keine Beruehrungen mehr ab
+> Stand: 20.10.2026 · Eintrag b235c0a KI-News für KMU 2026-10-20: Wochenfazit
 
 ## Wie du antwortest
 
@@ -535,7 +535,7 @@ Zum Inhalt springen
 KI-NEWS FÜR KMU · MIT WOCHENFAZIT
 KI-News für Schweizer KMU: was Neuigkeiten für Ihren Betrieb heissen
 Neue Beiträge während der Woche, mit Wochenfazit. Zu jeder Meldung: was passiert ist, was sie für ein KMU mit 5 bis 30 Mitarbeitenden heisst und worauf Sie achten sollten. Mit Quellen, Fachbegriffe kurz erklärt.
-Wochenfazit KW 43 Laut TechCrunch hat Meta eine umstrittene Passage zur Nutzung von Website-Inhalten in den Bedingungen für Geschäftskonten gestrichen. Die Bedingungen selbst haben wir nicht geprüft. Sonst gab es seit dem 17. Oktober keine Meldung, die für Betriebe mit fünf bis 30 Mitarbeitenden etwas ändert.
+Wochenfazit KW 43 Laut TechCrunch will Microsoft KI-Helfer im Betrieb künftig als mögliches Risiko überwachen. Das Unternehmen verkauft die passenden Sicherheitsprodukte selbst. Für Ihren Betrieb gilt unabhängig davon: Legen Sie fest, worauf ein KI-Helfer zugreifen darf. Zudem soll Meta laut TechCrunch eine umstrittene Passage zu Website-Inhalten aus den Bedingungen gestrichen haben. Die Bedingungen selbst haben wir nicht geprüft.
 Aktuelle Woche: KW 43 · 19. – 25. Oktober 2026 · ganze Woche lesen →
 TechCrunch berichtete am 17. Oktober, Meta habe aus den Bedingungen für Geschäftskonten eine Passage entfernt. Rechtsexperten hatten sie so gelesen, dass Meta Inhalte von Websites der Kundschaft auch für KI-Training nutzen dürfte. Laut Meta ändert sich nichts daran, wie die Firma das Web durchsucht.
 Was das für Ihr KMU heisst →
