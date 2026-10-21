@@ -93,8 +93,10 @@ ORGANISATION = {
         {"@type": "Person", "name": "André Ulrich", "jobTitle": "Mitgründer, Strategie und Marketing"},
         {"@type": "Person", "name": "Philip Krieger", "jobTitle": "Mitgründer, Technik und Coaching"},
     ],
-    # sameAs (Facebook, Instagram, LinkedIn) ist seit 19.10.2026 raus, bis die Profile stehen (André).
-    # Wieder einfuegen: "sameAs": [Adresse, ...] und die Zeichen in der Fusszeile.
+    "sameAs": [
+        "https://www.facebook.com/people/Vaiacon/61595492673417/",
+        "https://www.linkedin.com/company/146755810/",
+    ],
 }
 
 

@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 20.10.2026 · Eintrag 9c21f7e Impressum: UID CHE-177.275.934, auch in den Strukturdaten (taxID)
+> Stand: 20.10.2026 · Eintrag 902119a Kontakt: Telefonnummer 044 500 10 56 in Fusszeile, Impressum, Kontaktseite, News und Strukturdaten
 
 ## Wie du antwortest
 
