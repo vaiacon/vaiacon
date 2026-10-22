@@ -708,7 +708,7 @@ Was mit Ihren Daten geschieht.
 Massgebend ist das revidierte Schweizer Datenschutzgesetz (revDSG). Wir erheben so wenig wie möglich und erklären hier alles, was auf dieser Website und im Kundenportal tatsächlich passiert.
 Kurz gesagt
 Diese Website verlangt kein Konto und führt keine Besucherstatistik. Sie läuft auf einem Server von Infomaniak in der Schweiz. Einiges geht ins Ausland: alles, was ein Sprachmodell für Sie auswertet. Das sind der Chat mit Vaia, der kostenlose Website-Check, die Erstanalyse, der Richtpreis-Rechner, die Einordnung «Ihr Fall». Das Sprachmodell stammt von Anthropic in den USA. Jedes davon ist unten einzeln erklärt, und der Abschnitt «Bekanntgabe ins Ausland» fasst zusammen, auf welcher Grundlage das geschieht.
-Diese Erklärung gilt auch für das Kundenportal unter kunden.vaiacon.ch. Dort speichern wir mehr, weil es dort nötig ist. Was genau, steht weiter unten.
+Diese Erklärung gilt auch für das Kundenportal unter kunden.simplaro.ch. Dort speichern wir mehr, weil es dort nötig ist. Was genau, steht weiter unten.
 Was beim Aufruf dieser Seite geschieht
 Die Website liegt bei Infomaniak in der Schweiz. Wir führen kein Zugriffsprotokoll und speichern keine IP-Adressen. Wer diese Seiten nur liest, hinterlässt bei uns also keine Spur.
 Anders ist es dort, wo Sie selbst etwas absenden: im Chat, im Kontaktformular, beim Rückruf, im kostenlosen Website-Check, in der Erstanalyse, im Richtpreis-Rechner, bei der Einordnung «Ihr Fall». Alle sind unten beschrieben.
@@ -745,7 +745,7 @@ Auf der Seite Automationen beschreiben Sie einen Fall aus Ihrem Betrieb in wenig
 Ihr Text geht an unseren Server in der Schweiz und von dort an Anthropic (USA), den Anbieter des Sprachmodells Claude. Das Sprachmodell schätzt, welcher Umfang zu Ihrem Fall passt, und wählt passende Leistungen aus unserem Preiskatalog. Ihre Kontaktangaben gehen nicht mit. Was Sie in den Text schreiben, geht unverändert mit. Schreiben Sie darum bitte keine Namen oder vertraulichen Kundendaten hinein.
 Dieser Dienst selbst speichert nichts. Die Einordnung schicken wir Ihnen per E-Mail; die Seite zeigt nur eine Bestätigung. Gleichzeitig geht Ihr Fall samt Einordnung und Kontaktangaben als Anfrage an uns. Wir behandeln sie wie eine Anfrage über das Kontaktformular.
 Zum Schutz vor Missbrauch ist die Zahl der Einordnungen je Besucher begrenzt. Dafür hält der Server Ihre IP-Adresse im Arbeitsspeicher. Wie lange, steht unter «Aufbewahrung und Löschung».
-Kundenportal kunden.vaiacon.ch
+Kundenportal kunden.simplaro.ch
 Wer bei uns ein Projekt hat, meldet sich im Kundenportal mit E-Mail-Adresse und Passwort an und sieht dort die Vorschau seiner Website. Das Portal läuft auf demselben Schweizer Server wie diese Website.
 Anders als hier speichern wir im Portal etwas, und zwar nur das:
 ✓ Firma und Projektname
