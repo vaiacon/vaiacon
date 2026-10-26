@@ -1,0 +1,27 @@
+{
+  "jahr": 2026,
+  "kw": 44,
+  "von": "2026-10-26",
+  "bis": "2026-11-01",
+  "wochenfazit": "Laut Startup Fortune soll Meta ab dem 30. Oktober die Bedingungen für KI-Funktionen für Firmen ändern und Risiken auf die Kunden übertragen. Bestätigt ist das nicht, denn die Bedingungen selbst konnten wir nicht prüfen. Wer KI-Funktionen von Meta nutzt, schaut sie am besten selbst an.",
+  "beitraege": [
+    {
+      "id": "2026-10-26-bericht-meta-bedingungen-fuer-ki",
+      "datum": "2026-10-26",
+      "rubrik": "recht",
+      "titel": "Bericht: Meta-Bedingungen für KI-Helfer sollen ab 30. Oktober Firmen in die Haftung nehmen",
+      "kurz": "Startup Fortune berichtete am 24. Oktober, Meta ändere die Geschäftsbedingungen für seine KI-Funktionen für Firmen. Laut dem Bericht, der sich auf CIO.com und WION stützt, sollen Kunden ab dem 30. Oktober die Risiken tragen und Meta von Ansprüchen freistellen. Die Bedingungen selbst konnten wir nicht abrufen.",
+      "kmu": "Setzen Sie KI-Funktionen von Meta im Geschäft ein, etwa KI-Helfer, die selbständig Kundenanfragen beantworten, lohnt sich ein Blick in die Bedingungen, bevor die gemeldete Änderung am 30. Oktober gelten soll. Klären Sie, wer in Ihrem Betrieb solche Funktionen nutzt, und legen Sie fest, welche Antworten eine Person prüft, bevor sie Ihre Kundschaft erreichen.",
+      "vaiacon": "In der KI-Standortanalyse im Betrieb klären wir mit Ihnen, wo Ihr Team KI-Funktionen von Meta und anderen Anbietern nutzt. Im Training oder Workshop (Halbtag) halten wir Spielregeln fest. Dazu gehört, welche Antworten eine Person prüft, bevor sie an Kundinnen und Kunden gehen.",
+      "bereich": "ki-kompetenz",
+      "achtung": "Der Bericht stammt aus zweiter Hand. Was für Ihr Konto gilt, steht in den Bedingungen selbst, die wir nicht einsehen konnten. Zur Schweiz enthalten die geprüften Quellen keine Angabe. Das ersetzt keine Rechtsauskunft.",
+      "quellen": [
+        {
+          "titel": "Startup Fortune: Metas neue Geschäftsbedingungen machen Kunden für KI-Fehler haftbar",
+          "url": "https://startupfortune.com/metas-new-business-terms-make-customers-liable-for-its-ais-mistakes/"
+        }
+      ],
+      "wichtigkeit": 2
+    }
+  ]
+}

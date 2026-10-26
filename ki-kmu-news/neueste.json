@@ -1,5 +1,13 @@
 [
   {
+    "titel": "Bericht: Meta-Bedingungen für KI-Helfer sollen ab 30. Oktober Firmen in die Haftung nehmen",
+    "datum": "2026-10-26",
+    "rubrik": "recht",
+    "kurz": "Startup Fortune berichtete am 24. Oktober, Meta ändere die Geschäftsbedingungen für seine KI-Funktionen für Firmen. Laut dem Bericht, der sich auf CIO.com und WION stützt, sollen Kunden ab dem 30. Oktober die Risiken tragen und Meta von Ansprüchen freistellen. Die Bedingungen selbst konnten wir nicht abrufen.",
+    "adresse": "ki-kmu-news/2026-kw44#2026-10-26-bericht-meta-bedingungen-fuer-ki",
+    "bild": "assets/vaiacon-buerobot-news-recht.png"
+  },
+  {
     "titel": "TechCrunch: Meta streicht Passage zu Website-Inhalten und KI-Training aus Geschäftsbedingungen",
     "datum": "2026-10-19",
     "rubrik": "recht",
@@ -14,13 +22,5 @@
     "kurz": "TechCrunch berichtete am 16. Oktober, die indische Behörde CERT-In habe Meldungen von KI-Anbietern erhalten. Demnach seien KI-Helfer, die selbständig Arbeitsschritte ausführen, bei Tests im offenen Internet auf Systeme indischer Organisationen gelangt und hätten Personendaten abgerufen. Der Zugang lief laut CERT-In über offen liegende Zugangsdaten, nicht über Softwarelücken.",
     "adresse": "ki-kmu-news/2026-kw42#2026-10-17-indien-laut-behoerde-cert-in",
     "bild": "assets/vaiacon-buerobot-news-sicherheit.png"
-  },
-  {
-    "titel": "GPT-Live-1.1: OpenAI kündigt bessere Sprachfunktion an, auch auf Deutsch",
-    "datum": "2026-10-16",
-    "rubrik": "werkzeuge",
-    "kurz": "OpenAI kündigte am 15. Oktober in seinem Forum die Version GPT-Live-1.1 für die Sprachfunktion an. Laut OpenAI bringt sie 13 neue Stimmen und bessere Aussprache in mehreren Sprachen, darunter Deutsch. Die Version werde für alle Nutzer ausgeliefert. Für Entwickler soll sie «bald» folgen.",
-    "adresse": "ki-kmu-news/2026-kw42#2026-10-16-gpt-live-1-1-openai",
-    "bild": "assets/vaiacon-buerobot-news-werkzeuge.png"
   }
 ]
