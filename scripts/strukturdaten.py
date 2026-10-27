@@ -88,6 +88,35 @@ ORGANISATION = {
         "addressCountry": "CH",
     },
     "areaServed": {"@type": "Country", "name": "Schweiz"},
+    "contactPoint": [
+        {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "name": "Chat und Kontaktformular",
+            "url": f"{BASIS}/kontakt",
+            "email": "hallo@vaiacon.ch",
+            "availableLanguage": "de-CH",
+            "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+                "opens": "00:00",
+                "closes": "23:59",
+            },
+        },
+        {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "name": "Telefon",
+            "telephone": "+41 44 500 10 56",
+            "availableLanguage": "de-CH",
+            "hoursAvailable": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "08:30",
+                "closes": "17:00",
+            },
+        },
+    ],
     "knowsLanguage": "de-CH",
     "founder": [
         {"@type": "Person", "name": "André Ulrich", "jobTitle": "Mitgründer, Strategie und Marketing"},
@@ -335,6 +364,7 @@ Für wen: Betriebe mit 5 bis 30 Mitarbeitenden und eigenem Büro (Handwerk,
 Treuhand, Praxen, Verwaltungen).
 
 Kontakt: hallo@vaiacon.ch · 044 500 10 56 · Lehenstrasse 74, 8037 Zürich
+Erreichbarkeit: Chat und Kontaktformular jederzeit, Antwort in der Regel innert eines Arbeitstages. Telefon Montag bis Freitag, 08:30 bis 17:00 Uhr.
 Erster Schritt: kostenloses Erstgespräch (eine halbe Stunde, am Telefon oder
 am Bildschirm), die kostenlose Erstanalyse zur Zeitersparnis oder der
 kostenlose Website-Check auf vaiacon.ch. Wir antworten in der Regel innert

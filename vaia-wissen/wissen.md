@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 20.10.2026 · Eintrag 902119a Kontakt: Telefonnummer 044 500 10 56 in Fusszeile, Impressum, Kontaktseite, News und Strukturdaten
+> Stand: 26.10.2026 · Eintrag 5abde6c KI-News für KMU 2026-10-26: Bericht: Meta-Bedingungen für KI-Helfer sollen ab 30. Oktobe
 
 ## Wie du antwortest
 
@@ -535,11 +535,12 @@ Zum Inhalt springen
 KI-NEWS FÜR KMU · MIT WOCHENFAZIT
 KI-News für Schweizer KMU: was Neuigkeiten für Ihren Betrieb heissen
 Neue Beiträge während der Woche, mit Wochenfazit. Zu jeder Meldung: was passiert ist, was sie für ein KMU mit 5 bis 30 Mitarbeitenden heisst und worauf Sie achten sollten. Mit Quellen, Fachbegriffe kurz erklärt.
-Wochenfazit KW 43 Laut TechCrunch will Microsoft KI-Helfer im Betrieb künftig als mögliches Risiko überwachen. Das Unternehmen verkauft die passenden Sicherheitsprodukte selbst. Für Ihren Betrieb gilt unabhängig davon: Legen Sie fest, worauf ein KI-Helfer zugreifen darf. Zudem soll Meta laut TechCrunch eine umstrittene Passage zu Website-Inhalten aus den Bedingungen gestrichen haben. Die Bedingungen selbst haben wir nicht geprüft.
-Aktuelle Woche: KW 43 · 19. – 25. Oktober 2026 · ganze Woche lesen →
-TechCrunch berichtete am 17. Oktober, Meta habe aus den Bedingungen für Geschäftskonten eine Passage entfernt. Rechtsexperten hatten sie so gelesen, dass Meta Inhalte von Websites der Kundschaft auch für KI-Training nutzen dürfte. Laut Meta ändert sich nichts daran, wie die Firma das Web durchsucht.
+Wochenfazit KW 44 Laut Startup Fortune soll Meta ab dem 30. Oktober die Bedingungen für KI-Funktionen für Firmen ändern und Risiken auf die Kunden übertragen. Bestätigt ist das nicht, denn die Bedingungen selbst konnten wir nicht prüfen. Wer KI-Funktionen von Meta nutzt, schaut sie am besten selbst an.
+Aktuelle Woche: KW 44 · 26. Oktober – 1. November 2026 · ganze Woche lesen →
+Startup Fortune berichtete am 24. Oktober, Meta ändere die Geschäftsbedingungen für seine KI-Funktionen für Firmen. Laut dem Bericht, der sich auf CIO.com und WION stützt, sollen Kunden ab dem 30. Oktober die Risiken tragen und Meta von Ansprüchen freistellen. Die Bedingungen selbst konnten wir nicht abrufen.
 Was das für Ihr KMU heisst →
 Die letzten Wochen
+KW 44 · 26. Oktober – 1. November 2026 1 Beitrag
 KW 43 · 19. – 25. Oktober 2026 1 Beitrag
 KW 42 · 12. – 18. Oktober 2026 3 Beiträge
 KW 41 · 5. – 11. Oktober 2026 5 Beiträge
@@ -676,6 +677,7 @@ Rückruf anfordern →
 LIEBER ANGERUFEN WERDEN?
 Rückruf anfordern
 Wir richten uns nach Ihrer Wunschzeit, soweit es möglich ist.
+Telefon: Montag bis Freitag, 08:30 bis 17:00 Uhr. Chat und Formular sind jederzeit offen.
 Felder mit * sind Pflichtfelder.
 Name *
 Telefonnummer *
