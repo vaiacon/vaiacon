@@ -130,12 +130,25 @@ def jsonld(slug: str, name: str, titel: str, beschr: str) -> str:
     return json.dumps(g, ensure_ascii=False, indent=2)
 
 
+def beschreibung(name: str, lead: str, grenze: int = 160) -> str:
+    """Anfang + so viele Sätze des Leads, wie in die Grenze passen (mindestens einer), dann der Hinweis auf die Erstanalyse."""
+    anfang, ende = f"Automationen für {name}:", " Kostenlose Erstanalyse."
+    saetze = [x.strip() + "." for x in lead.split(". ") if x.strip()]
+    saetze = [x.replace("..", ".") for x in saetze]
+    text = anfang + " " + saetze[0]
+    for satz in saetze[1:]:
+        if len(text + " " + satz + ende) <= grenze:
+            text += " " + satz
+    return text + ende
+
+
 def seite(slug: str, daten: dict, vorlage: str) -> str:
     b = daten[slug]
     name = b["name"]
     h1, lead, schluss = TEXTE[slug]
-    titel = f"Automatisierung {name}: Büroarbeit automatisieren · vaiacon"
-    beschr = (f"Automationen für {name}: {lead} Drei Grössen, den Preis klären wir nach der kostenlosen Erstanalyse.")
+    # 27.10.2026: Titel höchstens 60, Beschreibung höchstens 160 Zeichen (Google kürzt sonst mitten im Satz).
+    titel = f"Büroarbeit automatisieren für {name} · vaiacon"
+    beschr = beschreibung(name, lead)
     werte = {
         "titel": e(titel), "beschreibung": e(beschr), "pfad": pfad(slug), "slug": slug, "name": e(name),
         "h1": e(h1), "lead": e(lead), "schluss": e(schluss), "version": VERSION,

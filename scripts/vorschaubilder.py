@@ -59,6 +59,8 @@ BILDER = {
                    "vaiacon-buerobot-begleitung-laptop.png", "Der vaiacon-Roboter sitzt am Laptop"),
     "ueber-uns": ("Über uns", "Die Menschen hinter vaiacon.",
                   "vaiacon-buerobot-ueber-uns-willkommen.png", "Der vaiacon-Roboter heisst Sie willkommen"),
+    "erstanalyse": ("Erstanalyse", "Kostenlose Erstanalyse für Ihr KMU.",
+                    "vaiacon-buerobot-sichtbarkeit-lupe.png", "Der vaiacon-Roboter mit Lupe"),
     "academy": ("Kurse", "KI-Weiterbildung für Schweizer KMU.",
                 "vaiacon-buerobot-academy-schreibtisch.png", "Der vaiacon-Roboter lernt am Schreibtisch"),
 }
@@ -68,6 +70,7 @@ SEITEN = {
     "bot.html": "automatisierungen", "visibility.html": "sichtbarkeit",
     "learning.html": "schulung", "service.html": "begleitung", "ueber-uns.html": "ueber-uns",
     "academy/index.html": "academy", "academy/lernplan.html": "academy",
+    "erstanalyse/index.html": "erstanalyse",
     "agb.html": "startseite", "datenschutz.html": "startseite",
 }
 

@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 27.10.2026 · Eintrag 52788b8 SEO: Canonical der Startseite absolut, Erreichbarkeit als contactPoint
+> Stand: 27.10.2026 · Eintrag 92abfe6 SEO: robots.txt nennt KI-Crawler ausdruecklich
 
 ## Wie du antwortest
 
