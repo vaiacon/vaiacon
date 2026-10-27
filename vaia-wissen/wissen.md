@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 26.10.2026 · Eintrag 5abde6c KI-News für KMU 2026-10-26: Bericht: Meta-Bedingungen für KI-Helfer sollen ab 30. Oktobe
+> Stand: 27.10.2026 · Eintrag 52788b8 SEO: Canonical der Startseite absolut, Erreichbarkeit als contactPoint
 
 ## Wie du antwortest
 
@@ -464,6 +464,17 @@ BETREUUNG UND BEGLEITUNG
 Eingerichtet ist erst der Anfang.
 Die Betreuung hält am Laufen, was wir für Sie aufgebaut haben: Überwachung, Fehlerbehebung und kleine Anpassungen. Die Begleitung gibt Ihnen feste Beratungszeit für Fragen, Ihr Team und neue Ideen.
 Beratungsgespräch vereinbaren →
+Kurz gesagt
+Für wen ist es geeignet
+Betriebe, die eine Lösung von vaiacon im Einsatz haben oder laufende Beratung für Fragen, Team und neue Ideen wollen.
+Problem
+Anbieter ändern Schnittstellen, Suchmaschinen und KI-Systeme ändern ihre Regeln, Abläufe im Betrieb verschieben sich. Ein Ausfall fällt oft erst auf, wenn etwas fehlt.
+Was Sie bekommen
+Betreuung: Überwachung, Fehlerbehebung und eine Stunde Anpassung im Monat für alle Automationen und Chatbots, die wir gebaut haben. Begleitung: feste Beratungs- und Arbeitszeit für Fragen, Team und neue Ideen.
+Ablauf
+Der Monatspreis richtet sich nach dem Umfang und wird nach dem Erstgespräch festgelegt. Beides ist auf Ende des Folgemonats kündbar.
+Region
+Gesamte Deutschschweiz
 WARUM BETREUUNG
 Was läuft, braucht jemanden, der hinschaut.
 Anbieter ändern Schnittstellen, Suchmaschinen und KI-Systeme ändern ihre Regeln, Abläufe im Betrieb verschieben sich. Was heute gut läuft, braucht deshalb Pflege. Und ein Ausfall fällt oft erst auf, wenn etwas fehlt.

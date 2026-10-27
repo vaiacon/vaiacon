@@ -163,17 +163,26 @@ def preis_text(pos: dict, form: str | None = None) -> str:
     return text
 
 
-def angebot(name: str, art: str, text: str, pfad: str, bereich: str | None = None) -> dict:
+def angebot(name: str, art: str, text: str, pfad: str, bereich: str | None = None, zielgruppe: str | None = None) -> dict:
     block = {
         "@context": "https://schema.org",
         "@type": "Service",
+        "@id": f"{BASIS}/{pfad}#service",
         "name": name,
         "serviceType": art,
         "description": text,
         "url": f"{BASIS}/{pfad}",
         "provider": {"@id": f"{BASIS}/#organisation"},
         "areaServed": {"@type": "Country", "name": "Schweiz"},
+        "availableChannel": {
+            "@type": "ServiceChannel",
+            "name": "Erstgespräch",
+            "serviceUrl": f"{BASIS}/kontakt",
+        },
     }
+    if zielgruppe:
+        # 27.10.2026: Wortlaut wie «Für wen» auf der Seite, damit Auszeichnung und sichtbarer Text übereinstimmen.
+        block["audience"] = {"@type": "BusinessAudience", "audienceType": zielgruppe, "geographicArea": {"@type": "Country", "name": "Schweiz"}}
     if bereich:
         pos = [p for p in BEREICHE[bereich]["positionen"] if p.get("status") != "pruefen"]
         # 11.10.2026: keine Preise auf der Website, jedes Angebot wird persönlich besprochen.
@@ -201,24 +210,28 @@ ANGEBOTE = {
         "Wir verbessern die Voraussetzungen dafür, dass Google und KI-Assistenten Ihr Angebot richtig einordnen "
         "(Fachwörter: SEO und GEO). Kostenloser Website-Check auf vaiacon.ch, Sichtbarkeits-Check kompakt, "
         "Sichtbarkeits-Audit vertieft, Seiten überarbeiten und laufende Betreuung, mit offen genannten Preisen.",
-        "visibility", "sichtbarkeit"),
+        "visibility", "sichtbarkeit",
+        zielgruppe="Schweizer KMU, die wollen, dass Google und KI-Assistenten ihr Angebot richtig einordnen."),
     "learning.html": angebot(
         "KI-Kompetenz", "KI-Schulung und Weiterbildung",
         "Trainings, Workshops, Coaching für Führungskräfte, Online-Kurse, Lernvideos und tägliche kleine Lerneinheiten, "
         "zugeschnitten auf Ihren Betrieb.",
-        "learning", "ki-kompetenz"),
+        "learning", "ki-kompetenz",
+        zielgruppe="Betriebe, deren Team und Führungskräfte KI sicher und nützlich einsetzen sollen."),
     "bot.html": angebot(
         "Automationen", "Automatisierung von Büroarbeit",
         "Belege erfassen, Offertenentwürfe erstellen, Korrespondenz und Anfragen automatisch vorbereiten, dazu "
         "Chatbot mit Firmenwissen, Telefonassistent und Anbindung an Ihre Software.",
-        "bot", "automationen"),
+        "bot", "automationen",
+        zielgruppe="Schweizer KMU mit wiederkehrender Büroarbeit wie Belegen, Offerten, Korrespondenz und Anfragen."),
     "service.html": angebot(
         "Betreuung und Begleitung", "Betreuung und Begleitung",
         "Betreuung: Überwachung, Fehlerbehebung und eine Stunde Anpassung im Monat für alle Automationen und "
         "Chatbots, die wir gebaut haben, ein Preis je Kunde. Begleitung: feste Beratungs- und Arbeitszeit für "
         "Fragen, Team und neue Ideen. Beides kündbar auf Ende Folgemonat. Dazu Beratung nach Aufwand und die "
         "KI-Standortanalyse im Betrieb.",
-        "service", "begleitung"),
+        "service", "begleitung",
+        zielgruppe="Betriebe, die eine Lösung von vaiacon im Einsatz haben oder laufende Beratung für Fragen, Team und neue Ideen wollen."),
 }
 
 # Eigene Angebotsseite, nicht im Firmenkatalog (dort steht sie schon unter Automationen: Chatbot, Telefonassistent).
@@ -244,8 +257,8 @@ ORGANISATION["hasOfferCatalog"] = {
     "name": "Angebot von vaiacon",
     "itemListElement": [
         {"@type": "Offer", "itemOffered": {
-            "@type": "Service", "name": a["name"], "serviceType": a["serviceType"], "url": a["url"],
-            "description": a["description"],
+            "@type": "Service", "@id": a["@id"], "name": a["name"], "serviceType": a["serviceType"], "url": a["url"],
+            "description": a["description"], **({"audience": a["audience"]} if "audience" in a else {}),
         }}
         for k, a in ANGEBOTE.items() if k != "assistenten.html"
     ],

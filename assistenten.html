@@ -147,40 +147,76 @@
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
+          "@id": "https://vaiacon.ch/visibility#service",
           "name": "Sichtbarkeit",
           "serviceType": "SEO und GEO",
           "url": "https://vaiacon.ch/visibility",
-          "description": "Wir verbessern die Voraussetzungen dafür, dass Google und KI-Assistenten Ihr Angebot richtig einordnen (Fachwörter: SEO und GEO). Kostenloser Website-Check auf vaiacon.ch, Sichtbarkeits-Check kompakt, Sichtbarkeits-Audit vertieft, Seiten überarbeiten und laufende Betreuung, mit offen genannten Preisen."
+          "description": "Wir verbessern die Voraussetzungen dafür, dass Google und KI-Assistenten Ihr Angebot richtig einordnen (Fachwörter: SEO und GEO). Kostenloser Website-Check auf vaiacon.ch, Sichtbarkeits-Check kompakt, Sichtbarkeits-Audit vertieft, Seiten überarbeiten und laufende Betreuung, mit offen genannten Preisen.",
+          "audience": {
+            "@type": "BusinessAudience",
+            "audienceType": "Schweizer KMU, die wollen, dass Google und KI-Assistenten ihr Angebot richtig einordnen.",
+            "geographicArea": {
+              "@type": "Country",
+              "name": "Schweiz"
+            }
+          }
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
+          "@id": "https://vaiacon.ch/learning#service",
           "name": "KI-Kompetenz",
           "serviceType": "KI-Schulung und Weiterbildung",
           "url": "https://vaiacon.ch/learning",
-          "description": "Trainings, Workshops, Coaching für Führungskräfte, Online-Kurse, Lernvideos und tägliche kleine Lerneinheiten, zugeschnitten auf Ihren Betrieb."
+          "description": "Trainings, Workshops, Coaching für Führungskräfte, Online-Kurse, Lernvideos und tägliche kleine Lerneinheiten, zugeschnitten auf Ihren Betrieb.",
+          "audience": {
+            "@type": "BusinessAudience",
+            "audienceType": "Betriebe, deren Team und Führungskräfte KI sicher und nützlich einsetzen sollen.",
+            "geographicArea": {
+              "@type": "Country",
+              "name": "Schweiz"
+            }
+          }
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
+          "@id": "https://vaiacon.ch/bot#service",
           "name": "Automationen",
           "serviceType": "Automatisierung von Büroarbeit",
           "url": "https://vaiacon.ch/bot",
-          "description": "Belege erfassen, Offertenentwürfe erstellen, Korrespondenz und Anfragen automatisch vorbereiten, dazu Chatbot mit Firmenwissen, Telefonassistent und Anbindung an Ihre Software."
+          "description": "Belege erfassen, Offertenentwürfe erstellen, Korrespondenz und Anfragen automatisch vorbereiten, dazu Chatbot mit Firmenwissen, Telefonassistent und Anbindung an Ihre Software.",
+          "audience": {
+            "@type": "BusinessAudience",
+            "audienceType": "Schweizer KMU mit wiederkehrender Büroarbeit wie Belegen, Offerten, Korrespondenz und Anfragen.",
+            "geographicArea": {
+              "@type": "Country",
+              "name": "Schweiz"
+            }
+          }
         }
       },
       {
         "@type": "Offer",
         "itemOffered": {
           "@type": "Service",
+          "@id": "https://vaiacon.ch/service#service",
           "name": "Betreuung und Begleitung",
           "serviceType": "Betreuung und Begleitung",
           "url": "https://vaiacon.ch/service",
-          "description": "Betreuung: Überwachung, Fehlerbehebung und eine Stunde Anpassung im Monat für alle Automationen und Chatbots, die wir gebaut haben, ein Preis je Kunde. Begleitung: feste Beratungs- und Arbeitszeit für Fragen, Team und neue Ideen. Beides kündbar auf Ende Folgemonat. Dazu Beratung nach Aufwand und die KI-Standortanalyse im Betrieb."
+          "description": "Betreuung: Überwachung, Fehlerbehebung und eine Stunde Anpassung im Monat für alle Automationen und Chatbots, die wir gebaut haben, ein Preis je Kunde. Begleitung: feste Beratungs- und Arbeitszeit für Fragen, Team und neue Ideen. Beides kündbar auf Ende Folgemonat. Dazu Beratung nach Aufwand und die KI-Standortanalyse im Betrieb.",
+          "audience": {
+            "@type": "BusinessAudience",
+            "audienceType": "Betriebe, die eine Lösung von vaiacon im Einsatz haben oder laufende Beratung für Fragen, Team und neue Ideen wollen.",
+            "geographicArea": {
+              "@type": "Country",
+              "name": "Schweiz"
+            }
+          }
         }
       }
     ]
@@ -191,6 +227,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Service",
+  "@id": "https://vaiacon.ch/assistenten#service",
   "name": "Telefon-Assistent und Chatbot mit Firmenwissen",
   "serviceType": "Telefon-Assistent und Chatbot",
   "description": "Vaiacon richtet bei Schweizer KMU einen Telefon-Assistenten (nimmt Anrufe entgegen, beantwortet Fragen, erfasst Termine und Rückrufe, verbindet weiter) und einen Chatbot mit Firmenwissen (beantwortet Fragen aus den eigenen Unterlagen) ein. Einrichtung, Wissen einpflegen, Stimme und Ton, Anbindung, Tests und Betreuung aus einer Hand, nach Schweizer Datenschutz (revDSG).",
@@ -201,6 +238,11 @@
   "areaServed": {
     "@type": "Country",
     "name": "Schweiz"
+  },
+  "availableChannel": {
+    "@type": "ServiceChannel",
+    "name": "Erstgespräch",
+    "serviceUrl": "https://vaiacon.ch/kontakt"
   }
 }
 </script>
