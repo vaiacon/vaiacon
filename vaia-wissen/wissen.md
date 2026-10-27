@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 27.10.2026 · Eintrag 92abfe6 SEO: robots.txt nennt KI-Crawler ausdruecklich
+> Stand: 27.10.2026 · Eintrag 5bd29b4 SEO: Titel und Beschreibungen der Branchenseiten gekuerzt, Vorschaubild Erstanalyse
 
 ## Wie du antwortest
 

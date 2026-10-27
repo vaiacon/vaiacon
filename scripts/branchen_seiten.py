@@ -15,7 +15,9 @@ from __future__ import annotations
 
 import html
 import json
+import subprocess
 import sys
+from datetime import date
 from pathlib import Path
 
 WURZEL = Path(__file__).resolve().parents[1]
@@ -104,14 +106,15 @@ def leiste(daten: dict, eigene: str) -> str:
     return "\n".join(zeilen)
 
 
-def jsonld(slug: str, name: str, titel: str, beschr: str) -> str:
+def jsonld(slug: str, name: str, titel: str, beschr: str, datum: str) -> str:
     url = f"{BASIS}/{pfad(slug)}"
     g = {
         "@context": "https://schema.org",
         "@graph": [
             {
                 "@type": "WebPage", "@id": url, "url": url, "name": titel, "description": beschr,
-                "inLanguage": "de-CH", "isPartOf": {"@id": f"{BASIS}/#organisation"},
+                "inLanguage": "de-CH", "isPartOf": {"@id": f"{BASIS}/#website"},
+                "about": {"@id": f"{BASIS}/#organisation"}, "dateModified": datum,
             },
             {
                 "@type": "Service", "name": f"Automationen für {name}", "serviceType": "Büroarbeit automatisieren",
@@ -142,7 +145,7 @@ def beschreibung(name: str, lead: str, grenze: int = 160) -> str:
     return text + ende
 
 
-def seite(slug: str, daten: dict, vorlage: str) -> str:
+def seite(slug: str, daten: dict, vorlage: str, datum: str) -> str:
     b = daten[slug]
     name = b["name"]
     h1, lead, schluss = TEXTE[slug]
@@ -154,13 +157,23 @@ def seite(slug: str, daten: dict, vorlage: str) -> str:
         "h1": e(h1), "lead": e(lead), "schluss": e(schluss), "version": VERSION,
         "nervt": "".join(f"<li>{e(x)}</li>" for x in b["nervt"]),
         "karten": karten(b), "leiste": leiste(daten, slug),
-        "jsonld": jsonld(slug, name, titel, beschr),
+        "jsonld": jsonld(slug, name, titel, beschr, datum),
     }
     t = vorlage
     for k, v in werte.items():
         t = t.replace("{{" + k + "}}", v)
     assert "{{" not in t, f"Platzhalter übrig in {slug}"
     return t
+
+
+def zuletzt_geaendert(datei: Path) -> str:
+    """Wie lastmod in der Sitemap: letzter Commit der Datei, heute bei ungespeicherten Änderungen."""
+    def git(*a):
+        return subprocess.run(["git", "-C", str(WURZEL), *a], capture_output=True, text=True).stdout.strip()
+    rel = str(datei.relative_to(WURZEL))
+    if git("status", "--porcelain", "--", rel):
+        return date.today().isoformat()
+    return git("log", "-1", "--format=%cs", "--", rel) or date.today().isoformat()
 
 
 def main() -> int:
@@ -172,7 +185,11 @@ def main() -> int:
         if slug == "alle":
             continue
         ziel = WURZEL / f"{pfad(slug)}.html"
-        neu = seite(slug, daten, vorlage)
+        heute = date.today().isoformat()
+        neu = seite(slug, daten, vorlage, zuletzt_geaendert(ziel))
+        alt_vorab = ziel.read_text(encoding="utf-8") if ziel.exists() else None
+        if neu != alt_vorab and zuletzt_geaendert(ziel) != heute:
+            neu = seite(slug, daten, vorlage, heute)   # dieser Lauf ändert die Seite: dateModified heute
         alt = ziel.read_text(encoding="utf-8") if ziel.exists() else None
         if nur_pruefen:
             if alt != neu:

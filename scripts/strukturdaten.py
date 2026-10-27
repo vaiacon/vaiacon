@@ -300,6 +300,31 @@ def zuletzt_geaendert(datei: str) -> str:
     return git("log", "-1", "--format=%cs", "--", datei) or date.today().isoformat()
 
 
+SEITENTYP = {"kontakt.html": "ContactPage", "ueber-uns.html": "AboutPage"}
+
+
+def webseite(name: str, seite: str, datum: str) -> dict:
+    """WebPage mit dateModified (27.10.2026). Datum wie lastmod in der Sitemap: letzter Commit der Datei,
+    heute, wenn die Datei ungespeichert oder durch diesen Lauf verändert wird."""
+    pfad = {datei: p for p, datei in SITEMAP}[name]
+    url = f"{BASIS}/{pfad}"
+    titel = re.search(r"<title>(.*?)</title>", seite, re.S).group(1).strip()
+    block = {
+        "@context": "https://schema.org",
+        "@type": SEITENTYP.get(name, "WebPage"),
+        "@id": f"{url}#seite",
+        "url": url,
+        "name": html.unescape(titel),
+        "inLanguage": "de-CH",
+        "isPartOf": {"@id": f"{BASIS}/#website"},
+        "about": {"@id": f"{BASIS}/#organisation"},
+        "dateModified": datum,
+    }
+    if name in ANGEBOTE:
+        block["mainEntity"] = {"@id": ANGEBOTE[name]["@id"]}
+    return block
+
+
 def news_eintraege() -> list[tuple[str, str]]:
     """(Pfad, lastmod) fuer Uebersicht, Archiv und jede Woche. Datum = juengster Beitrag oder dessen Praezisierung."""
     wochen = []
@@ -507,17 +532,23 @@ def main() -> None:
             continue
         seite = pfad.read_text(encoding="utf-8")
         ohne = re.sub(re.escape(ANFANG) + r".*?" + re.escape(ENDE) + r"\n?", "", seite, flags=re.S)
-        bloecke = [ORGANISATION]
-        if name in ANGEBOTE:
-            bloecke.append(ANGEBOTE[name])
-        if name == "index.html":
-            bloecke.append(WEBSITE)
-        if name in ("faq.html", "index.html"):
-            bloecke.append(faq_block(ohne))
-        einschub = ANFANG + "\n" + "\n".join(als_skript(b) for b in bloecke) + "\n" + ENDE + "\n"
         if ohne.count("</head>") != 1:
             raise SystemExit(f"{name}: </head> nicht genau einmal gefunden")
-        neu = ohne.replace("</head>", einschub + "</head>")
+
+        def bauen(datum: str) -> tuple[str, list]:
+            bloecke = [ORGANISATION, webseite(name, ohne, datum)]
+            if name in ANGEBOTE:
+                bloecke.append(ANGEBOTE[name])
+            if name == "index.html":
+                bloecke.append(WEBSITE)
+            if name in ("faq.html", "index.html"):
+                bloecke.append(faq_block(ohne))
+            einschub = ANFANG + "\n" + "\n".join(als_skript(b) for b in bloecke) + "\n" + ENDE + "\n"
+            return ohne.replace("</head>", einschub + "</head>"), bloecke
+
+        neu, bloecke = bauen(zuletzt_geaendert(name))
+        if neu != seite and zuletzt_geaendert(name) != date.today().isoformat():
+            neu, bloecke = bauen(date.today().isoformat())   # dieser Lauf ändert die Datei: heute
         if neu != seite or AUSGABE != WURZEL:
             geaendert.append(f"{name} ({len(bloecke)} Block/Bloecke)")
             if not probe:
