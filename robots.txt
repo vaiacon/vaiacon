@@ -1,3 +1,30 @@
+# Entscheid 27.10.2026 (André): Alle Crawler sind ausdrücklich willkommen, auch die
+# der KI-Anbieter, für Suche und Antworten wie für das Training. Wir verkaufen
+# Sichtbarkeit in KI-Antworten; auf der Website steht nichts, was nicht öffentlich
+# sein soll. Alle Namen stehen in einer Gruppe und teilen sich damit dieselben
+# Regeln unten (RFC 9309). Eine eigene Gruppe pro Crawler würde die allgemeinen
+# Regeln für ihn aufheben, dann müssten die Sperren dort wiederholt werden.
+# Wer das ändert, ändert es für die ganze Gruppe oder legt eine eigene Gruppe an.
+
+# Suche und Abruf auf Zuruf eines Menschen (nennen uns als Quelle)
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: Googlebot
+User-agent: Bingbot
+
+# Training künftiger Modelle
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+User-agent: Meta-ExternalAgent
+
+# Alle anderen
 User-agent: *
 Allow: /
 
