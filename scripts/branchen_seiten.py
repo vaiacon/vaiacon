@@ -115,6 +115,7 @@ def jsonld(slug: str, name: str, titel: str, beschr: str, datum: str) -> str:
                 "@type": "WebPage", "@id": url, "url": url, "name": titel, "description": beschr,
                 "inLanguage": "de-CH", "isPartOf": {"@id": f"{BASIS}/#website"},
                 "about": {"@id": f"{BASIS}/#organisation"}, "dateModified": datum,
+                "breadcrumb": {"@id": f"{url}#brotkrumen"},
             },
             {
                 "@type": "Service", "name": f"Automationen für {name}", "serviceType": "Büroarbeit automatisieren",
@@ -122,10 +123,11 @@ def jsonld(slug: str, name: str, titel: str, beschr: str, datum: str) -> str:
                 "description": beschr, "url": url,
             },
             {
-                "@type": "BreadcrumbList",
+                "@type": "BreadcrumbList", "@id": f"{url}#brotkrumen",
                 "itemListElement": [
-                    {"@type": "ListItem", "position": 1, "name": "Automationen", "item": f"{BASIS}/bot"},
-                    {"@type": "ListItem", "position": 2, "name": name, "item": url},
+                    {"@type": "ListItem", "position": 1, "name": "Startseite", "item": f"{BASIS}/"},
+                    {"@type": "ListItem", "position": 2, "name": "Automationen", "item": f"{BASIS}/bot"},
+                    {"@type": "ListItem", "position": 3, "name": name, "item": url},
                 ],
             },
         ],

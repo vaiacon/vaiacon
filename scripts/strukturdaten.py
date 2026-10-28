@@ -300,6 +300,38 @@ def zuletzt_geaendert(datei: str) -> str:
     return git("log", "-1", "--format=%cs", "--", datei) or date.today().isoformat()
 
 
+# Brotkrumen (27.10.2026): Pfad von der Startseite zur Seite. Name = Seitenbezeichnung wie in der Navigation,
+# bei Unterseiten ein Zwischenschritt. Die Startseite selbst hat keine.
+BROTKRUMEN = {
+    "visibility.html": [("Sichtbarkeit", "visibility")],
+    "learning.html": [("KI-Kompetenz", "learning")],
+    "bot.html": [("Automationen", "bot")],
+    "assistenten.html": [("Automationen", "bot"), ("Telefon-Assistent und Chatbot", "assistenten")],
+    "service.html": [("Betreuung und Begleitung", "service")],
+    "ueber-uns.html": [("Über uns", "ueber-uns")],
+    "referenzen.html": [("Referenzen", "referenzen")],
+    "faq.html": [("FAQ", "faq")],
+    "kontakt.html": [("Kontakt", "kontakt")],
+    "impressum.html": [("Impressum", "impressum")],
+    "datenschutz.html": [("Datenschutz", "datenschutz")],
+    "agb.html": [("AGB", "agb")],
+}
+
+
+def brotkrumen(name: str) -> dict:
+    schritte = [("Startseite", "")] + BROTKRUMEN[name]
+    url = f"{BASIS}/{dict((datei, p) for p, datei in SITEMAP)[name]}"
+    return {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "@id": f"{url}#brotkrumen",
+        "itemListElement": [
+            {"@type": "ListItem", "position": i, "name": titel, "item": f"{BASIS}/{pfad}"}
+            for i, (titel, pfad) in enumerate(schritte, 1)
+        ],
+    }
+
+
 SEITENTYP = {"kontakt.html": "ContactPage", "ueber-uns.html": "AboutPage"}
 
 
@@ -320,6 +352,8 @@ def webseite(name: str, seite: str, datum: str) -> dict:
         "about": {"@id": f"{BASIS}/#organisation"},
         "dateModified": datum,
     }
+    if name in BROTKRUMEN:
+        block["breadcrumb"] = {"@id": f"{url}#brotkrumen"}
     if name in ANGEBOTE:
         block["mainEntity"] = {"@id": ANGEBOTE[name]["@id"]}
     return block
@@ -537,6 +571,8 @@ def main() -> None:
 
         def bauen(datum: str) -> tuple[str, list]:
             bloecke = [ORGANISATION, webseite(name, ohne, datum)]
+            if name in BROTKRUMEN:
+                bloecke.append(brotkrumen(name))
             if name in ANGEBOTE:
                 bloecke.append(ANGEBOTE[name])
             if name == "index.html":

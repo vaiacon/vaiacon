@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 27.10.2026 · Eintrag 707335f SEO: WebPage mit dateModified auf allen Seiten
+> Stand: 28.10.2026 · Eintrag b451185 Besucherstatistik: Umami-Zähler (stats.sam4live.com, nur vaiacon.ch) auf allen öffentlichen Seiten und in den Vorlagen, Datenschutzerklärung und Bot-Wissen angepasst
 
 ## Wie du antwortest
 
