@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 27.10.2026 · Eintrag 5bd29b4 SEO: Titel und Beschreibungen der Branchenseiten gekuerzt, Vorschaubild Erstanalyse
+> Stand: 27.10.2026 · Eintrag 707335f SEO: WebPage mit dateModified auf allen Seiten
 
 ## Wie du antwortest
 
@@ -754,7 +754,7 @@ DATENSCHUTZ
 Was mit Ihren Daten geschieht.
 Massgebend ist das revidierte Schweizer Datenschutzgesetz (revDSG). Wir erheben so wenig wie möglich und erklären hier alles, was auf dieser Website und im Kundenportal tatsächlich passiert.
 Kurz gesagt
-Diese Website verlangt kein Konto und führt keine Besucherstatistik. Sie läuft auf einem Server von Infomaniak in der Schweiz. Einiges geht ins Ausland: alles, was ein Sprachmodell für Sie auswertet. Das sind der Chat mit Vaia, der kostenlose Website-Check, die Erstanalyse, der Richtpreis-Rechner, die Einordnung «Ihr Fall». Das Sprachmodell stammt von Anthropic in den USA. Jedes davon ist unten einzeln erklärt, und der Abschnitt «Bekanntgabe ins Ausland» fasst zusammen, auf welcher Grundlage das geschieht.
+Diese Website verlangt kein Konto. Wie viele Menschen sie besuchen und welche Seiten sie lesen, zählen wir mit Umami, einem quelloffenen Statistik-Werkzeug auf unserem eigenen Server in der Schweiz. Es setzt keine Cookies und speichert keine Personendaten: IP-Adresse und Browser-Kennung werden mit einem täglich wechselnden Salz gehasht und lassen sich nicht auf Sie zurückführen. Es gehen keine Daten an Dritte. Die Website läuft auf einem Server von Infomaniak in der Schweiz. Einiges geht ins Ausland: alles, was ein Sprachmodell für Sie auswertet. Das sind der Chat mit Vaia, der kostenlose Website-Check, die Erstanalyse, der Richtpreis-Rechner, die Einordnung «Ihr Fall». Das Sprachmodell stammt von Anthropic in den USA. Jedes davon ist unten einzeln erklärt, und der Abschnitt «Bekanntgabe ins Ausland» fasst zusammen, auf welcher Grundlage das geschieht.
 Diese Erklärung gilt auch für das Kundenportal unter kunden.vaiacon.ch. Dort speichern wir mehr, weil es dort nötig ist. Was genau, steht weiter unten.
 Was beim Aufruf dieser Seite geschieht
 Die Website liegt bei Infomaniak in der Schweiz. Wir führen kein Zugriffsprotokoll und speichern keine IP-Adressen. Wer diese Seiten nur liest, hinterlässt bei uns also keine Spur.
