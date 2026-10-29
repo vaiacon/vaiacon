@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 29.10.2026 · Eintrag 5f8df54 KI-News für KMU 2026-10-29: TechCrunch: Google öffnet Gemini und Suche für Apps von Firm
+> Stand: 29.10.2026 · Eintrag 5731439 Website-Check: Auszug mit Erklaerung je Bereich, Gespraech statt Berichtsmail
 
 ## Wie du antwortest
 
@@ -269,7 +269,7 @@ Ihre Domain
 Check starten →
 Kostenlos, meist in unter einer Minute. Die Punkte sind eine Einschätzung, keine Zusage.
 Was genau geprüft wird
-Die Startseite, robots.txt, Sitemap, llms.txt sowie die verlinkte Kontakt- und Impressumsseite, in fünf Schritten: erreichbar, technische Grundlagen, strukturierte Daten, KI-Sichtbarkeit (GEO), Inhalt und Vertrauen. Tiefer gehen die bezahlten Prüfungen .
+Die Startseite, robots.txt, Sitemap, llms.txt sowie die verlinkte Kontakt- und Impressumsseite, in fünf Schritten: erreichbar, technische Grundlagen, strukturierte Daten, KI-Sichtbarkeit (GEO), Inhalt und Vertrauen. Einen detaillierten Bericht erhalten Sie von uns in einem persönlichen Gespräch.
 Muster
 72
 von 100
