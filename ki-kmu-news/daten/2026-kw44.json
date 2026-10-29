@@ -22,6 +22,24 @@
         }
       ],
       "wichtigkeit": 2
+    },
+    {
+      "id": "2026-10-29-techcrunch-google-oeffnet-gemini-und",
+      "datum": "2026-10-29",
+      "rubrik": "werkzeuge",
+      "titel": "TechCrunch: Google öffnet Gemini und Suche für Apps von Firmen, vorerst nur in den USA",
+      "kurz": "TechCrunch berichtete am 28. Oktober, Google lasse über eine neue Plattform Firmen und Entwickler eigene Apps mit Gemini und der KI-Suche verbinden. Nutzerinnen und Nutzer sollen dort Dienste anwählen und Aufgaben darin erledigen können. Der Zugang ist laut Bericht auf Entwickler in den USA beschränkt, ein Termin für die breite Einführung fehlt.",
+      "kmu": "Für Ihren Betrieb ändert sich heute nichts. Die Plattform steht nur Entwicklern in den USA offen, zur Schweiz macht der Bericht keine Angabe. Der Ansatz deutet an, dass KI-Assistenten Dienste künftig nicht nur nennen, sondern auch direkt nutzen könnten. Prüfen Sie, ob Ihre Website Angebot, Preise und Kontakt klar darstellt, und zwar so, dass auch Software sie lesen kann.",
+      "vaiacon": "Im Sichtbarkeits-Check (kompakt) prüfen wir, wie Google und KI-Assistenten Ihre Firma heute nennen. Mit «Seite überarbeiten» bringen wir Angebot und Kontaktangaben in eine Form, die Suchmaschinen und Assistenten besser einordnen können. Den Einstieg bietet der kostenlose Website-Check auf vaiacon.ch.",
+      "bereich": "sichtbarkeit",
+      "achtung": "Die Plattform ist laut TechCrunch noch in einer Testphase, und der Zeitplan für die KI-Suche ist nur mit «in den nächsten Wochen» angegeben. Ob und wann sie in der Schweiz verfügbar ist, bleibt offen. Für eine eigene Entwicklung gibt es bei kleinen Betrieben heute kaum Anlass, solange der Zugang auf die USA beschränkt ist.",
+      "quellen": [
+        {
+          "titel": "TechCrunch: As AI agents reshape the web, Google opens Gemini and Search to more apps",
+          "url": "https://techcrunch.com/2026/10/28/as-ai-agents-reshape-the-web-google-opens-gemini-and-search-to-more-apps/"
+        }
+      ],
+      "wichtigkeit": 1
     }
   ]
 }
