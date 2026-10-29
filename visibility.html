@@ -20,7 +20,7 @@
 <title>Sichtbarkeit bei Google und KI-Assistenten · vaiacon</title>
 <link rel="stylesheet" href="styles.css?v=20261005-vorschlag">
 <link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20261005-vorschlag">
-<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261019-teammail">
+<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261029-checktexte">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261019-chatstreifen">
 <link rel="stylesheet" href="ui_kits/website/kundenstimme.css?v=20261005-vorschlag">
 <link rel="icon" href="favicon.ico?v=20261014" sizes="any">
@@ -509,35 +509,27 @@
 
           <div class="sv-check__bereiche" id="sv-check-bereiche"></div>
 
-          <section class="sv-check__bestellen" id="sv-check-bestellen" aria-labelledby="sv-check-bestellen-titel">
-            <h3 id="sv-check-bestellen-titel">Vollständigen Bericht per E-Mail anfordern</h3>
-            <p class="sv-check__bestellen-lead">Alle Befunde und Empfehlungen zu <strong id="sv-check-bestellen-domain"></strong>, in allen vier Bereichen.</p>
+          <section class="sv-check__gespraech" id="sv-check-gespraech" aria-labelledby="sv-check-gespraech-titel">
+            <h3 id="sv-check-gespraech-titel">Dies ist nur ein Auszug aus einem sehr breiten Gesamtbild.</h3>
+            <p class="sv-check__gespraech-lead">Zu <strong id="sv-check-gespraech-domain"></strong> haben wir weit mehr geprüft, als hier steht. Gerne gehen wir den detaillierten Bericht in einem persönlichen Gespräch mit Ihnen durch. Dabei erläutern wir Ihnen die Bedeutung einzelner Punkte und zeigen Ihnen auf, wo Handlungsbedarf besteht. So erfahren Sie, wie sich massgeschneiderte Lösungen umsetzen lassen.</p>
 
-            <form class="vc-kontakt sv-check__bestell-form" id="sv-check-bestell-form" novalidate>
+            <form class="vc-kontakt sv-check__gespraech-form" id="sv-check-gespraech-form" novalidate>
               <div class="vc-kontakt__reihe">
                 <label>Name *
                   <input type="text" name="name" autocomplete="name" required>
                 </label>
-                <label>E-Mail *
-                  <input type="email" name="mail" autocomplete="email" required>
-                </label>
-              </div>
-              <div class="vc-kontakt__reihe">
-                <label>Firma
-                  <input type="text" name="firma" autocomplete="organization">
-                </label>
-                <label>Telefon
-                  <input type="tel" name="telefon" autocomplete="tel">
+                <label>Telefon *
+                  <input type="tel" name="telefon" autocomplete="tel" inputmode="tel" required>
                 </label>
               </div>
               <label class="sv-check__fangfrage" aria-hidden="true">Fangfrage
                 <input type="text" name="fangfrage" tabindex="-1" autocomplete="off">
               </label>
               <div class="vc-kontakt__fuss">
-                <button class="sv-button sv-button--cta" type="submit" id="sv-check-bestell-knopf">Bericht anfordern →</button>
-                <p class="vc-kontakt__hinweis">Sie erhalten den vollständigen Bericht per E-Mail.</p>
+                <button class="sv-button sv-button--cta" type="submit" id="sv-check-gespraech-knopf">Bericht besprechen →</button>
+                <p class="vc-kontakt__hinweis">Wir rufen Sie an, in der Regel innert eines Arbeitstages. Name und Nummer löschen wir nach 30 Tagen. <a href="datenschutz">Datenschutz</a></p>
               </div>
-              <p class="vc-kontakt__meldung" id="sv-check-bestell-meldung" role="status" aria-live="polite"></p>
+              <p class="vc-kontakt__meldung" id="sv-check-gespraech-meldung" role="status" aria-live="polite"></p>
             </form>
 
             <p class="sv-check__danke" id="sv-check-danke" tabindex="-1" hidden></p>
@@ -723,7 +715,7 @@
 </div>
 <script src="ui_kits/website/api-basis.js?v=20261004-umbau"></script>
 <script src="ui_kits/website/visibility.js?v=20261013-check-eyecatcher"></script>
-<script src="ui_kits/website/visibility-check.js?v=20261019-feldfokus"></script>
+<script src="ui_kits/website/visibility-check.js?v=20261029-checktexte"></script>
 <script src="ui_kits/website/chat.js?v=20261013-handy"></script>
 <script src="ui_kits/website/navigation.js?v=20261016-menue" defer></script>
 </body>

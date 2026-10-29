@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 28.10.2026 · Eintrag b451185 Besucherstatistik: Umami-Zähler (stats.sam4live.com, nur vaiacon.ch) auf allen öffentlichen Seiten und in den Vorlagen, Datenschutzerklärung und Bot-Wissen angepasst
+> Stand: 29.10.2026 · Eintrag 5f8df54 KI-News für KMU 2026-10-29: TechCrunch: Google öffnet Gemini und Suche für Apps von Firm
 
 ## Wie du antwortest
 
@@ -286,15 +286,13 @@ Nochmals prüfen
 von 100
 IHR CHECK
 Grösstes Potenzial
-Vollständigen Bericht per E-Mail anfordern
-Alle Befunde und Empfehlungen zu , in allen vier Bereichen.
+Dies ist nur ein Auszug aus einem sehr breiten Gesamtbild.
+Zu haben wir weit mehr geprüft, als hier steht. Gerne gehen wir den detaillierten Bericht in einem persönlichen Gespräch mit Ihnen durch. Dabei erläutern wir Ihnen die Bedeutung einzelner Punkte und zeigen Ihnen auf, wo Handlungsbedarf besteht. So erfahren Sie, wie sich massgeschneiderte Lösungen umsetzen lassen.
 Name *
-E-Mail *
-Firma
-Telefon
+Telefon *
 Fangfrage
-Bericht anfordern →
-Sie erhalten den vollständigen Bericht per E-Mail.
+Bericht besprechen →
+Wir rufen Sie an, in der Regel innert eines Arbeitstages. Name und Nummer löschen wir nach 30 Tagen. Datenschutz
 EINFACH ERKLÄRT
 Sichtbarkeit beginnt damit, dass Ihr Angebot verstanden wird.
 SEO
@@ -548,10 +546,12 @@ KI-News für Schweizer KMU: was Neuigkeiten für Ihren Betrieb heissen
 Neue Beiträge während der Woche, mit Wochenfazit. Zu jeder Meldung: was passiert ist, was sie für ein KMU mit 5 bis 30 Mitarbeitenden heisst und worauf Sie achten sollten. Mit Quellen, Fachbegriffe kurz erklärt.
 Wochenfazit KW 44 Laut Startup Fortune soll Meta ab dem 30. Oktober die Bedingungen für KI-Funktionen für Firmen ändern und Risiken auf die Kunden übertragen. Bestätigt ist das nicht, denn die Bedingungen selbst konnten wir nicht prüfen. Wer KI-Funktionen von Meta nutzt, schaut sie am besten selbst an.
 Aktuelle Woche: KW 44 · 26. Oktober – 1. November 2026 · ganze Woche lesen →
+TechCrunch berichtete am 28. Oktober, Google lasse über eine neue Plattform Firmen und Entwickler eigene Apps mit Gemini und der KI-Suche verbinden. Nutzerinnen und Nutzer sollen dort Dienste anwählen und Aufgaben darin erledigen können. Der Zugang ist laut Bericht auf Entwickler in den USA beschränkt, ein Termin für die breite Einführung fehlt.
+Was das für Ihr KMU heisst →
 Startup Fortune berichtete am 24. Oktober, Meta ändere die Geschäftsbedingungen für seine KI-Funktionen für Firmen. Laut dem Bericht, der sich auf CIO.com und WION stützt, sollen Kunden ab dem 30. Oktober die Risiken tragen und Meta von Ansprüchen freistellen. Die Bedingungen selbst konnten wir nicht abrufen.
 Was das für Ihr KMU heisst →
 Die letzten Wochen
-KW 44 · 26. Oktober – 1. November 2026 1 Beitrag
+KW 44 · 26. Oktober – 1. November 2026 2 Beiträge
 KW 43 · 19. – 25. Oktober 2026 1 Beitrag
 KW 42 · 12. – 18. Oktober 2026 3 Beiträge
 KW 41 · 5. – 11. Oktober 2026 5 Beiträge
@@ -773,7 +773,7 @@ Auszüge daraus gehen zur Auswertung an Anthropic (USA), den Anbieter des Sprach
 Für den Check selbst brauchen wir keine Personendaten. Zum Schutz vor Missbrauch ist die Zahl der Checks je Besucher begrenzt. Dafür legt Ihr Browser eine zufällige Kennung im lokalen Speicher ab («vc-besucher»). Sie enthält keine Angaben über Sie. Der Server zählt die Checks je Kennung und je IP-Adresse im Arbeitsspeicher.
 Zusätzlich vermerkt der Server jeden Check mit der geprüften Domain und Ihrer IP-Adresse im Betriebsprotokoll dieses Dienstes. Wie lange, steht unter «Aufbewahrung und Löschung».
 Den Bericht bewahren wir 30 Tage auf, danach wird er gelöscht.
-Wer den vollständigen Bericht anfordert, schickt uns Name und E-Mail-Adresse, freiwillig auch Firma und Telefon. Wir schicken den Bericht an diese Adresse und behandeln die Angaben wie eine Anfrage über das Kontaktformular.
+Wer den detaillierten Bericht mit uns besprechen möchte, schickt uns Name und Telefonnummer. Dazu geben wir die geprüfte Domain, den Gesamtwert und die Nummer des Berichts an, damit wir den Bericht zum Anruf finden. Wir rufen zurück und behandeln die Angaben wie einen Rückrufwunsch über das Kontaktformular.
 Erstanalyse-Fragebogen
 Der Fragebogen fragt nach Ihrem Betrieb: Branche, Grösse, eingesetzte Programme, Abläufe und Zeitaufwand. Dazu kommen Firma und Name sowie E-Mail-Adresse und Telefonnummer, damit wir uns melden können.
 Während Sie den Fragebogen ausfüllen, werden die Antworten im lokalen Speicher Ihres Browsers zwischengelegt, damit nichts verloren geht, wenn Sie zwischendurch weggehen. Nach dem Absenden wird dieser Zwischenspeicher gelöscht. Sie können ihn jederzeit selbst leeren, indem Sie die Websitedaten in Ihrem Browser löschen.

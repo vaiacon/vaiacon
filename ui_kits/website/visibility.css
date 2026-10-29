@@ -1977,10 +1977,10 @@ picture {
   display: none;
 }
 
-/* Bereiche: der offene über die ganze Breite, die drei anderen daneben */
+/* Bereiche: vier gleiche Karten, zwei nebeneinander */
 .sv-check__bereiche {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
   gap: var(--space-5);
   margin-top: var(--space-7);
 }
@@ -1991,10 +1991,6 @@ picture {
   text-align: left;
 }
 
-.sv-check__bereich--offen {
-  grid-column: 1 / -1;
-}
-
 .sv-check__bereich-kopf {
   display: flex;
   align-items: flex-start;
@@ -2002,12 +1998,9 @@ picture {
   gap: var(--space-4);
 }
 
-.sv-check__bereich-kopf > div:first-child {
-  min-width: 0;
-}
-
 .sv-check__bereich-kopf h4 {
-  margin: 4px 0 0;
+  min-width: 0;
+  margin: 0;
   font-size: var(--text-h4);
   font-weight: var(--weight-semibold);
   line-height: var(--leading-snug);
@@ -2054,8 +2047,8 @@ picture {
   background: var(--terra-500);
 }
 
-.sv-check__report .sv-check__bereich-fazit {
-  max-width: 72ch;
+.sv-check__report .sv-check__bereich-erklaerung {
+  margin: 0;
   font-size: var(--text-size-body);
   line-height: var(--leading-body);
   color: var(--text-body);
@@ -2067,12 +2060,6 @@ picture {
   margin: 0;
   padding: 0;
   list-style: none;
-}
-
-.sv-check__bereich--offen .sv-check__befunde {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
-  column-gap: var(--space-9);
 }
 
 .sv-check__befund {
@@ -2125,54 +2112,8 @@ picture {
 .sv-check__status[data-status="mittel"] .sv-check__status-punkt  { background: #9A6A00; }
 .sv-check__status[data-status="schwach"] .sv-check__status-punkt { background: #B3261E; }
 
-.sv-check__report .sv-check__befund-text,
-.sv-check__report .sv-check__empfehlung {
-  font-size: var(--text-body-sm);
-  line-height: var(--leading-body);
-  color: var(--text-body);
-}
-
-.sv-check__empfehlung strong {
-  color: var(--text-strong);
-}
-
-/* Platzhalter statt Text in den Vorschau-Bereichen — rein dekorativ */
-.sv-check__platzhalter {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-
-.sv-check__platzhalter span {
-  display: block;
-  height: 9px;
-  border-radius: var(--radius-pill);
-  background: rgba(28, 22, 19, 0.10);
-}
-
-.sv-check__platzhalter span:last-child {
-  width: 62%;
-}
-
-.sv-check__schloss {
-  align-self: flex-start;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: auto;
-  font-size: var(--text-ui);
-  font-weight: var(--weight-semibold);
-  color: var(--terra-600);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.sv-check__schloss:hover {
-  color: var(--terra-700);
-}
-
-/* ── Bericht bestellen ── */
-.sv-check__bestellen {
+/* ── Bericht im Gespräch ── */
+.sv-check__gespraech {
   margin-top: var(--space-11);
   padding: var(--card-pad);
   box-sizing: border-box;
@@ -2182,7 +2123,7 @@ picture {
   scroll-margin-top: 100px;
 }
 
-.sv-check__bestellen h3 {
+.sv-check__gespraech h3 {
   margin: 0;
   text-align: center;
   font-size: var(--text-h3);
@@ -2192,8 +2133,8 @@ picture {
   color: var(--text-strong);
 }
 
-.sv-check__bestellen-lead {
-  max-width: 52ch;
+.sv-check__gespraech-lead {
+  max-width: 60ch;
   margin: var(--space-3) auto 0;
   text-align: center;
   font-size: var(--text-body-sm);
@@ -2202,37 +2143,37 @@ picture {
   overflow-wrap: anywhere;
 }
 
-.sv-check__bestell-form {
+.sv-check__gespraech-form {
   margin-top: var(--space-7);
 }
 
-.sv-check__bestell-form[hidden] {
+.sv-check__gespraech-form[hidden] {
   display: none;
 }
 
-.sv-check__bestell-form input:focus-visible {
+.sv-check__gespraech-form input:focus-visible {
   box-shadow: 0 0 0 3px rgba(173, 80, 41, 0.28);
 }
 
-.sv-check__bestell-form input[aria-invalid="true"] {
+.sv-check__gespraech-form input[aria-invalid="true"] {
   border-color: #8C1D18;
 }
 
-.sv-check__bestell-form .vc-kontakt__hinweis a {
+.sv-check__gespraech-form .vc-kontakt__hinweis a {
   color: var(--terra-600);
   text-underline-offset: 3px;
 }
 
-.sv-check__bestell-form .vc-kontakt__meldung:empty {
+.sv-check__gespraech-form .vc-kontakt__meldung:empty {
   display: none;
 }
 
-.sv-check__bestell-form .vc-kontakt__meldung a {
+.sv-check__gespraech-form .vc-kontakt__meldung a {
   color: inherit;
 }
 
 /* Honigtopf: für Menschen unsichtbar, für Bots ein Feld wie jedes andere */
-.sv-check__bestell-form .sv-check__fangfrage {
+.sv-check__gespraech-form .sv-check__fangfrage {
   position: absolute;
   left: -9999px;
   width: 1px;
@@ -2404,15 +2345,11 @@ picture {
     left: var(--space-4);
   }
 
-  .sv-check__bereich--offen .sv-check__befunde {
-    grid-template-columns: 1fr;
-  }
-
   .sv-check__befund-kopf {
     flex-wrap: wrap;
   }
 
-  .sv-check__bestellen {
+  .sv-check__gespraech {
     padding: var(--space-6) var(--space-4);
   }
 
@@ -2919,4 +2856,9 @@ picture {
 @media (max-width: 599px) {
   .sv-button { white-space: normal; text-align: center; }
   .sv-hero { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* Beispiele je Bereich: kleine Überschrift über den drei Zeilen */
+.sv-check__bereich > .sv-label {
+  margin-top: var(--space-2);
 }

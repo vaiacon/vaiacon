@@ -6,12 +6,12 @@
 // Befunde auswerten. Er meldet jeden Schritt, sobald er beginnt, als eine
 // JSON-Zeile (NDJSON) und zuletzt das Ergebnis oder einen Fehler.
 //
-// Die Seite zeigt das Ergebnis offen an: Gesamtwert, Fazit, «Grösstes
-// Potenzial» und den ersten Bereich vollständig. Die übrigen drei Bereiche
-// zeigen nur Punktzahl, Titel und Status je Befund — deren Texte schickt der
-// Server gar nicht, an ihrer Stelle stehen rein dekorative Balken. Den ganzen
-// Bericht bestellt man mit dem Formular darunter
-// (POST /api/sichtbarkeit/bestellen).
+// Die Seite zeigt das Ergebnis als Auszug: Gesamtwert, Fazit, «Grösstes
+// Potenzial» und je Bereich eine einfache Erklärung, die Punktzahl und drei
+// Beispiele mit ihrem Stand (Titel und Status; Befundtexte werden nicht gezeigt).
+// Den ganzen Bericht gibt es im Gespräch: Name und Telefonnummer gehen als
+// Rückrufwunsch an /api/kontakt (wie das Rückruf-Formular auf kontakt.html,
+// ui_kits/website/kontakt.js).
 //
 // Serverdaten kommen nur über textContent in die Seite, nie über innerHTML.
 // Gestartet wird auch von selbst: visibility?domain=ihre-firma.ch#check
@@ -21,7 +21,7 @@
   if (!form) return;
 
   var ZIEL = window.VAIACON_API_BASIS + '/api/sichtbarkeit';
-  var ZIEL_BESTELLEN = window.VAIACON_API_BASIS + '/api/sichtbarkeit/bestellen';
+  var ZIEL_KONTAKT = window.VAIACON_API_BASIS + '/api/kontakt';
 
   // Zufällige Browser-Kennung, damit der Server Kollegen hinter derselben Firmen-Adresse
   // getrennt zählt. Keine Personendaten, nur Zufall; liegt im localStorage.
@@ -68,6 +68,23 @@
 
   var ZUSTAND_WORT = { wartet: 'wartet', laeuft: 'läuft', fertig: 'fertig', fehler: 'abgebrochen' };
   var STATUS_WORT = { gut: 'Gut', mittel: 'Mittel', schwach: 'Schwach' };
+  var STATUS_REIHE = { schwach: 0, mittel: 1, gut: 2 };   // schwächste Beispiele zuerst
+  var BEISPIELE = 3;
+
+  // Was ein Bereich bedeutet, so einfach wie möglich. Der Server nennt die
+  // Bereiche nur mit Titel; zugeordnet wird über den Schlüssel, sonst über ein
+  // Stichwort im Titel. Passt nichts, steht keine Erklärung da (lieber keine als eine falsche).
+  var ERKLAERUNG = {
+    erreichbar: 'Zeigt, wie schnell und sicher Ihre Website für Besucher und Suchmaschinen aufgeht und erreichbar ist.',
+    technik: 'Dies sind die Grundlagen, damit Google Ihre Seiten findet und versteht: Titel, Beschreibung, Aufbau und Darstellung auf dem Handy.',
+    daten: 'Angaben im Hintergrund, welche Maschinen direkt lesen können. Diese beschreiben, wer Sie sind, was Sie anbieten und wo Sie zu finden sind.',
+    geo: 'Sorgt dafür, dass KI-Assistenten wie ChatGPT Ihre Firma finden, verstehen und richtig wiedergeben können.',
+    inhalt: 'Wichtig, damit Besucher genug Informationen finden und Vertrauen aufbauen können: Kontakt, Impressum und Datenschutz.',
+  };
+  var ERKLAERUNG_STICHWORT = [
+    ['erreich', 'erreichbar'], ['technis', 'technik'], ['strukturiert', 'daten'],
+    ['ki-', 'geo'], ['geo', 'geo'], ['inhalt', 'inhalt'], ['vertrauen', 'inhalt'],
+  ];
 
   var TEXT = {
     eingabe: 'Bitte eine vollständige Webadresse eingeben, z. B. ihre-firma.ch',
@@ -485,83 +502,54 @@
     return box;
   }
 
-  function platzhalterBauen() {
-    var p = el('span', 'sv-check__platzhalter');
-    p.setAttribute('aria-hidden', 'true');
-    p.appendChild(el('span'));
-    p.appendChild(el('span'));
-    return p;
+  function erklaerungFinden(b) {
+    var schluessel = String(b.schluessel || b.key || '');
+    if (Object.prototype.hasOwnProperty.call(ERKLAERUNG, schluessel)) return ERKLAERUNG[schluessel];
+    var titel = String(b.titel || '').toLowerCase();
+    for (var i = 0; i < ERKLAERUNG_STICHWORT.length; i++) {
+      if (titel.indexOf(ERKLAERUNG_STICHWORT[i][0]) !== -1) return ERKLAERUNG[ERKLAERUNG_STICHWORT[i][1]];
+    }
+    return '';
   }
 
-  function schlossBauen() {
-    var a = el('a', 'sv-check__schloss');
-    a.href = '#sv-check-bestellen';
-    var ns = 'http://www.w3.org/2000/svg';
-    var svg = document.createElementNS(ns, 'svg');
-    svg.setAttribute('viewBox', '0 0 16 16');
-    svg.setAttribute('width', '15');
-    svg.setAttribute('height', '15');
-    svg.setAttribute('aria-hidden', 'true');
-    svg.setAttribute('focusable', 'false');
-    var rahmen = document.createElementNS(ns, 'rect');
-    rahmen.setAttribute('x', '2.5'); rahmen.setAttribute('y', '7');
-    rahmen.setAttribute('width', '11'); rahmen.setAttribute('height', '7.5');
-    rahmen.setAttribute('rx', '1.5');
-    var buegel = document.createElementNS(ns, 'path');
-    buegel.setAttribute('d', 'M5 7V5a3 3 0 0 1 6 0v2');
-    [rahmen, buegel].forEach(function (form) {
-      form.setAttribute('fill', 'none');
-      form.setAttribute('stroke', 'currentColor');
-      form.setAttribute('stroke-width', '1.6');
-      svg.appendChild(form);
-    });
-    a.appendChild(svg);
-    a.appendChild(el('span', null, 'Im vollständigen Bericht'));
-    a.addEventListener('click', function (ev) {
-      ev.preventDefault();
-      bestellenZeigen();
-    });
-    return a;
+  // Die drei schwächsten Befunde eines Bereichs, bei gleichem Stand in der Reihenfolge des Servers.
+  function beispieleWaehlen(befunde) {
+    return befunde
+      .filter(function (f) { return f && typeof f === 'object'; })
+      .map(function (f, i) {
+        var rang = Object.prototype.hasOwnProperty.call(STATUS_REIHE, f.status) ? STATUS_REIHE[f.status] : 3;
+        return { f: f, rang: rang, i: i };
+      })
+      .sort(function (a, b) { return a.rang - b.rang || a.i - b.i; })
+      .slice(0, BEISPIELE)
+      .map(function (x) { return x.f; });
   }
 
   function bereichBauen(b) {
-    var offen = b.offen === true;
-    var karte = el('article', 'sv-card sv-check__bereich' + (offen ? ' sv-check__bereich--offen sv-card--sand' : ''));
+    var karte = el('article', 'sv-card sv-check__bereich');
 
     var kopf = el('div', 'sv-check__bereich-kopf');
-    var titelBox = el('div');
-    titelBox.appendChild(el('span', 'sv-label', offen ? 'Vollständig' : 'Vorschau'));
-    titelBox.appendChild(el('h4', null, b.titel || ''));
-    kopf.appendChild(titelBox);
+    kopf.appendChild(el('h4', null, b.titel || ''));
     kopf.appendChild(punkteBauen(b.punkte));
     karte.appendChild(kopf);
 
-    if (offen && b.fazit) karte.appendChild(el('p', 'sv-check__bereich-fazit', b.fazit));
+    var erklaerung = erklaerungFinden(b);
+    if (erklaerung) karte.appendChild(el('p', 'sv-check__bereich-erklaerung', erklaerung));
 
-    var liste = el('ul', 'sv-check__befunde');
-    (Array.isArray(b.befunde) ? b.befunde : []).forEach(function (f) {
-      if (!f || typeof f !== 'object') return;
-      var li = el('li', 'sv-check__befund');
-      var zeile = el('div', 'sv-check__befund-kopf');
-      zeile.appendChild(el('h5', null, f.titel || ''));
-      zeile.appendChild(statusBauen(f.status));
-      li.appendChild(zeile);
-      if (offen) {
-        if (f.befund) li.appendChild(el('p', 'sv-check__befund-text', f.befund));
-        if (f.empfehlung) {
-          var emp = el('p', 'sv-check__empfehlung');
-          emp.appendChild(el('strong', null, 'Empfehlung: '));
-          emp.appendChild(document.createTextNode(String(f.empfehlung)));
-          li.appendChild(emp);
-        }
-      } else {
-        li.appendChild(platzhalterBauen());
-      }
-      liste.appendChild(li);
-    });
-    karte.appendChild(liste);
-
-    if (!offen) karte.appendChild(schlossBauen());
+    var beispiele = beispieleWaehlen(Array.isArray(b.befunde) ? b.befunde : []);
+    if (beispiele.length) {
+      karte.appendChild(el('span', 'sv-label', 'Beispiele, Stand heute'));
+      var liste = el('ul', 'sv-check__befunde');
+      beispiele.forEach(function (f) {
+        var li = el('li', 'sv-check__befund');
+        var zeile = el('div', 'sv-check__befund-kopf');
+        zeile.appendChild(el('h5', null, f.titel || ''));
+        zeile.appendChild(statusBauen(f.status));
+        li.appendChild(zeile);
+        liste.appendChild(li);
+      });
+      karte.appendChild(liste);
+    }
     return karte;
   }
 
@@ -574,6 +562,8 @@
     berichtId = String(e.id || '');
     var domain = e.domain || aktuelleDomain;
     var gesamt = zahl(e.gesamt);
+    gesamtWert = gesamt;
+    berichtDatum = datumText(e.datum);
 
     $('sv-check-report-domain').textContent = domain;
     $('sv-check-report-datum').textContent = 'Geprüft am ' + datumText(e.datum);
@@ -597,13 +587,11 @@
     var raster = $('sv-check-bereiche');
     raster.textContent = '';
     var bereiche = Array.isArray(e.bereiche) ? e.bereiche.slice() : [];
-    // Offene Bereiche zuerst, falls der Server sie nicht vorne schickt.
-    bereiche.sort(function (a, b) { return (b && b.offen === true ? 1 : 0) - (a && a.offen === true ? 1 : 0); });
     bereiche.forEach(function (b) {
       if (b && typeof b === 'object') raster.appendChild(bereichBauen(b));
     });
 
-    bestellenZuruecksetzen(domain);
+    gespraechZuruecksetzen(domain);
     report.hidden = false;
 
     // Ring füllen, nachdem er sichtbar ist (sonst springt er ohne Übergang).
@@ -618,109 +606,115 @@
     rollen(report, 'start');
   }
 
-  // ── Bericht bestellen ────────────────────────────────────────────────────
+  // ── Bericht im Gespräch ──────────────────────────────────────────────────
 
-  var bestellForm = $('sv-check-bestell-form');
-  var bestellKnopf = $('sv-check-bestell-knopf');
-  var bestellMeldung = $('sv-check-bestell-meldung');
+  var gespraechForm = $('sv-check-gespraech-form');
+  var gespraechKnopf = $('sv-check-gespraech-knopf');
+  var gespraechMeldung = $('sv-check-gespraech-meldung');
   var danke = $('sv-check-danke');
-  var MAIL_MUSTER = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+  var gesamtWert = 0;
+  var berichtDatum = '';
 
-  function bestellenZeigen() {
-    var ziel = $('sv-check-bestellen');
-    rollen(ziel, 'start');
-    var erstes = bestellForm.querySelector('[name="name"]');
-    if (erstes && !bestellForm.hidden) erstes.focus({ preventScroll: true });
+  function gespraechSagen(text, art) {
+    gespraechMeldung.textContent = text || '';
+    gespraechMeldung.setAttribute('data-art', art || '');
   }
 
-  function bestellSagen(text, art) {
-    bestellMeldung.textContent = text || '';
-    bestellMeldung.setAttribute('data-art', art || '');
-  }
-
-  function bestellenZuruecksetzen(domain) {
-    bestellForm.reset();
-    bestellForm.hidden = false;
+  function gespraechZuruecksetzen(domain) {
+    gespraechForm.reset();
+    gespraechForm.hidden = false;
     danke.hidden = true;
     danke.textContent = '';
-    bestellKnopf.disabled = false;
-    bestellSagen('', '');
-    $('sv-check-bestellen-domain').textContent = domain;
-    Array.prototype.forEach.call(bestellForm.querySelectorAll('[aria-invalid]'), function (f) {
+    gespraechKnopf.disabled = false;
+    gespraechSagen('', '');
+    $('sv-check-gespraech-domain').textContent = domain;
+    Array.prototype.forEach.call(gespraechForm.querySelectorAll('[aria-invalid]'), function (f) {
       f.removeAttribute('aria-invalid');
     });
   }
 
-  function bestellWert(name) {
-    var f = bestellForm.querySelector('[name="' + name + '"]');
+  function gespraechWert(name) {
+    var f = gespraechForm.querySelector('[name="' + name + '"]');
     return f ? f.value.trim() : '';
   }
 
-  function netzFehlerBestellen() {
-    bestellMeldung.textContent = '';
-    bestellMeldung.setAttribute('data-art', 'fehler');
-    bestellMeldung.appendChild(document.createTextNode('Die Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es noch einmal oder schreiben Sie uns an '));
-    var a = el('a', null, MAIL);
-    a.href = 'mailto:' + MAIL + '?subject=' + encodeURIComponent('Website-Check · ' + aktuelleDomain);
-    bestellMeldung.appendChild(a);
-    bestellMeldung.appendChild(document.createTextNode('.'));
+  // Der Kontaktdienst kennt kein eigenes Feld für den Check: Domain, Wert und
+  // Bericht-Nummer stehen im Text, damit man den Bericht zum Anruf findet.
+  function gespraechText(d) {
+    return [
+      'RÜCKRUFWUNSCH · WEBSITE-CHECK',
+      'Name: ' + d.name,
+      'Telefon: ' + d.telefon,
+      'Domain: ' + aktuelleDomain,
+      'Gesamtwert: ' + gesamtWert + ' von 100',
+      'Geprüft am: ' + berichtDatum,
+      'Bericht-Nummer: ' + (berichtId || 'unbekannt'),
+      'Wunsch: den detaillierten Bericht persönlich oder per Call besprechen',
+    ].join('\n');
   }
 
-  bestellForm.addEventListener('submit', function (ev) {
+  function insMailprogramm(d) {
+    window.location.href = 'mailto:' + MAIL
+      + '?subject=' + encodeURIComponent('Website-Check besprechen · ' + aktuelleDomain)
+      + '&body=' + encodeURIComponent(gespraechText(d));
+    gespraechSagen('Ihr Mailprogramm öffnet sich mit der fertigen Nachricht. Bitte dort noch auf «senden» drücken.', 'hinweis');
+  }
+
+  gespraechForm.addEventListener('submit', function (ev) {
     ev.preventDefault();
     var d = {
-      id: berichtId,
-      name: bestellWert('name'),
-      mail: bestellWert('mail'),
-      firma: bestellWert('firma'),
-      telefon: bestellWert('telefon'),
-      fangfrage: bestellWert('fangfrage'),   // Honigtopf, bleibt bei Menschen leer
+      name: gespraechWert('name'),
+      telefon: gespraechWert('telefon'),
+      fangfrage: gespraechWert('fangfrage'),   // Honigtopf, bleibt bei Menschen leer
     };
 
-    var feldName = bestellForm.querySelector('[name="name"]');
-    var feldMail = bestellForm.querySelector('[name="mail"]');
+    var feldName = gespraechForm.querySelector('[name="name"]');
+    var feldTelefon = gespraechForm.querySelector('[name="telefon"]');
+    var telefonFalsch = d.telefon.replace(/\D/g, '').length < 9;
     feldName.toggleAttribute('aria-invalid', !d.name);
-    var mailFalsch = !MAIL_MUSTER.test(d.mail);
-    feldMail.toggleAttribute('aria-invalid', mailFalsch);
-    if (!d.name || mailFalsch) {
-      bestellSagen(!d.name && !d.mail ? 'Bitte Name und E-Mail ausfüllen.'
-        : !d.name ? 'Bitte Ihren Namen ausfüllen.'
-        : 'Bitte eine gültige E-Mail-Adresse eingeben.', 'fehler');
-      (!d.name ? feldName : feldMail).focus();
+    feldTelefon.toggleAttribute('aria-invalid', telefonFalsch);
+    if (!d.name || telefonFalsch) {
+      gespraechSagen(!d.name && !d.telefon ? 'Bitte Name und Telefonnummer ausfüllen.'
+        : !d.name ? 'Bitte geben Sie Ihren Namen ein.'
+        : d.telefon ? 'Bitte prüfen Sie die Telefonnummer, zum Beispiel 044 123 45 67.'
+        : 'Bitte geben Sie Ihre Telefonnummer ein.', 'fehler');
+      (!d.name ? feldName : feldTelefon).focus();
       return;
     }
 
-    bestellKnopf.disabled = true;
-    bestellSagen('Wird gesendet …', '');
+    gespraechKnopf.disabled = true;
+    gespraechSagen('Wird gesendet …', '');
 
     var st = window.AbortController ? new AbortController() : null;
     var zeitTimer = window.setTimeout(function () { if (st) st.abort(); }, 30000);
     var optionen = {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-      body: JSON.stringify(d),
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name: d.name,
+        mail: 'keine Angabe',
+        firma: 'RÜCKRUF',
+        telefon: d.telefon,
+        nachricht: gespraechText(d),
+        fangfrage: d.fangfrage,
+        art: 'rueckruf',
+        wunschzeit: 'zeitlich flexibel',
+      }),
     };
     if (st) optionen.signal = st.signal;
 
-    fetch(ZIEL_BESTELLEN, optionen).then(function (antwort) {
-      return antwort.json().catch(function () { return null; }).then(function (antw) {
-        if (antwort.ok && antw && antw.ok !== false) {
-          bestellForm.hidden = true;
-          danke.textContent = antw.gesendet
-            ? 'Danke. Der vollständige Bericht zu ' + aktuelleDomain + ' ist per E-Mail unterwegs an ' + d.mail + '. Schauen Sie notfalls im Spam-Ordner nach.'
-            : 'Danke, Ihre Anfrage ist bei uns. Wir senden Ihnen den vollständigen Bericht zu ' + aktuelleDomain + ' persönlich per E-Mail.';
-          danke.hidden = false;
-          danke.focus();
-          return;
-        }
-        bestellSagen(antw && antw.fehler ? String(antw.fehler)
-          : 'Die Anfrage konnte gerade nicht verarbeitet werden. Bitte versuchen Sie es noch einmal.', 'fehler');
-      });
+    fetch(ZIEL_KONTAKT, optionen).then(function (antwort) {
+      if (!antwort.ok) throw new Error('Dienst antwortet mit ' + antwort.status);
+      gespraechForm.hidden = true;
+      danke.textContent = 'Danke, dass Sie den vaiacon Website-Check gemacht haben. Wir rufen Sie in der Regel innert eines Arbeitstages an und besprechen den Bericht zu ' + aktuelleDomain + ' mit Ihnen persönlich.';
+      danke.hidden = false;
+      danke.focus();
     }).catch(function () {
-      netzFehlerBestellen();
+      // Kein Dienst erreichbar: Weg 2, die Nachricht ist ja fertig geschrieben.
+      insMailprogramm(d);
     }).then(function () {
       window.clearTimeout(zeitTimer);
-      bestellKnopf.disabled = false;
+      gespraechKnopf.disabled = false;
     });
   });
 
