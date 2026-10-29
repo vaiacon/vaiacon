@@ -1703,128 +1703,70 @@ picture {
   color: var(--text-strong);
 }
 
-.sv-check__schritte {
+/* Ein Balken für alle sechs Schritte: Zähler, Balken, Titel, Unterzeile */
+.sv-check__fortschritt {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-3);
+}
+
+.sv-check__fortschritt p {
   margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
-.sv-check__schritt {
-  display: grid;
-  grid-template-columns: 22px minmax(0, 1fr) auto;
-  align-items: start;
-  gap: 4px var(--space-3);
-}
-
-.sv-check__schritt-zeichen {
-  position: relative;
-  width: 22px;
-  height: 22px;
-  margin-top: 1px;
-  box-sizing: border-box;
-  border: 2px solid var(--border-strong);
-  border-radius: 50%;
-}
-
-.sv-check__schritt[data-zustand="laeuft"] .sv-check__schritt-zeichen {
-  border-color: var(--border-soft);
-  border-top-color: var(--terra-500);
-  border-right-color: var(--terra-500);
-  animation: sv-check-dreh 0.9s linear infinite;
-}
-
-/* Fertig heisst bestanden: grün wie «Gut» im Bericht */
-.sv-check__schritt[data-zustand="fertig"] .sv-check__schritt-zeichen {
-  border-color: #2E7D4F;
-  background: #2E7D4F;
-}
-
-/* Haken aus zwei Rändern */
-.sv-check__schritt[data-zustand="fertig"] .sv-check__schritt-zeichen::after {
-  content: "";
-  position: absolute;
-  left: 5px;
-  top: 2px;
-  width: 5px;
-  height: 10px;
-  border: solid var(--cream-50);
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-}
-
-.sv-check__schritt[data-zustand="fehler"] .sv-check__schritt-zeichen {
-  border-color: #8C1D18;
-  background: #8C1D18;
-}
-
-/* Kreuz aus zwei Strichen */
-.sv-check__schritt[data-zustand="fehler"] .sv-check__schritt-zeichen::before,
-.sv-check__schritt[data-zustand="fehler"] .sv-check__schritt-zeichen::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 10px;
-  height: 2px;
-  background: var(--cream-50);
-  transform: translate(-50%, -50%) rotate(45deg);
-}
-
-.sv-check__schritt[data-zustand="fehler"] .sv-check__schritt-zeichen::after {
-  transform: translate(-50%, -50%) rotate(-45deg);
-}
-
-@keyframes sv-check-dreh {
-  to { transform: rotate(360deg); }
-}
-
-.sv-check__schritt-text {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-  min-width: 0;
-}
-
-.sv-check__schritt-titel {
-  font-size: var(--text-ui);
-  font-weight: var(--weight-semibold);
-  line-height: var(--leading-snug);
-  color: var(--text-strong);
-}
-
-.sv-check__schritt-unter {
-  font-size: 14px;
-  line-height: 1.5;
-  color: var(--text-body);
-  transition: opacity 0.26s ease;
-}
-
-.sv-check__schritt-unter.ist-weg {
-  opacity: 0;
-}
-
-.sv-check__schritt[data-zustand="wartet"] .sv-check__schritt-titel {
-  color: var(--text-body);
-  font-weight: var(--weight-medium);
-}
-
-.sv-check__schritt-wort {
-  padding-top: 3px;
+.sv-check__fortschritt-zaehler {
   font-family: var(--font-mono);
   font-size: var(--text-overline);
   font-weight: var(--weight-semibold);
   letter-spacing: var(--tracking-badge);
   text-transform: uppercase;
-  white-space: nowrap;
-  color: var(--brown-600);
+  color: var(--terra-600);
 }
 
-.sv-check__schritt[data-zustand="laeuft"] .sv-check__schritt-wort { color: var(--terra-600); }
-.sv-check__schritt[data-zustand="fertig"] .sv-check__schritt-wort { color: #1B5E33; }
-.sv-check__schritt[data-zustand="fehler"] .sv-check__schritt-wort { color: #8C1D18; }
+.sv-check__fortschritt-spur {
+  display: block;
+  height: 8px;
+  overflow: hidden;
+  border-radius: var(--radius-pill);
+  background: rgba(28, 22, 19, 0.12);
+}
+
+.sv-check__fortschritt-spur > span {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--terra-500);
+  transition: width 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+.sv-check__fortschritt-titel {
+  font-size: var(--text-lead);
+  font-weight: var(--weight-semibold);
+  line-height: var(--leading-snug);
+  color: var(--text-strong);
+}
+
+.sv-check__fortschritt-unter {
+  min-height: 3em;   /* zwei Zeilen Platz, damit die Karte beim Wechsel der Zeile nicht springt */
+  font-size: var(--text-body-sm);
+  line-height: 1.5;
+  color: var(--text-body);
+  transition: opacity 0.26s ease;
+}
+
+.sv-check__fortschritt-unter.ist-weg {
+  opacity: 0;
+}
+
+/* Abgebrochen: roter Balken und roter Zähler, wie die Fehlerfarbe im Rest des Checks */
+.sv-check__fortschritt[data-zustand="fehler"] .sv-check__fortschritt-zaehler {
+  color: #8C1D18;
+}
+
+.sv-check__fortschritt[data-zustand="fehler"] .sv-check__fortschritt-spur > span {
+  background: #8C1D18;
+}
 
 /* ── Fehler beim Check: Text und «Nochmals prüfen» ── */
 .sv-check__problem:not([hidden]) {
@@ -2303,16 +2245,6 @@ picture {
     padding: var(--space-5) var(--space-4);
   }
 
-  /* Zustandswort unter den Titel, damit der Text die ganze Breite hat */
-  .sv-check__schritt {
-    grid-template-columns: 22px minmax(0, 1fr);
-  }
-
-  .sv-check__schritt-wort {
-    grid-column: 2;
-    padding-top: 0;
-  }
-
   .sv-check__problem:not([hidden]) {
     padding: var(--space-5) var(--space-4);
   }
@@ -2371,12 +2303,8 @@ picture {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .sv-check__schritt[data-zustand="laeuft"] .sv-check__schritt-zeichen {
-    animation: none;
-    border-color: var(--terra-500);
-  }
-
-  .sv-check__schritt-unter,
+  .sv-check__fortschritt-spur > span,
+  .sv-check__fortschritt-unter,
   .sv-check__ring-wert,
   .sv-check__feld input {
     transition: none;

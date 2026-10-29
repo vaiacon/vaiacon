@@ -38,7 +38,7 @@
   }
   var MAIL = 'hallo@vaiacon.ch';
   var ZEITGRENZE = 90000;        // ms, dann gibt der Browser auf
-  var MIN_LAUF = 700;            // ms, so lange steht jeder Schritt mindestens auf «läuft»
+  var MIN_LAUF = 500;            // ms, so lange steht jeder Schritt mindestens auf «läuft»
   var PAUSE_VOR_ERGEBNIS = 350;  // ms zwischen letztem Haken und Ergebnis
   var TAKT_UNTERZEILE = 3200;    // ms je Unterzeile in der Auswertung
 
@@ -104,7 +104,12 @@
   var ansage = document.getElementById('sv-check-ansage');
   var ladend = document.getElementById('sv-check-ladend');
   var ladendDomain = document.getElementById('sv-check-ladend-domain');
-  var schritteListe = document.getElementById('sv-check-schritte');
+  var zaehlerEl = document.getElementById('sv-check-zaehler');
+  var spurEl = document.getElementById('sv-check-spur');
+  var fuellEl = document.getElementById('sv-check-fuell');
+  var fortschritt = document.getElementById('sv-check-fortschritt');
+  var schrittTitelEl = document.getElementById('sv-check-schritt-titel');
+  var schrittUnterEl = document.getElementById('sv-check-schritt-unter');
   var report = document.getElementById('sv-check-report');
 
   function $(id) { return document.getElementById(id); }
@@ -180,54 +185,59 @@
 
   // ── Ladeansicht ──────────────────────────────────────────────────────────
 
-  var zeilen = [];   // je Schritt { li, wort, unter }
+  // Ein Balken statt sechs Zeilen: Titel und Unterzeile des laufenden Schritts,
+  // darüber «Schritt 2 von 6». Der Balken füllt sich mit jedem gemeldeten Schritt.
+
+  function balken(anteil) {
+    fuellEl.style.width = Math.round(anteil * 100) + '%';
+    spurEl.setAttribute('aria-valuenow', String(Math.round(anteil * SCHRITTE.length)));
+  }
 
   function schritteBauen() {
-    schritteListe.textContent = '';
-    zeilen = SCHRITTE.map(function (s) {
-      var li = el('li', 'sv-check__schritt');
-      li.setAttribute('data-zustand', 'wartet');
-      var zeichen = el('span', 'sv-check__schritt-zeichen');
-      zeichen.setAttribute('aria-hidden', 'true');
-      var text = el('div', 'sv-check__schritt-text');
-      var titel = el('span', 'sv-check__schritt-titel', s.titel);
-      var unter = el('span', 'sv-check__schritt-unter', s.unterzeile);
-      text.appendChild(titel);
-      text.appendChild(unter);
-      var wort = el('span', 'sv-check__schritt-wort', ZUSTAND_WORT.wartet);
-      li.appendChild(zeichen);
-      li.appendChild(text);
-      li.appendChild(wort);
-      schritteListe.appendChild(li);
-      return { li: li, wort: wort, unter: unter };
-    });
+    fortschritt.setAttribute('data-zustand', 'laeuft');
+    spurEl.setAttribute('aria-valuemax', String(SCHRITTE.length));
+    zaehlerEl.textContent = '';
+    schrittTitelEl.textContent = '';
+    schrittUnterEl.textContent = '';
+    schrittUnterEl.classList.remove('ist-weg');
+    balken(0);
   }
 
   function zustand(i, z) {
-    var zeile = zeilen[i];
-    if (!zeile) return;
-    zeile.li.setAttribute('data-zustand', z);
-    zeile.wort.textContent = ZUSTAND_WORT[z];
-    if (z === 'laeuft') zeile.li.setAttribute('aria-current', 'step');
-    else zeile.li.removeAttribute('aria-current');
+    var s = SCHRITTE[i];
+    if (!s) return;
+    if (z === 'laeuft') {
+      fortschritt.setAttribute('data-zustand', 'laeuft');
+      zaehlerEl.textContent = 'Schritt ' + (i + 1) + ' von ' + SCHRITTE.length;
+      schrittTitelEl.textContent = s.titel;
+      schrittUnterEl.textContent = s.unterzeile;
+      balken((i + 0.5) / SCHRITTE.length);
+    } else if (z === 'fertig') {
+      balken((i + 1) / SCHRITTE.length);
+    } else if (z === 'fehler') {
+      fortschritt.setAttribute('data-zustand', 'fehler');
+      zaehlerEl.textContent = 'Abgebrochen bei Schritt ' + (i + 1) + ' von ' + SCHRITTE.length;
+      schrittTitelEl.textContent = s.titel;
+      schrittUnterEl.textContent = s.unterzeile;
+    }
   }
 
   // Wechselnde Unterzeilen im Schritt «Auswertung».
   var unterzeilenTimer = null;
 
-  function unterzeilenStart(zeile) {
+  function unterzeilenStart(unter) {
     unterzeilenStopp();
     var nr = 0;
     unterzeilenTimer = window.setInterval(function () {
       nr = (nr + 1) % AUSWERTUNG_ZEILEN.length;
       if (reduziert) {
-        zeile.unter.textContent = AUSWERTUNG_ZEILEN[nr];
+        unter.textContent = AUSWERTUNG_ZEILEN[nr];
         return;
       }
-      zeile.unter.classList.add('ist-weg');
+      unter.classList.add('ist-weg');
       window.setTimeout(function () {
-        zeile.unter.textContent = AUSWERTUNG_ZEILEN[nr];
-        zeile.unter.classList.remove('ist-weg');
+        unter.textContent = AUSWERTUNG_ZEILEN[nr];
+        unter.classList.remove('ist-weg');
       }, 260);
     }, TAKT_UNTERZEILE);
   }
@@ -276,10 +286,10 @@
 
     if (lauf.aktuell < SCHRITTE.length) {
       zustand(lauf.aktuell, 'laeuft');
-      folgen(zeilen[lauf.aktuell].li, 'center');
+      folgen(fortschritt, 'center');
       lauf.seit = Date.now();
       sagen('Prüft: ' + SCHRITTE[lauf.aktuell].titel);
-      if (SCHRITTE[lauf.aktuell].schluessel === 'auswertung') unterzeilenStart(zeilen[lauf.aktuell]);
+      if (SCHRITTE[lauf.aktuell].schluessel === 'auswertung') unterzeilenStart(schrittUnterEl);
       lauf.timer = window.setTimeout(pumpe, MIN_LAUF);
       return;
     }
@@ -314,7 +324,6 @@
       else if (i === bis) zustand(i, 'fehler');
       else zustand(i, 'wartet');
     }
-    zeilen[SCHRITTE.length - 1].unter.textContent = SCHRITTE[SCHRITTE.length - 1].unterzeile;
   }
 
   // ── Anfrage an den Server ────────────────────────────────────────────────

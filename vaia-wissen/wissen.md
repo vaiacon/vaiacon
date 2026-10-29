@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 29.10.2026 · Eintrag 5731439 Website-Check: Auszug mit Erklaerung je Bereich, Gespraech statt Berichtsmail
+> Stand: 29.10.2026 · Eintrag 7308616 Website-Check: letzter Satz unter «Was genau geprueft wird» nennt das persoenliche Gespraech
 
 ## Wie du antwortest
 
@@ -269,17 +269,16 @@ Ihre Domain
 Check starten →
 Kostenlos, meist in unter einer Minute. Die Punkte sind eine Einschätzung, keine Zusage.
 Was genau geprüft wird
-Die Startseite, robots.txt, Sitemap, llms.txt sowie die verlinkte Kontakt- und Impressumsseite, in fünf Schritten: erreichbar, technische Grundlagen, strukturierte Daten, KI-Sichtbarkeit (GEO), Inhalt und Vertrauen. Einen detaillierten Bericht erhalten Sie von uns in einem persönlichen Gespräch.
+Die Startseite, robots.txt, Sitemap, llms.txt sowie die verlinkte Kontakt- und Impressumsseite. Geprüft werden Erreichbarkeit, technische Grundlagen, strukturierte Daten, KI-Sichtbarkeit (GEO), Inhalt und Vertrauen. Sie erhalten eine Punktzahl von 0 bis 100, mit der Sie eine Orientierung erhalten, wo Ihre Seite steht. Einen detaillierten Bericht erhalten Sie von uns in einem persönlichen Gespräch.
 Muster
 72
 von 100
 So sieht Ihr Ergebnis aus
 beispiel-firma.ch
-Website erreichen 100
-Technische Grundlagen 80
-Strukturierte Daten 45
-KI-Sichtbarkeit (GEO) 60
-Inhalt & Vertrauen 75
+Technisches SEO 85
+Strukturierte Daten 55
+KI-Sichtbarkeit (GEO) 65
+Inhalt & Vertrauen 83
 Wir prüfen
 Nochmals prüfen
 0

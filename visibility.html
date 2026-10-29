@@ -20,7 +20,7 @@
 <title>Sichtbarkeit bei Google und KI-Assistenten · vaiacon</title>
 <link rel="stylesheet" href="styles.css?v=20261005-vorschlag">
 <link rel="stylesheet" href="ui_kits/website/mockup-entwurf.css?v=20261005-vorschlag">
-<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261029-checktexte">
+<link rel="stylesheet" href="ui_kits/website/visibility.css?v=20261029-ladebalken">
 <link rel="stylesheet" href="ui_kits/website/chat.css?v=20261019-chatstreifen">
 <link rel="stylesheet" href="ui_kits/website/kundenstimme.css?v=20261005-vorschlag">
 <link rel="icon" href="favicon.ico?v=20261014" sizes="any">
@@ -439,7 +439,7 @@
             <p class="sv-check__hinweis">Kostenlos, meist in unter einer Minute. Die Punkte sind eine Einschätzung, keine Zusage.</p>
             <details class="sv-cx__details">
               <summary>Was genau geprüft wird</summary>
-              <p>Die Startseite, robots.txt, Sitemap, llms.txt sowie die verlinkte Kontakt- und Impressumsseite, in fünf Schritten: erreichbar, technische Grundlagen, strukturierte Daten, KI-Sichtbarkeit (GEO), Inhalt und Vertrauen. Einen detaillierten Bericht erhalten Sie von uns in einem persönlichen Gespräch.</p>
+              <p>Die Startseite, robots.txt, Sitemap, llms.txt sowie die verlinkte Kontakt- und Impressumsseite. Geprüft werden Erreichbarkeit, technische Grundlagen, strukturierte Daten, KI-Sichtbarkeit (GEO), Inhalt und Vertrauen. Sie erhalten eine Punktzahl von 0 bis 100, mit der Sie eine Orientierung erhalten, wo Ihre Seite steht. Einen detaillierten Bericht erhalten Sie von uns in einem persönlichen Gespräch.</p>
             </details>
           </div>
 
@@ -459,11 +459,10 @@
               </div>
             </div>
             <ul class="sv-cx__balken">
-              <li><span class="sv-cx__name">Website erreichen</span><span class="sv-cx__spur"><span class="sv-cx__fuell" style="--wert:100%"></span></span><span class="sv-cx__wert">100</span></li>
-              <li><span class="sv-cx__name">Technische Grundlagen</span><span class="sv-cx__spur"><span class="sv-cx__fuell" style="--wert:80%"></span></span><span class="sv-cx__wert">80</span></li>
-              <li><span class="sv-cx__name">Strukturierte Daten</span><span class="sv-cx__spur"><span class="sv-cx__fuell" style="--wert:45%"></span></span><span class="sv-cx__wert">45</span></li>
-              <li><span class="sv-cx__name">KI-Sichtbarkeit (GEO)</span><span class="sv-cx__spur"><span class="sv-cx__fuell" style="--wert:60%"></span></span><span class="sv-cx__wert">60</span></li>
-              <li><span class="sv-cx__name">Inhalt &amp; Vertrauen</span><span class="sv-cx__spur"><span class="sv-cx__fuell" style="--wert:75%"></span></span><span class="sv-cx__wert">75</span></li>
+              <li><span class="sv-cx__name">Technisches SEO</span><span class="sv-cx__spur"><span class="sv-cx__fuell" style="--wert:85%"></span></span><span class="sv-cx__wert">85</span></li>
+              <li><span class="sv-cx__name">Strukturierte Daten</span><span class="sv-cx__spur"><span class="sv-cx__fuell" style="--wert:55%"></span></span><span class="sv-cx__wert">55</span></li>
+              <li><span class="sv-cx__name">KI-Sichtbarkeit (GEO)</span><span class="sv-cx__spur"><span class="sv-cx__fuell" style="--wert:65%"></span></span><span class="sv-cx__wert">65</span></li>
+              <li><span class="sv-cx__name">Inhalt &amp; Vertrauen</span><span class="sv-cx__spur"><span class="sv-cx__fuell" style="--wert:83%"></span></span><span class="sv-cx__wert">83</span></li>
             </ul>
           </aside>
         </div>
@@ -472,10 +471,15 @@
         <!-- Ansagen für Screenreader: ein Satz je Schritt, nicht die ganze Liste -->
         <p class="sv-check__sr" id="sv-check-ansage" aria-live="polite"></p>
 
-        <!-- Ladeansicht: die sechs Schritte baut visibility-check.js -->
+        <!-- Ladeansicht: ein Balken, Titel und Unterzeile baut visibility-check.js -->
         <div class="sv-check__ladend" id="sv-check-ladend" aria-busy="false" hidden>
           <p class="sv-check__ladend-kopf">Wir prüfen <strong id="sv-check-ladend-domain"></strong></p>
-          <ol class="sv-check__schritte" id="sv-check-schritte"></ol>
+          <div class="sv-check__fortschritt" id="sv-check-fortschritt" data-zustand="laeuft">
+            <p class="sv-check__fortschritt-zaehler" id="sv-check-zaehler"></p>
+            <span class="sv-check__fortschritt-spur" id="sv-check-spur" role="progressbar" aria-label="Fortschritt des Checks" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0"><span id="sv-check-fuell"></span></span>
+            <p class="sv-check__fortschritt-titel" id="sv-check-schritt-titel"></p>
+            <p class="sv-check__fortschritt-unter" id="sv-check-schritt-unter"></p>
+          </div>
         </div>
 
         <div class="sv-check__problem" id="sv-check-problem" role="alert" hidden>
@@ -715,7 +719,7 @@
 </div>
 <script src="ui_kits/website/api-basis.js?v=20261004-umbau"></script>
 <script src="ui_kits/website/visibility.js?v=20261013-check-eyecatcher"></script>
-<script src="ui_kits/website/visibility-check.js?v=20261029-checktexte"></script>
+<script src="ui_kits/website/visibility-check.js?v=20261029-ladebalken"></script>
 <script src="ui_kits/website/chat.js?v=20261013-handy"></script>
 <script src="ui_kits/website/navigation.js?v=20261016-menue" defer></script>
 </body>
