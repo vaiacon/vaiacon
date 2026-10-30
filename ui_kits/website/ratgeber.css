@@ -24,3 +24,8 @@
 .rg-text .sv-faq-list { margin: 0 0 var(--space-6); }
 .rg-text .sv-faq-item p { margin: 0; }
 @media (max-width: 640px) { .rg-schritte li { padding-left: 3.4rem; } .rg-kasten { padding: var(--space-4); } }
+
+.rg-text h3 { font-size: 20px; margin: 1.4em 0 .4em; }
+.rg-tabelle { width: 100%; border-collapse: collapse; margin: 1em 0 1.6em; font-size: 15px; display: block; overflow-x: auto; }
+.rg-tabelle th, .rg-tabelle td { border: 1px solid var(--border-strong); padding: 8px 10px; text-align: left; vertical-align: top; }
+.rg-tabelle th { background: var(--cream-100); }
