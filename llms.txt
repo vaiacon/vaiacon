@@ -58,6 +58,11 @@ mit der Kundin oder dem Kunden an; am Anfang steht das kostenlose Erstgespräch.
   Beiträge erscheinen während der Woche, dazu ein Wochenfazit.
   [Archiv](https://vaiacon.ch/ki-kmu-news/archiv) ·
   [Feed](https://vaiacon.ch/ki-kmu-news/feed.xml)
+- [Ratgeber KI-Kompetenz](https://vaiacon.ch/ki-kompetenz): Artikel 4 der EU-KI-Verordnung
+  in einfacher Sprache, mit Blick auf Schweizer KMU, Quellen und markierten
+  Unsicherheiten. Dazu: [Schulung](https://vaiacon.ch/ki-kompetenz-schulung) ·
+  [Nachweis](https://vaiacon.ch/ki-kompetenz-nachweis) ·
+  [Pflicht in der Schweiz](https://vaiacon.ch/ki-kompetenz-pflicht-schweiz)
 - [Über uns](https://vaiacon.ch/ueber-uns): Die zwei Gründer, wie wir arbeiten
   und wofür wir stehen.
 - [Aus der Praxis](https://vaiacon.ch/referenzen): Eine Kundin erzählt, wie ihr

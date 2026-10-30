@@ -248,7 +248,10 @@ SEITEN = [
     # ki-kmu-news/* schreibt scripts/news_bauen.py selbst (eigener ItemList-Block); offerte.html leitet weiter
     "ueber-uns.html", "referenzen.html", "faq.html", "kontakt.html", "agb.html", "datenschutz.html",
     "impressum.html",
+    "ki-kompetenz.html", "ki-kompetenz-schulung.html", "ki-kompetenz-nachweis.html", "ki-kompetenz-pflicht-schweiz.html",
 ]
+
+RATGEBER = ("ki-kompetenz.html", "ki-kompetenz-schulung.html", "ki-kompetenz-nachweis.html", "ki-kompetenz-pflicht-schweiz.html")
 
 # Die Angebotsbereiche auch im Firmenblock, damit schon die Startseite sie maschinenlesbar nennt
 # (Visibility-Check 05.10.2026: «Leistungen nicht als Service hinterlegt»).
@@ -285,6 +288,10 @@ SITEMAP = [
     ("erstanalyse/", "erstanalyse/index.html"),
     ("referenzen", "referenzen.html"),
     ("faq", "faq.html"),
+    ("ki-kompetenz", "ki-kompetenz.html"),
+    ("ki-kompetenz-schulung", "ki-kompetenz-schulung.html"),
+    ("ki-kompetenz-nachweis", "ki-kompetenz-nachweis.html"),
+    ("ki-kompetenz-pflicht-schweiz", "ki-kompetenz-pflicht-schweiz.html"),
     ("kontakt", "kontakt.html"),
     ("impressum", "impressum.html"),
     ("datenschutz", "datenschutz.html"),
@@ -306,6 +313,10 @@ BROTKRUMEN = {
     "visibility.html": [("Sichtbarkeit", "visibility")],
     "learning.html": [("KI-Kompetenz", "learning")],
     "bot.html": [("Automationen", "bot")],
+    "ki-kompetenz.html": [("KI-Kompetenz", "learning"), ("Ratgeber KI-Kompetenz", "ki-kompetenz")],
+    "ki-kompetenz-schulung.html": [("KI-Kompetenz", "learning"), ("Ratgeber KI-Kompetenz", "ki-kompetenz"), ("Schulung", "ki-kompetenz-schulung")],
+    "ki-kompetenz-nachweis.html": [("KI-Kompetenz", "learning"), ("Ratgeber KI-Kompetenz", "ki-kompetenz"), ("Nachweis", "ki-kompetenz-nachweis")],
+    "ki-kompetenz-pflicht-schweiz.html": [("KI-Kompetenz", "learning"), ("Ratgeber KI-Kompetenz", "ki-kompetenz"), ("Pflicht in der Schweiz", "ki-kompetenz-pflicht-schweiz")],
     "assistenten.html": [("Automationen", "bot"), ("Telefon-Assistent und Chatbot", "assistenten")],
     "service.html": [("Betreuung und Begleitung", "service")],
     "ueber-uns.html": [("Über uns", "ueber-uns")],
@@ -354,6 +365,14 @@ def webseite(name: str, seite: str, datum: str) -> dict:
     }
     if name in BROTKRUMEN:
         block["breadcrumb"] = {"@id": f"{url}#brotkrumen"}
+    if name in RATGEBER:
+        block["@type"] = "Article"
+        block["headline"] = html.unescape(titel).replace(" · vaiacon", "")
+        block["description"] = html.unescape(re.search(r'<meta name="description" content="(.*?)"', seite).group(1))
+        block["datePublished"] = "2026-10-30"
+        block["author"] = {"@id": f"{BASIS}/#organisation"}
+        block["publisher"] = {"@id": f"{BASIS}/#organisation"}
+        block["mainEntityOfPage"] = {"@id": f"{url}#seite"}
     if name in ANGEBOTE:
         block["mainEntity"] = {"@id": ANGEBOTE[name]["@id"]}
     return block
@@ -480,6 +499,11 @@ mit der Kundin oder dem Kunden an; am Anfang steht das kostenlose Erstgespräch.
   Beiträge erscheinen während der Woche, dazu ein Wochenfazit.
   [Archiv](https://vaiacon.ch/ki-kmu-news/archiv) ·
   [Feed](https://vaiacon.ch/ki-kmu-news/feed.xml)
+- [Ratgeber KI-Kompetenz](https://vaiacon.ch/ki-kompetenz): Artikel 4 der EU-KI-Verordnung
+  in einfacher Sprache, mit Blick auf Schweizer KMU, Quellen und markierten
+  Unsicherheiten. Dazu: [Schulung](https://vaiacon.ch/ki-kompetenz-schulung) ·
+  [Nachweis](https://vaiacon.ch/ki-kompetenz-nachweis) ·
+  [Pflicht in der Schweiz](https://vaiacon.ch/ki-kompetenz-pflicht-schweiz)
 - [Über uns](https://vaiacon.ch/ueber-uns): Die zwei Gründer, wie wir arbeiten
   und wofür wir stehen.
 - [Aus der Praxis](https://vaiacon.ch/referenzen): Eine Kundin erzählt, wie ihr
@@ -582,7 +606,7 @@ def main() -> None:
                 bloecke.append(ANGEBOTE[name])
             if name == "index.html":
                 bloecke.append(WEBSITE)
-            if name in ("faq.html", "index.html"):
+            if name in ("faq.html", "index.html", "ki-kompetenz.html", "ki-kompetenz-schulung.html", "ki-kompetenz-nachweis.html", "ki-kompetenz-pflicht-schweiz.html"):
                 bloecke.append(faq_block(ohne))
             einschub = ANFANG + "\n" + "\n".join(als_skript(b) for b in bloecke) + "\n" + ENDE + "\n"
             return ohne.replace("</head>", einschub + "</head>"), bloecke
