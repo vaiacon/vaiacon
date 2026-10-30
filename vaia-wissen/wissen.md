@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 29.10.2026 · Eintrag 7308616 Website-Check: letzter Satz unter «Was genau geprueft wird» nennt das persoenliche Gespraech
+> Stand: 30.10.2026 · Eintrag fc6697b KI-News für KMU 2026-10-30: TechCrunch: Mistral gibt sein sehr grosses Modell «Large 4» ; TechCrunch: Google will Werbung in der KI-Suche auf weitere
 
 ## Wie du antwortest
 
@@ -545,12 +545,16 @@ KI-News für Schweizer KMU: was Neuigkeiten für Ihren Betrieb heissen
 Neue Beiträge während der Woche, mit Wochenfazit. Zu jeder Meldung: was passiert ist, was sie für ein KMU mit 5 bis 30 Mitarbeitenden heisst und worauf Sie achten sollten. Mit Quellen, Fachbegriffe kurz erklärt.
 Wochenfazit KW 44 Laut Startup Fortune soll Meta ab dem 30. Oktober die Bedingungen für KI-Funktionen für Firmen ändern und Risiken auf die Kunden übertragen. Bestätigt ist das nicht, denn die Bedingungen selbst konnten wir nicht prüfen. Wer KI-Funktionen von Meta nutzt, schaut sie am besten selbst an.
 Aktuelle Woche: KW 44 · 26. Oktober – 1. November 2026 · ganze Woche lesen →
+TechCrunch berichtete am 28. Oktober, Google wolle Werbung in seinen KI-Suchfunktionen erstmals auch ausserhalb der USA zeigen. Angekündigt wurde das laut dem Artikel bei der Vorstellung der Quartalszahlen. Welche Länder betroffen sind und ab wann, nennt der Artikel nicht. Die Schweiz wird darin nicht erwähnt.
+Was das für Ihr KMU heisst →
+TechCrunch berichtete am 29. Oktober, Mistral habe die offene Version seines Sprachmodells «Large 4» veröffentlicht, die Firmen selbst betreiben können. Sie liegt auf der Download-Plattform Hugging Face und ist auch für Entwickler über Mistral nutzbar. Mistral richtet das Modell laut TechCrunch auf IT-Sicherheit aus.
+Was das für Ihr KMU heisst →
 TechCrunch berichtete am 28. Oktober, Google lasse über eine neue Plattform Firmen und Entwickler eigene Apps mit Gemini und der KI-Suche verbinden. Nutzerinnen und Nutzer sollen dort Dienste anwählen und Aufgaben darin erledigen können. Der Zugang ist laut Bericht auf Entwickler in den USA beschränkt, ein Termin für die breite Einführung fehlt.
 Was das für Ihr KMU heisst →
 Startup Fortune berichtete am 24. Oktober, Meta ändere die Geschäftsbedingungen für seine KI-Funktionen für Firmen. Laut dem Bericht, der sich auf CIO.com und WION stützt, sollen Kunden ab dem 30. Oktober die Risiken tragen und Meta von Ansprüchen freistellen. Die Bedingungen selbst konnten wir nicht abrufen.
 Was das für Ihr KMU heisst →
 Die letzten Wochen
-KW 44 · 26. Oktober – 1. November 2026 2 Beiträge
+KW 44 · 26. Oktober – 1. November 2026 4 Beiträge
 KW 43 · 19. – 25. Oktober 2026 1 Beitrag
 KW 42 · 12. – 18. Oktober 2026 3 Beiträge
 KW 41 · 5. – 11. Oktober 2026 5 Beiträge
@@ -753,7 +757,7 @@ DATENSCHUTZ
 Was mit Ihren Daten geschieht.
 Massgebend ist das revidierte Schweizer Datenschutzgesetz (revDSG). Wir erheben so wenig wie möglich und erklären hier alles, was auf dieser Website und im Kundenportal tatsächlich passiert.
 Kurz gesagt
-Diese Website verlangt kein Konto. Wie viele Menschen sie besuchen und welche Seiten sie lesen, zählen wir mit Umami, einem quelloffenen Statistik-Werkzeug auf unserem eigenen Server in der Schweiz. Es setzt keine Cookies und speichert keine Personendaten: IP-Adresse und Browser-Kennung werden mit einem täglich wechselnden Salz gehasht und lassen sich nicht auf Sie zurückführen. Es gehen keine Daten an Dritte. Die Website läuft auf einem Server von Infomaniak in der Schweiz. Einiges geht ins Ausland: alles, was ein Sprachmodell für Sie auswertet. Das sind der Chat mit Vaia, der kostenlose Website-Check, die Erstanalyse, der Richtpreis-Rechner, die Einordnung «Ihr Fall». Das Sprachmodell stammt von Anthropic in den USA. Jedes davon ist unten einzeln erklärt, und der Abschnitt «Bekanntgabe ins Ausland» fasst zusammen, auf welcher Grundlage das geschieht.
+Diese Website verlangt kein Konto. Wie viele Menschen sie besuchen und welche Seiten sie lesen, zählen wir mit Umami, einem quelloffenen Statistik-Werkzeug auf unserem eigenen Server in der Schweiz. Es setzt keine Cookies und speichert keine Personendaten: IP-Adresse und Browser-Kennung werden mit einem täglich wechselnden Salz gehasht und lassen sich nicht auf Sie zurückführen. Umami zeichnet ausserdem auf, wie Besucher sich auf der Seite bewegen (Mausbewegung, Scrollen, Klicks), als anonyme Sitzungsaufzeichnung; Eingaben in Formularfelder werden maskiert und nie gespeichert. Aufzeichnungen liegen 30 Tage auf unserem Server und werden dann gelöscht. Es gehen keine Daten an Dritte. Die Website läuft auf einem Server von Infomaniak in der Schweiz. Einiges geht ins Ausland: alles, was ein Sprachmodell für Sie auswertet. Das sind der Chat mit Vaia, der kostenlose Website-Check, die Erstanalyse, der Richtpreis-Rechner, die Einordnung «Ihr Fall». Das Sprachmodell stammt von Anthropic in den USA. Jedes davon ist unten einzeln erklärt, und der Abschnitt «Bekanntgabe ins Ausland» fasst zusammen, auf welcher Grundlage das geschieht.
 Diese Erklärung gilt auch für das Kundenportal unter kunden.vaiacon.ch. Dort speichern wir mehr, weil es dort nötig ist. Was genau, steht weiter unten.
 Was beim Aufruf dieser Seite geschieht
 Die Website liegt bei Infomaniak in der Schweiz. Wir führen kein Zugriffsprotokoll und speichern keine IP-Adressen. Wer diese Seiten nur liest, hinterlässt bei uns also keine Spur.
