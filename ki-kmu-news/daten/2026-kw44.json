@@ -40,6 +40,42 @@
         }
       ],
       "wichtigkeit": 1
+    },
+    {
+      "id": "2026-10-30-techcrunch-google-will-werbung-in",
+      "datum": "2026-10-30",
+      "rubrik": "markt",
+      "titel": "TechCrunch: Google will Werbung in der KI-Suche auf weitere Märkte ausweiten",
+      "kurz": "TechCrunch berichtete am 28. Oktober, Google wolle Werbung in seinen KI-Suchfunktionen erstmals auch ausserhalb der USA zeigen. Angekündigt wurde das laut dem Artikel bei der Vorstellung der Quartalszahlen. Welche Länder betroffen sind und ab wann, nennt der Artikel nicht. Die Schweiz wird darin nicht erwähnt.",
+      "kmu": "Ob und wann Anzeigen in KI-Antworten in der Schweiz erscheinen, ist offen. Schalten Sie Google-Werbung, könnte sich künftig ein weiterer Platz neben den bisherigen Anzeigen ergeben. Unabhängig davon hilft eine Website, die Google und KI-Assistenten gut verstehen, bei beiden Wegen: bei bezahlter Werbung wie bei der normalen Suche.",
+      "vaiacon": "Der kostenlose Website-Check auf vaiacon.ch läuft automatisch. Er prüft, ob Google Ihr Angebot versteht und ob Ihre Website die technischen Voraussetzungen für KI-Assistenten erfüllt. Der Sichtbarkeits-Check (kompakt) zeigt zusätzlich, wie Google und KI-Assistenten Ihre Firma nennen. Bei Bedarf überarbeiten wir Ihre Seite.",
+      "bereich": "sichtbarkeit",
+      "achtung": "Die Aussagen zu Klickraten und zur Wirkung der Anzeigen stammen von Google selbst. Warten Sie die Ankündigung für die Schweiz ab, bevor Sie Werbebudgets verschieben.",
+      "quellen": [
+        {
+          "titel": "TechCrunch: Google expands AI Search ads globally as core ad growth slows",
+          "url": "https://techcrunch.com/2026/10/28/google-expands-ai-search-ads-globally-as-core-ad-growth-slows/"
+        }
+      ],
+      "wichtigkeit": 2
+    },
+    {
+      "id": "2026-10-30-techcrunch-mistral-gibt-sein-sehr",
+      "datum": "2026-10-30",
+      "rubrik": "modelle",
+      "titel": "TechCrunch: Mistral gibt sein sehr grosses Modell «Large 4» zum Herunterladen frei",
+      "kurz": "TechCrunch berichtete am 29. Oktober, Mistral habe die offene Version seines Sprachmodells «Large 4» veröffentlicht, die Firmen selbst betreiben können. Sie liegt auf der Download-Plattform Hugging Face und ist auch für Entwickler über Mistral nutzbar. Mistral richtet das Modell laut TechCrunch auf IT-Sicherheit aus.",
+      "kmu": "Für einen Betrieb mit fünf bis 30 Mitarbeitenden ändert sich im Alltag nichts, denn ein so grosses Modell selbst zu betreiben, ist Sache von Fachfirmen. Wichtig ist die Richtung: Laut TechCrunch können Organisationen das Modell im eigenen Haus betreiben, sodass Daten nicht zu einem fremden Anbieter fliessen müssten. Fragen Sie Ihren IT-Partner, ob das für heikle Aufgaben eine Option wäre.",
+      "vaiacon": "In der KI-Standortanalyse im Betrieb klären wir mit Ihnen, welche Ihrer Aufgaben heikle Daten berühren. Daraus ergibt sich, ob ein offenes Modell für Sie ein Thema ist oder ob ein Chatbot mit Ihrem Firmenwissen auf einem gängigen Dienst genügt. So entscheiden Sie auf einer klaren Grundlage.",
+      "bereich": "automationen",
+      "achtung": "Die Leistungsangaben stammen von Mistral und wurden nicht unabhängig geprüft. Die Lizenz nennt der Artikel nicht. Sie sollte vor jedem Einsatz im Betrieb gelesen werden. Das ersetzt keine Rechtsauskunft.",
+      "quellen": [
+        {
+          "titel": "TechCrunch: Mistral releases weights for its trillion-parameter AI model, targeting cybersecurity",
+          "url": "https://techcrunch.com/2026/10/29/mistral-releases-weights-for-its-trillion-parameter-ai-model-targeting-cybersecurity/"
+        }
+      ],
+      "wichtigkeit": 1
     }
   ]
 }

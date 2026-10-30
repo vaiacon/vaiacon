@@ -1,26 +1,26 @@
 [
   {
+    "titel": "TechCrunch: Google will Werbung in der KI-Suche auf weitere Märkte ausweiten",
+    "datum": "2026-10-30",
+    "rubrik": "markt",
+    "kurz": "TechCrunch berichtete am 28. Oktober, Google wolle Werbung in seinen KI-Suchfunktionen erstmals auch ausserhalb der USA zeigen. Angekündigt wurde das laut dem Artikel bei der Vorstellung der Quartalszahlen. Welche Länder betroffen sind und ab wann, nennt der Artikel nicht. Die Schweiz wird darin nicht erwähnt.",
+    "adresse": "ki-kmu-news/2026-kw44#2026-10-30-techcrunch-google-will-werbung-in",
+    "bild": "assets/vaiacon-buerobot-news-markt.png"
+  },
+  {
+    "titel": "TechCrunch: Mistral gibt sein sehr grosses Modell «Large 4» zum Herunterladen frei",
+    "datum": "2026-10-30",
+    "rubrik": "modelle",
+    "kurz": "TechCrunch berichtete am 29. Oktober, Mistral habe die offene Version seines Sprachmodells «Large 4» veröffentlicht, die Firmen selbst betreiben können. Sie liegt auf der Download-Plattform Hugging Face und ist auch für Entwickler über Mistral nutzbar. Mistral richtet das Modell laut TechCrunch auf IT-Sicherheit aus.",
+    "adresse": "ki-kmu-news/2026-kw44#2026-10-30-techcrunch-mistral-gibt-sein-sehr",
+    "bild": "assets/vaiacon-buerobot-news-modelle.png"
+  },
+  {
     "titel": "TechCrunch: Google öffnet Gemini und Suche für Apps von Firmen, vorerst nur in den USA",
     "datum": "2026-10-29",
     "rubrik": "werkzeuge",
     "kurz": "TechCrunch berichtete am 28. Oktober, Google lasse über eine neue Plattform Firmen und Entwickler eigene Apps mit Gemini und der KI-Suche verbinden. Nutzerinnen und Nutzer sollen dort Dienste anwählen und Aufgaben darin erledigen können. Der Zugang ist laut Bericht auf Entwickler in den USA beschränkt, ein Termin für die breite Einführung fehlt.",
     "adresse": "ki-kmu-news/2026-kw44#2026-10-29-techcrunch-google-oeffnet-gemini-und",
     "bild": "assets/vaiacon-buerobot-news-werkzeuge.png"
-  },
-  {
-    "titel": "Bericht: Meta-Bedingungen für KI-Helfer sollen ab 30. Oktober Firmen in die Haftung nehmen",
-    "datum": "2026-10-26",
-    "rubrik": "recht",
-    "kurz": "Startup Fortune berichtete am 24. Oktober, Meta ändere die Geschäftsbedingungen für seine KI-Funktionen für Firmen. Laut dem Bericht, der sich auf CIO.com und WION stützt, sollen Kunden ab dem 30. Oktober die Risiken tragen und Meta von Ansprüchen freistellen. Die Bedingungen selbst konnten wir nicht abrufen.",
-    "adresse": "ki-kmu-news/2026-kw44#2026-10-26-bericht-meta-bedingungen-fuer-ki",
-    "bild": "assets/vaiacon-buerobot-news-recht.png"
-  },
-  {
-    "titel": "TechCrunch: Meta streicht Passage zu Website-Inhalten und KI-Training aus Geschäftsbedingungen",
-    "datum": "2026-10-19",
-    "rubrik": "recht",
-    "kurz": "TechCrunch berichtete am 17. Oktober, Meta habe aus den Bedingungen für Geschäftskonten eine Passage entfernt. Rechtsexperten hatten sie so gelesen, dass Meta Inhalte von Websites der Kundschaft auch für KI-Training nutzen dürfte. Laut Meta ändert sich nichts daran, wie die Firma das Web durchsucht.",
-    "adresse": "ki-kmu-news/2026-kw43#2026-10-19-techcrunch-meta-streicht-passage-zu",
-    "bild": "assets/vaiacon-buerobot-news-recht.png"
   }
 ]
