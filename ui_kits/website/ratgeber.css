@@ -1,0 +1,31 @@
+/* Ratgeber-Seiten (KI-Kompetenz): Lesetext, Merkkasten, Schritte, Quellen. Baut auf den Tokens aus visibility.css auf. */
+.rg-text { max-width: 46rem; margin: 0 auto; text-align: left; }
+.rg-text h2 { margin: var(--space-11) 0 var(--space-4); color: var(--text-strong); font-size: clamp(26px, 3vw, 34px); line-height: var(--leading-snug); letter-spacing: var(--tracking-tight); font-weight: var(--weight-semibold); }
+.rg-text h2:first-child { margin-top: 0; }
+.rg-text h3 { margin: var(--space-6) 0 var(--space-2); color: var(--text-strong); font-size: clamp(19px, 2vw, 22px); line-height: var(--leading-snug); font-weight: var(--weight-semibold); }
+.rg-text p, .rg-text li { color: var(--text-body); font-size: 17px; line-height: var(--leading-body); }
+.rg-text p { margin: 0 0 var(--space-4); }
+.rg-text ul, .rg-text ol { margin: 0 0 var(--space-4); padding-left: 1.4em; }
+.rg-text li { margin-bottom: var(--space-2); }
+.rg-text a { color: var(--terra-700); text-decoration: underline; text-underline-offset: 3px; }
+.rg-kasten { margin: 0 0 var(--space-8); padding: var(--space-5) var(--space-6); border: 1px solid var(--border-strong); border-radius: var(--radius-lg, 16px); background: var(--cream-100); }
+.rg-kasten h2, .rg-kasten h3 { margin-top: 0; }
+.rg-kasten ul { margin-bottom: 0; }
+.rg-hinweis { margin: var(--space-6) 0; padding: var(--space-4) var(--space-5); border-left: 4px solid var(--accent); background: var(--cream-100); border-radius: 0 var(--radius-md, 10px) var(--radius-md, 10px) 0; }
+.rg-hinweis p:last-child { margin-bottom: 0; }
+.rg-schritte { list-style: none; counter-reset: rg; padding: 0 !important; }
+.rg-schritte li { counter-increment: rg; position: relative; margin: 0 0 var(--space-4); padding: var(--space-4) var(--space-5) var(--space-4) 4rem; border: 1px solid var(--border-strong); border-radius: var(--radius-md, 10px); background: #fff; }
+.rg-schritte li::before { content: counter(rg); position: absolute; left: var(--space-5); top: var(--space-4); width: 2rem; height: 2rem; border-radius: 50%; background: var(--accent); color: #fff; font-weight: var(--weight-bold); display: flex; align-items: center; justify-content: center; }
+.rg-schritte strong { color: var(--text-strong); }
+.rg-weiter { margin-top: var(--space-11); padding-top: var(--space-6); border-top: 1px solid var(--border-strong); }
+.rg-weiter ul { list-style: none; padding: 0; }
+.rg-quellen li { font-size: var(--text-body-sm); }
+.rg-stand { font-size: var(--text-body-sm); color: var(--text-muted, var(--text-body)); }
+.rg-text .sv-faq-list { margin: 0 0 var(--space-6); }
+.rg-text .sv-faq-item p { margin: 0; }
+@media (max-width: 640px) { .rg-schritte li { padding-left: 3.4rem; } .rg-kasten { padding: var(--space-4); } }
+
+.rg-text h3 { font-size: 20px; margin: 1.4em 0 .4em; }
+.rg-tabelle { width: 100%; border-collapse: collapse; margin: 1em 0 1.6em; font-size: 15px; display: block; overflow-x: auto; }
+.rg-tabelle th, .rg-tabelle td { border: 1px solid var(--border-strong); padding: 8px 10px; text-align: left; vertical-align: top; }
+.rg-tabelle th { background: var(--cream-100); }
