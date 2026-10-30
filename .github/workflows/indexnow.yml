@@ -1,0 +1,116 @@
+name: IndexNow
+
+# Meldet neue und geaenderte Seiten von vaiacon.ch an Suchmaschinen und KI-Suchen
+# (IndexNow: Bing, Yandex, Seznam, Naver u. a.). Laeuft bei jedem Push auf main,
+# der Seiten beruehrt, und von Hand (workflow_dispatch = alle URLs der Sitemap).
+# Nichts am Server wird geschrieben; gelesen wird nur die oeffentliche Sitemap.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "*.html"
+      - "sitemap.xml"
+      - "llms*.txt"
+      - "ki-kmu-news/**"
+      - "erstanalyse/**"
+      - "academy/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+
+jobs:
+  melden:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Server-Abgleich abwarten
+        if: github.event_name == 'push'
+        run: sleep 180
+
+      - name: URLs ermitteln und melden
+        env:
+          EVENT: ${{ github.event_name }}
+          BEFORE: ${{ github.event.before }}
+          AFTER: ${{ github.sha }}
+        run: |
+          python3 - <<'PY'
+          import json, os, re, subprocess, sys, urllib.request
+          from urllib.parse import urlparse
+
+          HOST = "vaiacon.ch"
+          BASIS = f"https://{HOST}"
+          KEY = next(f[:-4] for f in os.listdir(".")
+                     if re.fullmatch(r"[0-9a-f]{32}\.txt", f))
+
+          def holen(url):
+              req = urllib.request.Request(url, headers={"User-Agent": "vaiacon-indexnow/1"})
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  return r.read().decode("utf-8")
+
+          sitemap = holen(f"{BASIS}/sitemap.xml")
+          alle = re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", sitemap)
+          if not alle:
+              sys.exit("Sitemap leer oder nicht lesbar")
+
+          def datei_zu_url(datei):
+              if datei == "index.html":
+                  return f"{BASIS}/"
+              if datei.endswith("/index.html"):
+                  kandidaten = [f"{BASIS}/{datei[:-len('index.html')]}", f"{BASIS}/{datei[:-len('/index.html')]}"]
+              elif datei.endswith(".html"):
+                  kandidaten = [f"{BASIS}/{datei[:-5]}"]
+              else:
+                  return None
+              return next((k for k in kandidaten if k in alle), None)
+
+          urls = alle
+          grund = "alle URLs (Handlauf oder kein Vergleich moeglich)"
+          before = os.environ["BEFORE"]
+          if os.environ["EVENT"] == "push" and not re.fullmatch(r"0+", before):
+              try:
+                  diff = subprocess.run(
+                      ["git", "diff", "--name-only", before, os.environ["AFTER"]],
+                      check=True, capture_output=True, text=True).stdout.split()
+                  geaendert = {datei_zu_url(d) for d in diff}
+                  geaendert.discard(None)
+                  if "sitemap.xml" in diff:
+                      # Neue Sitemap-Eintraege (z. B. neue News-Seite) gehoeren immer dazu
+                      alt = subprocess.run(["git", "show", f"{before}:sitemap.xml"],
+                                           capture_output=True, text=True).stdout
+                      geaendert |= set(alle) - set(re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", alt))
+                  urls = [u for u in alle if u in geaendert]
+                  grund = f"{len(urls)} geaenderte URLs aus {len(diff)} Dateien"
+              except Exception as e:
+                  print("Vergleich fehlgeschlagen, melde alle:", e)
+          print("Melde:", grund)
+          if not urls:
+              print("Keine meldbaren URLs im Diff, nichts zu tun.")
+              sys.exit(0)
+
+          urls = urls[:10000]
+          nutzlast = json.dumps({
+              "host": HOST, "key": KEY,
+              "keyLocation": f"{BASIS}/{KEY}.txt", "urlList": urls,
+          }).encode()
+          for u in urls:
+              print(" ", u)
+          req = urllib.request.Request(
+              "https://api.indexnow.org/indexnow", data=nutzlast, method="POST",
+              headers={"Content-Type": "application/json; charset=utf-8"})
+          try:
+              with urllib.request.urlopen(req, timeout=60) as r:
+                  code = r.status
+          except urllib.error.HTTPError as e:
+              code = e.code
+          print("IndexNow-Antwort:", code)
+          sys.exit(0 if code in (200, 202) else 1)
+          PY

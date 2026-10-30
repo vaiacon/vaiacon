@@ -78,3 +78,8 @@ Nie vor dem Merge, sonst nennt der Bot neue und die Seite alte Preise.
 **Prüfskript:** `scripts/preise_pruefen.py` findet jede CHF-Zahl ausserhalb von `data-preis`, vergleicht Seiten, llms.txt, Bot-Wissen und Offerten-Dienst mit dem Katalog. Rot heisst nicht fertig.
 
 Preise ändern: `git branch --show-current` prüfen, Änderung im eigenen Zweig mit Zusammenführungsanfrage, nie `--force`. `preise.json`, die Angebotsseiten (bot, learning, visibility, service) und den Offerten-Dienst nicht parallel von zwei Personen anfassen; vorher im Chat sagen.
+
+## Suchmaschinen und KI-Suchen melden (automatisch)
+
+- `.github/workflows/indexnow.yml`: bei jedem Push auf `main`, der Seiten berührt, wartet er 180 s (Server-Abgleich) und meldet die geänderten URLs per IndexNow (Schlüsseldatei `<schlüssel>.txt` in der Wurzel, nicht löschen). Von Hand: `gh workflow run indexnow.yml` meldet alle URLs der Sitemap.
+- `llms-full.txt` (Klartext aller Sitemap-Seiten) erzeugt `scripts/llms_full.py`; `.github/workflows/llms-full.yml` baut sie nach jedem Push neu und committet zurück. Lokal nur nötig zum Prüfen: `python3 scripts/llms_full.py`. Neue Seite → erst in die Sitemap (`strukturdaten.py`), dann kommt sie von allein dazu.

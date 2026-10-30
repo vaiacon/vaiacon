@@ -74,3 +74,8 @@ mit der Kundin oder dem Kunden an; am Anfang steht das kostenlose Erstgespräch.
 - [Impressum](https://vaiacon.ch/impressum): Firma, Anschrift, Kontakt.
 - [Datenschutz](https://vaiacon.ch/datenschutz)
 - [AGB](https://vaiacon.ch/agb)
+
+## Optional
+
+- [Ganze Website als Klartext](https://vaiacon.ch/llms-full.txt): Der sichtbare
+  Text aller öffentlichen Seiten in einer Datei (erzeugt aus der Sitemap).

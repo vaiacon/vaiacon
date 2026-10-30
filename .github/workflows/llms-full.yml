@@ -1,0 +1,44 @@
+name: llms-full.txt aktuell halten
+
+# Baut llms-full.txt (Klartext aller Sitemap-Seiten) nach jedem Push auf main neu und
+# committet bei Aenderung zurueck. Keine Endlosschleife: Pushes, die nur llms-full.txt
+# betreffen, loesen den Lauf nicht aus (paths-ignore), und Pushes mit GITHUB_TOKEN
+# starten ohnehin keine weiteren Workflows.
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "llms-full.txt"
+      - ".github/**"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: llms-full
+  cancel-in-progress: false
+
+jobs:
+  bauen:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Klartext neu erzeugen
+        run: python3 scripts/llms_full.py
+
+      - name: Bei Aenderung zurueckcommitten
+        run: |
+          if git diff --quiet -- llms-full.txt; then
+            echo "llms-full.txt ist aktuell."
+            exit 0
+          fi
+          git config user.name "vaiacon-bot"
+          git config user.email "noreply@github.com"
+          git add llms-full.txt
+          git commit -m "llms-full.txt automatisch aktualisiert"
+          git pull --rebase origin main
+          git push origin HEAD:main
