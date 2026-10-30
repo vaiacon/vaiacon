@@ -59,6 +59,7 @@ Haben Sie sich für eine oder mehrere unserer Lösungen entschieden? Die Begleit
 HÄUFIGE FRAGEN
 Kurz beantwortet.
 Alle Fragen und Antworten →
+Ratgeber: KI-Kompetenz und Artikel 4 AI Act →
 Was macht vaiacon? +
 vaiacon führt Schweizer KMU an KI heran, in drei Bereichen: KI-Kompetenz (Ihr Team lernt, KI sicher einzusetzen), Sichtbarkeit (wir verbessern die Voraussetzungen dafür, dass Google und KI-Assistenten Ihr Angebot richtig einordnen) und Automationen (wiederkehrende Büroarbeit wird automatisch vorbereitet). Auf Wunsch begleiten wir das Ganze laufend. Unser Büro ist in Zürich, wir arbeiten für Betriebe in der gesamten Deutschschweiz.
 Für welche Betriebe eignet sich vaiacon? +
@@ -287,6 +288,7 @@ Microsoft Copilot
 Mistral
 Midjourney
 Markennamen gehören ihren Inhabern.
+Fragen zur Pflicht? Unser Ratgeber zu KI-Kompetenz und Artikel 4 AI Act erklärt den Stand in einfacher Sprache.
 NÄCHSTER SCHRITT
 Reden wir darüber, wie Ihre Lernreise aussieht.
 Ein halbstündiges Erstgespräch, kostenlos.
@@ -969,6 +971,259 @@ NÄCHSTER SCHRITT
 Ihre Frage steht nicht dabei?
 Schreiben Sie uns. Wir antworten selbst, nicht aus einem Chatfenster, sondern als die zwei Menschen, die hier arbeiten.
 hallo@vaiacon.ch ↗
+
+---
+
+## KI-Kompetenz: Was Schweizer KMU zu Artikel 4 wissen müssen
+
+URL: https://vaiacon.ch/ki-kompetenz
+
+RATGEBER
+KI-Kompetenz: Was Schweizer KMU zu Artikel 4 wissen müssen
+Pflicht, Schulung, Nachweis: der Überblick in einfacher Sprache, mit Quellen und klar markierten Unsicherheiten.
+Erstgespräch vereinbaren →
+Auf einen Blick. Seit dem 2. Februar 2025 verlangt Artikel 4 der EU-KI-Verordnung, dass Firmen, die KI einsetzen, sich um die KI-Kompetenz ihrer Mitarbeitenden kümmern. Es gibt dafür kein Pflichtzertifikat und keine Einheitsschulung. Für Schweizer KMU gilt die Regel nicht automatisch, sondern nur, wenn sie in den Anwendungsbereich der Verordnung fallen. Ein Schweizer Gegenstück gibt es nicht. Diese Seite erklärt den Stand zum 30. Oktober 2026 und sagt dort, wo es unsicher ist, dass es unsicher ist.
+Keine Rechtsberatung. Dieser Text erklärt den Stand zum 30. Oktober 2026 in einfacher Sprache und ersetzt keine Beratung durch eine Anwältin oder einen Anwalt. Wo die Rechtslage nicht abschliessend geklärt ist, steht es ausdrücklich da. Massgebend ist immer der amtliche Text auf EUR-Lex.
+Was ist KI-Kompetenz?
+Die KI-Verordnung definiert den Begriff in Artikel 3 Nummer 56: Gemeint sind die Fähigkeiten, die Kenntnisse und das Verständnis, die nötig sind, um KI-Systeme sachkundig einzusetzen und sich der Chancen und Risiken sowie möglicher Schäden bewusst zu sein. Das ist bewusst offen formuliert. Wer in der Buchhaltung einen Chatbot für Textentwürfe nutzt, braucht anderes Wissen als jemand, der Bewerbungen mit KI vorsortiert.
+In der Praxis heisst das vier Dinge: Ihre Leute wissen, was ein KI-Werkzeug kann und was nicht (zum Beispiel, dass Sprachmodelle Falsches überzeugend formulieren). Sie wissen, welche Daten sie eingeben dürfen und welche nicht. Sie prüfen Ergebnisse, bevor sie damit etwas entscheiden oder versenden. Und sie wissen, an wen sie sich bei Unklarheiten wenden.
+Was verlangt Artikel 4 genau?
+Der ursprüngliche Text von Artikel 4 (Verordnung (EU) 2024/1689) verpflichtet Anbieter und Betreiber von KI-Systemen, nach besten Kräften dafür zu sorgen, dass ihr Personal und andere Personen, die in ihrem Auftrag KI betreiben oder nutzen, über ein ausreichendes Mass an KI-Kompetenz verfügen. Dabei sind Vorkenntnisse, Erfahrung, Ausbildung, der Einsatzkontext und die Personen zu berücksichtigen, bei denen die KI eingesetzt wird. Die Pflicht gilt seit dem 2. Februar 2025.
+Wichtig ist, was nicht dasteht: kein Zertifikat, keine Mindeststundenzahl, kein vorgeschriebener Anbieter, kein amtliches Formular.
+Änderung durch den Digital Omnibus. Nach unserer Recherche wurde Artikel 4 im Sommer 2026 durch die sogenannte Digital-Omnibus-Verordnung zur KI (Verordnung (EU) 2026/1744) neu gefasst. Danach sollen Anbieter und Betreiber Massnahmen ergreifen, um die KI-Kompetenz ihres Personals zu fördern , und die Kommission sowie die Mitgliedstaaten sollen vor allem KMU dabei unterstützen. Ein bestimmtes Kompetenzniveau müsste nicht mehr zugesichert werden. Ein früherer Vorschlag der Kommission, die Pflicht ganz auf die Mitgliedstaaten zu verlagern, wurde nach unserem Stand nicht übernommen.
+Unsicher, bitte gegenprüfen. Wir konnten den amtlichen Wortlaut der Verordnung (EU) 2026/1744 nicht selbst abschliessend lesen und stützen uns auf Fachveröffentlichungen. Prüfen Sie Inkrafttreten und den neuen Wortlaut von Artikel 4 auf EUR-Lex, bevor Sie sich darauf verlassen. Mehrere Fachquellen empfehlen ausdrücklich, Kompetenz auch nach der Neufassung tatsächlich aufzubauen und nicht nur formal zu behaupten.
+Gilt Artikel 4 für Schweizer KMU?
+Nicht automatisch. Die KI-Verordnung ist EU-Recht. Nach Artikel 2 Absatz 1 Buchstabe c gilt sie aber auch für Anbieter und Betreiber mit Sitz ausserhalb der EU, wenn die Ergebnisse (der «Output») ihres KI-Systems in der Union verwendet werden. Schweizer Fachanwälte nennen als Beispiele eine Firma, die per KI Marketinginhalte für Interessenten in der EU erzeugt, oder ein Unternehmen, das KI-gestützte Produkte auf dem EU-Markt anbietet. Wer KI dagegen nur innerhalb der Schweiz für Schweizer Kundschaft nutzt, fällt nach diesen Einschätzungen nicht unter die Verordnung.
+Es gibt Grenzfälle, etwa eine Offerte, die ein Kunde aus Deutschland liest. Hier ist die Auslegung nicht abschliessend geklärt. Unsere Einschätzung, keine Rechtsauskunft: Selbst wenn Sie nicht direkt betroffen sind, können EU-Auftraggeber in Verträgen Nachweise zum KI-Einsatz verlangen. Dann lohnt es sich, vorbereitet zu sein. Mehr dazu auf der Seite KI-Kompetenz Pflicht in der Schweiz .
+Wie viel Schulung ist genug?
+Das Gesetz nennt keine Zahl. Massgebend ist, was Ihre Leute mit KI tun. Wer gelegentlich Texte entwerfen lässt, braucht eine kurze Einführung und klare Regeln. Wer mit KI Kundendaten verarbeitet oder Entscheidungen über Personen vorbereitet, braucht deutlich mehr. Eine Orientierung dazu finden Sie unter KI-Kompetenz Schulung: wie viel genügt?
+Wie weise ich KI-Kompetenz nach?
+Ein Formular gibt es nicht. Fachstellen empfehlen eine knappe, nachvollziehbare Dokumentation: Welche KI-Werkzeuge werden eingesetzt und von wem? Wer wurde wann zu welchen Inhalten geschult? Welche Regeln gelten für den Umgang mit KI? Wer ist verantwortlich? Die Bundesnetzagentur in Deutschland empfiehlt eine solche Dokumentation, schreibt sie aber nicht als Muster vor. Details auf der Seite KI-Kompetenz nachweisen .
+Droht ein Bussgeld?
+Das ist unsicher. Artikel 4 wird in der Bussgeldvorschrift (Artikel 99) nicht ausdrücklich genannt. Die Fachquellen sind sich nicht einig, ob und wie eine fehlende KI-Kompetenz unmittelbar sanktioniert werden kann. Mehrfach wird darauf hingewiesen, dass fehlende Kompetenz bei anderen Verstössen die Bewertung beeinflussen kann. Die nationale Aufsicht ist in den EU-Mitgliedstaaten ab August 2026 aufgebaut. Wir nennen deshalb keine Beträge. Wer es genau wissen muss, klärt das mit einer auf EU-Recht spezialisierten Anwaltskanzlei.
+Fünf Schritte für ein KMU
+Bestandsaufnahme. Schreiben Sie auf, welche KI-Werkzeuge im Betrieb genutzt werden, auch private Konten, die Mitarbeitende für die Arbeit nutzen.
+Regeln festlegen. Eine Seite genügt: erlaubte Werkzeuge, Daten, die nie eingegeben werden dürfen, Prüfpflicht vor Versand.
+Nach Rolle schulen. Alle bekommen die Grundlagen, wer mit sensiblen Daten arbeitet, bekommt mehr.
+Dokumentieren. Datum, Teilnehmende, Inhalte, Verantwortliche. Eine einfache Tabelle reicht.
+Auffrischen. Neue Werkzeuge oder neue Mitarbeitende lösen eine kurze Nachschulung aus. Einmal im Jahr prüfen, ob die Regeln noch stimmen.
+Wie ist der Stand in der Schweiz?
+Der Bundesrat beschloss am 12. Februar 2025, die KI-Konvention des Europarats zu ratifizieren und das Schweizer Recht dort anzupassen, wo es nötig ist, überwiegend sektorspezifisch statt mit einem allgemeinen KI-Gesetz. Am 28. Oktober 2026 nahm er einen Zwischenbericht dazu zur Kenntnis. Verbindliche Vorschriften sollen nach Medienberichten im Frühling 2027 in die Vernehmlassung gehen. Eine Pflicht zur KI-Kompetenz wie in Artikel 4 gibt es in der Schweiz nicht. Das revDSG gilt unverändert: Wer personenbezogene Daten in KI-Werkzeuge eingibt, muss Transparenz, Datensicherheit und die Weitergabe ins Ausland beachten, und das ist Teil guter KI-Kompetenz.
+Drei Beispiele aus dem KMU-Alltag
+Die folgenden Fälle sind erfundene Beispiele zur Veranschaulichung, keine Kundenfälle und keine Rechtsauskunft.
+Treuhandbüro
+Das Büro nutzt einen KI-Assistenten, um Mandantenbriefe zu entwerfen und Belege zusammenzufassen. Hier steht der Schutz von Mandatsdaten im Vordergrund. Wichtig für die Schulung: Welche Angaben dürfen in ein Cloud-Werkzeug (Berufsgeheimnis, revDSG), wie werden Zahlen aus KI-Zusammenfassungen gegengeprüft, und wer gibt ein Werkzeug frei? Für den Nachweis genügen ein Inventar der Werkzeuge, eine Regelseite und eine Teilnehmerliste.
+Arztpraxis
+Die Praxis lässt Terminanfragen von einem Chatbot beantworten und Berichtsentwürfe mit KI vorformulieren. Gesundheitsdaten sind besonders schützenswerte Personendaten. Die Schulung muss deshalb klar sagen, was nie in ein KI-Werkzeug gehört, und dass medizinische Aussagen immer von der zuständigen Fachperson geprüft werden. Wer entscheidet, wann ein Chatbot an eine Person übergibt, gehört in die Regeln. Ebenso sollte festgehalten sein, wie Patientinnen und Patienten erfahren, dass sie mit einem Chatbot schreiben, und wie sie jederzeit eine Person erreichen.
+Handwerksbetrieb
+Ein Sanitärbetrieb nutzt KI für Offerttexte, Mails und die Auswertung von Fotos der Baustelle. Das Risiko liegt weniger bei sensiblen Daten als bei falschen Angaben: Eine KI erfindet Normen, Mengen oder Fristen. Die Schulung sollte daher zeigen, wie man Ergebnisse prüft, bevor eine Offerte hinausgeht, und wie Kundennamen und Adressen in Prompts behandelt werden.
+Häufige Irrtümer
+Rund um Artikel 4 kursieren viele Kurzfassungen, die den Sachverhalt verkürzen. Die folgenden fünf Aussagen hören wir am häufigsten, und keine davon stimmt in dieser Form.
+«Wir brauchen ein Zertifikat.» Nein. Weder Artikel 4 noch eine uns bekannte Behörde verlangt ein bestimmtes Zertifikat.
+«Das betrifft nur Firmen mit eigener KI.» Nein. Auch wer fertige Werkzeuge wie Chatbots oder Übersetzer einsetzt, ist als Betreiber gemeint, sofern die Verordnung überhaupt anwendbar ist. Das gilt ebenso für KI-Funktionen, die in Office- oder Buchhaltungssoftware schon eingebaut sind.
+«Wir sind in der Schweiz, das geht uns nichts an.» Nicht pauschal. Es kommt darauf an, ob der Output in der EU verwendet wird (Artikel 2 Absatz 1 Buchstabe c).
+«Eine Richtlinie im Intranet reicht.» Allein kaum. Die Regeln müssen bekannt und verstanden sein.
+«Einmal geschult, für immer erledigt.» Werkzeuge ändern sich schnell. Eine Auffrischung bei Änderungen ist sinnvoll.
+Häufige Fragen
+Brauche ich ein Zertifikat für KI-Kompetenz? +
+Nein. Weder die ursprüngliche noch die neu gefasste Fassung von Artikel 4 verlangt ein Zertifikat. Entscheidend ist, dass Ihre Leute für ihre Aufgaben ausreichend Bescheid wissen und Sie das belegen können.
+Gilt die Pflicht für ein Schweizer KMU ohne EU-Geschäft? +
+Nach den uns vorliegenden Einschätzungen Schweizer Fachanwälte nicht, solange der Output Ihrer KI-Systeme nicht in der EU verwendet wird. Grenzfälle sind nicht abschliessend geklärt.
+Muss ich Praktikanten und externe Freelancer mitschulen? +
+Artikel 4 nennt ausdrücklich auch andere Personen, die im Auftrag KI betreiben oder nutzen. Wer in Ihrem Auftrag mit KI arbeitet, gehört also in die Überlegung.
+Reicht eine interne KI-Richtlinie? +
+Allein nicht. Eine Richtlinie ist ein guter Anfang, aber Fachquellen erwarten, dass die Regeln auch vermittelt und verstanden werden.
+Wie oft muss geschult werden? +
+Das ist nicht vorgeschrieben. Sinnvoll ist eine Auffrischung bei neuen Werkzeugen, neuen Aufgaben oder neuen Mitarbeitenden.
+Ist ein Online-Kurs ausreichend? +
+Das kann bei einfachem Einsatz genügen. Bei sensiblen Daten oder Entscheidungen über Personen sind Praxisbezug und Rückfragen wichtiger als das Medium.
+Was passiert, wenn ich nichts tue? +
+Ob und wie Art. 4 allein sanktioniert wird, ist unsicher. Unabhängig davon tragen Sie bei Fehlern mit KI weiterhin die Verantwortung, etwa nach revDSG oder Vertragsrecht.
+Quellen
+Verordnung (EU) 2024/1689 (KI-Verordnung), Art. 2, 3 Nr. 56 und 4, EUR-Lex
+Verordnung (EU) 2026/1744 (Digital-Omnibus-Verordnung zur KI), EUR-Lex
+Bundesrat: Auslegeordnung KI-Regulierung und Europarats-Konvention, admin.ch
+Bundesnetzagentur: KI-Kompetenz (Art. 4 KI-VO)
+Homburger: Die EU verabschiedet die KI-Verordnung (Wirkung auf Schweizer Unternehmen)
+Bundesamt für Justiz: Künstliche Intelligenz
+Stand: 30. Oktober 2026.
+NÄCHSTER SCHRITT
+Unsicher, was für Ihren Betrieb reicht?
+Im kostenlosen Erstgespräch (eine halbe Stunde) klären wir, wo Ihr Team steht. Mehr zu unserem Angebot finden Sie unter KI-Kompetenz .
+Erstgespräch vereinbaren →
+
+---
+
+## KI-Kompetenz Schulung: Wie viel genügt?
+
+URL: https://vaiacon.ch/ki-kompetenz-schulung
+
+RATGEBER
+KI-Kompetenz Schulung: Wie viel genügt?
+Das Gesetz nennt keine Stundenzahl. Hier steht, woran Sie sich orientieren können.
+Erstgespräch vereinbaren →
+Kurz gesagt: Es gibt keine gesetzliche Mindeststundenzahl. Eine gute Schulung richtet sich nach der Rolle und nach dem Risiko. Für einfache Anwendungen genügt eine halbe bis ganze Stunde mit klaren Regeln, für heikle Anwendungen braucht es Praxisübungen.
+Keine Rechtsberatung. Dieser Text erklärt den Stand zum 30. Oktober 2026 in einfacher Sprache und ersetzt keine Beratung durch eine Anwältin oder einen Anwalt. Wo die Rechtslage nicht abschliessend geklärt ist, steht es ausdrücklich da. Massgebend ist immer der amtliche Text auf EUR-Lex.
+Der Massstab: Rolle und Risiko
+Artikel 4 KI-VO verlangt keine bestimmte Dauer und keinen bestimmten Inhalt. Die Verordnung nennt Kriterien: Vorkenntnisse, Erfahrung und Ausbildung der Personen, der Einsatzkontext und die Personen, bei denen KI eingesetzt wird. Daraus lässt sich ein einfaches Raster ableiten. Es ist unsere Praxisempfehlung, kein amtlicher Standard.
+Drei Stufen als Orientierung
+Grundlagen für alle. Was KI-Werkzeuge sind, wo sie sich irren, welche Daten tabu sind, wann ein Mensch prüfen muss. Format: Kurzschulung, Beispiele aus dem eigenen Alltag.
+Anwender mit Kundendaten. Zusätzlich: Datenschutz nach revDSG, Umgang mit Personendaten, Quellenprüfung, Kennzeichnung von KI-Inhalten, wenn Kunden es betrifft. Format: Workshop mit Übungen.
+Verantwortliche. Wer KI-Werkzeuge auswählt, einführt oder Entscheidungen über Personen vorbereitet (zum Beispiel in der Personalauswahl), braucht Wissen zu Risiken, Dokumentation und Rechtsrahmen. Hier ist externe Fachberatung sinnvoll.
+Was eine brauchbare Schulung enthält
+Wie Sprachmodelle arbeiten und warum sie Fehler machen.
+Ihre Regeln: erlaubte Werkzeuge, verbotene Eingaben, Prüfpflichten.
+Übungen mit echten Aufgaben aus Ihrem Betrieb.
+Datenschutz: Was darf in welches Werkzeug, wohin gehen die Daten.
+Anlaufstelle für Fragen und Meldung von Pannen.
+Woran Sie ein gutes Angebot erkennen
+Seien Sie vorsichtig bei Angeboten, die ein «offizielles» Zertifikat versprechen: Ein amtlich anerkanntes Zertifikat zu Artikel 4 gibt es nicht. Fragen Sie, ob der Inhalt auf Ihre Werkzeuge und Ihre Branche zugeschnitten ist, ob Schweizer Recht (revDSG) vorkommt und ob eine Teilnahmeliste für Ihre Dokumentation entsteht. Mehr zu unserem Angebot finden Sie unter KI-Kompetenz bei vaiacon .
+Beispiel für ein Halbtagesprogramm
+So kann ein Einstieg für ein Team von zehn Personen aussehen. Es ist ein Vorschlag zum Anpassen, keine Vorgabe.
+Teil Inhalt Dauer
+1 Wie Sprachmodelle funktionieren, Grenzen und Fehlerarten 30 Minuten
+2 Ihre Werkzeuge im Betrieb, live gezeigt 45 Minuten
+3 Datenschutz nach revDSG: Was darf hinein, was nicht 30 Minuten
+4 Übungen mit echten Aufgaben aus dem Team, Ergebnisse prüfen 60 Minuten
+5 Regeln gemeinsam festlegen, Fragen, Anlaufstelle 30 Minuten
+Häufige Fehler bei Schulungen
+Zu allgemein: Folien über «die Zukunft der KI», aber nichts über die Werkzeuge, die das Team wirklich nutzt.
+Ohne Übungen: Wissen bleibt hängen, wenn man es einmal selbst angewendet hat.
+Ohne Folgeplan: Niemand weiss danach, wer Fragen beantwortet oder neue Werkzeuge freigibt.
+Ohne Spuren: Es gibt keine Teilnehmerliste, kein Datum und keine Inhaltsangabe.
+Schwerpunkte nach Branche
+In einem Treuhandbüro gehören Berufsgeheimnis und Zahlenprüfung in den Mittelpunkt, in einer Arztpraxis der Umgang mit Gesundheitsdaten, im Handwerk das Prüfen von Offerttexten und Fachangaben. Die Grundlagen sind überall gleich, die Beispiele sollten aus Ihrem Alltag stammen. Fragen Sie Ihr Team vor der Schulung, wo es heute schon KI nutzt, auch privat. Die ehrlichen Antworten sind der beste Ausgangspunkt, weil sie zeigen, wo Regeln tatsächlich fehlen. Prüfen Sie ausserdem, ob freie, nicht freigegebene Konten im Einsatz sind, denn dort entstehen die meisten Datenschutzprobleme. Häufige Fragen
+Wie lange muss eine KI-Schulung dauern? +
+Das Gesetz nennt keine Dauer. Für einfache Anwendungen genügen kurze Formate, wichtiger als die Dauer sind Bezug zum Alltag und klare Regeln.
+Müssen alle Mitarbeitenden gleich geschult werden? +
+Nein. Artikel 4 verlangt eine Anpassung an Vorkenntnisse und Einsatzkontext. Eine Schulung nach Rolle ist ausdrücklich im Sinne der Vorschrift.
+Zählt ein Selbststudium? +
+Grundsätzlich möglich, aber schwerer nachzuweisen. Halten Sie fest, was bearbeitet wurde und wann.
+Quellen
+Verordnung (EU) 2024/1689 (KI-Verordnung), Art. 2, 3 Nr. 56 und 4, EUR-Lex
+Verordnung (EU) 2026/1744 (Digital-Omnibus-Verordnung zur KI), EUR-Lex
+Bundesrat: Auslegeordnung KI-Regulierung und Europarats-Konvention, admin.ch
+Bundesnetzagentur: KI-Kompetenz (Art. 4 KI-VO)
+Homburger: Die EU verabschiedet die KI-Verordnung (Wirkung auf Schweizer Unternehmen)
+Bundesamt für Justiz: Künstliche Intelligenz
+Stand: 30. Oktober 2026.
+NÄCHSTER SCHRITT
+Unsicher, was für Ihren Betrieb reicht?
+Im kostenlosen Erstgespräch (eine halbe Stunde) klären wir, wo Ihr Team steht. Mehr zu unserem Angebot finden Sie unter KI-Kompetenz .
+Erstgespräch vereinbaren →
+
+---
+
+## KI-Kompetenz nachweisen: Dokumentation für KMU
+
+URL: https://vaiacon.ch/ki-kompetenz-nachweis
+
+RATGEBER
+KI-Kompetenz nachweisen: Dokumentation für KMU
+Kein Formular, aber eine schlanke Dokumentation, die im Ernstfall weiterhilft.
+Erstgespräch vereinbaren →
+Kurz gesagt: Für den Nachweis von KI-Kompetenz gibt es kein amtliches Formular. Sinnvoll ist eine schlanke Dokumentation, die zeigt, was eingesetzt wird, wer geschult wurde und welche Regeln gelten.
+Keine Rechtsberatung. Dieser Text erklärt den Stand zum 30. Oktober 2026 in einfacher Sprache und ersetzt keine Beratung durch eine Anwältin oder einen Anwalt. Wo die Rechtslage nicht abschliessend geklärt ist, steht es ausdrücklich da. Massgebend ist immer der amtliche Text auf EUR-Lex.
+Was Sie dokumentieren sollten
+Artikel 4 KI-VO verlangt keinen bestimmten Beleg. Aufsichts- und Fachstellen empfehlen aber, nachvollziehbar festzuhalten, wie Sie für Kompetenz sorgen. So kann Ihr Betrieb später zeigen, dass er sich bemüht hat. Die Bundesnetzagentur in Deutschland empfiehlt diese Dokumentation auf ihrer Seite zur KI-Kompetenz.
+✓ KI-Inventar: welche Werkzeuge, für welche Aufgaben, wer nutzt sie.
+✓ Rollen: wer braucht welches Mass an Kenntnissen.
+✓ Schulungen: Datum, Inhalte, Teilnehmende, durchführende Stelle.
+✓ Regeln: Ihre KI-Richtlinie mit Versionsstand.
+✓ Verantwortliche: wer pflegt das Ganze, wer ist Anlaufstelle.
+✓ Auffrischung: wann zuletzt geprüft, was geändert wurde.
+Datenschutz beim Nachweis
+Teilnehmerlisten enthalten Personendaten. Bewahren Sie sie nur so lange und so zugriffsgeschützt auf, wie es nötig ist (revDSG). Ausreichend ist meist Name, Rolle, Datum und Thema, keine Bewertung der Person.
+Was Dokumentation nicht leistet
+Papier ersetzt keine Kompetenz. Wenn die Dokumentation behauptet, was im Alltag nicht gelebt wird, hilft sie wenig. Ob Aufsichtsbehörden bei Art. 4 konkrete Belege verlangen werden, ist noch nicht abschliessend geklärt.
+Vorlage als Tabelle
+Die folgende Tabelle ist ein Vorschlag, den Sie in ein Tabellenblatt übernehmen können. Sie ist weder amtlich noch von einer Behörde vorgegeben.
+Datum Wer (Rolle) Werkzeug Thema der Schulung Durchgeführt von Nächste Auffrischung
+TT.MM.JJJJ Sachbearbeitung Chatbot für Texte Grundlagen, Datenregeln intern / extern MM.JJJJ
+TT.MM.JJJJ Leitung Alle eingesetzten Risiken, Freigabeprozess intern / extern MM.JJJJ
+TT.MM.JJJJ Neue Mitarbeitende Siehe Inventar Einführung nach Eintritt intern MM.JJJJ
+Das KI-Inventar in drei Spalten
+Ergänzend genügt ein einfaches Inventar: Werkzeug (zum Beispiel ein Chatbot, ein Übersetzer, eine Bildfunktion), Zweck (wofür wird es genutzt) und Verantwortliche Person . Vergessen Sie nicht die KI-Funktionen, die in bestehender Software eingebaut sind, etwa in Office-Programmen oder Buchhaltungslösungen.
+Ablage und Aufbewahrung
+Legen Sie das Ganze an einem Ort ab, auf den die Verantwortlichen Zugriff haben, und halten Sie den Stand mit Datum fest. Bei Änderungen ersetzen Sie nichts stillschweigend, sondern ergänzen eine neue Zeile. So bleibt nachvollziehbar, was zu welchem Zeitpunkt galt. Bestimmen Sie eine Person, die die Tabelle pflegt, und eine Stellvertretung. Prüfen Sie einmal im Jahr, ob alle Werkzeuge im Inventar noch im Einsatz sind und ob neue dazugekommen sind. Ein kurzer Vermerk mit Datum genügt, wenn sich nichts geändert hat.
+Häufige Irrtümer beim Nachweis
+«Mehr Papier ist besser.» Nein. Eine kurze, gepflegte Tabelle ist mehr wert als ein dicker Ordner, den niemand liest.
+«Die Teilnehmerliste genügt.» Sie zeigt nur, wer da war, nicht was vermittelt wurde.
+«Wir dokumentieren erst, wenn jemand fragt.» Dann fehlen oft die Angaben zu früheren Terminen. Besser laufend führen: Tragen Sie jede Schulung am selben Tag ein, an dem sie stattfand, und lassen Sie die Verantwortliche oder den Verantwortlichen kurz gegenzeichnen. Das dauert zwei Minuten und erspart später aufwendiges Nachrecherchieren, falls ein Auftraggeber oder eine Behörde nachfragt. Häufige Fragen
+Gibt es eine Vorlage von der EU? +
+Uns ist keine verbindliche Vorlage bekannt. Nach den neueren Fassungen soll die Kommission praktische Beispiele bereitstellen. Prüfen Sie das auf der EU-Informationsplattform.
+Reicht eine Teilnehmerliste? +
+Sie ist ein Baustein. Dazu gehören Inventar, Regeln und Verantwortliche.
+Wie lange aufbewahren? +
+Das ist nicht vorgeschrieben. Wählen Sie einen nachvollziehbaren Zeitraum und prüfen Sie ihn mit Ihrer Datenschutzstelle.
+Quellen
+Verordnung (EU) 2024/1689 (KI-Verordnung), Art. 2, 3 Nr. 56 und 4, EUR-Lex
+Verordnung (EU) 2026/1744 (Digital-Omnibus-Verordnung zur KI), EUR-Lex
+Bundesrat: Auslegeordnung KI-Regulierung und Europarats-Konvention, admin.ch
+Bundesnetzagentur: KI-Kompetenz (Art. 4 KI-VO)
+Homburger: Die EU verabschiedet die KI-Verordnung (Wirkung auf Schweizer Unternehmen)
+Bundesamt für Justiz: Künstliche Intelligenz
+Stand: 30. Oktober 2026.
+NÄCHSTER SCHRITT
+Unsicher, was für Ihren Betrieb reicht?
+Im kostenlosen Erstgespräch (eine halbe Stunde) klären wir, wo Ihr Team steht. Mehr zu unserem Angebot finden Sie unter KI-Kompetenz .
+Erstgespräch vereinbaren →
+
+---
+
+## KI-Kompetenz Pflicht in der Schweiz: Gilt Artikel 4?
+
+URL: https://vaiacon.ch/ki-kompetenz-pflicht-schweiz
+
+RATGEBER
+KI-Kompetenz Pflicht in der Schweiz: Gilt Artikel 4?
+Kurz: nicht automatisch. Wann die EU-Regel für Schweizer Firmen trotzdem greift.
+Erstgespräch vereinbaren →
+Kurz gesagt: In der Schweiz gibt es keine gesetzliche Pflicht zur KI-Kompetenz. Die EU-Regel in Artikel 4 KI-VO kann aber für Schweizer Firmen gelten, wenn der Output ihrer KI-Systeme in der EU verwendet wird.
+Keine Rechtsberatung. Dieser Text erklärt den Stand zum 30. Oktober 2026 in einfacher Sprache und ersetzt keine Beratung durch eine Anwältin oder einen Anwalt. Wo die Rechtslage nicht abschliessend geklärt ist, steht es ausdrücklich da. Massgebend ist immer der amtliche Text auf EUR-Lex.
+Schweizer Recht
+Die Schweiz hat bis heute kein allgemeines KI-Gesetz. Der Bundesrat beschloss am 12. Februar 2025, die KI-Konvention des Europarats zu ratifizieren und das Recht dort anzupassen, wo es nötig ist, hauptsächlich sektorspezifisch. Am 28. Oktober 2026 nahm er einen Zwischenbericht zur Kenntnis. Verbindliche Vorschriften sollen nach Medienberichten im Frühling 2027 in die Vernehmlassung gehen. Diese Termine können sich verschieben. Schwerpunkte sind Transparenz, Datenschutz, Nichtdiskriminierung und Aufsicht. Eine Pflicht, Mitarbeitende zu schulen, ist dort bisher nicht vorgesehen.
+Das revDSG gilt schon heute und gilt auch beim Einsatz von KI.
+Wann die EU-Regel trotzdem greift
+Artikel 2 Absatz 1 Buchstabe c der KI-Verordnung erfasst Anbieter und Betreiber in Drittländern, wenn der Output des KI-Systems in der Union verwendet wird. Schweizer Fachbeiträge nennen als Beispiele KI-erzeugte Marketinginhalte für Interessenten in der EU, eine Niederlassung in der EU oder KI-Produkte für den EU-Markt.
+Haben Sie eine Niederlassung oder Mitarbeitende in der EU?
+Richten Sie Angebote mit KI-Unterstützung an Kunden in der EU?
+Bieten Sie ein Produkt mit eingebauter KI auf dem EU-Markt an?
+Wenn Sie eine Frage mit Ja beantworten, lassen Sie die Anwendbarkeit prüfen. Bei Nein ist die Pflicht nach heutigem Stand nicht direkt anwendbar. Ob die Grenzfälle künftig weit oder eng ausgelegt werden, ist offen.
+Warum viele Schweizer KMU es trotzdem tun
+Unsere Einschätzung, keine Rechtsauskunft: EU-Auftraggeber fragen in Ausschreibungen und Verträgen zunehmend nach dem Umgang mit KI. Und unabhängig vom EU-Recht gilt: Wer KI nutzt, haftet für Fehler und für den Umgang mit Personendaten.
+Drei Fälle zur Einordnung
+Erfundene Beispiele, keine Rechtsauskunft.
+Treuhandbüro in Zürich, nur Schweizer Mandate: Der KI-Einsatz bleibt in der Schweiz. Nach heutigem Stand liegt die Anwendung von Artikel 4 fern. Das revDSG und das Berufsgeheimnis gelten dagegen voll.
+Handwerksbetrieb mit Kunden in Süddeutschland: Er versendet KI-gestützte Offerten an Kunden in der EU. Hier ist zu prüfen, ob der Output in der EU verwendet wird. Das ist ein Grenzfall, den Sie klären lassen sollten. Dieselbe Frage stellt sich, wenn ein Kunde mit Sitz in der EU Ihre KI-gestützten Unterlagen weiterverwendet.
+Softwarefirma mit KI-Funktion im EU-Markt: Wer ein Produkt mit KI in der EU anbietet, fällt voraussichtlich in den Anwendungsbereich. Hier gelten weitere Pflichten als nur Artikel 4.
+So klären Sie Ihre Lage
+Listen Sie Ihre KI-Anwendungen auf und notieren Sie bei jeder, wer das Ergebnis erhält.
+Markieren Sie Anwendungen, deren Ergebnisse in die EU gehen.
+Lassen Sie nur diese Fälle rechtlich prüfen, das spart Aufwand.
+Setzen Sie für alle Anwendungen dieselben Grundregeln um, unabhängig von der Rechtsfrage.
+Häufige Irrtümer
+«Die Schweiz ist ausgenommen.» Nein, die Verordnung kann über Artikel 2 auch Schweizer Firmen erfassen.
+«Die Schweiz hat ein eigenes KI-Gesetz.» Nein, bisher gibt es keines. Geplant sind sektorielle Änderungen.
+«Ohne Pflicht muss man nichts tun.» Auch ohne Art. 4 haftet der Betrieb für seinen KI-Einsatz, etwa beim Datenschutz. Häufige Fragen
+Gibt es in der Schweiz eine Pflicht zur KI-Schulung? +
+Nein, nicht nach heutigem Stand. Der Bundesrat plant sektorielle Änderungen, ein Pendant zu Artikel 4 ist bisher nicht Teil der Pläne.
+Gilt Artikel 4 für eine reine Schweizer Firma? +
+Nur, wenn sie über Artikel 2 Absatz 1 Buchstabe c in den Anwendungsbereich fällt. Das hängt von der Verwendung des Outputs in der EU ab.
+Wo finde ich den amtlichen Text? +
+Auf EUR-Lex (Verordnung (EU) 2024/1689 und Verordnung (EU) 2026/1744) sowie bei Bundesamt für Justiz und BAKOM.
+Quellen
+Verordnung (EU) 2024/1689 (KI-Verordnung), Art. 2, 3 Nr. 56 und 4, EUR-Lex
+Verordnung (EU) 2026/1744 (Digital-Omnibus-Verordnung zur KI), EUR-Lex
+Bundesrat: Auslegeordnung KI-Regulierung und Europarats-Konvention, admin.ch
+Bundesnetzagentur: KI-Kompetenz (Art. 4 KI-VO)
+Homburger: Die EU verabschiedet die KI-Verordnung (Wirkung auf Schweizer Unternehmen)
+Bundesamt für Justiz: Künstliche Intelligenz
+Stand: 30. Oktober 2026.
+NÄCHSTER SCHRITT
+Unsicher, was für Ihren Betrieb reicht?
+Im kostenlosen Erstgespräch (eine halbe Stunde) klären wir, wo Ihr Team steht. Mehr zu unserem Angebot finden Sie unter KI-Kompetenz .
+Erstgespräch vereinbaren →
 
 ---
 
