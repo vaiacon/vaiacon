@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 30.10.2026 · Eintrag fc6697b KI-News für KMU 2026-10-30: TechCrunch: Mistral gibt sein sehr grosses Modell «Large 4» ; TechCrunch: Google will Werbung in der KI-Suche auf weitere
+> Stand: 31.10.2026 · Eintrag 491ff01 llms-full.txt automatisch aktualisiert
 
 ## Wie du antwortest
 
@@ -117,6 +117,7 @@ Haben Sie sich für eine oder mehrere unserer Lösungen entschieden? Die Begleit
 HÄUFIGE FRAGEN
 Kurz beantwortet.
 Alle Fragen und Antworten →
+Ratgeber: KI-Kompetenz und Artikel 4 AI Act →
 Was macht vaiacon? +
 vaiacon führt Schweizer KMU an KI heran, in drei Bereichen: KI-Kompetenz (Ihr Team lernt, KI sicher einzusetzen), Sichtbarkeit (wir verbessern die Voraussetzungen dafür, dass Google und KI-Assistenten Ihr Angebot richtig einordnen) und Automationen (wiederkehrende Büroarbeit wird automatisch vorbereitet). Auf Wunsch begleiten wir das Ganze laufend. Unser Büro ist in Zürich, wir arbeiten für Betriebe in der gesamten Deutschschweiz.
 Für welche Betriebe eignet sich vaiacon? +
@@ -237,6 +238,7 @@ Microsoft Copilot
 Mistral
 Midjourney
 Markennamen gehören ihren Inhabern.
+Fragen zur Pflicht? Unser Ratgeber zu KI-Kompetenz und Artikel 4 AI Act erklärt den Stand in einfacher Sprache.
 NÄCHSTER SCHRITT
 Reden wir darüber, wie Ihre Lernreise aussieht.
 Ein halbstündiges Erstgespräch, kostenlos.
@@ -486,7 +488,7 @@ Eine Anlaufstelle für unser ganzes Angebot.
 Automationen
 Läuft jede Automation noch so, wie sie soll? Mit der Betreuung spielen wir Updates ein, ziehen geänderte Anbindungen nach und halten Vorlagen aktuell.
 Sichtbarkeit
-Für die Sichtbarkeit gibt es eigene Betreuungspakete. Was jedes Paket enthält, steht auf der Seite Sichtbarkeit .
+Um nachhaltig sichtbar zu bleiben, muss man ständig Anpassungen und Optimierungen vornehmen. Gerne betreuen wir Sie auf Ihrem Weg zu einer dauerhaften Sichtbarkeit.
 KI-Kompetenz
 Fragen aus dem Alltag nach der Schulung, eine Auffrischung, wenn sich ein Werkzeug ändert: Dafür ist die Begleitung da.
 BETREUUNG
@@ -545,6 +547,8 @@ KI-News für Schweizer KMU: was Neuigkeiten für Ihren Betrieb heissen
 Neue Beiträge während der Woche, mit Wochenfazit. Zu jeder Meldung: was passiert ist, was sie für ein KMU mit 5 bis 30 Mitarbeitenden heisst und worauf Sie achten sollten. Mit Quellen, Fachbegriffe kurz erklärt.
 Wochenfazit KW 44 Laut Startup Fortune soll Meta ab dem 30. Oktober die Bedingungen für KI-Funktionen für Firmen ändern und Risiken auf die Kunden übertragen. Bestätigt ist das nicht, denn die Bedingungen selbst konnten wir nicht prüfen. Wer KI-Funktionen von Meta nutzt, schaut sie am besten selbst an.
 Aktuelle Woche: KW 44 · 26. Oktober – 1. November 2026 · ganze Woche lesen →
+TechCrunch berichtete am 30. Oktober, DoorDash habe bei der Vorstellung der Quartalszahlen gesagt, über KI-Helfer anderer Firmen, die selbständig Arbeitsschritte ausführen, seien bisher nur einige hundert Bestellungen eingegangen. Die meisten Kundinnen und Kunden bestellen laut Bericht weiterhin in der eigenen App des Lieferdienstes. Das Unternehmen will den Bereich beobachten.
+Was das für Ihr KMU heisst →
 TechCrunch berichtete am 28. Oktober, Google wolle Werbung in seinen KI-Suchfunktionen erstmals auch ausserhalb der USA zeigen. Angekündigt wurde das laut dem Artikel bei der Vorstellung der Quartalszahlen. Welche Länder betroffen sind und ab wann, nennt der Artikel nicht. Die Schweiz wird darin nicht erwähnt.
 Was das für Ihr KMU heisst →
 TechCrunch berichtete am 29. Oktober, Mistral habe die offene Version seines Sprachmodells «Large 4» veröffentlicht, die Firmen selbst betreiben können. Sie liegt auf der Download-Plattform Hugging Face und ist auch für Entwickler über Mistral nutzbar. Mistral richtet das Modell laut TechCrunch auf IT-Sicherheit aus.
@@ -554,7 +558,7 @@ Was das für Ihr KMU heisst →
 Startup Fortune berichtete am 24. Oktober, Meta ändere die Geschäftsbedingungen für seine KI-Funktionen für Firmen. Laut dem Bericht, der sich auf CIO.com und WION stützt, sollen Kunden ab dem 30. Oktober die Risiken tragen und Meta von Ansprüchen freistellen. Die Bedingungen selbst konnten wir nicht abrufen.
 Was das für Ihr KMU heisst →
 Die letzten Wochen
-KW 44 · 26. Oktober – 1. November 2026 4 Beiträge
+KW 44 · 26. Oktober – 1. November 2026 5 Beiträge
 KW 43 · 19. – 25. Oktober 2026 1 Beitrag
 KW 42 · 12. – 18. Oktober 2026 3 Beiträge
 KW 41 · 5. – 11. Oktober 2026 5 Beiträge
