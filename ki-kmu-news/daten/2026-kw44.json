@@ -76,6 +76,24 @@
         }
       ],
       "wichtigkeit": 1
+    },
+    {
+      "id": "2026-10-31-doordash-bisher-kommen-nur-einige",
+      "datum": "2026-10-31",
+      "rubrik": "markt",
+      "titel": "DoorDash: Bisher kommen nur einige hundert Bestellungen von KI-Helfern",
+      "kurz": "TechCrunch berichtete am 30. Oktober, DoorDash habe bei der Vorstellung der Quartalszahlen gesagt, über KI-Helfer anderer Firmen, die selbständig Arbeitsschritte ausführen, seien bisher nur einige hundert Bestellungen eingegangen. Die meisten Kundinnen und Kunden bestellen laut Bericht weiterhin in der eigenen App des Lieferdienstes. Das Unternehmen will den Bereich beobachten.",
+      "kmu": "Das ist die Aussage eines US-Lieferdienstes und lässt sich nicht auf die Schweiz übertragen. Sie zeigt aber: KI-Helfer, die selbständig suchen und bestellen, spielen dort bisher eine kleine Rolle. Für Ihren Betrieb heisst das, dass Sie nichts überstürzen müssen. Sinnvoll ist, in Ruhe zu prüfen, ob Ihre Website für Google und für KI-Assistenten verständlich aufgebaut ist.",
+      "vaiacon": "Der kostenlose Website-Check auf vaiacon.ch läuft automatisch. Er prüft, ob Google Ihr Angebot versteht und ob Ihre Website die technischen Voraussetzungen für KI-Assistenten erfüllt. Wer mehr wissen will, nutzt den Sichtbarkeits-Check (kompakt): Er zeigt, wie Google und KI-Assistenten Ihre Firma nennen. Ergibt sich Handlungsbedarf, setzen wir ihn mit «Seite überarbeiten» um.",
+      "bereich": "sichtbarkeit",
+      "achtung": "Es handelt sich um die Aussage einer einzelnen Firma aus den USA zu einem Quartal. Die Lage kann sich ändern. Beobachten Sie, woher Ihre Anfragen kommen, und beurteilen Sie danach, wie wichtig KI-Assistenten für Ihr Geschäft sind.",
+      "quellen": [
+        {
+          "titel": "TechCrunch: DoorDash said it's only received 'several hundred' orders from AI agents",
+          "url": "https://techcrunch.com/2026/10/30/doordash-said-its-only-received-several-hundred-orders-from-ai-agents/"
+        }
+      ],
+      "wichtigkeit": 1
     }
   ]
 }

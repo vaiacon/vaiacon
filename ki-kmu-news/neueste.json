@@ -1,5 +1,13 @@
 [
   {
+    "titel": "DoorDash: Bisher kommen nur einige hundert Bestellungen von KI-Helfern",
+    "datum": "2026-10-31",
+    "rubrik": "markt",
+    "kurz": "TechCrunch berichtete am 30. Oktober, DoorDash habe bei der Vorstellung der Quartalszahlen gesagt, über KI-Helfer anderer Firmen, die selbständig Arbeitsschritte ausführen, seien bisher nur einige hundert Bestellungen eingegangen. Die meisten Kundinnen und Kunden bestellen laut Bericht weiterhin in der eigenen App des Lieferdienstes. Das Unternehmen will den Bereich beobachten.",
+    "adresse": "ki-kmu-news/2026-kw44#2026-10-31-doordash-bisher-kommen-nur-einige",
+    "bild": "assets/vaiacon-buerobot-news-markt.png"
+  },
+  {
     "titel": "TechCrunch: Google will Werbung in der KI-Suche auf weitere Märkte ausweiten",
     "datum": "2026-10-30",
     "rubrik": "markt",
@@ -14,13 +22,5 @@
     "kurz": "TechCrunch berichtete am 29. Oktober, Mistral habe die offene Version seines Sprachmodells «Large 4» veröffentlicht, die Firmen selbst betreiben können. Sie liegt auf der Download-Plattform Hugging Face und ist auch für Entwickler über Mistral nutzbar. Mistral richtet das Modell laut TechCrunch auf IT-Sicherheit aus.",
     "adresse": "ki-kmu-news/2026-kw44#2026-10-30-techcrunch-mistral-gibt-sein-sehr",
     "bild": "assets/vaiacon-buerobot-news-modelle.png"
-  },
-  {
-    "titel": "TechCrunch: Google öffnet Gemini und Suche für Apps von Firmen, vorerst nur in den USA",
-    "datum": "2026-10-29",
-    "rubrik": "werkzeuge",
-    "kurz": "TechCrunch berichtete am 28. Oktober, Google lasse über eine neue Plattform Firmen und Entwickler eigene Apps mit Gemini und der KI-Suche verbinden. Nutzerinnen und Nutzer sollen dort Dienste anwählen und Aufgaben darin erledigen können. Der Zugang ist laut Bericht auf Entwickler in den USA beschränkt, ein Termin für die breite Einführung fehlt.",
-    "adresse": "ki-kmu-news/2026-kw44#2026-10-29-techcrunch-google-oeffnet-gemini-und",
-    "bild": "assets/vaiacon-buerobot-news-werkzeuge.png"
   }
 ]
