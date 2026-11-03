@@ -1590,7 +1590,7 @@ Alle bisherigen Wochen auf einen Blick. Jede Woche hat ihre feste Adresse.
 Aktuelle Woche →
 RSS-Feed ↗
 KW 45 · 2. – 8. November 2026 Aktuelle Woche
-KI-News für Schweizer KMU: neue Beiträge während der Woche, mit Wochenfazit und Quellen.
+Ruhige Woche: Laut den Entwicklerseiten von xAI sollen Texte aus Grok-Modellen ab dem 7. November ein unsichtbares Erkennungszeichen tragen.
 0 Beiträge
 KW 44 · 26. Oktober – 1. November 2026
 Laut Startup Fortune soll Meta ab dem 30. Oktober die Bedingungen für KI-Funktionen für Firmen ändern und Risiken auf die Kunden übertragen.
