@@ -1,5 +1,13 @@
 [
   {
+    "titel": "TechCrunch: ChatGPT soll «Chat» und «Work» im Desktop-Programm zusammenlegen",
+    "datum": "2026-11-04",
+    "rubrik": "werkzeuge",
+    "kurz": "TechCrunch berichtete am 2. November, OpenAI kündige per E-Mail an Nutzende an, im ChatGPT-Desktop-Programm die Bereiche «Chat» und «Work» zu verbinden. Einen Starttermin nennt der Bericht nicht. Zuerst sollen ausgewählte Nutzende die Neuerung testen. Das Programmierwerkzeug Codex soll getrennt bleiben, aber dasselbe Kontingent nutzen.",
+    "adresse": "ki-kmu-news/2026-kw45#2026-11-04-techcrunch-chatgpt-soll-chat-und",
+    "bild": "assets/vaiacon-buerobot-news-werkzeuge.png"
+  },
+  {
     "titel": "DoorDash: Bisher kommen nur einige hundert Bestellungen von KI-Helfern",
     "datum": "2026-10-31",
     "rubrik": "markt",
@@ -14,13 +22,5 @@
     "kurz": "TechCrunch berichtete am 28. Oktober, Google wolle Werbung in seinen KI-Suchfunktionen erstmals auch ausserhalb der USA zeigen. Angekündigt wurde das laut dem Artikel bei der Vorstellung der Quartalszahlen. Welche Länder betroffen sind und ab wann, nennt der Artikel nicht. Die Schweiz wird darin nicht erwähnt.",
     "adresse": "ki-kmu-news/2026-kw44#2026-10-30-techcrunch-google-will-werbung-in",
     "bild": "assets/vaiacon-buerobot-news-markt.png"
-  },
-  {
-    "titel": "TechCrunch: Mistral gibt sein sehr grosses Modell «Large 4» zum Herunterladen frei",
-    "datum": "2026-10-30",
-    "rubrik": "modelle",
-    "kurz": "TechCrunch berichtete am 29. Oktober, Mistral habe die offene Version seines Sprachmodells «Large 4» veröffentlicht, die Firmen selbst betreiben können. Sie liegt auf der Download-Plattform Hugging Face und ist auch für Entwickler über Mistral nutzbar. Mistral richtet das Modell laut TechCrunch auf IT-Sicherheit aus.",
-    "adresse": "ki-kmu-news/2026-kw44#2026-10-30-techcrunch-mistral-gibt-sein-sehr",
-    "bild": "assets/vaiacon-buerobot-news-modelle.png"
   }
 ]

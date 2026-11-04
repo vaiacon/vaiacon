@@ -4,5 +4,24 @@
   "von": "2026-11-02",
   "bis": "2026-11-08",
   "wochenfazit": "Ruhige Woche: Laut den Entwicklerseiten von xAI sollen Texte aus Grok-Modellen ab dem 7. November ein unsichtbares Erkennungszeichen tragen. Betriebe ohne eigene Programme, die Grok-Modelle nutzen, merken davon nichts. Ob andere Anbieter folgen, ist offen.",
-  "beitraege": []
+  "beitraege": [
+    {
+      "id": "2026-11-04-techcrunch-chatgpt-soll-chat-und",
+      "datum": "2026-11-04",
+      "rubrik": "werkzeuge",
+      "titel": "TechCrunch: ChatGPT soll «Chat» und «Work» im Desktop-Programm zusammenlegen",
+      "kurz": "TechCrunch berichtete am 2. November, OpenAI kündige per E-Mail an Nutzende an, im ChatGPT-Desktop-Programm die Bereiche «Chat» und «Work» zu verbinden. Einen Starttermin nennt der Bericht nicht. Zuerst sollen ausgewählte Nutzende die Neuerung testen. Das Programmierwerkzeug Codex soll getrennt bleiben, aber dasselbe Kontingent nutzen.",
+      "kmu": "Nutzen Mitarbeitende ChatGPT auf dem Computer, könnten Fragen und Arbeitsaufträge, etwa eine Präsentation, künftig an einem Ort laufen. Welche Abos betroffen sind, nennt der Bericht nicht. Sie können schon jetzt festlegen, welche Dateien Ihr Team in solche Werkzeuge laden darf. Zur Schweiz enthält die geprüfte Quelle keine Angabe.",
+      "vaiacon": "Im Training oder Workshop (Halbtag) üben Ihre Mitarbeitenden, Aufträge an die KI klar zu formulieren und Ergebnisse zu prüfen. In der KI-Standortanalyse im Betrieb klären wir mit Ihnen, welche Aufgaben heikle Daten berühren, und halten Spielregeln fest.",
+      "bereich": "ki-kompetenz",
+      "achtung": "Der Bericht stützt sich auf eine E-Mail von OpenAI. Termin und betroffene Abos sind offen. Laden Sie keine Kundendaten hoch, bevor intern geklärt ist, was erlaubt ist. Das ersetzt keine Rechtsauskunft.",
+      "quellen": [
+        {
+          "titel": "TechCrunch: OpenAI is finally merging ChatGPT's Chat and Work tabs",
+          "url": "https://techcrunch.com/2026/11/02/openai-is-finally-merging-chatgpts-chat-and-work-tabs/"
+        }
+      ],
+      "wichtigkeit": 1
+    }
+  ]
 }
