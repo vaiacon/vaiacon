@@ -138,8 +138,13 @@ Wir prüfen Struktur, Inhalte und technische Grundlagen Ihrer Website. Rankings 
 Ihre Domain
 Check starten →
 Kostenlos, meist in unter einer Minute. Die Punkte sind eine Einschätzung, keine Zusage.
-Was genau geprüft wird
-Die Startseite, robots.txt, Sitemap, llms.txt sowie die verlinkte Kontakt- und Impressumsseite. Geprüft werden Erreichbarkeit, technische Grundlagen, strukturierte Daten, KI-Sichtbarkeit (GEO), Inhalt und Vertrauen. Sie erhalten eine Punktzahl von 0 bis 100, mit der Sie eine Orientierung erhalten, wo Ihre Seite steht. Einen detaillierten Bericht erhalten Sie von uns in einem persönlichen Gespräch.
+Was genau geprüft wird und wie die Punktzahl entsteht
+Wir rufen Ihre Startseite, robots.txt, Sitemap, llms.txt sowie die verlinkte Kontakt- und Impressumsseite ab, so wie es ein Suchdienst oder ein KI-Assistent auch tut. Zuerst prüfen wir, ob die Seite erreichbar ist. Danach bewerten wir vier Bereiche, jeden mit eigenen Punkten von 0 bis 100.
+Technisches SEO: Seitentitel und Beschreibung, Überschriften und Bilder, robots.txt, Sitemap und Canonical, Antwortzeit des Servers.
+Strukturierte Daten: Firmendaten, Angebote, häufige Fragen sowie Öffnungszeiten und Vorschau beim Teilen. Das sind Angaben, die Suchmaschinen und KI direkt auslesen können.
+KI-Sichtbarkeit (GEO): llms.txt, Regeln für KI-Crawler, ob der Text auch ohne JavaScript lesbar ist, und ob die Aussagen klar und mit Profilen belegt sind.
+Inhalt und Vertrauen: Kundenstimmen und Referenzen, Kontaktangaben, Impressum und Datenschutz, Umfang und Team.
+Jeder einzelne Punkt wird als «gut», «mittel» oder «schwach» eingestuft und im Ergebnis kurz begründet. Die Gesamtpunktzahl fasst die vier Bereiche zusammen. Je höher sie ist, desto mehr der geprüften Voraussetzungen sind erfüllt. Sie ist eine Orientierung, wo Ihre Seite steht, keine Zusage und kein Urteil über Ihren Betrieb. Den detaillierten Bericht und was für Sie zuerst lohnt, besprechen wir in einem persönlichen Gespräch.
 Muster
 72
 von 100
