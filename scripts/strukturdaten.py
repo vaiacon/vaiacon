@@ -247,7 +247,7 @@ SEITEN = [
     "index.html", "visibility.html", "learning.html", "bot.html", "service.html", "assistenten.html",
     # ki-kmu-news/* schreibt scripts/news_bauen.py selbst (eigener ItemList-Block); offerte.html leitet weiter
     "ueber-uns.html", "referenzen.html", "faq.html", "kontakt.html", "agb.html", "datenschutz.html",
-    "impressum.html",
+    "impressum.html", "erstanalyse/index.html",
     "ki-kompetenz.html", "ki-kompetenz-schulung.html", "ki-kompetenz-nachweis.html", "ki-kompetenz-pflicht-schweiz.html",
 ]
 
@@ -321,6 +321,7 @@ BROTKRUMEN = {
     "service.html": [("Betreuung und Begleitung", "service")],
     "ueber-uns.html": [("Über uns", "ueber-uns")],
     "referenzen.html": [("Referenzen", "referenzen")],
+    "erstanalyse/index.html": [("Erstanalyse", "erstanalyse/")],
     "faq.html": [("FAQ", "faq")],
     "kontakt.html": [("Kontakt", "kontakt")],
     "impressum.html": [("Impressum", "impressum")],
