@@ -1550,10 +1550,12 @@ KI-News für Schweizer KMU: was Neuigkeiten für Ihren Betrieb heissen
 Neue Beiträge während der Woche, mit Wochenfazit. Zu jeder Meldung: was passiert ist, was sie für ein KMU mit 5 bis 30 Mitarbeitenden heisst und worauf Sie achten sollten. Mit Quellen, Fachbegriffe kurz erklärt.
 Wochenfazit KW 45 Ruhige Woche: Laut den Entwicklerseiten von xAI sollen Texte aus Grok-Modellen ab dem 7. November ein unsichtbares Erkennungszeichen tragen. Betriebe ohne eigene Programme, die Grok-Modelle nutzen, merken davon nichts. Ob andere Anbieter folgen, ist offen.
 Aktuelle Woche: KW 45 · 2. – 8. November 2026 · ganze Woche lesen →
+TechCrunch berichtete am 6. November über Daten des Ausgabenverwalters Ramp. Demnach wuchsen die Ausgaben der Firmen für KI-Nutzung im August und September kaum, im Oktober stiegen sie wieder etwas. Ein Ramp-Ökonom sieht die Ursache nicht in schwacher Nachfrage, sondern im Preiswettbewerb unter den Anbietern.
+Was das für Ihr KMU heisst →
 TechCrunch berichtete am 2. November, OpenAI kündige per E-Mail an Nutzende an, im ChatGPT-Desktop-Programm die Bereiche «Chat» und «Work» zu verbinden. Einen Starttermin nennt der Bericht nicht. Zuerst sollen ausgewählte Nutzende die Neuerung testen. Das Programmierwerkzeug Codex soll getrennt bleiben, aber dasselbe Kontingent nutzen.
 Was das für Ihr KMU heisst →
 Die letzten Wochen
-KW 45 · 2. – 8. November 2026 1 Beitrag
+KW 45 · 2. – 8. November 2026 2 Beiträge
 KW 44 · 26. Oktober – 1. November 2026 5 Beiträge
 KW 43 · 19. – 25. Oktober 2026 1 Beitrag
 KW 42 · 12. – 18. Oktober 2026 3 Beiträge
@@ -1588,7 +1590,8 @@ Aktuelle Woche →
 RSS-Feed ↗
 KW 45 · 2. – 8. November 2026 Aktuelle Woche
 Ruhige Woche: Laut den Entwicklerseiten von xAI sollen Texte aus Grok-Modellen ab dem 7. November ein unsichtbares Erkennungszeichen tragen.
-Werkzeuge 1 Beitrag
+Werkzeuge Markt 2 Beiträge
+TechCrunch: Ausgaben für KI-Nutzung wachsen laut Ramp-Daten langsamer
 TechCrunch: ChatGPT soll «Chat» und «Work» im Desktop-Programm zusammenlegen
 KW 44 · 26. Oktober – 1. November 2026
 Laut Startup Fortune soll Meta ab dem 30. Oktober die Bedingungen für KI-Funktionen für Firmen ändern und Risiken auf die Kunden übertragen.
@@ -1641,10 +1644,24 @@ Die Beiträge stellt eine KI aus den genannten Quellen zusammen. Fehler melden S
 
 URL: https://vaiacon.ch/ki-kmu-news/2026-kw45
 
-KI-NEWS FÜR KMU · 1 BEITRAG IN DIESER WOCHE
+KI-NEWS FÜR KMU · 2 BEITRÄGE IN DIESER WOCHE
 KW 45 2. – 8. November 2026
 Das Wochenfazit für Schweizer KMU Ruhige Woche: Laut den Entwicklerseiten von xAI sollen Texte aus Grok-Modellen ab dem 7. November ein unsichtbares Erkennungszeichen tragen. Betriebe ohne eigene Programme, die Grok-Modelle nutzen, merken davon nichts. Ob andere Anbieter folgen, ist offen.
 Die Beiträge
+Alle Werkzeuge Markt
+Samstag, 7. November 2026
+Was ist passiert?
+TechCrunch berichtete am 6. November über Daten des Ausgabenverwalters Ramp. Demnach wuchsen die Ausgaben der Firmen für KI-Nutzung im August und September kaum, im Oktober stiegen sie wieder etwas. Ein Ramp-Ökonom sieht die Ursache nicht in schwacher Nachfrage, sondern im Preiswettbewerb unter den Anbietern.
+Was heisst das für Ihr KMU?
+Laut dem Bericht senken Anbieter Preise, und Firmen leiten einfache Aufgaben an günstigere Modelle weiter. Sie können deshalb prüfen, ob für Ihre alltäglichen Aufgaben, etwa Texte entwerfen oder Zusammenfassungen, ein günstigeres Modell genügt. Die Daten stammen laut Artikel fast nur von Technikfirmen. Für Schweizer KMU sind sie nur ein Hinweis.
+Was vaiacon dazu bietet
+Im Training oder Workshop (Halbtag) vergleicht Ihr Team Modelle an Ihren eigenen Aufgaben und legt fest, wann welches Werkzeug sinnvoll ist. In der KI-Standortanalyse im Betrieb klären wir zudem mit Ihnen, wo KI bei Ihnen Zeit sparen kann und wo sich der Aufwand nicht lohnt.
+Zu KI-Kompetenz →
+Worauf Sie achten sollten
+Der Artikel stützt sich auf Daten eines einzelnen Anbieters, die vor allem Technikfirmen abbilden. Preise und Angebote können sich ändern. Prüfen Sie Abos und Nutzungsbedingungen regelmässig und legen Sie Budgets für Ihr Team fest.
+Quellen:
+TechCrunch: Ramp data shows AI spending stalling just as Anthropic nears its IPO ↗
+Von KI zusammengestellt. Fehler entdeckt? hallo@vaiacon.ch
 Mittwoch, 4. November 2026
 Was ist passiert?
 TechCrunch berichtete am 2. November, OpenAI kündige per E-Mail an Nutzende an, im ChatGPT-Desktop-Programm die Bereiche «Chat» und «Work» zu verbinden. Einen Starttermin nennt der Bericht nicht. Zuerst sollen ausgewählte Nutzende die Neuerung testen. Das Programmierwerkzeug Codex soll getrennt bleiben, aber dasselbe Kontingent nutzen.
