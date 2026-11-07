@@ -1,5 +1,13 @@
 [
   {
+    "titel": "TechCrunch: Ausgaben für KI-Nutzung wachsen laut Ramp-Daten langsamer",
+    "datum": "2026-11-07",
+    "rubrik": "markt",
+    "kurz": "TechCrunch berichtete am 6. November über Daten des Ausgabenverwalters Ramp. Demnach wuchsen die Ausgaben der Firmen für KI-Nutzung im August und September kaum, im Oktober stiegen sie wieder etwas. Ein Ramp-Ökonom sieht die Ursache nicht in schwacher Nachfrage, sondern im Preiswettbewerb unter den Anbietern.",
+    "adresse": "ki-kmu-news/2026-kw45#2026-11-07-techcrunch-ausgaben-fuer-ki-nutzung",
+    "bild": "assets/vaiacon-buerobot-news-markt.png"
+  },
+  {
     "titel": "TechCrunch: ChatGPT soll «Chat» und «Work» im Desktop-Programm zusammenlegen",
     "datum": "2026-11-04",
     "rubrik": "werkzeuge",
@@ -13,14 +21,6 @@
     "rubrik": "markt",
     "kurz": "TechCrunch berichtete am 30. Oktober, DoorDash habe bei der Vorstellung der Quartalszahlen gesagt, über KI-Helfer anderer Firmen, die selbständig Arbeitsschritte ausführen, seien bisher nur einige hundert Bestellungen eingegangen. Die meisten Kundinnen und Kunden bestellen laut Bericht weiterhin in der eigenen App des Lieferdienstes. Das Unternehmen will den Bereich beobachten.",
     "adresse": "ki-kmu-news/2026-kw44#2026-10-31-doordash-bisher-kommen-nur-einige",
-    "bild": "assets/vaiacon-buerobot-news-markt.png"
-  },
-  {
-    "titel": "TechCrunch: Google will Werbung in der KI-Suche auf weitere Märkte ausweiten",
-    "datum": "2026-10-30",
-    "rubrik": "markt",
-    "kurz": "TechCrunch berichtete am 28. Oktober, Google wolle Werbung in seinen KI-Suchfunktionen erstmals auch ausserhalb der USA zeigen. Angekündigt wurde das laut dem Artikel bei der Vorstellung der Quartalszahlen. Welche Länder betroffen sind und ab wann, nennt der Artikel nicht. Die Schweiz wird darin nicht erwähnt.",
-    "adresse": "ki-kmu-news/2026-kw44#2026-10-30-techcrunch-google-will-werbung-in",
     "bild": "assets/vaiacon-buerobot-news-markt.png"
   }
 ]

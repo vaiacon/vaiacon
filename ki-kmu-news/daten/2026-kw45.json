@@ -22,6 +22,24 @@
         }
       ],
       "wichtigkeit": 1
+    },
+    {
+      "id": "2026-11-07-techcrunch-ausgaben-fuer-ki-nutzung",
+      "datum": "2026-11-07",
+      "rubrik": "markt",
+      "titel": "TechCrunch: Ausgaben für KI-Nutzung wachsen laut Ramp-Daten langsamer",
+      "kurz": "TechCrunch berichtete am 6. November über Daten des Ausgabenverwalters Ramp. Demnach wuchsen die Ausgaben der Firmen für KI-Nutzung im August und September kaum, im Oktober stiegen sie wieder etwas. Ein Ramp-Ökonom sieht die Ursache nicht in schwacher Nachfrage, sondern im Preiswettbewerb unter den Anbietern.",
+      "kmu": "Laut dem Bericht senken Anbieter Preise, und Firmen leiten einfache Aufgaben an günstigere Modelle weiter. Sie können deshalb prüfen, ob für Ihre alltäglichen Aufgaben, etwa Texte entwerfen oder Zusammenfassungen, ein günstigeres Modell genügt. Die Daten stammen laut Artikel fast nur von Technikfirmen. Für Schweizer KMU sind sie nur ein Hinweis.",
+      "vaiacon": "Im Training oder Workshop (Halbtag) vergleicht Ihr Team Modelle an Ihren eigenen Aufgaben und legt fest, wann welches Werkzeug sinnvoll ist. In der KI-Standortanalyse im Betrieb klären wir zudem mit Ihnen, wo KI bei Ihnen Zeit sparen kann und wo sich der Aufwand nicht lohnt.",
+      "bereich": "ki-kompetenz",
+      "achtung": "Der Artikel stützt sich auf Daten eines einzelnen Anbieters, die vor allem Technikfirmen abbilden. Preise und Angebote können sich ändern. Prüfen Sie Abos und Nutzungsbedingungen regelmässig und legen Sie Budgets für Ihr Team fest.",
+      "quellen": [
+        {
+          "titel": "TechCrunch: Ramp data shows AI spending stalling just as Anthropic nears its IPO",
+          "url": "https://techcrunch.com/2026/11/06/ramp-data-shows-ai-spending-stalling-just-as-anthropic-nears-its-ipo/"
+        }
+      ],
+      "wichtigkeit": 1
     }
   ]
 }
