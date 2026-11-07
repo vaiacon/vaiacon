@@ -4,7 +4,7 @@
 > Neu schreiben mit `python3 scripts/bot_wissen.py` im Website-Repo.
 > Änderungen von Hand gehen beim nächsten Lauf verloren — ändere die
 > Website, nicht diese Datei.
-> Stand: 31.10.2026 · Eintrag 491ff01 llms-full.txt automatisch aktualisiert
+> Stand: 07.11.2026 · Eintrag f78cad0 Strukturdaten: Erstanalyse ergaenzt
 
 ## Wie du antwortest
 
@@ -270,8 +270,13 @@ Wir prüfen Struktur, Inhalte und technische Grundlagen Ihrer Website. Rankings 
 Ihre Domain
 Check starten →
 Kostenlos, meist in unter einer Minute. Die Punkte sind eine Einschätzung, keine Zusage.
-Was genau geprüft wird
-Die Startseite, robots.txt, Sitemap, llms.txt sowie die verlinkte Kontakt- und Impressumsseite. Geprüft werden Erreichbarkeit, technische Grundlagen, strukturierte Daten, KI-Sichtbarkeit (GEO), Inhalt und Vertrauen. Sie erhalten eine Punktzahl von 0 bis 100, mit der Sie eine Orientierung erhalten, wo Ihre Seite steht. Einen detaillierten Bericht erhalten Sie von uns in einem persönlichen Gespräch.
+Was genau geprüft wird und wie die Punktzahl entsteht
+Wir rufen Ihre Startseite, robots.txt, Sitemap, llms.txt sowie die verlinkte Kontakt- und Impressumsseite ab, so wie es ein Suchdienst oder ein KI-Assistent auch tut. Zuerst prüfen wir, ob die Seite erreichbar ist. Danach bewerten wir vier Bereiche, jeden mit eigenen Punkten von 0 bis 100.
+Technisches SEO: Seitentitel und Beschreibung, Überschriften und Bilder, robots.txt, Sitemap und Canonical, Antwortzeit des Servers.
+Strukturierte Daten: Firmendaten, Angebote, häufige Fragen sowie Öffnungszeiten und Vorschau beim Teilen. Das sind Angaben, die Suchmaschinen und KI direkt auslesen können.
+KI-Sichtbarkeit (GEO): llms.txt, Regeln für KI-Crawler, ob der Text auch ohne JavaScript lesbar ist, und ob die Aussagen klar und mit Profilen belegt sind.
+Inhalt und Vertrauen: Kundenstimmen und Referenzen, Kontaktangaben, Impressum und Datenschutz, Umfang und Team.
+Jeder einzelne Punkt wird als «gut», «mittel» oder «schwach» eingestuft und im Ergebnis kurz begründet. Die Gesamtpunktzahl fasst die vier Bereiche zusammen. Je höher sie ist, desto mehr der geprüften Voraussetzungen sind erfüllt. Sie ist eine Orientierung, wo Ihre Seite steht, keine Zusage und kein Urteil über Ihren Betrieb. Den detaillierten Bericht und was für Sie zuerst lohnt, besprechen wir in einem persönlichen Gespräch.
 Muster
 72
 von 100
@@ -545,19 +550,12 @@ Zum Inhalt springen
 KI-NEWS FÜR KMU · MIT WOCHENFAZIT
 KI-News für Schweizer KMU: was Neuigkeiten für Ihren Betrieb heissen
 Neue Beiträge während der Woche, mit Wochenfazit. Zu jeder Meldung: was passiert ist, was sie für ein KMU mit 5 bis 30 Mitarbeitenden heisst und worauf Sie achten sollten. Mit Quellen, Fachbegriffe kurz erklärt.
-Wochenfazit KW 44 Laut Startup Fortune soll Meta ab dem 30. Oktober die Bedingungen für KI-Funktionen für Firmen ändern und Risiken auf die Kunden übertragen. Bestätigt ist das nicht, denn die Bedingungen selbst konnten wir nicht prüfen. Wer KI-Funktionen von Meta nutzt, schaut sie am besten selbst an.
-Aktuelle Woche: KW 44 · 26. Oktober – 1. November 2026 · ganze Woche lesen →
-TechCrunch berichtete am 30. Oktober, DoorDash habe bei der Vorstellung der Quartalszahlen gesagt, über KI-Helfer anderer Firmen, die selbständig Arbeitsschritte ausführen, seien bisher nur einige hundert Bestellungen eingegangen. Die meisten Kundinnen und Kunden bestellen laut Bericht weiterhin in der eigenen App des Lieferdienstes. Das Unternehmen will den Bereich beobachten.
-Was das für Ihr KMU heisst →
-TechCrunch berichtete am 28. Oktober, Google wolle Werbung in seinen KI-Suchfunktionen erstmals auch ausserhalb der USA zeigen. Angekündigt wurde das laut dem Artikel bei der Vorstellung der Quartalszahlen. Welche Länder betroffen sind und ab wann, nennt der Artikel nicht. Die Schweiz wird darin nicht erwähnt.
-Was das für Ihr KMU heisst →
-TechCrunch berichtete am 29. Oktober, Mistral habe die offene Version seines Sprachmodells «Large 4» veröffentlicht, die Firmen selbst betreiben können. Sie liegt auf der Download-Plattform Hugging Face und ist auch für Entwickler über Mistral nutzbar. Mistral richtet das Modell laut TechCrunch auf IT-Sicherheit aus.
-Was das für Ihr KMU heisst →
-TechCrunch berichtete am 28. Oktober, Google lasse über eine neue Plattform Firmen und Entwickler eigene Apps mit Gemini und der KI-Suche verbinden. Nutzerinnen und Nutzer sollen dort Dienste anwählen und Aufgaben darin erledigen können. Der Zugang ist laut Bericht auf Entwickler in den USA beschränkt, ein Termin für die breite Einführung fehlt.
-Was das für Ihr KMU heisst →
-Startup Fortune berichtete am 24. Oktober, Meta ändere die Geschäftsbedingungen für seine KI-Funktionen für Firmen. Laut dem Bericht, der sich auf CIO.com und WION stützt, sollen Kunden ab dem 30. Oktober die Risiken tragen und Meta von Ansprüchen freistellen. Die Bedingungen selbst konnten wir nicht abrufen.
+Wochenfazit KW 45 Ruhige Woche: Laut den Entwicklerseiten von xAI sollen Texte aus Grok-Modellen ab dem 7. November ein unsichtbares Erkennungszeichen tragen. Betriebe ohne eigene Programme, die Grok-Modelle nutzen, merken davon nichts. Ob andere Anbieter folgen, ist offen.
+Aktuelle Woche: KW 45 · 2. – 8. November 2026 · ganze Woche lesen →
+TechCrunch berichtete am 2. November, OpenAI kündige per E-Mail an Nutzende an, im ChatGPT-Desktop-Programm die Bereiche «Chat» und «Work» zu verbinden. Einen Starttermin nennt der Bericht nicht. Zuerst sollen ausgewählte Nutzende die Neuerung testen. Das Programmierwerkzeug Codex soll getrennt bleiben, aber dasselbe Kontingent nutzen.
 Was das für Ihr KMU heisst →
 Die letzten Wochen
+KW 45 · 2. – 8. November 2026 1 Beitrag
 KW 44 · 26. Oktober – 1. November 2026 5 Beiträge
 KW 43 · 19. – 25. Oktober 2026 1 Beitrag
 KW 42 · 12. – 18. Oktober 2026 3 Beiträge
